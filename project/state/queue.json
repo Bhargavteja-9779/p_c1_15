@@ -2066,10 +2066,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 11
+      "priority": 11,
+      "started": "2026-11-24T04:53:45+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T04:57:06+00:00",
+      "seconds": 201.5
     },
     {
       "id": "E0_nova_orb_W15_s0",
@@ -2121,12 +2125,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 11,
       "started": "2026-11-24T04:44:09+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-24T04:47:24+00:00",
+      "seconds": 195.0
     },
     {
       "id": "E0_nova_wait_W60_s0",
@@ -2157,10 +2163,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 11
+      "priority": 11,
+      "started": "2026-11-24T04:47:24+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T04:50:36+00:00",
+      "seconds": 192.1
     },
     {
       "id": "E0_nova_wait_W90_s0",
@@ -2191,10 +2201,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 11
+      "priority": 11,
+      "started": "2026-11-24T04:50:36+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T04:53:45+00:00",
+      "seconds": 188.3
     },
     {
       "id": "E0_nova_wait_W180_s0",
@@ -2208,10 +2222,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 11
+      "priority": 11,
+      "started": "2026-11-24T04:57:06+00:00",
+      "worker": 0
     },
     {
       "id": "E0_nova_orb_W180_s0",
@@ -2372,10 +2388,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 11
+      "priority": 11,
+      "started": "2026-11-24T04:53:50+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T04:57:13+00:00",
+      "seconds": 202.6
     },
     {
       "id": "E0_nova_orb_W15_s1",
@@ -2427,12 +2447,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 11,
       "started": "2026-11-24T04:44:17+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-24T04:47:32+00:00",
+      "seconds": 195.3
     },
     {
       "id": "E0_nova_wait_W60_s1",
@@ -2463,10 +2485,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 11
+      "priority": 11,
+      "started": "2026-11-24T04:47:32+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T04:50:44+00:00",
+      "seconds": 191.8
     },
     {
       "id": "E0_nova_wait_W90_s1",
@@ -2497,10 +2523,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 11
+      "priority": 11,
+      "started": "2026-11-24T04:50:44+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T04:53:50+00:00",
+      "seconds": 186.4
     },
     {
       "id": "E0_nova_wait_W180_s1",
@@ -2514,10 +2544,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 11
+      "priority": 11,
+      "started": "2026-11-24T04:57:13+00:00",
+      "worker": 2
     },
     {
       "id": "E0_nova_orb_W180_s1",
@@ -2678,10 +2710,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 11
+      "priority": 11,
+      "started": "2026-11-24T04:53:58+00:00",
+      "worker": 1
     },
     {
       "id": "E0_nova_orb_W15_s2",
@@ -2733,12 +2767,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 11,
       "started": "2026-11-24T04:44:28+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-24T04:47:42+00:00",
+      "seconds": 194.1
     },
     {
       "id": "E0_nova_wait_W60_s2",
@@ -2769,10 +2805,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 11
+      "priority": 11,
+      "started": "2026-11-24T04:47:42+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T04:50:51+00:00",
+      "seconds": 188.6
     },
     {
       "id": "E0_nova_wait_W90_s2",
@@ -2803,10 +2843,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 11
+      "priority": 11,
+      "started": "2026-11-24T04:50:51+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T04:53:58+00:00",
+      "seconds": 187.5
     },
     {
       "id": "E0_nova_wait_W180_s2",
