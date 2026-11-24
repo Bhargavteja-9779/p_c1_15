@@ -1,0 +1,21 @@
+[
+  {
+    "experiment": "E1",
+    "project": "wagtail",
+    "method": "oracle",
+    "variant": "oracle",
+    "seed": 101,
+    "split": "test",
+    "gmean": 0.6971434860851236,
+    "r0": 0.8388649186856953,
+    "r1": 0.5793650793650794,
+    "rdiff": 0.25949983932061593,
+    "auc": 0.816898315914484,
+    "mcc": 0.34001653680306787,
+    "n_eval": 6908,
+    "seconds": 8.27,
+    "job_id": "E1_wagtail_oracle_s101",
+    "written": "2026-11-24T14:07:24+00:00",
+    "cycle": 1
+  }
+]

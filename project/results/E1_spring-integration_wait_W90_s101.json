@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E1",
+    "project": "spring-integration",
+    "method": "wait",
+    "variant": "wait_W90",
+    "seed": 101,
+    "split": "test",
+    "W": 90,
+    "gmean": 0.59384413321325,
+    "r0": 0.7367021276595744,
+    "r1": 0.4786885245901639,
+    "rdiff": 0.2580136030694105,
+    "auc": 0.643436311392363,
+    "mcc": 0.20566732190952142,
+    "n_eval": 7775,
+    "seconds": 8.91,
+    "job_id": "E1_spring-integration_wait_W90_s101",
+    "written": "2026-11-24T14:00:31+00:00",
+    "cycle": 1
+  }
+]

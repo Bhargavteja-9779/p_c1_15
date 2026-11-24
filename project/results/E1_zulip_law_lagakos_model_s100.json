@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E1",
+    "project": "zulip",
+    "method": "law",
+    "variant": "law_lagakos_model",
+    "seed": 100,
+    "split": "test",
+    "delay_est": "lagakos",
+    "prior": "model",
+    "gmean": 0.608614237379734,
+    "r0": 0.8140386199322779,
+    "r1": 0.45502913605269824,
+    "rdiff": 0.35900948387957965,
+    "auc": 0.6929242916154374,
+    "mcc": 0.27174227533577994,
+    "n_eval": 14874,
+    "seconds": 54.93,
+    "job_id": "E1_zulip_law_lagakos_model_s100",
+    "written": "2026-11-24T14:09:16+00:00",
+    "cycle": 1
+  }
+]
