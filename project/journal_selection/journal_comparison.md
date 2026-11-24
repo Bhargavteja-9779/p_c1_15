@@ -40,3 +40,14 @@ Artificial Intelligence Review (0269-2821) returned 0 items for the ISSN query (
 
 ## Outcome
 Only one verifiable candidate has a median Received→Accepted time near 72 days: **Journal of King Saud University – Computer and Information Sciences** (see selected_journal.md). Every other verifiable candidate has a median ≥ 123 days.
+
+## Addendum 2026-11-24: Frontiers journals (the user allowed Frontiers mid-run)
+Frontiers deposits no dates in Crossref, so Received/Accepted were read from frontiersin.org article pages for a random Crossref sample (script `scripts/journal_turnaround_frontiers.py`, raw DOIs in `turnaround/<ISSN>.json`).
+
+| ISSN | Journal | n | median days | range | share ≤72 d | JCR quartile |
+|---|---|---|---|---|---|---|
+| 2624-8212 | Frontiers in Artificial Intelligence | 60 | 78 | 30–333 | 46.7 % | UNVERIFIED |
+| 2624-909X | Frontiers in Big Data | 59 | 74 | 12–270 | 47.5 % | UNVERIFIED |
+| 2624-9898 | Frontiers in Computer Science | 60 | 100 | 0–293 | 31.7 % | UNVERIFIED |
+
+None is faster than JKSU-CIS (71–74 d), and none has a verified Q1 quartile → **selection unchanged: JKSU-CIS**.

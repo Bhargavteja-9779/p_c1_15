@@ -1,0 +1,21 @@
+[
+  {
+    "experiment": "E0",
+    "project": "neutron",
+    "method": "nowait",
+    "variant": "nowait",
+    "seed": 2,
+    "split": "dev",
+    "gmean": 0.24306235381113303,
+    "r0": 0.9897549381198263,
+    "r1": 0.05969084423305589,
+    "rdiff": 0.9300640938867704,
+    "auc": 0.822709557441589,
+    "mcc": 0.14426111444240547,
+    "n_eval": 16406,
+    "seconds": 28.29,
+    "job_id": "E0_neutron_nowait_s2",
+    "written": "2026-11-24T03:30:53+00:00",
+    "cycle": 1
+  }
+]

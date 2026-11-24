@@ -50,10 +50,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:26:16+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:26:32+00:00",
+      "seconds": 16.0
     },
     {
       "id": "E0_fabric_orb_W15_s0",
@@ -67,12 +71,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 10,
       "started": "2026-11-24T03:24:57+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-24T03:25:13+00:00",
+      "seconds": 16.1
     },
     {
       "id": "E0_fabric_wait_W30_s0",
@@ -86,10 +92,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:26:46+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:27:04+00:00",
+      "seconds": 17.3
     },
     {
       "id": "E0_fabric_orb_W30_s0",
@@ -103,10 +113,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:25:28+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:25:44+00:00",
+      "seconds": 16.2
     },
     {
       "id": "E0_fabric_wait_W60_s0",
@@ -120,10 +134,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:27:03+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:27:19+00:00",
+      "seconds": 15.4
     },
     {
       "id": "E0_fabric_orb_W60_s0",
@@ -137,10 +155,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:25:44+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:26:00+00:00",
+      "seconds": 15.8
     },
     {
       "id": "E0_fabric_wait_W90_s0",
@@ -154,10 +176,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:27:19+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:27:34+00:00",
+      "seconds": 15.3
     },
     {
       "id": "E0_fabric_orb_W90_s0",
@@ -171,10 +197,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:26:00+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:26:16+00:00",
+      "seconds": 16.1
     },
     {
       "id": "E0_fabric_wait_W180_s0",
@@ -188,10 +218,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:26:32+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:26:46+00:00",
+      "seconds": 14.2
     },
     {
       "id": "E0_fabric_orb_W180_s0",
@@ -205,10 +239,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:25:13+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:25:28+00:00",
+      "seconds": 15.0
     },
     {
       "id": "E0_fabric_law_lagakos_model_s0",
@@ -348,10 +386,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:26:16+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:26:32+00:00",
+      "seconds": 16.2
     },
     {
       "id": "E0_fabric_orb_W15_s1",
@@ -365,12 +407,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 10,
       "started": "2026-11-24T03:24:57+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-24T03:25:14+00:00",
+      "seconds": 16.2
     },
     {
       "id": "E0_fabric_wait_W30_s1",
@@ -384,10 +428,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:26:47+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:27:03+00:00",
+      "seconds": 16.2
     },
     {
       "id": "E0_fabric_orb_W30_s1",
@@ -401,10 +449,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:25:29+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:25:45+00:00",
+      "seconds": 16.5
     },
     {
       "id": "E0_fabric_wait_W60_s1",
@@ -418,10 +470,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:27:04+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:27:20+00:00",
+      "seconds": 16.1
     },
     {
       "id": "E0_fabric_orb_W60_s1",
@@ -435,10 +491,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:25:45+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:26:01+00:00",
+      "seconds": 16.0
     },
     {
       "id": "E0_fabric_wait_W90_s1",
@@ -452,10 +512,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:27:20+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:27:36+00:00",
+      "seconds": 15.8
     },
     {
       "id": "E0_fabric_orb_W90_s1",
@@ -469,10 +533,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:26:01+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:26:17+00:00",
+      "seconds": 15.8
     },
     {
       "id": "E0_fabric_wait_W180_s1",
@@ -486,10 +554,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:26:32+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:26:47+00:00",
+      "seconds": 14.7
     },
     {
       "id": "E0_fabric_orb_W180_s1",
@@ -503,10 +575,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:25:14+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:25:29+00:00",
+      "seconds": 15.0
     },
     {
       "id": "E0_fabric_law_lagakos_model_s1",
@@ -625,12 +701,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 10,
       "started": "2026-11-24T03:24:42+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-24T03:24:59+00:00",
+      "seconds": 16.9
     },
     {
       "id": "E0_fabric_wait_W15_s2",
@@ -644,10 +722,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:26:17+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:26:33+00:00",
+      "seconds": 16.3
     },
     {
       "id": "E0_fabric_orb_W15_s2",
@@ -661,10 +743,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:24:59+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:25:15+00:00",
+      "seconds": 15.8
     },
     {
       "id": "E0_fabric_wait_W30_s2",
@@ -678,10 +764,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:26:47+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:27:05+00:00",
+      "seconds": 17.3
     },
     {
       "id": "E0_fabric_orb_W30_s2",
@@ -695,10 +785,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:25:30+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:25:46+00:00",
+      "seconds": 16.1
     },
     {
       "id": "E0_fabric_wait_W60_s2",
@@ -712,10 +806,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:27:05+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:27:20+00:00",
+      "seconds": 15.5
     },
     {
       "id": "E0_fabric_orb_W60_s2",
@@ -729,10 +827,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:25:46+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:26:01+00:00",
+      "seconds": 15.7
     },
     {
       "id": "E0_fabric_wait_W90_s2",
@@ -746,10 +848,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:27:20+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:27:37+00:00",
+      "seconds": 16.5
     },
     {
       "id": "E0_fabric_orb_W90_s2",
@@ -763,10 +869,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:26:01+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:26:16+00:00",
+      "seconds": 14.9
     },
     {
       "id": "E0_fabric_wait_W180_s2",
@@ -780,10 +890,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:26:33+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:26:47+00:00",
+      "seconds": 14.2
     },
     {
       "id": "E0_fabric_orb_W180_s2",
@@ -797,10 +911,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:25:15+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:25:30+00:00",
+      "seconds": 14.8
     },
     {
       "id": "E0_fabric_law_lagakos_model_s2",
@@ -900,10 +1018,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:30:24+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:30:55+00:00",
+      "seconds": 30.8
     },
     {
       "id": "E0_neutron_oracle_s0",
@@ -915,10 +1037,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:30:53+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:31:23+00:00",
+      "seconds": 30.4
     },
     {
       "id": "E0_neutron_wait_W15_s0",
@@ -932,10 +1058,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:33:34+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:34:01+00:00",
+      "seconds": 27.6
     },
     {
       "id": "E0_neutron_orb_W15_s0",
@@ -949,10 +1079,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:31:23+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:31:51+00:00",
+      "seconds": 27.3
     },
     {
       "id": "E0_neutron_wait_W30_s0",
@@ -966,10 +1100,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:34:26+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:34:54+00:00",
+      "seconds": 27.6
     },
     {
       "id": "E0_neutron_orb_W30_s0",
@@ -983,10 +1121,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:32:15+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:32:42+00:00",
+      "seconds": 26.7
     },
     {
       "id": "E0_neutron_wait_W60_s0",
@@ -1000,10 +1142,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:34:54+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:35:22+00:00",
+      "seconds": 27.8
     },
     {
       "id": "E0_neutron_orb_W60_s0",
@@ -1017,10 +1163,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:32:42+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:33:08+00:00",
+      "seconds": 25.8
     },
     {
       "id": "E0_neutron_wait_W90_s0",
@@ -1034,10 +1184,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:35:22+00:00",
+      "worker": 2
     },
     {
       "id": "E0_neutron_orb_W90_s0",
@@ -1051,10 +1203,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:33:08+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:33:34+00:00",
+      "seconds": 26.2
     },
     {
       "id": "E0_neutron_wait_W180_s0",
@@ -1068,10 +1224,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:34:01+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:34:26+00:00",
+      "seconds": 24.8
     },
     {
       "id": "E0_neutron_orb_W180_s0",
@@ -1085,10 +1245,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:31:51+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:32:15+00:00",
+      "seconds": 24.3
     },
     {
       "id": "E0_neutron_law_lagakos_model_s0",
@@ -1103,10 +1267,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:28:15+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:29:01+00:00",
+      "seconds": 45.8
     },
     {
       "id": "E0_neutron_law_naive_model_s0",
@@ -1121,10 +1289,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:29:41+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:30:24+00:00",
+      "seconds": 42.6
     },
     {
       "id": "E0_neutron_law_lagakos_base_s0",
@@ -1139,10 +1311,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:27:34+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:28:15+00:00",
+      "seconds": 41.3
     },
     {
       "id": "E0_neutron_law_naive_base_s0",
@@ -1157,10 +1333,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:29:01+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:29:41+00:00",
+      "seconds": 40.3
     },
     {
       "id": "E0_neutron_nowait_s1",
@@ -1172,10 +1352,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:30:24+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:30:55+00:00",
+      "seconds": 30.7
     },
     {
       "id": "E0_neutron_oracle_s1",
@@ -1187,10 +1371,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:30:55+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:31:24+00:00",
+      "seconds": 29.6
     },
     {
       "id": "E0_neutron_wait_W15_s1",
@@ -1204,10 +1392,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:33:36+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:34:03+00:00",
+      "seconds": 27.3
     },
     {
       "id": "E0_neutron_orb_W15_s1",
@@ -1221,10 +1413,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:31:24+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:31:52+00:00",
+      "seconds": 27.7
     },
     {
       "id": "E0_neutron_wait_W30_s1",
@@ -1238,10 +1434,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:34:28+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:34:56+00:00",
+      "seconds": 27.6
     },
     {
       "id": "E0_neutron_orb_W30_s1",
@@ -1255,10 +1455,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:32:16+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:32:44+00:00",
+      "seconds": 27.2
     },
     {
       "id": "E0_neutron_wait_W60_s1",
@@ -1272,10 +1476,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:34:56+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:35:24+00:00",
+      "seconds": 28.5
     },
     {
       "id": "E0_neutron_orb_W60_s1",
@@ -1289,10 +1497,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:32:43+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:33:10+00:00",
+      "seconds": 26.4
     },
     {
       "id": "E0_neutron_wait_W90_s1",
@@ -1306,10 +1518,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:35:24+00:00",
+      "worker": 1
     },
     {
       "id": "E0_neutron_orb_W90_s1",
@@ -1323,10 +1537,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:33:10+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:33:36+00:00",
+      "seconds": 25.7
     },
     {
       "id": "E0_neutron_wait_W180_s1",
@@ -1340,10 +1558,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:34:03+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:34:28+00:00",
+      "seconds": 25.1
     },
     {
       "id": "E0_neutron_orb_W180_s1",
@@ -1357,10 +1579,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:31:52+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:32:16+00:00",
+      "seconds": 24.4
     },
     {
       "id": "E0_neutron_law_lagakos_model_s1",
@@ -1375,10 +1601,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:28:17+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:29:02+00:00",
+      "seconds": 45.8
     },
     {
       "id": "E0_neutron_law_naive_model_s1",
@@ -1393,10 +1623,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:29:42+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:30:24+00:00",
+      "seconds": 42.0
     },
     {
       "id": "E0_neutron_law_lagakos_base_s1",
@@ -1411,10 +1645,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:27:36+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:28:17+00:00",
+      "seconds": 41.0
     },
     {
       "id": "E0_neutron_law_naive_base_s1",
@@ -1429,10 +1667,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:29:02+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:29:42+00:00",
+      "seconds": 39.8
     },
     {
       "id": "E0_neutron_nowait_s2",
@@ -1444,10 +1686,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:30:25+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:30:53+00:00",
+      "seconds": 28.3
     },
     {
       "id": "E0_neutron_oracle_s2",
@@ -1459,10 +1705,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:30:55+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:31:25+00:00",
+      "seconds": 30.1
     },
     {
       "id": "E0_neutron_wait_W15_s2",
@@ -1476,10 +1726,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:33:36+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:34:04+00:00",
+      "seconds": 28.1
     },
     {
       "id": "E0_neutron_orb_W15_s2",
@@ -1493,10 +1747,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:31:25+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:31:52+00:00",
+      "seconds": 27.3
     },
     {
       "id": "E0_neutron_wait_W30_s2",
@@ -1510,10 +1768,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:34:29+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:34:58+00:00",
+      "seconds": 28.4
     },
     {
       "id": "E0_neutron_orb_W30_s2",
@@ -1527,10 +1789,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:32:17+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:32:43+00:00",
+      "seconds": 26.8
     },
     {
       "id": "E0_neutron_wait_W60_s2",
@@ -1544,10 +1810,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:34:58+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:35:25+00:00",
+      "seconds": 27.7
     },
     {
       "id": "E0_neutron_orb_W60_s2",
@@ -1561,10 +1831,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:32:44+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:33:10+00:00",
+      "seconds": 26.3
     },
     {
       "id": "E0_neutron_wait_W90_s2",
@@ -1578,10 +1852,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:35:25+00:00",
+      "worker": 0
     },
     {
       "id": "E0_neutron_orb_W90_s2",
@@ -1595,10 +1871,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:33:10+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:33:36+00:00",
+      "seconds": 25.6
     },
     {
       "id": "E0_neutron_wait_W180_s2",
@@ -1612,10 +1892,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:34:04+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:34:29+00:00",
+      "seconds": 25.7
     },
     {
       "id": "E0_neutron_orb_W180_s2",
@@ -1629,10 +1913,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:31:52+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:32:17+00:00",
+      "seconds": 24.5
     },
     {
       "id": "E0_neutron_law_lagakos_model_s2",
@@ -1647,10 +1935,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:28:18+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:29:02+00:00",
+      "seconds": 44.4
     },
     {
       "id": "E0_neutron_law_naive_model_s2",
@@ -1665,10 +1957,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:29:42+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:30:25+00:00",
+      "seconds": 42.5
     },
     {
       "id": "E0_neutron_law_lagakos_base_s2",
@@ -1683,10 +1979,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:27:37+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:28:18+00:00",
+      "seconds": 41.2
     },
     {
       "id": "E0_neutron_law_naive_base_s2",
@@ -1701,10 +2001,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:29:02+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:29:42+00:00",
+      "seconds": 39.7
     },
     {
       "id": "E0_nova_nowait_s0",

@@ -2,12 +2,12 @@
   "status": "RUNNING",
   "cycle": 1,
   "phase": "PHASE5_RUN",
-  "step": "E0 dev tuning running",
+  "step": "E0 dev tuning partially done; session handed off to a new account at user request",
   "pivots": 0,
   "topic_id": null,
   "journal": "JKSU-CIS (Springer Nature, ISSN 1319-1578, IF 6.4 2025; turnaround median 71\u201374 d, marginal)",
-  "last_action": "plan_v1 written; quick mode passed; 192 E0 jobs queued",
-  "next_action": "Wait for E0 (dev tuning) to finish (check python scripts/status.py), then run scripts/freeze_config.py (choose W* for wait/orb by mean dev G-mean), enqueue E1-E3 and launch",
+  "last_action": "Saved literature matrix (13 JKSU-CIS papers), Frontiers check (selection unchanged), novelty threats (ODaSC, Liu 2024a) logged; partial E0 results committed",
+  "next_action": "1) cd project && pip install -r requirements.txt && python scripts/get_data.py && python scripts/status.py. 2) Relaunch E0: bash scripts/launch_runner.sh 3 (jobs left \"running\" by the dead container are reset to pending automatically). 3) Meanwhile READ Liu et al. 2024a (Empir Softw Eng 29(5):98, PU learning for JIT-SDP) and the rest of ODaSC (Song_IJCNN2022.txt: results table, waiting time) and update state/novelty_ledger.json claims; if Liu 2024a pre-empts LAW, apply Section 6.4/6.5. 4) Write plan_v2 adding ODaSC (reimplementation) as a baseline with equal tuning budget, reason logged. 5) After E0 completes: python scripts/freeze_config.py, then enqueue E1-E3 (+ODaSC) and launch; then scripts/final_report.py.",
   "config": {
     "TARGET_TIER": "Q1 journal (JCR), reputable publisher",
     "MAX_DAYS_SUBMIT_TO_ACCEPT": 72,
@@ -29,7 +29,7 @@
     ]
   },
   "seeds_confirm_fixed_at": "2026-11-24 (project start; never change)",
-  "updated": "2026-11-24T03:22:41+00:00",
+  "updated": "2026-11-24T03:35:03+00:00",
   "topic": "Verification-latency-aware online JIT-SDP: latency-aware weighting (LAW) of provisionally-clean commits",
   "hypothesis": "LAW beats the best tuned waiting-time baseline by >=0.02 G-mean on 10 held-out projects (Holm p<0.05)"
 }

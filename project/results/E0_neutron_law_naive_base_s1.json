@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E0",
+    "project": "neutron",
+    "method": "law",
+    "variant": "law_naive_base",
+    "seed": 1,
+    "split": "dev",
+    "delay_est": "naive",
+    "prior": "base",
+    "gmean": 0.6760625165730015,
+    "r0": 0.898942709613966,
+    "r1": 0.5084423305588585,
+    "rdiff": 0.3905003790551076,
+    "auc": 0.8722606994748388,
+    "mcc": 0.44020087004430275,
+    "n_eval": 16406,
+    "seconds": 39.77,
+    "job_id": "E0_neutron_law_naive_base_s1",
+    "written": "2026-11-24T03:29:42+00:00",
+    "cycle": 1
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "experiment": "E0",
+    "project": "neutron",
+    "method": "oracle",
+    "variant": "oracle",
+    "seed": 1,
+    "split": "dev",
+    "gmean": 0.8657116766974755,
+    "r0": 0.866978116547824,
+    "r1": 0.8644470868014269,
+    "rdiff": 0.0025310297463970732,
+    "auc": 0.9447588017629011,
+    "mcc": 0.6842926320163755,
+    "n_eval": 16406,
+    "seconds": 29.64,
+    "job_id": "E0_neutron_oracle_s1",
+    "written": "2026-11-24T03:31:24+00:00",
+    "cycle": 1
+  }
+]

@@ -1,0 +1,5 @@
+# OBSERVATION: The closest prior work already attacks the same noise on the same data
+
+*Written 2026-11-24T03:35:03+00:00*
+
+While E0 was running, the prior-art search surfaced ODaSC (Song, Li, Minku & Yao, IJCNN 2022, full text in literature/pdfs/Song_IJCNN2022.pdf). It formulates exactly the one-sided label noise caused by waiting-time labelling in JIT-SDP and uses the same 14 Cabral projects. Its label confidence comes from feature-space micro-clusters (DenStream) for examples labelled clean after W days. My idea differs in where the confidence comes from (commit age plus a truncation-corrected discovery-delay distribution) and in using commits younger than W. The difference is real but narrower than I assumed when I wrote the topic file, where I said "no JIT-SDP work found". That statement is now wrong for the problem formulation. The formulation is not new; only the estimator is. The literature subagent also reports that MSTDP (JKSU-CIS 2026) cites Liu et al. 2024a, "Positive and unlabeled learning for just-in-time defect prediction" (Empir Softw Eng 29(5):98), which I have not opened yet and which could pre-empt the PU framing.

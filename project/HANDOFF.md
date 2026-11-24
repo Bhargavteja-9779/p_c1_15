@@ -1,18 +1,18 @@
 # HANDOFF — read this first
-*Auto-generated 2026-11-24T03:24:58+00:00 by scripts/write_handoff.py*
+*Auto-generated 2026-11-24T03:35:26+00:00 by scripts/write_handoff.py*
 
 ## Where we are
 - **Status:** RUNNING   **Cycle:** 1 / 12   **Phase:** PHASE5_RUN   **Pivots:** 0 / 3
-- **Step:** E0 dev tuning running
-- **Last action:** plan_v1 written; quick mode passed; 192 E0 jobs queued
-- **NEXT ACTION:** Wait for E0 (dev tuning) to finish (check python scripts/status.py), then run scripts/freeze_config.py (choose W* for wait/orb by mean dev G-mean), enqueue E1-E3 and launch
+- **Step:** E0 dev tuning partially done; session handed off to a new account at user request
+- **Last action:** Saved literature matrix (13 JKSU-CIS papers), Frontiers check (selection unchanged), novelty threats (ODaSC, Liu 2024a) logged; partial E0 results committed
+- **NEXT ACTION:** 1) cd project && pip install -r requirements.txt && python scripts/get_data.py && python scripts/status.py. 2) Relaunch E0: bash scripts/launch_runner.sh 3 (jobs left "running" by the dead container are reset to pending automatically). 3) Meanwhile READ Liu et al. 2024a (Empir Softw Eng 29(5):98, PU learning for JIT-SDP) and the rest of ODaSC (Song_IJCNN2022.txt: results table, waiting time) and update state/novelty_ledger.json claims; if Liu 2024a pre-empts LAW, apply Section 6.4/6.5. 4) Write plan_v2 adding ODaSC (reimplementation) as a baseline with equal tuning budget, reason logged. 5) After E0 completes: python scripts/freeze_config.py, then enqueue E1-E3 (+ODaSC) and launch; then scripts/final_report.py.
 
 - **Selected journal:** JKSU-CIS (Springer Nature, ISSN 1319-1578, IF 6.4 2025; turnaround median 71–74 d, marginal)
 - **Topic:** Verification-latency-aware online JIT-SDP: latency-aware weighting (LAW) of provisionally-clean commits
 - **Hypothesis:** LAW beats the best tuned waiting-time baseline by >=0.02 G-mean on 10 held-out projects (Holm p<0.05)
 
 ## Running right now
-- Queue (full): {'done': 17, 'pending': 172, 'running': 3}; running jobs: ['E0_fabric_orb_W15_s0', 'E0_fabric_orb_W15_s1', 'E0_fabric_oracle_s2']
+- Queue (full): {'done': 93, 'running': 3, 'pending': 96}; running jobs: ['E0_neutron_wait_W90_s0', 'E0_neutron_wait_W90_s1', 'E0_neutron_wait_W90_s2']
 - Processes: `1258 tmux new-session -d -s research_w0 python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
 1259 bash -c python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
 1261 python3 run_all.py --mode full --resume --worker 0
@@ -23,7 +23,7 @@
 - Heartbeat age: 1s
 
 ## Compute
-- Cycle 1: 0.11 h / 15 h   Global: 0.11 h / 120 h (CPU-hours; machine has no GPU)
+- Cycle 1: 0.59 h / 15 h   Global: 0.59 h / 120 h (CPU-hours; machine has no GPU)
 
 ## Gate status (Section 7)
 | Gate | Status | Evidence |
@@ -49,6 +49,7 @@
 - 2026-11-24T03:22:41+00:00: Dev/test split by project: dev={fabric,neutron,nova,sentry}, test=other 10 (rng seed 0 draw before modelling)
 - 2026-11-24T03:22:41+00:00: Primary metric G-mean over the evaluation window (commits from #500 to last-365-days), against final labels
 - 2026-11-24T03:22:41+00:00: Runner parallelised to 3 workers (cores-1); budget counts summed worker seconds (CPU-time-like)
+- 2026-11-24T03:35:03+00:00: User allowed Frontiers journals; checked Frontiers in AI (median 78 d), Big Data (74 d), Computer Science (100 d)
 
 ## Last failures (journal entries)
 - none yet

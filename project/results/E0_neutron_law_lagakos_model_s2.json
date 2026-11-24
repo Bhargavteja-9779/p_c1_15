@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E0",
+    "project": "neutron",
+    "method": "law",
+    "variant": "law_lagakos_model",
+    "seed": 2,
+    "split": "dev",
+    "delay_est": "lagakos",
+    "prior": "model",
+    "gmean": 0.4905170848566443,
+    "r0": 0.9654126710925334,
+    "r1": 0.24922711058263972,
+    "rdiff": 0.7161855605098937,
+    "auc": 0.887510506974877,
+    "mcc": 0.328106709705844,
+    "n_eval": 16406,
+    "seconds": 44.37,
+    "job_id": "E0_neutron_law_lagakos_model_s2",
+    "written": "2026-11-24T03:29:02+00:00",
+    "cycle": 1
+  }
+]

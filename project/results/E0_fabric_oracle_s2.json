@@ -1,0 +1,21 @@
+[
+  {
+    "experiment": "E0",
+    "project": "fabric",
+    "method": "oracle",
+    "variant": "oracle",
+    "seed": 2,
+    "split": "dev",
+    "gmean": 0.7475573401942728,
+    "r0": 0.8447531838753816,
+    "r1": 0.6615446825717751,
+    "rdiff": 0.18320850130360644,
+    "auc": 0.8523404202073267,
+    "mcc": 0.4673717242766646,
+    "n_eval": 11974,
+    "seconds": 16.94,
+    "job_id": "E0_fabric_oracle_s2",
+    "written": "2026-11-24T03:24:59+00:00",
+    "cycle": 1
+  }
+]

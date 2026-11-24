@@ -918,5 +918,773 @@
     "venue": "HortScience",
     "cited_by": 1,
     "abstract": "Six strawberry cultivars (`Earliglow', `Honeoye', `Idea', `Jewel', `Northeaster', and `Seneca') were grown organically on three different composts (yard waste, dairy barn waste, and vermicompost). Organic treatments were contrasted against a synthetic fertilizer standard, a conventional pesticide standard and an untreated control. Plots were rated for tarnished plant bug ( Lygus lineolaris ) damage during the growing season. At harvest, berries were examined for their ascorbic acid levels and total anthocyanin and phenolic contents. Ascorbic acid content of berries in different cultivars and treatments were similar. As expected, fruit anthocyanin and phenolic contents were significantly different among the cultivars, and ranged between 160\u2013230 \u03bcg\u00b7gfw -1 and 1039\u20131333 \u03bcg\u00b7gfw -1 , respectively. Among treatments, anthocyanin contents of strawberries were not significantly different, but berries grown on the conventional pesticide standard had 8% to 12% lower total phenolic content than the other treatments. In organic treatments, production of phenolic compounds may have been induced in response to increased tarnished plant bug feeding. This putative biotic stress defense mechanism was seen most dramatically on tarnished plant bugsusceptible cultivars. However, as differences in phenolic levels were greater among cultivars than among treatments, cultivar choice may be a more important consideration than growing system for optimizing antioxidant levels in commercially available fruit."
+  },
+  "W2073491345": {
+    "title": "Testing the equality of two survival functions with right truncated data",
+    "year": 2006,
+    "doi": "https://doi.org/10.1002/sim.2556",
+    "venue": "Statistics in Medicine",
+    "cited_by": 20,
+    "abstract": "To compare the survival functions based on right-truncated data, Lagakos et al. proposed a weighted logrank test based on a reverse time scale. This is in contrast to Bilker and Wang, who suggested a semi-parametric version of the Mann-Whitney test by assuming that the distribution of truncation times is known or can be estimated parametrically. The approach of Lagakos et al. is simple and elegant, but the weight function in their method depends on the underlying cumulative hazard functions even under proportional hazards models. On the other hand, a semi-parametric test may have better efficiency, but it may be sensitive to misspecification of the distribution of truncation times. Therefore, this paper proposes a non-parametric test statistic based on the integrated weighted difference between two estimated survival functions in forward time. The comparative results from a simulation study are presented and the implementation of these methods to a real data set is demonstrated."
+  },
+  "W2171219366": {
+    "title": "Estimation of Hazard Function for Right Truncated Data",
+    "year": 2011,
+    "doi": "https://doi.org/10.57709/1935604",
+    "venue": "Digital Archive @ GSU",
+    "cited_by": 4,
+    "abstract": "This thesis centers on nonparametric inferences of the cumulative hazard function of a right truncated variable. We present three variance estimators for the Nelson-Aalen estimator of the cumulative hazard function and conduct a simulation study to investigate their performances. A close match between the sampling standard deviation and the estimated standard error is observed when an estimated survival probability is not close to 1. However, the problem of poor tail performance exists due to the limitation of the proposed variance estimators. We further analyze an AIDS blood transfusion sample for which the disease latent time is right truncated. We compute three variance estimators, yielding three sets of con?dence intervals. This work provides insights of two-sample tests for right truncated data in the future research."
+  },
+  "W2892146752": {
+    "title": "Improved nonparametric estimators of survival probabilities from censored data",
+    "year": 1986,
+    "doi": null,
+    "venue": "OhioLink ETD Center (Ohio Library and Information Network)",
+    "cited_by": 0,
+    "abstract": ""
+  },
+  "W4293490250": {
+    "title": "Nonparametric inference for reversed mean models with panel count data",
+    "year": 2022,
+    "doi": "https://doi.org/10.3150/21-bej1444",
+    "venue": "Bernoulli",
+    "cited_by": 6,
+    "abstract": "Panel count data typically refer to data arising from studies with recurrent events, in which subjects are observed only at discrete time points rather than under continuous observations. We investigate a general situation where a recurrent event process is eventually truncated by an informative terminal event and we are particularly interested in behaviors of the recurrent event process near the terminal event. We propose a reversed mean model for estimating the mean function of the recurrent event process. We develop a two-stage sieve likelihood-based method to estimate the mean function, which overcomes the computational difficulties arising from a nuisance functional parameter involved in the likelihood. The consistency and the convergence rate of the two-stage estimator are established. Allowing for the convergence rate slower than the standard rate, we develop the general weak convergence theory of M-estimators with a nuisance functional parameter, and then apply it to the proposed estimator for deriving the asymptotic normality. Furthermore, a class of two-sample tests is developed. The proposed methods are evaluated with extensive simulation studies and illustrated with panel count data from the Chinese Longitudinal Healthy Longevity Study."
+  },
+  "W2087439592": {
+    "title": "Censoring, truncation and filtering in statistical models based on counting processes",
+    "year": 1988,
+    "doi": "https://doi.org/10.1090/conm/080/999006",
+    "venue": "Contemporary mathematics - American Mathematical Society",
+    "cited_by": 47,
+    "abstract": "A survey is given of the formulation of statistical models for life history data based on counting processes.Examples include survival data with (possibly time-dependent) covariates and continuous time Markov processes.First, complete life history data are discussed and next, explicit modelling of mechanisms causing incomplete information like (right) censoring, filtering, and left truncation is superimposed onto the model for the com- plete data.The concepts of independent censoring and noninformative censoring are defined, and inference from such models based on (partial) likelihoods is discussed."
+  },
+  "W4223953244": {
+    "title": "Nonparametric Estimation and Testing for Panel Count Data with Informative Terminal Event",
+    "year": 2024,
+    "doi": "https://doi.org/10.5705/ss.202021.0213",
+    "venue": "Statistica Sinica",
+    "cited_by": 4,
+    "abstract": "Informative terminal events often occur in the long term recurrent event follow-up studies. To reflect their effects on recurrent event processes explicitly, we propose a reversed nonparametric mean model for panel count data with a terminal event subject to right censoring. This model enjoys meaningful interpretation for applications and robustness for statistical inference. Treating the distribution of the right-censored terminal event time as a nuisance functional parameter, we develop a two-stage estimation procedure by combining the Kaplan-Meier estimator and nonparametric sieve estimation techniques. The consistency, convergence rate and asymptotic normality of the proposed nonparametric estimator are established. Then we construct a class of new statistics for two-sample test. The asymptotic properties of the new tests are established and evaluated by extensive simulation studies. Panel count data from Chinese Longitudinal Healthy Longevity study are analyzed using the proposed method for illustration."
+  },
+  "W2044967049": {
+    "title": "Censoring in clinical trials: Review of survival analysis techniques",
+    "year": 2010,
+    "doi": "https://doi.org/10.4103/0970-0218.66859",
+    "venue": "Indian Journal of Community Medicine",
+    "cited_by": 165,
+    "abstract": "Medical and epidemiological studies are mostly conducted with an interest in measuring the occurrence of an outcome event. Studies conducting survival analysis, however, are focussed toward measuring time to event or outcome. Time to event could vary from time to fatal event i.e. death, or time to occurrence of a clinical endpoint such as disease, or attainment of a biochemical marker. Survival analysis studies originated with the publication of John Graunt\u2019s Weekly Bills of Mortality in London. First life table was prepared by Healy.(1) Survival analysis is also known as lifetime data analysis, time to event analysis, reliability and event history analysis depending on focus and stream where it is used. However, survival analysis is plagued by problem of censoring in design of clinical trials which renders routine methods of determination of central tendency redundant in computation of average survival time. The present essay attempts to highlight different methods of survival analysis used to estimate time to event in studies based on individual patient level data in the presence of censoring. Section 2 highlights types of censoring encountered in a clinical trial, its types and potential statistical solutions. Survival analysis techniques, its assumptions and suitability of methods under different data conditions are illustrated in sections 3 and 4. The next section 5 discusses the importance of techniques to extrapolate estimate of life expectancy derived over a period of time exceeding the duration of trial follow-up. Lastly, section 6 cites limitations and advantages of different methods and finally concludes by indicating possible future areas of research and practice for health economists and public health professionals. We reviewed articles published in PubMed, Science Direct and Ovid search engines using \u201ccensoring in clinical trials\u201d, \u201csurvival analysis\u201d and \u201cKaplan Meier method\u201d as key words. After a total of 213 articles retrieved, articles focussing only on methodology aspect were considered for the present review. Original articles were preferred following by subsequent discussion articles, which added substantially to the methodology."
+  },
+  "W2908809437": {
+    "title": "K-sample omnibus non-proportional hazards tests based on right-censored data",
+    "year": 2020,
+    "doi": "https://doi.org/10.1177/0962280220907355",
+    "venue": "Statistical Methods in Medical Research",
+    "cited_by": 24,
+    "abstract": "This work presents novel and powerful tests for comparing non-proportional hazard functions, based on sample-space partitions. Right censoring introduces two major difficulties, which make the existing sample-space partition tests for uncensored data non-applicable: (i) the actual event times of censored observations are unknown and (ii) the standard permutation procedure is invalid in case the censoring distributions of the groups are unequal. We overcome these two obstacles, introduce invariant tests, and prove their consistency. Extensive simulations reveal that under non-proportional alternatives, the proposed tests are often of higher power compared with existing popular tests for non-proportional hazards. Efficient implementation of our tests is available in the R package KONPsurv, which can be freely downloaded from CRAN."
+  },
+  "W7116210389": {
+    "title": "Nonparametric Survival Estimation With Contaminated and Adjudicated Events",
+    "year": 2026,
+    "doi": "https://doi.org/10.1111/sjos.70095",
+    "venue": "Scandinavian Journal of Statistics",
+    "cited_by": 0,
+    "abstract": "We study the conditional expert Kaplan\u2013Meier estimator, an extension of the classical Kaplan\u2013Meier estimator designed for time\u2010to\u2010event data subject to both right\u2010censoring and contamination. Such contamination, where observed events may not reflect true outcomes, is common in applied settings, including insurance and credit risk, where expert opinion is often used to adjudicate uncertain events. Building on previous work, we develop a comprehensive asymptotic theory for the conditional version incorporating covariates through kernel smoothing. We establish functional consistency and weak convergence under suitable regularity conditions and quantify the bias induced by imperfect expert information. The results show that unbiased expert judgments ensure consistency, while systematic deviations lead to a deterministic asymptotic bias that can be explicitly characterized. We examine finite\u2010sample properties through simulation studies and illustrate the practical use of the estimator with an application to loan default data."
+  },
+  "W3048604406": {
+    "title": "Value Difference Based Tests for Subgroup Treatment Effects Detection and Estimation and Estimators for the Causal Effect of Treatment Discontinuation.",
+    "year": 2020,
+    "doi": null,
+    "venue": "NCSU Libraries Repository (North Carolina State University Libraries)",
+    "cited_by": 0,
+    "abstract": "JOHNSON, DANA LAUREL.Value Difference Based Tests for Subgroup Treatment Effects Detection and Estimation and Estimators for the Causal Effect of Treatment Discontinuation.(Under the direction of Marie Davidian and Wenbin Lu.)Subgroup identification techniques are often used to distinguish patients who may benefit from a particular treatment from those who may not.While post hoc or unprincipled approaches to subgroup identification may lead to spurious results, theoretically justified approaches are essential to precision medicine.When searching for subgroups that characterize patients with a desired treatment effect, one way to control the type I error rate is to specify a few subgroups prior to the beginning of the study and to test for a significant treatment effect in only those groups.However, this approach is limiting in that it is very easy to overlook an important subgroup, simply because it was not specified a priori.As an alternative, recent literature suggests prespecifying the method for testing whether subgroups with a differential treatment effect exist, without specifying particular subgroups in advance.In this way, the type I error rate can be controlled while also allowing the form of the potential subgroup(s) to be flexible.In this dissertation, we offer a new, prespecified method for subgroup identification that combines theory for optimal treatment regimes with theory for one-step estimation.Specifically, we propose a framework for subgroup identification that tests whether at least some subgroup of the population benefits from an investigational treatment, compared to some standard of care.The test statistic is based on augmented inverse probability weighted estimators for the value difference of the optimal treatment rule, and we show that the framework holds even under the nonregular setting, which is when at least some portion of the population has a treatment effect of zero.At the end of this dissertation, we pivot and apply inverse probability weighted estimators to a different problem-namely, to estimate the causal effect of treatment discontinuation on a survival endpoint.First, we describe our subgroup identification framework for the case when the endpoint of interest is some real-valued, uncensored health outcome.We define the treatment effect to be the mean difference in outcome under an investigational treatment versus under some standard of care, and we propose a one-step value difference estimator to test for the existence of a subgroup that benefits from the investigational treatment.We consider four versions of the test statistic, each of which converges in distribution to a standard Normal random variable.The four versions arise from allowing two forms of an estimator for the value difference, and two methods for how observations are partitioned into smaller data sets, which we call \"chunks.\"Simulations are performed to study the type I error and power of the four test statistics.In certain simulation settings, the chunking method based on averaged-propensity matching drastically increases the power of the test.We apply our test to AIDS clinical trial data and observe that the results agree with previous findings.Second, we extend the proposed framework to time-to-event endpoints.We now define the treatment effect to be the difference in the restricted mean survival time under an investigational treatment, compared to some standard of care, and we modify the augmented inverse probability weighted estimators for the value difference to handle time-to-event outcomes instead of uncensored, scalar outcomes.As before, the resulting test statistic converges in distribution to a standard Normal random variable.We consider three versions of the test statistic.This time, the three versions of the test statistic arise from allowing three different estimators for the value difference, and the random data partitioning scheme is used throughout.Two of the three estimators are similar to the estimators proposed for the scalar outcome setting, but the third estimator is unique to time-toevent data.It contains an augmentation term that helps to capture back information on patients that were censored during follow up -improving the efficiency of the overall estimator.We study the finite sample performance of the three test statistics via simulation studies.We apply the proposed test to data on HIV-infected patients from an HIV/AIDS observational cohort study, and then we proceed to use random survival forests to estimate an optimal treatment regime for this population.Finally, we describe a treatment-specific marginal structural Cox model for estimation of the causal effect of treatment discontinuation on a survival endpoint.Under this framework, the effect of treatment discontinuation can be analyzed on more than one version of treatment (treatmentspecific).The effect of treatment discontinuation is quantified by the hazard ratio of the event hazard rate had the population followed the regime \"take treatment a until it is discontinued at some time \u03bd\", versus the event hazard rate had the population never discontinued treatment a .Valid causal analysis requires control for treatment confounding, regime confounding, and censoring due to regime violation.We propose new inverse probability of regime compliance weights to address the three issues simultaneously.We apply the framework to data from the Global Anticoagulant Registry in the FIELD-Atrial Fibrillation study.Patients from this study are treated with one of two types of"
+  },
+  "W4308334535": {
+    "title": "Flexible time-to-event models for double-interval-censored infectious disease data with clearance of the infection as a competing risk",
+    "year": 2022,
+    "doi": "https://doi.org/10.3389/fams.2022.1035393",
+    "venue": "Frontiers in Applied Mathematics and Statistics",
+    "cited_by": 9,
+    "abstract": "The observed induction time from an infection to an event of interest is often double-interval-censored and moreover, often prevented from being observed by the clearance of the infection (a competing risk). Double-interval-censoring and the presence of competing risks complicate the statistical analysis extremely and are therefore usually ignored in infectious disease studies. Often, the times at which events are detected are used as a proxy for the exact times and interpretation has to be made on the detected induction time and not on the actual latent induction time. In this paper, we first explain the concepts of double interval censoring and competing risks, propose multiple (semi-) parametric models for this kind of data and derive a formula for the corresponding likelihood function. We describe algorithms for the maximization of the likelihood and provide code. The proposed models vary in complexity. Therefore, results of simulation studies are presented to illustrate the advantages and disadvantages of each model. The methodology is illustrated by applying them to malaria data where the interest lies in the time from incident malaria infection to gametocyte initiation."
+  },
+  "W2981122542": {
+    "title": "Methods for the analysis of censored data with a focus on comparisons arising in HIV studies",
+    "year": 2000,
+    "doi": null,
+    "venue": "Murdoch University Research Portal",
+    "cited_by": 0,
+    "abstract": "Censored data methods play an integral role in the analysis of survival data. Although there exist many well-known techniques that are readily applicable to estimation and comparison of survival curves with standard right-censored data, there are fewer methods available for analysis of non-standard censored data. The methodologies developed in this thesis are largely motivated by several types of non-standard analyses undertaken as part of the Western Australian Human Immunodeficiency Virus (WAHIV) Cohort study. \\n \\nThe main body of the thesis begins with the development of a general framework for comparing functionals of survival curve estimates, with the comparisons based on location-type features of the curves. Derived using distribution-free estimating equations, the resultant tests for equality of survival provide good power against a variety of alternatives. Moreover, the techniques are sufficiently flexible to enable comparisons of survival using non-standard estimators. We thus utilize the approach in two subsequent applications, which focus on the assessment of therapy effectiveness. \\n \\nThe first of these applications is an analysis that attempts to reduce potential biases due to the observational nature of the data. This is achieved by means of retrospective modeling of HIV disease markers for identification of appropriate controls. Comparisons between cases and matched controls are then undertaken using composite weighted survival functions. \\n \\nIn the second application we consider the estimation and comparison of profiles of blood viral load detectability following initiation of potent antiretroviral treatment regimens. The profiles are obtained from a convolution of two distributions, that of the time it takes to become undetectable and that of the subsequent time it takes to return to a state of detectability. Aspects incorporated include the interval-censored nature of the data as a result of irregular visit times and the effects of covariates, including the sojourn time in the detectable state. An approach based on a modified likelihood is shown to have a number of desirable properties and can be readily fitted via a generalized linear model formulation."
+  },
+  "W2917293142": {
+    "title": "A nonparametric test for the association between longitudinal covariates and censored survival data",
+    "year": 2019,
+    "doi": "https://doi.org/10.1093/biostatistics/kxz002",
+    "venue": "Biostatistics",
+    "cited_by": 3,
+    "abstract": "Many biomedical studies focus on the association between a longitudinal measurement and a time-to-event outcome while quantifying this association by means of a longitudinal-survival joint model. In this article we propose using the $LLR$ test - a longitudinal extension of the log-rank test statistic given by Peto and Peto (1972) - to provide evidence of a plausible association between a time-to-event outcome (right- or interval-censored) and a time-dependent covariate. As joint model methods are complex and hard to interpret, it is wise to conduct a preliminary test such as $LLR$ for checking the association between both processes. The $LLR$ statistic can be expressed in the form of a weighted difference of hazards, yielding a broad class of weighted log-rank test statistics known as $LWLR$, which allow a specific emphasis along the time axis of the effects of the time-dependent covariate on the survival. The asymptotic distribution of $LLR$ is derived by means of a permutation approach under the assumption that the censoring mechanism is independent of the survival time and the longitudinal covariate. A simulation study is conducted to evaluate the performance of the test statistics $LLR$ and $LWLR$, showing that the empirical size is close to the nominal significance level and that the power of the test depends on the association between the covariates and the survival time. A data set together with a toy example are used to illustrate the $LLR$ test. The data set explores the study Epidemiology of Diabetes Interventions and Complications (Sparling and others, 2006) which includes interval-censored data. A software implementation of our method is available on github (https://github.com/RamonOller/LWLRtest)."
+  },
+  "W2277826613": {
+    "title": "Measuring mortality heterogeneity with multi-state models and interval-censored data",
+    "year": 2016,
+    "doi": "https://doi.org/10.1016/j.insmatheco.2016.09.014",
+    "venue": "Insurance Mathematics and Economics",
+    "cited_by": 7,
+    "abstract": ""
+  },
+  "W2607291838": {
+    "title": "Statistics of incomplete data",
+    "year": 2017,
+    "doi": null,
+    "venue": "University of Biskra Theses Repository (University of Biskra)",
+    "cited_by": 1,
+    "abstract": "Dans cette th\u00e8se, nous nous int\u00e9ressons \u00e0 l'estimation de l'indice des valeurs extr\u00eames et des quantiles extr\u00eames pour des donn\u00e9es incompl\u00e8tement observ\u00e9es, avec un int\u00e9r\u00eat particulier au cas des donn\u00e9es tronqu\u00e9es \u00e0 droite. Nous commen\u00e7ons par l'exploitation du premier travail sur ce sujet, qui est d\u00f9 \u00e0 Gardes et Stupfler (2015), pour obtenir un estimateur simple d\u2019indice de queue bas\u00e9 sur une seule fraction d\u2019\u00e9chantillon de valeurs extr\u00eames. La normalit\u00e9 asymptotique de l'estimateur propos\u00e9 est \u00e9tablie dans le cadre de la d\u00e9pendance de queue et de la condition du second ordre de variation r\u00e9guli\u00e8re. Deuxi\u00e8mement, \u00e0 partir de la condition du premier ordre de variation r\u00e9guli\u00e8re, nous construisons un nouvel estimateur pour le param\u00e8tre de forme d'une distribution \u00e0 queue lourde tronqu\u00e9e \u00e0 droite. Nous prouvons sa normalit\u00e9 asymptotique en utilisant le processus de queue de Lynden-Bell pour lequel une approximation gaussienne pond\u00e9r\u00e9e est fournie. En outre, une nouvelle approche de l'estimation des quantiles extr\u00eames est propos\u00e9e et appliqu\u00e9e sur des donn\u00e9es r\u00e9elles consistant en les dur\u00e9es de vie des plaquettes de frein automobile. Enfin, un estimateur de type noyau asymptotiquement normal est d\u00e9fini. Des exp\u00e9riences de simulation sont effectu\u00e9es pour \u00e9valuer les performances et illustrer les comportements des estimateurs ci-dessus sur des \u00e9chantillons finis et aussi pour faire des comparaisons"
+  },
+  "W7138339798": {
+    "title": "Uplift Modeling with Delayed Feedback: Identifiability and Algorithms",
+    "year": 2026,
+    "doi": "https://doi.org/10.1609/aaai.v40i19.38686",
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "cited_by": 8,
+    "abstract": "Uplift modeling has obtained significant attention, with broad applications in medicine, economics, and marketing. For example, in a push notification scenario, accurately estimating the uplift of different push frequencies on user activation and notification switch close rate is critical for balancing user experience and business goals. Existing methods only use binary labels, i.e., convert or not within the observational window. However, they ignore time information (e.g., users who convert on day 1 vs. day 14 reflect different sensitivities) and fail to model potential closures outside the window, i.e., due to treatments always taking time to manifest causal impacts on outcomes, the potential outcomes of interest cannot be observed promptly and accurately. Failing to account for these issues can result in skewed uplift modeling. To address this gap, this work examines how observation timing influences the assessment of uplift by explicitly modeling the potential response time. Theoretical analysis establishes the conditions for identifiability under delayed feedback scenarios. We introduce CFR-DF (Counterfactual Regression with Delayed Feedback), a systematic framework that jointly learns both the latent response times and the underlying potential outcomes. Empirical evaluations on synthetic and real-world datasets, including an A/B test with over 1 billion users for 14 days, validate the approach, demonstrating its ability to handle temporal delays and improve estimation accuracy compared to previous uplift modeling methods."
+  },
+  "W3004726539": {
+    "title": "A Feedback Shift Correction in Predicting Conversion Rates under Delayed Feedback",
+    "year": 2020,
+    "doi": "https://doi.org/10.1145/3366423.3380032",
+    "venue": "International World Wide Web Conference (WWW)",
+    "cited_by": 46,
+    "abstract": "In display advertising, predicting the conversion rate, that is, the probability that a user takes a predefined action on an advertiser\u2019s website, such as purchasing goods is fundamental in estimating the value of displaying the advertisement. However, there is a relatively long time delay between a click and its resultant conversion. Because of the delayed feedback, some positive instances at the training period are labeled as negative because some conversions have not yet occurred when training data are gathered. As a result, the conditional label distributions differ between the training data and the production environment. This situation is referred to as a feedback shift. We address this problem by using an importance weight approach typically used for covariate shift correction. We prove its consistency for the feedback shift. Results in both offline and online experiments show that our proposed method outperforms the existing method."
+  },
+  "W4220767012": {
+    "title": "Adaptive Experimentation with Delayed Binary Feedback",
+    "year": 2022,
+    "doi": "https://doi.org/10.1145/3485447.3512097",
+    "venue": "International World Wide Web Conference (WWW)",
+    "cited_by": 11,
+    "abstract": "Conducting experiments with objectives that take significant delays to materialize (e.g. conversions, add-to-cart events, etc.) is challenging. Although the classical \u201csplit sample testing\u201d is still valid for the delayed feedback, the experiment will take longer to complete, which also means spending more resources on worse-performing strategies due to their fixed allocation schedules. Alternatively, adaptive approaches such as \u201cmulti-armed bandits\u201d are able to effectively reduce the cost of experimentation. But these methods generally cannot handle delayed objectives directly out of the box. This paper presents an adaptive experimentation solution tailored for delayed binary feedback objectives by estimating the real underlying objectives before they materialize and dynamically allocating variants based on the estimates. Experiments show that the proposed method is more efficient for delayed feedback compared to various other approaches and is robust in different settings. In addition, we describe an experimentation product powered by this algorithm. This product is currently deployed in the online experimentation platform of JD.com, a large e-commerce company and a publisher of digital ads."
+  },
+  "W7214195064": {
+    "title": "Learning Classifiers under Delayed Feedback with a Time Window Assumption",
+    "year": 2022,
+    "doi": "https://doi.org/10.1145/3534678.3539372",
+    "venue": "ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)",
+    "cited_by": 10,
+    "abstract": "We consider training a binary classifier under delayed feedback (DF learning). For example, in the conversion prediction in online ads, we initially receive negative samples that clicked the ads but did not buy an item; subsequently, some samples among them buy an item then change to positive. In the setting of DF learning, we observe samples over time, then learn a classifier at some point. We initially receive negative samples; subsequently, some samples among them change to positive. This problem is conceivable in various real-world applications such as online advertisements, where the user action takes place long after the first click. Owing to the delayed feedback, naive classification of the positive and negative samples returns a biased classifier. One solution is to use samples that have been observed for more than a certain time window assuming these samples are correctly labeled. However, existing studies reported that simply using a subset of all samples based on the time window assumption does not perform well, and that using all samples along with the time window assumption improves empirical performance. We extend these existing studies and propose a method with the unbiased and convex empirical risk that is constructed from all samples under the time window assumption. To demonstrate the soundness of the proposed method, we provide experimental results on a synthetic and open dataset that is the real traffic log datasets in online advertising."
+  },
+  "W2291401466": {
+    "title": "Multiphysics and multiscale modelling, data\u2013model fusion and integration of organ physiology in the clinic: ventricular cardiac mechanics",
+    "year": 2016,
+    "doi": "https://doi.org/10.1098/rsfs.2015.0083",
+    "venue": "Interface Focus",
+    "cited_by": 258,
+    "abstract": "With heart and cardiovascular diseases continually challenging healthcare systems worldwide, translating basic research on cardiac (patho)physiology into clinical care is essential. Exacerbating this already extensive challenge is the complexity of the heart, relying on its hierarchical structure and function to maintain cardiovascular flow. Computational modelling has been proposed and actively pursued as a tool for accelerating research and translation. Allowing exploration of the relationships between physics, multiscale mechanisms and function, computational modelling provides a platform for improving our understanding of the heart. Further integration of experimental and clinical data through data assimilation and parameter estimation techniques is bringing computational models closer to use in routine clinical practice. This article reviews developments in computational cardiac modelling and how their integration with medical imaging data is providing new pathways for translational cardiac modelling."
+  },
+  "W4214629132": {
+    "title": "A Deep Learning Estimation of the Earth Resistivity Model for the Airborne Transient Electromagnetic Observation",
+    "year": 2022,
+    "doi": "https://doi.org/10.1029/2021jb023185",
+    "venue": "Journal of Geophysical Research Solid Earth",
+    "cited_by": 79,
+    "abstract": "Because of the relatively weak useful signal and noises with complex characteristics, the data processing of airborne electromagnetic observation is very difficult. As the downstream of data processing, inversion generally cannot further distinguish whether there are residual noises in the processed data. That is, in the current processing flow, the signal\u2010noise distinguishing is isolated from the signal\u2010model mapping. The reliability of the estimated earth resistivity model will be seriously affected due to the probable disadvantages in the denoising process. To this end, we propose a manifold assumption, and so establish one \u201cfeedback\u201d mechanism between signal\u2010noise distinguishing and signal\u2010model mapping. On this basis, we propose a deep learning method: through simultaneous optimal training the network parts for signal\u2010noise distinguishing and earth resistivity model estimation respectively, the entire neural network can perform the denoising and inversion in the traditional sense at the same time, so as to obtain more objective and reliable estimation results of earth resistivity model. We use the Stacked Auto\u2010encoder neural network structure to implement the proposed method, and test the network performance with simulation and measured data. The results show that the proposed method can obtain a more reliable earth resistivity model directly from the noisy data."
+  },
+  "W7207803686": {
+    "title": "A Survey on Self-Improving Test-Time Intelligence: Feedback-Driven Adapting, Learning, and Scaling at Inference",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2609.01679",
+    "venue": "arXiv (Cornell University)",
+    "cited_by": 5,
+    "abstract": "The ability of AI systems to improve their behavior during deployment is becoming increasingly important. As inference moves beyond the static execution of a fixed trained model, a growing body of work studies how models can refine their behavior on the fly by exploiting test-time information and additional computation. These developments have largely evolved along two directions: methods that modify the model's state using test-time signals, and methods that improve predictions through extra inference-time resources such as more sampling and tool use. However, these directions are often studied in separate communities with different terminology, making their connections harder to see. In this survey, we present feedback-driven Test-Time Intelligence (TTI) as a unified perspective for understanding such deployment-time improvement. We use this view to relate test-time adaptation, test-time learning, and test-time scaling, highlighting both their distinctions and their growing overlap in hybrid systems. This unified framework helps connect previously fragmented ideas and provides a clearer conceptual foundation for studying inference-time self-improvement. We review major methodological paradigms, representative applications, and open challenges across vision, language, multimodal learning, generative models, robotics, and healthcare. Our goal is to provide a coherent foundation and research roadmap for the study of self-improving AI systems at test time."
+  },
+  "W3021678865": {
+    "title": "Hybrid-Parallel Parameter Estimation for Frequentist and Bayesian Models",
+    "year": 2020,
+    "doi": null,
+    "venue": "eScholarship (California Digital Library)",
+    "cited_by": 0,
+    "abstract": "Distributed algorithms in machine learning follow two main flavors: horizontal partitioning, where the data is distributed across multiple slaves and vertical partitioning, where the model parameters are partitioned across multiple machines. The main drawback of the former strategy is that the model parameters need to be replicated on every machine. This is problematic when the number of parameters is very large, and hence cannot fit in a single machine. This drawback of the latter strategy is that the data needs to be replicated on each machine, thus failing to scale to massive datasets.The goal of this thesis is to achieve the best of both worlds by partitioning both - the data as well as the model parameters, thus enabling the training of more sophisticated models on massive datasets. In order to do so, we exploit a structure that is observed in several machine learning models, which we term as \\\\textit{Double-Separability}. Double-Separability basically means that the objective function of the model can be decomposed into independent sub-functions which can be computed independently. For distributed machine learning, this implies that both data and model parameters can partitioned across machines and stochastic updates for parameters can be carried out independently and without any locking. Furthermore, double-separability naturally lends itself to developing efficient asynchronous algorithms which enable computation and communication to happen in parallel, offering further speedup. Some machine learning models such as Matrix Factorization directly exhibit double-separability in their objective function, however the majority of models do not. My work explores techniques to reformulate the objective function of such models to cast them into double-separable form. Often this involves introducing additional auxiliary variables that have nice interpretations. In this direction, I have developed Hybrid Parallel algorithms for machine learning tasks that include {\\\\it Latent Collaborative Retrieval}, {\\\\it Multinomial Logistic Regression}, {\\\\it Variational Inference for Mixture of Exponential Families} and {\\\\it Factorization Machines}. The software resulting from this work are available for public use under an open-source license."
+  },
+  "W3010891636": {
+    "title": "Towards CRISP-ML(Q): A Machine Learning Process Model with Quality Assurance Methodology",
+    "year": 2021,
+    "doi": "https://doi.org/10.3390/make3020020",
+    "venue": "Machine Learning and Knowledge Extraction",
+    "cited_by": 499,
+    "abstract": "Machine learning is an established and frequently used technique in industry and academia, but a standard process model to improve success and efficiency of machine learning applications is still missing. Project organizations and machine learning practitioners face manifold challenges and risks when developing machine learning applications and have a need for guidance to meet business expectations. This paper therefore proposes a process model for the development of machine learning applications, covering six phases from defining the scope to maintaining the deployed machine learning application. Business and data understanding are executed simultaneously in the first phase, as both have considerable impact on the feasibility of the project. The next phases are comprised of data preparation, modeling, evaluation, and deployment. Special focus is applied to the last phase, as a model running in changing real-time environments requires close monitoring and maintenance to reduce the risk of performance degradation over time. With each task of the process, this work proposes quality assurance methodology that is suitable to address challenges in machine learning development that are identified in the form of risks. The methodology is drawn from practical experience and scientific literature, and has proven to be general and stable. The process model expands on CRISP-DM, a data mining process model that enjoys strong industry support, but fails to address machine learning specific tasks. The presented work proposes an industry- and application-neutral process model tailored for machine learning applications with a focus on technical tasks for quality assurance."
+  },
+  "W3035116197": {
+    "title": "Linear Bandits with Stochastic Delayed Feedback",
+    "year": 2018,
+    "doi": "https://doi.org/10.48550/arxiv.1807.02089",
+    "venue": "arXiv (Cornell University)",
+    "cited_by": 138,
+    "abstract": "Stochastic linear bandits are a natural and well-studied model for structured exploration/exploitation problems and are widely used in applications such as online marketing and recommendation. One of the main challenges faced by practitioners hoping to apply existing algorithms is that usually the feedback is randomly delayed and delays are only partially observable. For example, while a purchase is usually observable some time after the display, the decision of not buying is never explicitly sent to the system. In other words, the learner only observes delayed positive events. We formalize this problem as a novel stochastic delayed linear bandit and propose ${\\tt OTFLinUCB}$ and ${\\tt OTFLinTS}$, two computationally efficient algorithms able to integrate new information as it becomes available and to deal with the permanently censored feedback. We prove optimal $\\tilde O(\\smash{d\\sqrt{T}})$ bounds on the regret of the first algorithm and study the dependency on delay-dependent parameters. Our model, assumptions and results are validated by experiments on simulated and real data."
+  },
+  "W3118437662": {
+    "title": "Handling many conversions per click in modeling delayed feedback",
+    "year": 2021,
+    "doi": "https://doi.org/10.48550/arxiv.2101.02284",
+    "venue": "arXiv (Cornell University)",
+    "cited_by": 11,
+    "abstract": "Predicting the expected value or number of post-click conversions (purchases or other events) is a key task in performance-based digital advertising. In training a conversion optimizer model, one of the most crucial aspects is handling delayed feedback with respect to conversions, which can happen multiple times with varying delay. This task is difficult, as the delay distribution is different for each advertiser, is long-tailed, often does not follow any particular class of parametric distributions, and can change over time. We tackle these challenges using an unbiased estimation model based on three core ideas. The first idea is to split the label as a sum of labels with different delay buckets, each of which trains only on mature label, the second is to use thermometer encoding to increase accuracy and reduce inference cost, and the third is to use auxiliary information to increase the stability of the model and to handle drift in the distribution."
+  },
+  "W3025710735": {
+    "title": "Randomized allocation with nonparametric estimation for contextual multi-armed bandits with delayed rewards",
+    "year": 2020,
+    "doi": "https://doi.org/10.1016/j.spl.2020.108818",
+    "venue": "Statistics & Probability Letters",
+    "cited_by": 25,
+    "abstract": ""
+  },
+  "W2899867782": {
+    "title": "Learning from positive and unlabeled data: a survey",
+    "year": 2020,
+    "doi": "https://doi.org/10.1007/s10994-020-05877-5",
+    "venue": "Machine Learning",
+    "cited_by": 939,
+    "abstract": ""
+  },
+  "W4288728031": {
+    "title": "On Missing Labels, Long-tails and Propensities in Extreme Multi-label Classification",
+    "year": 2022,
+    "doi": "https://doi.org/10.1145/3534678.3539466",
+    "venue": "ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)",
+    "cited_by": 41,
+    "abstract": "The propensity model introduced by Jain et al has become a standard approach for dealing with missing and long-tail labels in extreme multi-label classification (XMLC). In this paper, we critically revise this approach showing that despite its theoretical soundness, its application in contemporary XMLC works is debatable. We exhaustively discuss the flaws of the propensity-based approach, and present several recipes, some of them related to solutions used in search engines and recommender systems, that we believe constitute promising alternatives to be followed in XMLC."
+  },
+  "W3034915883": {
+    "title": "Class Prior Estimation in Active Positive and Unlabeled Learning",
+    "year": 2020,
+    "doi": "https://doi.org/10.24963/ijcai.2020/403",
+    "venue": "International Joint Conference on Artificial Intelligence",
+    "cited_by": 21,
+    "abstract": "Estimating the proportion of positive examples (i.e., the class prior) from positive and unlabeled (PU) data is an important task that facilitates learning a classifier from such data. In this paper, we explore how to tackle this problem when the observed labels were acquired via active learning. This introduces the challenge that the observed labels were not selected completely at random, which is the primary assumption underpinning existing approaches to estimating the class prior from PU data. We analyze this new setting and design an algorithm that is able to estimate the class prior for a given active learning strategy. Empirically, we show that our approach accurately recovers the true class prior on a benchmark of anomaly detection datasets and that it does so more accurately than existing methods."
+  },
+  "W4414337231": {
+    "title": "Accounting for label shift of positive unlabeled data under selection bias",
+    "year": 2025,
+    "doi": "https://doi.org/10.61822/amcs-2025-0036",
+    "venue": "International Journal of Applied Mathematics and Computer Science",
+    "cited_by": 2,
+    "abstract": "We consider the scenario when two samples of positive unlabeled (PU) data are available and for the second sample the change in prior probability of classes occurs while distributions of predictors in classes remain the same (label shift setting). The selection of positive elements may be object-dependent. We study the properties of the underlying probabilistic structure under the novel augmented PU scenario, proving in particular that label shift occurs also for unlabeled populations. We introduce and investigate an estimator of prior probability for label-shifted population. Furthermore, in this case we construct and analyze behavior of Bayes classifier in this setting. It turns out to be a Bayes classifier for the unlabeled class with a modified threshold. This gives rise to its three empirical counterparts which are compared on benchmark data sets."
+  },
+  "W4411113200": {
+    "title": "From Lazy to Prolific: Tackling Missing Labels in Open Vocabulary Extreme Classification by Positive-Unlabeled Sequence Learning",
+    "year": 2025,
+    "doi": "https://doi.org/10.18653/v1/2025.findings-naacl.1",
+    "venue": "Findings of the Association for Computational Linguistics: NAACL",
+    "cited_by": 6,
+    "abstract": "Open-vocabulary Extreme Multi-label Classification (OXMC) extends traditional XMC by allowing prediction beyond an extremely large, predefined label set (typically 10 3 to 10 12 labels), addressing the dynamic nature of realworld labeling tasks.However, self-selection bias in data annotation leads to significant missing labels in both training and test data, particularly for less popular inputs.This creates two critical challenges: generation models learn to be \"lazy\" by under-generating labels, and evaluation becomes unreliable due to insufficient annotation in the test set.In this work, we introduce Positive-Unlabeled Sequence Learning (PUSL), which reframes OXMC as an infinite keyphrase generation task, addressing the generation model's laziness.Additionally, we propose to adopt a suite of evaluation metrics, F1@O and newly proposed B@k, to reliably assess OXMC models with incomplete ground truths.In a highly imbalanced e-commerce dataset with substantial missing labels, PUSL generates 30% more unique labels, and 72% of its predictions align with actual user queries.On the less skewed EURLex-4.3kdataset, PUSL demonstrates superior F1 scores, especially as label counts increase from 15 to 30.Our approach effectively tackles both the modeling and evaluation challenges in OXMC with missing labels.Our data split was released in huggingface datasets 1"
+  },
+  "W4220727047": {
+    "title": "PLUS: Predicting cancer metastasis potential based on positive and unlabeled learning",
+    "year": 2022,
+    "doi": "https://doi.org/10.1371/journal.pcbi.1009956",
+    "venue": "PLoS Computational Biology",
+    "cited_by": 25,
+    "abstract": "Metastatic cancer accounts for over 90% of all cancer deaths, and evaluations of metastasis potential are vital for minimizing the metastasis-associated mortality and achieving optimal clinical decision-making. Computational assessment of metastasis potential based on large-scale transcriptomic cancer data is challenging because metastasis events are not always clinically detectable. The under-diagnosis of metastasis events results in biased classification labels, and classification tools using biased labels may lead to inaccurate estimations of metastasis potential. This issue is further complicated by the unknown metastasis prevalence at the population level, the small number of confirmed metastasis cases, and the high dimensionality of the candidate molecular features. Our proposed algorithm, called Positive and unlabeled Learning from Unbalanced cases and Sparse structures (PLUS), is the first to use a positive and unlabeled learning framework to account for the under-detection of metastasis events in building a classifier. PLUS is specifically tailored for studying metastasis that deals with the unbalanced instance allocation as well as unknown metastasis prevalence, which are not considered by other methods. PLUS achieves superior performance on synthetic datasets compared with other state-of-the-art methods. Application of PLUS to The Cancer Genome Atlas Pan-Cancer gene expression data generated metastasis potential predictions that show good agreement with the clinical follow-up data, in addition to predictive genes that have been validated by independent single-cell RNA-sequencing datasets."
+  },
+  "W3111183972": {
+    "title": "Interactive Weak Supervision: Learning Useful Heuristics for Data Labeling",
+    "year": 2020,
+    "doi": "https://doi.org/10.48550/arxiv.2012.06046",
+    "venue": "arXiv (Cornell University)",
+    "cited_by": 82,
+    "abstract": "Obtaining large annotated datasets is critical for training successful machine learning models and it is often a bottleneck in practice. Weak supervision offers a promising alternative for producing labeled datasets without ground truth annotations by generating probabilistic labels using multiple noisy heuristics. This process can scale to large datasets and has demonstrated state of the art performance in diverse domains such as healthcare and e-commerce. One practical issue with learning from user-generated heuristics is that their creation requires creativity, foresight, and domain expertise from those who hand-craft them, a process which can be tedious and subjective. We develop the first framework for interactive weak supervision in which a method proposes heuristics and learns from user feedback given on each proposed heuristic. Our experiments demonstrate that only a small number of feedback iterations are needed to train models that achieve highly competitive test set performance without access to ground truth training labels. We conduct user studies, which show that users are able to effectively provide feedback on heuristics and that test set results track the performance of simulated oracles."
+  },
+  "W4401342653": {
+    "title": "MLAWSMOTE: Oversampling in Imbalanced Multi-label Classification with Missing Labels by Learning Label Correlation Matrix",
+    "year": 2024,
+    "doi": "https://doi.org/10.1007/s44196-024-00607-4",
+    "venue": "International Journal of Computational Intelligence Systems",
+    "cited_by": 4,
+    "abstract": "Missing labels in multi-label datasets are a common problem, especially for minority classes, which are more likely to occur. This limitation hinders the performance of classifiers in identifying and extracting information from minority classes. Oversampling is an effective method for addressing imbalanced multi-label problems by generating synthetic instances to create a class-balanced dataset. However, the existing oversampling algorithms mainly focus on the location of the generated data, and there is a lack of design on how to complete the labels of the synthetic data. To address this issue, we propose MLAWSMOTE, a synthetic data generation algorithm based on matrix factorization weights. We introduce a weak supervised learning method in the oversampling method, optimize the weights of features and labels by using label correlation, and iteratively learn the ideal label weights. The mapping relationship between features and labels is learned from the dataset and the label correlation matrix. The oversampling ratio is defined based on the discrepancy between observed labels and the ideal label of synthetic instances. It mitigates the impact of missing minority labels on the model\u2019s predictions. The labeling of synthetic instances is performed based on label prediction, and the potential labeling distribution is complemented. Experimental results on multiple multi-label datasets under different label missing ratios demonstrate the effectiveness of the proposed method in terms of ACC, Hamming loss, MacroF1 and MicroF1. In the validation of the four classifiers, MacroF1 decreased by 24.78%, 17.81%, 3.8% and 19.56%, respectively, with the increase of label loss rate. After applying MLAWSMOTE only decreased by 15.79%, 13.63%, 3.78% and 15.21%."
+  },
+  "W7213608649": {
+    "title": "When are time-to-event models a waste of time? Bridging mixture cure models and positive-unlabeled learning for binary classification under right-censoring",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2609.19370",
+    "venue": "arXiv (Cornell University)",
+    "cited_by": 0,
+    "abstract": "In clinical settings, predicting binary outcomes is often complicated by right-censoring, which prevents us from distinguishing individuals in whom the event never occurs (i.e., negative, or non-susceptible) from those where it occurs after the censoring time (i.e., positive, or susceptible). To discriminate between these subpopulations, we can use mixture cure models (MCMs), which model both the outcome probability over an infinite horizon and its time-to-event (TTE) distribution when observed. However, the TTE approach requires event timestamps, which can be unreliable, costly to obtain, or biased due to disparities in clinical care. Alternatively, the task can be formulated as positive-unlabeled (PU) learning, in which individuals without an observed event are grouped as \"unlabeled\" rather than negative, recognizing that this group includes positives whose event occurred after censoring. Here we analyze the relationship between these frameworks and provide evidence-based recommendations for choosing between them. We begin by showing that both families optimize a shared likelihood but differ in how they constrain the probability of event occurrence prior to censoring among susceptible patients, which in PU learning is known as the labeling propensity; and that an MCM may be viewed as a PU model whose labeling propensity is parameterized as a TTE distribution, which makes the model identifiable. In systematic simulations and two real-world clinical cohorts, we examine whether and when including the TTE component benefits binary classification. We show that MCMs are preferred in only one specific regime: under selective censoring where the exact features governing censoring cannot be identified. Otherwise, PU learning achieves equivalent performance while avoiding challenges and potential biases associated with the TTE approach."
+  },
+  "W7154491493": {
+    "title": "Prediction of plant phase-separating proteins using positive-unlabeled learning",
+    "year": 2026,
+    "doi": "https://doi.org/10.1186/s13059-026-04075-1",
+    "venue": "Genome biology",
+    "cited_by": 2,
+    "abstract": "Liquid-liquid phase separation regulates biological processes through dynamic condensates. Despite its significance, experimentally validated phase-separating proteins in plants remain limited, complicating predictions. We overcome this gap by applying positive-unlabeled learning, a semi-supervised approach optimized for imbalanced datasets. Leveraging 6,559 reported plant phase-separating proteins from eight species, we train a model integrating sequence-structural features, enabling prediction of 174,656 high-confidence candidates across 14 species. Experimental validation confirms liquid-liquid phase separation in 67.9% of the candidate proteins from Arabidopsis, rice, and maize. This positive-unlabeled framework demonstrates robust predictive power while providing open resources to advance plant phase separation research."
+  },
+  "W4402293970": {
+    "title": "Joint empirical risk minimization for instance-dependent positive-unlabeled data",
+    "year": 2024,
+    "doi": "https://doi.org/10.1016/j.knosys.2024.112444",
+    "venue": "Knowledge-Based Systems",
+    "cited_by": 4,
+    "abstract": ""
+  },
+  "W4385322218": {
+    "title": "Class-imbalanced complementary-label learning via weighted loss",
+    "year": 2023,
+    "doi": "https://doi.org/10.1016/j.neunet.2023.07.030",
+    "venue": "Neural Networks",
+    "cited_by": 27,
+    "abstract": ""
+  },
+  "W4385059892": {
+    "title": "Revisiting strategies for fitting logistic regression for positive and unlabeled data",
+    "year": 2022,
+    "doi": "https://doi.org/10.34768/amcs-2022-0022",
+    "venue": "International Journal of Applied Mathematics and Computer Science",
+    "cited_by": 2,
+    "abstract": "Positive unlabeled (PU) learning is an important problem motivated by the occurrence of this type of partial observability in many applications. The present paper reconsiders recent advances in parametric modeling of PU data based on empirical likelihood maximization and argues that they can be significantly improved. The proposed approach is based on the fact that the likelihood for the logistic fit and an unknown labeling frequency can be expressed as the sum of a convex and a concave function, which is explicitly given. This allows methods such as the concave-convex procedure (CCCP) or its variant, the disciplined convex-concave procedure (DCCP), to be applied. We show by analyzing real data sets that, by using the DCCP to solve the optimization problem, we obtain significant improvements in the posterior probability and the label frequency estimation over the best available competitors."
+  },
+  "W4387185196": {
+    "title": "Double Logistic Regression Approach to Biased Positive-Unlabeled Data",
+    "year": 2023,
+    "doi": "https://doi.org/10.3233/faia230342",
+    "venue": "Frontiers in artificial intelligence and applications",
+    "cited_by": 9,
+    "abstract": "Positive and unlabelled learning is an important non-standard inference problem which arises naturally in many applications. The significant limitation of almost all existing methods addressing it lies in assuming that the propensity score function is constant and does not depend on features (Selected Completely at Random assumption), which is unrealistic in many practical situations. Avoiding this assumption, we consider parametric approach to the problem of joint estimation of posterior probability and propensity score functions. We show that if both these functions are logistic with different parameters (double logistic model) then the corresponding parameters are identifiable. Motivated by this, we propose two approaches to their estimation: a joint maximum likelihood method and the second approach based on an alternating maximization of two Fisher consistent approximations. Our experimental results show that the proposed methods perform on par or better than the existing methods based on Expectation-Maximisation scheme."
+  },
+  "W4403488234": {
+    "title": "Verifying the Selected Completely at Random Assumption in Positive-Unlabeled Learning",
+    "year": 2024,
+    "doi": "https://doi.org/10.3233/faia240675",
+    "venue": "Frontiers in artificial intelligence and applications",
+    "cited_by": 5,
+    "abstract": "The goal of positive-unlabeled (PU) learning is to train a binary classifier on the basis of training data containing positive and unlabeled instances, where unlabeled observations can belong either to the positive class or to the negative class. Modeling PU data requires certain assumptions on the labeling mechanism that describes which positive observations are assigned a label. The simplest assumption, considered in early works, is SCAR (Selected Completely at Random Assumption), according to which the propensity score function, defined as the probability of assigning a label to a positive observation, is constant. Alternatively, a much more realistic assumption is SAR (Selected at Random), which states that the propensity function solely depends on the observed feature vector. SCAR-based algorithms are much simpler and computationally much faster compared to SAR-based algorithms, which usually require challenging estimation of the propensity score. In this work, we propose a relatively simple and computationally fast test that can be used to determine whether the observed data meet the SCAR assumption. Our test is based on generating artificial labels conforming to the SCAR scenario, which in turn allows to mimic the distribution of the test statistic under the null hypothesis of SCAR. We justify our method theoretically. In experiments, we demonstrate that the test successfully detects various deviations from SCAR scenario and at the same time it is possible to effectively control the type I error. The proposed test can be recommended as a pre-processing step to decide which final PU algorithm to choose in cases when nature of labeling mechanism is not known."
+  },
+  "W2889749101": {
+    "title": "Beyond the Selected Completely at Random Assumption for Learning from Positive and Unlabeled Data",
+    "year": 2020,
+    "doi": "https://doi.org/10.1007/978-3-030-46147-8_5",
+    "venue": "Lecture notes in computer science",
+    "cited_by": 129,
+    "abstract": ""
+  },
+  "W4283807219": {
+    "title": "Recovering the Propensity Score from Biased Positive Unlabeled Data",
+    "year": 2022,
+    "doi": "https://doi.org/10.1609/aaai.v36i6.20624",
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "cited_by": 28,
+    "abstract": "Positive-Unlabeled (PU) learning methods train a classifier to distinguish between the positive and negative classes given only positive and unlabeled data. While traditional PU methods require the labeled positive samples to be an unbiased sample of the positive distribution, in practice the labeled sample is often a biased draw from the true distribution. Prior work shows that if we know the likelihood that each positive instance will be selected for labeling, referred to as the propensity score, then the biased sample can be used for PU learning. Unfortunately, no prior work has been proposed an inference strategy for which the propensity score is identifiable. In this work, we propose two sets of assumptions under which the propensity score can be uniquely determined: one in which no assumption is made on the functional form of the propensity score (requiring assumptions on the data distribution), and the second which loosens the data assumptions while assuming a functional form for the propensity score. We then propose inference strategies for each case. Our empirical study shows that our approach significantly outperforms the state-of-the-art propensity estimation methods on a rich variety of benchmark datasets."
+  },
+  "W7168814307": {
+    "title": "PUe: Biased Positive-Unlabeled Learning Enhancement by Causal Inference",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2607.13428",
+    "venue": "arXiv (Cornell University)",
+    "cited_by": 0,
+    "abstract": "Positive-Unlabeled (PU) learning aims to achieve high-accuracy binary classification with limited labeled positive examples and numerous unlabeled ones. Existing cost-sensitive-based methods often rely on strong assumptions that examples with an observed positive label were selected entirely at random. In fact, the uneven distribution of labels is prevalent in real-world PU problems, indicating that most actual positive and unlabeled data are subject to selection bias. Building on the SAR-PU propensity-weighted framework of Bekker et al., we study a PU learning enhancement (PUe) framework using normalized propensity scores and normalized inverse probability weighting (NIPW). PUe's main contributions are a normalized inverse-probability-weighted PU risk formulation; additional theoretical analyses of normalized sample-weight error and common PU estimators under biased labeling; regularized deep propensity-score estimation; integration with modern cost-sensitive PU methods; and support for selectively labeled negative classes. Experiments on MNIST, CIFAR-10, and ADNI demonstrate improvements over several PU baselines under non-uniform label distributions."
+  },
+  "W2888341744": {
+    "title": "Learning from Positive and Unlabeled Data under the Selected At Random Assumption",
+    "year": 2018,
+    "doi": "https://doi.org/10.48550/arxiv.1808.08755",
+    "venue": "Learning with Imbalanced Domains: Theory and Applications",
+    "cited_by": 23,
+    "abstract": "For many interesting tasks, such as medical diagnosis and web page classification, a learner only has access to some positively labeled examples and many unlabeled examples. Learning from this type of data requires making assumptions about the true distribution of the classes and/or the mechanism that was used to select the positive examples to be labeled. The commonly made assumptions, separability of the classes and positive examples being selected completely at random, are very strong. This paper proposes a weaker assumption that assumes the positive examples to be selected at random, conditioned on some of the attributes. To learn under this assumption, an EM method is proposed. Experiments show that our method is not only very capable of learning under this assumption, but it also outperforms the state of the art for learning under the selected completely at random assumption."
+  },
+  "W4404082263": {
+    "title": "Positive Unlabeled Learning Selected Not At Random (PULSNAR): class proportion estimation without the selected completely at random assumption",
+    "year": 2024,
+    "doi": "https://doi.org/10.7717/peerj-cs.2451",
+    "venue": "PeerJ Computer Science",
+    "cited_by": 14,
+    "abstract": "Positive and unlabeled (PU) learning is a type of semi-supervised binary classification where the machine learning algorithm differentiates between a set of positive instances (labeled) and a set of both positive and negative instances (unlabeled). PU learning has broad applications in settings where confirmed negatives are unavailable or difficult to obtain, and there is value in discovering positives among the unlabeled (e.g., viable drugs among untested compounds). Most PU learning algorithms make the selected completely at random (SCAR) assumption, namely that positives are selected independently of their features. However, in many real-world applications, such as healthcare, positives are not SCAR (e.g., severe cases are more likely to be diagnosed), leading to a poor estimate of the proportion, \u03b1, of positives among unlabeled examples and poor model calibration, resulting in an uncertain decision threshold for selecting positives. PU learning algorithms vary; some estimate only the proportion, \u03b1, of positives in the unlabeled set, while others calculate the probability that each specific unlabeled instance is positive, and some can do both. We propose two PU learning algorithms to estimate \u03b1, calculate calibrated probabilities for PU instances, and improve classification metrics: i) PULSCAR (positive unlabeled learning selected completely at random), and ii) PULSNAR (positive unlabeled learning selected not at random). PULSNAR employs a divide-and-conquer approach to cluster SNAR positives into subtypes and estimates \u03b1 for each subtype by applying PULSCAR to positives from each cluster and all unlabeled. In our experiments, PULSNAR outperformed state-of-the-art approaches on both synthetic and real-world benchmark datasets."
+  },
+  "W7117736846": {
+    "title": "Positive-Unlabeled Learning in Implicit Feedback from Data Missing-Not-At-Random Perspective",
+    "year": 2025,
+    "doi": "https://doi.org/10.3390/e28010041",
+    "venue": "Entropy",
+    "cited_by": 2,
+    "abstract": "The lack of explicit negative labels issue is a prevalent challenge in numerous domains, including CV, NLP, and Recommender Systems (RSs). To address this challenge, many negative sample completion methods are proposed, such as optimizing sample distribution through pseudo-negative sampling and confidence screening in CV, constructing reliable negative examples by leveraging textual semantics in NLP, and supplementing negative samples via sparsity analysis of user interaction behaviors and preference inference in RS for handling implicit feedback. However, most existing methods fail to adequately address the Missing-Not-At-Random (MNAR) nature of the data and the potential presence of unmeasured confounders, which compromise model robustness in practice. In this paper, we first formulate the prediction task in RS with implicit feedback as a positive-unlabeled (PU) learning problem. We then propose a two-phase debiasing framework consisting of exposure status imputation, followed by debiasing through the proposed doubly robust estimator. Moreover, our theoretical analysis shows that existing propensity-based approaches are biased in the presence of unmeasured confounders. To overcome this, we incorporate a robust deconfounding method in the debiasing phase to effectively mitigate the impact of unmeasured confounders. We conduct extensive experiments on three widely used real-world datasets to demonstrate the effectiveness and potential of the proposed methods."
+  },
+  "W7213469911": {
+    "title": "Predicting unknown mammalian viral hosts with Dynamic Positive\u2013Unlabeled learning",
+    "year": 2026,
+    "doi": "https://doi.org/10.1038/s41467-026-76416-4",
+    "venue": "Nature Communications",
+    "cited_by": 1,
+    "abstract": "Most emerging infectious diseases in humans are zoonotic in origin. Yet, knowledge of host-pathogen associations remains limited. Machine learning models have been increasingly used to infer missing zoonotic host-pathogen associations, but face challenges due to biased data and the absence of confirmed negative cases. Here, we introduce Dynamic Positive-Unlabeled (DPU) learning, a semi-supervised framework for predicting missing links in incomplete, biased networks. DPU learning integrates a propensity score model that estimates the probability of observing existing links with a classifier that predicts true link existence. This approach corrects predictions for uneven sampling bias and explicitly accounts for missing links arising from either true absences of associations or gaps in data collection. We applied DPU learning to predict missing associations between 5,330 mammalian species and 33 viral families worldwide, integrating phylogeographic relationships between mammals, observed mammal-virus association patterns, mammalian traits, and viral genetic characteristics. Our model predicted newly confirmed associations absent from the training data with a median probability of 0.82 and estimated a 8.6-fold increase in the total number of mammalian species-viral family associations. These results highlight the potential of DPU learning to support strategic, data-driven surveillance activities for proactive zoonotic risk mitigation."
+  },
+  "W4304692479": {
+    "title": "A recent survey on instance-dependent positive and unlabeled learning",
+    "year": 2022,
+    "doi": "https://doi.org/10.1016/j.fmre.2022.09.019",
+    "venue": "Fundamental Research",
+    "cited_by": 16,
+    "abstract": "Training with confident positive-labeled instances has received a lot of attention in Positive and Unlabeled (PU) learning tasks, and this is formally termed \"Instance-Dependent PU learning\". In instance-dependent PU learning, whether a positive instance is labeled depends on its labeling confidence. In other words, it is assumed that not all positive instances have the same probability to be included by the positive set. Instead, the instances that are far from the potential decision boundary are with larger probability to be labeled than those that are close to the decision boundary. This setting has practical importance in many real-world applications such as medical diagnosis, outlier detection, object detection, etc. In this survey, we first present the preliminary knowledge of PU learning, and then review the representative instance-dependent PU learning settings and methods. After that, we thoroughly compare them with typical PU learning methods on various benchmark datasets and analyze their performances. Finally, we discuss the potential directions for future research."
+  },
+  "W2191189641": {
+    "title": "Positive-unlabeled learning for the prediction of conformational B-cell epitopes",
+    "year": 2015,
+    "doi": "https://doi.org/10.1186/1471-2105-16-s18-s12",
+    "venue": "BMC Bioinformatics",
+    "cited_by": 44,
+    "abstract": "BACKGROUND: The incomplete ground truth of training data of B-cell epitopes is a demanding issue in computational epitope prediction. The challenge is that only a small fraction of the surface residues of an antigen are confirmed as antigenic residues (positive training data); the remaining residues are unlabeled. As some of these uncertain residues can possibly be grouped to form novel but currently unknown epitopes, it is misguided to unanimously classify all the unlabeled residues as negative training data following the traditional supervised learning scheme. RESULTS: We propose a positive-unlabeled learning algorithm to address this problem. The key idea is to distinguish between epitope-likely residues and reliable negative residues in unlabeled data. The method has two steps: (1) identify reliable negative residues using a weighted SVM with a high recall; and (2) construct a classification model on the positive residues and the reliable negative residues. Complex-based 10-fold cross-validation was conducted to show that this method outperforms those commonly used predictors DiscoTope 2.0, ElliPro and SEPPA 2.0 in every aspect. We conducted four case studies, in which the approach was tested on antigens of West Nile virus, dihydrofolate reductase, beta-lactamase, and two Ebola antigens whose epitopes are currently unknown. All the results were assessed on a newly-established data set of antigen structures not bound by antibodies, instead of on antibody-bound antigen structures. These bound structures may contain unfair binding information such as bound-state B-factors and protrusion index which could exaggerate the epitope prediction performance. Source codes are available on request."
+  },
+  "W4319454332": {
+    "title": "A hybrid positive unlabeled learning framework for uncovering scaffolds across human proteome by measuring the propensity to drive phase separation",
+    "year": 2023,
+    "doi": "https://doi.org/10.1093/bib/bbad009",
+    "venue": "Briefings in Bioinformatics",
+    "cited_by": 4,
+    "abstract": "Scaffold proteins drive liquid-liquid phase separation (LLPS) to form biomolecular condensates and organize various biochemical reactions in cells. Dysregulation of scaffolds can lead to aberrant condensate assembly and various complex diseases. However, bioinformatics predictors dedicated to scaffolds are still lacking and their development suffers from an extreme imbalance between limited experimentally identified scaffolds and unlabeled candidates. Here, using the joint distribution of hybrid multimodal features, we implemented a positive unlabeled (PU) learning-based framework named PULPS that combined ProbTagging and penalty logistic regression (PLR) to profile the propensity of scaffolds. PULPS achieved the best AUC of 0.8353 and showed an area under the lift curve (AUL) of 0.8339 as an estimation of true performance. Upon reviewing recent experimentally verified scaffolds, we performed a partial recovery with 2.85% increase in AUL from 0.8339 to 0.8577. In comparison, PULPS showed a 45.7% improvement in AUL compared with PLR, whereas 8.2% superiority over other existing tools. Our study first proved that PU learning is more suitable for scaffold prediction and demonstrated the widespread existence of phase separation states. This profile also uncovered potential scaffolds that co-drive LLPS in the human proteome and generated candidates for further experiments. PULPS is free for academic research at http://pulps.zbiolab.cn."
+  },
+  "W4390867307": {
+    "title": "Construction of Fatigue Criteria Through Positive\u2010Unlabeled Learning",
+    "year": 2024,
+    "doi": "https://doi.org/10.1111/ffe.14452",
+    "venue": "Fatigue & Fracture of Engineering Materials & Structures",
+    "cited_by": 1,
+    "abstract": "The reliability of vehicles is a significant issue for automotive manufacturers, with mechanical fatigue representing a pivotal aspect of the design process. To accelerate the development of novel mechanical components, automotive manufacturers are increasingly employing numerical simulations with the objective of markedly reducing the number of prototype validation tests. This requires the utilization of efficient fatigue criteria capable of accurately identifying critical zones in numerical models. However, the current fatigue criteria frequently fail to demonstrate a satisfactory correlation with the results obtained from fatigue test rigs. In response, this paper proposes a probabilistic Dang Van criterion that accounts for variability in fatigue results within a multiaxial context. Additionally, a fatigue database comprising numerical results and test reports on automotive chassis components is introduced. A novel approach utilizing positive\u2010unlabeled learning is developed to enhance the predictive accuracy of the fatigue criterion. Its effectiveness is demonstrated through application to the fatigue database."
+  },
+  "W3170999895": {
+    "title": "A Survey on Semi-supervised Learning for Delayed Partially Labelled Data Streams",
+    "year": 2022,
+    "doi": "https://doi.org/10.1145/3523055",
+    "venue": "ACM Computing Surveys",
+    "cited_by": 100,
+    "abstract": "Unlabelled data appear in many domains and are particularly relevant to streaming applications, where even though data is abundant, labelled data is rare. To address the learning problems associated with such data, one can ignore the unlabelled data and focus only on the labelled data (supervised learning); use the labelled data and attempt to leverage the unlabelled data (semi-supervised learning); or assume some labels will be available on request (active learning). The first approach is the simplest, yet the amount of labelled data available will limit the predictive performance. The second relies on finding and exploiting the underlying characteristics of the data distribution. The third depends on an external agent to provide the required labels in a timely fashion. This survey pays special attention to methods that leverage unlabelled data in a semi-supervised setting. We also discuss the delayed labelling issue, which impacts both fully supervised and semi-supervised methods. We propose a unified problem setting, discuss the learning guarantees and existing methods, and explain the differences between related problem settings. Finally, we review the current benchmarking practices and propose adaptations to enhance them."
+  },
+  "W2989114215": {
+    "title": "Delayed labelling evaluation for data streams",
+    "year": 2019,
+    "doi": "https://doi.org/10.1007/s10618-019-00654-y",
+    "venue": "Data Mining and Knowledge Discovery",
+    "cited_by": 64,
+    "abstract": "A large portion of the stream mining studies on classification rely on the availability of true labels immediately after making predictions. This approach is well exemplified by the test-then-train evaluation, where predictions immediately precede true label arrival. However, in many real scenarios, labels arrive with non-negligible latency. This raises the question of how to evaluate classifiers trained in such circumstances. This question is of particular importance when stream mining models are expected to refine their predictions between acquiring instance data and receiving its true label. In this work, we propose a novel evaluation methodology for data streams when verification latency takes place, namely continuous re-evaluation. It is applied to reference data streams and it is used to differentiate between stream mining techniques in terms of their ability to refine predictions based on newly arriving instances. Our study points out, discusses and shows empirically the importance of considering the delay of instance labels when evaluating classifiers for data streams."
+  },
+  "W2759864402": {
+    "title": "An Efficient Concept Drift Detection Method for Streaming Data under Limited Labeling",
+    "year": 2017,
+    "doi": "https://doi.org/10.1587/transinf.2017edp7091",
+    "venue": "IEICE Transactions on Information and Systems",
+    "cited_by": 63,
+    "abstract": "In data stream analysis, detecting the concept drift accurately is important to maintain the classification performance. Most drift detection methods assume that the class labels become available immediately after a data sample arrives. However, it is unrealistic to attempt to acquire all of the labels when processing the data streams, as labeling costs are high and much time is needed. In this paper, we propose a concept drift detection method under the assumption that there is limited access or no access to class labels. The proposed method detects concept drift on unlabeled data streams based on the class label information which is predicted by a classifier or a virtual classifier. Experimental results on synthetic and real streaming data show that the proposed method is competent to detect the concept drift on unlabeled data stream."
+  },
+  "W4392014357": {
+    "title": "Anticipative Bayesian classification for data streams with verification latency",
+    "year": 2024,
+    "doi": "https://doi.org/10.1080/02664763.2024.2319222",
+    "venue": "Journal of Applied Statistics",
+    "cited_by": 1,
+    "abstract": "Most of the existing adaptive classification algorithms in non-stationary data streams require recent labelled data for their updates. Such recent labels are often missing. For stream classification under verification latency only few approaches exist. Most of them assume clustered data or homogeneous drift in all features, which limits their applicability. We address this by proposing Anticipative Bayesian stream Classifier (ABClass), an approach that is capable of integrating and automatically selecting from different components. In its Bayesian classification framework, ABClass combines density estimation techniques, extended to extrapolate drift patterns over time, with unsupervised parameter tuning and unsupervised model selection. ABClass allows for multivariate density estimation and extrapolation techniques. In this work, we assume conditional independence between features given the class label for modelling feature-specific drift patterns. ABClass is generative and can also be used for explaining and visualising concept drift patterns. It is generic, making it easy to include further types of drift models, both for the class-conditional feature distribution and for the class prior distribution. The experimental evaluation on several real-world data streams shows its competitiveness compared to other state-of-the-art approaches. ABClass is in most cases ten- to hundred-times faster than its competitors, both for model fitting and for prediction."
+  },
+  "W2294737577": {
+    "title": "Classification of Evolving Data Streams with Infinitely Delayed Labels",
+    "year": 2015,
+    "doi": "https://doi.org/10.1109/icmla.2015.174",
+    "venue": "International Conference on Machine Learning and Applications",
+    "cited_by": 58,
+    "abstract": "The majority of evolving data streams classification algorithms assume that the actual labels of the predicted examples are readily available without any time delay just after a prediction is made. However, given the high label costs, dependence of an expert, limitations in data transmission or even restrictions imposed by the problem's nature, there is a large number of real-world applications in which the availability of actual labels is infinitely delayed (never available). In these cases, it is necessary the use of algorithms that does not follow the traditional process of monitoring the error rate to detect changes in data distribution and uses the most recent labeled data to update the classification model. In this paper, we propose the method MClassification to classify evolving data streams with infinitely delayed labels. Our method is inspired on the use of Micro-Cluster representation from online clustering algorithms. Considering the presence of incremental drifts, our approach uses a distance-based strategy to maintain the Micro-Clusters' positions updated. An evaluation in several synthetic and real data shows that MClassification achieves competitive accuracy results to state-of-the-art methods and adequate computational cost. The main advantage of the proposed method is the absence of critical parameters that require user's prior knowledge, as occurs with rival methods."
+  },
+  "W3207409396": {
+    "title": "A Survey on Concept Drift in Process Mining",
+    "year": 2021,
+    "doi": "https://doi.org/10.1145/3472752",
+    "venue": "ACM Computing Surveys",
+    "cited_by": 165,
+    "abstract": "Concept drift in process mining (PM) is a challenge as classical methods assume processes are in a steady-state, i.e., events share the same process version. We conducted a systematic literature review on the intersection of these areas, and thus, we review concept drift in PM and bring forward a taxonomy of existing techniques for drift detection and online PM for evolving environments. Existing works depict that (i) PM still primarily focuses on offline analysis, and (ii) the assessment of concept drift techniques in processes is cumbersome due to the lack of common evaluation protocol, datasets, and metrics."
+  },
+  "W7233793886": {
+    "title": "When Does Oversampling Help? A Decision Framework for Imbalanced Data Streams Under Label Delay and Concept Drift",
+    "year": 2026,
+    "doi": "https://doi.org/10.48550/arxiv.2611.17981",
+    "venue": "arXiv (Cornell University)",
+    "cited_by": 0,
+    "abstract": "For imbalanced data streams with delayed labels, is it worth adding a streaming oversampler, or does continuous re-evaluation of earlier predictions already recover the cost of the delay? We address this through an extensive experimental comparison of streaming oversampling and continuous re-evaluation under joint class imbalance, concept drift, and label delay. Streaming oversamplers are typically evaluated under the test-then-train assumption of immediate labels; their behaviour under these conditions, assessed through re-evaluation, has not been systematically studied. We close this gap with a decision framework that predicts when oversampling adds value over re-evaluation, organised around three axes: drift density, minority-class learnability, and delay relative to the refinement window, and operationalised as a competition between a recovery channel (re-evaluation) and a minority-coverage channel (oversampling). Evaluating $15$ classifiers on $6$ synthetic and $6$ real streams, we find: re-evaluation recovers delay-induced loss on drift-active streams but is silent on stationary ones; oversampling's marginal contribution over re-evaluation is statistically detectable in only one real-data configuration; and cost--performance Pareto recommendations from synthetic streams do not transfer to real data, where fronts partition by drift regime. Method selection should therefore be conditioned on the stream's profile and re-estimated as it evolves, not inherited from synthetic benchmarks."
+  },
+  "W4224879991": {
+    "title": "Stream-Based Active Learning with Verification Latency in Non-stationary Environments",
+    "year": 2022,
+    "doi": "https://doi.org/10.1007/978-3-031-15937-4_22",
+    "venue": "Lecture notes in computer science",
+    "cited_by": 15,
+    "abstract": ""
+  },
+  "W4388817142": {
+    "title": "Active learning for data streams: a survey",
+    "year": 2023,
+    "doi": "https://doi.org/10.1007/s10994-023-06454-2",
+    "venue": "Machine Learning",
+    "cited_by": 181,
+    "abstract": "Online active learning is a paradigm in machine learning that aims to select the most informative data points to label from a data stream. The problem of minimizing the cost associated with collecting labeled observations has gained a lot of attention in recent years, particularly in real-world applications where data is only available in an unlabeled form. Annotating each observation can be time-consuming and costly, making it difficult to obtain large amounts of labeled data. To overcome this issue, many active learning strategies have been proposed in the last decades, aiming to select the most informative observations for labeling in order to improve the performance of machine learning models. These approaches can be broadly divided into two categories: static pool-based and stream-based active learning. Pool-based active learning involves selecting a subset of observations from a closed pool of unlabeled data, and it has been the focus of many surveys and literature reviews. However, the growing availability of data streams has led to an increase in the number of approaches that focus on online active learning, which involves continuously selecting and labeling observations as they arrive in a stream. This work aims to provide an overview of the most recently proposed approaches for selecting the most informative observations from data streams in real time. We review the various techniques that have been proposed and discuss their strengths and limitations, as well as the challenges and opportunities that exist in this area of research."
+  },
+  "W4415160301": {
+    "title": "ROSFD: Robust Online Streaming Fraud Detection with Resilience to Concept Drift in Data Streams",
+    "year": 2025,
+    "doi": "https://doi.org/10.48550/arxiv.2504.10229",
+    "venue": "arXiv (Cornell University)",
+    "cited_by": 16,
+    "abstract": "Continuous generation of streaming data from diverse sources, such as online transactions and digital interactions, necessitates timely fraud detection. Traditional batch processing methods often struggle to capture the rapidly evolving patterns of fraudulent activities. This paper highlights the critical importance of processing streaming data for effective fraud detection. To address the inherent challenges of latency, scalability, and concept drift in streaming environments, we propose a robust online streaming fraud detection (ROSFD) framework. Our proposed framework comprises two key stages: (i) Stage One: Offline Model Initialization. In this initial stage, a model is built in offline settings using incremental learning principles to overcome the \"cold-start\" problem. (ii) Stage Two: Real-time Model Adaptation. In this dynamic stage, drift detection algorithms (viz.,, DDM, EDDM, and ADWIN) are employed to identify concept drift in the incoming data stream and incrementally train the model accordingly. This \"train-only-when-required\" strategy drastically reduces the number of retrains needed without significantly impacting the area under the receiver operating characteristic curve (AUC). Overall, ROSFD utilizing ADWIN as the drift detection method demonstrated the best performance among the employed methods. In terms of model efficacy, Adaptive Random Forest consistently outperformed other models, achieving the highest AUC in four out of five datasets."
+  },
+  "W4400480491": {
+    "title": "AiGAS-dEVL: An adaptive incremental neural gas model for drifting data streams under extreme verification latency",
+    "year": 2026,
+    "doi": "https://doi.org/10.1016/j.ins.2026.123477",
+    "venue": "Information Sciences",
+    "cited_by": 3,
+    "abstract": "Nowadays, the rapid generation of data and the high costs of labeling (in most cases, reliant on human supervision) often lead to partially labeled data streams, particularly in scenarios characterized by extreme verification latency (EVL), where supervision becomes indefinitely unavailable. Additionally, streaming data can exhibit non-stationarities, known as concept drift, requiring models to incrementally adapt to evolving data patterns. This paper addresses the simultaneous occurrence of these two issues, where concept tracking and change adaptation mechanisms must operate without supervision. To this end we propose AiGAS-dEVL (Adaptive Incremental neural GAS model for drifting Streams under Extreme Verification Latency), a novel approach utilizing growing neural gas to characterize concept distributions in a data stream over time. By analyzing the behavior of prototypical representations, our method identifies changes in concept behavior and informs adaptation strategies to accommodate these shifts. Experimental results on various synthetic datasets demonstrate that AiGAS-dEVL outperforms baseline models, achieving an average prequential error improvement of 39.5% across datasets of varying drift characteristics, showcasing enhanced adaptability while maintaining a straightforward and interpretable instance-based adaptation strategy."
+  },
+  "W4417215876": {
+    "title": "Concept drift detection in image data stream: a survey on current literature, limitations and future directions",
+    "year": 2025,
+    "doi": "https://doi.org/10.1007/s10462-025-11428-y",
+    "venue": "Artificial Intelligence Review",
+    "cited_by": 17,
+    "abstract": "Concept drift\u2014changes in the underlying data distribution over time\u2014poses a significant challenge to machine learning systems deployed in dynamic environments. While numerous drift detection methods have been developed for structured data such as tabular and time-series streams, concept drift in image data remains an underexplored area due to the unstructured and high-dimensional nature of visual information. This survey presents the first comprehensive review of concept drift detection methods tailored for image data streams. We propose a novel taxonomy that categorizes existing approaches based on key properties such as image feature handling, detection strategy, detection level, concept drift cause, and evaluation considerations. Through the lens of this taxonomy, we analyze 14 representative concept drift detection methods designed for image data, highlighting current approaches to the field, their strengths and limitations. Based on this analysis, we outline promising future research directions to advance the field of concept drift detection in image-based systems."
+  },
+  "W4402364597": {
+    "title": "Self-Supervised Learning from Incrementally Drifting Data Streams",
+    "year": 2024,
+    "doi": "https://doi.org/10.14428/esann/2024.es2024-49",
+    "venue": "European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning (ESANN)",
+    "cited_by": 2,
+    "abstract": "Supervised online learning relies on the assumption that ground truth information is available for model updates at each time step.As this is not realistic in every setting, alternatives such as active online learning, or online learning with verification latency have been proposed.In this work, we assume that no label information is available after intitial training.We argue that provided we can characterize the expected concept drift as incremental drift, we can rely on a self-labeling strategy to keep updated models.We derive a k-NN-based self-labeling online learner implementing the presented self-supervised scheme and experimentally show that this is an option for learning from incrementally drifting data streams in the absence of label information."
+  },
+  "W1514928307": {
+    "title": "Classification with Noisy Labels by Importance Reweighting",
+    "year": 2015,
+    "doi": "https://doi.org/10.1109/tpami.2015.2456899",
+    "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "cited_by": 1045,
+    "abstract": "In this paper, we study a classification problem in which sample labels are randomly corrupted. In this scenario, there is an unobservable sample with noise-free labels. However, before being observed, the true labels are independently flipped with a probability \u03c1 \u2208 [0,0.5), and the random label noise can be class-conditional. Here, we address two fundamental problems raised by this scenario. The first is how to best use the abundant surrogate loss functions designed for the traditional classification problem when there is label noise. We prove that any surrogate loss function can be used for classification with noisy labels by using importance reweighting, with consistency assurance that the label noise does not ultimately hinder the search for the optimal classifier of the noise-free sample. The other is the open problem of how to obtain the noise rate \u03c1. We show that the rate is upper bounded by the conditional probability P(\u2227Y|X) of the noisy sample. Consequently, the rate can be estimated, because the upper bound can be easily reached in classification problems. Experimental results on synthetic and real datasets confirm the efficiency of our methods."
+  },
+  "W3035702670": {
+    "title": "Beyond Synthetic Noise: Deep Learning on Controlled Noisy Labels",
+    "year": 2019,
+    "doi": "https://doi.org/10.48550/arxiv.1911.09781",
+    "venue": "arXiv (Cornell University)",
+    "cited_by": 270,
+    "abstract": "Performing controlled experiments on noisy data is essential in understanding deep learning across noise levels. Due to the lack of suitable datasets, previous research has only examined deep learning on controlled synthetic label noise, and real-world label noise has never been studied in a controlled setting. This paper makes three contributions. First, we establish the first benchmark of controlled real-world label noise from the web. This new benchmark enables us to study the web label noise in a controlled setting for the first time. The second contribution is a simple but effective method to overcome both synthetic and real noisy labels. We show that our method achieves the best result on our dataset as well as on two public benchmarks (CIFAR and WebVision). Third, we conduct the largest study by far into understanding deep neural networks trained on noisy labels across different noise levels, noise types, network architectures, and training settings. The data and code are released at the following link: http://www.lujiang.info/cnlw.html"
+  },
+  "W2964155802": {
+    "title": "Iterative Learning with Open-set Noisy Labels",
+    "year": 2018,
+    "doi": "https://doi.org/10.1109/cvpr.2018.00906",
+    "venue": "IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings - IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings",
+    "cited_by": 414,
+    "abstract": "Large-scale datasets possessing clean label annotations are crucial for training Convolutional Neural Networks (CNNs). However, labeling large-scale data can be very costly and error-prone, and even high-quality datasets are likely to contain noisy (incorrect) labels. Existing works usually employ a closed-set assumption, whereby the samples associated with noisy labels possess a true class contained within the set of known classes in the training data. However, such an assumption is too restrictive for many applications, since samples associated with noisy labels might in fact possess a true class that is not present in the training data. We refer to this more complex scenario as the open-set noisy label problem and show that it is nontrivial in order to make accurate predictions. To address this problem, we propose a novel iterative learning framework for training CNNs on datasets with open-set noisy labels. Our approach detects noisy labels and learns deep discriminative features in an iterative fashion. To benefit from the noisy label detection, we design a Siamese network to encourage clean labels and noisy labels to be dissimilar. A reweighting module is also applied to simultaneously emphasize the learning from clean labels and reduce the effect caused by noisy labels. Experiments on CIFAR-10, ImageNet and real-world noisy (web-search) datasets demonstrate that our proposed model can robustly train CNNs in the presence of a high proportion of open-set as well as closed-set noisy labels."
+  },
+  "W2951459130": {
+    "title": "Learning to Learn From Noisy Labeled Data",
+    "year": 2019,
+    "doi": "https://doi.org/10.1109/cvpr.2019.00519",
+    "venue": "IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings - IEEE Computer Society Conference on Computer Vision and Pattern Recognition/Proceedings",
+    "cited_by": 409,
+    "abstract": "Despite the success of deep neural networks (DNNs) in image classification tasks, the human-level performance relies on massive training data with high-quality manual annotations, which are expensive and time-consuming to collect. There exist many inexpensive data sources on the web, but they tend to contain inaccurate labels. Training on noisy labeled datasets causes performance degradation because DNNs can easily overfit to the label noise. To overcome this problem, we propose a noise-tolerant training algorithm, where a meta-learning update is performed prior to conventional gradient update. The proposed meta-learning method simulates actual training by generating synthetic noisy labels, and train the model such that after one gradient update using each set of synthetic noisy labels, the model does not overfit to the specific noise. We conduct extensive experiments on the noisy CIFAR-10 dataset and the Clothing1M dataset. The results demonstrate the advantageous performance of the proposed method compared to several state-of-the-art baselines."
+  },
+  "W3093395587": {
+    "title": "Importance Reweighting for Biquality Learning",
+    "year": 2021,
+    "doi": "https://doi.org/10.1109/ijcnn52387.2021.9533349",
+    "venue": "International Joint Conference on Neural Networks (IJCNN)",
+    "cited_by": 7,
+    "abstract": "The field of Weakly Supervised Learning (WSL) has recently seen a surge of popularity, with numerous papers addressing different types of \u201csupervision deficiencies\u201d, namely: poor quality, non adaptability, and insufficient quantity of labels. Regarding quality, label noise can be of different types, including completely-at-random, at-random or even not-at-random. All these kinds of label noise are addressed separately in the literature, leading to highly specialized approaches. This paper proposes an original, encompassing, view of Weakly Supervised Learning, which results in the design of generic approaches capable of dealing with any kind of label noise. For this purpose, an alternative setting called \u201cBiquality data\u201d is used. It assumes that a small trusted dataset of correctly labeled examples is available, in addition to an untrusted dataset of noisy examples. In this paper, we propose a new reweigthing scheme capable of identifying noncorrupted examples in the untrusted dataset. This allows one to learn classifiers using both datasets. Extensive experiments that simulate several types of label noise and that vary the quality and quantity of untrusted examples, demonstrate that the proposed approach outperforms baselines and state-of-the-art approaches."
+  },
+  "W3042609801": {
+    "title": "Learning From Noisy Labels With Deep Neural Networks: A Survey",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/tnnls.2022.3152527",
+    "venue": "IEEE Transactions on Neural Networks and Learning Systems",
+    "cited_by": 2042,
+    "abstract": "Deep learning has achieved remarkable success in numerous domains with help from large amounts of big data. However, the quality of data labels is a concern because of the lack of high-quality labels in many real-world scenarios. As noisy labels severely degrade the generalization performance of deep neural networks, learning from noisy labels (robust training) is becoming an important task in modern deep learning applications. In this survey, we first describe the problem of learning with label noise from a supervised learning perspective. Next, we provide a comprehensive review of 62 state-of-the-art robust training methods, all of which are categorized into five groups according to their methodological difference, followed by a systematic comparison of six properties used to evaluate their superiority. Subsequently, we perform an in-depth analysis of noise rate estimation and summarize the typically used evaluation methodology, including public noisy datasets and evaluation metrics. Finally, we present several promising research directions that can serve as a guideline for future studies."
+  },
+  "W3035753488": {
+    "title": "Peer Loss Functions: Learning from Noisy Labels without Knowing Noise Rates",
+    "year": 2019,
+    "doi": "https://doi.org/10.48550/arxiv.1910.03231",
+    "venue": "arXiv (Cornell University)",
+    "cited_by": 278,
+    "abstract": "Learning with noisy labels is a common challenge in supervised learning. Existing approaches often require practitioners to specify noise rates, i.e., a set of parameters controlling the severity of label noises in the problem, and the specifications are either assumed to be given or estimated using additional steps. In this work, we introduce a new family of loss functions that we name as peer loss functions, which enables learning from noisy labels and does not require a priori specification of the noise rates. Peer loss functions work within the standard empirical risk minimization (ERM) framework. We show that, under mild conditions, performing ERM with peer loss functions on the noisy dataset leads to the optimal or a near-optimal classifier as if performing ERM over the clean training data, which we do not have access to. We pair our results with an extensive set of experiments. Peer loss provides a way to simplify model development when facing potentially noisy training labels, and can be promoted as a robust candidate loss function in such situations."
+  },
+  "W4415269790": {
+    "title": "Revisiting Meta-Learning with Noisy Labels: Reweighting Dynamics and Theoretical Guarantees",
+    "year": 2025,
+    "doi": "https://doi.org/10.48550/arxiv.2510.12209",
+    "venue": "arXiv (Cornell University)",
+    "cited_by": 1,
+    "abstract": "Learning with noisy labels remains challenging because over-parameterized networks memorize corrupted supervision. Meta-learning-based sample reweighting mitigates this by using a small clean subset to guide training, yet its behavior and training dynamics lack theoretical understanding. We provide a rigorous theoretical analysis of meta-reweighting under label noise and show that its training trajectory unfolds in three phases: (i) an alignment phase that amplifies examples consistent with a clean subset and suppresses conflicting ones; (ii) a filtering phase driving noisy example weights toward zero until the clean subset loss plateaus; and (iii) a post-filtering phase in which noise filtration becomes perturbation-sensitive. The mechanism is a similarity-weighted coupling between training and clean subset signals together with clean subset training loss contraction; in the post-filtering regime where the clean-subset loss is sufficiently small, the coupling term vanishes and meta-reweighting loses discriminatory power. Guided by this analysis, we propose a lightweight surrogate for meta-reweighting that integrates mean-centering, row shifting, and label-signed modulation, yielding more stable performance while avoiding expensive bi-level optimization. Across synthetic and real noisy-label benchmarks, our method consistently outperforms strong reweighting/selection baselines."
+  },
+  "W3093211441": {
+    "title": "GANs for learning from very high class conditional noisy labels",
+    "year": 2020,
+    "doi": "https://doi.org/10.48550/arxiv.2010.09577",
+    "venue": "arXiv (Cornell University)",
+    "cited_by": 1,
+    "abstract": "We use Generative Adversarial Networks (GANs) to design a class conditional label noise (CCN) robust scheme for binary classification. It first generates a set of correctly labelled data points from noisy labelled data and 0.1% or 1% clean labels such that the generated and true (clean) labelled data distributions are close; generated labelled data is used to learn a good classifier. The mode collapse problem while generating correct feature-label pairs and the problem of skewed feature-label dimension ratio ($\\sim$ 784:1) are avoided by using Wasserstein GAN and a simple data representation change. Another WGAN with information-theoretic flavour on top of the new representation is also proposed. The major advantage of both schemes is their significant improvement over the existing ones in presence of very high CCN rates, without either estimating or cross-validating over the noise rates. We proved that KL divergence between clean and noisy distribution increases w.r.t. noise rates in symmetric label noise model; can be extended to high CCN rates. This implies that our schemes perform well due to the adversarial nature of GANs. Further, use of generative approach (learning clean joint distribution) while handling noise enables our schemes to perform better than discriminative approaches like GLC, LDMI and GCE; even when the classes are highly imbalanced. Using Friedman F test and Nemenyi posthoc test, we showed that on high dimensional binary class synthetic, MNIST and Fashion MNIST datasets, our schemes outperform the existing methods and demonstrate consistent performance across noise rates."
+  },
+  "W4393149358": {
+    "title": "FedDiv: Collaborative Noise Filtering for Federated Learning with Noisy Labels",
+    "year": 2024,
+    "doi": "https://doi.org/10.1609/aaai.v38i4.28095",
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "cited_by": 77,
+    "abstract": "Federated Learning with Noisy Labels (F-LNL) aims at seeking an optimal server model via collaborative distributed learning by aggregating multiple client models trained with local noisy or clean samples. On the basis of a federated learning framework, recent advances primarily adopt label noise filtering to separate clean samples from noisy ones on each client, thereby mitigating the negative impact of label noise. However, these prior methods do not learn noise filters by exploiting knowledge across all clients, leading to sub-optimal and inferior noise filtering performance and thus damaging training stability. In this paper, we present FedDiv to tackle the challenges of F-LNL. Specifically, we propose a global noise filter called Federated Noise Filter for effectively identifying samples with noisy labels on every client, thereby raising stability during local training sessions. Without sacrificing data privacy, this is achieved by modeling the global distribution of label noise across all clients. Then, in an effort to make the global model achieve higher performance, we introduce a Predictive Consistency based Sampler to identify more credible local data for local model training, thus preventing noise memorization and further boosting the training stability. Extensive experiments on CIFAR-10, CIFAR-100, and Clothing1M demonstrate that FedDiv achieves superior performance over state-of-the-art F-LNL methods under different label noise settings for both IID and non-IID data partitions. Source code is publicly available at https://github.com/lijichang/FLNL-FedDiv."
+  },
+  "W2947049994": {
+    "title": "Are Anchor Points Really Indispensable in Label-Noise Learning?",
+    "year": 2019,
+    "doi": "https://doi.org/10.48550/arxiv.1906.00189",
+    "venue": "neural information processing systems",
+    "cited_by": 434,
+    "abstract": "In label-noise learning, \\textit{noise transition matrix}, denoting the probabilities that clean labels flip into noisy labels, plays a central role in building \\textit{statistically consistent classifiers}. Existing theories have shown that the transition matrix can be learned by exploiting \\textit{anchor points} (i.e., data points that belong to a specific class almost surely). However, when there are no anchor points, the transition matrix will be poorly learned, and those current consistent classifiers will significantly degenerate. In this paper, without employing anchor points, we propose a \\textit{transition-revision} ($T$-Revision) method to effectively learn transition matrices, leading to better classifiers. Specifically, to learn a transition matrix, we first initialize it by exploiting data points that are similar to anchor points, having high \\textit{noisy class posterior probabilities}. Then, we modify the initialized matrix by adding a \\textit{slack variable}, which can be learned and validated together with the classifier by using noisy data. Empirical results on benchmark-simulated and real-world label-noise datasets demonstrate that without using exact anchor points, the proposed method is superior to the state-of-the-art label-noise learning methods."
+  },
+  "W3209948030": {
+    "title": "Learning with Noisy Labels Revisited: A Study Using Real-World Human Annotations",
+    "year": 2021,
+    "doi": "https://doi.org/10.48550/arxiv.2110.12088",
+    "venue": "arXiv (Cornell University)",
+    "cited_by": 244,
+    "abstract": "Existing research on learning with noisy labels mainly focuses on synthetic label noise. Synthetic noise, though has clean structures which greatly enabled statistical analyses, often fails to model real-world noise patterns. The recent literature has observed several efforts to offer real-world noisy datasets, yet the existing efforts suffer from two caveats: (1) The lack of ground-truth verification makes it hard to theoretically study the property and treatment of real-world label noise; (2) These efforts are often of large scales, which may result in unfair comparisons of robust methods within reasonable and accessible computation power. To better understand real-world label noise, it is crucial to build controllable and moderate-sized real-world noisy datasets with both ground-truth and noisy labels. This work presents two new benchmark datasets CIFAR-10N, CIFAR-100N, equipping the training datasets of CIFAR-10, CIFAR-100 with human-annotated real-world noisy labels we collected from Amazon Mechanical Turk. We quantitatively and qualitatively show that real-world noisy labels follow an instance-dependent pattern rather than the classically assumed and adopted ones (e.g., class-dependent label noise). We then initiate an effort to benchmarking a subset of the existing solutions using CIFAR-10N and CIFAR-100N. We further proceed to study the memorization of correct and wrong predictions, which further illustrates the difference between human noise and class-dependent synthetic noise. We show indeed the real-world noise patterns impose new and outstanding challenges as compared to synthetic label noise. These observations require us to rethink the treatment of noisy labels, and we hope the availability of these two datasets would facilitate the development and evaluation of future learning with noisy label solutions. Datasets and leaderboards are available at http://noisylabels.com."
+  },
+  "W2996060033": {
+    "title": "Image classification with deep learning in the presence of noisy labels: A survey",
+    "year": 2021,
+    "doi": "https://doi.org/10.1016/j.knosys.2021.106771",
+    "venue": "Knowledge-Based Systems",
+    "cited_by": 447,
+    "abstract": ""
+  },
+  "W4401442103": {
+    "title": "SplitNet: Learnable Clean-Noisy Label Splitting for Learning with Noisy Labels",
+    "year": 2024,
+    "doi": "https://doi.org/10.1007/s11263-024-02187-4",
+    "venue": "International Journal of Computer Vision",
+    "cited_by": 29,
+    "abstract": "Annotating the dataset with high-quality labels is crucial for deep networks\u2019 performance, but in real-world scenarios, the labels are often contaminated by noise. To address this, some methods were recently proposed to automatically split clean and noisy labels among training data, and learn a semi-supervised learner in a Learning with Noisy Labels (LNL) framework. However, they leverage a handcrafted module for clean-noisy label splitting, which induces a confirmation bias in the semi-supervised learning phase and limits the performance. In this paper, for the first time, we present a learnable module for clean-noisy label splitting, dubbed SplitNet, and a novel LNL framework which complementarily trains the SplitNet and main network for the LNL task. We also propose to use a dynamic threshold based on split confidence by SplitNet to optimize the semi-supervised learner better. To enhance SplitNet training, we further present a risk hedging method. Our proposed method performs at a state-of-the-art level, especially in high noise ratio settings on various LNL benchmarks."
+  },
+  "W3102583815": {
+    "title": "Early-Learning Regularization Prevents Memorization of Noisy Labels",
+    "year": 2020,
+    "doi": "https://doi.org/10.48550/arxiv.2007.00151",
+    "venue": "neural information processing systems",
+    "cited_by": 820,
+    "abstract": "We propose a novel framework to perform classification via deep learning in the presence of noisy annotations. When trained on noisy labels, deep neural networks have been observed to first fit the training data with clean labels during an \"early learning\" phase, before eventually memorizing the examples with false labels. We prove that early learning and memorization are fundamental phenomena in high-dimensional classification tasks, even in simple linear models, and give a theoretical explanation in this setting. Motivated by these findings, we develop a new technique for noisy classification tasks, which exploits the progress of the early learning phase. In contrast with existing approaches, which use the model output during early learning to detect the examples with clean labels, and either ignore or attempt to correct the false labels, we take a different route and instead capitalize on early learning via regularization. There are two key elements to our approach. First, we leverage semi-supervised learning techniques to produce target probabilities based on the model outputs. Second, we design a regularization term that steers the model towards these targets, implicitly preventing memorization of the false labels. The resulting framework is shown to provide robustness to noisy annotations on several standard benchmarks and real-world datasets, where it achieves results comparable to the state of the art."
+  },
+  "W2065314038": {
+    "title": "How long did it take to fix bugs?",
+    "year": 2006,
+    "doi": "https://doi.org/10.1145/1137983.1138027",
+    "venue": "International Conference on Mining Software Repositories (MSR)",
+    "cited_by": 212,
+    "abstract": "The number of bugs (or fixes) is a common factor used to measure the quality of software and assist bug related analysis. For example, if software files have many bugs, they may be unstable. In comparison, the bug-fix time - the time to fix a bug after the bug was introduced - is neglected. We believe that the bug-fix time is an important factor for bug related analysis, such as measuring software quality. For example, if bugs in a file take a relatively long time to be fixed, the file may have some structural problems that make it difficult to make changes. In this report, we compute the bug-fix time of files in ArgoUML and PostgreSQL by identifying when bugs are introduced and when the bugs are fixed. This report includes bug-fix time statistics such as average bug-fix time, and distributions of bug-fix time. We also list the top 20 bug-fix time files of two projects. Copyright 2006 ACM."
+  },
+  "W2914161001": {
+    "title": "Getafix: learning to fix bugs automatically",
+    "year": 2019,
+    "doi": "https://doi.org/10.1145/3360585",
+    "venue": "Proceedings of the ACM on Programming Languages",
+    "cited_by": 330,
+    "abstract": "Static analyzers help find bugs early by warning about recurring bug categories. While fixing these bugs still remains a mostly manual task in practice, we observe that fixes for a specific bug category often are repetitive. This paper addresses the problem of automatically fixing instances of common bugs by learning from past fixes. We present Getafix, an approach that produces human-like fixes while being fast enough to suggest fixes in time proportional to the amount of time needed to obtain static analysis results in the first place. Getafix is based on a novel hierarchical clustering algorithm that summarizes fix patterns into a hierarchy ranging from general to specific patterns. Instead of an expensive exploration of a potentially large space of candidate fixes, Getafix uses a simple yet effective ranking technique that uses the context of a code change to select the most appropriate fix for a given bug. Our evaluation applies Getafix to 1,268 bug fixes for six bug categories reported by popular static analyzers for Java, including null dereferences, incorrect API calls, and misuses of particular language constructs. The approach predicts exactly the human-written fix as the top-most suggestion between 12% and 91% of the time, depending on the bug category. The top-5 suggestions contain fixes for 526 of the 1,268 bugs. Moreover, we report on deploying the approach within Facebook, where it contributes to the reliability of software used by billions of people. To the best of our knowledge, Getafix is the first industrially-deployed automated bug-fixing tool that learns fix patterns from past, human-written fixes to produce human-like fixes."
+  },
+  "W2131299065": {
+    "title": "Are Developers Fixing Their Own Bugs? Tracing Bug-Fixing and Bug-Seeding Committers",
+    "year": 2011,
+    "doi": "https://doi.org/10.4018/jossp.2011040102",
+    "venue": "International Journal of Open Source Software and Processes",
+    "cited_by": 15,
+    "abstract": "The process of fixing software bugs plays a key role in the maintenance activities of a software project. Ideally, code ownership and responsibility should be enforced among developers working on the same artifacts, so that those introducing buggy code could also contribute to its fix. However, especially in FLOSS projects, this mechanism is not clearly understood: in particular, it is not known whether those contributors fixing a bug are the same introducing and seeding it in the first place. This paper analyzes the comm-central FLOSS project, which hosts part of the Thunderbird, SeaMonkey, Lightning extensions and Sunbird projects from the Mozilla community. The analysis is focused at the level of lines of code and it uses the information stored in the source code management system. The results of this study show that in 80% of the cases, the bug-fixing activity involves source code modified by at most two developers. It also emerges that the developers fixing the bug are only responsible for 3.5% of the previous modifications to the lines affected; this implies that the other developers making changes to those lines could have made that fix. In most of the cases the bug fixing process in comm-central is not carried out by the same developers than those who seeded the buggy code."
+  },
+  "W2067800977": {
+    "title": "Global and Geographically Distributed Work Teams: Understanding the Bug Fixing Process and Potentially Bug-prone Activity Patterns",
+    "year": 2012,
+    "doi": "https://doi.org/10.1109/csmr.2012.80",
+    "venue": "Euromicro Conference on Software Maintenance and Reengineering (CSMR)",
+    "cited_by": 0,
+    "abstract": "This dissertation has studied the roots of the errors introduced involuntary into the source code through the analysis of the history of source code management systems (SCMs). The event of introducing an error has been named as bug seeding commit, and its place in the bug life cycle has been studied from several perspectives: a) the bug life cycle has been expanded and considers not only the bug tracking system (BTS), b) the time to fix a bug or c) the estimation of the finding rate, among others. In addition, we study the potential causes of the seeding. This thesis has focused on two potential human related aspects such as experience and time of the day. As main results, the time span from a bug being introduced to its discovery represents on average 60% to a 90% of its total life. In addition, the discovery rate of bugs follows in most of the cases a lineal distribution, a result that can help in estimating further effort in the project. Regarding to human related factors, no relationship was found between experience and the ratio of buggy activity of the developers. And finally, there are specific timeslots of the day where the changes to the source code are more prone to be buggy: specifically during the evening timeframe of activity."
+  },
+  "W4403160911": {
+    "title": "MarsCode Agent: AI-native Automated Bug Fixing",
+    "year": 2024,
+    "doi": "https://doi.org/10.48550/arxiv.2409.00899",
+    "venue": "arXiv (Cornell University)",
+    "cited_by": 129,
+    "abstract": "Recent advances in large language models (LLMs) have shown significant potential to automate various software development tasks, including code completion, test generation, and bug fixing. However, the application of LLMs for automated bug fixing remains challenging due to the complexity and diversity of real-world software systems. In this paper, we introduce MarsCode Agent, a novel framework that leverages LLMs to automatically identify and repair bugs in software code. MarsCode Agent combines the power of LLMs with advanced code analysis techniques to accurately localize faults and generate patches. Our approach follows a systematic process of planning, bug reproduction, fault localization, candidate patch generation, and validation to ensure high-quality bug fixes. We evaluated MarsCode Agent on SWE-bench, a comprehensive benchmark of real-world software projects, and our results show that MarsCode Agent achieves a high success rate in bug fixing compared to most of the existing automated approaches."
+  },
+  "W4286530559": {
+    "title": "A Comprehensive Study of Bug Fixes in Quantum Programs",
+    "year": 2022,
+    "doi": "https://doi.org/10.1109/saner53432.2022.00147",
+    "venue": "IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER)",
+    "cited_by": 58,
+    "abstract": "As quantum programming evolves, more and more quantum programming languages are being developed. As a result, debugging and testing quantum programs have become increasingly important. While bug fixing in classical programs has come a long way, there is a lack of research in quantum programs. To this end, this paper presents a comprehensive study on bug fixing in quantum programs. We collect and investigate 96 real-world bugs and their fixes from four popular quantum programming languages (Qiskit, Cirq, Q#, and ProjectQ). Our study shows that a high proportion of bugs in quantum programs are quantum-specific bugs (over 80%), which requires further research in the bug fixing domain. We also summarize and extend the bug patterns in quantum programs and subdivide the most critical part, math-related bugs, to make it more applicable to the study of quantum programs. Our findings summarize the characteristics of bugs in quantum programs and provide a basis for studying testing and debugging quantum programs."
+  },
+  "W4416394968": {
+    "title": "HotBugs.jar: A Benchmark of Hot Fixes for Time-Critical Bugs",
+    "year": 2025,
+    "doi": "https://doi.org/10.48550/arxiv.2510.07529",
+    "venue": "arXiv (Cornell University)",
+    "cited_by": 4,
+    "abstract": "Hot fixes are urgent, unplanned changes deployed to production systems to address time-critical issues. Despite their importance, no existing evaluation benchmark focuses specifically on hot fixes. We present HotBugs$.$jar, the first dataset dedicated to real-world hot fixes. From an initial mining of 10 active Apache projects totaling over 190K commits and 150K issue reports, we identified 746 software patches that met our hot-fix criteria. After manual evaluation, 679 were confirmed as genuine hot fixes, of which 110 are reproducible using a test suite. Building upon the Bugs$.$jar framework, HotBugs$.$jar integrates these 110 reproducible cases and makes available all 679 manually validated hot fixes, each enriched with comprehensive metadata to support future research. Each hot fix was systematically identified using Jira issue data, validated by independent reviewers, and packaged in a reproducible format with buggy and fixed versions, test suites, and metadata. HotBugs$.$jar has already been adopted as the official challenge dataset for the Search-Based Software Engineering (SBSE) Conference Challenge Track, demonstrating its immediate impact. This benchmark enables the study and evaluation of tools for rapid debugging, automated repair, and production-grade resilience in modern software systems to drive research in this essential area forward."
+  },
+  "W4385574041": {
+    "title": "Fixing Model Bugs with Natural Language Patches",
+    "year": 2022,
+    "doi": "https://doi.org/10.18653/v1/2022.emnlp-main.797",
+    "venue": "Conference on Empirical Methods in Natural Language Processing (EMNLP)",
+    "cited_by": 51,
+    "abstract": "Current approaches for fixing systematic problems in NLP models (e.g., regex patches, finetuning on more data) are either brittle, or labor-intensive and liable to shortcuts. In contrast, humans often provide corrections to each other through natural language. Taking inspiration from this, we explore natural language patches\u2014declarative statements that allow developers to provide corrective feedback at the right level of abstraction, either overriding the model (\u201cif a review gives 2 stars, the sentiment is negative\u201d) or providing additional information the model may lack (\u201cif something is described as the bomb, then it is good\u201d). We model the task of determining if a patch applies separately from the task of integrating patch information, and show that with a small amount of synthetic data, we can teach models to effectively use real patches on real data\u20141 to 7 patches improve accuracy by ~1\u20134 accuracy points on different slices of a sentiment analysis dataset, and F1 by 7 points on a relation extraction dataset. Finally, we show that finetuning on as many as 100 labeled examples may be needed to match the performance of a small set of language patches."
+  },
+  "W2905463374": {
+    "title": "An Empirical Study on Learning Bug-Fixing Patches in the Wild via Neural Machine Translation",
+    "year": 2019,
+    "doi": "https://doi.org/10.1145/3340544",
+    "venue": "ACM Transactions on Software Engineering and Methodology",
+    "cited_by": 541,
+    "abstract": "Millions of open source projects with numerous bug fixes are available in code repositories. This proliferation of software development histories can be leveraged to learn how to fix common programming bugs. To explore such a potential, we perform an empirical study to assess the feasibility of using Neural Machine Translation techniques for learning bug-fixing patches for real defects. First, we mine millions of bug-fixes from the change histories of projects hosted on GitHub in order to extract meaningful examples of such bug-fixes. Next, we abstract the buggy and corresponding fixed code, and use them to train an Encoder-Decoder model able to translate buggy code into its fixed version. In our empirical investigation, we found that such a model is able to fix thousands of unique buggy methods in the wild. Overall, this model is capable of predicting fixed patches generated by developers in 9--50% of the cases, depending on the number of candidate patches we allow it to generate. Also, the model is able to emulate a variety of different Abstract Syntax Tree operations and generate candidate patches in a split second."
+  },
+  "W4415796623": {
+    "title": "SWT-Bench: Testing and Validating Real-World Bug-Fixes with Code Agents",
+    "year": 2024,
+    "doi": "https://doi.org/10.52202/079017-2601",
+    "venue": "neural information processing systems",
+    "cited_by": 240,
+    "abstract": "Rigorous software testing is crucial for developing and maintaining high-quality code, making automated test generation a promising avenue for both improving software quality and boosting the effectiveness of code generation methods. However, while code generation with Large Language Models (LLMs) is an extraordinarily active research area, test generation remains relatively unexplored. We address this gap and investigate the capability of LLM-based Code Agents to formalize user issues into test cases. To this end, we propose a novel benchmark based on popular GitHub repositories, containing real-world issues, ground-truth bug-fixes, and golden tests. We find that LLMs generally perform surprisingly well at generating relevant test cases, with Code Agents designed for code repair exceeding the performance of systems designed specifically for test generation. Further, as test generation is a similar but more structured task than code generation, it allows for a more fine-grained analysis using issue reproduction rate and coverage changes, providing a dual metric for analyzing systems designed for code repair. Finally, we find that generated tests are an effective filter for proposed code fixes, doubling the precision of SWE-Agent. We release all data and code at https://github.com/logic-star-ai/SWT-Bench"
+  },
+  "W2999843577": {
+    "title": "A Text-Based Regression Approach to Predict Bug-Fix Time",
+    "year": 2020,
+    "doi": "https://doi.org/10.1007/978-3-030-36617-9_5",
+    "venue": "Studies in computational intelligence",
+    "cited_by": 13,
+    "abstract": ""
+  },
+  "W2214958829": {
+    "title": "The impact of test case summaries on bug fixing performance: an empirical investigation",
+    "year": 2016,
+    "doi": "https://doi.org/10.1145/2884781.2884847",
+    "venue": "ACM/IEEE International Conference on Software Engineering: Companion Proceedings (ICSE-Companion)",
+    "cited_by": 139,
+    "abstract": "Automated test generation tools have been widely investigated with the goal of reducing the cost of testing activities. However, generated tests have been shown not to help developers in detecting and finding more bugs even though they reach higher structural coverage compared to manual testing. The main reason is that generated tests are difficult to understand and maintain. Our paper proposes an approach, coined TestDescriber, which automatically generates test case summaries of the portion of code exercised by each individual test, thereby improving understandability. We argue that this approach can complement the current techniques around automated unit test generation or search-based techniques designed to generate a possibly minimal set of test cases. In evaluating our approach we found that (1) developers find twice as many bugs, and (2) test case summaries significantly improve the comprehensibility of test cases, which is considered particularly useful by developers."
+  },
+  "W3206397610": {
+    "title": "A fine-grained data set and analysis of tangling in bug fixing commits",
+    "year": 2022,
+    "doi": "https://doi.org/10.1007/s10664-021-10083-5",
+    "venue": "Empirical Software Engineering",
+    "cited_by": 102,
+    "abstract": "Context Tangled commits are changes to software that address multiple concerns at once. For researchers interested in bugs, tangled commits mean that they actually study not only bugs, but also other concerns irrelevant for the study of bugs. Objective We want to improve our understanding of the prevalence of tangling and the types of changes that are tangled within bug fixing commits. Methods We use a crowd sourcing approach for manual labeling to validate which changes contribute to bug fixes for each line in bug fixing commits. Each line is labeled by four participants. If at least three participants agree on the same label, we have consensus. Results We estimate that between 17% and 32% of all changes in bug fixing commits modify the source code to fix the underlying problem. However, when we only consider changes to the production code files this ratio increases to 66% to 87%. We find that about 11% of lines are hard to label leading to active disagreements between participants. Due to confirmed tangling and the uncertainty in our data, we estimate that 3% to 47% of data is noisy without manual untangling, depending on the use case. Conclusion Tangled commits have a high prevalence in bug fixes and can lead to a large amount of noise in the data. Prior research indicates that this noise may alter results. As researchers, we should be skeptics and assume that unvalidated data is likely very noisy, until proven otherwise."
+  },
+  "W4234043923": {
+    "title": "On the use of hidden Markov model to predict the time to fix bugs",
+    "year": 2023,
+    "doi": "https://doi.org/10.32920/ryerson.14654466.v1",
+    "venue": null,
+    "cited_by": 0,
+    "abstract": "A significant amount of time is spent by software developers in investigating bug reports. It is useful to indicate when a bug report will be closed, since it would help software teams to prioritize their work. Several studies of this problem have been conducted during the past decade. Most of these studies have used the frequency of occurrence of certain developer activities as input attributes in building their prediction models. However, these approaches tend to ignore the temporal nature of the occurrence of these activities. In this thesis, a novel approach using Hidden Markov Models and temporal sequences of developer activities is introduced. The approach is empirically demonstrated using eight years of bug reports collected from the Firefox project. The model correctly identifies bug reports with expected bug fix times. The approach is also compared against the frequency based classification approaches. The results indicate around 10% higher accuracy ."
+  },
+  "W2404969801": {
+    "title": "A deeper look into bug fixes: patterns, replacements, deletions, and additions",
+    "year": 2016,
+    "doi": "https://doi.org/10.1145/2901739.2903495",
+    "venue": "International Conference on Mining Software Repositories (MSR)",
+    "cited_by": 64,
+    "abstract": "Many implementations of research techniques that automatically repair software bugs target programs written in C. Work that targets Java often begins from or compares to direct translations of such techniques to a Java context. However, Java and C are very different languages, and Java should be studied to inform the construction of repair approaches to target it. We conduct a large-scale study of bug-fixing commits in Java projects, focusing on assumptions underlying common search-based repair approaches. We make observations that can be leveraged to guide high quality automatic software repair to target Java specifically, including common and uncommon statement modifications in human patches and the applicability of previously-proposed patch construction operators in the Java context."
   }
 }
