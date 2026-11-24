@@ -1,23 +1,29 @@
 # HANDOFF — read this first
-*Auto-generated 2026-11-24T03:35:57+00:00 by scripts/write_handoff.py*
+*Auto-generated 2026-11-24T20:01:19+00:00 by scripts/write_handoff.py*
 
 ## Where we are
 - **Status:** RUNNING   **Cycle:** 1 / 12   **Phase:** PHASE5_RUN   **Pivots:** 0 / 3
-- **Step:** E0 dev tuning partially done; session handed off to a new account at user request
-- **Last action:** Saved literature matrix (13 JKSU-CIS papers), Frontiers check (selection unchanged), novelty threats (ODaSC, Liu 2024a) logged; partial E0 results committed
-- **NEXT ACTION:** 1) cd project && pip install -r requirements.txt && python scripts/get_data.py && python scripts/status.py. 2) Relaunch E0: bash scripts/launch_runner.sh 3 (jobs left "running" by the dead container are reset to pending automatically). 3) Meanwhile READ Liu et al. 2024a (Empir Softw Eng 29(5):98, PU learning for JIT-SDP) and the rest of ODaSC (Song_IJCNN2022.txt: results table, waiting time) and update state/novelty_ledger.json claims; if Liu 2024a pre-empts LAW, apply Section 6.4/6.5. 4) Write plan_v2 adding ODaSC (reimplementation) as a baseline with equal tuning budget, reason logged. 5) After E0 completes: python scripts/freeze_config.py, then enqueue E1-E3 (+ODaSC) and launch; then scripts/final_report.py.
+- **Step:** E0 finishing (nova); plan_v2 written; LAT/MAT/ODaSC/OOB implemented and leakage-tested
+- **Last action:** Resumed in new container (branch claude/magical-bardeen-9yglkz); fixed runner stale-job race; Liu 2024a UNVERIFIED; E0 operating-point diagnosis; plan_v2; C3 prior-art round 1 (10 queries)
+- **NEXT ACTION:** 1) When E0 is done (python scripts/status.py: 192 done): python scripts/freeze_config.py. 2) python scripts/enqueue.py E0b && bash scripts/launch_runner.sh 3 (240 dev jobs). 3) After E0b: python scripts/freeze_config.py --v2, then enqueue E1b, E2b, E3b and launch. 4) python scripts/final_report.py (extend for v2 families), update gates/novelty, journal RESULT entries. 5) Second prior-art round for C3 with new phrasings.
 
 - **Selected journal:** JKSU-CIS (Springer Nature, ISSN 1319-1578, IF 6.4 2025; turnaround median 71–74 d, marginal)
 - **Topic:** Verification-latency-aware online JIT-SDP: latency-aware weighting (LAW) of provisionally-clean commits
 - **Hypothesis:** LAW beats the best tuned waiting-time baseline by >=0.02 G-mean on 10 held-out projects (Holm p<0.05)
 
 ## Running right now
-- Queue (full): {'done': 96, 'pending': 93, 'running': 3}; running jobs: ['E0_sentry_law_lagakos_base_s0', 'E0_sentry_law_lagakos_base_s1', 'E0_sentry_law_lagakos_base_s2']
-- Processes: `none`
-- Heartbeat age: 4s
+- Queue (full): {'done': 144, 'pending': 45, 'running': 3}; running jobs: ['E0_nova_law_lagakos_base_s0', 'E0_nova_law_lagakos_base_s1', 'E0_nova_law_lagakos_base_s2']
+- Processes: `372 tmux new-session -d -s research_w0 python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
+373 bash -c python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
+375 python3 run_all.py --mode full --resume --worker 0
+379 bash -c python3 run_all.py --mode full --resume --worker 1 >> logs/runner_w1.log 2>&1
+382 python3 run_all.py --mode full --resume --worker 1
+385 bash -c python3 run_all.py --mode full --resume --worker 2 >> logs/runner_w2.log 2>&1
+387 python3 run_all.py --mode full --resume --worker 2`
+- Heartbeat age: 17s
 
 ## Compute
-- Cycle 1: 0.60 h / 15 h   Global: 0.60 h / 120 h (CPU-hours; machine has no GPU)
+- Cycle 1: 1.22 h / 15 h   Global: 1.22 h / 120 h (CPU-hours; machine has no GPU)
 
 ## Gate status (Section 7)
 | Gate | Status | Evidence |
@@ -35,15 +41,16 @@
 | G11 | unknown |  |
 
 ## Last 10 decisions
-- 2026-11-24T03:04:37+00:00: Place project in repo subfolder project/ on branch claude/dreamy-fermat-7983nm
-- 2026-11-24T03:04:37+00:00: Hardware: CPU-only (4 cores, 15 GB RAM, no CUDA/MPS). All compute budgets are counted as CPU-hours.
-- 2026-11-24T03:11:07+00:00: Selected journal: Journal of King Saud University – Computer and Information Sciences (Springer Nature, ISSN 1319-1578, IF 6.4 (2025))
 - 2026-11-24T03:11:07+00:00: Interpretation: "submission→acceptance ≤ 72" evaluated as the MEDIAN (Accepted−Received) of a random sample
 - 2026-11-24T03:22:41+00:00: Topic: verification-latency-aware online JIT-SDP (latency-aware weighting, LAW)
 - 2026-11-24T03:22:41+00:00: Dev/test split by project: dev={fabric,neutron,nova,sentry}, test=other 10 (rng seed 0 draw before modelling)
 - 2026-11-24T03:22:41+00:00: Primary metric G-mean over the evaluation window (commits from #500 to last-365-days), against final labels
 - 2026-11-24T03:22:41+00:00: Runner parallelised to 3 workers (cores-1); budget counts summed worker seconds (CPU-time-like)
 - 2026-11-24T03:35:03+00:00: User allowed Frontiers journals; checked Frontiers in AI (median 78 d), Big Data (74 d), Computer Science (100 d)
+- 2026-11-24T19:48:44+00:00: Liu et al. 2024a marked UNVERIFIED (citation does not resolve); not treated as pre-emption; re-search before writing
+- 2026-11-24T20:00:26+00:00: plan_v2 written (experiments/plan_v2.yaml): add LAT (proposed latency-aware threshold), MAT (generic mature-label threshold competitor), ODaSC + OOB baselines; 5 configs per family on dev (E0b); E1b/E2b/E3b replace E1-E3 of plan_v1
+- 2026-11-24T20:00:26+00:00: Do not run plan_v1 E1 separately; law_lagakos_model (v1 pre-registered) is included in E1b and its H1 test is reported
+- 2026-11-24T20:00:26+00:00: ODaSC reimplemented from the paper (no public code found): river 0.27 Hoeffding trees; time unit days for fading; eps = median NN distance of first 500 commits (features only); <=300 micro-clusters; Eq. 11 confidence factor applied to both classes; Eqs. 8-9 calibration over a rolling window of the last 50 class-1 examples
 
 ## Last failures (journal entries)
 - none yet
