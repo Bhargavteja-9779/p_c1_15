@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E3",
+    "project": "broadleaf",
+    "method": "nowait",
+    "variant": "nowait_ds2",
+    "seed": 104,
+    "split": "test",
+    "delay_scale": 2.0,
+    "gmean": 0.4556504362413281,
+    "r0": 0.9588370466580078,
+    "r1": 0.21653034868704263,
+    "rdiff": 0.7423066979709652,
+    "auc": 0.7624204509527306,
+    "mcc": 0.2616268146328592,
+    "n_eval": 12332,
+    "seconds": 31.05,
+    "job_id": "E3_broadleaf_nowait_ds2_s104",
+    "written": "2026-11-24T19:13:55+00:00",
+    "cycle": 1
+  }
+]

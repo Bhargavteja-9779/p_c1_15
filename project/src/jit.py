@@ -151,7 +151,20 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
                 S = survival_from_delays(d_obs, tau, age[old_unl], method=delay_est) if use_S else np.ones(old_unl.sum())
                 q = p * S / np.clip(1 - p + p * S, 1e-9, None)
                 Xp, Xu = Xtr[found], Xtr[old_unl]
-                if mode == "soft":
+                if mode == "dual":
+                    # plan_v6: two independent kinds of evidence that an old provisional negative is a dormant bug:
+                    # (i) q from mature cross-fitted scorer x delay survival, (ii) kNN label composition (ODaSC-style).
+                    # noisy-OR: positive weight 1 - (1-q)(1-r), r = share of positive neighbours (excluding self).
+                    from sklearn.neighbors import NearestNeighbors
+                    Xk = np.vstack([Xp, Xu]); yk = np.concatenate([np.ones(len(Xp)), np.zeros(len(Xu))])
+                    nn = NearestNeighbors(n_neighbors=knn_k + 1).fit(Xk)
+                    _, ind = nn.kneighbors(Xu)
+                    r = yk[ind[:, 1:]].mean(axis=1)
+                    q = 1 - (1 - q) * (1 - r)
+                    mode_ = "soft"
+                else:
+                    mode_ = mode
+                if mode_ == "soft":
                     Xi = np.vstack([Xp, Xu, Xu]); yi = np.concatenate([np.ones(len(Xp)), np.ones(len(Xu)), np.zeros(len(Xu))]).astype(int)
                     wi = np.concatenate([np.ones(len(Xp)), q, 1 - q]); kw_ = wi > 1e-4; Xi, yi, wi = Xi[kw_], yi[kw_], wi[kw_]
                 else:

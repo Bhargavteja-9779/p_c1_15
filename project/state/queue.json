@@ -20180,10 +20180,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:12:25+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T19:12:54+00:00",
+      "seconds": 28.9
     },
     {
       "id": "E3_broadleaf_wait_W90_ds2_s100",
@@ -20198,10 +20202,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:14:26+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T19:14:54+00:00",
+      "seconds": 28.1
     },
     {
       "id": "E3_broadleaf_orb_W90_ds2_s100",
@@ -20216,10 +20224,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:13:27+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T19:13:55+00:00",
+      "seconds": 27.8
     },
     {
       "id": "E3_broadleaf_law_lagakos_model_ds2_s100",
@@ -20256,10 +20268,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:12:51+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T19:13:24+00:00",
+      "seconds": 32.6
     },
     {
       "id": "E3_broadleaf_wait_W90_ds2_s101",
@@ -20274,10 +20290,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:14:27+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T19:14:54+00:00",
+      "seconds": 26.6
     },
     {
       "id": "E3_broadleaf_orb_W90_ds2_s101",
@@ -20292,10 +20312,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:13:48+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T19:14:19+00:00",
+      "seconds": 31.1
     },
     {
       "id": "E3_broadleaf_law_lagakos_model_ds2_s101",
@@ -20311,12 +20335,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 40,
       "started": "2026-11-24T19:11:32+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-24T19:12:25+00:00",
+      "seconds": 53.2
     },
     {
       "id": "E3_broadleaf_nowait_ds2_s102",
@@ -20330,10 +20356,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:12:54+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T19:13:27+00:00",
+      "seconds": 32.9
     },
     {
       "id": "E3_broadleaf_wait_W90_ds2_s102",
@@ -20348,10 +20378,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:14:48+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T19:15:14+00:00",
+      "seconds": 26.1
     },
     {
       "id": "E3_broadleaf_orb_W90_ds2_s102",
@@ -20366,10 +20400,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:13:55+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T19:14:27+00:00",
+      "seconds": 31.9
     },
     {
       "id": "E3_broadleaf_law_lagakos_model_ds2_s102",
@@ -20385,12 +20423,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 40,
       "started": "2026-11-24T19:11:32+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-24T19:12:25+00:00",
+      "seconds": 53.1
     },
     {
       "id": "E3_broadleaf_nowait_ds2_s103",
@@ -20404,10 +20444,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:13:15+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T19:13:48+00:00",
+      "seconds": 32.7
     },
     {
       "id": "E3_broadleaf_wait_W90_ds2_s103",
@@ -20422,10 +20466,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:14:54+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T19:15:18+00:00",
+      "seconds": 24.1
     },
     {
       "id": "E3_broadleaf_orb_W90_ds2_s103",
@@ -20440,10 +20488,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:13:55+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T19:14:26+00:00",
+      "seconds": 31.0
     },
     {
       "id": "E3_broadleaf_law_lagakos_model_ds2_s103",
@@ -20459,12 +20511,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 40,
       "started": "2026-11-24T19:12:02+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-24T19:12:51+00:00",
+      "seconds": 48.8
     },
     {
       "id": "E3_broadleaf_nowait_ds2_s104",
@@ -20478,10 +20532,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:13:24+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T19:13:55+00:00",
+      "seconds": 31.1
     },
     {
       "id": "E3_broadleaf_wait_W90_ds2_s104",
@@ -20496,10 +20554,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:14:54+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T19:15:19+00:00",
+      "seconds": 24.9
     },
     {
       "id": "E3_broadleaf_orb_W90_ds2_s104",
@@ -20514,10 +20576,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:14:19+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T19:14:48+00:00",
+      "seconds": 28.7
     },
     {
       "id": "E3_broadleaf_law_lagakos_model_ds2_s104",
@@ -20533,10 +20599,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:12:25+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T19:13:15+00:00",
+      "seconds": 50.1
     },
     {
       "id": "E3_camel_nowait_ds2_s100",
@@ -20550,10 +20620,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:17:50+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T19:19:12+00:00",
+      "seconds": 82.5
     },
     {
       "id": "E3_camel_wait_W90_ds2_s100",
@@ -20586,10 +20660,12 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:21:15+00:00",
+      "worker": 1
     },
     {
       "id": "E3_camel_law_lagakos_model_ds2_s100",
@@ -20605,10 +20681,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:15:14+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T19:17:44+00:00",
+      "seconds": 150.4
     },
     {
       "id": "E3_camel_nowait_ds2_s101",
@@ -20622,10 +20702,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:19:12+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T19:20:21+00:00",
+      "seconds": 69.0
     },
     {
       "id": "E3_camel_wait_W90_ds2_s101",
@@ -20658,10 +20742,12 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:21:18+00:00",
+      "worker": 0
     },
     {
       "id": "E3_camel_law_lagakos_model_ds2_s101",
@@ -20677,10 +20763,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:15:18+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T19:17:50+00:00",
+      "seconds": 152.0
     },
     {
       "id": "E3_camel_nowait_ds2_s102",
@@ -20694,10 +20784,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:20:07+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T19:21:15+00:00",
+      "seconds": 68.4
     },
     {
       "id": "E3_camel_wait_W90_ds2_s102",
@@ -20730,10 +20824,12 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:21:30+00:00",
+      "worker": 2
     },
     {
       "id": "E3_camel_law_lagakos_model_ds2_s102",
@@ -20749,10 +20845,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:15:19+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T19:17:47+00:00",
+      "seconds": 147.6
     },
     {
       "id": "E3_camel_nowait_ds2_s103",
@@ -20766,10 +20866,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:20:10+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T19:21:18+00:00",
+      "seconds": 68.4
     },
     {
       "id": "E3_camel_wait_W90_ds2_s103",
@@ -20821,10 +20925,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:17:44+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T19:20:07+00:00",
+      "seconds": 142.6
     },
     {
       "id": "E3_camel_nowait_ds2_s104",
@@ -20838,10 +20946,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:20:21+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T19:21:30+00:00",
+      "seconds": 68.9
     },
     {
       "id": "E3_camel_wait_W90_ds2_s104",
@@ -20893,10 +21005,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:17:47+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T19:20:10+00:00",
+      "seconds": 143.2
     },
     {
       "id": "E3_jgroups_nowait_ds2_s100",

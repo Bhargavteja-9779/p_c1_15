@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E3",
+    "project": "broadleaf",
+    "method": "orb",
+    "variant": "orb_W90_ds2",
+    "seed": 102,
+    "split": "test",
+    "W": 90,
+    "delay_scale": 2.0,
+    "gmean": 0.6839402517053322,
+    "r0": 0.6422220001998201,
+    "r1": 0.7283684890228154,
+    "rdiff": 0.08614648882299525,
+    "auc": 0.7378042929680119,
+    "mcc": 0.2928962034642665,
+    "n_eval": 12332,
+    "seconds": 31.88,
+    "job_id": "E3_broadleaf_orb_W90_ds2_s102",
+    "written": "2026-11-24T19:14:27+00:00",
+    "cycle": 1
+  }
+]
