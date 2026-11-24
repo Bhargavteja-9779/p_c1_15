@@ -40,3 +40,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-24T04:06:17+00:00** — Reset orphaned queue record E0_sentry_law_lagakos_base_s2 to pending
   - Reason: Left 'running' by the reclaimed container; its worker id (0) is alive again in the new container so the automatic reset did not fire
+
+- **2026-11-24T12:46:15+00:00** — Reset 96 E0b jobs to pending and relaunched workers
+  - Reason: Workers had imported src/jit.py before awt/decomp were added (ValueError: awt). Infrastructure failure, not a method result; no compute spent
