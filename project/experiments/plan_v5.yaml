@@ -1,0 +1,15 @@
+# plan_v5 — cycle 2, written 2026-11-24 after E0c (H4 holds on dev). No test run of lawm/odasc yet.
+version: 5
+cycle: 2
+supersedes: plan_v4
+changes:
+  E2_cycle1: "remaining LAW-ablation jobs skipped (method failed on dev+test; supports no claim)"
+  E0d_dev_odasc:
+    what: "ODaSC-style baseline (kNN class-composition label confidence; theta rule from Song et al. 2022; same LightGBM learner)"
+    budget: "4 configs on dev = same as lawm: W in {30,90} x theta in {0.8, 0.9}; k=20"
+    priority: 13
+  freeze_rule: "after E0d: candidate = lawm config best on dev (lawm_soft_W30); baselines = best-dev wait, orb, odasc configs. If odasc >= lawm on dev, lawm is still run on test (pre-registered here) but the method claim is dropped unless test shows otherwise; the paper becomes the analysis paper (H3) with odasc+lawm as denoisers."
+  E4_test_confirm: "test projects x SEEDS_CONFIRM: lawm(frozen), odasc(frozen); wait/orb/oracle/nowait reused from E1"
+  E5_test_ablation: "lawm with prior_src=online; crossfit=False; use_S=False (one component removed each)"
+  E6_test_robust: "lawm(frozen) and odasc(frozen) with delay_scale=2; compare with E3 wait/orb ds2"
+  statistics: "Holm over lawm vs {wait_W90, orb_W90, odasc*} (3 tests); effect >=0.02 fixed in plan_v1"

@@ -46,6 +46,13 @@ def specs(exp):
                     J.append(dict(method="lawm", W=W, mode=mode, delay_est="lagakos", label_noise_log=True, variant=f"lawm_{mode}_W{W}", project=p, seed=s))
         for j in J: j.update(experiment="E0c", split="dev")
         return J, 12
+    if exp == "E0d":   # plan_v5 odasc-style baseline, dev, equal budget
+        for p, s in itertools.product(DEV, SE):
+            for W in [30, 90]:
+                for th in [0.8, 0.9]:
+                    J.append(dict(method="odasc", W=W, theta=th, knn_k=20, variant=f"odasc_W{W}_t{th}", project=p, seed=s))
+        for j in J: j.update(experiment="E0d", split="dev")
+        return J, 13
     if exp == "E3b":   # plan_v3 decomposition on test projects (pre-registered)
         for p, s in itertools.product(TEST, SC):
             for W in [30, 90]:
