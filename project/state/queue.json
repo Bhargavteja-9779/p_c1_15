@@ -7046,10 +7046,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:20:44+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:21:28+00:00",
+      "seconds": 44.6
     },
     {
       "id": "E1_brackets_awt_e0.4_s100",
@@ -7065,12 +7069,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-24T13:20:14+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-24T13:20:43+00:00",
+      "seconds": 29.0
     },
     {
       "id": "E1_brackets_nowait_s101",
@@ -7149,10 +7155,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:21:11+00:00",
+      "worker": 0
     },
     {
       "id": "E1_brackets_awt_e0.4_s101",
@@ -7168,12 +7176,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-24T13:20:14+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-24T13:20:42+00:00",
+      "seconds": 28.1
     },
     {
       "id": "E1_brackets_nowait_s102",
@@ -7252,10 +7262,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:21:12+00:00",
+      "worker": 1
     },
     {
       "id": "E1_brackets_awt_e0.4_s102",
@@ -7271,12 +7283,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-24T13:20:14+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-24T13:20:44+00:00",
+      "seconds": 29.5
     },
     {
       "id": "E1_brackets_nowait_s103",
@@ -7355,10 +7369,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:21:28+00:00",
+      "worker": 2
     },
     {
       "id": "E1_brackets_awt_e0.4_s103",
@@ -7374,10 +7390,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:20:42+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:21:12+00:00",
+      "seconds": 29.6
     },
     {
       "id": "E1_brackets_nowait_s104",
@@ -7475,10 +7495,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:20:43+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:21:11+00:00",
+      "seconds": 27.8
     },
     {
       "id": "E1_broadleaf_nowait_s100",
