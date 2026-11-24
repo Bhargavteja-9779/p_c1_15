@@ -39,6 +39,14 @@ def specs(exp):
                     J.append(dict(method="decomp", W=W, level=lv, variant=f"decomp_L{lv}_W{W}", project=p, seed=s))
         for j in J: j.update(experiment="E0b", split="dev")
         return J, 11
+    if exp == "E3b":   # plan_v3 decomposition on test projects (pre-registered)
+        for p, s in itertools.product(TEST, SC):
+            for W in [30, 90]:
+                J.append(dict(method="wait", W=W, variant=f"wait_W{W}", project=p, seed=s))
+                for lv in [1, 2]:
+                    J.append(dict(method="decomp", W=W, level=lv, variant=f"decomp_L{lv}_W{W}", project=p, seed=s))
+        for j in J: j.update(experiment="E3b", split="test")
+        return J, 25
     if exp in ("E1", "E2", "E3"):
         fz = read_json(STATE / "frozen_config.json")
         assert fz, "frozen_config.json missing: run scripts/freeze_config.py after E0"

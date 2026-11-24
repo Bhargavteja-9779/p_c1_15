@@ -7,3 +7,23 @@ timestamp,cycle,variant_id,description,data_split_used,metric,value,outcome,note
 2026-11-24T03:22:41+00:00,1,orb_W90,exploratory code check,dev: fabric seed 0,gmean,0.655,exploratory,pre-plan sanity run
 2026-11-24T03:22:41+00:00,1,law_lagakos_model,exploratory code check,dev: fabric seed 0,gmean,0.67,exploratory,pre-plan sanity run
 2026-11-24T04:05:16+00:00,1,diag_law_neutron,"diagnostic run of law(model/base), wait30/90, oracle with label-noise logging",dev: neutron seed 0,gmean,see results/diag_law_neutron.json,diagnostic,explains LAW failure
+2026-11-24T13:19:55+00:00,1,oracle,E0 dev tuning,dev projects x seeds 0-2,gmean_mean_dev,0.7938,not selected,
+2026-11-24T13:19:55+00:00,1,orb_W90,E0 dev tuning,dev projects x seeds 0-2,gmean_mean_dev,0.7239,selected,
+2026-11-24T13:19:55+00:00,1,orb_W60,E0 dev tuning,dev projects x seeds 0-2,gmean_mean_dev,0.7116,not selected,
+2026-11-24T13:19:55+00:00,1,wait_W90,E0 dev tuning,dev projects x seeds 0-2,gmean_mean_dev,0.7095,selected,
+2026-11-24T13:19:55+00:00,1,awt_e0.4,E0 dev tuning,dev projects x seeds 0-2,gmean_mean_dev,0.6968,selected,
+2026-11-24T13:19:55+00:00,1,awt_e0.3,E0 dev tuning,dev projects x seeds 0-2,gmean_mean_dev,0.6937,not selected,
+2026-11-24T13:19:55+00:00,1,orb_W180,E0 dev tuning,dev projects x seeds 0-2,gmean_mean_dev,0.6901,not selected,
+2026-11-24T13:19:55+00:00,1,wait_W60,E0 dev tuning,dev projects x seeds 0-2,gmean_mean_dev,0.686,not selected,
+2026-11-24T13:19:55+00:00,1,wait_W180,E0 dev tuning,dev projects x seeds 0-2,gmean_mean_dev,0.6831,not selected,
+2026-11-24T13:19:55+00:00,1,awt_e0.2,E0 dev tuning,dev projects x seeds 0-2,gmean_mean_dev,0.6662,not selected,
+2026-11-24T13:19:55+00:00,1,law_lagakos_base,E0 dev tuning,dev projects x seeds 0-2,gmean_mean_dev,0.6643,not selected,
+2026-11-24T13:19:55+00:00,1,awt_e0.5,E0 dev tuning,dev projects x seeds 0-2,gmean_mean_dev,0.6643,not selected,
+2026-11-24T13:19:55+00:00,1,law_naive_base,E0 dev tuning,dev projects x seeds 0-2,gmean_mean_dev,0.6637,not selected,
+2026-11-24T13:19:55+00:00,1,orb_W30,E0 dev tuning,dev projects x seeds 0-2,gmean_mean_dev,0.6636,not selected,
+2026-11-24T13:19:55+00:00,1,wait_W30,E0 dev tuning,dev projects x seeds 0-2,gmean_mean_dev,0.6206,not selected,
+2026-11-24T13:19:55+00:00,1,law_lagakos_model,E0 dev tuning,dev projects x seeds 0-2,gmean_mean_dev,0.6128,selected,
+2026-11-24T13:19:55+00:00,1,orb_W15,E0 dev tuning,dev projects x seeds 0-2,gmean_mean_dev,0.6065,not selected,
+2026-11-24T13:19:55+00:00,1,law_naive_model,E0 dev tuning,dev projects x seeds 0-2,gmean_mean_dev,0.58,not selected,
+2026-11-24T13:19:55+00:00,1,wait_W15,E0 dev tuning,dev projects x seeds 0-2,gmean_mean_dev,0.5457,not selected,
+2026-11-24T13:19:55+00:00,1,nowait,E0 dev tuning,dev projects x seeds 0-2,gmean_mean_dev,0.3855,not selected,

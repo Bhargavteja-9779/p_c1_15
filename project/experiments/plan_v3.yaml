@@ -1,0 +1,19 @@
+# plan_v3 — written 2026-11-24 (cycle 1) after dev tuning, BEFORE any test-project run. plan_v1/v2 kept unchanged.
+# Reason: E0b showed (dev only) that label noise is the dominant part of the latency penalty (journal SURPRISE).
+# The decomposition is therefore pre-registered as a test-project analysis (E3b) before any test run.
+version: 3
+supersedes: plan_v2
+frozen_config: state/frozen_config.json   # wait W*=90, orb W*=90, candidate awt_e0.4 (does NOT beat baseline on dev)
+framing: "negative-result / analysis (Type C, A): pre-registered H1 (LAW) and candidate awt are tested on held-out projects as confirmation of a negative result; the decomposition tests H3."
+experiments:
+  E1_main_confirm: "unchanged from plan_v1 + candidate awt_e0.4 (test projects x SEEDS_CONFIRM)"
+  E3b_decomposition:
+    projects: test
+    seeds: confirm
+    runs: "decomp level 1 and level 2 at W in {30, 90}; compared with wait at the same W and oracle"
+    hypothesis_H3: "On held-out projects, denoising the wait(W=30) set with true labels recovers >= 50% of the oracle - wait_W30 G-mean gap (mean over 10 projects), and decomp_L1_W30 > wait_W90 (the frozen best fixed-W rule), Wilcoxon p<0.05."
+    est_cpu_h: 1.2
+    priority: 25
+  E3_robustness: "unchanged (delay_scale=2)"
+  E2_ablation: "unchanged, lowest priority (ablation of a method that failed on dev; reported for completeness)"
+statistics: "unchanged; Holm family for H1 = law/awt vs {nowait, wait_W90, orb_W90}; H3 tested separately (2 tests, Holm)"

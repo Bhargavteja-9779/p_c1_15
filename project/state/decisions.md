@@ -43,3 +43,12 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-24T12:46:15+00:00** — Reset 96 E0b jobs to pending and relaunched workers
   - Reason: Workers had imported src/jit.py before awt/decomp were added (ValueError: awt). Infrastructure failure, not a method result; no compute spent
+
+- **2026-11-24T13:19:54+00:00** — plan_v2 rule outcome: no candidate (law_*, awt_*) beats best dev baseline -> E1 runs on test as pre-registered NEGATIVE-RESULT confirmation
+  - Reason: plan_v2.yaml proposed_method_rule
+
+- **2026-11-24T13:19:55+00:00** — Frozen config: wait W*=90, orb W*=90, best dev baseline=orb_W90
+  - Reason: Highest mean dev G-mean (E0, dev projects only); proposed method config pre-specified, not tuned
+
+- **2026-11-24T13:20:12+00:00** — plan_v3 written and E1, E3b, E3, E2 enqueued on test projects (first test touch)
+  - Reason: Config frozen on dev (state/frozen_config.json); decomposition pre-registered as H3 before test runs

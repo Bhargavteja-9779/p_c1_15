@@ -2,12 +2,12 @@
   "status": "RUNNING",
   "cycle": 1,
   "phase": "PHASE5_RUN",
-  "step": "E0 + E0b (plan_v2 dev diagnostics) running; LAW failing on dev, diagnosed",
+  "step": "E1/E3b/E3/E2 on test projects running (frozen config, SEEDS_CONFIRM)",
   "pivots": 0,
   "topic_id": null,
   "journal": "JKSU-CIS (Springer Nature, ISSN 1319-1578, IF 6.4 2025; turnaround median 71\u201374 d, marginal)",
-  "last_action": "New account resumed; E0 relaunched; Liu 2024a UNVERIFIED; LAW dev failure diagnosed (feedback loop + uninformative age posterior); plan_v2 with awt + decomposition enqueued",
-  "next_action": "1) If container restarted: pip install -r requirements.txt && python scripts/get_data.py && bash scripts/launch_runner.sh 3. 2) Wait for E0 + E0b (dev only) to finish (python scripts/status.py). 3) Analyse E0b: decomposition (H2a) and awt vs best fixed W on dev; write RESULT journal entries. 4) Update scripts/freeze_config.py for plan_v2 rule (candidate chosen on dev among law_*/awt_*), freeze, enqueue E1 (+E3 diag) on test, launch. 5) Continue prior-art queries for C3/C4 (need >=8 phrasings each).",
+  "last_action": "E0b done: H2a refuted (denoising closes 95% of wait30->oracle gap on dev); awt dead end; config frozen; plan_v3 pre-registers H3; test runs launched",
+  "next_action": "1) If container restarted: pip install -r requirements.txt && python scripts/get_data.py && bash scripts/launch_runner.sh 3 && tmux new -d -s autocommit 'bash scripts/autocommit.sh'. 2) When E1/E3b finish: python scripts/final_report.py (update for E3b + H3), write RESULT entries, fill gates. 3) Cycle 2 (plan_v4): method that identifies dormant bugs among OLD provisional negatives from features without self-confirmation (e.g. scorer trained only on mature labels; co-teaching style), dev only first; add ODaSC baseline. 4) More prior-art for C3 (noise-dominance) incl. dormant-defects TOSEM 2021 full text.",
   "config": {
     "TARGET_TIER": "Q1 journal (JCR), reputable publisher",
     "MAX_DAYS_SUBMIT_TO_ACCEPT": 72,
@@ -29,7 +29,7 @@
     ]
   },
   "seeds_confirm_fixed_at": "2026-11-24 (project start; never change)",
-  "updated": "2026-11-24T04:05:26+00:00",
+  "updated": "2026-11-24T13:20:12+00:00",
   "topic": "Verification-latency-aware online JIT-SDP: latency-aware weighting (LAW) of provisionally-clean commits",
   "hypothesis": "LAW beats the best tuned waiting-time baseline by >=0.02 G-mean on 10 held-out projects (Holm p<0.05)"
 }
