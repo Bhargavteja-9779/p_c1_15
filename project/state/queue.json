@@ -3045,10 +3045,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:00:09+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T21:01:33+00:00",
+      "seconds": 84.3
     },
     {
       "id": "E0_sentry_law_naive_model_s0",
@@ -3081,12 +3085,17 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
-      "attempts": 1,
+      "status": "done",
+      "attempts": 2,
       "cycle": 1,
       "priority": 10,
-      "started": "2026-11-24T03:35:49+00:00",
-      "worker": 2
+      "started": "2026-11-24T21:00:09+00:00",
+      "worker": 0,
+      "log": [
+        "2026-11-24T21:00:09+00:00 reset running->pending on restart"
+      ],
+      "finished": "2026-11-24T21:01:22+00:00",
+      "seconds": 72.7
     },
     {
       "id": "E0_sentry_law_naive_base_s0",
@@ -3319,10 +3328,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:00:09+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T21:01:33+00:00",
+      "seconds": 83.7
     },
     {
       "id": "E0_sentry_law_naive_model_s1",
@@ -3356,11 +3369,14 @@
         "split": "dev"
       },
       "status": "running",
-      "attempts": 1,
+      "attempts": 2,
       "cycle": 1,
       "priority": 10,
-      "started": "2026-11-24T03:35:52+00:00",
-      "worker": 1
+      "started": "2026-11-24T21:01:22+00:00",
+      "worker": 0,
+      "log": [
+        "2026-11-24T21:00:43+00:00 reset orphan running->pending (manual, stale-self-lock bug)"
+      ]
     },
     {
       "id": "E0_sentry_law_naive_base_s1",
@@ -3593,10 +3609,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:01:33+00:00",
+      "worker": 1
     },
     {
       "id": "E0_sentry_law_naive_model_s2",
@@ -3630,11 +3648,14 @@
         "split": "dev"
       },
       "status": "running",
-      "attempts": 1,
+      "attempts": 2,
       "cycle": 1,
       "priority": 10,
-      "started": "2026-11-24T03:35:52+00:00",
-      "worker": 0
+      "started": "2026-11-24T21:01:33+00:00",
+      "worker": 2,
+      "log": [
+        "2026-11-24T21:00:43+00:00 reset orphan running->pending (manual, stale-self-lock bug)"
+      ]
     },
     {
       "id": "E0_sentry_law_naive_base_s2",

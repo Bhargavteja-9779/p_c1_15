@@ -28,3 +28,12 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-24T03:35:03+00:00** — User allowed Frontiers journals; checked Frontiers in AI (median 78 d), Big Data (74 d), Computer Science (100 d)
   - Reason: None faster than JKSU-CIS (71–74 d) and quartiles UNVERIFIED -> keep JKSU-CIS (journal_selection/journal_comparison.md addendum)
+
+- **2026-11-24T21:02:13+00:00** — Work continues on branch claude/keen-edison-jo222n (this session's assigned branch; same history as claude/dreamy-fermat-7983nm at b18fc8e)
+  - Reason: New account/session is restricted to pushing that branch
+
+- **2026-11-24T21:02:13+00:00** — Runner fix: on start a worker resets its OWN jobs left 'running' (worker id == self) to pending
+  - Reason: Bug found on resume: flock self-check made a worker's own orphaned jobs look alive; 2 jobs were stuck 'running' and were reset manually
+
+- **2026-11-24T21:02:13+00:00** — Liu et al. 2024a (PU learning for JIT-SDP) marked UNVERIFIED; generic PU framing of clean commits conceded as prior art; LAW claim narrowed to age/delay-distribution weighting in the online setting
+  - Reason: Primary source not found: Crossref scan of all 2024 EMSE works finds no such paper; EMSE 29(4):98 is a different article

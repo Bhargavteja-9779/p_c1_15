@@ -133,7 +133,7 @@ def run(mode="full", resume=True, only_kind=None, max_jobs=None, worker=0):
             q = load_queue(mode)
             # resume: jobs left "running" by a dead worker go back to pending (resume from ckpt)
             for j in q["jobs"]:
-                if j["status"] == "running" and not _worker_alive(mode, j.get("worker")):
+                if j["status"] == "running" and (j.get("worker") == worker or not _worker_alive(mode, j.get("worker"))):
                     j["status"] = "pending"; j.setdefault("log", []).append(f"{now_iso()} reset running->pending on restart")
             save_queue(mode, q)
         done_count = 0
