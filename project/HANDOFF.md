@@ -1,5 +1,5 @@
 # HANDOFF — read this first
-*Auto-generated 2026-11-24T03:35:48+00:00 by scripts/write_handoff.py*
+*Auto-generated 2026-11-24T03:35:57+00:00 by scripts/write_handoff.py*
 
 ## Where we are
 - **Status:** RUNNING   **Cycle:** 1 / 12   **Phase:** PHASE5_RUN   **Pivots:** 0 / 3
@@ -12,14 +12,8 @@
 - **Hypothesis:** LAW beats the best tuned waiting-time baseline by >=0.02 G-mean on 10 held-out projects (Holm p<0.05)
 
 ## Running right now
-- Queue (full): {'done': 93, 'running': 3, 'pending': 96}; running jobs: ['E0_neutron_wait_W90_s0', 'E0_neutron_wait_W90_s1', 'E0_neutron_wait_W90_s2']
-- Processes: `1258 tmux new-session -d -s research_w0 python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
-1259 bash -c python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
-1261 python3 run_all.py --mode full --resume --worker 0
-1265 bash -c python3 run_all.py --mode full --resume --worker 1 >> logs/runner_w1.log 2>&1
-1268 python3 run_all.py --mode full --resume --worker 1
-1271 bash -c python3 run_all.py --mode full --resume --worker 2 >> logs/runner_w2.log 2>&1
-1273 python3 run_all.py --mode full --resume --worker 2`
+- Queue (full): {'done': 96, 'pending': 93, 'running': 3}; running jobs: ['E0_sentry_law_lagakos_base_s0', 'E0_sentry_law_lagakos_base_s1', 'E0_sentry_law_lagakos_base_s2']
+- Processes: `none`
 - Heartbeat age: 4s
 
 ## Compute
