@@ -36,16 +36,20 @@ def specs(exp):
                 J += [dict(method="nowait"), dict(method="oracle"),
                       dict(method="wait", W=fz["wait_W"], variant=f"wait_W{fz['wait_W']}"),
                       dict(method="orb", W=fz["orb_W"], variant=f"orb_W{fz['orb_W']}"),
-                      dict(method="law", delay_est="lagakos", prior="model", variant="law_lagakos_model")]
+                      dict(method="odasc", W=fz["odasc_W"], odasc_delta=fz["odasc_delta"], variant=f"odasc_W{fz['odasc_W']}"),
+                      dict(method="law", delay_est=fz["law_delay_est"], prior=fz["law_prior"], variant=fz["law_variant"])]
             if exp == "E2":
                 J += [dict(method="law", delay_est=de, prior=pr, variant=f"law_{de}_{pr}")
-                      for de, pr in [("naive", "model"), ("lagakos", "base"), ("naive", "base")]]
+                      for de, pr in [("lagakos", "model"), ("naive", "model"), ("lagakos", "base"), ("naive", "base")]
+                      if f"law_{de}_{pr}" != fz["law_variant"]]
             if exp == "E3":
                 J += [dict(method="nowait", delay_scale=2.0, variant="nowait_ds2"),
                       dict(method="wait", W=fz["wait_W"], delay_scale=2.0, variant=f"wait_W{fz['wait_W']}_ds2"),
                       dict(method="orb", W=fz["orb_W"], delay_scale=2.0, variant=f"orb_W{fz['orb_W']}_ds2"),
-                      dict(method="law", delay_est="lagakos", prior="model", delay_scale=2.0, variant="law_lagakos_model_ds2")]
-            J[-(5 if exp == "E1" else 3 if exp == "E2" else 4):] = [dict(j, project=p, seed=s) for j in J[-(5 if exp == "E1" else 3 if exp == "E2" else 4):]]
+                      dict(method="odasc", W=fz["odasc_W"], odasc_delta=fz["odasc_delta"], delay_scale=2.0, variant=f"odasc_W{fz['odasc_W']}_ds2"),
+                      dict(method="law", delay_est=fz["law_delay_est"], prior=fz["law_prior"], delay_scale=2.0, variant=fz["law_variant"] + "_ds2")]
+            k = {"E1": 6, "E2": 3, "E3": 5}[exp]
+            J[-k:] = [dict(j, project=p, seed=s) for j in J[-k:]]
         for j in J: j.update(experiment=exp, split="test")
         return J, {"E1": 20, "E2": 30, "E3": 40}[exp]
     raise SystemExit("unknown experiment")
