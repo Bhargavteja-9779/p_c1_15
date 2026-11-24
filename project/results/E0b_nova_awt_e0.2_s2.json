@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E0b",
+    "project": "nova",
+    "method": "awt",
+    "variant": "awt_e0.2",
+    "seed": 2,
+    "split": "dev",
+    "delay_est": "lagakos",
+    "label_noise_log": true,
+    "eps": 0.2,
+    "gmean": 0.8023442969538007,
+    "r0": 0.67657510119581,
+    "r1": 0.951492849376934,
+    "rdiff": 0.274917748181124,
+    "auc": 0.881368274271004,
+    "mcc": 0.5575920051248177,
+    "n_eval": 44320,
+    "seconds": 155.65,
+    "W_T_mean": 197.09896907216495,
+    "job_id": "E0b_nova_awt_e0.2_s2",
+    "written": "2026-11-24T13:00:26+00:00",
+    "cycle": 1
+  }
+]
