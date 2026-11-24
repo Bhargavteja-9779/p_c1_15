@@ -1,0 +1,7 @@
+# DIAGNOSIS: Latency handling mostly moves the decision threshold, not the ranking
+
+*Written 2026-11-24T23:10:58+00:00*
+
+Dev-only diagnostic, seed 0, fabric and neutron (scripts/diag_operating_point.py -> results/diag/operating_point_dev.csv). Across nowait, wait-W90, ORB-W90 and the two LAW variants, G-mean at threshold 0.5 ranges 0.474-0.676 on fabric and 0.246-0.819 on neutron. At each method's own best threshold (a diagnostic upper bound chosen on the same data, never used for selection) the range shrinks to 0.668-0.717 and 0.765-0.843. On fabric, face-value labels (nowait) give the best ranking of all non-oracle methods (AUC 0.778, best-threshold G-mean 0.717); its G-mean at 0.5 is only 0.474 because it flags 7.7% of commits when 20.7% are defective. So most of what separates these methods in the published G-mean comparisons is where their scores cross 0.5.
+LAW with the model prior has a second problem. On neutron it flags 9.4% of commits against a true rate of 25.6%, and its mean score on truly defective commits is 0.378. My explanation: a feedback loop. A low score from the previous model gives a provisional commit a small positive weight q, the next model sees fewer positives, and its scores drop further. LAW's ranking gains are not consistent either: AUC above wait-W90 on fabric (0.754/0.769 vs 0.724), below it on neutron (0.876/0.888 vs 0.896).
+Limitations: 2 projects, 1 seed; sentry and nova still running.

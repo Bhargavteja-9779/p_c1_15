@@ -1,0 +1,21 @@
+[
+  {
+    "experiment": "E0",
+    "project": "sentry",
+    "method": "oracle",
+    "variant": "oracle",
+    "seed": 2,
+    "split": "dev",
+    "gmean": 0.7199270258037908,
+    "r0": 0.7842941637568588,
+    "r1": 0.660842508377214,
+    "rdiff": 0.12345165537964475,
+    "auc": 0.8134427766295387,
+    "mcc": 0.4019530711430539,
+    "n_eval": 18211,
+    "seconds": 46.48,
+    "job_id": "E0_sentry_oracle_s2",
+    "written": "2026-11-24T23:04:50+00:00",
+    "cycle": 1
+  }
+]

@@ -40,3 +40,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-24T23:02:09+00:00** — Runner fix: a restarted worker now resets its own stale 'running' jobs
   - Reason: After the account handoff, E0_sentry_law_lagakos_base_s2 stayed 'running' forever because worker 0 holds its own lock and looked alive.
+
+- **2026-11-24T23:04:02+00:00** — Test projects are not touched until the selected LAW variant beats the best baseline (incl. ODaSC) on dev
+  - Reason: Running E1 with a method already losing on dev would spend the held-out set; any later LAW revision would then be evaluated on test data already seen (Rule 5). Ladder 6.4 runs on dev first.
