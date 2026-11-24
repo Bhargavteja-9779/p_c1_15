@@ -8144,12 +8144,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-24T13:29:58+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-24T13:30:23+00:00",
+      "seconds": 24.9
     },
     {
       "id": "E1_broadleaf_orb_W90_s104",
@@ -8227,10 +8229,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:35:03+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:36:27+00:00",
+      "seconds": 84.5
     },
     {
       "id": "E1_camel_oracle_s100",
@@ -8242,10 +8248,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:38:00+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:39:19+00:00",
+      "seconds": 79.1
     },
     {
       "id": "E1_camel_wait_W90_s100",
@@ -8294,10 +8304,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:31:44+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:34:03+00:00",
+      "seconds": 139.5
     },
     {
       "id": "E1_camel_awt_e0.4_s100",
@@ -8313,12 +8327,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-24T13:29:59+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-24T13:31:20+00:00",
+      "seconds": 81.3
     },
     {
       "id": "E1_camel_nowait_s101",
@@ -8330,10 +8346,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:36:27+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:37:54+00:00",
+      "seconds": 87.1
     },
     {
       "id": "E1_camel_oracle_s101",
@@ -8345,10 +8365,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:38:57+00:00",
+      "worker": 1
     },
     {
       "id": "E1_camel_wait_W90_s101",
@@ -8397,10 +8419,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:32:34+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:34:58+00:00",
+      "seconds": 143.8
     },
     {
       "id": "E1_camel_awt_e0.4_s101",
@@ -8416,12 +8442,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-24T13:30:06+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-24T13:31:28+00:00",
+      "seconds": 81.5
     },
     {
       "id": "E1_camel_nowait_s102",
@@ -8433,10 +8461,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:36:34+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:38:00+00:00",
+      "seconds": 85.7
     },
     {
       "id": "E1_camel_oracle_s102",
@@ -8448,10 +8480,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:39:12+00:00",
+      "worker": 0
     },
     {
       "id": "E1_camel_wait_W90_s102",
@@ -8500,10 +8534,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:32:42+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:35:03+00:00",
+      "seconds": 141.1
     },
     {
       "id": "E1_camel_awt_e0.4_s102",
@@ -8519,10 +8557,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:30:23+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:31:44+00:00",
+      "seconds": 80.9
     },
     {
       "id": "E1_camel_nowait_s103",
@@ -8534,10 +8576,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:37:32+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:38:57+00:00",
+      "seconds": 85.4
     },
     {
       "id": "E1_camel_oracle_s103",
@@ -8549,10 +8595,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:39:19+00:00",
+      "worker": 2
     },
     {
       "id": "E1_camel_wait_W90_s103",
@@ -8601,10 +8649,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:34:03+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:36:34+00:00",
+      "seconds": 150.7
     },
     {
       "id": "E1_camel_awt_e0.4_s103",
@@ -8620,10 +8672,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:31:20+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:32:34+00:00",
+      "seconds": 74.1
     },
     {
       "id": "E1_camel_nowait_s104",
@@ -8635,10 +8691,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:37:54+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:39:12+00:00",
+      "seconds": 77.2
     },
     {
       "id": "E1_camel_oracle_s104",
@@ -8702,10 +8762,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:34:58+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:37:32+00:00",
+      "seconds": 153.8
     },
     {
       "id": "E1_camel_awt_e0.4_s104",
@@ -8721,10 +8785,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:31:28+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:32:42+00:00",
+      "seconds": 74.1
     },
     {
       "id": "E1_jgroups_nowait_s100",

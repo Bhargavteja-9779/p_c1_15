@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E1",
+    "project": "camel",
+    "method": "awt",
+    "variant": "awt_e0.4",
+    "seed": 103,
+    "split": "test",
+    "delay_est": "lagakos",
+    "label_noise_log": true,
+    "eps": 0.4,
+    "gmean": 0.6483324933059212,
+    "r0": 0.598643272467612,
+    "r1": 0.7021460713049498,
+    "rdiff": 0.10350279883733782,
+    "auc": 0.69977760126482,
+    "mcc": 0.2527016337042747,
+    "n_eval": 25384,
+    "seconds": 74.11,
+    "W_T_mean": 91.92691029900332,
+    "job_id": "E1_camel_awt_e0.4_s103",
+    "written": "2026-11-24T13:32:34+00:00",
+    "cycle": 1
+  }
+]
