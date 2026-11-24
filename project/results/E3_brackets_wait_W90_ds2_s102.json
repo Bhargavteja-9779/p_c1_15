@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E3",
+    "project": "brackets",
+    "method": "wait",
+    "variant": "wait_W90_ds2",
+    "seed": 102,
+    "split": "test",
+    "W": 90,
+    "delay_scale": 2.0,
+    "gmean": 0.7325381204079804,
+    "r0": 0.5835980605249959,
+    "r1": 0.9194891726818434,
+    "rdiff": 0.3358911121568475,
+    "auc": 0.8172776512073539,
+    "mcc": 0.4252694100289217,
+    "n_eval": 15564,
+    "seconds": 28.26,
+    "job_id": "E3_brackets_wait_W90_ds2_s102",
+    "written": "2026-11-24T19:11:12+00:00",
+    "cycle": 1
+  }
+]

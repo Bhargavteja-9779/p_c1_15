@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E3",
+    "project": "brackets",
+    "method": "orb",
+    "variant": "orb_W90_ds2",
+    "seed": 104,
+    "split": "test",
+    "W": 90,
+    "delay_scale": 2.0,
+    "gmean": 0.7312618430593747,
+    "r0": 0.5912054840327704,
+    "r1": 0.9044975013881177,
+    "rdiff": 0.3132920173553473,
+    "auc": 0.8203051798026715,
+    "mcc": 0.41858621029024795,
+    "n_eval": 15564,
+    "seconds": 29.54,
+    "job_id": "E3_brackets_orb_W90_ds2_s104",
+    "written": "2026-11-24T19:10:44+00:00",
+    "cycle": 1
+  }
+]

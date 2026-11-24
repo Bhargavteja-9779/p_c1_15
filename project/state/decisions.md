@@ -67,3 +67,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-24T19:00:23+00:00** — Hold the E4 test confirmation (lawm/odasc) until the next method-development round on dev is finished
   - Reason: Running test now and again after new methods would use the test projects twice; one frozen confirmation of the final candidate set keeps the test clean
+
+- **2026-11-24T19:11:12+00:00** — plan_v5 freeze: lawm=lawm_soft_W30 (0.7551), odasc=odasc_W30_t0.8 (0.7598); lawm beats odasc on dev: False
+  - Reason: best mean dev G-mean, dev projects only
