@@ -1,0 +1,54 @@
+# plan_v2 — written 2026-11-24 during cycle 1, BEFORE any held-out (test-project) run.
+# Reason for the new version (state/decisions.md, journal DIAGNOSIS/HYPOTHESIS entries of 2026-11-24):
+#  (1) E0 (dev only) showed that differences between label policies are mostly differences of the operating
+#      point (AUC nearly constant, G-mean not): an explicit decision-threshold policy is the targeted change.
+#  (2) ODaSC (Song et al. IJCNN 2022) is the closest prior work on the same data and must be a baseline
+#      (reimplemented, src/odasc.py, equal tuning budget), together with its base learner OOB.
+#  (3) A generic threshold-moving competitor (MAT: calibrate on mature commits) must get the same budget as the
+#      proposed latency-aware threshold (LAT), otherwise a LAT win could just be "any threshold tuning helps".
+# plan_v1 stays valid for everything not changed here (data, split, protocol, metric, seeds, statistics unit).
+version: 2
+cycle: 1
+supersedes: plan_v1.yaml
+data: "unchanged (plan_v1): dev = fabric, neutron, nova, sentry; test = 10 other projects"
+protocol: "unchanged (plan_v1), plus decision-threshold policies applied at every update (src/jit.py: choose_threshold)"
+methods:
+  # from plan_v1 (kept; W* frozen by scripts/freeze_config.py on E0)
+  nowait: plan_v1
+  oracle: plan_v1 (upper bound)
+  wait:   "plan_v1, W = W* (E0)"
+  orb:    "plan_v1, W = W*_orb (E0)"
+  law:    "plan_v1 pre-specified law_lagakos_model (reported as pre-registered in v1, whatever its result)"
+  # new in v2
+  LAT:    "PROPOSED. Latency-aware threshold: G-mean-optimal threshold on the last `window` prequentially scored commits,
+           provisionally-clean commits of age a counted as positive with weight q(a) = pi S(a) / (1 - pi + pi S(a)),
+           S = Lagakos right-truncation estimate of the discovery-delay survival, pi = defect rate of commits > 365 d old.
+           Label policy of the underlying LightGBM is part of the config."
+  MAT:    "Competitor (generic threshold moving): G-mean-optimal threshold on the last 1000 scored commits older than
+           min_age days, observed labels at face value"
+  ODaSC:  "Song et al. 2022 reimplementation (OOB of Hoeffding trees + micro-cluster label confidence), src/odasc.py"
+  OOB:    "ODaSC's base learner without confidence (Wang et al.)"
+tuning_budget: "exactly 5 configurations per new method family on dev projects x explore seeds 0-2 (logged in variants_tried.csv)"
+configs_E0b:
+  LAT: ["nowait win1000", "nowait win2000", "nowait win500", "wait(W*) win1000", "law_lagakos_base win1000"]
+  MAT: ["nowait age90", "nowait age180", "nowait age365", "wait(W*) age90", "wait(W*) age180"]
+  ODaSC: ["W15 M10 d0.8", "W15 M10 d0.9", "W15 M20 d0.8", "W15 M20 d0.9", "W(W*) M10 d0.9"]
+  OOB:  ["W15 M10 th0.99", "W15 M20 th0.99", "W15 M10 th0.999", "W(W*) M10 th0.99", "W(W*) M20 th0.99"]
+  note: "ODaSC W=15 follows the paper (its best-reported waiting time); theta for ODaSC fixed at 0.99 as in the paper's JIT protocol"
+experiments:
+  E0b_dev_tuning: {projects: dev, seeds: explore, runs: "20 configs above", est_cpu_h: 1.0, priority: 12}
+  freeze_v2: "scripts/freeze_config.py --v2: best config per family by mean dev G-mean; LAT* = best LAT config (the proposed method)"
+  E1b_main_confirm: {projects: test, seeds: confirm, methods: [nowait, oracle, wait(W*), orb(W*), law_lagakos_model, LAT*, MAT*, ODaSC*, OOB*], est_cpu_h: 3.5, priority: 20}
+  E2b_ablation: {projects: test, seeds: confirm, variants: ["LAT* with face-value labels (thr_policy=face, removes the latency weighting)", "LAT* with naive delay estimator (removes truncation correction)"], est_cpu_h: 0.8, priority: 30}
+  E3b_robustness: {projects: test, seeds: confirm, conditions: ["delay_scale=2 for wait(W*), orb(W*), MAT*, LAT*, ODaSC*"], est_cpu_h: 2.0, priority: 40}
+  E4: "per-project results over 10 held-out projects (unchanged)"
+  E5: "seconds per run (from E1b)"
+  E6: "= E1b"
+statistics:
+  unit: "project (mean over 5 confirm seeds), n = 10"
+  primary_test: "LAT* vs the best non-oracle baseline ON DEV among {nowait, wait, orb, law, MAT*, ODaSC*, OOB*}: two-sided Wilcoxon signed-rank"
+  family: "LAT* vs each of the 7 baselines -> Holm; variants-tried count reported (state/variants_tried.csv)"
+  effect: "mean paired difference, 95% bootstrap CI (10000 resamples, seed 0), rank-biserial r"
+  nontrivial_effect: "mean G-mean gain >= 0.02 (fixed in plan_v1, unchanged)"
+  pre_registered_v1: "law_lagakos_model vs best dev baseline is ALSO reported (H1 of plan_v1), with its own test"
+leakage_checks: "plan_v1 checks + tests/test_no_future.py::test_threshold_policies_do_not_leak and ::test_odasc_does_not_leak"

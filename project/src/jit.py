@@ -59,6 +59,47 @@ def orb_factors(ma, th=0.4, m=1.5, l0=10, l1=12):
         f1 = (m ** ((th - ma) / th) - 1) / (m - 1) * l1 + 1; f0 = 1.0
     return f0, f1
 
+# ------------------------------------------------------------------ decision-threshold policies
+def _best_gmean_threshold(sc, lab, w_pos, w_neg, grid=None):
+    """Threshold maximising weighted G-mean; each item contributes w_pos to class 1 and w_neg to class 0."""
+    if grid is None: grid = np.unique(np.quantile(sc, np.linspace(0.01, 0.99, 99)))
+    P, N = w_pos.sum(), w_neg.sum()
+    if P < 3 or N < 3: return 0.5
+    order = np.argsort(sc); scs = sc[order]; wp = np.cumsum(w_pos[order]); wn = np.cumsum(w_neg[order])
+    idx = np.searchsorted(scs, grid, side="left")          # items with score < g are predicted 0
+    cp = np.where(idx > 0, wp[np.maximum(idx - 1, 0)], 0.0); cn = np.where(idx > 0, wn[np.maximum(idx - 1, 0)], 0.0)
+    r1 = (P - cp) / P; r0 = cn / N
+    g = np.sqrt(r0 * r1)
+    return float(grid[int(np.argmax(g))])
+
+def choose_threshold(policy, prob, t, y_obs, T, start, window, min_age, tf, delay_est="lagakos"):
+    """Uses only prequential scores of commits made before T and labels observable at T (no future)."""
+    past = np.where(~np.isnan(prob[:start]))[0]
+    if policy == "mature":
+        past = past[(T - t[past]) / DAY >= min_age][-window:]
+        if len(past) < 50: return 0.5
+        lab = y_obs[past].astype(float)
+        return _best_gmean_threshold(prob[past], lab, lab, 1 - lab)
+    if policy == "face":   # ablation of 'latency': same window, observed labels at face value (q = 0)
+        past = past[-window:]
+        if len(past) < 50: return 0.5
+        lab = y_obs[past].astype(float)
+        return _best_gmean_threshold(prob[past], lab, lab, 1 - lab)
+    if policy == "latency":
+        past = past[-window:]
+        if len(past) < 50: return 0.5
+        lab = y_obs[past]
+        allc = np.arange(start); found_all = y_obs[allc]
+        pos_idx = allc[found_all]
+        d_obs = (tf[pos_idx] - t[pos_idx]) / DAY; tau = (T - t[pos_idx]) / DAY
+        age = (T - t[past]) / DAY
+        S = survival_from_delays(d_obs, tau, age, method=delay_est)
+        mature = (T - t[allc]) / DAY >= 365
+        pi = found_all[mature].mean() if mature.sum() > 50 else found_all.mean()
+        q = np.where(lab, 1.0, pi * S / np.clip(1 - pi + pi * S, 1e-9, None))
+        return _best_gmean_threshold(prob[past], lab.astype(float), q, 1 - q)
+    raise ValueError(policy)
+
 # ------------------------------------------------------------------ core simulation
 def fit_lgb(X, y, w, seed, class_mult=(1.0, 1.0)):
     """Class-balanced weighted LightGBM. Returns (model, odds_correction) where multiplying the
@@ -74,9 +115,18 @@ def fit_lgb(X, y, w, seed, class_mult=(1.0, 1.0)):
 
 def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="lagakos",
              prior="model", orb_params=None, eval_end_gap_days=365, delay_scale=1.0, return_preds=False,
-             label_noise_log=False):
+             label_noise_log=False, thr_policy="fixed", thr_window=1000, thr_min_age=90):
     """df: one project's commits sorted by time (columns FEATS, t, y, t_found).
-    delay_scale>1 stretches discovery delays (robustness: slower bug discovery)."""
+    delay_scale>1 stretches discovery delays (robustness: slower bug discovery).
+    thr_policy (decision threshold, added cycle 1 after the E0 operating-point diagnosis):
+      fixed  : 0.5 (plan_v1 default)
+      mature : threshold maximising G-mean of the PAST prequential scores of the last `thr_window`
+               commits older than `thr_min_age` days at T, against labels observable at T
+      face   : last `thr_window` scored commits of any age, observed labels at face value (ablation)
+      latency: like mature but over the last `thr_window` scored commits of ANY age; a provisionally-
+               clean commit of age a counts as positive with weight q(a)=pi*S(a)/(1-pi+pi*S(a)) and as
+               negative with 1-q(a) (S from the truncation-corrected delay estimate, pi = defect rate
+               of commits older than 365 d); found defects count as positive with weight 1."""
     t0 = time.time()
     df = df.reset_index(drop=True)
     X = np.log1p(np.clip(df[FEATS].to_numpy(float), 0, None))
@@ -87,7 +137,7 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
     n = len(df)
     prob = np.full(n, np.nan); pred = np.full(n, -1)
     model, oc = None, 1.0
-    recent_preds = []; diag = []
+    recent_preds = []; diag = []; thr_log = []
     for start in range(warmup, n, update_every):
         T = t[start]; cmult = (1.0, 1.0)
         tr = np.where(t < T)[0]
@@ -132,14 +182,20 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
         if m_new is not None:
             model, oc = m_new, oc_new
         end = min(start + update_every, n)
+        thr = 0.5
+        if thr_policy != "fixed" and model is not None:
+            thr = choose_threshold(thr_policy, prob, t, y_obs=(tf <= T), T=T, start=start, window=thr_window,
+                                   min_age=thr_min_age, tf=tf, delay_est=delay_est)
+            thr_log.append(thr)
         if model is not None:
             pr = model.predict_proba(X[start:end])[:, 1]
-            prob[start:end] = pr; pred[start:end] = (pr >= 0.5).astype(int)
+            prob[start:end] = pr; pred[start:end] = (pr >= thr).astype(int)
             recent_preds.extend(pred[start:end].tolist())
     # evaluation window
     ev = (pred >= 0) & (t <= t.max() - eval_end_gap_days * DAY)
     res = evaluate(y[ev], pred[ev], prob[ev])
     res.update(n_eval=int(ev.sum()), seconds=round(time.time() - t0, 2))
+    if thr_log: res.update(thr_mean=float(np.mean(thr_log)), thr_sd=float(np.std(thr_log)))
     out = {"metrics": res}
     if return_preds: out.update(pred=pred, prob=prob, eval_mask=ev)
     if diag: out["diag"] = diag

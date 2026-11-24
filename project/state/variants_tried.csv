@@ -6,3 +6,13 @@ timestamp,cycle,variant_id,description,data_split_used,metric,value,outcome,note
 2026-11-24T03:22:41+00:00,1,orb_W90 (buggy: factors cancelled),exploratory code check,dev: fabric seed 0,gmean,0.636,exploratory,pre-plan sanity run
 2026-11-24T03:22:41+00:00,1,orb_W90,exploratory code check,dev: fabric seed 0,gmean,0.655,exploratory,pre-plan sanity run
 2026-11-24T03:22:41+00:00,1,law_lagakos_model,exploratory code check,dev: fabric seed 0,gmean,0.67,exploratory,pre-plan sanity run
+2026-11-24T20:00:26+00:00,1,neutron_s0_methodnowait_thr_policymature,exploratory threshold-policy check (pre plan_v2),dev: neutron seed 0,gmean,0.7737,exploratory,auc=0.829 thr_mean=0.054
+2026-11-24T20:00:26+00:00,1,neutron_s0_methodnowait_thr_policylatency,exploratory threshold-policy check (pre plan_v2),dev: neutron seed 0,gmean,0.7932,exploratory,auc=0.829 thr_mean=0.041
+2026-11-24T20:00:26+00:00,1,neutron_s0_methodwait_W90_thr_policymature,exploratory threshold-policy check (pre plan_v2),dev: neutron seed 0,gmean,0.8206,exploratory,auc=0.896 thr_mean=0.337
+2026-11-24T20:00:26+00:00,1,neutron_s0_methodwait_W90_thr_policylatency,exploratory threshold-policy check (pre plan_v2),dev: neutron seed 0,gmean,0.8359,exploratory,auc=0.896 thr_mean=0.190
+2026-11-24T20:00:26+00:00,1,neutron_s0_methodlaw_priorbase_thr_policylatency,exploratory threshold-policy check (pre plan_v2),dev: neutron seed 0,gmean,0.8098,exploratory,auc=0.876 thr_mean=0.305
+2026-11-24T20:00:26+00:00,1,fabric_s0_methodnowait_thr_policymature,exploratory threshold-policy check (pre plan_v2),dev: fabric seed 0,gmean,0.6984,exploratory,auc=0.778 thr_mean=0.109
+2026-11-24T20:00:26+00:00,1,fabric_s0_methodnowait_thr_policylatency,exploratory threshold-policy check (pre plan_v2),dev: fabric seed 0,gmean,0.7058,exploratory,auc=0.778 thr_mean=0.084
+2026-11-24T20:00:26+00:00,1,fabric_s0_methodwait_W90_thr_policymature,exploratory threshold-policy check (pre plan_v2),dev: fabric seed 0,gmean,0.6417,exploratory,auc=0.724 thr_mean=0.756
+2026-11-24T20:00:26+00:00,1,fabric_s0_methodwait_W90_thr_policylatency,exploratory threshold-policy check (pre plan_v2),dev: fabric seed 0,gmean,0.6825,exploratory,auc=0.724 thr_mean=0.756
+2026-11-24T20:00:26+00:00,1,fabric_s0_methodlaw_priorbase_thr_policylatency,exploratory threshold-policy check (pre plan_v2),dev: fabric seed 0,gmean,0.6935,exploratory,auc=0.754 thr_mean=0.389

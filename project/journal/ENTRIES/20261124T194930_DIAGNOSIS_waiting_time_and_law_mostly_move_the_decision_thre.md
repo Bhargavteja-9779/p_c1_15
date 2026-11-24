@@ -1,0 +1,5 @@
+# DIAGNOSIS: Waiting time and LAW mostly move the decision threshold, not the ranking
+
+*Written 2026-11-24T19:49:30+00:00*
+
+Partial E0 (dev projects only, seeds 0-2; results/raw_results.jsonl). On neutron, ROC-AUC is almost the same for wait W=60/90/180 (0.894/0.895/0.897), orb W=90/180 (0.895/0.893) and LAW lagakos+model (0.888), yet G-mean ranges from 0.496 (LAW, r1=0.255) to 0.838 (wait W=180, r1=0.987). On fabric the best W is 30 (0.660) and W=180 collapses (0.474, r0=0.236). Together with RQ1 (the false-clean fraction among training negatives on neutron only falls from 0.112 at W=0 to 0.091 at W=180), this says the waiting time mainly shifts the operating point of the classifier by removing recent negatives, rather than cleaning labels. The pre-specified LAW (model prior) makes it worse: its model-based prior feeds back low scores, so it labels most young commits clean and r1 drops. Its 'base' prior variant is better on neutron (0.682) but still far from W=180. My hypothesis H1 is in trouble on dev already.

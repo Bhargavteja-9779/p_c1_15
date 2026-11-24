@@ -1,0 +1,5 @@
+# HYPOTHESIS: An explicit latency-aware operating-point correction should beat any fixed waiting time
+
+*Written 2026-11-24T19:49:30+00:00*
+
+Written before testing. If the gain from waiting is mostly a threshold effect, and the best W differs by project (30 on fabric, 180 on neutron), then an adaptive threshold that targets balanced recalls, set from information available at time T, should match or beat the best fixed W on each project. Two candidate ways to set it: (a) PU correction with known propensity: under verification latency a defect-inducing commit of age a is labelled with probability F(a)=1-S(a); with a truncation-corrected delay estimate, the expected labelling frequency of the training positives gives the Elkan-Noto constant c, and the threshold is scaled by c; (b) a simpler competitor that must be included: calibrate the threshold on mature commits (age >= W) whose labels are mostly final. Prediction that would prove me wrong: on dev, the corrected nowait model does not reach the G-mean of the best per-project W, or (b) does as well as (a).

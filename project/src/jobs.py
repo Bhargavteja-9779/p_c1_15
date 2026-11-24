@@ -17,13 +17,19 @@ def jit_run(params, ctx):
     df = load_project(params["project"])
     if params.get("quick"):
         df = df.iloc[:3000]
-    kw = {k: params[k] for k in ["W", "delay_est", "prior", "delay_scale", "label_noise_log"] if k in params}
+    kw = {k: params[k] for k in ["W", "delay_est", "prior", "delay_scale", "label_noise_log", "thr_policy", "thr_window", "thr_min_age"] if k in params}
     ctx.heartbeat(f"{params['project']} {params['method']}")
-    out = simulate(df, params["method"], seed=params["seed"],
-                   eval_end_gap_days=0 if params.get("quick") else 365, **kw)
+    if params["method"] in ("odasc", "oob"):
+        from .odasc import simulate_odasc
+        kw = {k: params[k] for k in ["W", "M", "theta", "delta", "delay_scale"] if k in params}
+        out = simulate_odasc(df, seed=params["seed"], use_conf=params["method"] == "odasc",
+                             eval_end_gap_days=0 if params.get("quick") else 365, **kw)
+    else:
+        out = simulate(df, params["method"], seed=params["seed"],
+                       eval_end_gap_days=0 if params.get("quick") else 365, **kw)
     row = {"experiment": params["experiment"], "project": params["project"], "method": params["method"],
            "variant": params.get("variant", params["method"]), "seed": params["seed"],
-           "split": params.get("split"), **{k: v for k, v in kw.items()}, **out["metrics"]}
+           "split": params.get("split"), "family": params.get("family"), **{k: v for k, v in kw.items()}, **out["metrics"]}
     if "diag" in out:
         d = out["diag"]
         for key in ("frac_false_clean", "mean_q_true_bug", "mean_q_clean"):

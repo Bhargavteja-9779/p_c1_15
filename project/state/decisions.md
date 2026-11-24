@@ -31,3 +31,12 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-24T19:48:44+00:00** — Liu et al. 2024a marked UNVERIFIED (citation does not resolve); not treated as pre-emption; re-search before writing
   - Reason: 6 searches across Crossref/OpenAlex/web failed; EMSE 29 art. 98 is another paper
+
+- **2026-11-24T20:00:26+00:00** — plan_v2 written (experiments/plan_v2.yaml): add LAT (proposed latency-aware threshold), MAT (generic mature-label threshold competitor), ODaSC + OOB baselines; 5 configs per family on dev (E0b); E1b/E2b/E3b replace E1-E3 of plan_v1
+  - Reason: E0 diagnosis (dev): differences are mostly operating point (AUC ~constant); ODaSC is the closest prior work on same data; MAT guards against 'any threshold tuning helps'. No test-project run happened before this plan.
+
+- **2026-11-24T20:00:26+00:00** — Do not run plan_v1 E1 separately; law_lagakos_model (v1 pre-registered) is included in E1b and its H1 test is reported
+  - Reason: Avoids an extra look at the test projects; H1 result still reported whatever it is
+
+- **2026-11-24T20:00:26+00:00** — ODaSC reimplemented from the paper (no public code found): river 0.27 Hoeffding trees; time unit days for fading; eps = median NN distance of first 500 commits (features only); <=300 micro-clusters; Eq. 11 confidence factor applied to both classes; Eqs. 8-9 calibration over a rolling window of the last 50 class-1 examples
+  - Reason: Paper leaves these unspecified; applying Eq. 11 only to the minority class would make confidence irrelevant for the noisy (clean) class. Listed as a threat to validity.
