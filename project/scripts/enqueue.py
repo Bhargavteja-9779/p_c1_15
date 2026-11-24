@@ -9,6 +9,14 @@ TEST = ["brackets", "broadleaf", "camel", "jgroups", "matplotlib", "npm", "sprin
 SE, SC = [0, 1, 2], [100, 101, 102, 103, 104]
 WGRID = [15, 30, 60, 90, 180]
 
+def _cand(fz):
+    """plan_v2 candidate chosen on dev by scripts/freeze_config.py (law_* or awt_*)."""
+    c = fz["candidate"]
+    if c.startswith("awt_e"):
+        return dict(method="awt", eps=float(c[5:]), delay_est="lagakos", label_noise_log=True, variant=c)
+    _, de, pr = c.split("_")
+    return dict(method="law", delay_est=de, prior=pr, variant=c + "_cand")
+
 def specs(exp):
     J = []
     if exp == "E0":
@@ -39,7 +47,8 @@ def specs(exp):
                 J += [dict(method="nowait"), dict(method="oracle"),
                       dict(method="wait", W=fz["wait_W"], variant=f"wait_W{fz['wait_W']}"),
                       dict(method="orb", W=fz["orb_W"], variant=f"orb_W{fz['orb_W']}"),
-                      dict(method="law", delay_est="lagakos", prior="model", variant="law_lagakos_model")]
+                      dict(method="law", delay_est="lagakos", prior="model", variant="law_lagakos_model"),
+                      _cand(fz)]
             if exp == "E2":
                 J += [dict(method="law", delay_est=de, prior=pr, variant=f"law_{de}_{pr}")
                       for de, pr in [("naive", "model"), ("lagakos", "base"), ("naive", "base")]]
@@ -48,7 +57,7 @@ def specs(exp):
                       dict(method="wait", W=fz["wait_W"], delay_scale=2.0, variant=f"wait_W{fz['wait_W']}_ds2"),
                       dict(method="orb", W=fz["orb_W"], delay_scale=2.0, variant=f"orb_W{fz['orb_W']}_ds2"),
                       dict(method="law", delay_est="lagakos", prior="model", delay_scale=2.0, variant="law_lagakos_model_ds2")]
-            J[-(5 if exp == "E1" else 3 if exp == "E2" else 4):] = [dict(j, project=p, seed=s) for j in J[-(5 if exp == "E1" else 3 if exp == "E2" else 4):]]
+            J[-(6 if exp == "E1" else 3 if exp == "E2" else 4):] = [dict(j, project=p, seed=s) for j in J[-(6 if exp == "E1" else 3 if exp == "E2" else 4):]]
         for j in J: j.update(experiment=exp, split="test")
         return J, {"E1": 20, "E2": 30, "E3": 40}[exp]
     raise SystemExit("unknown experiment")

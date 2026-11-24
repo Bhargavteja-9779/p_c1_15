@@ -2882,12 +2882,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 10,
       "started": "2026-11-24T04:05:23+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-24T04:06:09+00:00",
+      "seconds": 45.7
     },
     {
       "id": "E0_sentry_orb_W15_s0",
@@ -3036,10 +3038,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T04:06:09+00:00",
+      "worker": 0
     },
     {
       "id": "E0_sentry_orb_W180_s0",
@@ -3203,10 +3207,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T04:05:46+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T04:06:34+00:00",
+      "seconds": 47.9
     },
     {
       "id": "E0_sentry_orb_W15_s1",
@@ -3334,12 +3342,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 10,
       "started": "2026-11-24T04:05:00+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-24T04:05:46+00:00",
+      "seconds": 45.4
     },
     {
       "id": "E0_sentry_wait_W180_s1",
@@ -3520,10 +3530,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T04:06:07+00:00",
+      "worker": 2
     },
     {
       "id": "E0_sentry_orb_W15_s2",
@@ -3651,12 +3663,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 10,
       "started": "2026-11-24T04:05:21+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-24T04:06:07+00:00",
+      "seconds": 46.5
     },
     {
       "id": "E0_sentry_wait_W180_s2",
@@ -3754,11 +3768,14 @@
         "split": "dev"
       },
       "status": "running",
-      "attempts": 1,
+      "attempts": 2,
       "cycle": 1,
       "priority": 10,
-      "started": "2026-11-24T03:35:52+00:00",
-      "worker": 0
+      "started": "2026-11-24T04:06:34+00:00",
+      "worker": 1,
+      "log": [
+        "2026-11-24T04:06:17+00:00 orphan from previous container reset to pending by agent"
+      ]
     },
     {
       "id": "E0_sentry_law_naive_base_s2",

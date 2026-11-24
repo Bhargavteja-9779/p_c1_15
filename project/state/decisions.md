@@ -37,3 +37,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-24T04:05:16+00:00** — ODaSC baseline reimplementation deferred
   - Reason: Only needed if a method claim survives dev; ODaSC Table II is used now as literature evidence (opt≈estimated)
+
+- **2026-11-24T04:06:17+00:00** — Reset orphaned queue record E0_sentry_law_lagakos_base_s2 to pending
+  - Reason: Left 'running' by the reclaimed container; its worker id (0) is alive again in the new container so the automatic reset did not fire
