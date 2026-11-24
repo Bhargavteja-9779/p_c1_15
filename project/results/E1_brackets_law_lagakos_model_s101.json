@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E1",
+    "project": "brackets",
+    "method": "law",
+    "variant": "law_lagakos_model",
+    "seed": 101,
+    "split": "test",
+    "delay_est": "lagakos",
+    "prior": "model",
+    "gmean": 0.7230455540650128,
+    "r0": 0.8943030884941591,
+    "r1": 0.5845835488877392,
+    "rdiff": 0.30971953960641985,
+    "auc": 0.8540383740239617,
+    "mcc": 0.4920002788562917,
+    "n_eval": 16364,
+    "seconds": 47.12,
+    "job_id": "E1_brackets_law_lagakos_model_s101",
+    "written": "2026-11-24T13:21:58+00:00",
+    "cycle": 1
+  }
+]

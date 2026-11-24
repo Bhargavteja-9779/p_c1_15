@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E1",
+    "project": "broadleaf",
+    "method": "awt",
+    "variant": "awt_e0.4",
+    "seed": 102,
+    "split": "test",
+    "delay_est": "lagakos",
+    "label_noise_log": true,
+    "eps": 0.4,
+    "gmean": 0.6670522032258549,
+    "r0": 0.7938855030472575,
+    "r1": 0.5604821351700388,
+    "rdiff": 0.23340336787721871,
+    "auc": 0.7561058800845919,
+    "mcc": 0.31106982471746125,
+    "n_eval": 12332,
+    "seconds": 23.69,
+    "W_T_mean": 67.17241379310344,
+    "job_id": "E1_broadleaf_awt_e0.4_s102",
+    "written": "2026-11-24T13:26:05+00:00",
+    "cycle": 1
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E1",
+    "project": "broadleaf",
+    "method": "law",
+    "variant": "law_lagakos_model",
+    "seed": 103,
+    "split": "test",
+    "delay_est": "lagakos",
+    "prior": "model",
+    "gmean": 0.6451084609453684,
+    "r0": 0.8853032270956139,
+    "r1": 0.47008179078777446,
+    "rdiff": 0.4152214363078395,
+    "auc": 0.7876495527679845,
+    "mcc": 0.3604179686012886,
+    "n_eval": 12332,
+    "seconds": 41.46,
+    "job_id": "E1_broadleaf_law_lagakos_model_s103",
+    "written": "2026-11-24T13:27:24+00:00",
+    "cycle": 1
+  }
+]

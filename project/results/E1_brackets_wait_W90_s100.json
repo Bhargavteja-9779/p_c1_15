@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E1",
+    "project": "brackets",
+    "method": "wait",
+    "variant": "wait_W90",
+    "seed": 100,
+    "split": "test",
+    "W": 90,
+    "gmean": 0.7310229438341331,
+    "r0": 0.5766594215014211,
+    "r1": 0.9267073847862298,
+    "rdiff": 0.3500479632848087,
+    "auc": 0.8244633245885707,
+    "mcc": 0.4259413761014505,
+    "n_eval": 15564,
+    "seconds": 25.85,
+    "job_id": "E1_brackets_wait_W90_s100",
+    "written": "2026-11-24T13:25:10+00:00",
+    "cycle": 1
+  }
+]
