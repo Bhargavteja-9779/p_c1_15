@@ -71,13 +71,24 @@ if "E1" in set(df.experiment) and fz:
     compare("E12", "law_lagakos_model", ["law_naive_model", "law_lagakos_base", "law_naive_base"], "E2_ablation_full_vs_variants")
 if "E3" in set(df.experiment) and fz:
     compare("E3", "law_lagakos_model_ds2", ["nowait_ds2", f"wait_W{fz['wait_W']}_ds2", f"orb_W{fz['orb_W']}_ds2"], "E3_robust_delay_x2")
+fz3 = read_json(STATE / "frozen_config_v3.json", {})
+if "E1v3" in set(df.experiment) and fz3:
+    sel, P = fz3["selected"], fz3["proposed"]
+    compare("E1v3", P, [sel[k] for k in ("wait", "orb", "fsc", "fr") if k in sel], "E1v3_primary_H2_proposed_vs_tuned_baselines")
+    compare("E1v3", P, [sel[k] for k in ("wait_cal", "fsc_cal") if k in sel] + ["nowait"], "E1v3_secondary_H4_vs_calibrated_baselines")
+    if "E2v3" in set(df.experiment):
+        e12 = pd.concat([df[df.experiment == "E1v3"], df[df.experiment == "E2v3"]]).assign(experiment="E12v3")
+        df = pd.concat([df, e12])
+        compare("E12v3", P, ["law_lagakos_model", "law_lagakos_model_calnaive", "nowait_cal", "law_naive_model_cal", "law_lagakos_base_cal"], "E2v3_ablation")
+    if "E3v3" in set(df.experiment):
+        compare("E3v3", P + "_ds2", [sel[k] + "_ds2" for k in ("wait", "fsc", "fr", "wait_cal") if k in sel], "E3v3_robust_delay_x2")
 vt = pd.read_csv(STATE / "variants_tried.csv") if (STATE / "variants_tried.csv").exists() else pd.DataFrame()
 statsout["n_variants_logged"] = int(len(vt))
 json.dump(metrics, open(R / "metrics.json", "w"), indent=1)
 json.dump(statsout, open(R / "statistics.json", "w"), indent=1)
 
 # figures
-for exp in [x for x in ["E0", "E1"] if x in set(df.experiment)]:
+for exp in [x for x in ["E0", "E0b", "E0c", "E1", "E1v3"] if x in set(df.experiment)]:
     pp = df[df.experiment == exp].groupby(["variant", "project"]).gmean.mean().unstack()
     pp = pp.loc[pp.mean(axis=1).sort_values().index]
     fig, ax = plt.subplots(figsize=(7, 0.35 * len(pp) + 1.5))
@@ -89,7 +100,8 @@ for exp in [x for x in ["E0", "E1"] if x in set(df.experiment)]:
 with open(R / "RESULTS_SUMMARY.md", "w") as f:
     f.write(f"# RESULTS SUMMARY (auto-generated {now_iso()} by scripts/final_report.py)\n\n")
     f.write("Journal: JKSU-CIS (see journal_selection/selected_journal.md). Topic: topic/selected_topic.md. Plan: experiments/plan_v*.yaml.\n\n")
-    f.write(f"Frozen config: `{json.dumps(fz)}`\n\n")
+    f.write(f"Frozen config (plan_v1, superseded): `{json.dumps(fz)}`\n\n")
+    f.write(f"Frozen config (plan_v3/v4): `{json.dumps({k: v for k, v in fz3.items() if k != 'dev_means'})}`\n\n")
     q = read_json(STATE / "queue.json", {"jobs": []}); from collections import Counter
     f.write(f"Jobs: {dict(Counter(j['status'] for j in q['jobs']))}\n\n")
     f.write("## G-mean by project (mean over seeds)\n\n" + "\n".join(md) + "\n")
