@@ -26785,12 +26785,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 13,
       "started": "2026-11-24T15:21:05+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-24T15:28:08+00:00",
+      "seconds": 423.3
     },
     {
       "id": "E0c_nova_lawm_count_W90_s0",
@@ -26807,10 +26809,12 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-24T15:28:08+00:00",
+      "worker": 1
     },
     {
       "id": "E0c_nova_lawm_soft_W30_s1",
@@ -26867,12 +26871,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 13,
       "started": "2026-11-24T15:21:13+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-24T15:28:14+00:00",
+      "seconds": 421.3
     },
     {
       "id": "E0c_nova_lawm_count_W90_s1",
@@ -26889,10 +26895,12 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-24T15:28:14+00:00",
+      "worker": 2
     },
     {
       "id": "E0c_nova_lawm_soft_W30_s2",
@@ -26949,12 +26957,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 13,
       "started": "2026-11-24T15:21:23+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-24T15:28:23+00:00",
+      "seconds": 419.8
     },
     {
       "id": "E0c_nova_lawm_count_W90_s2",
@@ -26971,10 +26981,12 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-24T15:28:23+00:00",
+      "worker": 0
     },
     {
       "id": "E0c_sentry_lawm_soft_W30_s0",
