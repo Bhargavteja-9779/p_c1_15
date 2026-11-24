@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E1",
+    "project": "npm",
+    "method": "awt",
+    "variant": "awt_e0.4",
+    "seed": 101,
+    "split": "test",
+    "delay_est": "lagakos",
+    "label_noise_log": true,
+    "eps": 0.4,
+    "gmean": 0.6241710161848731,
+    "r0": 0.5744640842421963,
+    "r1": 0.6781789638932496,
+    "rdiff": 0.1037148796510533,
+    "auc": 0.6841823893615653,
+    "mcc": 0.19977938545591487,
+    "n_eval": 6592,
+    "seconds": 9.48,
+    "W_T_mean": 113.39189189189189,
+    "job_id": "E1_npm_awt_e0.4_s101",
+    "written": "2026-11-24T13:57:21+00:00",
+    "cycle": 1
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E1",
+    "project": "spring-integration",
+    "method": "orb",
+    "variant": "orb_W90",
+    "seed": 104,
+    "split": "test",
+    "W": 90,
+    "gmean": 0.6147113266522113,
+    "r0": 0.7294326241134752,
+    "r1": 0.5180327868852459,
+    "rdiff": 0.2113998372282293,
+    "auc": 0.6442857973325361,
+    "mcc": 0.23340050526876124,
+    "n_eval": 7775,
+    "seconds": 8.91,
+    "job_id": "E1_spring-integration_orb_W90_s104",
+    "written": "2026-11-24T14:00:23+00:00",
+    "cycle": 1
+  }
+]

@@ -8894,10 +8894,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:50:37+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:51:08+00:00",
+      "seconds": 31.4
     },
     {
       "id": "E1_jgroups_orb_W90_s100",
@@ -9015,10 +9019,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:50:41+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:51:12+00:00",
+      "seconds": 31.1
     },
     {
       "id": "E1_jgroups_orb_W90_s101",
@@ -9032,12 +9040,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-24T13:49:57+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-24T13:50:28+00:00",
+      "seconds": 30.3
     },
     {
       "id": "E1_jgroups_law_lagakos_model_s101",
@@ -9134,10 +9144,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:50:58+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:51:29+00:00",
+      "seconds": 30.8
     },
     {
       "id": "E1_jgroups_orb_W90_s102",
@@ -9151,12 +9165,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-24T13:50:07+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-24T13:50:37+00:00",
+      "seconds": 29.6
     },
     {
       "id": "E1_jgroups_law_lagakos_model_s102",
@@ -9253,10 +9269,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:51:08+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:51:38+00:00",
+      "seconds": 30.1
     },
     {
       "id": "E1_jgroups_orb_W90_s103",
@@ -9270,12 +9290,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-24T13:50:11+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-24T13:50:41+00:00",
+      "seconds": 29.4
     },
     {
       "id": "E1_jgroups_law_lagakos_model_s103",
@@ -9372,10 +9394,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:51:12+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:51:42+00:00",
+      "seconds": 30.7
     },
     {
       "id": "E1_jgroups_orb_W90_s104",
@@ -9389,10 +9415,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:50:28+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:50:58+00:00",
+      "seconds": 30.8
     },
     {
       "id": "E1_jgroups_law_lagakos_model_s104",
@@ -9449,10 +9479,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:53:26+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:53:57+00:00",
+      "seconds": 31.3
     },
     {
       "id": "E1_matplotlib_oracle_s100",
@@ -9464,10 +9498,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:54:30+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:55:01+00:00",
+      "seconds": 30.8
     },
     {
       "id": "E1_matplotlib_wait_W90_s100",
@@ -9481,10 +9519,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:56:17+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:56:50+00:00",
+      "seconds": 33.3
     },
     {
       "id": "E1_matplotlib_orb_W90_s100",
@@ -9498,10 +9540,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:55:30+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:55:59+00:00",
+      "seconds": 29.0
     },
     {
       "id": "E1_matplotlib_law_lagakos_model_s100",
@@ -9516,10 +9562,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:52:10+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:53:04+00:00",
+      "seconds": 53.7
     },
     {
       "id": "E1_matplotlib_awt_e0.4_s100",
@@ -9535,10 +9585,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:51:29+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:51:57+00:00",
+      "seconds": 27.9
     },
     {
       "id": "E1_matplotlib_nowait_s101",
@@ -9550,10 +9604,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:53:57+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:54:28+00:00",
+      "seconds": 31.4
     },
     {
       "id": "E1_matplotlib_oracle_s101",
@@ -9565,10 +9623,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:54:45+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:55:16+00:00",
+      "seconds": 31.5
     },
     {
       "id": "E1_matplotlib_wait_W90_s101",
@@ -9582,10 +9644,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:56:30+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:57:03+00:00",
+      "seconds": 33.1
     },
     {
       "id": "E1_matplotlib_orb_W90_s101",
@@ -9599,10 +9665,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:55:32+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:56:02+00:00",
+      "seconds": 29.7
     },
     {
       "id": "E1_matplotlib_law_lagakos_model_s101",
@@ -9617,10 +9687,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:52:26+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:53:20+00:00",
+      "seconds": 53.4
     },
     {
       "id": "E1_matplotlib_awt_e0.4_s101",
@@ -9636,10 +9710,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:51:38+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:52:05+00:00",
+      "seconds": 27.2
     },
     {
       "id": "E1_matplotlib_nowait_s102",
@@ -9651,10 +9729,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:53:57+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:54:30+00:00",
+      "seconds": 32.8
     },
     {
       "id": "E1_matplotlib_oracle_s102",
@@ -9666,10 +9748,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:54:59+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:55:30+00:00",
+      "seconds": 31.2
     },
     {
       "id": "E1_matplotlib_wait_W90_s102",
@@ -9683,10 +9769,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:56:33+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:57:04+00:00",
+      "seconds": 31.1
     },
     {
       "id": "E1_matplotlib_orb_W90_s102",
@@ -9700,10 +9790,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:55:47+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:56:17+00:00",
+      "seconds": 29.2
     },
     {
       "id": "E1_matplotlib_law_lagakos_model_s102",
@@ -9718,10 +9812,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:52:33+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:53:25+00:00",
+      "seconds": 52.1
     },
     {
       "id": "E1_matplotlib_awt_e0.4_s102",
@@ -9737,10 +9835,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:51:42+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:52:10+00:00",
+      "seconds": 27.6
     },
     {
       "id": "E1_matplotlib_nowait_s103",
@@ -9752,10 +9854,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:54:13+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:54:45+00:00",
+      "seconds": 32.1
     },
     {
       "id": "E1_matplotlib_oracle_s103",
@@ -9767,10 +9873,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:55:01+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:55:32+00:00",
+      "seconds": 31.3
     },
     {
       "id": "E1_matplotlib_wait_W90_s103",
@@ -9784,10 +9894,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:56:50+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:57:26+00:00",
+      "seconds": 35.5
     },
     {
       "id": "E1_matplotlib_orb_W90_s103",
@@ -9801,10 +9915,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:55:59+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:56:30+00:00",
+      "seconds": 30.4
     },
     {
       "id": "E1_matplotlib_law_lagakos_model_s103",
@@ -9819,10 +9937,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:53:04+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:53:57+00:00",
+      "seconds": 53.2
     },
     {
       "id": "E1_matplotlib_awt_e0.4_s103",
@@ -9838,10 +9960,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:51:57+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:52:26+00:00",
+      "seconds": 29.3
     },
     {
       "id": "E1_matplotlib_nowait_s104",
@@ -9853,10 +9979,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:54:28+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:54:59+00:00",
+      "seconds": 30.6
     },
     {
       "id": "E1_matplotlib_oracle_s104",
@@ -9868,10 +9998,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:55:16+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:55:47+00:00",
+      "seconds": 30.9
     },
     {
       "id": "E1_matplotlib_wait_W90_s104",
@@ -9885,10 +10019,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:57:03+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:57:36+00:00",
+      "seconds": 33.7
     },
     {
       "id": "E1_matplotlib_orb_W90_s104",
@@ -9902,10 +10040,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:56:02+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:56:33+00:00",
+      "seconds": 31.0
     },
     {
       "id": "E1_matplotlib_law_lagakos_model_s104",
@@ -9920,10 +10062,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:53:20+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:54:13+00:00",
+      "seconds": 52.9
     },
     {
       "id": "E1_matplotlib_awt_e0.4_s104",
@@ -9939,10 +10085,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:52:05+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:52:33+00:00",
+      "seconds": 28.1
     },
     {
       "id": "E1_npm_nowait_s100",
@@ -9954,10 +10104,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:57:51+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:58:00+00:00",
+      "seconds": 9.5
     },
     {
       "id": "E1_npm_oracle_s100",
@@ -9969,10 +10123,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:58:10+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:58:18+00:00",
+      "seconds": 8.3
     },
     {
       "id": "E1_npm_wait_W90_s100",
@@ -9986,10 +10144,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:58:37+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:58:44+00:00",
+      "seconds": 7.3
     },
     {
       "id": "E1_npm_orb_W90_s100",
@@ -10003,10 +10165,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:58:26+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:58:35+00:00",
+      "seconds": 8.1
     },
     {
       "id": "E1_npm_law_lagakos_model_s100",
@@ -10021,10 +10187,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:57:34+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:57:47+00:00",
+      "seconds": 13.2
     },
     {
       "id": "E1_npm_awt_e0.4_s100",
@@ -10040,10 +10210,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:57:04+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:57:12+00:00",
+      "seconds": 7.8
     },
     {
       "id": "E1_npm_nowait_s101",
@@ -10055,10 +10229,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:58:00+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:58:09+00:00",
+      "seconds": 8.8
     },
     {
       "id": "E1_npm_oracle_s101",
@@ -10070,10 +10248,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:58:13+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:58:21+00:00",
+      "seconds": 8.5
     },
     {
       "id": "E1_npm_wait_W90_s101",
@@ -10087,10 +10269,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:58:42+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:58:50+00:00",
+      "seconds": 7.5
     },
     {
       "id": "E1_npm_orb_W90_s101",
@@ -10104,10 +10290,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:58:27+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:58:35+00:00",
+      "seconds": 7.6
     },
     {
       "id": "E1_npm_law_lagakos_model_s101",
@@ -10122,10 +10312,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:57:36+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:57:50+00:00",
+      "seconds": 13.3
     },
     {
       "id": "E1_npm_awt_e0.4_s101",
@@ -10141,10 +10335,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:57:12+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:57:21+00:00",
+      "seconds": 9.5
     },
     {
       "id": "E1_npm_nowait_s102",
@@ -10156,10 +10354,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:58:01+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:58:10+00:00",
+      "seconds": 8.8
     },
     {
       "id": "E1_npm_oracle_s102",
@@ -10171,10 +10373,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:58:18+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:58:26+00:00",
+      "seconds": 8.2
     },
     {
       "id": "E1_npm_wait_W90_s102",
@@ -10188,10 +10394,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:58:42+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:58:50+00:00",
+      "seconds": 7.3
     },
     {
       "id": "E1_npm_orb_W90_s102",
@@ -10205,10 +10415,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:58:30+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:58:37+00:00",
+      "seconds": 7.2
     },
     {
       "id": "E1_npm_law_lagakos_model_s102",
@@ -10223,10 +10437,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:57:38+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:57:51+00:00",
+      "seconds": 12.9
     },
     {
       "id": "E1_npm_awt_e0.4_s102",
@@ -10242,10 +10460,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:57:21+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:57:30+00:00",
+      "seconds": 8.7
     },
     {
       "id": "E1_npm_nowait_s103",
@@ -10257,10 +10479,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:58:04+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:58:13+00:00",
+      "seconds": 8.5
     },
     {
       "id": "E1_npm_oracle_s103",
@@ -10272,10 +10498,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:58:18+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:58:27+00:00",
+      "seconds": 8.8
     },
     {
       "id": "E1_npm_wait_W90_s103",
@@ -10289,10 +10519,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:58:44+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:58:52+00:00",
+      "seconds": 7.7
     },
     {
       "id": "E1_npm_orb_W90_s103",
@@ -10306,10 +10540,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:58:35+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:58:42+00:00",
+      "seconds": 7.9
     },
     {
       "id": "E1_npm_law_lagakos_model_s103",
@@ -10324,10 +10562,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:57:47+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:58:01+00:00",
+      "seconds": 14.2
     },
     {
       "id": "E1_npm_awt_e0.4_s103",
@@ -10343,10 +10585,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:57:26+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:57:34+00:00",
+      "seconds": 8.2
     },
     {
       "id": "E1_npm_nowait_s104",
@@ -10358,10 +10604,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:58:09+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:58:18+00:00",
+      "seconds": 9.1
     },
     {
       "id": "E1_npm_oracle_s104",
@@ -10373,10 +10623,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:58:21+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:58:30+00:00",
+      "seconds": 8.4
     },
     {
       "id": "E1_npm_wait_W90_s104",
@@ -10390,10 +10644,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:58:50+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:58:57+00:00",
+      "seconds": 7.4
     },
     {
       "id": "E1_npm_orb_W90_s104",
@@ -10407,10 +10665,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:58:35+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:58:42+00:00",
+      "seconds": 7.6
     },
     {
       "id": "E1_npm_law_lagakos_model_s104",
@@ -10425,10 +10687,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:57:50+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:58:04+00:00",
+      "seconds": 14.6
     },
     {
       "id": "E1_npm_awt_e0.4_s104",
@@ -10444,10 +10710,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:57:30+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:57:38+00:00",
+      "seconds": 8.0
     },
     {
       "id": "E1_spring-integration_nowait_s100",
@@ -10459,10 +10729,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:59:25+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:59:34+00:00",
+      "seconds": 9.7
     },
     {
       "id": "E1_spring-integration_oracle_s100",
@@ -10474,10 +10748,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:59:45+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:59:55+00:00",
+      "seconds": 9.9
     },
     {
       "id": "E1_spring-integration_wait_W90_s100",
@@ -10491,10 +10769,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T14:00:18+00:00",
+      "worker": 2
     },
     {
       "id": "E1_spring-integration_orb_W90_s100",
@@ -10508,10 +10788,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T14:00:03+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:00:13+00:00",
+      "seconds": 9.7
     },
     {
       "id": "E1_spring-integration_law_lagakos_model_s100",
@@ -10526,10 +10810,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:59:05+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:59:21+00:00",
+      "seconds": 15.4
     },
     {
       "id": "E1_spring-integration_awt_e0.4_s100",
@@ -10545,10 +10833,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:58:50+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:58:59+00:00",
+      "seconds": 9.3
     },
     {
       "id": "E1_spring-integration_nowait_s101",
@@ -10560,10 +10852,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:59:34+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:59:43+00:00",
+      "seconds": 8.8
     },
     {
       "id": "E1_spring-integration_oracle_s101",
@@ -10575,10 +10871,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:59:49+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:59:59+00:00",
+      "seconds": 10.7
     },
     {
       "id": "E1_spring-integration_wait_W90_s101",
@@ -10592,10 +10892,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T14:00:22+00:00",
+      "worker": 0
     },
     {
       "id": "E1_spring-integration_orb_W90_s101",
@@ -10609,10 +10911,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T14:00:06+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:00:15+00:00",
+      "seconds": 8.7
     },
     {
       "id": "E1_spring-integration_law_lagakos_model_s101",
@@ -10627,10 +10933,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:59:08+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:59:23+00:00",
+      "seconds": 15.4
     },
     {
       "id": "E1_spring-integration_awt_e0.4_s101",
@@ -10646,10 +10956,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:58:52+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:59:01+00:00",
+      "seconds": 8.7
     },
     {
       "id": "E1_spring-integration_nowait_s102",
@@ -10661,10 +10975,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:59:36+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:59:45+00:00",
+      "seconds": 9.2
     },
     {
       "id": "E1_spring-integration_oracle_s102",
@@ -10676,10 +10994,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:59:54+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:00:03+00:00",
+      "seconds": 9.8
     },
     {
       "id": "E1_spring-integration_wait_W90_s102",
@@ -10693,10 +11015,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T14:00:23+00:00",
+      "worker": 1
     },
     {
       "id": "E1_spring-integration_orb_W90_s102",
@@ -10710,10 +11034,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T14:00:09+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:00:18+00:00",
+      "seconds": 8.6
     },
     {
       "id": "E1_spring-integration_law_lagakos_model_s102",
@@ -10728,10 +11056,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:59:09+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:59:25+00:00",
+      "seconds": 15.7
     },
     {
       "id": "E1_spring-integration_awt_e0.4_s102",
@@ -10747,10 +11079,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:58:57+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:59:05+00:00",
+      "seconds": 8.1
     },
     {
       "id": "E1_spring-integration_nowait_s103",
@@ -10762,10 +11098,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:59:39+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:59:49+00:00",
+      "seconds": 10.0
     },
     {
       "id": "E1_spring-integration_oracle_s103",
@@ -10777,10 +11117,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:59:55+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:00:06+00:00",
+      "seconds": 10.5
     },
     {
       "id": "E1_spring-integration_wait_W90_s103",
@@ -10811,10 +11155,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T14:00:13+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:00:22+00:00",
+      "seconds": 9.3
     },
     {
       "id": "E1_spring-integration_law_lagakos_model_s103",
@@ -10829,10 +11177,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:59:21+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T13:59:36+00:00",
+      "seconds": 15.4
     },
     {
       "id": "E1_spring-integration_awt_e0.4_s103",
@@ -10848,10 +11200,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:58:59+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:59:08+00:00",
+      "seconds": 8.6
     },
     {
       "id": "E1_spring-integration_nowait_s104",
@@ -10863,10 +11219,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:59:43+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:59:54+00:00",
+      "seconds": 10.2
     },
     {
       "id": "E1_spring-integration_oracle_s104",
@@ -10878,10 +11238,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:59:59+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:00:09+00:00",
+      "seconds": 9.7
     },
     {
       "id": "E1_spring-integration_wait_W90_s104",
@@ -10912,10 +11276,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T14:00:15+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:00:23+00:00",
+      "seconds": 8.9
     },
     {
       "id": "E1_spring-integration_law_lagakos_model_s104",
@@ -10930,10 +11298,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:59:23+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T13:59:39+00:00",
+      "seconds": 15.1
     },
     {
       "id": "E1_spring-integration_awt_e0.4_s104",
@@ -10949,10 +11321,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-24T13:59:01+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T13:59:09+00:00",
+      "seconds": 8.3
     },
     {
       "id": "E1_tomcat_nowait_s100",

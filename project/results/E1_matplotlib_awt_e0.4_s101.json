@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E1",
+    "project": "matplotlib",
+    "method": "awt",
+    "variant": "awt_e0.4",
+    "seed": 101,
+    "split": "test",
+    "delay_est": "lagakos",
+    "label_noise_log": true,
+    "eps": 0.4,
+    "gmean": 0.7035247541852719,
+    "r0": 0.7334364317108905,
+    "r1": 0.6748329621380846,
+    "rdiff": 0.05860346957280582,
+    "auc": 0.7945013584307971,
+    "mcc": 0.33100287810273604,
+    "n_eval": 14980,
+    "seconds": 27.22,
+    "W_T_mean": 333.2795698924731,
+    "job_id": "E1_matplotlib_awt_e0.4_s101",
+    "written": "2026-11-24T13:52:05+00:00",
+    "cycle": 1
+  }
+]

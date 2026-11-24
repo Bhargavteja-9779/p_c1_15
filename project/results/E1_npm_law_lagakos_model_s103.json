@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E1",
+    "project": "npm",
+    "method": "law",
+    "variant": "law_lagakos_model",
+    "seed": 103,
+    "split": "test",
+    "delay_est": "lagakos",
+    "prior": "model",
+    "gmean": 0.4410017660769727,
+    "r0": 0.9279804437758555,
+    "r1": 0.20957613814756673,
+    "rdiff": 0.7184043056282888,
+    "auc": 0.7015711280606785,
+    "mcc": 0.18218694529928733,
+    "n_eval": 6592,
+    "seconds": 14.15,
+    "job_id": "E1_npm_law_lagakos_model_s103",
+    "written": "2026-11-24T13:58:01+00:00",
+    "cycle": 1
+  }
+]
