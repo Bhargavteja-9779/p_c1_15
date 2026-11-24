@@ -1,0 +1,5 @@
+# OBSERVATION: The weighting idea behind LAW already exists in advertising
+
+*Written 2026-11-24T21:35:06+00:00*
+
+Ten more papers read in full (literature/pdfs/: ES-DFM AAAI 2021, Yoshikawa & Imai 2018, DEFUSE WWW 2022, UDFLC KDD 2023, Bekker & Davis 2020 PU survey, Hernandez-Orallo et al. 2012, Ferri et al. 2019, Grzenda et al. 2020, Song/Minku/Yao EMSE 2023, Gomes et al. delayed-stream SSL survey). ES-DFM (Eqs. 13-17) and Yoshikawa & Imai (sec. 4.1-4.2) already weight not-yet-converted examples by a prior times an elapsed-time survival term - the same shape as LAW's q. What is left of LAW's novelty is the truncation-corrected (Lagakos) delay estimate and the transfer to online JIT-SDP; that is an application, not a strong contribution. None of the ten papers threatens the threshold-calibration claim (C3) or the operating-point insight (C4) above 'low'. Song, Minku & Yao (EMSE 2023, sec. 8) explicitly list the impact of waiting time on predictive performance as future work. The centre of gravity of this project is moving from LAW to C3/C4.

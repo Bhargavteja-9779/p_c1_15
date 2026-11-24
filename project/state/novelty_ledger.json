@@ -729,6 +729,86 @@
    "does": "labeling procedure where inspected predicted-defective changes are labelled early",
    "does_not": "threshold calibration; delay-distribution weighting",
    "threat": "LOW"
+  },
+  {
+   "doi": "10.5555/2503308.2503332 (JMLR 13:2813-2869)",
+   "title": "Hernandez-Orallo, Flach, Ferri (2012) A Unified View of Performance Metrics: Translating Threshold Choice into Expected Classification Loss, JMLR",
+   "opened": "full text (literature/pdfs/HernandezOrallo2012_JMLR.pdf), read by delegated reader agent 2026-11-24T21:35:06+00:00",
+   "does": "threshold choice methods (fixed, score-/rate-driven, optimal) linked to expected loss of metrics",
+   "does_not": "streams, latency, G-mean",
+   "threat": "C1 none, C3 low, C4 low"
+  },
+  {
+   "doi": "10.1007/s10618-019-00613-7",
+   "title": "Ferri, Hernandez-Orallo, Flach (2019) Setting decision thresholds when operating conditions are uncertain, DMKD 33",
+   "opened": "full text (literature/pdfs/Ferri2019_DMKD.pdf), read by delegated reader agent 2026-11-24T21:35:06+00:00",
+   "does": "threshold choice under uncertain operating conditions; train-optimal vs score/rate-driven on 26 batch datasets",
+   "does_not": "streaming, prequential scores, latency, G-mean",
+   "threat": "C1 none, C3 low (generic train-optimal threshold), C4 none"
+  },
+  {
+   "doi": "10.1007/s10994-020-05877-5",
+   "title": "Bekker & Davis (2020) Learning from positive and unlabeled data: a survey, Mach Learn 109",
+   "opened": "full text (literature/pdfs/BekkerDavis2020_PUsurvey.pdf), read by delegated reader agent 2026-11-24T21:35:06+00:00",
+   "does": "PU survey; Elkan-Noto fractional positive/negative duplication of unlabeled examples (p.740); metrics from expected hidden positives (sec 4.3)",
+   "does_not": "time/delay-dependent propensity; streams; G-mean threshold selection",
+   "threat": "C1 MEDIUM (generic posterior weighting), C3 low, C4 none"
+  },
+  {
+   "doi": "10.1007/s10618-019-00654-y",
+   "title": "Grzenda, Gomes, Bifet (2020) Delayed labelling evaluation for data streams, DMKD 34",
+   "opened": "full text (literature/pdfs/Grzenda2019_DelayedLabelling.pdf), read by delegated reader agent 2026-11-24T21:35:06+00:00",
+   "does": "continuous re-evaluation of predictions before delayed labels arrive",
+   "does_not": "re-weighting, delay estimation, threshold selection, imbalance metrics",
+   "threat": "C1 none, C3 none, C4 low"
+  },
+  {
+   "doi": "10.1007/s10664-023-10341-8",
+   "title": "Song, Minku, Yao (2023) On the validity of retrospective predictive performance evaluation procedures in JIT-SDP, EMSE 28:124",
+   "opened": "full text (literature/pdfs/SongMinkuYao2023_EMSE.pdf), read by delegated reader agent 2026-11-24T21:35:06+00:00",
+   "does": "13 projects, OOB+HT, G-mean; W in 15-90 d increases label noise; small effect on evaluation validity; future work: impact of W on predictive performance",
+   "does_not": "threshold vs ranking decomposition, latency correction, threshold choice",
+   "threat": "C1 none, C3 none, C4 low"
+  },
+  {
+   "doi": "10.1145/3485447.3511965",
+   "title": "Chen et al. (2022) DEFUSE: Asymptotically Unbiased Estimation for Delayed Feedback Modeling via Label Correction, WWW",
+   "opened": "full text (literature/pdfs/DEFUSE2022.pdf), read by delegated reader agent 2026-11-24T21:35:06+00:00",
+   "does": "fake-negative probability z(x) from auxiliary classifiers; re-weights observed negatives by z, 1-z (Eqs 16-17)",
+   "does_not": "survival/truncation estimators (z depends on features only), threshold selection, SE domain",
+   "threat": "C1 MEDIUM, C3 none, C4 none"
+  },
+  {
+   "doi": "arXiv:1802.00255",
+   "title": "Yoshikawa & Imai (2018) A Nonparametric Delayed Feedback Model for Conversion Rate Prediction",
+   "opened": "full text (literature/pdfs/Yoshikawa2018.pdf), read by delegated reader agent 2026-11-24T21:35:06+00:00",
+   "does": "kernel nonparametric hazard h(d;x); EM posterior weights for unconverted samples = prior x elapsed-time survival (sec 4.1-4.2)",
+   "does_not": "right-truncation (Lagakos) estimator, online setting, threshold selection",
+   "threat": "C1 MEDIUM, C3 none, C4 none"
+  },
+  {
+   "doi": "arXiv:2106.09170",
+   "title": "Gomes et al. (2021/2022) A Survey on Semi-Supervised Learning for Delayed Partially Labelled Data Streams",
+   "opened": "full text (literature/pdfs/SemiSupDelayedSurvey2022.pdf), read by delegated reader agent 2026-11-24T21:35:06+00:00",
+   "does": "defines delayed partially labelled streams; reviews SSL/active learning and evaluation",
+   "does_not": "delay-distribution modelling, age-based reweighting, G-mean thresholds, JIT-SDP",
+   "threat": "C1 low, C3 none, C4 none"
+  },
+  {
+   "doi": "10.1145/3580305.3599536",
+   "title": "Wang et al. (2023) Unbiased Delayed Feedback Label Correction for Conversion Rate Prediction, KDD (read arXiv 2307.12756)",
+   "opened": "full text (literature/pdfs/UDFLC2023.pdf), read by delegated reader agent 2026-11-24T21:35:06+00:00",
+   "does": "label-correction model predicting P(c=1|x,e,v=0) conditioned on elapsed time e, used as soft label (Eq 3, Thm 1)",
+   "does_not": "survival/product-limit estimator, prior x survival factorisation, threshold selection",
+   "threat": "C1 MEDIUM, C3 none, C4 none"
+  },
+  {
+   "doi": "arXiv:2012.03245 (AAAI 2021)",
+   "title": "Yang et al. (2021) ES-DFM: Capturing Delayed Feedback in CVR Prediction via Elapsed-Time Sampling, AAAI",
+   "opened": "full text (literature/pdfs/ESDFM2021.pdf), read by delegated reader agent 2026-11-24T21:35:06+00:00",
+   "does": "importance weights with prior x elapsed-time survival p(y=1)p(h>e) (Eqs 13-17) estimated by classifiers; tunes waiting time c (RQ2) with AUC/PR-AUC/NLL",
+   "does_not": "nonparametric truncation-corrected delay estimator; waiting time as operating-point effect",
+   "threat": "C1 MEDIUM, C3 none, C4 low"
   }
  ],
  "claims": [
@@ -737,10 +817,15 @@
    "closest_prior": [
     "ODaSC (Song et al. IJCNN 2022)",
     "DEFUSE/ES-DFM/FSIW (CVR delayed feedback)",
-    "Liu et al. 2024a (PU learning for JIT-SDP) - primary source UNVERIFIED/not found; treated as prior art for the generic PU framing"
+    "Liu et al. 2024a (PU learning for JIT-SDP) - primary source UNVERIFIED/not found; treated as prior art for the generic PU framing",
+    "ES-DFM (AAAI 2021) prior x elapsed-time survival weights",
+    "Yoshikawa & Imai 2018 nonparametric DFM",
+    "DEFUSE 2022",
+    "UDFLC KDD 2023",
+    "Elkan-Noto weighting (Bekker & Davis 2020 survey)"
    ],
    "exact_difference": "ODaSC derives label confidence from feature-space micro-clusters for examples already labelled clean after W days; LAW derives it from commit age via a right-truncation-corrected discovery-delay distribution combined with model risk, and also trains on commits younger than W. Difference vs CVR methods: domain transfer + truncation-aware nonparametric delay estimate (weaker).",
-   "status": "open - generic PU framing conceded to prior art (Liu 2024a, unverified); claim narrowed to age/delay-based weighting in online setting; ODaSC to be baseline in plan_v2"
+   "status": "WEAK as a standalone novelty: prior x elapsed-time-survival posterior weighting of unconverted/unlabelled examples exists in CVR delayed-feedback work (ES-DFM, Yoshikawa). Remaining difference: Lagakos right-truncation estimator + transfer to online JIT-SDP. Treat as an applied component, not the primary contribution."
   },
   {
    "claim": "C2 (Type A/C): waiting time barely denoises labels; its effect is mainly class-composition shift of recent data",
