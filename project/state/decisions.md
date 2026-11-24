@@ -61,3 +61,9 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-24T15:52:36+00:00** — H4 holds on dev -> plan_v5: freeze lawm_soft_W30; add ODaSC-style baseline (equal 4-config dev budget), lawm ablations, robustness; skip remaining cycle-1 E2 (LAW ablation)
   - Reason: LAW failed on dev and test; ablating it supports no claim; saves ~2 CPU-h for the cycle-2 confirmation
+
+- **2026-11-24T19:00:23+00:00** — Owner directive recorded in USER_DIRECTIVES.md, BOOTSTRAP_PROMPT.txt and MASTER_PROMPT addendum: iterate until top-notch, benchmark vs JKSU-CIS papers, no honest exit
+  - Reason: Owner message 2026-11-24 (paper judged not good enough for the journal)
+
+- **2026-11-24T19:00:23+00:00** — Hold the E4 test confirmation (lawm/odasc) until the next method-development round on dev is finished
+  - Reason: Running test now and again after new methods would use the test projects twice; one frozen confirmation of the final candidate set keeps the test clean

@@ -207,3 +207,7 @@ scripts/final_report.py generates from result files only: results/metrics.json (
 FINAL_REPORT.md; paper/ (manuscript, figures, tables, cover letter, highlights, response template); journal/; results/ tables/ figures/; literature/ (matrix + prior-art ledger); project code (README + fresh-clone test); HANDOFF.md current. Then print a short summary: gates, key verified numbers, total compute, locations, what the human must fill in (authors, funding, ethics, declarations).
 
 START NOW — Do not ask me anything. Begin with Section 2, then Section 3, then Phase 1. If HANDOFF.md exists, read it and continue from NEXT ACTION. Keep cycling until gates pass or a ceiling forces the honest exit.
+
+---
+## ADDENDUM 2026-11-24 (owner directive) — see project/USER_DIRECTIVES.md
+The owner instructs: keep iterating with new methods until the paper is top-notch for the target journal, benchmark the writing and results against the journal's own papers, never stop at a merely acceptable paper, never ask permission, save everything to git. Section 11.7 (honest exit) is replaced by "start the next cycle" unless continuing would require breaking Section 1.

@@ -1,29 +1,31 @@
 # HANDOFF — read this first
-*Auto-generated 2026-11-24T15:04:14+00:00 by scripts/write_handoff.py*
+*Auto-generated 2026-11-24T19:00:23+00:00 by scripts/write_handoff.py*
+
+## READ ALSO: USER_DIRECTIVES.md (owner standing orders)
 
 ## Where we are
 - **Status:** RUNNING   **Cycle:** 2 / 12   **Phase:** PHASE5_RUN   **Pivots:** 0 / 3
-- **Step:** cycle 2: E0c (lawm, dev) running; cycle-1 E3/E2 test runs finishing
+- **Step:** cycle 2: owner directive -> benchmark vs JKSU-CIS + stronger methods on dev; E4 test held
 - **Last action:** Cycle 1 closed: H1 negative on test, H3 confirmed (10/10); gates updated; novelty 14/25; plan_v4 lawm implemented + leakage test
-- **NEXT ACTION:** 1) If container restarted: pip install -r requirements.txt && python scripts/get_data.py && bash scripts/launch_runner.sh 3 && tmux new -d -s autocommit 'bash scripts/autocommit.sh'. 2) When E0c done: compare best lawm vs orb_W90 on dev (H4). 3) If H4 holds: plan_v5 (freeze, ODaSC baseline, test runs). Else: write analysis paper from cycle-1 evidence. 4) Prior-art: read dormant-defects TOSEM 2021 full text; reach >=30 opened papers.
+- **NEXT ACTION:** 1) Finish E0d (3 nova jobs) then python scripts/freeze_v5.py (dev only). 2) Build literature/jksu_benchmark.md from literature/fulltext/*.html (structure, datasets, metrics, numbers). 3) New methods on dev (plan_v6): combine feature-based denoisers, add effort-aware metrics (Recall@20%Effort, Popt, IFA), stronger learners. 4) Only then one frozen test confirmation of the final candidates.
 
 - **Selected journal:** JKSU-CIS (Springer Nature, ISSN 1319-1578, IF 6.4 2025; turnaround median 71–74 d, marginal)
 - **Topic:** Verification-latency-aware online JIT-SDP: latency-aware weighting (LAW) of provisionally-clean commits
 - **Hypothesis:** LAW beats the best tuned waiting-time baseline by >=0.02 G-mean on 10 held-out projects (Holm p<0.05)
 
 ## Running right now
-- Queue (full): {'done': 918, 'pending': 365, 'running': 3}; running jobs: ['E0c_fabric_lawm_count_W30_s0', 'E0c_fabric_lawm_count_W30_s1', 'E0c_fabric_lawm_count_W30_s2']
-- Processes: `2324 tmux new-session -d -s research_w0 python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
-2325 bash -c python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
-2327 python3 run_all.py --mode full --resume --worker 0
-2331 bash -c python3 run_all.py --mode full --resume --worker 1 >> logs/runner_w1.log 2>&1
-2333 python3 run_all.py --mode full --resume --worker 1
-2337 bash -c python3 run_all.py --mode full --resume --worker 2 >> logs/runner_w2.log 2>&1
-2340 python3 run_all.py --mode full --resume --worker 2`
-- Heartbeat age: 8s
+- Queue (full): {'done': 1023, 'pending': 191, 'skipped_plan': 117, 'running': 3}; running jobs: ['E0d_nova_odasc_W90_t0.9_s0', 'E0d_nova_odasc_W90_t0.9_s1', 'E0d_nova_odasc_W90_t0.9_s2']
+- Processes: `201 tmux new-session -d -s research_w0 python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
+202 bash -c python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
+204 python3 run_all.py --mode full --resume --worker 0
+208 bash -c python3 run_all.py --mode full --resume --worker 1 >> logs/runner_w1.log 2>&1
+210 python3 run_all.py --mode full --resume --worker 1
+214 bash -c python3 run_all.py --mode full --resume --worker 2 >> logs/runner_w2.log 2>&1
+216 python3 run_all.py --mode full --resume --worker 2`
+- Heartbeat age: 19s
 
 ## Compute
-- Cycle 2: 0.00 h / 15 h   Global: 10.22 h / 120 h (CPU-hours; machine has no GPU)
+- Cycle 2: 8.30 h / 15 h   Global: 18.53 h / 120 h (CPU-hours; machine has no GPU)
 
 ## Gate status (Section 7)
 | Gate | Status | Evidence |
@@ -41,9 +43,6 @@
 | G11 | unknown |  |
 
 ## Last 10 decisions
-- 2026-11-24T04:05:16+00:00: plan_v2: add E0b dev diagnostics (awt eps grid, decomposition with true labels); LAW kept as pre-specified but recorded as failing on dev
-- 2026-11-24T04:05:16+00:00: Liu et al. 2024a ('PU learning for JIT-SDP', EMSE 29(5):98) marked UNVERIFIED
-- 2026-11-24T04:05:16+00:00: ODaSC baseline reimplementation deferred
 - 2026-11-24T04:06:17+00:00: Reset orphaned queue record E0_sentry_law_lagakos_base_s2 to pending
 - 2026-11-24T12:46:15+00:00: Reset 96 E0b jobs to pending and relaunched workers
 - 2026-11-24T13:19:54+00:00: plan_v2 rule outcome: no candidate (law_*, awt_*) beats best dev baseline -> E1 runs on test as pre-registered NEGATIVE-RESULT confirmation
@@ -51,6 +50,9 @@
 - 2026-11-24T13:20:12+00:00: plan_v3 written and E1, E3b, E3, E2 enqueued on test projects (first test touch)
 - 2026-11-24T15:00:34+00:00: Cycle 1 outcome: H1 (LAW) and candidate awt not supported on test; H3 supported. Gates G5/G6 fail for a method claim -> Section 6.4 ladder, cycle 2 targets a feature-based dormant-bug denoiser without self-confirmation (plan_v4, dev first)
 - 2026-11-24T15:04:02+00:00: Cycle 2 started (plan_v4: lawm = mature cross-fitted dormant-bug posterior on the wait set); remaining cycle-1 E3/E2 jobs are charged to cycle 2 budget
+- 2026-11-24T15:52:36+00:00: H4 holds on dev -> plan_v5: freeze lawm_soft_W30; add ODaSC-style baseline (equal 4-config dev budget), lawm ablations, robustness; skip remaining cycle-1 E2 (LAW ablation)
+- 2026-11-24T19:00:23+00:00: Owner directive recorded in USER_DIRECTIVES.md, BOOTSTRAP_PROMPT.txt and MASTER_PROMPT addendum: iterate until top-notch, benchmark vs JKSU-CIS papers, no honest exit
+- 2026-11-24T19:00:23+00:00: Hold the E4 test confirmation (lawm/odasc) until the next method-development round on dev is finished
 
 ## Last failures (journal entries)
 - journal/ENTRIES/20261124T040516_FAILURE_the_pre_specified_law_method_loses_to_a_tuned_wait.md

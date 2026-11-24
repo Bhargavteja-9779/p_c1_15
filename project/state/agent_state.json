@@ -2,12 +2,12 @@
   "status": "RUNNING",
   "cycle": 2,
   "phase": "PHASE5_RUN",
-  "step": "cycle 2: E0c (lawm, dev) running; cycle-1 E3/E2 test runs finishing",
+  "step": "cycle 2: owner directive -> benchmark vs JKSU-CIS + stronger methods on dev; E4 test held",
   "pivots": 0,
   "topic_id": null,
   "journal": "JKSU-CIS (Springer Nature, ISSN 1319-1578, IF 6.4 2025; turnaround median 71\u201374 d, marginal)",
   "last_action": "Cycle 1 closed: H1 negative on test, H3 confirmed (10/10); gates updated; novelty 14/25; plan_v4 lawm implemented + leakage test",
-  "next_action": "1) If container restarted: pip install -r requirements.txt && python scripts/get_data.py && bash scripts/launch_runner.sh 3 && tmux new -d -s autocommit 'bash scripts/autocommit.sh'. 2) When E0c done: compare best lawm vs orb_W90 on dev (H4). 3) If H4 holds: plan_v5 (freeze, ODaSC baseline, test runs). Else: write analysis paper from cycle-1 evidence. 4) Prior-art: read dormant-defects TOSEM 2021 full text; reach >=30 opened papers.",
+  "next_action": "1) Finish E0d (3 nova jobs) then python scripts/freeze_v5.py (dev only). 2) Build literature/jksu_benchmark.md from literature/fulltext/*.html (structure, datasets, metrics, numbers). 3) New methods on dev (plan_v6): combine feature-based denoisers, add effort-aware metrics (Recall@20%Effort, Popt, IFA), stronger learners. 4) Only then one frozen test confirmation of the final candidates.",
   "config": {
     "TARGET_TIER": "Q1 journal (JCR), reputable publisher",
     "MAX_DAYS_SUBMIT_TO_ACCEPT": 72,
@@ -29,7 +29,7 @@
     ]
   },
   "seeds_confirm_fixed_at": "2026-11-24 (project start; never change)",
-  "updated": "2026-11-24T15:04:02+00:00",
+  "updated": "2026-11-24T19:00:23+00:00",
   "topic": "Verification-latency-aware online JIT-SDP: latency-aware weighting (LAW) of provisionally-clean commits",
   "hypothesis": "LAW beats the best tuned waiting-time baseline by >=0.02 G-mean on 10 held-out projects (Holm p<0.05)"
 }
