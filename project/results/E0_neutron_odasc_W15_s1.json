@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E0",
+    "project": "neutron",
+    "method": "odasc",
+    "variant": "odasc_W15",
+    "seed": 1,
+    "split": "dev",
+    "W": 15,
+    "odasc_delta": 0.9,
+    "gmean": 0.7547403805982372,
+    "r0": 0.8597655929841816,
+    "r1": 0.6625445897740785,
+    "rdiff": 0.19722100321010316,
+    "auc": 0.853316179128414,
+    "mcc": 0.5112226826546914,
+    "n_eval": 16406,
+    "seconds": 50.17,
+    "job_id": "E0_neutron_odasc_W15_s1",
+    "written": "2026-11-24T23:14:43+00:00",
+    "cycle": 1
+  }
+]

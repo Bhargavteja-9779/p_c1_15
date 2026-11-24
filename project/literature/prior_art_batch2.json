@@ -1,0 +1,546 @@
+[
+ {
+  "doi": "10.1007/s10664-023-10341-8",
+  "title": "On the validity of retrospective predictive performance evaluation procedures in just-in-time software defect prediction",
+  "authors_first": "Liyan Song",
+  "year": 2023,
+  "venue": "Empirical Software Engineering",
+  "opened": "abstract only",
+  "does": "Empirically studies how the choice of waiting time (and the resulting one-sided label noise in clean labels) affects validity of retrospective JIT-SDP evaluation on 13 GitHub projects; finds waiting time has little impact on retrospective validity.",
+  "does_not": "Proposes no learning method; does not model the probability that a provisionally-clean commit is defective as a function of age; no delay-distribution estimation (Springer PDF blocked by bot challenge, so only abstract read).",
+  "threat": "LOW",
+  "queries_used": [
+   "waiting time verification latency just-in-time defect prediction",
+   "Minku just-in-time defect prediction label noise waiting time"
+  ]
+ },
+ {
+  "doi": "10.1145/3611643.3616307",
+  "title": "A Practical Human Labeling Method for Online Just-in-Time Software Defect Prediction (HumLa / ECo-HumLa)",
+  "authors_first": "Liyan Song",
+  "year": 2023,
+  "venue": "ESEC/FSE 2023",
+  "opened": "full text",
+  "does": "Adds immediate human labeling of changes predicted defect-inducing on top of the waiting-time method; ECo-HumLa targets inspection at most confidently-predicted changes; 14 GitHub projects; shows waiting-time-only labeling underestimates performance.",
+  "does_not": "Keeps the hard waiting-time rule for clean labels; no age-dependent soft relabelling or weighting of provisionally-clean commits; no discovery-delay distribution or truncation correction; relies on human effort rather than statistical correction.",
+  "threat": "LOW",
+  "queries_used": [
+   "waiting time verification latency just-in-time defect prediction",
+   "one-sided label noise verification latency software defect"
+  ]
+ },
+ {
+  "doi": "10.1016/j.scico.2025.103296",
+  "url": "https://arxiv.org/abs/2308.13707",
+  "title": "Human-in-the-loop online just-in-time software defect prediction: What have we achieved and what do we still miss?",
+  "authors_first": "Xutong Liu",
+  "year": 2025,
+  "venue": "Science of Computer Programming",
+  "opened": "full text",
+  "does": "Identifies observed-label noise from waiting-time + BFC labelling and verification latency in O-JIT-SDP; proposes human-in-the-loop SQA feedback to improve label reliability and a k-fold distributed bootstrap evaluation framework.",
+  "does_not": "No probabilistic model of residual defect probability vs commit age; no delay-distribution estimation; correction is via human feedback, not re-weighting.",
+  "threat": "LOW",
+  "queries_used": [
+   "waiting time verification latency just-in-time defect prediction",
+   "probability commit defective given elapsed time since commit"
+  ]
+ },
+ {
+  "doi": "10.1007/s11219-026-09796-x",
+  "url": "https://www.researchsquare.com/article/rs-9846265/latest.pdf",
+  "title": "Quantifying SZZ-induced evaluation bias in just-in-time defect prediction",
+  "authors_first": "Peter Bludau",
+  "year": 2026,
+  "venue": "Software Quality Journal",
+  "opened": "full text",
+  "does": "Manually validated ground truth for 420 commits in 6 projects; PR-SZZ mislabels ~12% of commits (mostly false positives); recall drops 0.72->0.64 and precision 0.27->0.19 against manual truth; stratified weighted evaluation protocol.",
+  "does_not": "Focuses on SZZ false positives, not time-dependent false negatives from undiscovered defects; offline, no online learning, no age-dependent weighting or delay distribution. (Read Research Square preprint version.)",
+  "threat": "LOW",
+  "queries_used": [
+   "waiting time verification latency just-in-time defect prediction",
+   "impact of mislabeled changes by SZZ just-in-time defect prediction"
+  ]
+ },
+ {
+  "doi": "10.1145/3637226",
+  "title": "Estimating Uncertainty in Labeled Changes by SZZ Tools on Just-In-Time Defect Prediction (CLI)",
+  "authors_first": "Shikai Guo",
+  "year": 2024,
+  "venue": "ACM TOSEM",
+  "opened": "abstract only",
+  "does": "Confident-learning + imbalance-aware probability model to detect and remove SZZ-noisy labels in offline JIT-SDP (10 Apache projects).",
+  "does_not": "Noise model is static (joint noisy/true label distribution), not a function of commit age or discovery delay; offline; removes rather than re-weights; no truncation-corrected estimate. (ACM PDF 403.)",
+  "threat": "LOW",
+  "queries_used": [
+   "one-sided label noise verification latency software defect",
+   "age of commit probability defect-inducing clean label"
+  ]
+ },
+ {
+  "doi": "10.1145/3779653",
+  "title": "Just-in-Time Quality Assurance with Assistance of Automated Defect Prediction and Code Testing",
+  "authors_first": "Dawei Tian",
+  "year": 2026,
+  "venue": "ACM TOSEM",
+  "opened": "abstract only",
+  "does": "Couples JIT-SDP with testing: test annotations on recent changes plus waiting time update the predictor online; explicitly notes one-sided label noise in test-annotated clean samples and verification latency; RL-based dynamic model selection.",
+  "does_not": "Per abstract, uses testing feedback (extra information source) rather than a statistical age-dependent P(undiscovered defect | age); no mention of a discovery-delay distribution or right-truncation correction. Full text not available (no OA copy) - should be checked if accessible.",
+  "threat": "MEDIUM",
+  "queries_used": [
+   "waiting time verification latency just-in-time defect prediction",
+   "one-sided label noise verification latency software defect"
+  ]
+ },
+ {
+  "doi": "10.1007/s10664-023-10335-6",
+  "title": "An investigation of online and offline learning models for online Just-in-Time Software Defect Prediction (BORB)",
+  "authors_first": "George Gomes Cabral",
+  "year": 2023,
+  "venue": "Empirical Software Engineering",
+  "opened": "abstract only",
+  "does": "Batch Oversampling Rate Boosting lets offline base learners operate in online JIT-SDP under the waiting-time protocol; within- and cross-project.",
+  "does_not": "Uses hard waiting-time labels; no correction for provisional clean labels by age.",
+  "threat": "LOW",
+  "queries_used": [
+   "waiting time verification latency just-in-time defect prediction"
+  ]
+ },
+ {
+  "doi": "10.5281/zenodo.24371575",
+  "title": "realistic-jit-sdp: Replication package for 'Does Just-in-Time Defect Prediction Survive Realistic Evaluation? Time Order, Label Latency, and Review Effort'",
+  "authors_first": "Farida Hisham Ghariani",
+  "year": 2026,
+  "venue": "Zenodo (replication package)",
+  "opened": "abstract only",
+  "does": "Evaluation protocols including chronological + label-latency gap (30/90/180 days) on ApacheJIT and Kamei datasets.",
+  "does_not": "Evaluation-only gap; no modelling of residual defect probability by age; no method. Only the Zenodo record description was read; the paper itself was not located.",
+  "threat": "LOW",
+  "queries_used": [
+   "waiting time verification latency just-in-time defect prediction"
+  ]
+ },
+ {
+  "doi": "10.1109/msr.2019.00019",
+  "title": "Snoring: A Noise in Defect Prediction Datasets",
+  "authors_first": "Aalok Ahluwalia",
+  "year": 2019,
+  "venue": "MSR 2019",
+  "opened": "abstract only",
+  "does": "Defines 'sleeping defects' and 'snoring' classes (labelled defect-free until a later discovery); measures magnitude on 282 releases of 6 Apache projects: most defects sleep >20% of releases.",
+  "does_not": "Release/class-level, not commit-level JIT; descriptive only; no estimator of P(defect | age) nor weighting.",
+  "threat": "LOW",
+  "queries_used": [
+   "snoring noise defect prediction datasets"
+  ]
+ },
+ {
+  "doi": "10.1145/3467895",
+  "url": "https://arxiv.org/abs/2105.12372",
+  "title": "The Impact of Dormant Defects on Defect Prediction: A Study of 19 Apache Projects",
+  "authors_first": "Davide Falessi",
+  "year": 2021,
+  "venue": "ACM TOSEM",
+  "opened": "full text",
+  "does": "Shows dormant defects reduce recall; proposes a countermeasure of dropping from training the classes labelled non-defective in the last release(s) - an age-based hard filter for provisionally clean data (600 releases, 19 projects, 15 classifiers).",
+  "does_not": "Hard release-level drop rather than continuous age-dependent probability; no estimated discovery-delay distribution; class-level release-based SDP, not online commit-level JIT-SDP; no prior/score combination.",
+  "threat": "MEDIUM",
+  "queries_used": [
+   "age of commit probability defect-inducing clean label",
+   "snoring noise defect prediction datasets"
+  ]
+ },
+ {
+  "doi": "10.1145/2597073.2597108",
+  "title": "An empirical study of dormant bugs",
+  "authors_first": "Tse-Hsun Peter Chen",
+  "year": 2014,
+  "venue": "MSR 2014",
+  "opened": "abstract only",
+  "does": "20 Apache systems: 33% of bugs introduced in a version are reported only in later versions; dormant bugs fixed faster by more experienced developers.",
+  "does_not": "Empirical characterization only; no prediction method, no delay-distribution model used for relabelling.",
+  "threat": "LOW",
+  "queries_used": [
+   "empirical study of dormant bugs"
+  ]
+ },
+ {
+  "doi": "10.1109/icse43902.2021.00049",
+  "url": "https://arxiv.org/abs/2102.03300",
+  "title": "Evaluating SZZ Implementations Through a Developer-Informed Oracle",
+  "authors_first": "Giovanni Rosa",
+  "year": 2021,
+  "venue": "ICSE 2021",
+  "opened": "full text",
+  "does": "Builds developer-informed oracle (fix commits explicitly referencing the inducing commit) and evaluates SZZ variants' precision/recall.",
+  "does_not": "About SZZ accuracy, not about the time until a defect is revealed or about learning under latency.",
+  "threat": "LOW",
+  "queries_used": [
+   "evaluating SZZ implementations developer-informed oracle"
+  ]
+ },
+ {
+  "doi": "10.1109/tse.2019.2929761",
+  "title": "The Impact of Mislabeled Changes by SZZ on Just-in-Time Defect Prediction",
+  "authors_first": "Yuanrui Fan",
+  "year": 2019,
+  "venue": "IEEE TSE",
+  "opened": "abstract only",
+  "does": "Compares JIT-SDP models trained with B-SZZ, AG-SZZ, MA-SZZ, RA-SZZ labels on 126,526 changes; AG-SZZ noise costs 1-5% performance and affects effort-aware metrics.",
+  "does_not": "SZZ-variant noise, static and offline; no verification latency or age modelling.",
+  "threat": "LOW",
+  "queries_used": [
+   "impact of mislabeled changes by SZZ just-in-time defect prediction"
+  ]
+ },
+ {
+  "doi": "10.1007/s10664-021-10092-4",
+  "title": "Problems with SZZ and features: An empirical study of the state of practice of defect prediction data collection",
+  "authors_first": "Steffen Herbold",
+  "year": 2022,
+  "venue": "Empirical Software Engineering",
+  "opened": "abstract only",
+  "does": "Manual validation over 398 releases of 38 Apache projects: only half of SZZ bug-fixing commits are real; with a 6-month window, one wrong defective file per correct one and two missed defective files.",
+  "does_not": "Data-quality audit; no correction method; no time-dependent model of undiscovered defects.",
+  "threat": "LOW",
+  "queries_used": [
+   "time-aware label correction defect prediction",
+   "impact of mislabeled changes by SZZ just-in-time defect prediction"
+  ]
+ },
+ {
+  "doi": "10.1145/3433928",
+  "url": "https://arxiv.org/abs/2011.05531",
+  "title": "Leveraging the Defects Life Cycle to Label Affected Versions and Defective Classes (Proportion method)",
+  "authors_first": "Bailey Vandehei",
+  "year": 2021,
+  "venue": "ACM TOSEM",
+  "opened": "full text",
+  "does": "Assumes a stable defect life cycle (proportion of versions between introduction, discovery and fix) to infer affected versions; more accurate than three SZZ implementations.",
+  "does_not": "Uses life-cycle regularity to recover introduction version of already-discovered defects, not to estimate how many recent clean commits hide undiscovered defects; no truncation correction; not online JIT.",
+  "threat": "LOW",
+  "queries_used": [
+   "age of commit probability defect-inducing clean label"
+  ]
+ },
+ {
+  "doi": "10.48550/arxiv.2609.06272",
+  "title": "KG-Commit: A Dynamic Knowledge Graph for Online Just-in-Time Software Defect Prediction",
+  "authors_first": "Mohsen Hesamolhokama",
+  "year": 2026,
+  "venue": "arXiv",
+  "opened": "full text",
+  "does": "Incremental knowledge graph of repository context for online JIT-SDP on 11 Apache projects; acknowledges verification latency in its related work/protocol.",
+  "does_not": "No treatment of provisional clean labels beyond the standard protocol; no age-dependent weighting.",
+  "threat": "LOW",
+  "queries_used": [
+   "delayed feedback just-in-time defect prediction"
+  ]
+ },
+ {
+  "doi": "10.48550/arxiv.2512.00231",
+  "title": "CodeFlowLM: Incremental Just-In-Time Defect Prediction with Pretrained Language Models",
+  "authors_first": "Monique Louise Monteiro",
+  "year": 2025,
+  "venue": "arXiv",
+  "opened": "full text",
+  "does": "Continual fine-tuning of PLMs for online JIT-SDP with verification latency (waiting-time protocol), vs BORB.",
+  "does_not": "Latency handled only by the standard waiting-time protocol; no label-probability model.",
+  "threat": "LOW",
+  "queries_used": [
+   "waiting time verification latency just-in-time defect prediction"
+  ]
+ },
+ {
+  "doi": "10.1007/s10664-024-10514-z",
+  "url": "https://arxiv.org/abs/2210.02435",
+  "title": "IRJIT: A simple, online, information retrieval approach for just-in-time software defect prediction",
+  "authors_first": "Hareem Sahar",
+  "year": 2024,
+  "venue": "Empirical Software Engineering",
+  "opened": "full text",
+  "does": "Online IR-based JIT-SDP; discusses verification latency and the waiting-time labelling (commits found defective after waiting time).",
+  "does_not": "No probabilistic correction of provisionally clean labels.",
+  "threat": "LOW",
+  "queries_used": [
+   "waiting time verification latency just-in-time defect prediction"
+  ]
+ },
+ {
+  "doi": "10.1109/tse.2022.3150153",
+  "title": "Cross-Project Online Just-In-Time Software Defect Prediction",
+  "authors_first": "Sadia Tabassum",
+  "year": 2022,
+  "venue": "IEEE TSE",
+  "opened": "abstract only",
+  "does": "Three online cross-project JIT-SDP approaches (CP+WP data) under realistic online setting with 9 proprietary + 10 OSS projects.",
+  "does_not": "Addresses data scarcity, not label latency correction; waiting-time labels kept.",
+  "threat": "LOW",
+  "queries_used": [
+   "cross-project online just-in-time software defect prediction Tabassum",
+   "investigation of cross-project learning in online just-in-time software defect prediction"
+  ]
+ },
+ {
+  "doi": "10.1145/2623330.2623634",
+  "title": "Modeling delayed feedback in display advertising (DFM)",
+  "authors_first": "Olivier Chapelle",
+  "year": 2014,
+  "venue": "KDD 2014",
+  "opened": "abstract only",
+  "does": "Joint model of conversion probability and (exponential) conversion delay fitted by EM; a not-yet-converted click is down-weighted according to elapsed time vs predicted delay, i.e. P(will convert | not converted by e) = p*S(e) / (1 - p + p*S(e)). (Model form confirmed via descriptions in FSIW/ES-DFM/Yasui-Kato full texts.)",
+  "does_not": "Ad CVR, not JIT-SDP; delay distribution is parametric and estimated from right-CENSORED data where every click (the full at-risk cohort) is observed - not the right-TRUNCATED situation of JIT-SDP where defective commits are only known once discovered; no reverse-time product-limit estimator; no software prior.",
+  "threat": "HIGH",
+  "queries_used": [
+   "modeling delayed feedback in display advertising Chapelle"
+  ]
+ },
+ {
+  "doi": "10.1145/3366423.3380032",
+  "url": "https://arxiv.org/abs/2002.02068",
+  "title": "A Feedback Shift Correction in Predicting Conversion Rates under Delayed Feedback (FSIW)",
+  "authors_first": "Shota Yasui",
+  "year": 2020,
+  "venue": "WWW 2020",
+  "opened": "full text",
+  "does": "Importance-weighting for feedback shift; estimates P(S=1|C=1,x,elapsed) and true-negative probabilities with auxiliary classifiers using elapsed time as feature; proves consistency.",
+  "does_not": "Requires a labelled reference window and auxiliary classifiers; CVR domain; no right-truncation estimator; no JIT-SDP.",
+  "threat": "MEDIUM",
+  "queries_used": [
+   "ti:\"delayed feedback\" AND ti:conversion"
+  ]
+ },
+ {
+  "doi": "10.1609/aaai.v35i5.16587",
+  "url": "https://arxiv.org/abs/2012.03245",
+  "title": "Capturing Delayed Feedback in Conversion Rate Prediction via Elapsed-Time Sampling (ES-DFM)",
+  "authors_first": "Jia-Qi Yang",
+  "year": 2021,
+  "venue": "AAAI 2021",
+  "opened": "full text",
+  "does": "Models elapsed time as a distribution; importance weights per instance with fake-negative probability conditioned on elapsed time; streaming CVR.",
+  "does_not": "CVR; fake-negative probability learned by a neural classifier rather than from a truncation-corrected nonparametric delay estimate; no SE application.",
+  "threat": "MEDIUM",
+  "queries_used": [
+   "ti:\"delayed feedback\" AND ti:conversion"
+  ]
+ },
+ {
+  "doi": "10.1145/3485447.3511965",
+  "url": "https://arxiv.org/abs/2202.06472",
+  "title": "Asymptotically Unbiased Estimation for Delayed Feedback Modeling via Label Correction (DEFUSE) - full text",
+  "authors_first": "Yu Chen",
+  "year": 2022,
+  "venue": "WWW 2022",
+  "opened": "full text",
+  "does": "Two-step: infers probability that an observed negative is a fake negative, then corrects importance weights for four sample types; bi-distribution modelling of immediate vs delayed positives.",
+  "does_not": "CVR; fake-negative probability learned by a model; no reverse-time/right-truncation estimator; no JIT-SDP. (Upgrade of ledger entry from abstract to full text.)",
+  "threat": "MEDIUM",
+  "queries_used": [
+   "ti:\"delayed feedback\" AND abs:\"fake negative\""
+  ]
+ },
+ {
+  "doi": "10.1145/3447548.3467086",
+  "url": "https://arxiv.org/abs/2104.14121",
+  "title": "Real Negatives Matter: Continuous Training with Real Negatives for Delayed Feedback Modeling (DEFER)",
+  "authors_first": "Siyu Gu",
+  "year": 2021,
+  "venue": "KDD 2021",
+  "opened": "full text",
+  "does": "Ingests duplicated real negatives after the attribution window plus importance sampling to keep observed distribution equal to true distribution.",
+  "does_not": "CVR; relies on eventually-certain negatives after a fixed window (like a waiting time) rather than an age-dependent probability from an estimated delay law.",
+  "threat": "LOW",
+  "queries_used": [
+   "ti:\"real negatives matter\""
+  ]
+ },
+ {
+  "doi": "10.1145/3580305.3599536",
+  "url": "https://arxiv.org/abs/2307.12756",
+  "title": "Unbiased Delayed Feedback Label Correction for Conversion Rate Prediction (ULC)",
+  "authors_first": "Yifan Wang",
+  "year": 2023,
+  "venue": "KDD 2023",
+  "opened": "full text",
+  "does": "Auxiliary model corrects labels of observed negatives; proves label-corrected loss is unbiased; counterfactual labelling to build training data.",
+  "does_not": "CVR; learned correction model, no explicit delay-distribution / truncation estimator; no JIT-SDP.",
+  "threat": "MEDIUM",
+  "queries_used": [
+   "ti:\"delayed feedback\" AND ti:conversion"
+  ]
+ },
+ {
+  "doi": "10.1145/3534678.3539372",
+  "url": "https://arxiv.org/abs/2009.13092",
+  "title": "Learning Classifiers under Delayed Feedback with a Time Window Assumption",
+  "authors_first": "Shota Yasui",
+  "year": 2022,
+  "venue": "KDD 2022",
+  "opened": "full text",
+  "does": "Unbiased convex empirical risk using all samples under a time-window assumption (samples older than the window are correctly labelled); hazard-function view of DFM.",
+  "does_not": "Window assumption equals a hard waiting time; no nonparametric truncation-corrected delay estimate; CVR, not JIT-SDP.",
+  "threat": "MEDIUM",
+  "queries_used": [
+   "ti:\"time window assumption\""
+  ]
+ },
+ {
+  "doi": "10.1145/3404835.3463045",
+  "url": "https://arxiv.org/abs/2108.06167",
+  "title": "Follow the Prophet: Accurate Online Conversion Rate Prediction in the Face of Delayed Feedback (FTP)",
+  "authors_first": "Haoming Li",
+  "year": 2021,
+  "venue": "SIGIR 2021",
+  "opened": "full text",
+  "does": "Multi-task models for different feedback windows aggregated by a learned policy to imitate a 'prophet' with instant labels.",
+  "does_not": "No explicit delay-distribution weighting; CVR domain.",
+  "threat": "LOW",
+  "queries_used": [
+   "ti:\"delayed feedback\" AND ti:conversion"
+  ]
+ },
+ {
+  "doi": "10.1145/3298689.3347002",
+  "url": "https://arxiv.org/abs/1907.06558",
+  "title": "Addressing Delayed Feedback for Continuous Training with Neural Networks in CTR prediction",
+  "authors_first": "Sofia Ira Ktena",
+  "year": 2019,
+  "venue": "RecSys 2019",
+  "opened": "full text",
+  "does": "Fake-negative weighted / fake-negative calibration losses for continuous training where every example is ingested as negative first and duplicated as positive later.",
+  "does_not": "No age-dependent delay modelling; CTR domain.",
+  "threat": "LOW",
+  "queries_used": [
+   "importance weighting delayed feedback fake negatives (prior ledger)",
+   "ti:\"delayed feedback\" AND ti:conversion"
+  ]
+ },
+ {
+  "doi": "10.1145/1401890.1401920",
+  "title": "Learning classifiers from only positive and unlabeled data",
+  "authors_first": "Charles Elkan",
+  "year": 2008,
+  "venue": "KDD 2008",
+  "opened": "abstract only",
+  "does": "Under SCAR, P(labeled|x)=c*P(y=1|x); constant label frequency c lets one recover calibrated posteriors and weight unlabeled examples.",
+  "does_not": "Constant (age-independent) label frequency; no time dimension; LAW's c(age)=F(age) is a time-varying generalisation.",
+  "threat": "MEDIUM",
+  "queries_used": [
+   "learning classifiers from only positive and unlabeled data Elkan Noto"
+  ]
+ },
+ {
+  "url": "https://arxiv.org/abs/1808.08755",
+  "title": "Learning from Positive and Unlabeled Data under the Selected At Random Assumption (SAR-EM)",
+  "authors_first": "Jessa Bekker",
+  "year": 2018,
+  "venue": "ECML-PKDD 2019 (arXiv 1808.08755)",
+  "opened": "full text",
+  "does": "Propensity e(x) depends on attributes (SAR); EM jointly learns classifier and propensity model.",
+  "does_not": "Propensity learned jointly via EM from features, not given in closed form by a truncation-corrected delay CDF of an age attribute; no temporal/online JIT-SDP setting.",
+  "threat": "MEDIUM",
+  "queries_used": [
+   "selected at random positive unlabeled learning propensity score (prior ledger)",
+   "ti:\"positive and unlabeled\" AND abs:propensity AND abs:\"selected at random\""
+  ]
+ },
+ {
+  "doi": "10.1007/s10994-020-05877-5",
+  "url": "https://arxiv.org/abs/1811.04820",
+  "title": "Learning From Positive and Unlabeled Data: A Survey",
+  "authors_first": "Jessa Bekker",
+  "year": 2020,
+  "venue": "Machine Learning",
+  "opened": "full text",
+  "does": "Survey of PU assumptions (SCAR, SAR), class-prior estimation, and methods.",
+  "does_not": "No JIT-SDP; no time-since-labelling propensity.",
+  "threat": "LOW",
+  "queries_used": [
+   "positive unlabeled learning label frequency propensity time since labeling (prior ledger)"
+  ]
+ },
+ {
+  "url": "https://arxiv.org/abs/1703.00593",
+  "title": "Positive-Unlabeled Learning with Non-Negative Risk Estimator (nnPU)",
+  "authors_first": "Ryuichi Kiryo",
+  "year": 2017,
+  "venue": "NeurIPS 2017",
+  "opened": "full text",
+  "does": "Non-negative correction of unbiased PU risk to stop flexible models overfitting; needs known class prior.",
+  "does_not": "Constant class prior / SCAR; no age-dependent labelling.",
+  "threat": "LOW",
+  "queries_used": [
+   "ti:\"non-negative risk estimator\" AND ti:\"positive-unlabeled\""
+  ]
+ },
+ {
+  "doi": "10.48550/arxiv.2609.19370",
+  "title": "When are time-to-event models a waste of time? Bridging mixture cure models and positive-unlabeled learning for binary classification under right-censoring",
+  "authors_first": "Qin Weng",
+  "year": 2026,
+  "venue": "arXiv (stat.ME)",
+  "opened": "full text",
+  "does": "Shows mixture cure models and PU learning share a likelihood; an MCM is a PU model whose labelling propensity is parameterised by a time-to-event distribution (propensity = P(event before censoring | susceptible)); clinical (autism) application.",
+  "does_not": "Right-censoring (cohort fully observed), not right-truncation; clinical domain, offline; no online JIT-SDP, no reverse-time product-limit estimator, no previous-model-score prior. Conceptually the closest formal analogue to LAW's weight outside SE.",
+  "threat": "MEDIUM",
+  "queries_used": [
+   "positive unlabeled learning label frequency propensity time since labeling (prior ledger hit W7213608649)"
+  ]
+ },
+ {
+  "doi": "10.1093/biomet/75.3.515",
+  "title": "Nonparametric Analysis of Truncated Survival Data, with Application to AIDS",
+  "authors_first": "Stephen W. Lagakos",
+  "year": 1988,
+  "venue": "Biometrika",
+  "opened": "abstract only",
+  "does": "Reverse-time transformation turns right-truncated induction-time data into left-truncated data; nonparametric (product-limit) estimation of identifiable part of the distribution.",
+  "does_not": "Statistical estimator only; no classifier or label weighting; this is the estimator LAW borrows (cite as the method source, not a threat).",
+  "threat": "LOW",
+  "queries_used": [
+   "Lagakos Barker DeGruttola nonparametric analysis of truncated survival data AIDS"
+  ]
+ },
+ {
+  "doi": "10.1080/01621459.1989.10478780",
+  "title": "Inference Based on Retrospective Ascertainment: An Analysis of the Data on Transfusion-Related AIDS",
+  "authors_first": "John D. Kalbfleisch",
+  "year": 1989,
+  "venue": "JASA",
+  "opened": "abstract only",
+  "does": "Likelihood for retrospectively ascertained (right-truncated) delay data with initiating events as nonhomogeneous Poisson process; parametric and nonparametric estimation.",
+  "does_not": "No ML/defect application; methodological source for truncation-aware delay estimation.",
+  "threat": "LOW",
+  "queries_used": [
+   "Kalbfleisch Lawless inference based on retrospective ascertainment transfusion AIDS"
+  ]
+ },
+ {
+  "doi": "10.1111/biom.12194",
+  "title": "Bayesian nowcasting during the STEC O104:H4 outbreak in Germany, 2011",
+  "authors_first": "Michael Höhle",
+  "year": 2014,
+  "venue": "Biometrics",
+  "opened": "abstract only",
+  "does": "Nowcasting occurred-but-not-yet-reported counts with right-truncated reporting-delay distribution (generalized Dirichlet conjugate; hierarchical discrete-time survival model).",
+  "does_not": "Aggregate count correction, not per-instance label weighting for a classifier; epidemiology. Useful analogy (nowcasting = 'occurred-but-not-yet-discovered defects').",
+  "threat": "LOW",
+  "queries_used": [
+   "Bayesian nowcasting reporting delays outbreak"
+  ]
+ },
+ {
+  "doi": "10.1080/02664763.2024.2319222",
+  "title": "Anticipative Bayesian classification for data streams with verification latency (ABClass)",
+  "authors_first": "Vera Hofer",
+  "year": 2024,
+  "venue": "Journal of Applied Statistics",
+  "opened": "abstract only",
+  "does": "Stream classification under verification latency by extrapolating class-conditional density drift without recent labels.",
+  "does_not": "Assumes labels missing (not one-sided provisional negatives); no delay-distribution weighting.",
+  "threat": "LOW",
+  "queries_used": [
+   "verification latency label confidence data stream class imbalance"
+  ]
+ }
+]
