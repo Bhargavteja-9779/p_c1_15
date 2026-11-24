@@ -17,7 +17,7 @@ def jit_run(params, ctx):
     df = load_project(params["project"])
     if params.get("quick"):
         df = df.iloc[:3000]
-    kw = {k: params[k] for k in ["W", "delay_est", "prior", "delay_scale", "label_noise_log", "eps", "level"] if k in params}
+    kw = {k: params[k] for k in ["W", "delay_est", "prior", "delay_scale", "label_noise_log", "eps", "level", "mode", "mature_age"] if k in params}
     ctx.heartbeat(f"{params['project']} {params['method']}")
     out = simulate(df, params["method"], seed=params["seed"],
                    eval_end_gap_days=0 if params.get("quick") else 365, **kw)
@@ -26,7 +26,7 @@ def jit_run(params, ctx):
            "split": params.get("split"), **{k: v for k, v in kw.items()}, **out["metrics"]}
     if "diag" in out:
         d = out["diag"]
-        for key in ("frac_false_clean", "mean_q_true_bug", "mean_q_clean", "W_T"):
+        for key in ("frac_false_clean", "mean_q_true_bug", "mean_q_clean", "W_T", "auc_dormant"):
             vals = [x[key] for x in d if key in x and x[key] == x[key]]
             if vals: row[key + "_mean"] = float(np.mean(vals))
         (ctx.res_dir / "diag").mkdir(exist_ok=True)

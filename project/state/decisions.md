@@ -55,3 +55,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-24T15:00:34+00:00** — Cycle 1 outcome: H1 (LAW) and candidate awt not supported on test; H3 supported. Gates G5/G6 fail for a method claim -> Section 6.4 ladder, cycle 2 targets a feature-based dormant-bug denoiser without self-confirmation (plan_v4, dev first)
   - Reason: results/statistics.json; journal RESULT entries
+
+- **2026-11-24T15:04:02+00:00** — Cycle 2 started (plan_v4: lawm = mature cross-fitted dormant-bug posterior on the wait set); remaining cycle-1 E3/E2 jobs are charged to cycle 2 budget
+  - Reason: Section 6.4 ladder rung 3; budget accounting kept simple and conservative

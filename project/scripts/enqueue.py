@@ -39,6 +39,13 @@ def specs(exp):
                     J.append(dict(method="decomp", W=W, level=lv, variant=f"decomp_L{lv}_W{W}", project=p, seed=s))
         for j in J: j.update(experiment="E0b", split="dev")
         return J, 11
+    if exp == "E0c":   # plan_v4 (cycle 2) dev
+        for p, s in itertools.product(DEV, SE):
+            for mode in ["soft", "count"]:
+                for W in [30, 90]:
+                    J.append(dict(method="lawm", W=W, mode=mode, delay_est="lagakos", label_noise_log=True, variant=f"lawm_{mode}_W{W}", project=p, seed=s))
+        for j in J: j.update(experiment="E0c", split="dev")
+        return J, 12
     if exp == "E3b":   # plan_v3 decomposition on test projects (pre-registered)
         for p, s in itertools.product(TEST, SC):
             for W in [30, 90]:

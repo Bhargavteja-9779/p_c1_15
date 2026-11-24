@@ -27,3 +27,5 @@ timestamp,cycle,variant_id,description,data_split_used,metric,value,outcome,note
 2026-11-24T13:19:55+00:00,1,law_naive_model,E0 dev tuning,dev projects x seeds 0-2,gmean_mean_dev,0.58,not selected,
 2026-11-24T13:19:55+00:00,1,wait_W15,E0 dev tuning,dev projects x seeds 0-2,gmean_mean_dev,0.5457,not selected,
 2026-11-24T13:19:55+00:00,1,nowait,E0 dev tuning,dev projects x seeds 0-2,gmean_mean_dev,0.3855,not selected,
+2026-11-24T15:04:02+00:00,2,lawm_soft_W30 (sanity),exploratory code check,dev: fabric seed 0,gmean,0.689,exploratory,wait_W30 0.657 same run; dormant AUC 0.756
+2026-11-24T15:04:02+00:00,2,lawm_count_W30 (sanity),exploratory code check,dev: fabric seed 0,gmean,0.663,exploratory,

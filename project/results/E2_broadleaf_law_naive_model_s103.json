@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E2",
+    "project": "broadleaf",
+    "method": "law",
+    "variant": "law_naive_model",
+    "seed": 103,
+    "split": "test",
+    "delay_est": "naive",
+    "prior": "model",
+    "gmean": 0.6229050247536381,
+    "r0": 0.8941952242981317,
+    "r1": 0.4339216530348687,
+    "rdiff": 0.460273571263263,
+    "auc": 0.7855966005971293,
+    "mcc": 0.3434779040460429,
+    "n_eval": 12332,
+    "seconds": 40.91,
+    "job_id": "E2_broadleaf_law_naive_model_s103",
+    "written": "2026-11-24T15:03:12+00:00",
+    "cycle": 1
+  }
+]

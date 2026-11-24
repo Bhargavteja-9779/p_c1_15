@@ -74,7 +74,7 @@ def fit_lgb(X, y, w, seed, class_mult=(1.0, 1.0)):
 
 def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="lagakos",
              prior="model", orb_params=None, eval_end_gap_days=365, delay_scale=1.0, return_preds=False,
-             label_noise_log=False, eps=0.3, level=1):
+             label_noise_log=False, eps=0.3, level=1, mode="soft", mature_age=365):
     """df: one project's commits sorted by time (columns FEATS, t, y, t_found).
     delay_scale>1 stretches discovery delays (robustness: slower bug discovery)."""
     t0 = time.time()
@@ -114,6 +114,46 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
             keep = found | (age >= W_T)
             Xi, yi, wi = X[tr][keep], found[keep].astype(int), np.ones(keep.sum())
             if label_noise_log: diag.append(dict(T=T, W_T=float(W_T)))
+        elif method == "lawm":
+            # plan_v4 (cycle 2): wait(W) set, but OLD provisional negatives (age >= W, not found) get a
+            # dormant-bug posterior q = p S(a) / (1 - p + p S(a)); p comes from scorers trained ONLY on
+            # mature commits (age >= mature_age, observed labels) with 2-fold cross-fitting, never from the
+            # online model -> no self-confirmation loop. mode soft: positive copy q / negative copy 1-q;
+            # mode count: drop the round(sum q) highest-p old provisional negatives.
+            pos_idx = tr[found]
+            d_obs = (tf[pos_idx] - t[pos_idx]) / DAY; tau = (T - t[pos_idx]) / DAY
+            old_unl = (~found) & (age >= W)
+            keep = found | old_unl
+            Xtr = X[tr]; mat = age >= mature_age
+            p = None
+            if mat.sum() > 200 and found[mat].sum() > 20:
+                mi = np.where(mat)[0]; fold = np.arange(len(mi)) % 2
+                pm = np.zeros(len(tr)); cnt = np.zeros(len(tr))
+                for f in (0, 1):
+                    m_f, oc_f = fit_lgb(Xtr[mi[fold == f]], found[mi[fold == f]].astype(int), np.ones((fold == f).sum()), seed + 7 + f)
+                    if m_f is None: continue
+                    pr_ = m_f.predict_proba(Xtr)[:, 1]; od = pr_ / np.clip(1 - pr_, 1e-6, None) * oc_f; pr_ = od / (1 + od)
+                    use = np.ones(len(tr), bool); use[mi[fold == f]] = False      # never score a commit with a model trained on it
+                    pm[use] += pr_[use]; cnt[use] += 1
+                p = pm[old_unl] / np.maximum(cnt[old_unl], 1)
+            if p is None:
+                Xi, yi, wi = Xtr[keep], found[keep].astype(int), np.ones(keep.sum())
+            else:
+                S = survival_from_delays(d_obs, tau, age[old_unl], method=delay_est)
+                q = p * S / np.clip(1 - p + p * S, 1e-9, None)
+                Xp, Xu = Xtr[found], Xtr[old_unl]
+                if mode == "soft":
+                    Xi = np.vstack([Xp, Xu, Xu]); yi = np.concatenate([np.ones(len(Xp)), np.ones(len(Xu)), np.zeros(len(Xu))]).astype(int)
+                    wi = np.concatenate([np.ones(len(Xp)), q, 1 - q]); kw_ = wi > 1e-4; Xi, yi, wi = Xi[kw_], yi[kw_], wi[kw_]
+                else:
+                    k = int(round(q.sum())); drop = np.zeros(len(Xu), bool)
+                    if k > 0: drop[np.argsort(-p)[:k]] = True
+                    Xi = np.vstack([Xp, Xu[~drop]]); yi = np.concatenate([np.ones(len(Xp)), np.zeros((~drop).sum())]).astype(int); wi = np.ones(len(yi))
+                if label_noise_log:
+                    yt = y[tr][old_unl]
+                    diag.append(dict(T=T, mean_q_true_bug=float(q[yt == 1].mean()) if (yt == 1).any() else np.nan,
+                                     mean_q_clean=float(q[yt == 0].mean()) if (yt == 0).any() else np.nan,
+                                     auc_dormant=float(roc_auc_score(yt, p)) if 0 < yt.sum() < len(yt) else np.nan))
         elif method == "decomp":
             # DIAGNOSTIC ONLY (uses true labels -> not a competitor). Decomposes the wait->oracle gap:
             # level 1: same examples as wait(W) but true labels (pure denoising)

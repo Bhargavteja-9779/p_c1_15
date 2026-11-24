@@ -23662,10 +23662,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T15:01:56+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T15:02:31+00:00",
+      "seconds": 35.3
     },
     {
       "id": "E2_broadleaf_law_lagakos_base_s100",
@@ -23680,12 +23684,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 30,
       "started": "2026-11-24T15:00:11+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-24T15:00:42+00:00",
+      "seconds": 31.3
     },
     {
       "id": "E2_broadleaf_law_naive_base_s100",
@@ -23700,10 +23706,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T15:00:55+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T15:01:28+00:00",
+      "seconds": 32.7
     },
     {
       "id": "E2_broadleaf_law_naive_model_s101",
@@ -23718,10 +23728,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T15:02:01+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T15:02:38+00:00",
+      "seconds": 36.6
     },
     {
       "id": "E2_broadleaf_law_lagakos_base_s101",
@@ -23736,12 +23750,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 30,
       "started": "2026-11-24T15:00:17+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-24T15:00:49+00:00",
+      "seconds": 31.2
     },
     {
       "id": "E2_broadleaf_law_naive_base_s101",
@@ -23756,10 +23772,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T15:01:14+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T15:01:48+00:00",
+      "seconds": 34.8
     },
     {
       "id": "E2_broadleaf_law_naive_model_s102",
@@ -23774,10 +23794,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T15:02:19+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T15:02:57+00:00",
+      "seconds": 37.4
     },
     {
       "id": "E2_broadleaf_law_lagakos_base_s102",
@@ -23792,12 +23816,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 30,
       "started": "2026-11-24T15:00:24+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-24T15:00:55+00:00",
+      "seconds": 31.4
     },
     {
       "id": "E2_broadleaf_law_naive_base_s102",
@@ -23812,10 +23838,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T15:01:22+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T15:01:56+00:00",
+      "seconds": 33.3
     },
     {
       "id": "E2_broadleaf_law_naive_model_s103",
@@ -23830,10 +23860,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T15:02:31+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T15:03:12+00:00",
+      "seconds": 40.9
     },
     {
       "id": "E2_broadleaf_law_lagakos_base_s103",
@@ -23848,10 +23882,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T15:00:42+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T15:01:14+00:00",
+      "seconds": 31.5
     },
     {
       "id": "E2_broadleaf_law_naive_base_s103",
@@ -23866,10 +23904,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T15:01:28+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T15:02:01+00:00",
+      "seconds": 33.2
     },
     {
       "id": "E2_broadleaf_law_naive_model_s104",
@@ -23884,10 +23926,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T15:02:38+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T15:03:18+00:00",
+      "seconds": 39.9
     },
     {
       "id": "E2_broadleaf_law_lagakos_base_s104",
@@ -23902,10 +23948,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T15:00:49+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T15:01:22+00:00",
+      "seconds": 33.7
     },
     {
       "id": "E2_broadleaf_law_naive_base_s104",
@@ -23920,10 +23970,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T15:01:48+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T15:02:19+00:00",
+      "seconds": 30.9
     },
     {
       "id": "E2_camel_law_naive_model_s100",
@@ -23957,9 +24011,14 @@
         "split": "test"
       },
       "status": "pending",
-      "attempts": 0,
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T15:02:57+00:00",
+      "worker": 2,
+      "log": [
+        "2026-11-24T15:04:04+00:00 reset running->pending on restart"
+      ]
     },
     {
       "id": "E2_camel_law_naive_base_s100",
@@ -24011,9 +24070,14 @@
         "split": "test"
       },
       "status": "pending",
-      "attempts": 0,
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T15:03:12+00:00",
+      "worker": 0,
+      "log": [
+        "2026-11-24T15:04:04+00:00 reset running->pending on restart"
+      ]
     },
     {
       "id": "E2_camel_law_naive_base_s101",
@@ -24065,9 +24129,14 @@
         "split": "test"
       },
       "status": "pending",
-      "attempts": 0,
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T15:03:18+00:00",
+      "worker": 1,
+      "log": [
+        "2026-11-24T15:04:04+00:00 reset running->pending on restart"
+      ]
     },
     {
       "id": "E2_camel_law_naive_base_s102",
@@ -26084,6 +26153,966 @@
       "attempts": 0,
       "cycle": 1,
       "priority": 30
+    },
+    {
+      "id": "E0c_fabric_lawm_soft_W30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 30,
+        "mode": "soft",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_soft_W30",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_fabric_lawm_soft_W90_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 90,
+        "mode": "soft",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_soft_W90",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_fabric_lawm_count_W30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 30,
+        "mode": "count",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_count_W30",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_fabric_lawm_count_W90_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 90,
+        "mode": "count",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_count_W90",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_fabric_lawm_soft_W30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 30,
+        "mode": "soft",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_soft_W30",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_fabric_lawm_soft_W90_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 90,
+        "mode": "soft",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_soft_W90",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_fabric_lawm_count_W30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 30,
+        "mode": "count",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_count_W30",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_fabric_lawm_count_W90_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 90,
+        "mode": "count",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_count_W90",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_fabric_lawm_soft_W30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 30,
+        "mode": "soft",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_soft_W30",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_fabric_lawm_soft_W90_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 90,
+        "mode": "soft",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_soft_W90",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_fabric_lawm_count_W30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 30,
+        "mode": "count",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_count_W30",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_fabric_lawm_count_W90_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 90,
+        "mode": "count",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_count_W90",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_neutron_lawm_soft_W30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 30,
+        "mode": "soft",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_soft_W30",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_neutron_lawm_soft_W90_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 90,
+        "mode": "soft",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_soft_W90",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_neutron_lawm_count_W30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 30,
+        "mode": "count",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_count_W30",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_neutron_lawm_count_W90_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 90,
+        "mode": "count",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_count_W90",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_neutron_lawm_soft_W30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 30,
+        "mode": "soft",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_soft_W30",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_neutron_lawm_soft_W90_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 90,
+        "mode": "soft",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_soft_W90",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_neutron_lawm_count_W30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 30,
+        "mode": "count",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_count_W30",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_neutron_lawm_count_W90_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 90,
+        "mode": "count",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_count_W90",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_neutron_lawm_soft_W30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 30,
+        "mode": "soft",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_soft_W30",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_neutron_lawm_soft_W90_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 90,
+        "mode": "soft",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_soft_W90",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_neutron_lawm_count_W30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 30,
+        "mode": "count",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_count_W30",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_neutron_lawm_count_W90_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 90,
+        "mode": "count",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_count_W90",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_nova_lawm_soft_W30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 30,
+        "mode": "soft",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_soft_W30",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 13
+    },
+    {
+      "id": "E0c_nova_lawm_soft_W90_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 90,
+        "mode": "soft",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_soft_W90",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 13
+    },
+    {
+      "id": "E0c_nova_lawm_count_W30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 30,
+        "mode": "count",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_count_W30",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 13
+    },
+    {
+      "id": "E0c_nova_lawm_count_W90_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 90,
+        "mode": "count",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_count_W90",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 13
+    },
+    {
+      "id": "E0c_nova_lawm_soft_W30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 30,
+        "mode": "soft",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_soft_W30",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 13
+    },
+    {
+      "id": "E0c_nova_lawm_soft_W90_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 90,
+        "mode": "soft",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_soft_W90",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 13
+    },
+    {
+      "id": "E0c_nova_lawm_count_W30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 30,
+        "mode": "count",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_count_W30",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 13
+    },
+    {
+      "id": "E0c_nova_lawm_count_W90_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 90,
+        "mode": "count",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_count_W90",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 13
+    },
+    {
+      "id": "E0c_nova_lawm_soft_W30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 30,
+        "mode": "soft",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_soft_W30",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 13
+    },
+    {
+      "id": "E0c_nova_lawm_soft_W90_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 90,
+        "mode": "soft",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_soft_W90",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 13
+    },
+    {
+      "id": "E0c_nova_lawm_count_W30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 30,
+        "mode": "count",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_count_W30",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 13
+    },
+    {
+      "id": "E0c_nova_lawm_count_W90_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 90,
+        "mode": "count",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_count_W90",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_lawm_soft_W30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 30,
+        "mode": "soft",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_soft_W30",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_sentry_lawm_soft_W90_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 90,
+        "mode": "soft",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_soft_W90",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_sentry_lawm_count_W30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 30,
+        "mode": "count",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_count_W30",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_sentry_lawm_count_W90_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 90,
+        "mode": "count",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_count_W90",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_sentry_lawm_soft_W30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 30,
+        "mode": "soft",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_soft_W30",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_sentry_lawm_soft_W90_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 90,
+        "mode": "soft",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_soft_W90",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_sentry_lawm_count_W30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 30,
+        "mode": "count",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_count_W30",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_sentry_lawm_count_W90_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 90,
+        "mode": "count",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_count_W90",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_sentry_lawm_soft_W30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 30,
+        "mode": "soft",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_soft_W30",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_sentry_lawm_soft_W90_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 90,
+        "mode": "soft",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_soft_W90",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_sentry_lawm_count_W30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 30,
+        "mode": "count",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_count_W30",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
+    },
+    {
+      "id": "E0c_sentry_lawm_count_W90_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "W": 90,
+        "mode": "count",
+        "delay_est": "lagakos",
+        "label_noise_log": true,
+        "variant": "lawm_count_W90",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 12
     }
   ]
 }

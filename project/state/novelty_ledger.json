@@ -947,5 +947,18 @@
    "status": "E0b dev; prior-art queries 1/8 done (web: 'adaptive waiting time verification latency JIT-SDP' \u2014 no match)"
   }
  ],
- "scores": []
+ "scores": [
+  {
+   "cycle": 1,
+   "time": "2026-11-24T15:00:45+00:00",
+   "claim": "C3 noise-dominance (H3) + negative result for age-based correction (LAW/awt)",
+   "differentiation": 2,
+   "mechanism": 3,
+   "evidence": 4,
+   "breadth": 3,
+   "significance": 2,
+   "total": 14,
+   "notes": "Dormant-defects TOSEM 2021 and ODaSC frame the same noise; our decomposition quantifies it for online JIT-SDP (strong stats, 10/10 projects) but there is no working method yet. Blind review not run."
+  }
+ ]
 }
