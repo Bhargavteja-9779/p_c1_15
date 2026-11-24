@@ -14,8 +14,8 @@
 | Snapshot backup | `bash scripts/snapshot.sh` |
 
 ## Moving to a new account / machine
-1. Everything lives in git on branch `claude/dreamy-fermat-7983nm` of `bhargavteja-9779/p_c1_15` (pushed after every step).
-2. On the new machine: `git clone` that repo, `git checkout claude/dreamy-fermat-7983nm`, `pip install -r project/requirements.txt`.
+1. Everything lives in git on branch `claude/zealous-lamport-bjc4um` of `bhargavteja-9779/p_c1_15` (pushed after every step; the earlier branch claude/dreamy-fermat-7983nm holds history up to the first handoff).
+2. On the new machine: `git clone` that repo, `git checkout claude/zealous-lamport-bjc4um`, `pip install -r project/requirements.txt`.
 3. Paste the contents of `project/BOOTSTRAP_PROMPT.txt` into the new agent session.
 
 ## Known problems / environment facts

@@ -2842,12 +2842,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 10,
       "started": "2026-11-24T23:02:35+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-24T23:03:20+00:00",
+      "seconds": 44.6
     },
     {
       "id": "E0_sentry_oracle_s0",
@@ -2859,10 +2861,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T23:03:20+00:00",
+      "worker": 2
     },
     {
       "id": "E0_sentry_wait_W15_s0",
@@ -3138,12 +3142,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 10,
       "started": "2026-11-24T23:02:36+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-24T23:03:20+00:00",
+      "seconds": 43.7
     },
     {
       "id": "E0_sentry_oracle_s1",
@@ -3155,10 +3161,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T23:03:44+00:00",
+      "worker": 0
     },
     {
       "id": "E0_sentry_wait_W15_s1",
@@ -3434,10 +3442,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T23:03:20+00:00",
+      "worker": 1
     },
     {
       "id": "E0_sentry_oracle_s2",
@@ -3659,12 +3669,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 10,
       "started": "2026-11-24T23:02:28+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-24T23:03:44+00:00",
+      "seconds": 76.6
     },
     {
       "id": "E0_sentry_law_lagakos_base_s2",
