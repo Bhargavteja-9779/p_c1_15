@@ -1,0 +1,15 @@
+# plan_v3 — 2026-11-24 (cycle 1), BEFORE any test-project run. Extends plan_v2; nothing in plan_v2 is changed.
+# Reason: prior-art search found Pessoa (2021, UFPE MSc dissertation, "Batch algorithms and fixed prediction rates
+# for online JIT-SDP", literature/pdfs/Pessoa_MSc2021.pdf), which controls the operating point with a rate-driven
+# threshold: the threshold keeps the share of commits predicted defective over a sliding window at a fixed rate fr1
+# tuned on validation data. This is the closest prior work to our threshold calibration and must be a baseline.
+version: 3
+adds:
+  fr_baseline: "wait(W) + fixed-rate threshold: thr = (1-fr) quantile of last 1000 prequential scores
+                (src/jit.py fixed_rate). Tuning: W in {15,30,60,90,180} x fr in {0.2,0.3,0.4,0.5,0.6} = 25 configs
+                (more than any other family; never weaker by construction). Selected by mean dev G-mean."
+  E0c_dev: {projects: dev, seeds: explore, runs: 300, est_cpu_h: 2.0, priority: 13}
+E1_main_confirm_methods: "plan_v2 list + fr(W*, fr*)"
+hypotheses:
+  H2_primary: "unchanged from plan_v2, but the family of uncalibrated-or-tuned baselines for Holm is now
+               {wait(W*), orb(W*), fsc(W*), fr(W*,fr*)} (4 comparisons)."

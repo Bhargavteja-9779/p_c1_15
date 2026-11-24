@@ -43,3 +43,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-24T21:27:40+00:00** — E0 jobs interrupted at 152/192 to load new code (3 running jobs reset and re-run, no results lost)
   - Reason: Workers had the old module imported
+
+- **2026-11-24T21:31:18+00:00** — plan_v3: add fixed-rate threshold baseline (Pessoa 2021) with 25-config dev grid (E0c, 300 runs)
+  - Reason: Prior-art search found rate-driven threshold choice in online JIT-SDP; closest prior work to calibration must be a baseline

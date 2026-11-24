@@ -74,7 +74,7 @@ def fit_lgb(X, y, w, seed, class_mult=(1.0, 1.0)):
 
 def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="lagakos",
              prior="model", orb_params=None, eval_end_gap_days=365, delay_scale=1.0, return_preds=False,
-             label_noise_log=False, thr_cal=False, cal_window=3000):
+             label_noise_log=False, thr_cal=False, cal_window=3000, fixed_rate=None, fr_window=1000):
     """df: one project's commits sorted by time (columns FEATS, t, y, t_found).
     delay_scale>1 stretches discovery delays (robustness: slower bug discovery)."""
     t0 = time.time()
@@ -157,7 +157,14 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
         if m_new is not None:
             model, oc = m_new, oc_new
         end = min(start + update_every, n)
-        if thr_cal:
+        if fixed_rate is not None:
+            # Fixed defect-prediction-rate baseline (Pessoa 2021, UFPE MSc; rate-driven threshold choice):
+            # threshold = (1-fr) quantile of the last fr_window prequential scores; fr tuned on dev.
+            past = prob[:start]; past = past[np.isfinite(past)][-fr_window:]
+            if len(past) >= 100:
+                thr = float(np.quantile(past, 1 - fixed_rate))
+            thr_log.append(thr)
+        elif thr_cal:
             thr = calibrate_threshold(prob[:start], t[:start], tf[:start], T, thr, naive=(thr_cal == "naive"))
             thr_log.append(thr)
         if model is not None:
@@ -171,7 +178,7 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
     out = {"metrics": res}
     if return_preds: out.update(pred=pred, prob=prob, eval_mask=ev)
     if diag: out["diag"] = diag
-    if thr_cal: out["metrics"]["thr_mean"] = float(np.mean(thr_log))
+    if thr_cal or fixed_rate is not None: out["metrics"]["thr_mean"] = float(np.mean(thr_log))
     return out
 
 def calibrate_threshold(prob_past, t_past, tf_past, T, default=0.5, window=3000, min_n=300, naive=False):

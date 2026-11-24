@@ -37,6 +37,13 @@ def specs(exp):
             J = [dict(j, project=p, seed=s) if "project" not in j else j for j in J]
         for j in J: j.update(experiment="E0b", split="dev")
         return J, 12
+    if exp == "E0c":   # fixed defect-prediction-rate baseline (Pessoa 2021), plan_v3
+        for p, s in itertools.product(DEV, SE):
+            for W in WGRID:
+                for fr in [0.2, 0.3, 0.4, 0.5, 0.6]:
+                    J.append(dict(method="wait", W=W, fixed_rate=fr, variant=f"wait_W{W}_fr{int(fr*100)}", project=p, seed=s))
+        for j in J: j.update(experiment="E0c", split="dev")
+        return J, 13
     if exp in ("E1", "E2", "E3"):
         fz = read_json(STATE / "frozen_config.json")
         assert fz, "frozen_config.json missing: run scripts/freeze_config.py after E0"

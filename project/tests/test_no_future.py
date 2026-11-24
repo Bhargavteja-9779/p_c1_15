@@ -14,7 +14,7 @@ def test_future_discoveries_do_not_leak():
     late = df2.t_found > T0
     df2.loc[late & np.isfinite(df2.t_found), "t_found"] = np.inf        # hide future discoveries
     for m, kw in [("nowait", {}), ("wait", {}), ("orb", {}), ("law", {}), ("fsc", {"W": 30}),
-                  ("law", {"thr_cal": "lat"}), ("nowait", {"thr_cal": "naive"}), ("fsc", {"W": 30, "thr_cal": "lat"})]:
+                  ("law", {"thr_cal": "lat"}), ("nowait", {"thr_cal": "naive"}), ("fsc", {"W": 30, "thr_cal": "lat"}), ("wait", {"fixed_rate": 0.3})]:
         a = simulate(df, m, seed=0, return_preds=True, eval_end_gap_days=0, **kw)
         b = simulate(df2, m, seed=0, return_preds=True, eval_end_gap_days=0, **kw)
         assert np.allclose(np.nan_to_num(a["prob"][:cut]), np.nan_to_num(b["prob"][:cut])), (m, kw)

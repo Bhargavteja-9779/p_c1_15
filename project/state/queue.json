@@ -2252,13 +2252,14 @@
         "split": "dev"
       },
       "status": "running",
-      "attempts": 2,
+      "attempts": 3,
       "cycle": 1,
       "priority": 11,
-      "started": "2026-11-24T21:26:22+00:00",
-      "worker": 1,
+      "started": "2026-11-24T21:30:51+00:00",
+      "worker": 0,
       "log": [
-        "2026-11-24T21:26:22+00:00 reset running->pending on restart"
+        "2026-11-24T21:26:22+00:00 reset running->pending on restart",
+        "2026-11-24T21:30:51+00:00 reset running->pending on restart"
       ]
     },
     {
@@ -2541,13 +2542,14 @@
         "split": "dev"
       },
       "status": "running",
-      "attempts": 2,
+      "attempts": 3,
       "cycle": 1,
       "priority": 11,
-      "started": "2026-11-24T21:26:22+00:00",
-      "worker": 2,
+      "started": "2026-11-24T21:30:51+00:00",
+      "worker": 1,
       "log": [
-        "2026-11-24T21:26:22+00:00 reset running->pending on restart"
+        "2026-11-24T21:26:22+00:00 reset running->pending on restart",
+        "2026-11-24T21:30:51+00:00 reset running->pending on restart"
       ]
     },
     {
@@ -2829,10 +2831,15 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 2,
       "cycle": 1,
-      "priority": 11
+      "priority": 11,
+      "started": "2026-11-24T21:30:51+00:00",
+      "worker": 2,
+      "log": [
+        "2026-11-24T21:30:51+00:00 reset running->pending on restart"
+      ]
     },
     {
       "id": "E0_nova_law_lagakos_base_s2",
@@ -2869,7 +2876,7 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 2,
       "cycle": 1,
       "priority": 11,
@@ -2877,7 +2884,9 @@
       "worker": 0,
       "log": [
         "2026-11-24T21:26:22+00:00 reset running->pending on restart"
-      ]
+      ],
+      "finished": "2026-11-24T21:30:28+00:00",
+      "seconds": 246.1
     },
     {
       "id": "E0_sentry_nowait_s0",
@@ -9703,6 +9712,5406 @@
       "attempts": 0,
       "cycle": 1,
       "priority": 12
+    },
+    {
+      "id": "E0c_fabric_wait_W15_fr20_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.2,
+        "variant": "wait_W15_fr20",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W15_fr30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.3,
+        "variant": "wait_W15_fr30",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W15_fr40_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.4,
+        "variant": "wait_W15_fr40",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W15_fr50_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.5,
+        "variant": "wait_W15_fr50",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W15_fr60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.6,
+        "variant": "wait_W15_fr60",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W30_fr20_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.2,
+        "variant": "wait_W30_fr20",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W30_fr30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.3,
+        "variant": "wait_W30_fr30",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W30_fr40_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.4,
+        "variant": "wait_W30_fr40",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W30_fr50_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.5,
+        "variant": "wait_W30_fr50",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W30_fr60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.6,
+        "variant": "wait_W30_fr60",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W60_fr20_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.2,
+        "variant": "wait_W60_fr20",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W60_fr30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.3,
+        "variant": "wait_W60_fr30",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W60_fr40_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.4,
+        "variant": "wait_W60_fr40",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W60_fr50_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.5,
+        "variant": "wait_W60_fr50",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W60_fr60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.6,
+        "variant": "wait_W60_fr60",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W90_fr20_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.2,
+        "variant": "wait_W90_fr20",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W90_fr30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.3,
+        "variant": "wait_W90_fr30",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W90_fr40_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.4,
+        "variant": "wait_W90_fr40",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W90_fr50_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.5,
+        "variant": "wait_W90_fr50",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W90_fr60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.6,
+        "variant": "wait_W90_fr60",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W180_fr20_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.2,
+        "variant": "wait_W180_fr20",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W180_fr30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.3,
+        "variant": "wait_W180_fr30",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W180_fr40_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.4,
+        "variant": "wait_W180_fr40",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W180_fr50_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.5,
+        "variant": "wait_W180_fr50",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W180_fr60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.6,
+        "variant": "wait_W180_fr60",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W15_fr20_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.2,
+        "variant": "wait_W15_fr20",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W15_fr30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.3,
+        "variant": "wait_W15_fr30",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W15_fr40_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.4,
+        "variant": "wait_W15_fr40",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W15_fr50_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.5,
+        "variant": "wait_W15_fr50",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W15_fr60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.6,
+        "variant": "wait_W15_fr60",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W30_fr20_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.2,
+        "variant": "wait_W30_fr20",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W30_fr30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.3,
+        "variant": "wait_W30_fr30",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W30_fr40_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.4,
+        "variant": "wait_W30_fr40",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W30_fr50_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.5,
+        "variant": "wait_W30_fr50",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W30_fr60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.6,
+        "variant": "wait_W30_fr60",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W60_fr20_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.2,
+        "variant": "wait_W60_fr20",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W60_fr30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.3,
+        "variant": "wait_W60_fr30",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W60_fr40_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.4,
+        "variant": "wait_W60_fr40",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W60_fr50_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.5,
+        "variant": "wait_W60_fr50",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W60_fr60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.6,
+        "variant": "wait_W60_fr60",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W90_fr20_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.2,
+        "variant": "wait_W90_fr20",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W90_fr30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.3,
+        "variant": "wait_W90_fr30",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W90_fr40_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.4,
+        "variant": "wait_W90_fr40",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W90_fr50_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.5,
+        "variant": "wait_W90_fr50",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W90_fr60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.6,
+        "variant": "wait_W90_fr60",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W180_fr20_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.2,
+        "variant": "wait_W180_fr20",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W180_fr30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.3,
+        "variant": "wait_W180_fr30",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W180_fr40_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.4,
+        "variant": "wait_W180_fr40",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W180_fr50_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.5,
+        "variant": "wait_W180_fr50",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W180_fr60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.6,
+        "variant": "wait_W180_fr60",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W15_fr20_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.2,
+        "variant": "wait_W15_fr20",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W15_fr30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.3,
+        "variant": "wait_W15_fr30",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W15_fr40_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.4,
+        "variant": "wait_W15_fr40",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W15_fr50_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.5,
+        "variant": "wait_W15_fr50",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W15_fr60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.6,
+        "variant": "wait_W15_fr60",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W30_fr20_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.2,
+        "variant": "wait_W30_fr20",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W30_fr30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.3,
+        "variant": "wait_W30_fr30",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W30_fr40_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.4,
+        "variant": "wait_W30_fr40",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W30_fr50_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.5,
+        "variant": "wait_W30_fr50",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W30_fr60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.6,
+        "variant": "wait_W30_fr60",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W60_fr20_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.2,
+        "variant": "wait_W60_fr20",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W60_fr30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.3,
+        "variant": "wait_W60_fr30",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W60_fr40_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.4,
+        "variant": "wait_W60_fr40",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W60_fr50_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.5,
+        "variant": "wait_W60_fr50",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W60_fr60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.6,
+        "variant": "wait_W60_fr60",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W90_fr20_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.2,
+        "variant": "wait_W90_fr20",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W90_fr30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.3,
+        "variant": "wait_W90_fr30",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W90_fr40_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.4,
+        "variant": "wait_W90_fr40",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W90_fr50_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.5,
+        "variant": "wait_W90_fr50",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W90_fr60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.6,
+        "variant": "wait_W90_fr60",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W180_fr20_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.2,
+        "variant": "wait_W180_fr20",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W180_fr30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.3,
+        "variant": "wait_W180_fr30",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W180_fr40_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.4,
+        "variant": "wait_W180_fr40",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W180_fr50_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.5,
+        "variant": "wait_W180_fr50",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_fabric_wait_W180_fr60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.6,
+        "variant": "wait_W180_fr60",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W15_fr20_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.2,
+        "variant": "wait_W15_fr20",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W15_fr30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.3,
+        "variant": "wait_W15_fr30",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W15_fr40_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.4,
+        "variant": "wait_W15_fr40",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W15_fr50_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.5,
+        "variant": "wait_W15_fr50",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W15_fr60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.6,
+        "variant": "wait_W15_fr60",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W30_fr20_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.2,
+        "variant": "wait_W30_fr20",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W30_fr30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.3,
+        "variant": "wait_W30_fr30",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W30_fr40_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.4,
+        "variant": "wait_W30_fr40",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W30_fr50_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.5,
+        "variant": "wait_W30_fr50",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W30_fr60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.6,
+        "variant": "wait_W30_fr60",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W60_fr20_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.2,
+        "variant": "wait_W60_fr20",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W60_fr30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.3,
+        "variant": "wait_W60_fr30",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W60_fr40_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.4,
+        "variant": "wait_W60_fr40",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W60_fr50_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.5,
+        "variant": "wait_W60_fr50",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W60_fr60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.6,
+        "variant": "wait_W60_fr60",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W90_fr20_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.2,
+        "variant": "wait_W90_fr20",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W90_fr30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.3,
+        "variant": "wait_W90_fr30",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W90_fr40_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.4,
+        "variant": "wait_W90_fr40",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W90_fr50_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.5,
+        "variant": "wait_W90_fr50",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W90_fr60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.6,
+        "variant": "wait_W90_fr60",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W180_fr20_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.2,
+        "variant": "wait_W180_fr20",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W180_fr30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.3,
+        "variant": "wait_W180_fr30",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W180_fr40_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.4,
+        "variant": "wait_W180_fr40",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W180_fr50_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.5,
+        "variant": "wait_W180_fr50",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W180_fr60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.6,
+        "variant": "wait_W180_fr60",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W15_fr20_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.2,
+        "variant": "wait_W15_fr20",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W15_fr30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.3,
+        "variant": "wait_W15_fr30",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W15_fr40_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.4,
+        "variant": "wait_W15_fr40",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W15_fr50_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.5,
+        "variant": "wait_W15_fr50",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W15_fr60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.6,
+        "variant": "wait_W15_fr60",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W30_fr20_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.2,
+        "variant": "wait_W30_fr20",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W30_fr30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.3,
+        "variant": "wait_W30_fr30",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W30_fr40_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.4,
+        "variant": "wait_W30_fr40",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W30_fr50_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.5,
+        "variant": "wait_W30_fr50",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W30_fr60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.6,
+        "variant": "wait_W30_fr60",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W60_fr20_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.2,
+        "variant": "wait_W60_fr20",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W60_fr30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.3,
+        "variant": "wait_W60_fr30",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W60_fr40_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.4,
+        "variant": "wait_W60_fr40",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W60_fr50_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.5,
+        "variant": "wait_W60_fr50",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W60_fr60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.6,
+        "variant": "wait_W60_fr60",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W90_fr20_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.2,
+        "variant": "wait_W90_fr20",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W90_fr30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.3,
+        "variant": "wait_W90_fr30",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W90_fr40_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.4,
+        "variant": "wait_W90_fr40",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W90_fr50_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.5,
+        "variant": "wait_W90_fr50",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W90_fr60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.6,
+        "variant": "wait_W90_fr60",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W180_fr20_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.2,
+        "variant": "wait_W180_fr20",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W180_fr30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.3,
+        "variant": "wait_W180_fr30",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W180_fr40_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.4,
+        "variant": "wait_W180_fr40",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W180_fr50_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.5,
+        "variant": "wait_W180_fr50",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W180_fr60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.6,
+        "variant": "wait_W180_fr60",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W15_fr20_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.2,
+        "variant": "wait_W15_fr20",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W15_fr30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.3,
+        "variant": "wait_W15_fr30",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W15_fr40_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.4,
+        "variant": "wait_W15_fr40",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W15_fr50_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.5,
+        "variant": "wait_W15_fr50",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W15_fr60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.6,
+        "variant": "wait_W15_fr60",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W30_fr20_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.2,
+        "variant": "wait_W30_fr20",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W30_fr30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.3,
+        "variant": "wait_W30_fr30",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W30_fr40_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.4,
+        "variant": "wait_W30_fr40",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W30_fr50_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.5,
+        "variant": "wait_W30_fr50",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W30_fr60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.6,
+        "variant": "wait_W30_fr60",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W60_fr20_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.2,
+        "variant": "wait_W60_fr20",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W60_fr30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.3,
+        "variant": "wait_W60_fr30",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W60_fr40_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.4,
+        "variant": "wait_W60_fr40",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W60_fr50_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.5,
+        "variant": "wait_W60_fr50",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W60_fr60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.6,
+        "variant": "wait_W60_fr60",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W90_fr20_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.2,
+        "variant": "wait_W90_fr20",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W90_fr30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.3,
+        "variant": "wait_W90_fr30",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W90_fr40_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.4,
+        "variant": "wait_W90_fr40",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W90_fr50_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.5,
+        "variant": "wait_W90_fr50",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W90_fr60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.6,
+        "variant": "wait_W90_fr60",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W180_fr20_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.2,
+        "variant": "wait_W180_fr20",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W180_fr30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.3,
+        "variant": "wait_W180_fr30",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W180_fr40_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.4,
+        "variant": "wait_W180_fr40",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W180_fr50_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.5,
+        "variant": "wait_W180_fr50",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_neutron_wait_W180_fr60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.6,
+        "variant": "wait_W180_fr60",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_nova_wait_W15_fr20_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.2,
+        "variant": "wait_W15_fr20",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W15_fr30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.3,
+        "variant": "wait_W15_fr30",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W15_fr40_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.4,
+        "variant": "wait_W15_fr40",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W15_fr50_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.5,
+        "variant": "wait_W15_fr50",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W15_fr60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.6,
+        "variant": "wait_W15_fr60",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W30_fr20_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.2,
+        "variant": "wait_W30_fr20",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W30_fr30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.3,
+        "variant": "wait_W30_fr30",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W30_fr40_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.4,
+        "variant": "wait_W30_fr40",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W30_fr50_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.5,
+        "variant": "wait_W30_fr50",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W30_fr60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.6,
+        "variant": "wait_W30_fr60",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W60_fr20_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.2,
+        "variant": "wait_W60_fr20",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W60_fr30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.3,
+        "variant": "wait_W60_fr30",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W60_fr40_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.4,
+        "variant": "wait_W60_fr40",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W60_fr50_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.5,
+        "variant": "wait_W60_fr50",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W60_fr60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.6,
+        "variant": "wait_W60_fr60",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W90_fr20_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.2,
+        "variant": "wait_W90_fr20",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W90_fr30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.3,
+        "variant": "wait_W90_fr30",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W90_fr40_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.4,
+        "variant": "wait_W90_fr40",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W90_fr50_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.5,
+        "variant": "wait_W90_fr50",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W90_fr60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.6,
+        "variant": "wait_W90_fr60",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W180_fr20_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.2,
+        "variant": "wait_W180_fr20",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W180_fr30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.3,
+        "variant": "wait_W180_fr30",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W180_fr40_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.4,
+        "variant": "wait_W180_fr40",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W180_fr50_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.5,
+        "variant": "wait_W180_fr50",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W180_fr60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.6,
+        "variant": "wait_W180_fr60",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W15_fr20_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.2,
+        "variant": "wait_W15_fr20",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W15_fr30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.3,
+        "variant": "wait_W15_fr30",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W15_fr40_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.4,
+        "variant": "wait_W15_fr40",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W15_fr50_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.5,
+        "variant": "wait_W15_fr50",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W15_fr60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.6,
+        "variant": "wait_W15_fr60",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W30_fr20_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.2,
+        "variant": "wait_W30_fr20",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W30_fr30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.3,
+        "variant": "wait_W30_fr30",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W30_fr40_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.4,
+        "variant": "wait_W30_fr40",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W30_fr50_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.5,
+        "variant": "wait_W30_fr50",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W30_fr60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.6,
+        "variant": "wait_W30_fr60",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W60_fr20_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.2,
+        "variant": "wait_W60_fr20",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W60_fr30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.3,
+        "variant": "wait_W60_fr30",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W60_fr40_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.4,
+        "variant": "wait_W60_fr40",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W60_fr50_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.5,
+        "variant": "wait_W60_fr50",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W60_fr60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.6,
+        "variant": "wait_W60_fr60",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W90_fr20_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.2,
+        "variant": "wait_W90_fr20",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W90_fr30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.3,
+        "variant": "wait_W90_fr30",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W90_fr40_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.4,
+        "variant": "wait_W90_fr40",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W90_fr50_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.5,
+        "variant": "wait_W90_fr50",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W90_fr60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.6,
+        "variant": "wait_W90_fr60",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W180_fr20_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.2,
+        "variant": "wait_W180_fr20",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W180_fr30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.3,
+        "variant": "wait_W180_fr30",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W180_fr40_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.4,
+        "variant": "wait_W180_fr40",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W180_fr50_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.5,
+        "variant": "wait_W180_fr50",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W180_fr60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.6,
+        "variant": "wait_W180_fr60",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W15_fr20_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.2,
+        "variant": "wait_W15_fr20",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W15_fr30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.3,
+        "variant": "wait_W15_fr30",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W15_fr40_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.4,
+        "variant": "wait_W15_fr40",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W15_fr50_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.5,
+        "variant": "wait_W15_fr50",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W15_fr60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.6,
+        "variant": "wait_W15_fr60",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W30_fr20_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.2,
+        "variant": "wait_W30_fr20",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W30_fr30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.3,
+        "variant": "wait_W30_fr30",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W30_fr40_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.4,
+        "variant": "wait_W30_fr40",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W30_fr50_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.5,
+        "variant": "wait_W30_fr50",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W30_fr60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.6,
+        "variant": "wait_W30_fr60",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W60_fr20_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.2,
+        "variant": "wait_W60_fr20",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W60_fr30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.3,
+        "variant": "wait_W60_fr30",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W60_fr40_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.4,
+        "variant": "wait_W60_fr40",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W60_fr50_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.5,
+        "variant": "wait_W60_fr50",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W60_fr60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.6,
+        "variant": "wait_W60_fr60",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W90_fr20_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.2,
+        "variant": "wait_W90_fr20",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W90_fr30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.3,
+        "variant": "wait_W90_fr30",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W90_fr40_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.4,
+        "variant": "wait_W90_fr40",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W90_fr50_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.5,
+        "variant": "wait_W90_fr50",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W90_fr60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.6,
+        "variant": "wait_W90_fr60",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W180_fr20_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.2,
+        "variant": "wait_W180_fr20",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W180_fr30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.3,
+        "variant": "wait_W180_fr30",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W180_fr40_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.4,
+        "variant": "wait_W180_fr40",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W180_fr50_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.5,
+        "variant": "wait_W180_fr50",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_nova_wait_W180_fr60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.6,
+        "variant": "wait_W180_fr60",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 14
+    },
+    {
+      "id": "E0c_sentry_wait_W15_fr20_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.2,
+        "variant": "wait_W15_fr20",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W15_fr30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.3,
+        "variant": "wait_W15_fr30",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W15_fr40_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.4,
+        "variant": "wait_W15_fr40",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W15_fr50_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.5,
+        "variant": "wait_W15_fr50",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W15_fr60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.6,
+        "variant": "wait_W15_fr60",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W30_fr20_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.2,
+        "variant": "wait_W30_fr20",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W30_fr30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.3,
+        "variant": "wait_W30_fr30",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W30_fr40_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.4,
+        "variant": "wait_W30_fr40",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W30_fr50_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.5,
+        "variant": "wait_W30_fr50",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W30_fr60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.6,
+        "variant": "wait_W30_fr60",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W60_fr20_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.2,
+        "variant": "wait_W60_fr20",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W60_fr30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.3,
+        "variant": "wait_W60_fr30",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W60_fr40_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.4,
+        "variant": "wait_W60_fr40",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W60_fr50_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.5,
+        "variant": "wait_W60_fr50",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W60_fr60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.6,
+        "variant": "wait_W60_fr60",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W90_fr20_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.2,
+        "variant": "wait_W90_fr20",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W90_fr30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.3,
+        "variant": "wait_W90_fr30",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W90_fr40_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.4,
+        "variant": "wait_W90_fr40",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W90_fr50_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.5,
+        "variant": "wait_W90_fr50",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W90_fr60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.6,
+        "variant": "wait_W90_fr60",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W180_fr20_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.2,
+        "variant": "wait_W180_fr20",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W180_fr30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.3,
+        "variant": "wait_W180_fr30",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W180_fr40_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.4,
+        "variant": "wait_W180_fr40",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W180_fr50_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.5,
+        "variant": "wait_W180_fr50",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W180_fr60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.6,
+        "variant": "wait_W180_fr60",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W15_fr20_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.2,
+        "variant": "wait_W15_fr20",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W15_fr30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.3,
+        "variant": "wait_W15_fr30",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W15_fr40_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.4,
+        "variant": "wait_W15_fr40",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W15_fr50_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.5,
+        "variant": "wait_W15_fr50",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W15_fr60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.6,
+        "variant": "wait_W15_fr60",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W30_fr20_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.2,
+        "variant": "wait_W30_fr20",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W30_fr30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.3,
+        "variant": "wait_W30_fr30",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W30_fr40_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.4,
+        "variant": "wait_W30_fr40",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W30_fr50_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.5,
+        "variant": "wait_W30_fr50",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W30_fr60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.6,
+        "variant": "wait_W30_fr60",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W60_fr20_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.2,
+        "variant": "wait_W60_fr20",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W60_fr30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.3,
+        "variant": "wait_W60_fr30",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W60_fr40_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.4,
+        "variant": "wait_W60_fr40",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W60_fr50_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.5,
+        "variant": "wait_W60_fr50",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W60_fr60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.6,
+        "variant": "wait_W60_fr60",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W90_fr20_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.2,
+        "variant": "wait_W90_fr20",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W90_fr30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.3,
+        "variant": "wait_W90_fr30",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W90_fr40_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.4,
+        "variant": "wait_W90_fr40",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W90_fr50_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.5,
+        "variant": "wait_W90_fr50",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W90_fr60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.6,
+        "variant": "wait_W90_fr60",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W180_fr20_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.2,
+        "variant": "wait_W180_fr20",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W180_fr30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.3,
+        "variant": "wait_W180_fr30",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W180_fr40_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.4,
+        "variant": "wait_W180_fr40",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W180_fr50_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.5,
+        "variant": "wait_W180_fr50",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W180_fr60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.6,
+        "variant": "wait_W180_fr60",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W15_fr20_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.2,
+        "variant": "wait_W15_fr20",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W15_fr30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.3,
+        "variant": "wait_W15_fr30",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W15_fr40_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.4,
+        "variant": "wait_W15_fr40",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W15_fr50_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.5,
+        "variant": "wait_W15_fr50",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W15_fr60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "fixed_rate": 0.6,
+        "variant": "wait_W15_fr60",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W30_fr20_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.2,
+        "variant": "wait_W30_fr20",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W30_fr30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.3,
+        "variant": "wait_W30_fr30",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W30_fr40_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.4,
+        "variant": "wait_W30_fr40",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W30_fr50_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.5,
+        "variant": "wait_W30_fr50",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W30_fr60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "fixed_rate": 0.6,
+        "variant": "wait_W30_fr60",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W60_fr20_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.2,
+        "variant": "wait_W60_fr20",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W60_fr30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.3,
+        "variant": "wait_W60_fr30",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W60_fr40_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.4,
+        "variant": "wait_W60_fr40",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W60_fr50_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.5,
+        "variant": "wait_W60_fr50",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W60_fr60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "fixed_rate": 0.6,
+        "variant": "wait_W60_fr60",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W90_fr20_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.2,
+        "variant": "wait_W90_fr20",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W90_fr30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.3,
+        "variant": "wait_W90_fr30",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W90_fr40_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.4,
+        "variant": "wait_W90_fr40",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W90_fr50_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.5,
+        "variant": "wait_W90_fr50",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W90_fr60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "fixed_rate": 0.6,
+        "variant": "wait_W90_fr60",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W180_fr20_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.2,
+        "variant": "wait_W180_fr20",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W180_fr30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.3,
+        "variant": "wait_W180_fr30",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W180_fr40_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.4,
+        "variant": "wait_W180_fr40",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W180_fr50_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.5,
+        "variant": "wait_W180_fr50",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0c_sentry_wait_W180_fr60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "fixed_rate": 0.6,
+        "variant": "wait_W180_fr60",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0c",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
     }
   ]
 }
