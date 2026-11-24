@@ -1,0 +1,863 @@
+{
+ "meta": {
+  "issn": "2364-1185",
+  "container": "Data Science and Engineering",
+  "publisher": "Springer Science and Business Media LLC",
+  "sampled": 108,
+  "with_dates": 105,
+  "window": [
+   "2024-11-24",
+   "2026-11-24"
+  ],
+  "fetched": "2026-11-24T03:08:20",
+  "source": "https://api.crossref.org/journals/2364-1185/works (sample=100 x 3, assertion received/accepted)",
+  "median_days": 174,
+  "min_days": 22,
+  "max_days": 424,
+  "q25": 132,
+  "q75": 237,
+  "frac_le_72": 0.067
+ },
+ "articles": [
+  {
+   "doi": "10.1007/s41019-025-00282-1",
+   "title": "Graph Contrastive-and-Reconstructive Hashing for Unsupervised Cross-Modal Retrieval",
+   "received": "2024-09-09",
+   "revised": "31 December 2024",
+   "accepted": "2025-01-12",
+   "days": 125
+  },
+  {
+   "doi": "10.1007/s41019-025-00339-1",
+   "title": "Unsupervised Anomaly Detection on Attributed Multiplex Heterogeneous Networks",
+   "received": "2025-04-14",
+   "revised": "28 September 2025",
+   "accepted": "2025-12-12",
+   "days": 242
+  },
+  {
+   "doi": "10.1007/s41019-024-00274-7",
+   "title": "Enhanced-Similarity Attention Fusion for Unsupervised Cross-Modal Hashing Retrieval",
+   "received": "2024-01-30",
+   "revised": "20 November 2024",
+   "accepted": "2024-11-27",
+   "days": 302
+  },
+  {
+   "doi": "10.1007/s41019-025-00330-w",
+   "title": "Fine-Grained Disentanglement for Alleviating Inconsistencies in Cross-Modal Hashing Retrieval",
+   "received": "2025-08-22",
+   "revised": "20 November 2025",
+   "accepted": "2025-11-21",
+   "days": 91
+  },
+  {
+   "doi": "10.1007/s41019-026-00368-4",
+   "title": "Sequence-Structure Fusion Framework for Legal Summarization",
+   "received": "2026-03-30",
+   "revised": "12 June 2026",
+   "accepted": "2026-07-21",
+   "days": 113
+  },
+  {
+   "doi": "10.1007/s41019-024-00271-w",
+   "title": "SymmPi: Exploiting Symmetry Removal for Fast Subgraph Matching",
+   "received": "2024-04-01",
+   "revised": "10 September 2024",
+   "accepted": "2024-11-19",
+   "days": 232
+  },
+  {
+   "doi": "10.1007/s41019-025-00303-z",
+   "title": "A Comprehensive Survey on Deep Learning Techniques in Educational Data Mining",
+   "received": "2024-12-24",
+   "revised": "10 May 2025",
+   "accepted": "2025-06-17",
+   "days": 175
+  },
+  {
+   "doi": "10.1007/s41019-025-00290-1",
+   "title": "SOC: A Succinct Adaptive Semantic OLAP Caching",
+   "received": "2024-04-22",
+   "revised": "4 February 2025",
+   "accepted": "2025-03-23",
+   "days": 335
+  },
+  {
+   "doi": "10.1007/s41019-025-00324-8",
+   "title": "Beyond Shuffling: PAC-Tree for Efficient Distributed Joins via Hierarchical Data Placement",
+   "received": "2025-06-05",
+   "revised": "5 September 2025",
+   "accepted": "2025-10-28",
+   "days": 145
+  },
+  {
+   "doi": "10.1007/s41019-026-00351-z",
+   "title": "Bandwidth Exploration for Spatial-Temporal Kernel Density Visualizations",
+   "received": "2025-07-24",
+   "revised": "25 January 2026",
+   "accepted": "2026-03-03",
+   "days": 222
+  },
+  {
+   "doi": "10.1007/s41019-026-00348-8",
+   "title": "Neighbor Contrast-based Multiple Self-supervised Incomplete Multi-view Clustering",
+   "received": "2024-12-13",
+   "revised": "9 February 2026",
+   "accepted": "2026-02-10",
+   "days": 424
+  },
+  {
+   "doi": "10.1007/s41019-025-00287-w",
+   "title": "Hierarchical Isomerism Distributed Equivalent Union Find for Billion-Scale Disjoint Sets: A Case Study",
+   "received": "2024-10-23",
+   "revised": "3 February 2025",
+   "accepted": "2025-03-10",
+   "days": 138
+  },
+  {
+   "doi": "10.1007/s41019-026-00362-w",
+   "title": "Semantic-assisted Hierarchical Clustering with Context-Enhanced Prompting Based on Reliable Examples",
+   "received": "2026-03-04",
+   "revised": "8 May 2026",
+   "accepted": "2026-05-30",
+   "days": 87
+  },
+  {
+   "doi": "10.1007/s41019-025-00329-3",
+   "title": "Data Platforms for Multi-organizational Settings: A Systematic Literature Review with Use Cases and a Reference Architecture",
+   "received": "2025-01-01",
+   "revised": "13 November 2025",
+   "accepted": "2025-11-16",
+   "days": 319
+  },
+  {
+   "doi": "10.1007/s41019-026-00369-3",
+   "title": "Urd: A Pipelined Blockchain Sharding Protocol with Cooperative Cross-Shard Verification",
+   "received": "2025-09-27",
+   "revised": "16 July 2026",
+   "accepted": "2026-07-28",
+   "days": 304
+  },
+  {
+   "doi": "10.1007/s41019-024-00275-6",
+   "title": "Identifying E-Commerce Fraud Through User Behavior Data: Observations and Insights",
+   "received": "2024-07-31",
+   "revised": "8 October 2024",
+   "accepted": "2024-11-24",
+   "days": 116
+  },
+  {
+   "doi": "10.1007/s41019-025-00312-y",
+   "title": "OLR-WAA: Adaptive and Drift-Resilient Online Regression with Dynamic Weighted Averaging",
+   "received": "2025-02-17",
+   "revised": "25 June 2025",
+   "accepted": "2025-08-01",
+   "days": 165
+  },
+  {
+   "doi": "10.1007/s41019-025-00319-5",
+   "title": "Sign-aware Recommendation Based on Virtual Semantic Knowledge Graph",
+   "received": "2025-04-17",
+   "revised": "30 July 2025",
+   "accepted": "2025-09-09",
+   "days": 145
+  },
+  {
+   "doi": "10.1007/s41019-026-00346-w",
+   "title": "A Survey of Generative Techniques for Spatial-Temporal Data Mining",
+   "received": "2025-11-28",
+   "revised": "7 December 2025",
+   "accepted": "2026-01-03",
+   "days": 36
+  },
+  {
+   "doi": "10.1007/s41019-025-00344-4",
+   "title": "REST: An Efficient Distributed Framework for Real-time Semantic Trajectory Join",
+   "received": "2025-07-31",
+   "revised": "19 December 2025",
+   "accepted": "2025-12-25",
+   "days": 147
+  },
+  {
+   "doi": "10.1007/s41019-025-00296-9",
+   "title": "LLM-Based Agents for Tool Learning: A Survey",
+   "received": "2024-10-09",
+   "revised": "5 April 2025",
+   "accepted": "2025-04-21",
+   "days": 194
+  },
+  {
+   "doi": "10.1007/s41019-025-00288-9",
+   "title": "An Exploratory Study on Information Cocoon in Recommender Systems",
+   "received": "2024-11-30",
+   "revised": "21 February 2025",
+   "accepted": "2025-03-16",
+   "days": 106
+  },
+  {
+   "doi": "10.1007/s41019-024-00277-4",
+   "title": "Budget-Constrained Runtime Allocation of Linked Data Services in Stream Processing",
+   "received": "2024-02-11",
+   "revised": "26 November 2024",
+   "accepted": "2024-12-16",
+   "days": 309
+  },
+  {
+   "doi": "10.1007/s41019-025-00294-x",
+   "title": "Dual Sequence Modeling for Knowledge Tracing",
+   "received": "2024-12-12",
+   "revised": "22 March 2025",
+   "accepted": "2025-04-11",
+   "days": 120
+  },
+  {
+   "doi": "10.1007/s41019-024-00272-9",
+   "title": "DTIA: Disruptive Text-Image Alignment for Countering Text-to-Image Diffusion Model Personalization",
+   "received": "2024-07-29",
+   "revised": "19 October 2024",
+   "accepted": "2024-11-24",
+   "days": 118
+  },
+  {
+   "doi": "10.1007/s41019-026-00372-8",
+   "title": "MATE: A Multi-Agent Trait Evaluation System for Automated Essay Scoring",
+   "received": "2026-03-31",
+   "revised": "1 September 2026",
+   "accepted": "2026-09-08",
+   "days": 161
+  },
+  {
+   "doi": "10.1007/s41019-025-00323-9",
+   "title": "Dynamic Region Co-location Pattern Discovery: An Efficient Approach Based on Generalized Maximal Row Instances",
+   "received": "2024-12-29",
+   "revised": "30 July 2025",
+   "accepted": "2025-10-07",
+   "days": 282
+  },
+  {
+   "doi": "10.1007/s41019-025-00318-6",
+   "title": "Evaluation of Estimation Methods for Simultaneous Equations Models Across Varying Levels of Data Variability",
+   "received": "2024-10-22",
+   "revised": "25 August 2025",
+   "accepted": "2025-09-01",
+   "days": 314
+  },
+  {
+   "doi": "10.1007/s41019-025-00338-2",
+   "title": "Enumerating Cliques on k-Partite Graphs",
+   "received": "2025-05-27",
+   "revised": "31 October 2025",
+   "accepted": "2025-12-09",
+   "days": 196
+  },
+  {
+   "doi": "10.1007/s41019-025-00320-y",
+   "title": "Relationship-based Access Control for Data Spaces",
+   "received": "2025-01-03",
+   "revised": "2 September 2025",
+   "accepted": "2025-09-13",
+   "days": 253
+  },
+  {
+   "doi": "10.1007/s41019-024-00267-6",
+   "title": "Common Neighbor Completion with Information Entropy for Link Prediction in Social Networks",
+   "received": "2024-07-15",
+   "revised": "16 September 2024",
+   "accepted": "2024-10-09",
+   "days": 86
+  },
+  {
+   "doi": "10.1007/s41019-025-00313-x",
+   "title": "A Graph RAG Approach to Enhance Explainability in Dataset Discovery",
+   "received": "2025-02-16",
+   "revised": "10 July 2025",
+   "accepted": "2025-08-12",
+   "days": 177
+  },
+  {
+   "doi": "10.1007/s41019-025-00327-5",
+   "title": "Sparse Gradient Training for Recommender Systems",
+   "received": "2025-06-09",
+   "revised": "5 October 2025",
+   "accepted": "2025-11-10",
+   "days": 154
+  },
+  {
+   "doi": "10.1007/s41019-026-00363-9",
+   "title": "Learning Multi-aspect Shared Representation for Recommendation",
+   "received": "2025-08-22",
+   "revised": "5 January 2026",
+   "accepted": "2026-06-08",
+   "days": 290
+  },
+  {
+   "doi": "10.1007/s41019-025-00328-4",
+   "title": "Limit Order Book Event Stream Prediction with Diffusion Model",
+   "received": "2025-07-03",
+   "revised": "14 October 2025",
+   "accepted": "2025-11-13",
+   "days": 133
+  },
+  {
+   "doi": "10.1007/s41019-024-00278-3",
+   "title": "IGFM: An Enhanced Graph Similarity Computation Method with Fine-Grained Analysis",
+   "received": "2024-08-29",
+   "revised": "14 November 2024",
+   "accepted": "2024-12-15",
+   "days": 108
+  },
+  {
+   "doi": "10.1007/s41019-025-00335-5",
+   "title": "Retrieval-Augmented Generation for AI-Generated Content: A Survey",
+   "received": "2025-11-09",
+   "revised": "29 November 2025",
+   "accepted": "2025-12-02",
+   "days": 23
+  },
+  {
+   "doi": "10.1007/s41019-025-00283-0",
+   "title": "Analysis and Multi-objective Protection of Public Medical Datasets from Privacy and Utility Perspectives",
+   "received": "2024-08-04",
+   "revised": "1 November 2024",
+   "accepted": "2025-01-26",
+   "days": 175
+  },
+  {
+   "doi": "10.1007/s41019-025-00336-4",
+   "title": "Real-Time Dynamic Response Identification for Highway Structural Health Monitoring Data",
+   "received": "2025-04-28",
+   "revised": "23 October 2025",
+   "accepted": "2025-12-07",
+   "days": 223
+  },
+  {
+   "doi": "10.1007/s41019-024-00270-x",
+   "title": "Improving Generalization of Genetic Programming for High-Dimensional Symbolic Regression with Shapley Value Based Feature Selection",
+   "received": "2024-05-20",
+   "revised": "2 October 2024",
+   "accepted": "2024-11-11",
+   "days": 175
+  },
+  {
+   "doi": "10.1007/s41019-025-00297-8",
+   "title": "MedPix 2.0: A Comprehensive Multimodal Biomedical Data Set for Advanced AI Applications with Retrieval Augmented Generation and Knowledge Graphs",
+   "received": "2024-12-12",
+   "revised": "30 April 2025",
+   "accepted": "2025-05-03",
+   "days": 142
+  },
+  {
+   "doi": "10.1007/s41019-026-00360-y",
+   "title": "LIGHT: A Learned Join Order Selection Network Using Dynamic Graph Attention Mechanism",
+   "received": "2025-08-04",
+   "revised": "18 April 2026",
+   "accepted": "2026-05-11",
+   "days": 280
+  },
+  {
+   "doi": "10.1007/s41019-025-00285-y",
+   "title": "Large Language Model Enhanced Knowledge Representation Learning: A Survey",
+   "received": "2024-08-29",
+   "revised": "1 February 2025",
+   "accepted": "2025-02-09",
+   "days": 164
+  },
+  {
+   "doi": "10.1007/s41019-025-00326-6",
+   "title": "BlockSketch: A Hybrid Tree-Based Sketch for Keyword Search in Blockchain Systems",
+   "received": "2025-07-11",
+   "revised": "10 October 2025",
+   "accepted": "2025-11-02",
+   "days": 114
+  },
+  {
+   "doi": "10.1007/s41019-025-00341-7",
+   "title": "AdamMAD: Improved Second-Moment of Adam for Enhancing Stability and Convergence",
+   "received": "2025-03-26",
+   "revised": "18 December 2025",
+   "accepted": "2025-12-21",
+   "days": 270
+  },
+  {
+   "doi": "10.1007/s41019-026-00353-x",
+   "title": "CAMV: A Framework for Context-Aware Multi-View Visualization of Data Analysis Results",
+   "received": "2025-10-05",
+   "revised": "1 March 2026",
+   "accepted": "2026-03-06",
+   "days": 152
+  },
+  {
+   "doi": "10.1007/s41019-026-00356-8",
+   "title": "HIACS: A High-Performance Hybrid Index Structure Combining ART and Skip List for Non- Volatile Memory Storage Devices",
+   "received": "2025-11-02",
+   "revised": "15 February 2026",
+   "accepted": "2026-04-16",
+   "days": 165
+  },
+  {
+   "doi": "10.1007/s41019-026-00349-7",
+   "title": "Multi-agents Based User Values Mining for Recommendation",
+   "received": "2025-07-11",
+   "revised": "18 November 2025",
+   "accepted": "2026-02-11",
+   "days": 215
+  },
+  {
+   "doi": "10.1007/s41019-025-00331-9",
+   "title": "Dynamic Sub-Sequence Warping: A Representation-Based Similarity Measure for Long Time Series",
+   "received": "2025-04-23",
+   "revised": "3 November 2025",
+   "accepted": "2025-11-25",
+   "days": 216
+  },
+  {
+   "doi": "10.1007/s41019-025-00289-8",
+   "title": "Syntactic-Enhanced Multi-Task Learning Model for Aspect Sentiment Triplet Extraction",
+   "received": "2024-06-28",
+   "revised": "13 February 2025",
+   "accepted": "2025-03-19",
+   "days": 264
+  },
+  {
+   "doi": "10.1007/s41019-025-00301-1",
+   "title": "Rethinking the Denoising Strategy in Session-Based Recommendation via Bidirectional Information Flow",
+   "received": "2025-03-26",
+   "revised": "30 April 2025",
+   "accepted": "2025-05-26",
+   "days": 61
+  },
+  {
+   "doi": "10.1007/s41019-024-00279-2",
+   "title": "Sliding-ITeM: An Adaptive-Size Graph Stream Summarization Structure Based on Sliding Windows",
+   "received": "2024-05-19",
+   "revised": "21 September 2024",
+   "accepted": "2024-12-19",
+   "days": 214
+  },
+  {
+   "doi": "10.1007/s41019-025-00340-8",
+   "title": "A Survey on Modern Deep Learning Techniques for Traffic Volume Prediction",
+   "received": "2025-06-13",
+   "revised": "15 November 2025",
+   "accepted": "2025-12-18",
+   "days": 188
+  },
+  {
+   "doi": "10.1007/s41019-026-00352-y",
+   "title": "Contrastive Learning with Growing Generated Representations for Inductive Knowledge Graph Embedding",
+   "received": "2025-08-05",
+   "revised": "17 December 2025",
+   "accepted": "2026-03-05",
+   "days": 212
+  },
+  {
+   "doi": "10.1007/s41019-025-00307-9",
+   "title": "Opinion Maximization Based on Fairness in Social Networks",
+   "received": "2025-01-22",
+   "revised": "5 April 2025",
+   "accepted": "2025-06-25",
+   "days": 154
+  },
+  {
+   "doi": "10.1007/s41019-025-00293-y",
+   "title": "Graph Neural Networks for Candidate-Job Matching: An Inductive Learning Approach",
+   "received": "2024-12-02",
+   "revised": "7 March 2025",
+   "accepted": "2025-04-13",
+   "days": 132
+  },
+  {
+   "doi": "10.1007/s41019-024-00268-5",
+   "title": "Relation Semantic Guidance and Entity Position Location for Relation Extraction",
+   "received": "2024-06-24",
+   "revised": "19 September 2024",
+   "accepted": "2024-10-27",
+   "days": 125
+  },
+  {
+   "doi": "10.1007/s41019-025-00316-8",
+   "title": "Evaluating Regulatory Compliance in Maturity Models for Patient-Centred Health Data Sharing: A Literature Review",
+   "received": "2025-01-04",
+   "revised": "2 July 2025",
+   "accepted": "2025-08-24",
+   "days": 232
+  },
+  {
+   "doi": "10.1007/s41019-025-00299-6",
+   "title": "A Supply\u2013Demand Balance Guided Hierarchical Reinforcement Learning Approach for Truck-Cargo Matching",
+   "received": "2025-02-26",
+   "revised": "28 April 2025",
+   "accepted": "2025-05-17",
+   "days": 80
+  },
+  {
+   "doi": "10.1007/s41019-025-00308-8",
+   "title": "On-Device Recommender Systems: A Comprehensive Survey",
+   "received": "2025-05-12",
+   "revised": "5 July 2025",
+   "accepted": "2025-07-10",
+   "days": 59
+  },
+  {
+   "doi": "10.1007/s41019-026-00355-9",
+   "title": "CN-PDS: Facilitating Dataset Search with LLMs and its Application to China\u2019s Public Data",
+   "received": "2026-01-12",
+   "revised": "12 January 2026",
+   "accepted": "2026-03-03",
+   "days": 50
+  },
+  {
+   "doi": "10.1007/s41019-025-00333-7",
+   "title": "COIN: Graph Contrastive Learning with Orthogonal Continuous Augmentation and Information Balance",
+   "received": "2025-08-27",
+   "revised": "11 October 2025",
+   "accepted": "2025-11-28",
+   "days": 93
+  },
+  {
+   "doi": "10.1007/s41019-025-00342-6",
+   "title": "Workload-Aware Buffer Prefetching for Database Systems",
+   "received": "2025-08-08",
+   "revised": "19 November 2025",
+   "accepted": "2025-12-20",
+   "days": 134
+  },
+  {
+   "doi": "10.1007/s41019-024-00265-8",
+   "title": "Spatio-Temporal Keyword Query Processing Based on Key-Value Stores",
+   "received": "2024-04-29",
+   "revised": "9 August 2024",
+   "accepted": "2024-09-16",
+   "days": 140
+  },
+  {
+   "doi": "10.1007/s41019-026-00371-9",
+   "title": "From Code Completion to Agentic Development: A Survey of AI Coding Agents, Ecosystems, and Evolving Software Engineering Practice",
+   "received": "2026-03-28",
+   "revised": "11 August 2026",
+   "accepted": "2026-08-19",
+   "days": 144
+  },
+  {
+   "doi": "10.1007/s41019-025-00284-z",
+   "title": "Semi-Automatic Building of Ontologies from Unstructured French Texts: Industrial Case Study",
+   "received": "2024-04-29",
+   "revised": "20 January 2025",
+   "accepted": "2025-02-09",
+   "days": 286
+  },
+  {
+   "doi": "10.1007/s41019-026-00370-w",
+   "title": "Anomaly Detection for Multivariate Time Series with Cross-Range Modeling",
+   "received": "2026-03-17",
+   "revised": "2 July 2026",
+   "accepted": "2026-08-07",
+   "days": 143
+  },
+  {
+   "doi": "10.1007/s41019-025-00286-x",
+   "title": "Enhancing Robustness in Long-Tailed Image Classification with Angular Approaches and Balanced Learning",
+   "received": "2024-06-19",
+   "revised": "21 November 2024",
+   "accepted": "2025-03-10",
+   "days": 264
+  },
+  {
+   "doi": "10.1007/s41019-024-00280-9",
+   "title": "Micro-cluster Structure Clustering Based on Weight-Constrained Minimum Spanning Tree",
+   "received": "2024-07-15",
+   "revised": "1 December 2024",
+   "accepted": "2024-12-19",
+   "days": 157
+  },
+  {
+   "doi": "10.1007/s41019-025-00325-7",
+   "title": "SieveJoin: Boosting Multi-way Joins by Filtering Unneeded Intermediate Results",
+   "received": "2025-08-02",
+   "revised": "10 October 2025",
+   "accepted": "2025-10-28",
+   "days": 87
+  },
+  {
+   "doi": "10.1007/s41019-024-00259-6",
+   "title": "Computing Prominent Skyline on Massive Data",
+   "received": "2024-01-14",
+   "revised": "12 June 2024",
+   "accepted": "2024-08-05",
+   "days": 204
+  },
+  {
+   "doi": "10.1007/s41019-024-00273-8",
+   "title": "TSQ: An Optimized Framework for Efficiently Answering Time Series Queries",
+   "received": "2024-06-28",
+   "revised": "27 November 2024",
+   "accepted": "2024-11-30",
+   "days": 155
+  },
+  {
+   "doi": "10.1007/s41019-026-00357-7",
+   "title": "VFCI: A Federated Framework for Vertical Causal Inference",
+   "received": "2025-09-20",
+   "revised": "8 January 2026",
+   "accepted": "2026-04-15",
+   "days": 207
+  },
+  {
+   "doi": "10.1007/s41019-025-00292-z",
+   "title": "DFedKG: Diffusion-Based Federated Knowledge Graph Completion",
+   "received": "2024-11-01",
+   "revised": "12 March 2025",
+   "accepted": "2025-04-13",
+   "days": 163
+  },
+  {
+   "doi": "10.1007/s41019-024-00276-5",
+   "title": "Aion: Live Migration for In-Memory Databases with Zero Downtime and Reduced Redundant Data Transfer",
+   "received": "2024-05-03",
+   "revised": "21 November 2024",
+   "accepted": "2024-12-12",
+   "days": 223
+  },
+  {
+   "doi": "10.1007/s41019-025-00315-9",
+   "title": "CAFL: Conditional Attention Federated Learning for Image Emotion Analysis",
+   "received": "2024-09-09",
+   "revised": "15 July 2025",
+   "accepted": "2025-08-18",
+   "days": 343
+  },
+  {
+   "doi": "10.1007/s41019-025-00332-8",
+   "title": "WALDEN: Workload-Aware Learned Tree Index",
+   "received": "2024-12-24",
+   "revised": "18 September 2025",
+   "accepted": "2025-11-25",
+   "days": 336
+  },
+  {
+   "doi": "10.1007/s41019-025-00305-x",
+   "title": "Simulation as a Service in Data Spaces: A Digital Twin-based Approach",
+   "received": "2024-12-30",
+   "revised": "15 June 2025",
+   "accepted": "2025-06-23",
+   "days": 175
+  },
+  {
+   "doi": "10.1007/s41019-026-00361-x",
+   "title": "Why Retrieval is not Enough: Structured Memory Scheduling for Large Language Model Reasoning",
+   "received": "2026-01-19",
+   "revised": "31 March 2026",
+   "accepted": "2026-05-18",
+   "days": 119
+  },
+  {
+   "doi": "10.1007/s41019-025-00314-w",
+   "title": "A Cost-Saving Response Scheduler for Highway Structural Health Monitoring Data Applications",
+   "received": "2025-02-20",
+   "revised": "26 April 2025",
+   "accepted": "2025-08-13",
+   "days": 174
+  },
+  {
+   "doi": "10.1007/s41019-025-00337-3",
+   "title": "IBformer: Inductive Bias is Necessary for Multivariate Time Series Forecasting",
+   "received": "2025-05-15",
+   "revised": "11 September 2025",
+   "accepted": "2025-12-06",
+   "days": 205
+  },
+  {
+   "doi": "10.1007/s41019-025-00295-w",
+   "title": "Embedding Models for Multivariate Time Series Anomaly Detection in Industry 5.0",
+   "received": "2024-12-09",
+   "revised": "18 April 2025",
+   "accepted": "2025-04-21",
+   "days": 133
+  },
+  {
+   "doi": "10.1007/s41019-025-00300-2",
+   "title": "Enhancing Data Ingestion Efficiency in Cloud-Based Systems: A Design Pattern Approach",
+   "received": "2024-12-02",
+   "revised": "14 May 2025",
+   "accepted": "2025-05-20",
+   "days": 169
+  },
+  {
+   "doi": "10.1007/s41019-026-00345-x",
+   "title": "Efficient Label-Constrained Path Queries on Time-Dependent Graphs via LP-Tree Decomposition",
+   "received": "2025-10-16",
+   "revised": "10 December 2025",
+   "accepted": "2026-01-03",
+   "days": 79
+  },
+  {
+   "doi": "10.1007/s41019-025-00322-w",
+   "title": "PPA++: Preference Prototype-Aware Learning with Large Language Model for Universal Cross-Domain Recommendation",
+   "received": "2025-03-18",
+   "revised": "30 August 2025",
+   "accepted": "2025-09-25",
+   "days": 191
+  },
+  {
+   "doi": "10.1007/s41019-025-00310-0",
+   "title": "Dual-triangular Recommender System",
+   "received": "2025-04-20",
+   "revised": "2 July 2025",
+   "accepted": "2025-07-27",
+   "days": 98
+  },
+  {
+   "doi": "10.1007/s41019-025-00321-x",
+   "title": "Generating Counterfactual Temporal Motifs: Unraveling the Mysteries of Temporal Graph Neural Networks",
+   "received": "2025-05-10",
+   "revised": "1 September 2025",
+   "accepted": "2025-09-22",
+   "days": 135
+  },
+  {
+   "doi": "10.1007/s41019-026-00366-6",
+   "title": "Semantic-Enhanced Graph Regularization Hashing for Large-Scale Cross-Modal Retrieval",
+   "received": "2025-12-14",
+   "revised": "21 May 2026",
+   "accepted": "2026-07-06",
+   "days": 204
+  },
+  {
+   "doi": "10.1007/s41019-025-00281-2",
+   "title": "A Web Service Oriented Integration Solution for Capital Facilities Information Handover",
+   "received": "2024-02-13",
+   "revised": "10 November 2024",
+   "accepted": "2025-01-19",
+   "days": 341
+  },
+  {
+   "doi": "10.1007/s41019-025-00304-y",
+   "title": "Proactive Rumor Control Using Graph Neural Networks and Evolutionary Optimization",
+   "received": "2024-11-05",
+   "revised": "28 March 2025",
+   "accepted": "2025-06-24",
+   "days": 231
+  },
+  {
+   "doi": "10.1007/s41019-026-00358-6",
+   "title": "Unleashing the Power of UWB for Indoor Mobility Analytics: A Museum Case Study",
+   "received": "2026-03-19",
+   "revised": "19 March 2026",
+   "accepted": "2026-04-10",
+   "days": 22
+  },
+  {
+   "doi": "10.1007/s41019-025-00343-5",
+   "title": "MiniRFANN: Range-Filtered Approximate Vector Similarity Search on Edge Devices",
+   "received": "2025-08-29",
+   "revised": "20 October 2025",
+   "accepted": "2025-12-24",
+   "days": 117
+  },
+  {
+   "doi": "10.1007/s41019-026-00367-5",
+   "title": "HOFA: Higher-Order Feature Alignment for Social Recommendation via Contrastive Learning",
+   "received": "2025-10-05",
+   "revised": "25 April 2026",
+   "accepted": "2026-07-07",
+   "days": 275
+  },
+  {
+   "doi": "10.1007/s41019-026-00359-5",
+   "title": "Cue-Enhanced Time-Evolving Representation Learning for Node Importance Estimation in Dynamic Networks",
+   "received": "2025-07-01",
+   "revised": "19 March 2026",
+   "accepted": "2026-05-05",
+   "days": 308
+  },
+  {
+   "doi": "10.1007/s41019-025-00311-z",
+   "title": "A Security Analysis of European Data Space Architectures",
+   "received": "2024-11-29",
+   "revised": "19 June 2025",
+   "accepted": "2025-07-26",
+   "days": 239
+  },
+  {
+   "doi": "10.1007/s41019-024-00266-7",
+   "title": "Relational Data Cleaning Meets Artificial Intelligence: A Survey",
+   "received": "2024-04-16",
+   "revised": "4 August 2024",
+   "accepted": "2024-10-05",
+   "days": 172
+  },
+  {
+   "doi": "10.1007/s41019-025-00302-0",
+   "title": "PostMan: A Productive System for Spatio-temporal Data Management and Analysis",
+   "received": "2024-08-18",
+   "revised": "20 March 2025",
+   "accepted": "2025-06-04",
+   "days": 290
+  },
+  {
+   "doi": "10.1007/s41019-025-00306-w",
+   "title": "Influential Billboard Slot Selection Using Spatial Clustering and Pruned Submodularity Graph",
+   "received": "2025-01-20",
+   "revised": "30 May 2025",
+   "accepted": "2025-06-25",
+   "days": 156
+  },
+  {
+   "doi": "10.1007/s41019-024-00269-4",
+   "title": "A Quantum Framework for Combinatorial Optimization Problem over Graphs",
+   "received": "2024-01-03",
+   "revised": "10 November 2024",
+   "accepted": "2024-11-18",
+   "days": 320
+  },
+  {
+   "doi": "10.1007/s41019-024-00263-w",
+   "title": "ESPRESSO: A Framework to Empower Search on the Decentralized Web",
+   "received": "2024-03-07",
+   "revised": "19 August 2024",
+   "accepted": "2024-09-09",
+   "days": 186
+  },
+  {
+   "doi": "10.1007/s41019-025-00334-6",
+   "title": "On-Demand Augmentation for Long-Tail Data Through Subset- and Topic-Driven Sparsity Identification Framework",
+   "received": "2025-10-19",
+   "revised": "19 November 2025",
+   "accepted": "2025-11-30",
+   "days": 42
+  },
+  {
+   "doi": "10.1007/s41019-025-00317-7",
+   "title": "Operationalizing and Automating Data Validation in Data Spaces",
+   "received": "2024-12-30",
+   "revised": "19 June 2025",
+   "accepted": "2025-08-24",
+   "days": 237
+  },
+  {
+   "doi": "10.1007/s41019-025-00309-7",
+   "title": "HUMP: Highlighted Users\u2019 Modality Preference for Multi-modal Recommender Systems",
+   "received": "2025-01-03",
+   "revised": "18 July 2025",
+   "accepted": "2025-07-19",
+   "days": 197
+  },
+  {
+   "doi": "10.1007/s41019-026-00347-9",
+   "title": "Mining Sustained Emerging Spatio-Temporal Co-occurrence Patterns from Dynamic Spatial Databases",
+   "received": "2025-05-08",
+   "revised": "4 December 2025",
+   "accepted": "2026-02-02",
+   "days": 270
+  },
+  {
+   "doi": "10.1007/s41019-025-00291-0",
+   "title": "Effective Medical Visual Question Answering Using Dynamic Prompting and Decoding Knowledge Editing",
+   "received": "2024-07-23",
+   "revised": "5 April 2025",
+   "accepted": "2025-04-12",
+   "days": 263
+  }
+ ]
+}

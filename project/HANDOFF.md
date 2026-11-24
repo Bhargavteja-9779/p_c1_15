@@ -1,20 +1,20 @@
 # HANDOFF — read this first
-*Auto-generated 2026-11-24T03:06:25+00:00 by scripts/write_handoff.py*
+*Auto-generated 2026-11-24T03:11:07+00:00 by scripts/write_handoff.py*
 
 ## Where we are
-- **Status:** RUNNING   **Cycle:** 1 / 12   **Phase:** PHASE1_JOURNAL   **Pivots:** 0 / 3
-- **Step:** journal selection: candidate search
-- **Last action:** Built persistence (Section 2) and restart layers (Section 3); runner smoke-tested twice (idempotent)
-- **NEXT ACTION:** Phase 1: evaluate >=10 Q1 journal candidates, verify Received->Accepted days via Crossref assertions on >=10 recent articles each
+- **Status:** RUNNING   **Cycle:** 1 / 12   **Phase:** PHASE2_LITERATURE   **Pivots:** 0 / 3
+- **Step:** literature + topic candidates
+- **Last action:** Phase 1 done: journal_selection/selected_journal.md
+- **NEXT ACTION:** Phase 2/3: survey recent JKSU-CIS ML papers (Crossref/OpenAlex), generate >=10 CPU-feasible topic candidates, select topic
 
-- **Selected journal:** None
+- **Selected journal:** JKSU-CIS (Springer Nature, ISSN 1319-1578, IF 6.4 2025; turnaround median 71–74 d, marginal)
 - **Topic:** None
 - **Hypothesis:** None
 
 ## Running right now
 - Queue (full): {}; running jobs: none
 - Processes: `none`
-- Heartbeat age: 36s
+- Heartbeat age: 317s
 
 ## Compute
 - Cycle 1: 0.00 h / 15 h   Global: 0.00 h / 120 h (CPU-hours; machine has no GPU)
@@ -22,7 +22,7 @@
 ## Gate status (Section 7)
 | Gate | Status | Evidence |
 |---|---|---|
-| G1 | unknown |  |
+| G1 | pass (marginal; caveat stated) | journal_selection/selected_journal.md — median 71 d (12 m) / 74 d (24 m); 2025 quartile UNVERIFIED |
 | G2 | unknown |  |
 | G3 | unknown |  |
 | G4 | unknown |  |
@@ -37,6 +37,8 @@
 ## Last 10 decisions
 - 2026-11-24T03:04:37+00:00: Place project in repo subfolder project/ on branch claude/dreamy-fermat-7983nm
 - 2026-11-24T03:04:37+00:00: Hardware: CPU-only (4 cores, 15 GB RAM, no CUDA/MPS). All compute budgets are counted as CPU-hours.
+- 2026-11-24T03:11:07+00:00: Selected journal: Journal of King Saud University – Computer and Information Sciences (Springer Nature, ISSN 1319-1578, IF 6.4 (2025))
+- 2026-11-24T03:11:07+00:00: Interpretation: "submission→acceptance ≤ 72" evaluated as the MEDIAN (Accepted−Received) of a random sample
 
 ## Last failures (journal entries)
 - none yet

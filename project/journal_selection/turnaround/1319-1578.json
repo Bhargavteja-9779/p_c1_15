@@ -1,0 +1,2151 @@
+{
+ "meta": {
+  "issn": "1319-1578",
+  "container": "Journal of King Saud University Computer and Information Sciences",
+  "publisher": "Springer Science and Business Media LLC",
+  "sampled": 274,
+  "with_dates": 266,
+  "window": [
+   "2024-11-24",
+   "2026-11-24"
+  ],
+  "fetched": "2026-11-24T03:07:23",
+  "source": "https://api.crossref.org/journals/1319-1578/works (sample=100 x 3, assertion received/accepted)",
+  "median_days": 74.0,
+  "min_days": 0,
+  "max_days": 207,
+  "q25": 55,
+  "q75": 99,
+  "frac_le_72": 0.481
+ },
+ "articles": [
+  {
+   "doi": "10.1007/s44443-025-00286-x",
+   "title": "Communication performance optimization for grant-free access in LEO satellite IoT satellite-ground links",
+   "received": "2025-07-22",
+   "revised": null,
+   "accepted": "2025-09-12",
+   "days": 52
+  },
+  {
+   "doi": "10.1007/s44443-026-01145-z",
+   "title": "Reliability-aware vision-language face anti-spoofing via progressive semantic reorganization",
+   "received": "2026-06-06",
+   "revised": null,
+   "accepted": "2026-07-24",
+   "days": 48
+  },
+  {
+   "doi": "10.1007/s44443-026-00947-5",
+   "title": "Dynamic offset sampling for small object detection in LiDAR\u2013based 3D perception",
+   "received": "2026-01-23",
+   "revised": null,
+   "accepted": "2026-06-10",
+   "days": 138
+  },
+  {
+   "doi": "10.1007/s44443-026-00501-3",
+   "title": "Lml-yolo: Composite enhanced YOLO object detection model for underwater complex environments",
+   "received": "2025-07-08",
+   "revised": null,
+   "accepted": "2026-01-16",
+   "days": 192
+  },
+  {
+   "doi": "10.1007/s44443-026-01174-8",
+   "title": "DBINDS: detection based on initial noise difference sequence from diffusion model inversion for AI-generated videos",
+   "received": "2026-05-29",
+   "revised": null,
+   "accepted": "2026-07-29",
+   "days": 61
+  },
+  {
+   "doi": "10.1007/s44443-026-00787-3",
+   "title": "MMAF-YOLO: A UAV object detection network based on multi-scale mutual aggregation and fine-grained feature modulation",
+   "received": "2026-02-25",
+   "revised": null,
+   "accepted": "2026-04-19",
+   "days": 53
+  },
+  {
+   "doi": "10.1007/s44443-025-00214-z",
+   "title": "Hourglass attention for image super-resolution",
+   "received": "2025-03-25",
+   "revised": null,
+   "accepted": "2025-07-28",
+   "days": 125
+  },
+  {
+   "doi": "10.1007/s44443-025-00071-w",
+   "title": "Automatic XPath generation agents for vertical websites by LLMs",
+   "received": "2025-01-15",
+   "revised": null,
+   "accepted": "2025-05-15",
+   "days": 120
+  },
+  {
+   "doi": "10.1007/s44443-026-00859-4",
+   "title": "GRACE-Agent: a multi-stage LLM agent framework for grammatical error correction in English academic writing with reduced false positives",
+   "received": "2026-04-07",
+   "revised": null,
+   "accepted": "2026-05-13",
+   "days": 36
+  },
+  {
+   "doi": "10.1007/s44443-025-00136-w",
+   "title": "Novel application of SMD-based IPSO-ANFIS model in predicting the number of measuring points on complex surfaces",
+   "received": "2025-03-04",
+   "revised": null,
+   "accepted": "2025-06-23",
+   "days": 111
+  },
+  {
+   "doi": "10.1007/s44443-025-00397-5",
+   "title": "AdaCOS: adaptive differential privacy shuffle model based on cosine similarity",
+   "received": "2025-09-09",
+   "revised": null,
+   "accepted": "2025-11-18",
+   "days": 70
+  },
+  {
+   "doi": "10.1007/s44443-025-00371-1",
+   "title": "A dual-arm cooperative control method based on improved proximal policy optimization",
+   "received": "2025-07-30",
+   "revised": null,
+   "accepted": "2025-10-30",
+   "days": 92
+  },
+  {
+   "doi": "10.1007/s44443-025-00050-1",
+   "title": "RIMFuzz: real-time impact-aware mutation for library API fuzzing",
+   "received": "2025-02-24",
+   "revised": null,
+   "accepted": "2025-04-29",
+   "days": 64
+  },
+  {
+   "doi": "10.1007/s44443-026-00621-w",
+   "title": "Efficient transformer-based UAV image object detection network based on convolutional self-attention and matchability-adaptive classification",
+   "received": "2026-01-12",
+   "revised": null,
+   "accepted": "2026-02-26",
+   "days": 45
+  },
+  {
+   "doi": "10.1007/s44443-026-00993-z",
+   "title": "Toward privacy-accountable authentication in vehicular networks: An HQC-based context-aware linkable ring signature scheme",
+   "received": "2026-04-20",
+   "revised": null,
+   "accepted": "2026-06-23",
+   "days": 64
+  },
+  {
+   "doi": "10.1007/s44443-026-00899-w",
+   "title": "A dummy-based location privacy protection scheme with semantic correlation of moving paths",
+   "received": "2025-12-25",
+   "revised": null,
+   "accepted": "2026-05-25",
+   "days": 151
+  },
+  {
+   "doi": "10.1007/s44443-026-00726-2",
+   "title": "CoDeSwiT: an efficient multi-stream hybrid architecture for global\u2013local feature fusion via dynamic gating in medical image analysis",
+   "received": "2025-12-28",
+   "revised": null,
+   "accepted": "2026-04-01",
+   "days": 94
+  },
+  {
+   "doi": "10.1007/s44443-026-01407-w",
+   "title": "Semantic-aware dual-domain robust reversible watermarking for high-fidelity image protection",
+   "received": "2026-08-02",
+   "revised": null,
+   "accepted": "2026-09-24",
+   "days": 53
+  },
+  {
+   "doi": "10.1007/s44443-025-00068-5",
+   "title": "Sports image retrieval based on hand-drawn sketches",
+   "received": "2025-02-24",
+   "revised": null,
+   "accepted": "2025-05-19",
+   "days": 84
+  },
+  {
+   "doi": "10.1007/s44443-026-01305-1",
+   "title": "Truthful reverse mechanism for multi-task-redundancy allocation in UAV crowdsensing",
+   "received": "2026-06-18",
+   "revised": null,
+   "accepted": "2026-08-25",
+   "days": 68
+  },
+  {
+   "doi": "10.1007/s44443-026-00682-x",
+   "title": "KnowEntityRec: entity-centric knowledge perception graph neural network for news recommendation",
+   "received": "2025-11-07",
+   "revised": null,
+   "accepted": "2026-03-17",
+   "days": 130
+  },
+  {
+   "doi": "10.1007/s44443-026-01031-8",
+   "title": "MDLPSO-DE: a memory-driven distribution learning hybrid swarm optimizer with application to humanistic learning path optimization",
+   "received": "2026-03-07",
+   "revised": null,
+   "accepted": "2026-06-30",
+   "days": 115
+  },
+  {
+   "doi": "10.1007/s44443-026-00669-8",
+   "title": "Cognitive state analysis based on EEG using chaotic reservoir computing",
+   "received": "2025-11-21",
+   "revised": null,
+   "accepted": "2026-03-13",
+   "days": 112
+  },
+  {
+   "doi": "10.1007/s44443-026-01131-5",
+   "title": "Reverse mixed data sampling based on expectile regression for inflation at risk and economic growth modeling",
+   "received": "2026-05-18",
+   "revised": null,
+   "accepted": "2026-07-21",
+   "days": 64
+  },
+  {
+   "doi": "10.1007/s44443-026-01121-7",
+   "title": "PDCG-RuleDetector: parameterized data-flow call graphs meet large language models for malicious NPM package detection",
+   "received": "2026-05-07",
+   "revised": null,
+   "accepted": "2026-07-20",
+   "days": 74
+  },
+  {
+   "doi": "10.1007/s44443-026-01167-7",
+   "title": "DGQ-YOLO: Depth-Guided Quality-Aware detection with Pseudo-Depth for aerial imagery",
+   "received": "2026-06-24",
+   "revised": null,
+   "accepted": "2026-07-28",
+   "days": 34
+  },
+  {
+   "doi": "10.1007/s44443-026-00707-5",
+   "title": "Bi-level graph reasoning with frequency guidance and spatial constraint for AIGC-manipulation detection and localization",
+   "received": "2026-01-24",
+   "revised": null,
+   "accepted": "2026-03-26",
+   "days": 61
+  },
+  {
+   "doi": "10.1007/s44443-026-01142-2",
+   "title": "An ECC- and OT-based privacy-preserving authentication scheme for smart home systems",
+   "received": "2026-05-28",
+   "revised": null,
+   "accepted": "2026-07-24",
+   "days": 57
+  },
+  {
+   "doi": "10.1007/s44443-026-00547-3",
+   "title": "Class overlap in imbalanced learning: A data-level perspective and comprehensive review",
+   "received": "2025-10-31",
+   "revised": null,
+   "accepted": "2026-02-01",
+   "days": 93
+  },
+  {
+   "doi": "10.1007/s44443-026-01228-x",
+   "title": "Rating-aware graded security offloading and cost optimization for UAV-assisted MEC networks",
+   "received": "2026-02-18",
+   "revised": null,
+   "accepted": "2026-08-08",
+   "days": 171
+  },
+  {
+   "doi": "10.1007/s44443-025-00456-x",
+   "title": "Controllable generative image steganography based on denoising diffusion implicit model",
+   "received": "2025-09-25",
+   "revised": null,
+   "accepted": "2025-12-26",
+   "days": 92
+  },
+  {
+   "doi": "10.1007/s44443-026-00582-0",
+   "title": "CLPE-TE: critical-link and Pareto-Enhanced DRL for traffic engineering in SDN",
+   "received": "2025-11-24",
+   "revised": null,
+   "accepted": "2026-02-12",
+   "days": 80
+  },
+  {
+   "doi": "10.1007/s44443-025-00082-7",
+   "title": "Emotion transfer in audio using mel-cepstral representation and CycleGANs",
+   "received": "2025-03-18",
+   "revised": null,
+   "accepted": "2025-05-25",
+   "days": 68
+  },
+  {
+   "doi": "10.1007/s44443-025-00421-8",
+   "title": "Spatiotemporal memory probabilistic sparse transformer for traffic flow prediction",
+   "received": "2025-10-22",
+   "revised": null,
+   "accepted": "2025-12-06",
+   "days": 45
+  },
+  {
+   "doi": "10.1007/s44443-026-01238-9",
+   "title": "Seeing through the dark: adaptive switch-guided knowledge distillation via heterogeneous teachers for robust plant disease diagnosis",
+   "received": "2026-06-16",
+   "revised": null,
+   "accepted": "2026-08-10",
+   "days": 55
+  },
+  {
+   "doi": "10.1007/s44443-026-00938-6",
+   "title": "Spatio-spectral modeling of dynamic emotion flow with multi-scale wavelets for emotion recognition in conversation",
+   "received": "2026-03-30",
+   "revised": null,
+   "accepted": "2026-06-08",
+   "days": 70
+  },
+  {
+   "doi": "10.1007/s44443-026-01196-2",
+   "title": "FFCS-Net: controlled multi-prior interaction via decoupled residual gating for lightweight defect detection",
+   "received": "2026-06-07",
+   "revised": null,
+   "accepted": "2026-08-02",
+   "days": 56
+  },
+  {
+   "doi": "10.1007/s44443-026-00915-z",
+   "title": "A workflow-oriented and risk-aware system for Turkish legal named entity recognition: integrating transformer-based models with legal knowledge graphs",
+   "received": "2026-04-22",
+   "revised": null,
+   "accepted": "2026-06-02",
+   "days": 41
+  },
+  {
+   "doi": "10.1007/s44443-026-01387-x",
+   "title": "Reversible data hiding in encrypted images with multi-layer embedding based on ring learning with errors",
+   "received": "2026-07-12",
+   "revised": null,
+   "accepted": "2026-09-17",
+   "days": 67
+  },
+  {
+   "doi": "10.1007/s44443-026-01281-6",
+   "title": "Hybrid feature selection with SHAP-based explainable AI for interpretable phishing website detection",
+   "received": "2026-02-02",
+   "revised": null,
+   "accepted": "2026-08-19",
+   "days": 198
+  },
+  {
+   "doi": "10.1007/s44443-026-00701-x",
+   "title": "LASQ: A low-resource aspect-based sentiment quadruple extraction dataset",
+   "received": "2026-02-01",
+   "revised": null,
+   "accepted": "2026-03-24",
+   "days": 51
+  },
+  {
+   "doi": "10.1007/s44443-026-01178-4",
+   "title": "THGCDTR-RP: A triple-hybrid swarm intelligence and tree-based routing protocol for energy-efficient wireless sensor networks",
+   "received": "2026-04-22",
+   "revised": null,
+   "accepted": "2026-07-30",
+   "days": 99
+  },
+  {
+   "doi": "10.1007/s44443-025-00288-9",
+   "title": "Integrated protocol for verifiable confidential cloud computing and data integrity auditing",
+   "received": "2025-02-18",
+   "revised": null,
+   "accepted": "2025-09-13",
+   "days": 207
+  },
+  {
+   "doi": "10.1007/s44443-026-01248-7",
+   "title": "Multi-objective reinforcement learning scheduling framework for heterogeneous AI chips: Energy-efficient and latency-aware edge-cloud collaboration",
+   "received": "2026-05-09",
+   "revised": null,
+   "accepted": "2026-08-12",
+   "days": 95
+  },
+  {
+   "doi": "10.1007/s44443-025-00426-3",
+   "title": "Privacy-preserving transfer learning via one-time encrypted data filtering",
+   "received": "2025-11-07",
+   "revised": null,
+   "accepted": "2025-12-12",
+   "days": 35
+  },
+  {
+   "doi": "10.1007/s44443-026-01079-6",
+   "title": "Enhancing multi-robot map fusion in ROS 2 via dynamic trust factor weighting",
+   "received": "2026-05-14",
+   "revised": null,
+   "accepted": "2026-07-11",
+   "days": 58
+  },
+  {
+   "doi": "10.1007/s44443-026-00971-5",
+   "title": "A trust-aware privacy-preserving federated learning framework for secure threat intelligence sharing using blockchain",
+   "received": "2026-04-23",
+   "revised": null,
+   "accepted": "2026-06-16",
+   "days": 54
+  },
+  {
+   "doi": "10.1007/s44443-025-00225-w",
+   "title": "Robust representation of domain incomplete tabular data via cross-modal debiasing and prototype-fused reconstruction",
+   "received": "2025-04-23",
+   "revised": null,
+   "accepted": "2025-08-03",
+   "days": 102
+  },
+  {
+   "doi": "10.1007/s44443-026-00676-9",
+   "title": "Dynamic programming with Q-learning based reinforcement learning optimization for multi unmanned aerial vehicles swarm path planning",
+   "received": "2025-12-10",
+   "revised": null,
+   "accepted": "2026-03-16",
+   "days": 96
+  },
+  {
+   "doi": "10.1007/s44443-026-00963-5",
+   "title": "UHIF: a unified framework via heterogeneous information fusion for flat, nested, and discontinuous NER",
+   "received": "2026-04-07",
+   "revised": null,
+   "accepted": "2026-06-14",
+   "days": 68
+  },
+  {
+   "doi": "10.1007/s44443-026-00939-5",
+   "title": "Tensor-evolving graph with temporal separation network for traffic flow forecasting",
+   "received": "2026-02-20",
+   "revised": null,
+   "accepted": "2026-06-08",
+   "days": 108
+  },
+  {
+   "doi": "10.1007/s44443-025-00453-0",
+   "title": "Color anti-counterfeiting quick response code: An enhanced authentication method via dual-spectral feature analysis",
+   "received": "2025-07-06",
+   "revised": null,
+   "accepted": "2025-12-26",
+   "days": 173
+  },
+  {
+   "doi": "10.1007/s44443-026-00969-z",
+   "title": "A meta-learning RBF-ELM network with a novel conditional entropy distance metric for mixed-attribute data classification",
+   "received": "2026-05-13",
+   "revised": null,
+   "accepted": "2026-06-15",
+   "days": 33
+  },
+  {
+   "doi": "10.1007/s44443-025-00043-0",
+   "title": "Classification and analysis of cyber-attack intensities: a game theoretic approach",
+   "received": "2025-03-15",
+   "revised": null,
+   "accepted": "2025-04-24",
+   "days": 40
+  },
+  {
+   "doi": "10.1007/s44443-026-00880-7",
+   "title": "p-IC and p-SC: fractional convolution-based morphology for grayscale images",
+   "received": "2026-03-02",
+   "revised": null,
+   "accepted": "2026-05-15",
+   "days": 74
+  },
+  {
+   "doi": "10.1007/s44443-025-00160-w",
+   "title": "Priority-aware task offloading for LEO satellite edge computing network: a multi-agent deep reinforcement learning-based approach",
+   "received": "2025-02-21",
+   "revised": null,
+   "accepted": "2025-07-05",
+   "days": 134
+  },
+  {
+   "doi": "10.1007/s44443-026-01515-7",
+   "title": "CHVPA-SRec: candidate-conditioned historical visual preference activation for generative multimodal sequential recommendation",
+   "received": "2026-05-18",
+   "revised": null,
+   "accepted": "2026-10-16",
+   "days": 151
+  },
+  {
+   "doi": "10.1007/s44443-025-00408-5",
+   "title": "Multi-view information fusion based graph collaborative filtering recommendation",
+   "received": "2025-09-02",
+   "revised": null,
+   "accepted": "2025-11-28",
+   "days": 87
+  },
+  {
+   "doi": "10.1007/s44443-026-00489-w",
+   "title": "Intelligent recognition and analysis of student behavior in real-classroom scenarios: a comprehensive survey, exploration, and future perspectives",
+   "received": "2025-09-24",
+   "revised": null,
+   "accepted": "2026-01-12",
+   "days": 110
+  },
+  {
+   "doi": "10.1007/s44443-025-00404-9",
+   "title": "CALIS: AI-driven context-aware encryption for SDN-enabled smart-home IoT",
+   "received": "2025-08-16",
+   "revised": null,
+   "accepted": "2025-11-26",
+   "days": 102
+  },
+  {
+   "doi": "10.1007/s44443-026-00520-0",
+   "title": "KGB-Path: a knowledge graph-based framework for penetration test path generation in intelligent connected vehicles",
+   "received": "2025-09-20",
+   "revised": null,
+   "accepted": "2026-01-24",
+   "days": 126
+  },
+  {
+   "doi": "10.1007/s44443-026-01247-8",
+   "title": "Privacy-preserving data aggregation in WBANs: a mixed-signal hardware architecture for lightweight homomorphic encryption",
+   "received": "2026-02-19",
+   "revised": null,
+   "accepted": "2026-08-12",
+   "days": 174
+  },
+  {
+   "doi": "10.1007/s44443-026-00744-0",
+   "title": "A codec-aware framework for robust video hiding via frame-type-specific distortion simulation",
+   "received": "2026-02-08",
+   "revised": null,
+   "accepted": "2026-04-06",
+   "days": 57
+  },
+  {
+   "doi": "10.1007/s44443-025-00261-6",
+   "title": "Memory-based collaborative filtering based on matrix factorization and Gower's set rank",
+   "received": "2025-07-03",
+   "revised": null,
+   "accepted": "2025-08-28",
+   "days": 56
+  },
+  {
+   "doi": "10.1007/s44443-026-01200-9",
+   "title": "Data security in large language models: risks, defense, and directions",
+   "received": "2026-03-08",
+   "revised": null,
+   "accepted": "2026-08-02",
+   "days": 147
+  },
+  {
+   "doi": "10.1007/s44443-026-01344-8",
+   "title": "Noise-adaptive cross-modal training with evidential deep learning-based uncertainty",
+   "received": "2026-07-21",
+   "revised": null,
+   "accepted": "2026-09-05",
+   "days": 46
+  },
+  {
+   "doi": "10.1007/s44443-026-00584-y",
+   "title": "Speech-visual integration multimodal multi-agents framework for mobile operation",
+   "received": "2025-12-27",
+   "revised": null,
+   "accepted": "2026-02-15",
+   "days": 50
+  },
+  {
+   "doi": "10.1007/s44443-026-00541-9",
+   "title": "Mitigating the impact of activation smoothing on weights: A channel permutation and smoothing-based LLMs quantization method",
+   "received": "2025-10-24",
+   "revised": null,
+   "accepted": "2026-01-30",
+   "days": 98
+  },
+  {
+   "doi": "10.1007/s44443-026-01005-w",
+   "title": "Explainable common spatial pattern to improve the design of brain-computer interfaces",
+   "received": "2026-02-08",
+   "revised": null,
+   "accepted": "2026-06-26",
+   "days": 138
+  },
+  {
+   "doi": "10.1007/s44443-025-00399-3",
+   "title": "GNN-driven dynamic access control for context-embedded neighborhood fusion",
+   "received": "2025-07-24",
+   "revised": null,
+   "accepted": "2025-11-19",
+   "days": 118
+  },
+  {
+   "doi": "10.1007/s44443-026-01179-3",
+   "title": "SHAP-based interpretation of machine learning models for cardiometabolic risk in fatty liver disease",
+   "received": "2026-06-21",
+   "revised": null,
+   "accepted": "2026-07-30",
+   "days": 39
+  },
+  {
+   "doi": "10.1007/s44443-025-00260-7",
+   "title": "Workflow scheduling in IaaS clouds with the optimal pairing between tasks and virtual machines",
+   "received": "2025-06-30",
+   "revised": null,
+   "accepted": "2025-08-28",
+   "days": 59
+  },
+  {
+   "doi": "10.1007/s44443-026-01204-5",
+   "title": "Joint relay selection and resource optimization in BS-assisted multi-hop D2D networks with RF energy harvesting",
+   "received": "2026-05-17",
+   "revised": null,
+   "accepted": "2026-08-03",
+   "days": 78
+  },
+  {
+   "doi": "10.1007/s44443-026-00980-4",
+   "title": "Exact multi-task aggregation with confidential queries and designated recovery",
+   "received": "2026-03-25",
+   "revised": null,
+   "accepted": "2026-06-18",
+   "days": 85
+  },
+  {
+   "doi": "10.1007/s44443-025-00091-6",
+   "title": "Graph convolutional network model with a feature compensation module and dual-channel second-order pooling module for multimodal emotion recognition i",
+   "received": "2025-03-12",
+   "revised": null,
+   "accepted": "2025-06-02",
+   "days": 82
+  },
+  {
+   "doi": "10.1007/s44443-025-00108-0",
+   "title": "Color image encryption method based on four-dimensional multi-scroll multi-wing hyperchaotic system and DNA mutation mechanism",
+   "received": "2025-04-20",
+   "revised": null,
+   "accepted": "2025-06-10",
+   "days": 51
+  },
+  {
+   "doi": "10.1007/s44443-026-01297-y",
+   "title": "Automated intraoperative segmentation and path planning framework for femoral neck fractures under fluoroscopic guidance",
+   "received": "2026-06-17",
+   "revised": null,
+   "accepted": "2026-08-22",
+   "days": 66
+  },
+  {
+   "doi": "10.1007/s44443-026-01203-6",
+   "title": "AGRF-Net: anatomy-guided reliability fusion for multi-view OCT/OCTA retinal disease classification",
+   "received": "2026-05-20",
+   "revised": null,
+   "accepted": "2026-08-03",
+   "days": 75
+  },
+  {
+   "doi": "10.1007/s44443-025-00092-5",
+   "title": "A dual scheduling framework for task and resource allocation in clouds using deep reinforcement learning",
+   "received": "2025-03-21",
+   "revised": null,
+   "accepted": "2025-05-31",
+   "days": 71
+  },
+  {
+   "doi": "10.1007/s44443-025-00344-4",
+   "title": "MCA framework: a novel multi-dimensional cooperative analysis framework for Alzheimer's disease diagnosis",
+   "received": "2025-07-05",
+   "revised": null,
+   "accepted": "2025-10-14",
+   "days": 101
+  },
+  {
+   "doi": "10.1007/s44443-025-00403-w",
+   "title": "Influence maximization in social networks using discrete spider monkey optimization",
+   "received": "2025-07-26",
+   "revised": null,
+   "accepted": "2025-11-25",
+   "days": 122
+  },
+  {
+   "doi": "10.1007/s44443-026-00797-1",
+   "title": "Hierarchical task allocation and chance-constrained trajectory optimization for heterogeneous quadrotor swarms",
+   "received": "2026-02-13",
+   "revised": null,
+   "accepted": "2026-04-20",
+   "days": 66
+  },
+  {
+   "doi": "10.1007/s44443-026-01233-0",
+   "title": "Provably secure federated learning with ECCDH-based group key agreement for enhanced privacy in collaborative model training",
+   "received": "2026-07-03",
+   "revised": null,
+   "accepted": "2026-08-09",
+   "days": 37
+  },
+  {
+   "doi": "10.1007/s44443-026-00644-3",
+   "title": "An adaptive physical-layer security enhancement framework for ambient backscatter communication in industrial IoT",
+   "received": "2025-12-29",
+   "revised": null,
+   "accepted": "2026-03-05",
+   "days": 66
+  },
+  {
+   "doi": "10.1007/s44443-026-00476-1",
+   "title": "Artificial intelligence driven context-aware biomedical information extraction model for multi-class disease condition classification using NLP with G",
+   "received": "2025-10-23",
+   "revised": null,
+   "accepted": "2026-01-05",
+   "days": 74
+  },
+  {
+   "doi": "10.1007/s44443-026-01381-3",
+   "title": "Rule-graph alignment via optimal transport for weakly supervised anomaly detection on transaction graphs",
+   "received": "2026-06-18",
+   "revised": null,
+   "accepted": "2026-09-15",
+   "days": 89
+  },
+  {
+   "doi": "10.1007/s44443-026-00710-w",
+   "title": "Physics-aware graph neural ODE for sensor data imputation in converter transformer monitoring systems",
+   "received": "2026-01-09",
+   "revised": null,
+   "accepted": "2026-03-27",
+   "days": 77
+  },
+  {
+   "doi": "10.1007/s44443-026-00772-w",
+   "title": "A unified multimodal large model framework for cross-platform fake news spread chain detection",
+   "received": "2026-02-16",
+   "revised": null,
+   "accepted": "2026-04-14",
+   "days": 57
+  },
+  {
+   "doi": "10.1007/s44443-026-01081-y",
+   "title": "Adaptive multi-format synergistic table understanding framework for large language models",
+   "received": "2026-06-04",
+   "revised": null,
+   "accepted": "2026-07-12",
+   "days": 38
+  },
+  {
+   "doi": "10.1007/s44443-026-00692-9",
+   "title": "MFG-Seg: multi-level feature guide segmentation framework in endoscopy via dual-decoder fusion strategy",
+   "received": "2026-01-13",
+   "revised": null,
+   "accepted": "2026-03-20",
+   "days": 66
+  },
+  {
+   "doi": "10.1007/s44443-025-00268-z",
+   "title": "NCAM-CS: neural combinatorial auction mechanisms with item complementarity and substitutability",
+   "received": "2025-06-29",
+   "revised": null,
+   "accepted": "2025-09-02",
+   "days": 65
+  },
+  {
+   "doi": "10.1007/s44443-026-01012-x",
+   "title": "Adaptive popularity-debiased contrastive learning for long-tail recommendation: diagnosing failure mechanisms and bridging the accuracy-diversity gap",
+   "received": "2026-03-24",
+   "revised": null,
+   "accepted": "2026-06-28",
+   "days": 96
+  },
+  {
+   "doi": "10.1007/s44443-026-00720-8",
+   "title": "Reinforcement learning based dynamic allocation strategy for relief supplies by heterogeneous unmanned system",
+   "received": "2025-10-14",
+   "revised": null,
+   "accepted": "2026-03-29",
+   "days": 166
+  },
+  {
+   "doi": "10.1007/s44443-026-01008-7",
+   "title": "Ensemble\u2013based instance selection for multi\u2013target regression using kernel sparse modeling",
+   "received": "2026-05-25",
+   "revised": null,
+   "accepted": "2026-06-26",
+   "days": 32
+  },
+  {
+   "doi": "10.1007/s44443-025-00152-w",
+   "title": "A novel similarity-constrained feature selection method for epilepsy detection via EEG signals",
+   "received": "2025-04-29",
+   "revised": null,
+   "accepted": "2025-06-30",
+   "days": 62
+  },
+  {
+   "doi": "10.1007/s44443-026-00509-9",
+   "title": "A group decision making-based parallel multi-label feature selection for big data applications",
+   "received": "2025-11-03",
+   "revised": null,
+   "accepted": "2026-01-20",
+   "days": 78
+  },
+  {
+   "doi": "10.1007/s44443-025-00145-9",
+   "title": "Multi-agent deep reinforcement learning for RIS-assisted secure UAV communication",
+   "received": "2025-04-10",
+   "revised": null,
+   "accepted": "2025-06-26",
+   "days": 77
+  },
+  {
+   "doi": "10.1007/s44443-026-00755-x",
+   "title": "MCA-KT: An expression-behaviour multimodal knowledge tracking model based on cross-attention",
+   "received": "2026-01-24",
+   "revised": null,
+   "accepted": "2026-04-08",
+   "days": 74
+  },
+  {
+   "doi": "10.1007/s44443-025-00116-0",
+   "title": "MSD-YOLO11n: an improved small target detection model for high precision UAV aerial imagery",
+   "received": "2025-03-02",
+   "revised": null,
+   "accepted": "2025-06-14",
+   "days": 104
+  },
+  {
+   "doi": "10.1007/s44443-025-00156-6",
+   "title": "Dual-timescale hierarchical MADDPG for Multi-UAV cooperative search",
+   "received": "2025-04-01",
+   "revised": null,
+   "accepted": "2025-07-01",
+   "days": 91
+  },
+  {
+   "doi": "10.1007/s44443-025-00003-8",
+   "title": "MoX: an explainable hybrid deep-learning model for integrating multi-omics data to predict event-free survival in neuroblastoma prognosis",
+   "received": "2025-01-16",
+   "revised": null,
+   "accepted": "2025-01-16",
+   "days": 0
+  },
+  {
+   "doi": "10.1007/s44443-025-00011-8",
+   "title": "Feature extraction and analysis of adjustable surfaces in computer graphics",
+   "received": "2024-08-04",
+   "revised": null,
+   "accepted": "2025-01-16",
+   "days": 165
+  },
+  {
+   "doi": "10.1007/s44443-025-00378-8",
+   "title": "A hybrid particle swarm clustering algorithm with novel fitness function based on minimum spanning tree and local Centroids",
+   "received": "2025-08-10",
+   "revised": null,
+   "accepted": "2025-11-06",
+   "days": 88
+  },
+  {
+   "doi": "10.1007/s44443-026-01117-3",
+   "title": "SimGAT: structure-aware graph attention network with multi-scale structural embedding",
+   "received": "2026-06-03",
+   "revised": null,
+   "accepted": "2026-07-19",
+   "days": 46
+  },
+  {
+   "doi": "10.1007/s44443-026-01115-5",
+   "title": "RL\u2013LLMfuzzer: reinforcement learning\u2013guided dual\u2013model differential fuzzing for compiler testing",
+   "received": "2026-05-25",
+   "revised": null,
+   "accepted": "2026-07-19",
+   "days": 55
+  },
+  {
+   "doi": "10.1007/s44443-025-00334-6",
+   "title": "Improving negative rejection ability in language models: A review of fine-tuned LLMs, RAG, and RAFT",
+   "received": "2025-07-03",
+   "revised": null,
+   "accepted": "2025-10-10",
+   "days": 99
+  },
+  {
+   "doi": "10.1007/s44443-026-01202-7",
+   "title": "TrafficMoE: LLM-based mixture-of-experts framework for multi-task network traffic classification",
+   "received": "2026-06-08",
+   "revised": null,
+   "accepted": "2026-08-03",
+   "days": 56
+  },
+  {
+   "doi": "10.1007/s44443-026-01035-4",
+   "title": "A multi-modal mixture-of-experts deep network with cross-pathway attention fusion and hierarchical Tree-SHAP attribution for interpretable heterogeneo",
+   "received": "2026-05-10",
+   "revised": null,
+   "accepted": "2026-06-27",
+   "days": 48
+  },
+  {
+   "doi": "10.1007/s44443-025-00220-1",
+   "title": "Mamba and cross-channel aggregation for efficient multispectral image compression",
+   "received": "2025-05-12",
+   "revised": null,
+   "accepted": "2025-07-31",
+   "days": 80
+  },
+  {
+   "doi": "10.1007/s44443-026-01007-8",
+   "title": "Joint communication-computation-routing optimization for energy-aware, deadline-constrained smart agriculture",
+   "received": "2026-05-06",
+   "revised": null,
+   "accepted": "2026-06-26",
+   "days": 51
+  },
+  {
+   "doi": "10.1007/s44443-026-00472-5",
+   "title": "SemCap: Sentiment-aware semantic captioning for multimodal aspect-based sentiment analysis",
+   "received": "2025-11-28",
+   "revised": null,
+   "accepted": "2026-01-04",
+   "days": 37
+  },
+  {
+   "doi": "10.1007/s44443-026-01290-5",
+   "title": "HRA-TPF: a Hierarchical Radiomics Feature Extraction and Attention-Guided Temporal Modeling Framework for longitudinal coronary CT angiography plaque ",
+   "received": "2026-06-09",
+   "revised": null,
+   "accepted": "2026-08-21",
+   "days": 73
+  },
+  {
+   "doi": "10.1007/s44443-026-00904-2",
+   "title": "Default prediction and contagion risk assessment in corporate guarantee networks via dynamic heterogeneous graph neural networks",
+   "received": "2026-03-07",
+   "revised": null,
+   "accepted": "2026-05-28",
+   "days": 82
+  },
+  {
+   "doi": "10.1007/s44443-026-01259-4",
+   "title": "Dual semantic consistency module for domain generalizable face anti-spoofing",
+   "received": "2026-06-11",
+   "revised": null,
+   "accepted": "2026-08-15",
+   "days": 65
+  },
+  {
+   "doi": "10.1007/s44443-026-01338-6",
+   "title": "A physiology-guided multimodal learning framework for EEG-free driver behavior recognition using peripheral biosignals",
+   "received": "2026-06-01",
+   "revised": null,
+   "accepted": "2026-09-02",
+   "days": 93
+  },
+  {
+   "doi": "10.1007/s44443-025-00142-y",
+   "title": "Missingness-aware prompting for modality-missing RGBT tracking",
+   "received": "2025-01-22",
+   "revised": null,
+   "accepted": "2025-06-24",
+   "days": 153
+  },
+  {
+   "doi": "10.1007/s44443-026-01431-w",
+   "title": "Risk-informed strategy prescription: An option-level risk framework in the graph model for decision support in human\u2013autonomous vehicle interaction",
+   "received": "2026-06-03",
+   "revised": null,
+   "accepted": "2026-09-28",
+   "days": 117
+  },
+  {
+   "doi": "10.1007/s44443-025-00140-0",
+   "title": "A quantum-resilient lattice-based security framework for internet of medical things in healthcare systems",
+   "received": "2025-03-20",
+   "revised": null,
+   "accepted": "2025-06-25",
+   "days": 97
+  },
+  {
+   "doi": "10.1007/s44443-026-00724-4",
+   "title": "Layer-wise heterogeneity-guided heterogeneous pruning: An LLM compression method",
+   "received": "2026-01-29",
+   "revised": null,
+   "accepted": "2026-03-31",
+   "days": 61
+  },
+  {
+   "doi": "10.1007/s44443-026-01449-0",
+   "title": "MG2R: multi-granular geometry-guided recalibration for multimodal sentiment analysis",
+   "received": "2026-08-19",
+   "revised": null,
+   "accepted": "2026-10-02",
+   "days": 44
+  },
+  {
+   "doi": "10.1007/s44443-026-01049-y",
+   "title": "Physics-inspired RGB-depth feature modulation and fusion for hazy aerial object detection",
+   "received": "2026-05-20",
+   "revised": null,
+   "accepted": "2026-07-04",
+   "days": 45
+  },
+  {
+   "doi": "10.1007/s44443-026-00879-0",
+   "title": "RICE: Reasoning-integrated correction evolution for Chinese grammatical error correction",
+   "received": "2026-03-10",
+   "revised": null,
+   "accepted": "2026-05-15",
+   "days": 66
+  },
+  {
+   "doi": "10.1007/s44443-026-01096-5",
+   "title": "H\u2013trace: a fine\u2013grained access control and traceability framework for medical data sharing based on administrative hierarchies",
+   "received": "2026-04-27",
+   "revised": null,
+   "accepted": "2026-07-13",
+   "days": 77
+  },
+  {
+   "doi": "10.1007/s44443-026-00978-y",
+   "title": "LDM-styler: a latent diffusion network for semantic-aware oil painting style transfer and cross-modal imagery reconstruction",
+   "received": "2026-05-15",
+   "revised": null,
+   "accepted": "2026-06-18",
+   "days": 34
+  },
+  {
+   "doi": "10.1007/s44443-025-00009-2",
+   "title": "Active lane-changing model based on cellular automata to promote CAV platoon",
+   "received": "2024-06-26",
+   "revised": null,
+   "accepted": "2024-12-03",
+   "days": 160
+  },
+  {
+   "doi": "10.1007/s44443-026-01312-2",
+   "title": "RISE: repair-like insertions for stealthy evasion of vulnerability detection models",
+   "received": "2026-05-28",
+   "revised": null,
+   "accepted": "2026-08-27",
+   "days": 91
+  },
+  {
+   "doi": "10.1007/s44443-026-01244-x",
+   "title": "BRIDGE: big data-powered large language models for real-time multi-modal decision support in industrial time series",
+   "received": "2026-04-08",
+   "revised": null,
+   "accepted": "2026-08-11",
+   "days": 125
+  },
+  {
+   "doi": "10.1007/s44443-025-00458-9",
+   "title": "Inventory optimization under supply chain disruptions: Leveraging large language models for human-AI collaborative decision-making",
+   "received": "2025-08-14",
+   "revised": null,
+   "accepted": "2025-12-28",
+   "days": 136
+  },
+  {
+   "doi": "10.1007/s44443-026-00930-0",
+   "title": "Multi-objective UAV trajectory planning algorithm based on the hybrid MS-INSGA2 strategy",
+   "received": "2026-04-12",
+   "revised": null,
+   "accepted": "2026-06-06",
+   "days": 55
+  },
+  {
+   "doi": "10.1007/s44443-026-00728-0",
+   "title": "Image encryption optimization algorithm based on GA-PSO and DNA convolutional code",
+   "received": "2026-01-11",
+   "revised": null,
+   "accepted": "2026-04-01",
+   "days": 80
+  },
+  {
+   "doi": "10.1007/s44443-026-01384-0",
+   "title": "DRTA: Dynamic relay task allocation for communication maintenance in cooperative multi-UAV reconnaissance",
+   "received": "2026-06-22",
+   "revised": null,
+   "accepted": "2026-09-16",
+   "days": 86
+  },
+  {
+   "doi": "10.1007/s44443-025-00080-9",
+   "title": "Achieving scalable and decentralized blockchain systems: a filecoin-based solution to the blockchain trilemma",
+   "received": "2025-03-06",
+   "revised": null,
+   "accepted": "2025-05-26",
+   "days": 81
+  },
+  {
+   "doi": "10.1007/s44443-025-00297-8",
+   "title": "Hash-MMDC: Enhancing human activity recognition with hash-based optimization",
+   "received": "2025-06-30",
+   "revised": null,
+   "accepted": "2025-09-17",
+   "days": 79
+  },
+  {
+   "doi": "10.1007/s44443-025-00001-w",
+   "title": "A multi-task strategy framework for aquaculture counting across irregular densities",
+   "received": "2024-09-17",
+   "revised": null,
+   "accepted": "2025-01-13",
+   "days": 118
+  },
+  {
+   "doi": "10.1007/s44443-026-00672-z",
+   "title": "Hierarchical context modeling and prototype-mediated cross-modal alignment for histopathology report generation",
+   "received": "2026-01-23",
+   "revised": null,
+   "accepted": "2026-03-13",
+   "days": 49
+  },
+  {
+   "doi": "10.1007/s44443-026-00950-w",
+   "title": "Causal\u2013guided dual\u2013timescale graph neural networks for explainable fraud detection in mobile payment systems",
+   "received": "2026-04-12",
+   "revised": null,
+   "accepted": "2026-06-11",
+   "days": 60
+  },
+  {
+   "doi": "10.1007/s44443-026-00670-1",
+   "title": "Optimizing coverage and robustness in edge service placement: a weighted Tchebycheff approach under cost constraints",
+   "received": "2025-12-16",
+   "revised": null,
+   "accepted": "2026-03-13",
+   "days": 87
+  },
+  {
+   "doi": "10.1007/s44443-026-01034-5",
+   "title": "Decompose-Disentangle-Decode Time Series Forecasting (D3TSF): dual-scale time series forecasting via seasonality of patch-wise state space and sparse ",
+   "received": "2026-04-22",
+   "revised": null,
+   "accepted": "2026-06-30",
+   "days": 69
+  },
+  {
+   "doi": "10.1007/s44443-026-00624-7",
+   "title": "Document-level joint entity and relation extraction based on multi-task explicit interaction",
+   "received": "2025-12-17",
+   "revised": null,
+   "accepted": "2026-02-27",
+   "days": 72
+  },
+  {
+   "doi": "10.1007/s44443-026-01262-9",
+   "title": "Reliable cross-view neighborhood relation transfer and high-order semantic structure mining for incomplete multi-view partial multi-label classificati",
+   "received": "2026-04-30",
+   "revised": null,
+   "accepted": "2026-08-15",
+   "days": 107
+  },
+  {
+   "doi": "10.1007/s44443-026-00711-9",
+   "title": "CLRFI: A multimodal tracking via contrast learning and region feature interaction",
+   "received": "2026-02-06",
+   "revised": null,
+   "accepted": "2026-03-27",
+   "days": 49
+  },
+  {
+   "doi": "10.1007/s44443-025-00012-7",
+   "title": "Multi-party reversible data hiding in shared medical images based on texture-guided hierarchical quantization coding",
+   "received": "2024-09-11",
+   "revised": null,
+   "accepted": "2025-01-20",
+   "days": 131
+  },
+  {
+   "doi": "10.1007/s44443-026-00694-7",
+   "title": "Survey on remote sensing scene classification: from traditional methods to large generative AI models",
+   "received": "2026-02-18",
+   "revised": null,
+   "accepted": "2026-03-20",
+   "days": 30
+  },
+  {
+   "doi": "10.1007/s44443-025-00022-5",
+   "title": "LSDK-LegalSum: improving legal judgment summarization using logical structure and domain knowledge",
+   "received": "2025-01-27",
+   "revised": null,
+   "accepted": "2025-03-01",
+   "days": 33
+  },
+  {
+   "doi": "10.1007/s44443-025-00283-0",
+   "title": "A genetic-operator-integrated whale optimization algorithm for solving the flexible job shop scheduling problem",
+   "received": "2025-07-04",
+   "revised": null,
+   "accepted": "2025-09-10",
+   "days": 68
+  },
+  {
+   "doi": "10.1007/s44443-025-00176-2",
+   "title": "A weighted Stackelberg strategy approach for three pursuers against a superior evader using reinforcement learning",
+   "received": "2025-04-08",
+   "revised": null,
+   "accepted": "2025-07-11",
+   "days": 94
+  },
+  {
+   "doi": "10.1007/s44443-026-00951-9",
+   "title": "Uni\u2013MPedFormer: towards a unified transformer\u2013based framework for multispectral pedestrian detection",
+   "received": "2026-03-20",
+   "revised": null,
+   "accepted": "2026-06-11",
+   "days": 83
+  },
+  {
+   "doi": "10.1007/s44443-026-01231-2",
+   "title": "Manipulation-equivariant evidence-state learning for multimodal fake news detection",
+   "received": "2026-06-26",
+   "revised": null,
+   "accepted": "2026-08-08",
+   "days": 43
+  },
+  {
+   "doi": "10.1007/s44443-026-01253-w",
+   "title": "Authentication and key agreement scheme based on PUF and Chebyshev chaotic map for blockchain-enabled UAV networks",
+   "received": "2026-05-27",
+   "revised": null,
+   "accepted": "2026-08-13",
+   "days": 78
+  },
+  {
+   "doi": "10.1007/s44443-026-01171-x",
+   "title": "DF-Fusion: a multimodal 3D object detection framework based on frequency domain decoupling and dynamic submanifold fusion",
+   "received": "2026-05-31",
+   "revised": null,
+   "accepted": "2026-07-29",
+   "days": 59
+  },
+  {
+   "doi": "10.1007/s44443-026-00964-4",
+   "title": "ADAWU-IDS: a dynamic adaptive weight update mechanism for concept drift-aware network intrusion detection systems",
+   "received": "2026-03-22",
+   "revised": null,
+   "accepted": "2026-06-14",
+   "days": 84
+  },
+  {
+   "doi": "10.1007/s44443-026-00593-x",
+   "title": "Enhanced differential evolution for high-dimensional feature selection",
+   "received": "2025-10-22",
+   "revised": null,
+   "accepted": "2026-02-16",
+   "days": 117
+  },
+  {
+   "doi": "10.1007/s44443-025-00053-y",
+   "title": "FragMangro: A cross-domain zero-shot model for monitoring fragmented mangrove ecosystems",
+   "received": "2025-02-26",
+   "revised": null,
+   "accepted": "2025-05-01",
+   "days": 64
+  },
+  {
+   "doi": "10.1007/s44443-026-00821-4",
+   "title": "An integrated CSI and doppler frequency shift-based authentication scheme for multi-user mixed-velocity wireless sensor networks",
+   "received": "2025-12-18",
+   "revised": null,
+   "accepted": "2026-04-29",
+   "days": 132
+  },
+  {
+   "doi": "10.1007/s44443-025-00450-3",
+   "title": "Novel spectral redundancy suppression framework for high-speed multispectral image compression",
+   "received": "2025-08-15",
+   "revised": null,
+   "accepted": "2025-12-24",
+   "days": 131
+  },
+  {
+   "doi": "10.1007/s44443-026-01284-3",
+   "title": "SIGMA-AD: spatio-temporal integrated graph Mamba architecture for multivariate time-series anomaly detection",
+   "received": "2026-07-01",
+   "revised": null,
+   "accepted": "2026-08-20",
+   "days": 50
+  },
+  {
+   "doi": "10.1007/s44443-026-00529-5",
+   "title": "CLEAR-GNN: connectivity-learning enhanced adaptive regression using streamlined GNN",
+   "received": "2025-12-17",
+   "revised": null,
+   "accepted": "2026-01-27",
+   "days": 41
+  },
+  {
+   "doi": "10.1007/s44443-026-01358-2",
+   "title": "TRSR-Net: a lightweight remote sensing change detection network via temporal response fusion and context-edge calibration",
+   "received": "2026-07-27",
+   "revised": null,
+   "accepted": "2026-09-09",
+   "days": 44
+  },
+  {
+   "doi": "10.1007/s44443-025-00106-2",
+   "title": "Medical image segmentation network based on multi-scale cross-attention and wavelet transform",
+   "received": "2025-05-08",
+   "revised": null,
+   "accepted": "2025-06-10",
+   "days": 33
+  },
+  {
+   "doi": "10.1007/s44443-025-00305-x",
+   "title": "LIENet: A low-light image enhancement network for extreme darkness",
+   "received": "2025-04-18",
+   "revised": null,
+   "accepted": "2025-09-20",
+   "days": 155
+  },
+  {
+   "doi": "10.1007/s44443-025-00016-3",
+   "title": "A dynamic multiobjective recommendation method based on soft actor-critic with discrete actions",
+   "received": "2024-08-12",
+   "revised": null,
+   "accepted": "2025-02-07",
+   "days": 179
+  },
+  {
+   "doi": "10.1007/s44443-026-00762-y",
+   "title": "Unveiling camouflaged malicious accounts via unsupervised behavior-affinity dual-graph learning",
+   "received": "2025-12-13",
+   "revised": null,
+   "accepted": "2026-04-10",
+   "days": 118
+  },
+  {
+   "doi": "10.1007/s44443-026-00633-6",
+   "title": "SAM-FGF: SAM fine grained fine-tuning for ophthalmic image segmentation",
+   "received": "2026-01-22",
+   "revised": null,
+   "accepted": "2026-03-02",
+   "days": 39
+  },
+  {
+   "doi": "10.1007/s44443-026-00564-2",
+   "title": "Narrowband terahertz communication assisted by STAR-RIS based on imperfect channels",
+   "received": "2025-12-19",
+   "revised": null,
+   "accepted": "2026-02-07",
+   "days": 50
+  },
+  {
+   "doi": "10.1007/s44443-025-00044-z",
+   "title": "SFG-YOLOv8: efficient and lightweight small-feature gesture keypoint detector",
+   "received": "2025-01-07",
+   "revised": null,
+   "accepted": "2025-04-25",
+   "days": 108
+  },
+  {
+   "doi": "10.1007/s44443-025-00025-2",
+   "title": "Decentralized peer-to-peer energy trading: A blockchain-enabled pricing paradigm",
+   "received": "2025-01-18",
+   "revised": null,
+   "accepted": "2025-03-09",
+   "days": 50
+  },
+  {
+   "doi": "10.1007/s44443-025-00302-0",
+   "title": "Advances in object detection for autonomous driving using mmwave radar and camera: A comprehensive survey",
+   "received": "2025-06-15",
+   "revised": null,
+   "accepted": "2025-09-20",
+   "days": 97
+  },
+  {
+   "doi": "10.1007/s44443-025-00036-z",
+   "title": "BMSNet: Brain-inspired mixed ultrasound image segmentation network in cancer diagnosis",
+   "received": "2025-01-22",
+   "revised": null,
+   "accepted": "2025-04-02",
+   "days": 70
+  },
+  {
+   "doi": "10.1007/s44443-025-00390-y",
+   "title": "(k, n) secret base64 data sharing scheme using simple modular arithmetic",
+   "received": "2025-09-17",
+   "revised": null,
+   "accepted": "2025-11-14",
+   "days": 58
+  },
+  {
+   "doi": "10.1007/s44443-026-01357-3",
+   "title": "Resolving the safety-autonomy paradox: a noise-resilient trust alignment framework for geriatric care robots",
+   "received": "2026-07-02",
+   "revised": null,
+   "accepted": "2026-09-09",
+   "days": 69
+  },
+  {
+   "doi": "10.1007/s44443-026-01017-6",
+   "title": "Wave optics optimization with tensor anchor graph joint learning for unbalanced incomplete multi-view unsupervised feature selection",
+   "received": "2026-05-26",
+   "revised": null,
+   "accepted": "2026-06-29",
+   "days": 34
+  },
+  {
+   "doi": "10.1007/s44443-025-00446-z",
+   "title": "PEC-Moni: learning to monitor compliance of personal protective equipment usage using joint 2D-3D representation for intelligent laboratory informatio",
+   "received": "2025-08-01",
+   "revised": null,
+   "accepted": "2025-12-22",
+   "days": 143
+  },
+  {
+   "doi": "10.1007/s44443-026-01296-z",
+   "title": "An integrated fuzzing and PPO-based deep reinforcement learning framework for firmware vulnerability detection in embedded IoT devices",
+   "received": "2026-06-12",
+   "revised": null,
+   "accepted": "2026-08-22",
+   "days": 71
+  },
+  {
+   "doi": "10.1007/s44443-025-00165-5",
+   "title": "Intent-aware personalized feedback generation from coach-athlete dialogues in sports training",
+   "received": "2025-05-28",
+   "revised": null,
+   "accepted": "2025-07-05",
+   "days": 38
+  },
+  {
+   "doi": "10.1007/s44443-025-00386-8",
+   "title": "FFSSC: a framework for discovering new classes of ancient texts based on feature fusion and semi-supervised clustering",
+   "received": "2025-06-29",
+   "revised": null,
+   "accepted": "2025-11-12",
+   "days": 136
+  },
+  {
+   "doi": "10.1007/s44443-025-00162-8",
+   "title": "NMD-FusionNet: a multimodal fusion-based medical imaging-assisted diagnostic model for liver cancer",
+   "received": "2025-04-17",
+   "revised": null,
+   "accepted": "2025-07-07",
+   "days": 81
+  },
+  {
+   "doi": "10.1007/s44443-026-01046-1",
+   "title": "Spectral-masked bidirectional fusion transformer for hyperspectral image classification",
+   "received": "2026-05-04",
+   "revised": null,
+   "accepted": "2026-07-04",
+   "days": 61
+  },
+  {
+   "doi": "10.1007/s44443-025-00285-y",
+   "title": "A novel CycleGAN network applicable for enhancing low-quality ultrasound images of multiple organs",
+   "received": "2025-07-01",
+   "revised": null,
+   "accepted": "2025-09-11",
+   "days": 72
+  },
+  {
+   "doi": "10.1007/s44443-026-01309-x",
+   "title": "An improved GSTAKF-based pedestrian tracking method for abrupt state estimation",
+   "received": "2026-06-23",
+   "revised": null,
+   "accepted": "2026-08-26",
+   "days": 64
+  },
+  {
+   "doi": "10.1007/s44443-026-00607-8",
+   "title": "Multi-dimensional collaborative pruning: optimizing vision transformers via token, attention head and FFN neuron",
+   "received": "2025-11-17",
+   "revised": null,
+   "accepted": "2026-02-19",
+   "days": 94
+  },
+  {
+   "doi": "10.1007/s44443-026-00825-0",
+   "title": "ER-MedRAG: A multi-agent reinforcement learning framework for reliable clinical retrieval-augmented reasoning",
+   "received": "2026-02-04",
+   "revised": null,
+   "accepted": "2026-04-30",
+   "days": 85
+  },
+  {
+   "doi": "10.1007/s44443-026-01272-7",
+   "title": "Projection-robust zeroth-order optimization on manifolds under heavy-tailed oracle noise",
+   "received": "2026-06-16",
+   "revised": null,
+   "accepted": "2026-08-17",
+   "days": 62
+  },
+  {
+   "doi": "10.1007/s44443-026-01180-w",
+   "title": "OPAQUE-IoT: an optimization-driven PUF-Blockchain authenticated key agreement protocol with adaptive resource management for constrained IoT networks",
+   "received": "2026-03-24",
+   "revised": null,
+   "accepted": "2026-07-30",
+   "days": 128
+  },
+  {
+   "doi": "10.1007/s44443-026-01071-0",
+   "title": "Are reasoning paradigms scale-aware? A cross-paradigm verification of prompting, retrieval, and knowledge-graph scaffolding for small language models",
+   "received": "2026-04-01",
+   "revised": null,
+   "accepted": "2026-07-10",
+   "days": 100
+  },
+  {
+   "doi": "10.1007/s44443-026-01183-7",
+   "title": "MVSDL: a multi-view self-supervised disentangled learning approach for web API recommendation",
+   "received": "2026-04-10",
+   "revised": null,
+   "accepted": "2026-07-31",
+   "days": 112
+  },
+  {
+   "doi": "10.1007/s44443-025-00271-4",
+   "title": "A novel deep learning-based statistical randomness evaluation test methodology for cryptographic applications",
+   "received": "2025-06-04",
+   "revised": null,
+   "accepted": "2025-09-04",
+   "days": 92
+  },
+  {
+   "doi": "10.1007/s44443-026-00610-z",
+   "title": "FMII: a unified intra- and inter-modal interaction framework for robust audio-visual emotion recognition",
+   "received": "2026-01-06",
+   "revised": null,
+   "accepted": "2026-02-23",
+   "days": 48
+  },
+  {
+   "doi": "10.1007/s44443-025-00126-y",
+   "title": "Multi-view kernel subspace clustering with adaptive information completion and fusion for unsupervised systems",
+   "received": "2025-03-18",
+   "revised": null,
+   "accepted": "2025-06-19",
+   "days": 93
+  },
+  {
+   "doi": "10.1007/s44443-026-00754-y",
+   "title": "Balancing speed and executability in interactive text-to-CAD code generation for early-stage parametric CAD ideation",
+   "received": "2026-02-12",
+   "revised": null,
+   "accepted": "2026-04-08",
+   "days": 55
+  },
+  {
+   "doi": "10.1007/s44443-026-00892-3",
+   "title": "ARF-YOLO: Attention-guided adaptive resolution-aware feature learning for UAV remote sensing object detection",
+   "received": "2026-04-02",
+   "revised": null,
+   "accepted": "2026-05-23",
+   "days": 51
+  },
+  {
+   "doi": "10.1007/s44443-025-00095-2",
+   "title": "From data to insights: a comprehensive analysis of pilgrims stress and fatigue during Hajj using wearable remote sensing systems",
+   "received": "2025-02-06",
+   "revised": null,
+   "accepted": "2025-06-04",
+   "days": 118
+  },
+  {
+   "doi": "10.1007/s44443-026-00599-5",
+   "title": "Spectral attention for transformers: frequency-domain filtering of attention maps",
+   "received": "2025-12-01",
+   "revised": null,
+   "accepted": "2026-02-18",
+   "days": 79
+  },
+  {
+   "doi": "10.1007/s44443-026-00601-0",
+   "title": "STSyn-BEV: BEV segmentation from surround-view fisheye cameras via spatio-temporal synchronization",
+   "received": "2025-10-27",
+   "revised": null,
+   "accepted": "2026-02-18",
+   "days": 114
+  },
+  {
+   "doi": "10.1007/s44443-026-01398-8",
+   "title": "PuddleSIFNet: A lightweight swin-identity and deformable-attention network for robust road-puddle detection",
+   "received": "2026-08-15",
+   "revised": null,
+   "accepted": "2026-09-21",
+   "days": 37
+  },
+  {
+   "doi": "10.1007/s44443-026-00949-3",
+   "title": "Adaptive encrypted traffic classification via online hash center evolution",
+   "received": "2026-03-25",
+   "revised": null,
+   "accepted": "2026-06-11",
+   "days": 78
+  },
+  {
+   "doi": "10.1007/s44443-026-00465-4",
+   "title": "Efficient uncertainty quantification for power allocation in wireless networks",
+   "received": "2025-10-30",
+   "revised": null,
+   "accepted": "2025-12-31",
+   "days": 62
+  },
+  {
+   "doi": "10.1007/s44443-026-00602-z",
+   "title": "Partial multimodal hashing method with contrastive semantic enhancement and label-guided completion",
+   "received": "2025-12-23",
+   "revised": null,
+   "accepted": "2026-02-19",
+   "days": 58
+  },
+  {
+   "doi": "10.1007/s44443-026-00783-7",
+   "title": "Design and implementation of artificial intelligence system for halal travel route recommendation",
+   "received": "2026-02-05",
+   "revised": null,
+   "accepted": "2026-04-18",
+   "days": 72
+  },
+  {
+   "doi": "10.1007/s44443-026-01120-8",
+   "title": "AIGI-NFT: A blockchain-based framework for AI-generated image trading with simulated BB84 key distribution",
+   "received": "2026-05-13",
+   "revised": null,
+   "accepted": "2026-07-20",
+   "days": 68
+  },
+  {
+   "doi": "10.1007/s44443-026-01192-6",
+   "title": "Task allocation and robot repair strategy optimization in multi-robot system with ability decay",
+   "received": "2026-04-17",
+   "revised": null,
+   "accepted": "2026-08-01",
+   "days": 106
+  },
+  {
+   "doi": "10.1007/s44443-025-00347-1",
+   "title": "Design of a data prefetcher using hierarchical memory sharing prediction for multi-die architectures",
+   "received": "2025-07-02",
+   "revised": null,
+   "accepted": "2025-10-17",
+   "days": 107
+  },
+  {
+   "doi": "10.1007/s44443-025-00372-0",
+   "title": "Ontology-regularized hierarchical transformers for anatomy and phenotype-aware medical image retrieval",
+   "received": "2025-09-14",
+   "revised": null,
+   "accepted": "2025-10-30",
+   "days": 46
+  },
+  {
+   "doi": "10.1007/s44443-026-00831-2",
+   "title": "Underwater image enhancement via deep modeling with frequency decomposition",
+   "received": "2026-03-01",
+   "revised": null,
+   "accepted": "2026-05-03",
+   "days": 63
+  },
+  {
+   "doi": "10.1007/s44443-026-00545-5",
+   "title": "SAIN:structure-aware image inpainting for large missing areas",
+   "received": "2025-11-06",
+   "revised": null,
+   "accepted": "2026-02-01",
+   "days": 87
+  },
+  {
+   "doi": "10.1007/s44443-026-00858-5",
+   "title": "ST-GVMNet: a structure-texture dual-stream network fusing gating mechanism and V-Mamba for Dunhuang mural image inpainting",
+   "received": "2026-03-21",
+   "revised": null,
+   "accepted": "2026-05-12",
+   "days": 52
+  },
+  {
+   "doi": "10.1007/s44443-025-00237-6",
+   "title": "CodeDiffuSe: A masked diffusion framework for structure-aware code completion and repair",
+   "received": "2025-05-16",
+   "revised": null,
+   "accepted": "2025-08-11",
+   "days": 87
+  },
+  {
+   "doi": "10.1007/s44443-026-01330-0",
+   "title": "FedVIB\u2013AGP: defending against distributed backdoor attacks in federated learning via variational information bottleneck and activation-gap pruning",
+   "received": "2026-07-02",
+   "revised": null,
+   "accepted": "2026-08-30",
+   "days": 59
+  },
+  {
+   "doi": "10.1007/s44443-026-00518-8",
+   "title": "RQSP-SMOTE: a multi-linear interpolation oversampling method based on regular quadrilateral scoring mechanism with perturbation",
+   "received": "2025-11-21",
+   "revised": null,
+   "accepted": "2026-01-23",
+   "days": 63
+  },
+  {
+   "doi": "10.1007/s44443-025-00410-x",
+   "title": "Hierarchical deep synergistic fusion of CNN and transformer for person re-identification",
+   "received": "2025-08-30",
+   "revised": null,
+   "accepted": "2025-11-28",
+   "days": 90
+  },
+  {
+   "doi": "10.1007/s44443-026-01138-y",
+   "title": "Lightweight and robust audio-visual emotion recognition via multi-scale mamba temporal modeling and quality-aware expert fusion",
+   "received": "2026-06-20",
+   "revised": null,
+   "accepted": "2026-07-23",
+   "days": 33
+  },
+  {
+   "doi": "10.1007/s44443-026-00852-x",
+   "title": "RFFA-Net: Recursive filtering and feature aggregation driven network for tooth segmentation in CBCT image",
+   "received": "2026-03-30",
+   "revised": null,
+   "accepted": "2026-05-10",
+   "days": 41
+  },
+  {
+   "doi": "10.1007/s44443-026-01260-x",
+   "title": "GraphINR-IDS: Graph-Topology-Aware implicit neural reconstruction for zero-day intrusion detection in encrypted network traffic",
+   "received": "2026-04-22",
+   "revised": null,
+   "accepted": "2026-08-15",
+   "days": 115
+  },
+  {
+   "doi": "10.1007/s44443-025-00172-6",
+   "title": "TRACE: A trust-aware incentive mechanism for federated learning in IoMT",
+   "received": "2025-04-30",
+   "revised": null,
+   "accepted": "2025-07-09",
+   "days": 70
+  },
+  {
+   "doi": "10.1007/s44443-026-00816-1",
+   "title": "LETBSR: Lightweight Efficient Transformer for Blind Image Super-Resolution",
+   "received": "2026-02-12",
+   "revised": null,
+   "accepted": "2026-04-27",
+   "days": 74
+  },
+  {
+   "doi": "10.1007/s44443-026-01112-8",
+   "title": "A hybrid quantitative framework for performance evaluation of cyber-physical systems with explicit structural information",
+   "received": "2026-03-26",
+   "revised": null,
+   "accepted": "2026-07-17",
+   "days": 113
+  },
+  {
+   "doi": "10.1007/s44443-026-00572-2",
+   "title": "mLLM-CRD: multi-modal LLM based context-aware rule detection using LoRA-integrated attention for worker safety monitoring",
+   "received": "2025-12-30",
+   "revised": null,
+   "accepted": "2026-02-09",
+   "days": 41
+  },
+  {
+   "doi": "10.1007/s44443-026-00475-2",
+   "title": "Dual-level interactive learning with symptom-aware attention for automatic radiology report generation",
+   "received": "2025-10-11",
+   "revised": null,
+   "accepted": "2026-01-06",
+   "days": 87
+  },
+  {
+   "doi": "10.1007/s44443-026-00702-w",
+   "title": "ST-CATrust: multidimensional trust fusion evaluation via spatio-temporal graph neural network",
+   "received": "2025-11-01",
+   "revised": null,
+   "accepted": "2026-03-25",
+   "days": 144
+  },
+  {
+   "doi": "10.1007/s44443-026-01298-x",
+   "title": "A framework to optimize gas cost for Ethereum smart contracts",
+   "received": "2026-05-08",
+   "revised": null,
+   "accepted": "2026-08-22",
+   "days": 106
+  },
+  {
+   "doi": "10.1007/s44443-025-00164-6",
+   "title": "Continuous prediction of knee joint angle in lower limbs based on sEMG: a method combining an improved ZOA optimizer and attention-enhanced GRU",
+   "received": "2025-04-28",
+   "revised": null,
+   "accepted": "2025-07-05",
+   "days": 68
+  },
+  {
+   "doi": "10.1007/s44443-026-00660-3",
+   "title": "Fuzzy robust brain tumor classification via multi-view feature fusion with self-gated U-net segmentation and parametric t-SNE embedding",
+   "received": "2025-12-19",
+   "revised": null,
+   "accepted": "2026-03-08",
+   "days": 79
+  },
+  {
+   "doi": "10.1007/s44443-026-01444-5",
+   "title": "Research on cross-modal reconstruction of Li brocade 2D patterns to 3D structures based on the Pix2PixHD generative model",
+   "received": "2026-06-13",
+   "revised": null,
+   "accepted": "2026-09-30",
+   "days": 109
+  },
+  {
+   "doi": "10.1007/s44443-026-01226-z",
+   "title": "Dynamic lane-changing trajectory planning based on spatiotemporal skewed driving risk field",
+   "received": "2026-05-19",
+   "revised": null,
+   "accepted": "2026-08-08",
+   "days": 81
+  },
+  {
+   "doi": "10.1007/s44443-025-00233-w",
+   "title": "DBF-PSR: a dual-branch fusion approach to network traffic classification using protocol semantic representation",
+   "received": "2025-06-16",
+   "revised": null,
+   "accepted": "2025-08-08",
+   "days": 53
+  },
+  {
+   "doi": "10.1007/s44443-026-00832-1",
+   "title": "Exploring machine learning and computational intelligence for emotion recognition through physiological signals during Quranic recitation using galvan",
+   "received": "2026-01-22",
+   "revised": null,
+   "accepted": "2026-05-05",
+   "days": 103
+  },
+  {
+   "doi": "10.1007/s44443-026-00967-1",
+   "title": "Few\u2013shot medical image segmentation via prototype mining and prior\u2013guided matching network",
+   "received": "2026-05-01",
+   "revised": null,
+   "accepted": "2026-06-15",
+   "days": 45
+  },
+  {
+   "doi": "10.1007/s44443-025-00455-y",
+   "title": "Asymmetric dual-path structural consistency for semi-supervised medical image segmentation",
+   "received": "2025-09-22",
+   "revised": null,
+   "accepted": "2025-12-27",
+   "days": 96
+  },
+  {
+   "doi": "10.1007/s44443-025-00104-4",
+   "title": "A multi-party privacy-preserving record linkage method based on improved secondary encoding",
+   "received": "2025-04-06",
+   "revised": null,
+   "accepted": "2025-06-09",
+   "days": 64
+  },
+  {
+   "doi": "10.1007/s44443-025-00061-y",
+   "title": "SiamAHG: adaptive hierarchical graph attention for lightweight siamese tracking",
+   "received": "2025-03-08",
+   "revised": null,
+   "accepted": "2025-05-14",
+   "days": 67
+  },
+  {
+   "doi": "10.1007/s44443-026-00995-x",
+   "title": "Blockchain-enabled multi-layer multi-factor authentication framework for secure financial service access",
+   "received": "2026-05-03",
+   "revised": null,
+   "accepted": "2026-06-23",
+   "days": 51
+  },
+  {
+   "doi": "10.1007/s44443-026-00648-z",
+   "title": "PLM-guided incremental node sampling for inductive knowledge graph reasoning",
+   "received": "2026-01-05",
+   "revised": null,
+   "accepted": "2026-03-06",
+   "days": 60
+  },
+  {
+   "doi": "10.1007/s44443-025-00111-5",
+   "title": "CHDPL-Net: a lightweight network for Chinese herbal decoction pieces detection",
+   "received": "2025-03-27",
+   "revised": null,
+   "accepted": "2025-06-13",
+   "days": 78
+  },
+  {
+   "doi": "10.1007/s44443-025-00365-z",
+   "title": "AI-driven secure offloading for the low-altitude economy with ze-RIS-enabled UAV-MEC",
+   "received": "2025-07-26",
+   "revised": null,
+   "accepted": "2025-10-26",
+   "days": 92
+  },
+  {
+   "doi": "10.1007/s44443-026-01256-7",
+   "title": "Structural response under factual perturbations for multimodal fake news detection",
+   "received": "2026-06-04",
+   "revised": null,
+   "accepted": "2026-08-14",
+   "days": 71
+  },
+  {
+   "doi": "10.1007/s44443-026-00870-9",
+   "title": "Toward edge-intelligent consumer robots: a decoupled RL\u2013LLM architecture for robust navigation under partial observability",
+   "received": "2026-04-10",
+   "revised": null,
+   "accepted": "2026-05-17",
+   "days": 37
+  },
+  {
+   "doi": "10.1007/s44443-025-00309-7",
+   "title": "FIVFusion: Fog-free infrared and visible image fusion",
+   "received": "2025-06-21",
+   "revised": null,
+   "accepted": "2025-09-22",
+   "days": 93
+  },
+  {
+   "doi": "10.1007/s44443-026-01317-x",
+   "title": "An image encryption method based on a dynamic Hopfield\u2013Voronoi coupled map lattice",
+   "received": "2026-06-27",
+   "revised": null,
+   "accepted": "2026-08-27",
+   "days": 61
+  },
+  {
+   "doi": "10.1007/s44443-026-01161-z",
+   "title": "Resilient time-varying formation containment for multi-agent systems with cooperative-adversarial interactions and communication delays",
+   "received": "2026-05-21",
+   "revised": null,
+   "accepted": "2026-07-28",
+   "days": 68
+  },
+  {
+   "doi": "10.1007/s44443-026-00673-y",
+   "title": "Multi-AUV collaborative framework for goal-driven underwater image communication and enhancement",
+   "received": "2025-12-13",
+   "revised": null,
+   "accepted": "2026-03-15",
+   "days": 92
+  },
+  {
+   "doi": "10.1007/s44443-025-00127-x",
+   "title": "A hybrid genetic algorithm with cycle reassembly for solving colored traveling salesman problems",
+   "received": "2025-04-01",
+   "revised": null,
+   "accepted": "2025-06-19",
+   "days": 79
+  },
+  {
+   "doi": "10.1007/s44443-026-01302-4",
+   "title": "MT-brainVLM: a multi-task 3D vision\u2013language model for hierarchical report generation with dual-path Shapley explainability",
+   "received": "2026-05-01",
+   "revised": null,
+   "accepted": "2026-08-24",
+   "days": 115
+  },
+  {
+   "doi": "10.1007/s44443-025-00338-2",
+   "title": "Policy-hiding inner product encryption for fine-grained access control in intelligent medical service",
+   "received": "2025-08-03",
+   "revised": null,
+   "accepted": "2025-10-13",
+   "days": 71
+  },
+  {
+   "doi": "10.1007/s44443-025-00440-5",
+   "title": "IQUMamba-1D: a Mamba-enhanced 1D U-Net for single-channel communication signal blind source separation",
+   "received": "2025-09-05",
+   "revised": null,
+   "accepted": "2025-12-19",
+   "days": 105
+  },
+  {
+   "doi": "10.1007/s44443-025-00049-8",
+   "title": "Medical image fusion on latent low rank representation and hesitant fuzzy granular energy",
+   "received": "2025-03-25",
+   "revised": null,
+   "accepted": "2025-04-25",
+   "days": 31
+  },
+  {
+   "doi": "10.1007/s44443-026-00466-3",
+   "title": "Spatial-spectral enhanced mamba with diffusion prior for spectral super-resolution",
+   "received": "2025-11-25",
+   "revised": null,
+   "accepted": "2026-01-02",
+   "days": 38
+  },
+  {
+   "doi": "10.1007/s44443-025-00277-y",
+   "title": "Dynamic event-triggered consensus of multi-agent systems with trigger-dependent communication delay",
+   "received": "2025-06-11",
+   "revised": null,
+   "accepted": "2025-09-07",
+   "days": 88
+  },
+  {
+   "doi": "10.1007/s44443-026-01241-0",
+   "title": "Dual-autoencoder multi-task self-supervised one-class graph anomaly detection for network traffic",
+   "received": "2026-06-20",
+   "revised": null,
+   "accepted": "2026-08-10",
+   "days": 51
+  },
+  {
+   "doi": "10.1007/s44443-026-00928-8",
+   "title": "A spatially adaptive compressive sensing framework via joint perception\u2013innovation modeling",
+   "received": "2026-04-29",
+   "revised": null,
+   "accepted": "2026-06-05",
+   "days": 37
+  },
+  {
+   "doi": "10.1007/s44443-026-01412-z",
+   "title": "SHAPE-Net: structure-aware and confidence-guided learning for semi-supervised medical image segmentation",
+   "received": "2026-06-08",
+   "revised": null,
+   "accepted": "2026-09-24",
+   "days": 108
+  },
+  {
+   "doi": "10.1007/s44443-026-01172-w",
+   "title": "Intelligent priority awareness method for alert data in SOC threat response",
+   "received": "2026-04-28",
+   "revised": null,
+   "accepted": "2026-07-29",
+   "days": 92
+  },
+  {
+   "doi": "10.1007/s44443-025-00201-4",
+   "title": "Cross-modal unsupervised domain adaptation for 3D semantic segmentation via multi-scale fusion-then-distillation",
+   "received": "2025-04-16",
+   "revised": null,
+   "accepted": "2025-07-22",
+   "days": 97
+  },
+  {
+   "doi": "10.1007/s44443-025-00079-2",
+   "title": "HiEE: Hierarchical feature fusion for Chinese event extraction",
+   "received": "2025-03-01",
+   "revised": null,
+   "accepted": "2025-05-24",
+   "days": 84
+  },
+  {
+   "doi": "10.1007/s44443-026-00909-x",
+   "title": "A survey on social media popularity prediction: concepts, technologies, applications, and challenges",
+   "received": "2026-01-23",
+   "revised": null,
+   "accepted": "2026-06-02",
+   "days": 130
+  },
+  {
+   "doi": "10.1007/s44443-026-00806-3",
+   "title": "A taxonomy and survey of integrating emerging technologies to intelligent transportation systems",
+   "received": "2026-02-05",
+   "revised": null,
+   "accepted": "2026-04-23",
+   "days": 77
+  },
+  {
+   "doi": "10.1007/s44443-026-00779-3",
+   "title": "Class-disentangled attribution with gradient guidance for CLIP",
+   "received": "2026-02-01",
+   "revised": null,
+   "accepted": "2026-04-17",
+   "days": 75
+  },
+  {
+   "doi": "10.1007/s44443-025-00019-0",
+   "title": "Legal judgment prediction via legal knowledge extraction and fusion",
+   "received": "2025-01-13",
+   "revised": null,
+   "accepted": "2025-02-26",
+   "days": 44
+  },
+  {
+   "doi": "10.1007/s44443-026-00851-y",
+   "title": "CFSR: A tactics-formation coupling recognition framework based on efficient spatio-temporal modelling",
+   "received": "2026-03-16",
+   "revised": null,
+   "accepted": "2026-05-10",
+   "days": 55
+  },
+  {
+   "doi": "10.1007/s44443-026-01077-8",
+   "title": "NSINR: Neuro-symbolic interpretability noise-robust framework for disease ceRNA biomarker prediction",
+   "received": "2026-05-20",
+   "revised": null,
+   "accepted": "2026-07-11",
+   "days": 52
+  },
+  {
+   "doi": "10.1007/s44443-026-00845-w",
+   "title": "Iterative self-organizing clustering for software multiple-fault localisation",
+   "received": "2026-02-03",
+   "revised": null,
+   "accepted": "2026-05-09",
+   "days": 95
+  },
+  {
+   "doi": "10.1007/s44443-026-00780-w",
+   "title": "Restorable Trojan Packet: a practical neural backdoor attack against network traffic classifiers",
+   "received": "2025-12-10",
+   "revised": null,
+   "accepted": "2026-04-17",
+   "days": 128
+  },
+  {
+   "doi": "10.1007/s44443-026-01158-8",
+   "title": "A novel 4D conservative memristive hyperchaotic system and its application in image encryption",
+   "received": "2026-06-10",
+   "revised": null,
+   "accepted": "2026-07-28",
+   "days": 48
+  },
+  {
+   "doi": "10.1007/s44443-026-01285-2",
+   "title": "CIPformer: an intra-day PV power forecasting model integrating adaptive time-series decomposition and channel-interaction-aware relational modeling",
+   "received": "2026-06-13",
+   "revised": null,
+   "accepted": "2026-08-20",
+   "days": 68
+  },
+  {
+   "doi": "10.1007/s44443-025-00203-2",
+   "title": "SPIN-SGG: spatial integration for open-vocabulary scene graph generation",
+   "received": "2025-05-11",
+   "revised": null,
+   "accepted": "2025-07-22",
+   "days": 72
+  },
+  {
+   "doi": "10.1007/s44443-025-00263-4",
+   "title": "Enhancing link prediction model for seller product selection in E-commerce: A bipartite and tripartite network approach with domain-specific integrati",
+   "received": "2025-02-27",
+   "revised": null,
+   "accepted": "2025-08-28",
+   "days": 182
+  },
+  {
+   "doi": "10.1007/s44443-026-00759-7",
+   "title": "Verifiable client-side watermarking for thumbnail preserving encrypted images resisting malicious forgery and redistribution",
+   "received": "2025-12-18",
+   "revised": null,
+   "accepted": "2026-04-09",
+   "days": 112
+  },
+  {
+   "doi": "10.1007/s44443-025-00314-w",
+   "title": "Enhancing named entity recognition in low-resource scenarios using diffusion variational autoencoder and knowledge graphs",
+   "received": "2025-07-02",
+   "revised": null,
+   "accepted": "2025-09-28",
+   "days": 88
+  }
+ ]
+}

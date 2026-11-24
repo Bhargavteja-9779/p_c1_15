@@ -1,0 +1,1671 @@
+{
+ "meta": {
+  "issn": "2192-113X",
+  "container": "Journal of Cloud Computing",
+  "publisher": "Springer Science and Business Media LLC",
+  "sampled": 208,
+  "with_dates": 206,
+  "window": [
+   "2024-11-24",
+   "2026-11-24"
+  ],
+  "fetched": "2026-11-24T03:08:07",
+  "source": "https://api.crossref.org/journals/2192-113X/works (sample=100 x 3, assertion received/accepted)",
+  "median_days": 146.5,
+  "min_days": 32,
+  "max_days": 1323,
+  "q25": 80,
+  "q75": 255,
+  "frac_le_72": 0.223
+ },
+ "articles": [
+  {
+   "doi": "10.1186/s13677-026-00987-2",
+   "title": "PrivFL-SMPC: Privacy-aware federated learning using secure multi-party computation for collaborative diabetes diagnosis in the cloud",
+   "received": "2026-05-26",
+   "revised": null,
+   "accepted": "2026-09-07",
+   "days": 104
+  },
+  {
+   "doi": "10.1186/s13677-026-00973-8",
+   "title": "A privacy-preserving federated spatiotemporal dynamic graph neural network framework for epileptic seizure prediction",
+   "received": "2026-04-17",
+   "revised": null,
+   "accepted": "2026-08-24",
+   "days": 129
+  },
+  {
+   "doi": "10.1186/s13677-026-00873-x",
+   "title": "Energy-and-deadline-aware optimal resource management and task consolidation using a hybrid Adaptive Neuro-Fuzzy Inference System with binary Chaotic ",
+   "received": "2025-07-10",
+   "revised": null,
+   "accepted": "2026-02-16",
+   "days": 221
+  },
+  {
+   "doi": "10.1186/s13677-026-00934-1",
+   "title": "Blockchain-based big data model for public auditing in cloud storage using fully homomorphic encryption and modified future search heuristic approach",
+   "received": "2025-04-19",
+   "revised": null,
+   "accepted": "2026-06-03",
+   "days": 410
+  },
+  {
+   "doi": "10.1186/s13677-025-00802-4",
+   "title": "A virtual machine group-oriented TPM system for trusted cloud computing",
+   "received": "2025-05-05",
+   "revised": null,
+   "accepted": "2025-10-30",
+   "days": 178
+  },
+  {
+   "doi": "10.1186/s13677-025-00761-w",
+   "title": "ArtifactOps and ArtifactDL: a methodology and a language for conceptualizing and operationalising different types of pipelines",
+   "received": "2024-11-26",
+   "revised": null,
+   "accepted": "2025-06-01",
+   "days": 187
+  },
+  {
+   "doi": "10.1186/s13677-026-00856-y",
+   "title": "Edge intelligence for on-site risk detection in road and bridge engineering",
+   "received": "2025-11-17",
+   "revised": null,
+   "accepted": "2026-01-27",
+   "days": 71
+  },
+  {
+   "doi": "10.1186/s13677-025-00745-w",
+   "title": "AI driven IOMT security framework for advanced malware and ransomware detection in SDN",
+   "received": "2025-01-01",
+   "revised": null,
+   "accepted": "2025-03-24",
+   "days": 82
+  },
+  {
+   "doi": "10.1186/s13677-026-00842-4",
+   "title": "Enhancing health data integrity using Distributed Ledger Technology",
+   "received": "2025-06-09",
+   "revised": null,
+   "accepted": "2026-01-09",
+   "days": 214
+  },
+  {
+   "doi": "10.1186/s13677-026-00844-2",
+   "title": "Towards security and efficiency in distributed fitness recommendation with hashing",
+   "received": "2025-11-23",
+   "revised": null,
+   "accepted": "2026-01-10",
+   "days": 48
+  },
+  {
+   "doi": "10.1186/s13677-026-00969-4",
+   "title": "Efficient PM2.5 prediction for healthcare-oriented IoT-enabled smart environments",
+   "received": "2026-07-06",
+   "revised": null,
+   "accepted": "2026-08-12",
+   "days": 37
+  },
+  {
+   "doi": "10.1186/s13677-026-00968-5",
+   "title": "RAC-LLM: retrieval-augmented large-small model collaboration for cloud-assisted web asset risk assessment and homologous discovery",
+   "received": "2026-06-28",
+   "revised": null,
+   "accepted": "2026-08-11",
+   "days": 44
+  },
+  {
+   "doi": "10.1186/s13677-025-00798-x",
+   "title": "Graph attention network vulnerability detection model with global feature augmentation for smart contracts",
+   "received": "2025-04-18",
+   "revised": null,
+   "accepted": "2025-10-19",
+   "days": 184
+  },
+  {
+   "doi": "10.1186/s13677-025-00746-9",
+   "title": "Client aware adaptive federated learning using UCB-based reinforcement for people re-identification",
+   "received": "2024-12-15",
+   "revised": null,
+   "accepted": "2025-03-24",
+   "days": 99
+  },
+  {
+   "doi": "10.1186/s13677-026-00843-3",
+   "title": "A lightweight blockchain-enabled federated intrusion prevention framework for resource-constrained industrial IoT devices to detect and mitigate emerg",
+   "received": "2025-10-21",
+   "revised": null,
+   "accepted": "2026-01-10",
+   "days": 81
+  },
+  {
+   "doi": "10.1186/s13677-025-00738-9",
+   "title": "Autonomous decision-making of UAV cluster with communication constraints based on reinforcement learning",
+   "received": "2024-11-11",
+   "revised": null,
+   "accepted": "2025-02-11",
+   "days": 92
+  },
+  {
+   "doi": "10.1186/s13677-026-01024-y",
+   "title": "Deep reinforcement learning for green-energy-aware scheduling of mixed AI workloads in data centers",
+   "received": "2026-08-11",
+   "revised": null,
+   "accepted": "2026-11-13",
+   "days": 94
+  },
+  {
+   "doi": "10.1186/s13677-026-01014-0",
+   "title": "POLARIS: an automated framework for enhancing file access policies in containerized environments",
+   "received": "2026-03-06",
+   "revised": null,
+   "accepted": "2026-10-15",
+   "days": 223
+  },
+  {
+   "doi": "10.1186/s13677-025-00778-1",
+   "title": "Detecting hidden communication threats in cloud systems using advanced pattern and threat propagation analysis",
+   "received": "2025-04-21",
+   "revised": null,
+   "accepted": "2025-08-26",
+   "days": 127
+  },
+  {
+   "doi": "10.1186/s13677-026-00976-5",
+   "title": "Real-time YOLO across Cloud, edge, and IoT: architectures, optimisations, and deployment patterns",
+   "received": "2026-05-19",
+   "revised": null,
+   "accepted": "2026-08-25",
+   "days": 98
+  },
+  {
+   "doi": "10.1186/s13677-026-00874-w",
+   "title": "Hierarchical service chain orchestration for multi-cloud environments enabled by deep reinforcement learning",
+   "received": "2026-01-02",
+   "revised": null,
+   "accepted": "2026-02-22",
+   "days": 51
+  },
+  {
+   "doi": "10.1186/s13677-026-00974-7",
+   "title": "Towards secure distributed medical diagnosis: a blockchain-driven MCAU-Net and MAA-Bi-LSTM framework",
+   "received": "2025-12-19",
+   "revised": null,
+   "accepted": "2026-08-25",
+   "days": 249
+  },
+  {
+   "doi": "10.1186/s13677-026-00899-1",
+   "title": "An adaptive encryption scheme for secure microservice communication via variable-length keys and obfuscation",
+   "received": "2025-07-11",
+   "revised": null,
+   "accepted": "2026-04-02",
+   "days": 265
+  },
+  {
+   "doi": "10.1186/s13677-026-00986-3",
+   "title": "Cloud-Edge collaborative adaptive dual-graph spatio-temporal passenger flow forecasting model for smart high-speed railway services",
+   "received": "2026-07-31",
+   "revised": null,
+   "accepted": "2026-09-05",
+   "days": 36
+  },
+  {
+   "doi": "10.1186/s13677-025-00740-1",
+   "title": "Enhancing configuration security with heterogeneous read points",
+   "received": "2024-06-12",
+   "revised": null,
+   "accepted": "2025-03-01",
+   "days": 262
+  },
+  {
+   "doi": "10.1186/s13677-026-00852-2",
+   "title": "Cloud-assisted LLM-enhanced datasets for AST hierarchy-aware code summarization model",
+   "received": "2025-12-09",
+   "revised": null,
+   "accepted": "2026-01-24",
+   "days": 46
+  },
+  {
+   "doi": "10.1186/s13677-025-00760-x",
+   "title": "Private cloud bespoke orchestrator: techniques for constructing and operating bespoke-private cloud virtual machine environments for cloud users",
+   "received": "2024-10-04",
+   "revised": null,
+   "accepted": "2025-06-01",
+   "days": 240
+  },
+  {
+   "doi": "10.1186/s13677-024-00721-w",
+   "title": "Personalized client-edge-cloud hierarchical federated learning in mobile edge computing",
+   "received": "2024-04-17",
+   "revised": null,
+   "accepted": "2024-11-30",
+   "days": 227
+  },
+  {
+   "doi": "10.1186/s13677-026-01018-w",
+   "title": "Enhanced lemurs optimizer for multi-objective task scheduling in heterogeneous fog\u2013cloud architectures",
+   "received": "2026-01-21",
+   "revised": null,
+   "accepted": "2026-10-26",
+   "days": 278
+  },
+  {
+   "doi": "10.1186/s13677-026-01021-1",
+   "title": "Intelligent network intrusion detection and cybersecurity enhancement using optimized self normalizing quantum Attention BiLSTM",
+   "received": "2026-08-13",
+   "revised": null,
+   "accepted": "2026-11-03",
+   "days": 82
+  },
+  {
+   "doi": "10.1186/s13677-026-01008-y",
+   "title": "Distributed latent encoding for AIGC art and digital media retrieval in cloud environments",
+   "received": "2026-08-28",
+   "revised": null,
+   "accepted": "2026-10-08",
+   "days": 41
+  },
+  {
+   "doi": "10.1186/s13677-026-00985-4",
+   "title": "GAN-Assisted joint computation-communication slice orchestration for 5\u2009G/6\u2009G cloud-edge networks",
+   "received": "2026-07-05",
+   "revised": null,
+   "accepted": "2026-09-05",
+   "days": 62
+  },
+  {
+   "doi": "10.1186/s13677-026-00869-7",
+   "title": "Optimizing competitive team synergy through compatibility-aware graph search in distributed platforms",
+   "received": "2026-01-07",
+   "revised": null,
+   "accepted": "2026-02-14",
+   "days": 38
+  },
+  {
+   "doi": "10.1186/s13677-025-00824-y",
+   "title": "Cybersecurity laws, digital crimes, and ethical considerations: a multidimensional perspective on Cyber Risk Regulation (MPoCRR)",
+   "received": "2025-10-06",
+   "revised": null,
+   "accepted": "2025-11-26",
+   "days": 51
+  },
+  {
+   "doi": "10.1186/s13677-026-00907-4",
+   "title": "Blockchain-enabled federated learning framework with hybrid CNN-LSTM anomaly detection for secure edge IoT networks",
+   "received": "2025-09-02",
+   "revised": null,
+   "accepted": "2026-04-18",
+   "days": 228
+  },
+  {
+   "doi": "10.1186/s13677-026-00939-w",
+   "title": "Selective semantic state editing for private edge-cloud inference in SLMs",
+   "received": "2026-05-04",
+   "revised": null,
+   "accepted": "2026-06-09",
+   "days": 36
+  },
+  {
+   "doi": "10.1186/s13677-024-00717-6",
+   "title": "A hybrid machine learning model with self-improved optimization algorithm for trust and privacy preservation in cloud environment",
+   "received": "2024-08-11",
+   "revised": null,
+   "accepted": "2024-10-22",
+   "days": 72
+  },
+  {
+   "doi": "10.1186/s13677-025-00774-5",
+   "title": "Cloud data privacy protection with homomorphic algorithm: a systematic literature review",
+   "received": "2025-03-21",
+   "revised": null,
+   "accepted": "2025-08-15",
+   "days": 147
+  },
+  {
+   "doi": "10.1186/s13677-025-00812-2",
+   "title": "Federated knowledge graph-based hybrid personalized curriculum recommendation for privacy-preserving physical education teaching systems",
+   "received": "2025-10-06",
+   "revised": null,
+   "accepted": "2025-11-12",
+   "days": 37
+  },
+  {
+   "doi": "10.1186/s13677-026-00963-w",
+   "title": "A searchable encryption scheme against data owner leakage and incomplete search results",
+   "received": "2025-08-04",
+   "revised": null,
+   "accepted": "2026-07-23",
+   "days": 353
+  },
+  {
+   "doi": "10.1186/s13677-025-00796-z",
+   "title": "Smart health monitoring: an interactive Raspberry Pi-based system for managing diabetes and hypertension in children",
+   "received": "2025-04-23",
+   "revised": null,
+   "accepted": "2025-10-15",
+   "days": 175
+  },
+  {
+   "doi": "10.1186/s13677-026-00896-4",
+   "title": "MCDM-Fed: an adaptive federated learning approach for enhanced distributed intelligence",
+   "received": "2025-03-18",
+   "revised": null,
+   "accepted": "2026-03-23",
+   "days": 370
+  },
+  {
+   "doi": "10.1186/s13677-026-00945-y",
+   "title": "Horizontal pod splitting scheduling for cost-effectiveness in cloud computing",
+   "received": "2025-06-19",
+   "revised": null,
+   "accepted": "2026-06-12",
+   "days": 358
+  },
+  {
+   "doi": "10.1186/s13677-026-00878-6",
+   "title": "A trustworthy cybersecurity model for transparent cyberattack detection using Bald Eagle Search tuned XGBoost and explainable AI",
+   "received": "2025-06-26",
+   "revised": null,
+   "accepted": "2026-02-27",
+   "days": 246
+  },
+  {
+   "doi": "10.1186/s13677-025-00833-x",
+   "title": "Edge computing-enabled scalable health training log analysis with locality-sensitive hashing for similarity search",
+   "received": "2025-09-05",
+   "revised": null,
+   "accepted": "2025-12-15",
+   "days": 101
+  },
+  {
+   "doi": "10.1186/s13677-026-00893-7",
+   "title": "Topology control for multi-layer LEO networks: towards a reliable space edge-cloud architecture",
+   "received": "2026-01-16",
+   "revised": null,
+   "accepted": "2026-03-19",
+   "days": 62
+  },
+  {
+   "doi": "10.1186/s13677-025-00790-5",
+   "title": "Energy-aware real-time task partitioning on multi-core processors with shared resources",
+   "received": "2024-06-19",
+   "revised": null,
+   "accepted": "2025-09-29",
+   "days": 467
+  },
+  {
+   "doi": "10.1186/s13677-026-00928-z",
+   "title": "Business optimization of quantitative analytics for trade-off between cost and system availability in cloud logistics",
+   "received": "2025-05-26",
+   "revised": null,
+   "accepted": "2026-05-28",
+   "days": 367
+  },
+  {
+   "doi": "10.1186/s13677-026-00946-x",
+   "title": "Proof of reward (PoR): a light weight consensus protocol for blockchain networks adopted in smart cities",
+   "received": "2025-11-15",
+   "revised": null,
+   "accepted": "2026-06-14",
+   "days": 211
+  },
+  {
+   "doi": "10.1186/s13677-025-00811-3",
+   "title": "A survey of cyber threat intelligence in embedded system driven security for mobile health systems",
+   "received": "2025-07-04",
+   "revised": null,
+   "accepted": "2025-11-10",
+   "days": 129
+  },
+  {
+   "doi": "10.1186/s13677-026-00901-w",
+   "title": "Model optimization in federated intrusion detection systems: a survey of aggregation, communication, and personalization",
+   "received": "2025-12-15",
+   "revised": null,
+   "accepted": "2026-04-08",
+   "days": 114
+  },
+  {
+   "doi": "10.1186/s13677-026-00890-w",
+   "title": "Excessive alignment hinders representation learning in cloud-scale collaborative filtering",
+   "received": "2026-01-23",
+   "revised": null,
+   "accepted": "2026-03-11",
+   "days": 47
+  },
+  {
+   "doi": "10.1186/s13677-026-00877-7",
+   "title": "Federated edge intelligence for carbon emission forecasting using deep neural networks: a privacy-preserving approach",
+   "received": "2026-01-03",
+   "revised": null,
+   "accepted": "2026-02-26",
+   "days": 54
+  },
+  {
+   "doi": "10.1186/s13677-026-00998-z",
+   "title": "Performance analysis of workflow scheduling for load balancing approach based on QoS parameter in cloud platform",
+   "received": "2026-06-24",
+   "revised": null,
+   "accepted": "2026-09-25",
+   "days": 93
+  },
+  {
+   "doi": "10.1186/s13677-025-00834-w",
+   "title": "Luminous defense: XAI-driven adaptive security for critical IoT infrastructures",
+   "received": "2025-05-04",
+   "revised": null,
+   "accepted": "2025-12-15",
+   "days": 225
+  },
+  {
+   "doi": "10.1186/s13677-026-00853-1",
+   "title": "Style-aware artwork recommendation with cloud-edge collaborative knowledge graphs",
+   "received": "2025-11-11",
+   "revised": null,
+   "accepted": "2026-01-24",
+   "days": 74
+  },
+  {
+   "doi": "10.1186/s13677-026-00916-3",
+   "title": "Semantic neighbor swapping for privacy-aware edge-cloud inference",
+   "received": "2026-03-27",
+   "revised": null,
+   "accepted": "2026-05-09",
+   "days": 43
+  },
+  {
+   "doi": "10.1186/s13677-025-00744-x",
+   "title": "Blockchain-enabled Zero Trust-based Secure and Energy Efficient scheme for 6G-enabled UASNs",
+   "received": "2024-12-03",
+   "revised": null,
+   "accepted": "2025-03-17",
+   "days": 104
+  },
+  {
+   "doi": "10.1186/s13677-026-01019-9",
+   "title": "CATS: context-aware timeline scheduler for data pipelines on the computing continuum",
+   "received": "2025-12-17",
+   "revised": null,
+   "accepted": "2026-10-31",
+   "days": 318
+  },
+  {
+   "doi": "10.1186/s13677-025-00752-x",
+   "title": "Perception of premium services based on the evolution of hyper-service network in mobile edge computing",
+   "received": "2024-04-30",
+   "revised": null,
+   "accepted": "2025-05-07",
+   "days": 372
+  },
+  {
+   "doi": "10.1186/s13677-024-00722-9",
+   "title": "Cyber attack detection in IOT-WSN devices with threat intelligence using hidden and connected layer based architectures",
+   "received": "2024-07-08",
+   "revised": null,
+   "accepted": "2024-12-04",
+   "days": 149
+  },
+  {
+   "doi": "10.1186/s13677-025-00782-5",
+   "title": "Machine learning-based hybrid technique to enhance cyber-attack perspective",
+   "received": "2025-03-17",
+   "revised": null,
+   "accepted": "2025-09-03",
+   "days": 170
+  },
+  {
+   "doi": "10.1186/s13677-025-00837-7",
+   "title": "A chaotic local search-based dwarf mongoose optimization algorithm for multi-objective task scheduling in cloud computing",
+   "received": "2025-08-28",
+   "revised": null,
+   "accepted": "2025-12-23",
+   "days": 117
+  },
+  {
+   "doi": "10.1186/s13677-026-00967-6",
+   "title": "Hierarchical SLA-aware multi-objective task scheduling in multi-access edge computing using fuzzy-AHP and queue stability modeling",
+   "received": "2025-07-12",
+   "revised": null,
+   "accepted": "2026-08-09",
+   "days": 393
+  },
+  {
+   "doi": "10.1186/s13677-026-00911-8",
+   "title": "A differential privacy-based personalized federated learning research on photovoltaic power prediction in cloud-edge computing environments",
+   "received": "2026-03-27",
+   "revised": null,
+   "accepted": "2026-05-04",
+   "days": 38
+  },
+  {
+   "doi": "10.1186/s13677-026-00930-5",
+   "title": "CloudPhishNet: collaborative detection via large-small model synergy",
+   "received": "2026-03-29",
+   "revised": null,
+   "accepted": "2026-06-01",
+   "days": 64
+  },
+  {
+   "doi": "10.1186/s13677-026-00894-6",
+   "title": "Data-intensive task scheduling in geo-distributed cloud computing: a deep reinforcement learning approach",
+   "received": "2025-11-22",
+   "revised": null,
+   "accepted": "2026-03-23",
+   "days": 121
+  },
+  {
+   "doi": "10.1186/s13677-026-00956-9",
+   "title": "Hybrid SCA-BOA: a balanced exploration\u2013exploitation metaheuristic for large-scale optimization and cloud computing applications",
+   "received": "2026-05-03",
+   "revised": null,
+   "accepted": "2026-07-01",
+   "days": 59
+  },
+  {
+   "doi": "10.1186/s13677-025-00733-0",
+   "title": "Optimizing energy task offloading technique using IoMT cloud in healthcare applications",
+   "received": "2024-12-04",
+   "revised": null,
+   "accepted": "2025-02-03",
+   "days": 61
+  },
+  {
+   "doi": "10.1186/s13677-026-01013-1",
+   "title": "SUSTAINABLESIGHT: a resource-aware vision\u2013edge AI architecture for adaptive navigation and STEM accessibility",
+   "received": "2026-08-17",
+   "revised": null,
+   "accepted": "2026-10-15",
+   "days": 59
+  },
+  {
+   "doi": "10.1186/s13677-026-00971-w",
+   "title": "Synergizing large and small models in cloud-edge continuum: a spatiotemporal hypergraph approach for dynamic offloading",
+   "received": "2026-07-10",
+   "revised": null,
+   "accepted": "2026-08-22",
+   "days": 43
+  },
+  {
+   "doi": "10.1186/s13677-026-00910-9",
+   "title": "An edge\u2013cloud continuum service for personalized seizure forecasting: communication-efficient digital twins with few-shot updates",
+   "received": "2026-03-14",
+   "revised": null,
+   "accepted": "2026-04-29",
+   "days": 46
+  },
+  {
+   "doi": "10.1186/s13677-025-00755-8",
+   "title": "An adaptive intelligent thermal-aware routing protocol for wireless body area networks",
+   "received": "2025-03-11",
+   "revised": null,
+   "accepted": "2025-05-13",
+   "days": 63
+  },
+  {
+   "doi": "10.1186/s13677-026-01012-2",
+   "title": "Achieving lightweight policy-hiding access control and efficient auditing for IoT-based electronic health records in the cloud",
+   "received": "2026-03-11",
+   "revised": null,
+   "accepted": "2026-10-12",
+   "days": 215
+  },
+  {
+   "doi": "10.1186/s13677-026-01004-2",
+   "title": "Mathematical curves based TSO feature selection algorithm with decaying perturbation dynamic transfer function for DDoS attack detection",
+   "received": "2026-04-19",
+   "revised": null,
+   "accepted": "2026-10-01",
+   "days": 165
+  },
+  {
+   "doi": "10.1186/s13677-026-01022-0",
+   "title": "Large-small model collaboration for intelligent flight vehicle control in cloud-edge environments",
+   "received": "2026-08-29",
+   "revised": null,
+   "accepted": "2026-11-10",
+   "days": 73
+  },
+  {
+   "doi": "10.1186/s13677-025-00793-2",
+   "title": "Optimized tourist point-of-interest recommendation through ARIMA and SVD in edge environment",
+   "received": "2025-08-26",
+   "revised": null,
+   "accepted": "2025-10-09",
+   "days": 44
+  },
+  {
+   "doi": "10.1186/s13677-026-00860-2",
+   "title": "Artificial intelligence methods for enhancing cybersecurity in Oman: a comprehensive review",
+   "received": "2025-11-02",
+   "revised": null,
+   "accepted": "2026-02-02",
+   "days": 92
+  },
+  {
+   "doi": "10.1186/s13677-026-00850-4",
+   "title": "Optimizing cloud resource allocation with an integrated XGBoost\u2013RFOA model",
+   "received": "2025-04-02",
+   "revised": null,
+   "accepted": "2026-01-21",
+   "days": 294
+  },
+  {
+   "doi": "10.1186/s13677-025-00743-y",
+   "title": "Secure and efficient ownership verification for deduplicated cloud computing systems",
+   "received": "2024-11-14",
+   "revised": null,
+   "accepted": "2025-03-15",
+   "days": 121
+  },
+  {
+   "doi": "10.1186/s13677-026-00970-x",
+   "title": "Techniques for efficient resource allocation transitions in container cluster autoscaling",
+   "received": "2025-11-19",
+   "revised": null,
+   "accepted": "2026-08-19",
+   "days": 273
+  },
+  {
+   "doi": "10.1186/s13677-026-00867-9",
+   "title": "QoE-driven cloud intelligence for personalized visual art recommendation",
+   "received": "2025-12-16",
+   "revised": null,
+   "accepted": "2026-02-09",
+   "days": 55
+  },
+  {
+   "doi": "10.1186/s13677-025-00748-7",
+   "title": "Fast autoscaling algorithm for cost optimization of container clusters",
+   "received": "2024-12-20",
+   "revised": null,
+   "accepted": "2025-04-16",
+   "days": 117
+  },
+  {
+   "doi": "10.1186/s13677-025-00797-y",
+   "title": "A hybrid metaheuristic federated learning approach based attack detection system for multi-cloud environment",
+   "received": "2025-06-03",
+   "revised": null,
+   "accepted": "2025-10-17",
+   "days": 136
+  },
+  {
+   "doi": "10.1186/s13677-026-00940-3",
+   "title": "Collaborative APT detection through cloud-edge synergy of graph transformer and lightweight clustering",
+   "received": "2026-03-29",
+   "revised": null,
+   "accepted": "2026-06-10",
+   "days": 73
+  },
+  {
+   "doi": "10.1186/s13677-025-00768-3",
+   "title": "Energy-efficient adaptive routing in heterogeneous wireless sensor networks via hybrid PSO and dynamic clustering",
+   "received": "2025-04-27",
+   "revised": null,
+   "accepted": "2025-07-19",
+   "days": 83
+  },
+  {
+   "doi": "10.1186/s13677-024-00716-7",
+   "title": "Impacts of data consistency levels in cloud-based NoSQL for data-intensive applications",
+   "received": "2024-07-20",
+   "revised": null,
+   "accepted": "2024-10-20",
+   "days": 92
+  },
+  {
+   "doi": "10.1186/s13677-025-00835-9",
+   "title": "Comparative analysis of cloud-based AI object detection services and YOLO11: performance, cost, and usability evaluation",
+   "received": "2025-03-07",
+   "revised": null,
+   "accepted": "2025-12-17",
+   "days": 285
+  },
+  {
+   "doi": "10.1186/s13677-025-00822-0",
+   "title": "LLM-based cost-aware task scheduling for cloud computing systems",
+   "received": "2025-06-17",
+   "revised": null,
+   "accepted": "2025-11-23",
+   "days": 159
+  },
+  {
+   "doi": "10.1186/s13677-025-00730-3",
+   "title": "A novel virtual machine placement algorithm based on grey wolf optimization",
+   "received": "2024-06-14",
+   "revised": null,
+   "accepted": "2025-01-21",
+   "days": 221
+  },
+  {
+   "doi": "10.1186/s13677-025-00777-2",
+   "title": "QHRMOF: A Quantum-Inspired hybrid Multi-Objective framework for Energy-Efficient task scheduling and load balancing in cloud computing",
+   "received": "2025-03-28",
+   "revised": null,
+   "accepted": "2025-08-21",
+   "days": 146
+  },
+  {
+   "doi": "10.1186/s13677-025-00763-8",
+   "title": "Comparative evaluation of encoding techniques for workflow process remaining time prediction for cloud applications",
+   "received": "2024-10-14",
+   "revised": null,
+   "accepted": "2025-06-01",
+   "days": 230
+  },
+  {
+   "doi": "10.1186/s13677-025-00791-4",
+   "title": "MkRP: multiple k registry placement for fast container deployment on edge computing",
+   "received": "2024-08-10",
+   "revised": null,
+   "accepted": "2025-09-29",
+   "days": 415
+  },
+  {
+   "doi": "10.1186/s13677-026-00840-6",
+   "title": "GuardChain: multi-stage trust framework for FL-empowered AIGC",
+   "received": "2025-10-18",
+   "revised": null,
+   "accepted": "2026-01-06",
+   "days": 80
+  },
+  {
+   "doi": "10.1186/s13677-026-00977-4",
+   "title": "FedQS: asynchronous federated learning based on queue scheduling",
+   "received": "2026-01-13",
+   "revised": null,
+   "accepted": "2026-08-25",
+   "days": 224
+  },
+  {
+   "doi": "10.1186/s13677-026-00895-5",
+   "title": "Towards dynamic pricing for computation offloading in mobile edge computing: a federated learning approach",
+   "received": "2025-10-24",
+   "revised": null,
+   "accepted": "2026-03-23",
+   "days": 150
+  },
+  {
+   "doi": "10.1186/s13677-025-00808-y",
+   "title": "A novel satellite application deployment method in Satellite Constellation through Inter-Satellite Links",
+   "received": "2024-05-03",
+   "revised": null,
+   "accepted": "2025-11-06",
+   "days": 552
+  },
+  {
+   "doi": "10.1186/s13677-025-00804-2",
+   "title": "Secure and personalized sports media recommendation via federated knowledge graph embedding in edge computing",
+   "received": "2025-09-18",
+   "revised": null,
+   "accepted": "2025-11-03",
+   "days": 46
+  },
+  {
+   "doi": "10.1186/s13677-026-00913-6",
+   "title": "Hybrid algorithms for task offloading in vehicular networks: a comprehensive survey",
+   "received": "2025-06-09",
+   "revised": null,
+   "accepted": "2026-05-05",
+   "days": 330
+  },
+  {
+   "doi": "10.1186/s13677-026-00975-6",
+   "title": "Enabling predictable multi-region provisioning for fleets of spot instances",
+   "received": "2026-02-24",
+   "revised": null,
+   "accepted": "2026-08-25",
+   "days": 182
+  },
+  {
+   "doi": "10.1186/s13677-026-00955-w",
+   "title": "Adaptive intrusion detection system for cloud security using deep learning",
+   "received": "2025-12-01",
+   "revised": null,
+   "accepted": "2026-06-30",
+   "days": 211
+  },
+  {
+   "doi": "10.1186/s13677-026-00920-7",
+   "title": "Moving target defense in Edge-Cloud systems: a systematic literature review",
+   "received": "2025-04-28",
+   "revised": null,
+   "accepted": "2026-05-16",
+   "days": 383
+  },
+  {
+   "doi": "10.1186/s13677-026-00908-3",
+   "title": "TailBench++: flexible multi-client, multi-server benchmarking for latency-critical workloads",
+   "received": "2025-09-08",
+   "revised": null,
+   "accepted": "2026-04-20",
+   "days": 224
+  },
+  {
+   "doi": "10.1186/s13677-026-00883-9",
+   "title": "Seamless transitions: a comprehensive review of live migration technologies",
+   "received": "2025-07-07",
+   "revised": null,
+   "accepted": "2026-02-27",
+   "days": 235
+  },
+  {
+   "doi": "10.1186/s13677-026-00937-y",
+   "title": "VLM-SAC: a visual large model-enhanced DRL approach for bandwidth-efficient video compression in multi-cloud environment",
+   "received": "2025-09-26",
+   "revised": null,
+   "accepted": "2026-06-08",
+   "days": 255
+  },
+  {
+   "doi": "10.1186/s13677-026-01002-4",
+   "title": "A mathematical model for optimizing containerized deployment in energy-efficient virtualized data centers: SAP HANA datacenter simulation",
+   "received": "2025-04-24",
+   "revised": null,
+   "accepted": "2026-09-28",
+   "days": 522
+  },
+  {
+   "doi": "10.1186/s13677-025-00795-0",
+   "title": "Integrating wearable health devices with AI and edge computing for personalized rehabilitation",
+   "received": "2025-09-01",
+   "revised": null,
+   "accepted": "2025-10-15",
+   "days": 44
+  },
+  {
+   "doi": "10.1186/s13677-026-00958-7",
+   "title": "Perception-driven cloud\u2013edge collaborative inference for efficient deployment of diffusion models in advanced cloud services",
+   "received": "2026-04-17",
+   "revised": null,
+   "accepted": "2026-07-11",
+   "days": 85
+  },
+  {
+   "doi": "10.1186/s13677-025-00828-8",
+   "title": "Hybrid dolphin swarm sparrow search optimization based multi-objective cloud workflow scheduling",
+   "received": "2024-11-13",
+   "revised": null,
+   "accepted": "2025-12-07",
+   "days": 389
+  },
+  {
+   "doi": "10.1186/s13677-026-01009-x",
+   "title": "DeCoR: decoupled multiplex causal ranking for microservice root cause analysis",
+   "received": "2026-07-30",
+   "revised": null,
+   "accepted": "2026-10-08",
+   "days": 70
+  },
+  {
+   "doi": "10.1186/s13677-026-00923-4",
+   "title": "Content-aware cloud-based personalized recommendation for digital cultural services in rural revitalization",
+   "received": "2026-03-30",
+   "revised": null,
+   "accepted": "2026-05-18",
+   "days": 49
+  },
+  {
+   "doi": "10.1186/s13677-026-00902-9",
+   "title": "Cybersecurity laws and ethical implications: integrated cybersecurity governance model (CLEI-ICGM)",
+   "received": "2026-02-16",
+   "revised": null,
+   "accepted": "2026-04-13",
+   "days": 56
+  },
+  {
+   "doi": "10.1186/s13677-025-00757-6",
+   "title": "Dynamic scheduling strategies for cloud-based load balancing in parallel and distributed systems",
+   "received": "2025-02-14",
+   "revised": null,
+   "accepted": "2025-05-21",
+   "days": 96
+  },
+  {
+   "doi": "10.1186/s13677-026-00988-1",
+   "title": "A Memetic-Enhanced Glowworm Swarm Optimization Algorithm with Adaptive Particle Refinement for secure and privacy-aware medical cloud computing",
+   "received": "2025-12-01",
+   "revised": null,
+   "accepted": "2026-09-11",
+   "days": 284
+  },
+  {
+   "doi": "10.1186/s13677-026-00881-x",
+   "title": "A framework for the predictive monitoring and data quality assurance in the cloud continuum",
+   "received": "2025-09-19",
+   "revised": null,
+   "accepted": "2026-02-27",
+   "days": 161
+  },
+  {
+   "doi": "10.1186/s13677-026-00929-y",
+   "title": "Asymmetric virtual machine replacement: a multi-objective optimization approach for energy efficiency in cloud data centers",
+   "received": "2025-09-15",
+   "revised": null,
+   "accepted": "2026-05-28",
+   "days": 255
+  },
+  {
+   "doi": "10.1186/s13677-026-00991-6",
+   "title": "Incremental information-aware heuristics for task offloading in mobile edge computing",
+   "received": "2025-12-08",
+   "revised": null,
+   "accepted": "2026-09-16",
+   "days": 282
+  },
+  {
+   "doi": "10.1186/s13677-025-00810-4",
+   "title": "Cloud\u2013edge collaborative AI for symmetry and asymmetry in human motion understanding and collaboration",
+   "received": "2025-09-17",
+   "revised": null,
+   "accepted": "2025-11-07",
+   "days": 51
+  },
+  {
+   "doi": "10.1186/s13677-026-00932-3",
+   "title": "Designing a layered framework to secure data via improved multi-stage lightweight cryptography in IoT\u2013Cloud systems",
+   "received": "2025-08-22",
+   "revised": null,
+   "accepted": "2026-06-03",
+   "days": 285
+  },
+  {
+   "doi": "10.1186/s13677-026-00981-8",
+   "title": "Integrated blockchain-federated learning framework for IOT security",
+   "received": "2025-10-24",
+   "revised": null,
+   "accepted": "2026-08-30",
+   "days": 310
+  },
+  {
+   "doi": "10.1186/s13677-026-01000-6",
+   "title": "Cloud\u2013edge collaborative intelligence for privacy-preserving electrical impedance tomography reconstruction with federated deep D-bar",
+   "received": "2026-08-23",
+   "revised": null,
+   "accepted": "2026-09-26",
+   "days": 34
+  },
+  {
+   "doi": "10.1186/s13677-026-00943-0",
+   "title": "HD-RAITE: a hybrid deep reinforcement learning framework for Risk-Adaptive Identity trust management in Zero Trust Environments",
+   "received": "2026-01-20",
+   "revised": null,
+   "accepted": "2026-06-12",
+   "days": 143
+  },
+  {
+   "doi": "10.1186/s13677-025-00747-8",
+   "title": "Cloud-based analysis of aerial imagery for unveiling ancient archaeological patterns",
+   "received": "2024-05-31",
+   "revised": null,
+   "accepted": "2025-04-10",
+   "days": 314
+  },
+  {
+   "doi": "10.1186/s13677-026-00950-1",
+   "title": "From data to decision: a privacy-preserving framework for intelligent transportation systems with edge AI",
+   "received": "2025-10-13",
+   "revised": null,
+   "accepted": "2026-06-16",
+   "days": 246
+  },
+  {
+   "doi": "10.1186/s13677-026-00875-9",
+   "title": "FedRAS: a dual-strategy framework for federated learning on heterogeneous devices",
+   "received": "2025-02-20",
+   "revised": null,
+   "accepted": "2026-02-22",
+   "days": 367
+  },
+  {
+   "doi": "10.1186/s13677-026-00915-4",
+   "title": "Machine learning assisted cloud edge framework for performance prediction in biomass driven hydrogen production systems",
+   "received": "2026-03-14",
+   "revised": null,
+   "accepted": "2026-05-07",
+   "days": 54
+  },
+  {
+   "doi": "10.1186/s13677-025-00830-0",
+   "title": "Rate-adaptive RDMA congestion control for AI clusters",
+   "received": "2025-11-05",
+   "revised": null,
+   "accepted": "2025-12-11",
+   "days": 36
+  },
+  {
+   "doi": "10.1186/s13677-025-00726-z",
+   "title": "Trustworthy and efficient project scheduling in IIoT based on smart contracts and edge computing",
+   "received": "2024-02-24",
+   "revised": null,
+   "accepted": "2025-01-05",
+   "days": 316
+  },
+  {
+   "doi": "10.1186/s13677-026-00995-2",
+   "title": "SE-IADM: an optimized stacked ensemble model for smart IoT attack detection using hybrid feature selection",
+   "received": "2026-01-06",
+   "revised": null,
+   "accepted": "2026-09-20",
+   "days": 257
+  },
+  {
+   "doi": "10.1186/s13677-026-00983-6",
+   "title": "Research on storage early warning and scheduling for cloud data centers based on spatial-temporal graph atlas and dynamic extreme value theory",
+   "received": "2026-05-23",
+   "revised": null,
+   "accepted": "2026-09-04",
+   "days": 104
+  },
+  {
+   "doi": "10.1186/s13677-026-00880-y",
+   "title": "Seizing the future: a robust epileptic seizure recognition model-based cloud computing platform and advanced deep learning model",
+   "received": "2025-12-12",
+   "revised": null,
+   "accepted": "2026-02-27",
+   "days": 77
+  },
+  {
+   "doi": "10.1186/s13677-025-00766-5",
+   "title": "Memory-augment graph transformer based unsupervised detection model for identifying performance anomalies in highly-dynamic cloud environments",
+   "received": "2025-03-09",
+   "revised": null,
+   "accepted": "2025-06-27",
+   "days": 110
+  },
+  {
+   "doi": "10.1186/s13677-025-00765-6",
+   "title": "SSLA: a semi-supervised framework for real-time injection detection and anomaly monitoring in cloud-based web applications with real-world implementat",
+   "received": "2025-02-10",
+   "revised": null,
+   "accepted": "2025-06-11",
+   "days": 121
+  },
+  {
+   "doi": "10.1186/s13677-025-00794-1",
+   "title": "Enhancing cloud security using attention-based improved RegNet with hybrid vigenere-shift transposition algorithm",
+   "received": "2025-04-19",
+   "revised": null,
+   "accepted": "2025-10-12",
+   "days": 176
+  },
+  {
+   "doi": "10.1186/s13677-025-00832-y",
+   "title": "Multi-stage task allocation strategy for UAV clusterin multi-object tracking",
+   "received": "2023-07-09",
+   "revised": null,
+   "accepted": "2025-12-12",
+   "days": 887
+  },
+  {
+   "doi": "10.1186/s13677-026-01015-z",
+   "title": "Secrecy-aware dynamic pricing and resource allocation in MEC systems under CSI uncertainty using deep reinforcement learning",
+   "received": "2026-02-02",
+   "revised": null,
+   "accepted": "2026-10-18",
+   "days": 258
+  },
+  {
+   "doi": "10.1186/s13677-026-00882-w",
+   "title": "Novel federated learning-based approach for network attack detection",
+   "received": "2025-05-01",
+   "revised": null,
+   "accepted": "2026-02-27",
+   "days": 302
+  },
+  {
+   "doi": "10.1186/s13677-026-00926-1",
+   "title": "Hybrid SHA3 Junk Encryption based Crystal ZEUS framework for secure client-side deduplication on cloud",
+   "received": "2025-07-15",
+   "revised": null,
+   "accepted": "2026-05-22",
+   "days": 311
+  },
+  {
+   "doi": "10.1186/s13677-026-00870-0",
+   "title": "Large model\u2013driven edge-cloud collaboration for next-gen animation systems",
+   "received": "2026-01-06",
+   "revised": null,
+   "accepted": "2026-02-14",
+   "days": 39
+  },
+  {
+   "doi": "10.1186/s13677-025-00735-y",
+   "title": "Analyzing the trend of government support for cloud computing usage in e-government architecture",
+   "received": "2024-05-11",
+   "revised": null,
+   "accepted": "2025-02-06",
+   "days": 271
+  },
+  {
+   "doi": "10.1186/s13677-026-00982-7",
+   "title": "Gaze-anchored cloud\u2013edge facial behavioral learning for leakage-safe autism screening of students in educational environments",
+   "received": "2026-06-20",
+   "revised": null,
+   "accepted": "2026-09-01",
+   "days": 73
+  },
+  {
+   "doi": "10.1186/s13677-026-00924-3",
+   "title": "An optimized bias-resilient double-indexed throttled scheduling algorithm for fair and efficient load balancing in cloud datacenters",
+   "received": "2026-02-20",
+   "revised": null,
+   "accepted": "2026-05-18",
+   "days": 87
+  },
+  {
+   "doi": "10.1186/s13677-025-00836-8",
+   "title": "Collaborative smart detectors for edge surveillance in cognitive monitoring systems using Kullback-Leibler divergence",
+   "received": "2025-10-30",
+   "revised": null,
+   "accepted": "2025-12-18",
+   "days": 49
+  },
+  {
+   "doi": "10.1186/s13677-025-00729-w",
+   "title": "Cloud-edge hybrid deep learning framework for scalable IoT resource optimization",
+   "received": "2024-12-01",
+   "revised": null,
+   "accepted": "2025-01-20",
+   "days": 50
+  },
+  {
+   "doi": "10.1186/s13677-026-00984-5",
+   "title": "CE-Agent: a cloud-edge collaborative agent framework with dynamic offloading and synergistic distillation",
+   "received": "2026-04-21",
+   "revised": null,
+   "accepted": "2026-09-04",
+   "days": 136
+  },
+  {
+   "doi": "10.1186/s13677-026-00965-8",
+   "title": "HospGNN-IDS: scalable graph neural network-based intrusion detection for IoT-enabled hospital networks",
+   "received": "2026-03-30",
+   "revised": null,
+   "accepted": "2026-08-06",
+   "days": 129
+  },
+  {
+   "doi": "10.1186/s13677-026-00849-x",
+   "title": "Adaptive rescaling technique for portable vision devices in IoMT toward swimming workouts training and safety",
+   "received": "2025-10-02",
+   "revised": null,
+   "accepted": "2026-01-19",
+   "days": 109
+  },
+  {
+   "doi": "10.1186/s13677-025-00737-w",
+   "title": "Functionality-aware offloading technique for scheduling containerized edge applications in IoT edge computing",
+   "received": "2023-12-19",
+   "revised": null,
+   "accepted": "2025-02-09",
+   "days": 418
+  },
+  {
+   "doi": "10.1186/s13677-025-00780-7",
+   "title": "An energy-conscious scheduling framework for serverless edge computing in IoT",
+   "received": "2025-01-24",
+   "revised": null,
+   "accepted": "2025-09-02",
+   "days": 221
+  },
+  {
+   "doi": "10.1186/s13677-025-00756-7",
+   "title": "Sentence type identification-based product review sentiment analysis using BeDi-DC and Log-Squish CNN",
+   "received": "2024-12-22",
+   "revised": null,
+   "accepted": "2025-05-16",
+   "days": 145
+  },
+  {
+   "doi": "10.1186/s13677-025-00751-y",
+   "title": "Demystification and near-perfect estimation of minimum gas limit and gas used for Ethereum smart contracts",
+   "received": "2024-12-06",
+   "revised": null,
+   "accepted": "2025-05-06",
+   "days": 151
+  },
+  {
+   "doi": "10.1186/s13677-025-00731-2",
+   "title": "Integrating semantic web into context-aware mobile application based on cloud computing",
+   "received": "2023-03-05",
+   "revised": null,
+   "accepted": "2025-01-29",
+   "days": 696
+  },
+  {
+   "doi": "10.1186/s13677-025-00769-2",
+   "title": "Optimizing resource allocation in precision farming using quantum enhanced algorithms and quantum sensor networks",
+   "received": "2025-04-20",
+   "revised": null,
+   "accepted": "2025-07-19",
+   "days": 90
+  },
+  {
+   "doi": "10.1186/s13677-026-00904-7",
+   "title": "Carbon-aware scheduling and distributionally robust optimization for cloud systems: forecasting, battery storage, and adaptive ambiguity refinement",
+   "received": "2026-03-14",
+   "revised": null,
+   "accepted": "2026-04-15",
+   "days": 32
+  },
+  {
+   "doi": "10.1186/s13677-026-00938-x",
+   "title": "A hybrid data-driven framework for real-time edge computing optimization in IoT environments",
+   "received": "2025-10-13",
+   "revised": null,
+   "accepted": "2026-06-08",
+   "days": 238
+  },
+  {
+   "doi": "10.1186/s13677-026-00898-2",
+   "title": "Cross-modal deepfake detection: integrating textual and frequency domains",
+   "received": "2026-02-12",
+   "revised": null,
+   "accepted": "2026-03-29",
+   "days": 45
+  },
+  {
+   "doi": "10.1186/s13677-026-00966-7",
+   "title": "Malicious encrypted traffic detection method for service chains in multi-cloud environments",
+   "received": "2026-05-15",
+   "revised": null,
+   "accepted": "2026-08-06",
+   "days": 83
+  },
+  {
+   "doi": "10.1186/s13677-026-00855-z",
+   "title": "Advancing faithful KBQA services via prompt-driven knowledge graph-enhanced LLMs in cloud",
+   "received": "2025-12-08",
+   "revised": null,
+   "accepted": "2026-01-27",
+   "days": 50
+  },
+  {
+   "doi": "10.1186/s13677-026-00862-0",
+   "title": "A zero-trust decentralized identifier specification based machine learning against cyber-attacks in blockchain based self-sovereign identity",
+   "received": "2025-03-28",
+   "revised": null,
+   "accepted": "2026-02-07",
+   "days": 316
+  },
+  {
+   "doi": "10.1186/s13677-026-00972-9",
+   "title": "Platform engineering as organizational strategy: platform gravity, friction, and the economics of scaling internal developer platforms",
+   "received": "2026-03-20",
+   "revised": null,
+   "accepted": "2026-08-22",
+   "days": 155
+  },
+  {
+   "doi": "10.1186/s13677-026-00933-2",
+   "title": "TaxLedger-cloud: integrating blockchain and hyperledger technologies for trustworthy and accountable taxation systems",
+   "received": "2025-11-05",
+   "revised": null,
+   "accepted": "2026-06-03",
+   "days": 210
+  },
+  {
+   "doi": "10.1186/s13677-026-00889-3",
+   "title": "CloudSeqAnim: cloud-based sequential behavior modeling for large-scale animation content services",
+   "received": "2026-01-07",
+   "revised": null,
+   "accepted": "2026-03-11",
+   "days": 63
+  },
+  {
+   "doi": "10.1186/s13677-025-00820-2",
+   "title": "Sign detection and comparison for wireless sensor data based on subtractive homomorphism and privacy-preserving deep learning model",
+   "received": "2025-07-14",
+   "revised": null,
+   "accepted": "2025-11-23",
+   "days": 132
+  },
+  {
+   "doi": "10.1186/s13677-026-00905-6",
+   "title": "TorusNet: a direction-specific graph neural network architecture for congestion-aware adaptive load-balanced routing in torus networks",
+   "received": "2025-08-09",
+   "revised": null,
+   "accepted": "2026-04-15",
+   "days": 249
+  },
+  {
+   "doi": "10.1186/s13677-026-01003-3",
+   "title": "ESZF key generation model with novel identity and attribute-based encryption algorithm in secure cloud storage using health care data",
+   "received": "2026-03-25",
+   "revised": null,
+   "accepted": "2026-10-01",
+   "days": 190
+  },
+  {
+   "doi": "10.1186/s13677-026-00979-2",
+   "title": "Optimization of dynamic admission control for preemptible cloud services based on TPD-SAC reinforcement learning",
+   "received": "2025-04-02",
+   "revised": null,
+   "accepted": "2026-08-28",
+   "days": 513
+  },
+  {
+   "doi": "10.1186/s13677-026-00841-5",
+   "title": "Dynamic task assignment for edge computing-enabled vehicular mobile crowdsensing",
+   "received": "2025-03-29",
+   "revised": null,
+   "accepted": "2026-01-06",
+   "days": 283
+  },
+  {
+   "doi": "10.1186/s13677-025-00741-0",
+   "title": "Server deployment strategies considering robustness and resource constraints in edge computing",
+   "received": "2024-07-01",
+   "revised": null,
+   "accepted": "2025-03-01",
+   "days": 243
+  },
+  {
+   "doi": "10.1186/s13677-025-00772-7",
+   "title": "A novel Location-Aware job scheduling framework for optimizing Fog-Cloud IoT systems: insights from dynamic traffic management",
+   "received": "2024-03-26",
+   "revised": null,
+   "accepted": "2025-08-08",
+   "days": 500
+  },
+  {
+   "doi": "10.1186/s13677-026-00954-x",
+   "title": "Cloud-native optimisation of UAV logistics for rural emergency healthcare under data scarcity",
+   "received": "2026-03-24",
+   "revised": null,
+   "accepted": "2026-06-30",
+   "days": 98
+  },
+  {
+   "doi": "10.1186/s13677-025-00784-3",
+   "title": "Adaptive edge-fog healthcare networks: a novel framework for emergency response management",
+   "received": "2024-11-24",
+   "revised": null,
+   "accepted": "2025-09-07",
+   "days": 287
+  },
+  {
+   "doi": "10.1186/s13677-025-00781-6",
+   "title": "Blockchain-enhanced security and bayesian trust assessment for secure task scheduling in latency-critical fog computing environments",
+   "received": "2025-03-29",
+   "revised": null,
+   "accepted": "2025-09-03",
+   "days": 158
+  },
+  {
+   "doi": "10.1186/s13677-025-00818-w",
+   "title": "FSEGM: feature selection and ensemble generative model for adaptive cloud security",
+   "received": "2025-03-26",
+   "revised": null,
+   "accepted": "2025-11-19",
+   "days": 238
+  },
+  {
+   "doi": "10.1186/s13677-026-00888-4",
+   "title": "ERecommend: a search scheme for encrypted storage supporting association analysis and active recommendation",
+   "received": "2025-02-12",
+   "revised": null,
+   "accepted": "2026-03-10",
+   "days": 391
+  },
+  {
+   "doi": "10.1186/s13677-026-00925-2",
+   "title": "Hypergraph-based adaptive resource scheduling for fault-resilient multi-tenant cloud allocation",
+   "received": "2025-04-29",
+   "revised": null,
+   "accepted": "2026-05-18",
+   "days": 384
+  },
+  {
+   "doi": "10.1186/s13677-026-00906-5",
+   "title": "Homomorphic threshold detection for wireless sensor data using a privacy-preserving machine learning model",
+   "received": "2025-08-01",
+   "revised": null,
+   "accepted": "2026-04-16",
+   "days": 258
+  },
+  {
+   "doi": "10.1186/s13677-026-00961-y",
+   "title": "Predicting and mitigating early job failures in cloud data centers",
+   "received": "2026-03-16",
+   "revised": null,
+   "accepted": "2026-07-20",
+   "days": 126
+  },
+  {
+   "doi": "10.1186/s13677-025-00776-3",
+   "title": "IoT-enabled fog computing framework: heat stroke risk analysis",
+   "received": "2025-04-29",
+   "revised": null,
+   "accepted": "2025-08-21",
+   "days": 114
+  },
+  {
+   "doi": "10.1186/s13677-025-00819-9",
+   "title": "Cross-technology cloud offloading model",
+   "received": "2025-05-14",
+   "revised": null,
+   "accepted": "2025-11-23",
+   "days": 193
+  },
+  {
+   "doi": "10.1186/s13677-025-00779-0",
+   "title": "Integrating machine learning and encryption for effective data management in blood bank supply chains",
+   "received": "2025-04-15",
+   "revised": null,
+   "accepted": "2025-08-28",
+   "days": 135
+  },
+  {
+   "doi": "10.1186/s13677-025-00827-9",
+   "title": "Energy-efficient user allocation and cache updating in mobile edge computing networks based on user geographical aggregation",
+   "received": "2024-07-17",
+   "revised": null,
+   "accepted": "2025-12-06",
+   "days": 507
+  },
+  {
+   "doi": "10.1186/s13677-026-00922-5",
+   "title": "Edge-cloud collaborative learning for large-scale physical education data processing",
+   "received": "2026-03-31",
+   "revised": null,
+   "accepted": "2026-05-18",
+   "days": 48
+  },
+  {
+   "doi": "10.1186/s13677-026-00964-9",
+   "title": "Efficient IoT data security using lattice-based multi-key homomorphic proxy re-encryption",
+   "received": "2025-10-23",
+   "revised": null,
+   "accepted": "2026-07-27",
+   "days": 277
+  },
+  {
+   "doi": "10.1186/s13677-025-00823-z",
+   "title": "A framework based on edge computing and identity replacement for the protection of user information service privacy",
+   "received": "2025-07-04",
+   "revised": null,
+   "accepted": "2025-11-26",
+   "days": 145
+  },
+  {
+   "doi": "10.1186/s13677-025-00753-w",
+   "title": "Optimized hybrid deep learning for cross-linguistic sentiment analysis: a novel approach",
+   "received": "2025-01-07",
+   "revised": null,
+   "accepted": "2025-05-08",
+   "days": 121
+  },
+  {
+   "doi": "10.1186/s13677-025-00762-9",
+   "title": "Energy-efficient deep learning-based intrusion detection system for edge computing: a novel DNN-KDQ model",
+   "received": "2025-02-25",
+   "revised": null,
+   "accepted": "2025-06-01",
+   "days": 96
+  },
+  {
+   "doi": "10.1186/s13677-026-00927-0",
+   "title": "CCSDN: content-centric software defined networking applied for 5G content distribution in autonomous vehicles",
+   "received": "2025-10-03",
+   "revised": null,
+   "accepted": "2026-05-27",
+   "days": 236
+  },
+  {
+   "doi": "10.1186/s13677-025-00770-9",
+   "title": "PCL-RC: a parallel cloud resource load prediction model based on feature optimization",
+   "received": "2024-10-16",
+   "revised": null,
+   "accepted": "2025-07-19",
+   "days": 276
+  },
+  {
+   "doi": "10.1186/s13677-024-00723-8",
+   "title": "Multi party confidential verifiable electronic voting scheme based on blockchain",
+   "received": "2024-08-02",
+   "revised": null,
+   "accepted": "2024-12-04",
+   "days": 124
+  },
+  {
+   "doi": "10.1186/s13677-025-00734-z",
+   "title": "Communication-efficient and privacy-preserving federated learning for medical image classification in multi-institutional edge computing",
+   "received": "2024-08-08",
+   "revised": null,
+   "accepted": "2025-02-05",
+   "days": 181
+  },
+  {
+   "doi": "10.1186/s13677-025-00739-8",
+   "title": "Utility-driven virtual machine allocation in edge cloud environments using a partheno-genetic algorithm",
+   "received": "2024-09-11",
+   "revised": null,
+   "accepted": "2025-02-12",
+   "days": 154
+  },
+  {
+   "doi": "10.1186/s13677-026-00960-z",
+   "title": "Evaluating data analytics architectures performance: a comparative study on the continuum",
+   "received": "2025-07-15",
+   "revised": null,
+   "accepted": "2026-07-16",
+   "days": 366
+  },
+  {
+   "doi": "10.1186/s13677-025-00728-x",
+   "title": "An approach for multipath optimal selection of network service combinations based on golden eagle optimizer with double learning strategies",
+   "received": "2024-09-22",
+   "revised": null,
+   "accepted": "2025-01-20",
+   "days": 120
+  },
+  {
+   "doi": "10.1186/s13677-025-00758-5",
+   "title": "Cloud software code generation via knowledge graphs and multi-modal learning",
+   "received": "2025-03-04",
+   "revised": null,
+   "accepted": "2025-05-30",
+   "days": 87
+  },
+  {
+   "doi": "10.1186/s13677-026-01023-z",
+   "title": "Clustered event2ledger: docker events traceability using hyperledger fabric consortium blockchain",
+   "received": "2023-03-31",
+   "revised": null,
+   "accepted": "2026-11-13",
+   "days": 1323
+  },
+  {
+   "doi": "10.1186/s13677-025-00764-7",
+   "title": "SmartTrust: a hybrid deep learning framework for real-time threat detection in cloud environments using Zero-Trust Architecture",
+   "received": "2025-02-19",
+   "revised": null,
+   "accepted": "2025-06-03",
+   "days": 104
+  },
+  {
+   "doi": "10.1186/s13677-026-00868-8",
+   "title": "Cloud\u2013edge collaborative intelligence for wind power forecasting: large\u2013small model synergy with LightGBM and CNN\u2013BiLSTM",
+   "received": "2025-10-09",
+   "revised": null,
+   "accepted": "2026-02-12",
+   "days": 126
+  },
+  {
+   "doi": "10.1186/s13677-025-00826-w",
+   "title": "A retrieval-augmented LLM framework for severity prediction of bug reports in cloud-based mobile applications",
+   "received": "2025-10-24",
+   "revised": null,
+   "accepted": "2025-12-04",
+   "days": 41
+  },
+  {
+   "doi": "10.1186/s13677-025-00736-x",
+   "title": "Financial service composition with various privacy levels in multiple cloud environment",
+   "received": "2024-08-13",
+   "revised": null,
+   "accepted": "2025-02-08",
+   "days": 179
+  },
+  {
+   "doi": "10.1186/s13677-026-00851-3",
+   "title": "A machine learning technique for optimizing virtual machine placement in data-centres",
+   "received": "2025-05-13",
+   "revised": null,
+   "accepted": "2026-01-21",
+   "days": 253
+  },
+  {
+   "doi": "10.1186/s13677-025-00807-z",
+   "title": "Data repair optimization method for geo-distributed fault-tolerant storage systems based on whale optimization algorithm",
+   "received": "2024-11-29",
+   "revised": null,
+   "accepted": "2025-11-05",
+   "days": 341
+  },
+  {
+   "doi": "10.1186/s13677-025-00787-0",
+   "title": "Hybrid compression-based routing strategies for enhanced energy efficiency in wireless sensor networks",
+   "received": "2025-05-01",
+   "revised": null,
+   "accepted": "2025-09-29",
+   "days": 151
+  },
+  {
+   "doi": "10.1186/s13677-025-00813-1",
+   "title": "Flexible evaluation method based on personalized evaluation requirements for cloud manufacturing services",
+   "received": "2025-03-19",
+   "revised": null,
+   "accepted": "2025-11-13",
+   "days": 239
+  },
+  {
+   "doi": "10.1186/s13677-026-00846-0",
+   "title": "Cloud disaster recovery model based on failure prediction",
+   "received": "2025-07-24",
+   "revised": null,
+   "accepted": "2026-01-15",
+   "days": 175
+  },
+  {
+   "doi": "10.1186/s13677-026-00861-1",
+   "title": "Cost efficient storage and swift time-bound access revocation using attribute-based encryption in untrusted cloud environments",
+   "received": "2025-05-17",
+   "revised": null,
+   "accepted": "2026-02-06",
+   "days": 265
+  },
+  {
+   "doi": "10.1186/s13677-026-00909-2",
+   "title": "Parallel and extremely fast learning neural network for healthcare big data applications",
+   "received": "2025-12-14",
+   "revised": null,
+   "accepted": "2026-04-20",
+   "days": 127
+  }
+ ]
+}

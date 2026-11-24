@@ -1,13 +1,13 @@
 {
   "status": "RUNNING",
   "cycle": 1,
-  "phase": "PHASE1_JOURNAL",
-  "step": "journal selection: candidate search",
+  "phase": "PHASE2_LITERATURE",
+  "step": "literature + topic candidates",
   "pivots": 0,
   "topic_id": null,
-  "journal": null,
-  "last_action": "Built persistence (Section 2) and restart layers (Section 3); runner smoke-tested twice (idempotent)",
-  "next_action": "Phase 1: evaluate >=10 Q1 journal candidates, verify Received->Accepted days via Crossref assertions on >=10 recent articles each",
+  "journal": "JKSU-CIS (Springer Nature, ISSN 1319-1578, IF 6.4 2025; turnaround median 71\u201374 d, marginal)",
+  "last_action": "Phase 1 done: journal_selection/selected_journal.md",
+  "next_action": "Phase 2/3: survey recent JKSU-CIS ML papers (Crossref/OpenAlex), generate >=10 CPU-feasible topic candidates, select topic",
   "config": {
     "TARGET_TIER": "Q1 journal (JCR), reputable publisher",
     "MAX_DAYS_SUBMIT_TO_ACCEPT": 72,
@@ -29,5 +29,5 @@
     ]
   },
   "seeds_confirm_fixed_at": "2026-11-24 (project start; never change)",
-  "updated": "2026-11-24T03:06:25+00:00"
+  "updated": "2026-11-24T03:11:07+00:00"
 }
