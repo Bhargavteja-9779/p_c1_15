@@ -1,13 +1,16 @@
 #!/usr/bin/env bash
-# Layer A: launch the compute runner detached (tmux if available, else setsid+nohup). Idempotent.
+# Layer A: launch N detached runner workers (default: cores-1, min 1) in tmux (or setsid+nohup). Idempotent:
+# each worker holds its own lock, so re-running only starts missing workers.
 cd "$(dirname "$0")/.." || exit 1
 mkdir -p logs
-if pgrep -f "run_all.py --mode full" >/dev/null; then echo "runner already running"; exit 0; fi
-if command -v tmux >/dev/null; then
-  tmux has-session -t research_runner 2>/dev/null && tmux kill-session -t research_runner
-  tmux new-session -d -s research_runner "python3 run_all.py --mode full --resume >> logs/runner.log 2>&1"
-  echo "launched in tmux session 'research_runner' (logs/runner.log)"
-else
-  setsid nohup python3 run_all.py --mode full --resume >> logs/runner.log 2>&1 < /dev/null &
-  echo "launched with setsid/nohup pid $! (logs/runner.log)"
-fi
+N=${1:-$(( $(nproc) > 1 ? $(nproc) - 1 : 1 ))}
+for w in $(seq 0 $((N-1))); do
+  if pgrep -f "run_all.py --mode full --resume --worker $w\$" >/dev/null; then echo "worker $w already running"; continue; fi
+  CMD="python3 run_all.py --mode full --resume --worker $w >> logs/runner_w$w.log 2>&1"
+  if command -v tmux >/dev/null; then
+    tmux kill-session -t research_w$w 2>/dev/null
+    tmux new-session -d -s research_w$w "$CMD"; echo "worker $w launched in tmux session research_w$w"
+  else
+    setsid nohup bash -c "$CMD" < /dev/null > /dev/null 2>&1 & echo "worker $w launched pid $!"
+  fi
+done

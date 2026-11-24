@@ -18,6 +18,9 @@ def _queue_path(mode):
 def load_queue(mode):
     return read_json(_queue_path(mode), {"jobs": []})
 
+def qlock(mode):
+    return FileLock(STATE / f"queue_{mode}.qlock", blocking=True)
+
 def save_queue(mode, q):
     write_json(_queue_path(mode), q)
 
@@ -96,6 +99,15 @@ class Ctx:
         # csv with union of keys is awkward to append; jsonl is the canonical raw store,
         # raw_results.csv is regenerated from jsonl by scripts/final_report.py.
 
+def _worker_alive(mode, w):
+    """True if worker w currently holds its runner lock (i.e. is alive)."""
+    if w is None: return False
+    try:
+        with FileLock(STATE / f"run_{mode}_w{w}.lock"):
+            return False
+    except BlockingIOError:
+        return True
+
 def _heartbeat_thread(stop_evt, budget, ctx_holder):
     n = 0
     while not stop_evt.wait(30):
@@ -104,9 +116,9 @@ def _heartbeat_thread(stop_evt, budget, ctx_holder):
         n += 1
         if n % 2 == 0: budget.flush()
 
-def run(mode="full", resume=True, only_kind=None, max_jobs=None):
+def run(mode="full", resume=True, only_kind=None, max_jobs=None, worker=0):
     from . import jobs as job_registry
-    lock = FileLock(STATE / f"run_{mode}.lock")
+    lock = FileLock(STATE / f"run_{mode}_w{worker}.lock")
     try:
         lock.__enter__()
     except BlockingIOError:
@@ -117,31 +129,38 @@ def run(mode="full", resume=True, only_kind=None, max_jobs=None):
         budget = Budget(cycle, enabled=(mode == "full"))
         holder = {}; stop_evt = threading.Event()
         th = threading.Thread(target=_heartbeat_thread, args=(stop_evt, budget, holder), daemon=True); th.start()
-        q = load_queue(mode)
-        # resume: anything left "running" by a crash goes back to pending (resumes from ckpt)
-        for j in q["jobs"]:
-            if j["status"] == "running":
-                j["status"] = "pending"; j.setdefault("log", []).append(f"{now_iso()} reset running->pending on restart")
-        save_queue(mode, q)
+        with qlock(mode):
+            q = load_queue(mode)
+            # resume: jobs left "running" by a dead worker go back to pending (resume from ckpt)
+            for j in q["jobs"]:
+                if j["status"] == "running" and not _worker_alive(mode, j.get("worker")):
+                    j["status"] = "pending"; j.setdefault("log", []).append(f"{now_iso()} reset running->pending on restart")
+            save_queue(mode, q)
         done_count = 0
         while True:
-            q = load_queue(mode)
-            cands = [j for j in q["jobs"] if j["status"] in ("pending", "failed")
-                     and j.get("attempts", 0) < MAX_ATTEMPTS and (only_kind is None or j["kind"] == only_kind)]
-            for j in q["jobs"]:
-                if j["status"] == "failed" and j.get("attempts", 0) >= MAX_ATTEMPTS:
-                    j["status"] = "failed_permanent"
-            if not cands:
-                save_queue(mode, q); print("[runner] queue empty."); break
-            if mode == "full" and budget.exhausted():
-                for j in cands: j["status"] = "skipped_budget"
-                save_queue(mode, q); print("[runner] budget exhausted; remaining jobs skipped_budget."); break
-            cands.sort(key=lambda j: (j.get("priority", 50), j["id"]))
-            job = cands[0]
-            job["status"] = "running"; job["attempts"] = job.get("attempts", 0) + 1
-            job["started"] = now_iso(); save_queue(mode, q)
+            job = None
+            with qlock(mode):
+                q = load_queue(mode)
+                for j in q["jobs"]:
+                    if j["status"] == "failed" and j.get("attempts", 0) >= MAX_ATTEMPTS:
+                        j["status"] = "failed_permanent"
+                cands = [j for j in q["jobs"] if j["status"] in ("pending", "failed")
+                         and j.get("attempts", 0) < MAX_ATTEMPTS and (only_kind is None or j["kind"] == only_kind)]
+                if not cands:
+                    save_queue(mode, q); print("[runner] queue empty.")
+                elif mode == "full" and budget.exhausted():
+                    for j in cands: j["status"] = "skipped_budget"
+                    save_queue(mode, q); print("[runner] budget exhausted; remaining jobs skipped_budget.")
+                else:
+                    cands.sort(key=lambda j: (j.get("priority", 50), j["id"]))
+                    job = cands[0]
+                    job["status"] = "running"; job["attempts"] = job.get("attempts", 0) + 1
+                    job["started"] = now_iso(); job["worker"] = worker
+                    save_queue(mode, q)
+            if job is None:
+                break
             holder["job"] = job["id"]; ctx = Ctx(job, mode)
-            print(f"[runner] {now_iso()} start {job['id']} (attempt {job['attempts']})", flush=True)
+            print(f"[runner] {now_iso()} w{worker} start {job['id']} (attempt {job['attempts']})", flush=True)
             budget.start(); t0 = time.time(); status, err = "done", None
             try:
                 fn = getattr(job_registry, job["kind"])
@@ -150,14 +169,15 @@ def run(mode="full", resume=True, only_kind=None, max_jobs=None):
                 status = "failed"; err = "".join(traceback.format_exception(e))[-3000:]
                 print(err, flush=True)
             budget.stop(); holder["job"] = None
-            q = load_queue(mode)
-            for j in q["jobs"]:
-                if j["id"] == job["id"]:
-                    j["status"] = status; j["finished"] = now_iso(); j["seconds"] = round(time.time() - t0, 1)
-                    if err: j.setdefault("errors", []).append(err[-800:])
-                    if status == "failed" and j["attempts"] >= MAX_ATTEMPTS: j["status"] = "failed_permanent"
-            save_queue(mode, q)
-            print(f"[runner] {now_iso()} {status} {job['id']} in {time.time()-t0:.1f}s", flush=True)
+            with qlock(mode):
+                q = load_queue(mode)
+                for j in q["jobs"]:
+                    if j["id"] == job["id"]:
+                        j["status"] = status; j["finished"] = now_iso(); j["seconds"] = round(time.time() - t0, 1)
+                        if err: j.setdefault("errors", []).append(err[-800:])
+                        if status == "failed" and j["attempts"] >= MAX_ATTEMPTS: j["status"] = "failed_permanent"
+                save_queue(mode, q)
+            print(f"[runner] {now_iso()} w{worker} {status} {job['id']} in {time.time()-t0:.1f}s", flush=True)
             done_count += 1
             if max_jobs and done_count >= max_jobs: break
         stop_evt.set(); budget.flush()

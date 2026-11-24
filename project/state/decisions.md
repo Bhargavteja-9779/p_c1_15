@@ -13,3 +13,15 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-24T03:11:07+00:00** — Interpretation: "submission→acceptance ≤ 72" evaluated as the MEDIAN (Accepted−Received) of a random sample
   - Reason: Section 4 asks to compute median and range; a per-paper guarantee is impossible.
+
+- **2026-11-24T03:22:41+00:00** — Topic: verification-latency-aware online JIT-SDP (latency-aware weighting, LAW)
+  - Reason: Public data with discovery times (Cabral et al. Zenodo 2591761), CPU-cheap, gap not found in 10-query prior-art search; see topic/selected_topic.md
+
+- **2026-11-24T03:22:41+00:00** — Dev/test split by project: dev={fabric,neutron,nova,sentry}, test=other 10 (rng seed 0 draw before modelling)
+  - Reason: Tuning only on dev projects; test projects touched only by frozen confirmation runs (Rule 5)
+
+- **2026-11-24T03:22:41+00:00** — Primary metric G-mean over the evaluation window (commits from #500 to last-365-days), against final labels
+  - Reason: Matches Cabral et al. 2019; last year excluded because final labels there are least complete
+
+- **2026-11-24T03:22:41+00:00** — Runner parallelised to 3 workers (cores-1); budget counts summed worker seconds (CPU-time-like)
+  - Reason: 4-core machine; budget remains conservative because seconds are summed across workers

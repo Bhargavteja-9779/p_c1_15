@@ -1,0 +1,1776 @@
+                                                                                                                                              1
+
+
+
+
+        Towards Reliable Online Just-in-time Software
+                     Defect Prediction
+                         George Cabral, Member, IEEE, Leandro L. Minku, Senior Member, IEEE
+
+
+
+
+   Abstract—Throughout its development period, a software                    on Machine Learning have been proposed [1], [2], [3]. These
+project experiences different phases, comprises modules with dif-            methods are frequently referred to as Just-In-Time Software
+ferent complexities and is touched by many different developers.             Defect Prediction (JIT-SDP) [4], [5], [6] methods. They can
+Hence, it is natural that problems such as Just-in-Time Software
+Defect Prediction (JIT-SDP) are affected by changes in the                   alert a software developer of potential defects associated
+defect generating process (concept drifts), potentially hindering            to their software change at commit time (i.e., just-in-time),
+predictive performance. JIT-SDP also suffers from delays in                  when the change is still fresh in the developer’s mind and
+receiving the labels of training examples (verification latency),            easier/cheaper to be inspected. In this way, software testing
+potentially exacerbating the challenges posed by concept drift               and inspection can be done in a more cost-effective way,
+and further hindering predictive performance. However, little is
+known about what types of concept drift affect JIT-SDP and how               contributing towards better software quality.
+they affect JIT-SDP classifiers in view of verification latency.                A key problem in most JIT-SDP studies is that they do
+This work performs the first detailed analysis of that. Among                not respect the chronology of the available training data
+others, it reveals that different types of concept drift together            when building JIT-SDP classifiers, i.e., their experiments may
+with verification latency significantly impair the stability of the          use data that, in practice, would be unavailable to train the
+predictive performance of existing JIT-SDP approaches, drasti-
+cally affecting their reliability over time. Based on the findings,          classifier. As pointed out by Tan et. al. [7], this leads to over-
+a new JIT-SDP approach is proposed, aimed at providing higher                estimations of predictive performance, giving the impression
+and more stable predictive performance (i.e., reliable) over time.           that JIT-SDP classifiers perform better than they would do in
+Experiments based on ten GitHub open source projects show                    real scenarios.
+that our approach was capable of produce significantly more                     The reason for the overestimations of predictive perfor-
+stable predictive performances in all investigated datasets while
+maintaining or improving the predictive performance obtained                 mance is twofold. First, JIT-SDP is affected by concept
+by state-of-art methods.                                                     drifts [8], [6], i.e., changes in the defect generating process.
+                                                                             These changes mean that JIT-SDP classifiers trained on data
+  Index Terms—Just-in-time Software Defect Prediction, Online
+Learning, Concept Drift, Verification Latency, Class Imbalance               generated at certain periods of time may be unsuitable for
+Learning.                                                                    later periods of time [6], because the training data generated
+                                                                             at earlier periods may not share the same underlying defect
+                                                                             generating process as the software changes produced at later
+                         I. I NTRODUCTION                                    periods. Therefore, training a classifier with data from the
+   Defects in software are one of the main threats to software               future could cause this classifier to perform well on future
+development companies, increasing software costs and poten-                  commits, when in practice it would not have performed so
+tially damaging companies’ reputations. A report created by                  well due to the unavailability of data similar to the future data
+The Consortium for IT Software Quality (CISQ)1 revealed that                 for training.
+poor software quality costed $ 2.8 trillions in 2018 only in US.                Second, JIT-SDP suffers from verification latency [8]. This
+This same report states that developers introduce on average                 refers to the fact that the label associated to a software change
+100 to 150 defects for every thousand of lines of code, among                arrives with a delay, rather than arriving at commit time. In
+which 10% can be considered serious. However, reducing                       particular, a software change can only be labelled as defect-
+the number of software defects is challenging, especially                    inducing once a defect associated to it is found. And, it can
+considering that the presence of defects can be associated                   only be labelled as clean once enough time has passed for one
+to multiple uncontrollable factors such as changes in the                    to be confident that this software change is not associated to
+development team and time to market, and exacerbated by                      any defects. This issue has been overlooked by most existing
+limited testing resources.                                                   work [9], [5], [2]. When associated with concept drift, it
+   To help with improving software quality, methods for au-                  means that labelled training data coming from the same defect
+tomatically detecting defect-inducing software changes based                 generating process as the software changes being currently
+                                                                             predicted may be unavailable in practice, making it difficult
+  G. Cabral is with the Department of Computing, Federal Rural University    to adapt to concept drift and further hindering predictive
+of Pernambuco, BR, george.gcabral@ufrpe.br
+  L. L. Minku is with the School of Computer Science, The University of      performance. The negative effects of that remain unnoticed
+Birmingham, UK, L.L.Minku@bham.ac.uk                                         if verification latency is overlooked in an experimental study.
+  This work was supported by EPSRC Grants No. EP/R006660/2 and                  Existing studies that take chronology into account reveal
+EP/P005578/1.
+  1 https://www.it-cisq.org/the-cost-of-poor-quality-software-in-the-us-a-   that the predictive performance of JIT-SDP classifiers gets
+2018-report/The-Cost-of-Poor-Quality-Software-in-the-US-2018-Report.pdf      worse [6] and fluctuates over time [8] potentially as a result
+                                                                                                                                       2
+
+
+
+of concept drift and exacerbated by verification latency. At        online JIT-SDP methods.
+any given point in time, JIT-SDP classifiers may be perform-           Our paper provides the following novel contributions:
+ing very well or failing dramatically [8]. This is a serious           • the first detailed analysis of concept drift in online JIT-
+impediment for wider adoption in practice, as it renders JIT-             SDP, revealing what types of concept drift are present;
+SDP classifiers unreliable even if the overall average predictive      • a detailed understanding of when and why existing online
+performance across time would seem acceptable. Stability                  JIT-SDP methods are unable to cope with certain types
+of predictive performance is thus an important issue to be                of concept drift, which hinders their reliability;
+considered when dealing with JIT-SDP. A reliable JIT-SDP               • the first detailed analysis of the stability of online JIT-
+method should perform consistently well over time, i.e., it               SDP’s predictive performance over time, taking verifica-
+should obtain stable and high predictive performance over                 tion latency into account;
+time.                                                                  • a novel online method (Prediction-Based Sampling Ad-
+   Very few studies so far have considered concept drift and              justment - PBSA) to cope with different types of concept
+verification latency in JIT-SDP [6], [7], [8], [10] and none              drift in the presence of verification latency in JIT-SDP,
+of them provide a detailed understanding of how different                 leading to more reliable JIT-SDP classifiers.
+types of concept drift affect predictive performance in JIT-           This paper is further organized as follows: Section II pro-
+SDP in the presence of verification latency. None of them           vides basic definitions for online JIT-SDP. Section III presents
+have proposed methods to overcome the challenges posed by           related work; Section IV introduces the datasets used in our
+verification latency in view of concept drift either. A detailed    study; Section V thoroughly discusses the types of concept
+understanding is essential for the proposal of strategies able      drifts present in JIT-SDP and the effectiveness of state-of-art
+to respond to concept drifts in realistic scenarios that take       methods for tackling them (RQ1). Section VI proposes our
+chronology and verification latency into account, creating          new method to improve reliability and compares it to existing
+more reliable JIT-SDP classifiers. Our paper aims at providing      methods (RQ2). Section VII presents threats to validity. Sec-
+such understanding and proposing a novel approach to improve        tion VIII presents conclusions and implications of this work.
+the reliability of JIT-SDP classifiers.
+   We focus on online JIT-SDP, where new training examples                               II. P ROBLEM F ORMULATION
+are produced over time and used to update classifiers. This            Definition 1 (commit time step) A sequential index rep-
+enables the adoption of strategies to potentially cope with         resenting the order of arrival of software changes in terms of
+concept drift. With that in mind, this paper answers the            their commit time. Each software change is a test example
+following Research Questions (RQs):                                 requiring a prediction at commit time.
+                                                                       Definition 2 (test example) A test example ⃗xi is a software
+  • (RQ1:) Which types of concept drift occur in online JIT-
+                                                                    change represented by a vector of features ⃗xi that needs to be
+    SDP and how they affect the predictive performance of
+                                                                    predicted as clean or defect-inducing.
+    existing online JIT-SDP methods in view of verification
+                                                                       In this work, we adopt the software change features pro-
+    latency? In particular, how do they affect the reliability
+                                                                    posed by Kamei et al. [5], as they have been vastly adopted
+    of existing online JIT-SDP methods?
+                                                                    by JIT-SDP literature [9], [6], [3], [2], [8] and shown to be
+  • (RQ2:) In view of the knowledge provided by RQ1, how
+                                                                    suitable for practical scenarios [8], [10]. These features are:
+    to improve the reliability of online JIT-SDP classifiers, so
+                                                                    (1) NS - number of modified subsystems; (2) ND - number of
+    that they perform more consistently well over time? How
+                                                                    modified directories; (3) - NF - number of modified files; (4)
+    well such new method performs compared with existing
+                                                                    Entropy - distribution of modified code across each file; (5)
+    methods?
+                                                                    LA - lines of code added; (6) LD - lines of code deleted; (7)
+   To answer RQ1, we carefully analyse the online JIT-              LT - lines of code in a file before the change; (8) FIX - flag
+SDP classifiers and their predictive performance over time          indicating if the change is a defect fix; (9) NDEV - number
+taking verification latency into account, showing that there        of developers that touched the files; (10) AGE - average time
+is evidence supporting the existence of different types of          interval between last and current change; (11) NUC - number
+concept drift in JIT-SDP. We then highlight the strengths and       of unique last changes to the files; (12) EXP - developer
+weaknesses of existing online JIT-SDP methods for tackling          experience; (13) REXP - recent developer experience; and (14)
+these concept drifts, paying close attention to their reliability   SEXP - developer experience on a subsystem.
+over time. To answer RQ2, we propose a novel method able to            Definition 3 (training time step) A sequential index
+use the predictions given by the JIT-SDP classifier to decide       representing the order of arrival of training examples. Each
+how to adapt to concept drift. The use of the predictions           training example is used for updating the JIT-SDP classifier
+rather than the true labels of the software changes means that      as soon as it becomes available.
+adaptation can commence even before the true labels of such            It is important not to confuse time step with Unix times-
+changes are revealed. The method also makes use of unlabelled       tamp. A Unix timestamp is a moment in time measured in
+data to more efficiently recover from concept drifts. Our study     terms of number of seconds elapsed since the Unix Epoch on
+based on ten open source data sets shows that our proposed          January 1st, 1970 at UTC, whereas a time step is a sequential
+method achieves better robustness to concept drift, leading         index representing order of arrival.
+to more reliable JIT-SDP classifiers, i.e., classifiers able to        Definition 4 (training example) A training example si =
+perform more consistently well through time than existing           (⃗xi , yi ) is a software change represented by a vector of features
+                                                                                                                                            3
+
+
+
+⃗xi and its respective class label yi , where i is the training time   have been available in practice. Therefore, online learning
+ step. The features are the same as the ones described in the          reflects practical JIT-SDP environments.
+ definition of test example. The class label can be either clean          Definition 8 (concept) A concept is a joint probability dis-
+ (represented by 0) or defect-inducing (represented by 1).             tribution (pt (⃗x, y) = pt (y|⃗x)pt (⃗x) = pt (⃗x|y)pt (y)) underlying
+    Definition 5 (verification latency) Verification latency is        a machine learning problem at a given time step t. In JIT-SDP,
+ the delay for obtaining the label (clean or defect-inducing) of       this can be seen as the status of the defect generating process
+ a software change. Consider a software change committed at a          underlying commit time step t. It represents the underlying
+ Unix timestamp ui . The label corresponding to this software          function that captures the relationship between features and
+ change can only become available at a Unix timestamp uk               classes, the chances of observing examples from each class
+ (s.t. uk > ui ). This is because, at commit time, it is unknown       and the chances of observing each feature value.
+ whether this software change truly will or will not induce               Definition 9 (concept drift) A concept drift takes place
+ defects. Indeed this is the reason why software changes have          when the concept changes over the time, i.e., pt (⃗x, y) ̸=
+ to be predicted as clean or defect-inducing at commit time in         pt+∆ (⃗x, y), where ∆ ̸= 0. There are different types of
+ JIT-SDP. Therefore, verification latency is in practice inherent      concept drift, based on the component of the joint probability
+ to the JIT-SDP problem.                                               distribution that they affect [11]:
+    To take this into account, we adopt the framework proposed            1) Changes in the proportions of examples of each
+ by Cabral et al. [8], which produces labels based on the cases               class [8]. These proportions are represented by the
+ below, where w is a parameter called waiting time:                           prior probabilities of the classes, i.e., p(y). In a class
+  • No defect is found to be induced by the software change                   imbalanced problem, such changes are referred to as
+    during w days after its commit – it will be labeled as                    class imbalance evolution [8].
+    clean once w days have passed, producing a clean training             2) Evolving probability of observing different feature
+    example;                                                                  values given the class, i.e., p(⃗x|y). Such evolution can
+  • A defect is found to be induced by the software change in                 be of one or both of the following types:
+    t < w days after its commit – it will be labeled as defect-                 • Changes in how likely an example is to belong to a
+    inducing once t days have passed, producing a defect-                          given class (defect-inducing or clean) given its fea-
+    inducing training example; and                                                 ture values, i.e., in the posterior probabilities p(y|⃗x).
+  • A defect is found to be induced by the software change                         These concept drifts mean that changes described by
+    after t > w days from its commit – it will be first labeled                    features that would typically be associated to the
+    as clean once w days have passed and used to produce a                         clean class may now be associated to the defect-
+    clean training example, and then it will be labeled as                         inducing class, or vice-versa.
+    defect-inducing once t days have passed and used to                         • Changes in the frequency of observing different
+    produce a defect-inducing training example.                                    feature values, i.e., changes in the probability dis-
+   Definition 6 (class imbalance) A problem where the num-                         tribution of the features p(⃗x). These concept drifts
+ber of training examples of a given class is much smaller than                     mean that the typical values of the features vary
+the number of training examples of another class is referred                       over time.
+to as a class imbalanced problem.                                         One of the typical side-effects of concept drifts is that
+   JIT-SDP is typically a class imbalanced problem where the           they cause drops in the predictive performance of classifiers,
+defect-inducing class is a minority. For instance, the proportion      resulting in unstable predictive performance over time [12].
+of examples of the defect-inducing class of the data sets used         Fluctuations have been observed in previous JIT-SDP work
+in this study is shown in Table I, which is presented in Section       that consider chronology or online scenarios [8], [10], [6].
+IV. If not treated, class imbalance can cause classifiers to over-     However, to be adopted in practice, a JIT-SDP classifier
+emphasize the majority class in detriment of the minority class        must attempt to minimize these fluctuations (i.e., yield a
+[11].                                                                  stable predictive performance) while maximizing its predictive
+   Definition 7 (online learning) Consider a data stream               performance over time. Combining a high and stable predictive
+composed of training examples ordered by the time they were            performance over time produces a more reliable classifier.
+produced S = {(⃗xi , yi )}∞   i=1 , where i is the training time
+                                                                          Definition 10 (reliability) We define reliability of a classi-
+step. Online learning maintains a classifier fˆ that is updated        fier as a combination of a high and stable predictive perfor-
+whenever a new training example (⃗xi , yi ) ∈ S becomes                mance. Consider a 2-dimensional space formed by the stan-
+available. Such update may or may not require access to                dard deviation and the average of the predictive performance
+previous training examples (⃗xj , yj ), where j < i, depending         through time, respectively. To maximize reliability, one has to
+on the machine learning algorithm being used.                          minimize the first dimension while maximizing the second.
+   Whenever a prediction is required for a new software
+change, the most up-to-date classifier fˆ is used. This up-                                  III. R ELATED W ORK
+to-date classifier is the one trained on all training examples
+(⃗xi , yi ) produced before the prediction is required. Therefore,     A. JIT-SDP
+chronology is always respected, i.e., predictions are never              Many studies have been conducted investigating different
+made by using classifiers trained on data that would not yet           aspects of the JIT-SDP problem, such as effort-aware JIT-SDP
+                                                                                                                                        4
+
+
+
+[4], [5], local vs. global JIT-SDP classifiers [3] and cross-          presence of concept drift in JIT-SDP. They showed that (i) JIT
+project JIT-SDP [13], [9].                                             classifiers lose a large proportion of predictive performance
+   Effort-aware JIT-SDP [4], [5] takes into account the work-          after one year; (ii) the predictive importance of most families
+load generated to the software quality assurance team. This            of features fluctuates over time, suggesting that the properties
+task involves maximizing the classifier accuracy while mini-           of defect-inducing changes tend to evolve as projects age. Both
+mizing the software quality assurance team’s effort. The effort        findings are strong evidence that concept drift occurs. How-
+is often proportional to the number of lines of code modified          ever, this paper does not investigate which types of concept
+by a change [5]. Chen et al. [2] formalized JIT-SDP as a               drift occur in JIT-SDP, which is important for proposing novel
+multi-objective optimization problem to conduct Effort-aware           JIT-SDP methods that are able to better handle concept drift.
+JIT-SDP. They used the number of bugs found and their                  It does not consider verification latency in the analysis either.
+corresponding lines of code changed as objectives to be max-              Cabral et.al. [8] analyzed the proportion of examples of
+imized and minimized, respectively [14]. Both performance              the clean and defect-inducing class over time based on an
+objectives were optimized over six open source datasets,               exponential smoothing function of the class labels. They found
+however, the results still suggests room for improvements w.r.t.       that such proportion varies over time, i.e., there is class imbal-
+the performance on the clean class.                                    ance evolution. It means that the severity of class imbalance
+   Yang et al. [3] evaluated the effectiveness of local [15],          varies over time, and sometimes the defect-inducing class can
+[16] vs. global JIT-SDP methods. Local methods cluster the             even become a minority, hindering the predictive performance
+whole training data into regions composed of similar training          of existing JIT-SDP methods. They also found that existing
+examples and then create separate classifiers to learn training        JIT-SDP methods that discard old data (i.e., sliding windows
+examples from each region. Global methods create a single              [6]) are detrimental to the predictive performance compared
+classifier that learns all training examples. The study con-           to methods that adopt other mechanisms to deal with concept
+ducted on six open source datasets found that global methods           drift. This suggests that old training examples do not always
+produce better JIT-SDP classifiers.                                    become detrimental to predictive performance. In particular,
+   Other studies investigated the use of cross-project data in         there may be recurrent concepts in JIT-SDP, i.e., concepts that
+JIT-SDP [9], [13]. Kamei et al. [9] were the first ones to             are valid for certain periods of time and reappear again at later
+investigate cross-project data in JIT-SDP. They used 11 open           periods. However, their study has not analyzed other types of
+source projects and among their findings, they confirm that the        concept drift than drifts affecting the proportion of clean and
+cross-project approach can be useful for projects with limited         defect-inducing examples.
+historical data. Catolino et al. investigated 14 mobile projects,         The literature provides high level evidences of concept drift
+with number of software changes ranging from 193 to 13067.             in JIT-SDP, notwithstanding, a deeper understanding of which
+Among their findings is the fact that the features LA, LD,             specific types of concepts drifts occur and how they affect JIT-
+ND, NF, NUC and NDEV better contribute to identify defect-             SDP is necessary to guide the development of more effective
+inducing software changes. In cross-project JIT-SDP, training          JIT-SDP classifiers.
+data includes data generated by projects other than the project
+of interest. It was initially believed to be particularly beneficial
+                                                                       C. Dealing with Concept Drift in JIT-SDP
+in the initial phase of a project, when there is not enough
+within-project data to build a suitable within-project classifier.        To deal with concept drift in JIT-SDP, McIntosh and Kamei
+More recent work has found that it can also be useful for              [6] suggested the use of the most recent window of training
+prolonged periods of time as will be discussed in Section III-C.       examples (i.e., sliding windows) to build JIT-SDP classi-
+   Most studies use resampling strategies to cope with class-          fiers. Wang et.al. [17] introduced two general purpose online
+imbalance in JIT-SDP [2], [13], [9], [3]. In particular, under-        resampling methods for tackling class imbalance evolution,
+sampling of training examples of the clean class is frequently         namely improved Oversampling Online Bagging (OOB) and
+used to avoid the learning algorithm over-emphasizing this             improved Undersampling Online Bagging (UOB). They relied
+class in detriment of the defect-inducing class [2], [9], [3].         on the assumption that making the class proportions even by
+   All studies above investigate JIT-SDP in an offline learning        oversampling examples of the majority class and undersam-
+scenario where a JIT-SDP classifier is built based on a pre-           pling examples of the minority class, respectively, is sufficient
+existing training set, and then is applied on a given project.         for solving this issue. These methods were investigated in
+These studies ignore the chronology of the data. Few studies           the context of JIT-SDP by Cabral et al. [8]. They showed
+take chronology into account; these will be discussed in               that this strategy is insufficient for JIT-SDP, as large gaps
+Sections III-B, III-C and III-D.                                       between the recall on the clean and defect-inducing classes
+                                                                       may still occur when adopting this method. They proposed
+                                                                       Oversampling Rate Boosting (ORB) [8], which further adjusts
+B. Analysis of Concept Drift in JIT-SDP                                the resampling rate based on the level of imbalance in the
+   A big challenge in studying concept drift is that, for real         predictions given by a classifier. They found that this leads to
+world problems, we have no access to the true underlying               an advantage in predictive performance over OOB, UOB [17]
+statistical distribution. Therefore, concept drifts must be in-        and Sliding Window [6] methods in JIT-SDP. However, their
+ferred based on the data being received over time and in their         proposal carries a weakness of resampling only the most recent
+respective classifiers. McIntosh and Kamei [6] investigated the        labeled change. As there is verification latency in JIT-SDP,
+                                                                                                                                              5
+
+
+
+this most recently labeled change may already be outdated                                TABLE I: Datasets’ statistics
+and unrepresentative of the current concept. Moreover, OOB,                        Number    Defect-                        Median defect
+                                                                        Dataset    of        inducing        Period         discovery
+UOB and ORB only have strategies to deal with concept drifts                       changes   proportion                     delay (in days)
+affecting the proportion of examples of each class, and do not          Fabric8    13,003    20%        04/2011 - 05/2017   40
+attempt, even indirectly, to deal with other types of concept           JGroups    18,316    17%        09/2003 - 11/2017   117
+                                                                        Camel      30,517    20%        03/2007 - 11/2017   29
+drift in JIT-SDP.                                                       Tomcat     18,877    28%        03/2006 - 12/2017   201
+   More recently, Tabassum et al. [10] showed that cross-               Brackets   17,310    23%        12/2011 - 08/2017   139.5
+project data generate better classifiers throughout the whole           Neutron    19,450    24%        01/2011 - 11/2017   103
+                                                                        Spring
+development cycle (not only in the beginning of the project)            Integration
+                                                                                    8,691    27%       11/2007 - 10/2017    416.5
+when considering online JIT-SDP. Such data can also alleviate           Broadleaf 14,911     17%       12/2008 - 09/2017    43
+drops in predictive performance that may be caused by concept           Nova        48,937   25%       05/2010 - 01/2018    97
+                                                                        NPM         7,892    18%       09/2009 - 09/2017    113
+drifts. However, their study focused on investigating cross-
+project learning and has not investigated the issue of concept
+drift itself in JIT-SDP.
+                                                                      to discover the label of a defect-inducing change. This was set
+                                                                      as the difference between (i) the change time stamp and (ii)
+D. Verification Latency in JIT-SDP                                    the time stamp of its associated fix change.
+   To the best of our knowledge, Tan et al. [7] was the                  Table I shows specific information for each dataset. The
+first work to alert the software engineering community about          median of the defect discovery delay suggests that the projects
+the verification latency problem in JIT-SDP. They showed              Tomcat (201 days) and Spring-Integration (416.5 days) are
+that ignoring chronology and verification latency leads to            highly affected by verification latency. In theory, the larger the
+overoptimistic estimations of the predictive performance in           verification latency, the longer the delay in receiving training
+JIT-SDP. They recommended the use of a method that can be             examples of the minority class. This poses an extra challenge
+updated with incoming chunks of training examples to learn            to JIT-SDP. Not only JIT-SDP has relatively few examples of
+JIT-SDP classifiers over time while taking verification latency       the defect-inducing class, but also these examples may already
+into account. However, their study assumes that the delay to          be obsolete (due to concept drift) when they arrive. If an
+receive the labels from all examples from both classes is fixed,      obsolete defect-inducing example is used to update a JIT-SDP
+which has more recently been shown to be unrealistic in JIT-          classifier, it might add irrelevant, or even noisy, information.
+SDP [8]. In addition, they do not propose strategies to deal
+with concept drift, or strategies to overcome the challenges
+                                                                        V. (RQ1:) A NALYSIS OF C ONCEPT D RIFT IN JIT-SDP
+posed by verification latency.
+                                                                        A ND I TS E FFECT O N THE R ELIABILITY O F E XISTING
+   Cabral et al. [8] showed that the delay for assigning the
+                                                                                         JIT-SDP M ETHODS
+correct label of a training example in JIT-SDP may vary from
+days to years, which may negatively impact the classifier’s           A. Experimental Setup
+predictive performance when there is concept drift. However,             To answer RQ1, besides investigating the types of concept
+they have not proposed any strategy to improve classifiers’           drift outlined in Section II that may be present in JIT-SDP, we
+predictive performance in the presence of verification latency.       will also analyze how these types of concept drift affect pre-
+Tabassum et al. [10] also took verification latency into account,     dictive performance (and in particular reliability) of existing
+but did not propose methods to overcome this issue.                   JIT-SDP methods. Previous work [6], [8] has already analyzed
+   Overall, even tough existing studies are aware of verification     class imbalance evolution in JIT-SDP and shown that JIT-
+latency, none of them proposed strategies to overcome the             SDP methods that assume a fixed proportion of examples of
+low predictive performance that may be caused by verification         each class p(y) over time fail to achieve acceptable predictive
+latency when there is concept drift.                                  performance over time. Therefore, this section will concentrate
+                                                                      mainly on concept drifts affecting p(y|⃗x) and p(⃗x).
+                         IV. DATASETS                                    The datasets introduced in Section IV and the following
+   We have used the same ten GitHub open source projects              methods will be investigated, using Hoeffding Trees [19] as
+as in previous work [8]. This number of projects is in line with      base learners: i) Oversampling-based Online Bagging (OOB)
+other existing studies in the area [7], [9]. These projects were      [17]; ii) Undersampling-based Online Bagging (UOB) [17];
+chosen among projects with more than 5 years of duration,             iii) Oversampling-based Online Bagging Sliding Windows
+rich history (at least around ∼8k software changes) and good          (OOB-SW) [6]; and iv) Oversampling Rate Boosting (ORB)
+defect-inducing changes ratio (∼20% overall).                         [8]. These methods were chosen because they form the state-
+   The defect-inducing software changes were obtained by              of-the-art in online within-project JIT-SDP [8]. The analysis
+using the tool Commit Guru [18].                                      presented in Section V-B is a detailed analysis to identify the
+   The most commonly used features in the literature (pre-            factors responsible for sudden, significant drops in predictive
+sented in Section II) are retrieved by Commit Guru. These             performance – among them, concept drifts of type p(y|⃗x)
+features have shown to perform well in JIT-SDP research [5],          and p(⃗x). It will thus concentrate on two datasets (Camel
+[9], [6]. Commit Guru was also configured to retrieve the             and Tomcat) that are representative of different types of
+defect discovery delay, i.e., the time taken (verification latency)   concept drift, and ORB, which is the method that obtained
+                                                                                                                                               6
+
+
+
+the best within-project JIT-SDP predictive performance in non-                imbalance ratio was fixed at commit time step 500. For the
+stationary environments so far [8]. Section V-C will provide                  OOB-SW, sliding windows of size 90 and 180 days were
+an overall discussion of all four methods. All methods fully                  tested. The values tested for the ORB parameters were: moving
+respect the chronology of the data, including verification                    average window size = {50, 100, 200}; th = {0.3, 0.4, 0.5};
+latency. Therefore, our entire analysis respects chronology and               l0 = {5, 10, 15}; l1 = {6, 12, 18}; m = {1.5, 2.0, e}; and n
+takes verification latency into account. We focus on within-                  = {3, 5, 7}. Finally, thirty runs are conducted with different
+project JIT-SDP as the use of cross-project data would prevent                random seeds using the chosen parameters for each method
+the identification of concept drifts, given that cross-project                and dataset.
+approaches use a mix of data that comes from potentially dif-                    The comparisons among the methods were supported by
+ferent defect generating processes to train JIT-SDP classifiers.              the Scott-Knott multiple comparison procedure to separate the
+   1) Performance Metrics: The evaluation metrics used                        methods into non-overlapping groups, regarding each overall
+for assessing the classifiers’ predictive performances are the                performance metric, as suggested by Menzies et al. [24]. This
+recalls on the clean (rec(0)) and defect-inducing (rec(1))                    test was conducted considering the total number of experi-
+classes, the average of the absolute differences between re-                  ments (i.e., 10 datasets times 30 executions for each method).
+ p for each time step (|rec(0) − rec(1)|) and the g-mean
+calls                                                                         Vargha and Delaney’s nonparametric A12 effect size [25] was
+( rec(0) × rec(1)). The metrics rec(0), rec(1) and g-mean                     used to ensure that groups can only be split by the Scott-
+were adopted because they were recommended as unbiased                        Knott test if the effect sizes between them are not insignificant.
+metrics for evaluating predictive performance in class im-                    Therefore, we will refer to this Scott-Knott procedure as Scott-
+balance learning studies [20], different from other metrics                   Knott-A12. As suggested in previous work [25], [24], A12
+such as precision and F1-score [21], [20]. This is particularly               <0.56, ≥ 0.56, ≥ 0.64 and ≥ 0.71 are considered insignificant,
+important in online class imbalance learning [17], where the                  small, medium and large, respectively.
+imbalance ratio may vary over time. The metric |rec(0) −
+rec(1)| enables us to quantify the similarity of the recalls on               B. Investigating Concept Drifts in JIT-SDP
+both classes and was also adopted in Cabral et al. [8]’s study.
+Small values for this metric assure that the strategy adopted                    Previously, Cabral et al. [8] have shown that concept drifts
+for coping with class imbalance is effective, i.e., the improved              in p(y) occur in JIT-SDP, requiring strategies to tackle it.
+predictive performance on the minority class is not at the cost               In this section, we thus concentrate mainly on investigating
+of a worse performance on the majority class. A large value                   whether concept drifts in p(y|⃗x) and p(⃗x) (which may or
+indicates a high bias towards one of the classes, making the                  may not happen simultaneously with changes in p(y)) also
+classifier unreliable to practitioners. It is important to note that          occur, and whether this would require coping strategies that
+rec(0) = 1 − F alseAlarmsRate, where F alseAlarmsRate                         are unavailable in existing JIT-SDP methods. Such analysis is
+is the ratio of clean software changes that have been classi-                 presented in Sections V-B1 and V-B2.
+fied as defect-inducing. Therefore, F alseAlarmsRate is also                     Both Sections V-B1 and V-B2 will make use of two rules ex-
+taken into account by the evaluation metrics used in this study.              tracted from Hoeffding Trees generated by the ORB approach
+We have not adopted Area Under the ROC Curve (AUC)                            as case studies. Figure 1 shows the periods of time associated
+because it incorporates several threshold values that are not                 to the creation and evolution of these rules. Note that the
+meaningful in practice, having been recently discouraged in                   number of test examples is different from the number of
+the context of software defect prediction [22].                               training examples in each quarter. This is because verification
+   The recalls are computed in a prequential way and with                     latency causes test examples to become available for training
+a fading factor, as recommended for online learning studies                   only at a later date. Equation 1 depicts the rule investigated in
+in the presence of concept drift [23]. This enables tracking                  Fig. 1-a) which is part of a Hoeffding Decision Tree generated
+changes in the predictive performance over time. As in previ-                 for the Camel dataset:
+ous work [8], [10], [17], [11], the fading factor was θ = 0.99.                         EXP ≤ 677.31 ∧ N D > 1.18 ∧ N DEV ≤ 10.27∧
+                                                                                                                                            (1)
+Too large (small) θ causes the prequential performance to vary                         REXP ≤ 960.1 =⇒ DEF ECT − IN DU CIN G
+wildly (have almost imperceptible variations) over time. The                    We note the following behavior for this rule:
+value of θ = 0.99 enables a good trade-off between tracking                     1) Blue region (quarters 1 to almost the end of 24th):
+changes in performance while preventing wild variations.                           the parent of this rule accumulated data gathered from
+   2) Parameters Choice: For tuning the classifiers’ param-                        around 24 quarters to finally create it. Throughout this
+eters, a grid search based on the execution of each dataset                        period, a total of (70 clean, 42 defect-inducing) changes
+up to the commit time step 5000, using g-mean as evaluation                        were used to create this rule (sum of values in brackets
+criterion, was conducted based on the following values, where                      corresponding to training examples in the blue region of
+values in bold face are the ones most often included in the                        the plot). Despite the smaller number of defect-inducing
+parameter configuration that led to top g-mean across datasets                     changes used to create this rule, ORB’s oversampling
+and were thus chosen for the experiments2 : ensemble size                          mechanism assigned the defect-inducing class to this
+(n) = {10,20,30,40}; decay factor (θ′ ) = {0.9,0.99,0.999};                        rule as a strategy to deal with class imbalance.
+and waiting period (ω) = {90,180}. For OOB(FixedIR), the                        2) Green region (end of quarter 24 to quarter 25): after its
+                                                                                   creation, this rule was further reinforced by being trained
+  2 Some parameters are shared among the methods but were tuned separately.        on (2 clean, 5 defect-inducing) training examples. Note
+                                                                                                                                       7
+
+
+
+      that, in quarter 25, it was used to predict only 5 examples      software changes corresponding to these training examples
+      (3 clean, 2 defect-inducing), i.e., 60% error rate.              were committed.
+   3) White region, quarter 26: in order to conduct our analy-            We can also see that, in both cases and especially for
+      sis of the presence of concept drift, we stopped training        Tomcat, these defect-inducing rules faced a period of time
+      this rule from this quarter onward, so that it remained          when they were not triggered very often by test examples
+      unaltered during the performance drop observed during            (green and white regions), and later on started to be triggered
+      quarter 27. This enables us to check whether a rule that         very often by clean software changes (red regions), leading to
+      was created in the past remains suitable over time.              a high rate of false alarms. The fact that these rules became
+   4) Red region, quarter 27: this rule was exceptionally              unsuitable over time is related to concept drift in p(y|⃗x), and
+      activated to predict 200 software changes (167 clean, 33         is further discussed in Section V-B1. The fact that these rules
+      defect-inducing), yielding a false alarm rate of 83.5%.          are triggered often by test examples during some periods but
+   Equation 2 presents the rule generated in the period depicted       not during others is related to concept drifts in p(⃗x), and is
+in Fig. 1-b) which is part of a Hoeffding Tree generated by            discussed in Section V-B2.
+ORB for the Tomcat dataset:                                               1) p(⃗x|y) Concept Drift Affecting p(y|⃗x)): A concept drift
+                                                                       of type p(y|⃗x) means that a class previously assigned to a
+          N DEV > 3.1 ∧ LD ≤ 2679.4 ∧ N D > 1.82 ∧ LA ≤ 2062∧
+                                                                (2)    specific region of the feature space may have changed. This
+                  N DEV ≤ 8.91 =⇒ DEF ECT − IN DU CIN G
+                                                                       type of concept drift cannot be proved in real world problems
+   We note the following behavior for this rule:                       since the true underlying data distribution is unavailable.
+   1) Blue region (almost whole quarter 1): the rule was               However, certain statistics obtained from the data produced
+       created based on (1 clean, 12 defect-inducing) examples         by the distribution can strongly suggest the presence of this
+       in a time interval smaller than one quarter.                    type of concept drift. We will use such information to support
+   2) Green region (small part from the end of quarter 1 to 23):       our analysis in this section.
+       after its creation, this rule was triggered to predict only        As explained in the beginning of Section V-B, both the
+       one example (the clean test example in the 2nd quarter)         defect-inducing rules presented in Equations 1 and 2 were
+       and then remained without being used for predictions            supported by a large number of training examples, as shown
+       for 21 quarters (around 5 years, from quarters 3 to             in Table II. Nevertheless, later on these rules started being
+       23). However, in this period, this rule remained being          triggered very often by clean test examples and played an
+       reinforced by the presentation of (2 clean, 105 defect-         important role in the severe drops in g-mean observed in
+       inducing) training examples. The significantly higher           the 27th quarter for Camel and 28th quarter for Tomcat (red
+       number of software changes used for training but not            regions in Fig. 1). The overall test accuracy during these
+       for testing is explained by the verification latency. In this   periods is shown in Table II. Therefore, even though these
+       case, the software changes corresponding to the defect-         rules were initially suitable, they became unsuitable.
+       inducing training examples were committed before time              It is worth noting that overfitting can also potentially lead
+       step 4000, when the underlying defect generating pro-           to poor predictive performance on test examples, but it is
+       cess was still generating software changes that matched         unlikely that the test predictive performance would suddenly
+       this rule.                                                      and drastically drop as observed in the last quarters of Figure 1
+   3) White region, quarters 24 to 27: for the same reason             as a result of overfitting. Therefore, the above mentioned cases
+       as the training for the Camel dataset was stopped dur-          present areas of the feature space genuinely associated to the
+       ing quarter 26, the Tomcat training was stopped from            defect-inducing class in the past, that became representative of
+       quarters 24 to 27.                                              the clean class. This strongly suggests that there was a drift
+   4) Red region, quarter 28: despite this rule having remained        affecting p(y|⃗x).
+       unused for prediction for 21 quarters, it suddenly started         None of the existing JIT-SDP methods has strategies to
+       being activated again in quarter 28 by an exceptionally         tackle this type of concept drift satisfactorily, including the
+       high number of changes (95 clean, 16 defect-inducing),          online learning methods. In particular, OOB, UOB and ORB
+       yielding to a false alarm rate of 85.6%.                        do not have any strategy to delete obsolete rules from the
+   We can see that these rules have been trained on a large            classifier. Therefore, they depend on a very large number
+number of examples (119 for Camel and 120 for Tomcat,                  of training examples representing the new concept to arrive
+as summarized in Table II). Therefore, they are unlikely to            before adaptation is successfully completed, yielding such big
+have been generated simply as a result of noise. For Tomcat,           drops in predictive performance as those shown in Figure 1,
+the training examples strongly support the defect-inducing             which can compromise the reliability of JIT-SDP classifiers.
+class. For Camel, the defect-inducing training examples used           Despite having the ability to remove old rules, Sliding Window
+to create the Camel rule consisted of approximately 40% of             methods [6] have already been shown to be inadequate as each
+the total number of examples used to train this rule. Given that       classifier is trained on a limited number of changes, hindering
+the overall percentage of defect-inducing examples in Camel            predictive performance [8]. Therefore, none of the existing
+is 20%, it is likely that this rule should indeed support the          JIT-SDP methods can adequately deal with projects affected
+defect-inducing class. Therefore, it is likely that these rules        by concept drifts in p(y|⃗x).
+do represent part of the true defect generating process that              2) p(⃗x|y) Concept Drift Affecting p(⃗x)): Despite having
+was active during the time period corresponding to when the            been created based on a good number of training examples, the
+                                                                                                                                                                                                                                                                                                                                                                                                                                  8
+
+
+
+
+  a)                       100                         1       2       3          4           5      6       7        8         9
+                                                                                                                                            Quarter (from the parent rule creation commit time step)
+                                                                                                                                               10              11         12          13          14      15               17       18         19              20              21              22               23                      24                  25          26                27
+  Predictive Performance
+
+                           80
+                           60
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                    (167,33)
+                                                                                                                                                                                                                                                                                                                                                                        (79,19)
+                                                                                                                                                                                                                                                                                                                                                            (3,2)
+                           40
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                          (84,33)
+                           20
+
+
+
+
+                                                                                                                                                                                                                                                                                               (15,3)
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                        (4,12)
+                                                      (5,1)
+
+                                                              (7,3)
+                                                                      (3,4)
+                                                                                 (0,2)
+                                                                                            (2,2)
+
+                                                                                                    (0,1)
+
+                                                                                                            (2,3)
+
+                                                                                                                     (2,3)
+                                                                                                                               (0,0)
+                                                                                                                                               (0,1)
+
+                                                                                                                                                               (0,0)
+                                                                                                                                                                          (0,0)
+
+                                                                                                                                                                                      (1,0)
+
+                                                                                                                                                                                                  (5,0)
+                                                                                                                                                                                                          (1,0)
+                                                                                                                                                                                                                  (5,2)
+
+                                                                                                                                                                                                                            (1,4)
+
+                                                                                                                                                                                                                                    (2,2)
+
+                                                                                                                                                                                                                                               (2,0)
+
+
+                                                                                                                                                                                                                                                               (1,1)
+
+
+                                                                                                                                                                                                                                                                               (5,2)
+
+
+
+
+                                                                                                                                                                                                                                                                                                                (2,7)
+
+                                                                                                                                                                                                                                                                                                                                (9,1)
+
+                                                                                                                                                                                                                                                                                                                                                (0,3)
+
+                                                                                                                                                                                                                                                                                                                                                            (2,2)
+                           0
+
+
+
+
+                                    6000                      8000                            10000                       12000                                           14000                            16000                        18000                          20000                             22000                                  24000                             26000                            28000
+                                                                                                                                                               Commit Time Step
+
+  b)                                              1            2         3                4          5        6         7               8
+                                                                                                                                            Quarter (from the parent rule creation commit time step)
+                                                                                                                                                        9         10          11              12          13              14         15        16      17              18              19               20              21              22              23          24            25                 27
+                           100
+  Predictive Performance
+
+                           80
+                           60
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                        (95,16)
+                                                              (1,0)
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                     (7,1)
+                           40
+                           20
+
+
+
+
+                                             (1,12)
+
+                                                         (1,13)
+
+                                                                        (1,23)
+
+                                                                                         (0,13)
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                          (0,12)
+                                                          (0,3)
+
+
+
+
+                                                                                                    (0,6)
+
+                                                                                                             (0,2)
+
+                                                                                                                       (0,4)
+
+                                                                                                                                       (0,1)
+                                                                                                                                                       (0,5)
+                                                                                                                                                                  (0,7)
+
+                                                                                                                                                                              (0,2)
+
+                                                                                                                                                                                              (0,2)
+
+                                                                                                                                                                                                          (0,3)
+
+
+                                                                                                                                                                                                                          (0,3)
+
+
+                                                                                                                                                                                                                                     (0,1)
+
+                                                                                                                                                                                                                                               (0,0)
+
+                                                                                                                                                                                                                                                       (0,3)
+
+                                                                                                                                                                                                                                                                       (0,2)
+
+                                                                                                                                                                                                                                                                                       (0,3)
+
+
+                                                                                                                                                                                                                                                                                                        (0,1)
+
+                                                                                                                                                                                                                                                                                                                        (0,0)
+
+                                                                                                                                                                                                                                                                                                                                        (0,1)
+
+                                                                                                                                                                                                                                                                                                                                                        (0,7)
+
+
+                                                                                                                                                                                                                                                                                                                                                                    (0,4)
+
+                                                                                                                                                                                                                                                                                                                                                                                  (0,1)
+                                                                                                                                                                                                                                                                                                                                                                                           (0,0)
+                                                                                                                                                                                                                                                                                                                                                                                           (0,2)
+                           0
+
+
+
+
+                             3000          4000                  5000                    6000                7000                        8000                              9000                       10000                 11000             12000                    13000                   14000                     15000                          16000                 17000                            18000
+                                                                                                                                                                                                          Commit Time Step
+
+                                                              (clean, defect-inducing) training examples                                                                                                                                    (clean, defect-inducing) test examples
+
+Blue regions (time interval producing training examples used to create the rule), green regions (time interval where the rule is used both for prediction and
+for further training) and red regions (time interval the rule is used only for predictions) corresponding to the rules depicted in Equations 1 and 2, for Camel
+and Tomcat, respectively. Vertical dashed line intervals consist of a period of a quarter of a year. The green, orange and black lines represent ORB [8]’s
+rec(0), rec(1) and g-mean, respectively. Values in brackets (clean,defective) provide the total number of software changes satisfying the rule in a quarter
+according to their labeling and commit times for the training and testing examples, respectively.
+
+Fig. 1: Predictive performance of the JIT-SDP classifier and training / test information corresponding to the rules presented in
+Equations 1 and 2 belonging to the classifier, for Camel (a) and Tomcat (b), respectively.
+
+TABLE II: Examples used for training/testing two different rules before and after the large performance drop depicted in the
+red region of Figure 1. Numbers in brackets represent the number of used clean and defect-inducing changes.
+     rule                            #training examples for creation                                                            #training examples for reinforcement                                                                                   total #training examples                                                                 test accuracy(1)                                               test accuracy(2)
+ a - Camel                                       (70|42)                                                                                       (2|5)                                                                                                            (72|47)                                                                            40% (3|2)                                                   16.5% (167|33)
+ b - Tomcat                                       (1|12)                                                                                      (2|105)                                                                                                           (3|117)                                                                             0% (1|0)                                                    14.4% (95|16)
+ The rules were created at time steps 23749 and 4498, for camel and tomcat, respectively.
+ (1) a - camel, from commit time step 23750 to 24787 (0.28 years); and b - tomcat, from commit time step 4499 to 16155 (5.46 years), corresponding to the
+green region in Fig. 1.
+ (2) a - camel, from commit time step 25656 to 26711 (0.25 years); and b - tomcat, from commit time step 17646 to 17934 (0.25 years), corresponding to the
+red region in Fig. 1.
+
+
+
+rules presented in Equations 1 and 2 and discussed in Section                                                                                                                                                                     region for camel, in Fig. 1). In total, they were triggered
+V-B1 were not triggered very often by test examples right                                                                                                                                                                         167 + 33 = 200 times for Camel and 95 + 16 = 111 times for
+after their creation (green regions in Fig. 1). In total, they were                                                                                                                                                               Tomcat (over 0.3 years for both cases). As feature values that
+triggered 3+2 = 5 times for Camel (over a 0.28 years period -                                                                                                                                                                     were previously not commonly observed now became more
+25th quarter) and 1+0 = 1 times for Tomcat (over a 5.46 years                                                                                                                                                                     common, this means that there was a concept drift affecting
+period - 2nd quarter). Hence, even though they became poor                                                                                                                                                                        p(⃗x). In particular, we can observe at least two sudden drifts in
+rules right after their creation (see test accuracy(1) in Table                                                                                                                                                                   p(⃗x) associated to these periods of time in Figure 2 (red dashed
+II), this did not lead to an overall poor predictive performance                                                                                                                                                                  lines). As the rules in Equations 1 and 2 became unsuitable due
+of the classifier since they were not triggered very often by                                                                                                                                                                     to the concept drift affecting p(y|⃗x) (as explained in Section
+test examples.                                                                                                                                                                                                                    V-B1), the fact that the concept drift in p(⃗x) caused this rule
+                                                                                                                                                                                                                                  to be triggered more often by test examples contributed to the
+   However, as discussed in the beginning of Section V-B,                                                                                                                                                                         large performance drops observed in Figures 1-a) and 1-b).
+these rules suddenly started being triggered very often by
+test examples during later periods (red regions, and white                                                                                                                                                                          This problem inevitably affects any method that does not
+                                                                                                                                                                                                            9
+
+
+
+                 180                                                                              a) 400                                             Nova
+
+
+
+
+                                                                                                  NDEV
+                 150
+                                                                                                          200
+NDEV (Camel)
+
+
+
+                 120                                                                                        0
+                                                                                                                 0             10000         20000                30000            40000            50000
+                 90
+                                                                                                  b)                                               Brackets
+                 60                                                                                        80
+
+
+
+
+                                                                                                  NDEV
+                                                                                                           40
+                 30
+                                                                                                            0
+                  0
+                                                                                                                 0     2000      4000     6000      8000    10000         12000    14000   16000
+                       7000    11000      15000           19000       23000     27000    31000    c) 3000                                            Camel
+                 21
+
+
+
+
+                                                                                                  NUC
+                                                                                                         2000
+                 18                                                                                      1000
+ NDEV (Tomcat)
+
+
+
+
+                                                                                                            0
+                 15                                                                                              0      4000       8000     12000      16000        20000         24000    28000
+                 12
+                                                                                                  d) 30000                                          Fabric8
+                  9
+
+
+
+
+                                                                                                   EXP
+                                                                                                         20000
+                  6                                                                                      10000
+                                                                                                             0
+                  3                                                                                              0   1000        3000       5000           7000           9000       11000         13000
+                  0                                                                                                                              Commit Time Step
+                       4000   6000     8000       10000       12000     14000   16000   18000
+                                                   Commit Time Step                              Fig. 3: Example of evolution through time for some features
+Fig. 2: NDEV feature values during periods discussed for the                                     values and datasets.
+rules in Equations 1 and 2.
+                                                                                                 changes by the time they are generated. For instance, in
+have strategies to eliminate or deactivate old rules, such as                                    Tomcat, the green region of Fig. 1 shows the presence of many
+ORB, OOB and UOB. Depending on the window size, the                                              training examples but almost no test example. This means that,
+sliding window method recommended by McIntosh and Kamei                                          when those training examples became available, the regions of
+[6] would be unaffected by old rules, as it would eliminate                                      the feature space that they covered were not much activated
+them. However, due to verification latency, it would still take                                  by test examples anymore.
+time to learn new rules corresponding to the new region of the
+feature space where software changes started to appear. This                                     C. Predictive Performance Reliability
+is because training examples corresponding to these software                                        As discussed in Sections V-B1 and V-B2, the various types
+changes arrive with a delay. Therefore, this method would still                                  of concept drift, associated to the weaknesses of resampling
+take time to recover from concept drifts in p(⃗x).                                               strategies, are linked to large performance drops and, con-
+   Besides activating rules that became unsuitable due to drifts                                 sequently, large predictive performance variations over time.
+affecting p(y|⃗x), sudden concept drifts affecting p(⃗x) may                                     Therefore, we expect that existing JIT-SDP methods will suffer
+also activate rules that have been generated as a result of                                      from lack of reliability. They may not perform consistently
+noise or rules that over-generalize to areas of the space that                                   well over time, i.e., their predictive performances may not be
+were not seen at training time, potentially leading to further                                   high and stable. This section thus analyses the reliability of
+performance drops.                                                                               OOB, UOB, OOB-SW and ORB.
+   In addition to sudden drifts, there are also many gradual                                        Previous work has already compared the average predictive
+drifts in p(⃗x). For instance, it is reasonable that as software                                 performance of OOB, UOB, OOB-SW and ORB [8]. In partic-
+matures, the experience of the developers (EXP), the num-                                        ular, it identified that ORB outperformed the other approaches
+ber of developers who have changed the modified files in                                         in terms of g-mean and |rec(0)−rec(1)| based on Scott-Knott-
+the past (NDEV) and the number of prior changes to the                                           A12. In the current paper, we expand that analysis to discuss
+modified files (NUC) increase. As shown in Figure 3, gradual                                     reliability, including the stability of predictive performance
+increases/decreases of the feature values can be observed over                                   over time. The average predictive performance obtained in
+time for several features of the analyzed datasets. This type                                    Cabral et al. [8]’s work is reproduced in Table III of this
+of concept drift thus seems to be quite common in JIT-SDP,                                       paper. The results of our additional statistical test corroborate
+potentially more common than drifts in p(y|⃗x).                                                  those from Cabral et al. [8], confirming that ORB was better
+   A side effect of this type of concept drift is that newly                                     ranked than OOB, UOB and OOB-SW in terms of g-mean
+created rules can become obsolete very quickly, since they                                       and |rec(0) − rec(1)|, and that even though OOB and UOB
+represent areas of the input space that are not visited anymore                                  achieved top average rec(1) this was at the cost of a low
+in the near future. For instance, Figure 1-a) shows that the rule                                average rec(0).
+from Equation 1 became obsolete soon after it was created. In                                       Achieving a good result in terms of |rec(0) − rec(1)| is
+particular, this rule was used only once right after its creation                                particularly important so that (1) improvements in the ability to
+and remained unused for 5.46 years (Table II).                                                   identify defect-inducing changes are not at the cost of a large
+   Such gradual feature evolution emphasizes the importance                                      number of false alarms, which would reduce practitioners’
+of adopting online learning methods that update classifiers                                      trust in the method, and (2) a good rec(0) does not come at
+as soon as labeled examples become available, given that                                         the cost of missing a large number of defect-inducing changes,
+the prediction task often requires new rules to describe new                                     which would render the method useless. However, we hereby
+areas of the feature space. It also highlights the challenges                                    note that even ORB still obtained a |rec(0) − rec(1)| larger
+posed by verification latency, as training examples may already                                  than 20 in half of the datasets (JGroups, Brackets, Spring
+be unrepresentative of the feature values of current software                                    Integration, Nova and NPM). This means that, while one of the
+                                                                                                                                                                 10
+
+
+
+   TABLE III: Performance results for literature methods.                           TABLE IV: Standard deviations through time for all classifiers.
+  Dataset     Classifier     rec(0)       rec(1)     |rec(0)-rec(1)|    g-mean        Dataset     Classifier     rec(0)       rec(1)     |rec(0)-rec(1)|     g-mean
+                OOB        50.24 [-b]   74.45 [b]      28.50 [-b]      59.04 [-b]                   OOB        16.79 [-s]   11.60 [b]       20.33 [b]       11.96 [b]
+                UOB        42.28 [-b]   83.70 [b]      43.91 [-b]      57.07 [-b]                   UOB        16.41 [*]    10.29 [b]       19.63 [b]       12.51 [b]
+    Fabric                                                                              Fabric
+              OOB-SW       73.32 [b]    46.36 [-b]     47.73 [-b]      50.74 [-b]                 OOB-SW       25.34 [-b]   27.14 [-b]     30.46 [-b]      16.53 [-m]
+                ORB          60.35        68.36           20.59          60.93                      ORB          15.31        18.35           22.75           16.08
+                OOB        59.38 [-b]   56.67 [-b]     28.13 [-b]      54.71 [-b]                   OOB        22.24 [-b]   15.26 [-b]     20.22 [-b]      11.82 [-b]
+                UOB        73.78 [b]    45.12 [-b]     36.81 [-b]      55.09 [-b]                   UOB        18.32 [-b]   14.61 [-b]     19.58 [-b]       10.61 [s]
+   Jgroups                                                                             Jgroups
+              OOB-SW       81.50 [b]    35.33 [-b]     57.51 [-b]      47.95 [-b]                 OOB-SW       22.58 [-b]   22.09 [-b]     25.58 [-b]      12.77 [-b]
+                ORB          62.65        56.73           17.79          57.76                      ORB          14.09        13.36           17.36           10.71
+                OOB        57.06 [-b]   73.99 [b]      25.47 [-b]      62.90 [-b]                   OOB        18.84 [-b]   11.48 [b]      21.15 [-b]       10.21 [b]
+                UOB        55.57 [-b]   71.28 [s]      29.27 [-b]      60.35 [-b]                   UOB        19.98 [-b]   13.58 [-b]     20.75 [-b]        9.55 [b]
+    Camel                                                                               Camel
+              OOB-SW       71.67 [b]    40.38 [-b]     64.61 [-b]      40.29 [-b]                 OOB-SW       31.06 [-b]   33.81 [-b]     29.26 [-b]      17.28 [-b]
+                ORB          60.74        70.41           17.03          63.63                      ORB          14.58        11.87           19.45           10.80
+                OOB        59.82 [*]    61.75 [-b]     29.42 [-b]      57.28 [-b]                   OOB        20.07 [-b]   18.02 [-b]     21.49 [-b]      10.72 [-b]
+                UOB        68.48 [b]    50.04 [-b]     33.69 [-b]      55.18 [-b]                   UOB        19.83 [-b]   16.89 [-b]     21.35 [-b]        9.77 [s]
+   Tomcat                                                                              Tomcat
+              OOB-SW       65.20 [b]    52.30 [-b]     35.93 [-b]      54.53 [-b]                 OOB-SW       23.91 [-b]   17.99 [-b]     21.71 [-b]        9.28 [b]
+                ORB          59.43        64.37           16.08          60.18                      ORB          15.48        10.00           18.04            9.66
+                OOB        49.11 [-b]   89.49 [b]      41.90 [-b]      63.94 [m]                    OOB        14.80 [b]     9.47 [b]       18.01 [b]       15.37 [b]
+                UOB        54.59 [-b]   83.10 [b]       32.98 [b]      64.24 [b]                    UOB        18.09 [-b]   13.69 [b]       23.98 [-s]      15.55 [b]
+  Brackets                                                                            Brackets
+              OOB-SW       56.29 [-b]   79.82 [b]      42.80 [-b]      61.68 [-b]                 OOB-SW       22.77 [-b]   22.88 [b]      24.54 [-b]       16.43 [b]
+                ORB          61.68        77.15           36.01          63.66                      ORB          16.25        25.29           23.81           18.57
+                OOB        69.71 [-b]   91.89 [b]      23.97 [-b]      79.32 [-b]                   OOB        12.00 [-b]    8.65 [b]      13.20 [-b]       9.66 [-b]
+                UOB        58.83 [-b]   92.45 [b]      38.41 [-b]      70.73 [-b]                   UOB        21.76 [-b]   12.32 [m]      21.25 [-b]      18.64 [-b]
+  Neutron                                                                             Neutron
+              OOB-SW       73.83 [-b]   83.08 [b]      20.49 [-b]      76.74 [-b]                 OOB-SW       15.22 [-b]   13.78 [-b]     17.60 [-b]      11.57 [-b]
+                ORB          79.89        81.12           13.98          79.93                      ORB           7.42        12.51           11.34            6.14
+                OOB        62.48 [-b]   53.74 [b]      47.28 [-b]      48.12 [-b]                   OOB        30.72 [-b]   28.71 [-b]     30.97 [-b]      19.21 [-b]
+     Spring     UOB        55.65 [-b]   59.31 [b]       37.58 [b]      52.19 [*]         Spring     UOB        25.14 [-b]   20.39 [b]       21.78 [b]       12.94 [b]
+  Integration OOB-SW       45.55 [-b]   79.88 [b]      39.52 [-b]      56.12 [b]      Integration OOB-SW       24.10 [-b]   14.69 [b]      29.34 [-m]       16.29 [b]
+                ORB          74.33        44.31           37.30          52.20                      ORB          18.74        21.39           28.91           17.57
+                OOB        59.25 [-b]   68.33 [m]      33.40 [-b]      60.07 [-b]                   OOB        23.67 [-b]   16.05 [-b]     20.08 [-b]       11.41 [b]
+                UOB        59.32 [-b]   62.69 [-b]     43.26 [-b]      55.46 [-b]                   UOB        25.06 [-b]   23.03 [-b]     20.04 [-m]       10.18 [b]
+  Broadleaf                                                                           Broadleaf
+              OOB-SW       78.21 [b]    34.73 [-b]     71.02 [-b]      37.00 [-b]                 OOB-SW       28.78 [-b]   35.66 [-b]     29.43 [-b]      19.65 [-b]
+                ORB          61.60        67.00           19.17          61.97                      ORB          15.01        14.49           18.74           12.64
+                OOB        68.54 [-b]   86.27 [b]      24.34 [-b]      75.41 [-b]                   OOB        16.20 [-b]   12.17 [b]       16.47 [b]       12.54 [b]
+                UOB        65.56 [-b]   90.84 [b]      27.60 [-b]      75.94 [m]                    UOB        14.84 [b]     9.33 [b]       15.66 [b]       12.64 [b]
+    Nova                                                                                Nova
+              OOB-SW       66.41 [-b]   85.90 [b]      33.66 [-b]      72.85 [-b]                 OOB-SW       17.93 [-b]   19.49 [-b]      17.83 [s]      14.58 [-b]
+                ORB          75.44        79.78           20.28          75.57                      ORB          15.13        15.57           17.93           13.96
+                OOB        37.92 [-b]   74.89 [b]      49.68 [-b]      46.17 [-b]                   OOB        27.86 [-b]   18.41 [b]      29.56 [-b]      16.67 [-b]
+                UOB        38.27 [-b]   72.83 [b]      48.90 [-b]      45.87 [-b]                   UOB        28.60 [-b]   19.00 [b]      28.69 [-b]      16.36 [-b]
+    NPM                                                                                 NPM
+              OOB-SW       55.56 [s]    62.75 [-b]     43.68 [-b]      50.53 [-b]                 OOB-SW       32.84 [-b]   21.57 [-b]     29.90 [-b]      18.15 [-b]
+                ORB          55.25        63.95           31.74          54.26                      ORB          22.87        19.98           26.96           14.80
+                OOB            2            1               2              2                        OOB            2            1               1               1
+                UOB            2            1               3              2                        UOB            2            1               1               1
+  Ranking                                                                             Ranking
+              OOB-SW           1            3               4              3                      OOB-SW           3            3               2               2
+                ORB            1            2               1              1                        ORB            1            2               1               1
+Table adapted from [8]. Symbols [*], [s], [m] and [b] represent insignificant,      Symbols [*], [s], [m] and [b] represent insignificant, small, medium and big
+small, medium and big A12 effect size against ORB. Presence/absence of              A12 effect size against ORB. Presence/absence of the sign “-” in the effect
+the sign “-” in the effect size means that the corresponding approach was           size means that the corresponding approach was worse/better than ORB.
+worse/better than ORB. The groups’ rankings with smaller numbers indicate           The groups’ rankings with smaller numbers indicate better ranks according
+better ranks according to Scott-Knott-A12 test [26].                                to Scott-Knott-A12 test [26].
+
+recalls on these datasets may have been typically very good,                        improvements over OOB and UOB in terms of the stability of
+the other was more than 20 units worse, which is undesirable                        such metrics.
+in practice, affecting ORB’s reliability. Other methods with                           The analysis above shows that the better ranked average g-
+higher |rec(0) − rec(1)| would be even more unreliable.                             mean and |rec(0)−rec(1)| results achieved by ORB compared
+   Next, we analyze the stability of the predictive performance                     with OOB, UOB and OOB-SW do not mean that its difference
+over time. Aggregating the performance metrics across time                          in recalls was good enough through time. There were varia-
+through averaging can overlook considerable periods of time                         tions of the performance metrics over time that caused ORB to
+with poor performance. Therefore, it is important to check how                      present significant drops in predictive performance over time.
+the predictive performance of JIT-SDP methods varies through                        Such lack of stability in the predictive performance over time
+time.                                                                               means that, at any given point in time, a classifier may be
+   Hence, when designing a classifier, a visual analysis of                         performing very well or failing dramatically, hindering their
+the performance through time is important to understand the                         adoption in practice. Therefore, existing JIT-SDP methods still
+reliability of a JIT-SDP method.                                                    need to be improved.
+   Table IV shows the standard deviations of the predictive per-                       Considering Table III, ORB obtained the best overall per-
+formances through time. The standard deviations can roughly                         formance (i.e., based on the Scott-Knott-A12 analysis for
+summarize a method’s stability. As shown by Scott-Knott-A12,                        metrics gmean and |rec(0) − rec(1)|). However, in order to
+ORB’s ranking in terms of standard deviation of g-mean and                          have a better understanding on how these results can indicate
+|rec(0) − rec(1)| were not better than that of OOB and UOB,                         whether or not these classifiers may be adopted in practice,
+despite being better than that of OOB-SW. Therefore, despite                        it is important to analyze the results from Table III together
+achieving a better ranking in terms of the average g-mean                           with the variation of the |rec(0)−rec(1)| through time in Fig.
+and |rec(0) − rec(1)|, ORB did not really lead to ranking                           4. This is because a top rank in terms of |rec(0) − rec(1)|
+                                                                                                                                      11
+
+
+
+                                                                    A. Leveraging the Findings from RQ1 to Improve JIT-SDP
+                                                                       Section V thoroughly discusses the different types of con-
+                                                                    cept drifts affecting JIT-SDP and makes explicit the weak-
+                                                                    nesses of the existing methods regarding these concept drifts.
+                                                                    Among the reasons for their poor performance is the fact that
+                                                                    they monitor concept drifts relying on the true classes labels,
+                                                                    but, due to verification latency, that is is not a suitable strategy
+                                                                    for JIT-SDP. Therefore, we need a timely strategy to detect
+                                                                    these drifts.
+                                                                       In this work, all observed changes in p(y|⃗x) turned defect-
+                                                                    inducing areas in the hyperspace into clean areas and occurred
+                                                                    at the same time as changes in p(⃗x) that caused a high
+                                                                    number of software changes fall in these areas abruptly. This
+                                                                    situation leads to a shift in the predictions made by the
+                                                                    JIT-SDP classifier. Specifically, a much higher proportion of
+                                                                    software changes may start being predicted as defect-inducing
+                                                                    when such concept drifts occur. Such shift involves only the
+                                                                    predictions made by the JIT-SDP classifier. Detecting it would
+                                                                    not require us to wait for the arrival of the true class labels
+                                                                    corresponding to these software changes. Therefore, keeping
+Fig. 4: Absolute difference between the recalls (|rec(0) −          track of the proportions of predictions of each class is a
+rec(1)|) trough time for ORB. The x axis corresponds to the         potential way to detect this type of concept drift in JIT-SDP.
+commit timestep ×10−3 .                                                Our observations from RQ1 show that changes in p(⃗x) are
+                                                                    likely to be very common in JIT-SDP. It is possible that they
+does not mean that such |rec(0) − rec(1)| is good enough.           occur together with 3 different situations:
+In particular, aggregating the performance metrics across time         • An area in the input space may be associated to an
+into a single metric value can hide considerable periods of time          incorrect label as a consequence of an overgeneralization
+with poor performance. Fig. 4 shows many periods where the                of the classifier. If this area suddenly becomes very
+classifier is not reliable due to high values in |rec(0)−rec(1)|.         populated due to a change in p(⃗x), predictions based
+Hypothetically, a |rec(0)−rec(1)| higher than 30 may indicate             on such incorrect label are likely to cause a shift in the
+that the classifier has an accuracy of 80% for clean commits              predictions made by the JIT-SDP classifier, causing it to
+and 50% for defect-inducing ones. In Fig. 4 the timestep                  either predict the clean or the defect-inducing class more
+periods Fabric8 from ± 7500 to ± 11000, Tomcat from ±                     often than expected. Such concept drift could thus also
+17800 to ± 19000, Camel from ± 1500 to ± 12000 and                        be detected by tracking the proportions of predictions of
+Nova from ± 1000 to ± 12000 are some of the representative                each class.
+examples of periods where the classifier is unreliable.                • An area in the input space may be associated to an
+                                                                          incorrect label as consequence of a rule created from
+RQ1: Section V-B reveals that JIT-SDP suffers from various
+                                                                          noise, leading to the same previously mentioned situation.
+types of concept drift. Due to verification latency, most types
+                                                                       • An area in the input space may have been previously
+of concept drift cannot be diagnosed in time for an effective
+                                                                          labeled as consequence of noise or overgeneralization,
+reaction, leading to variations and drops in predictive perfor-
+                                                                          but this label may actually be correct. A change in
+mance over time, which negatively affect the reliability of JIT-
+                                                                          p(⃗x) causing this area to become very populated would
+SDP methods. Section V-C confirms that reliability issues are
+                                                                          not lead to a shift in the predictions made by the JIT-
+present in all datasets investigated in this study.
+                                                                          SDP classifier. Monitoring concept drifts by tracking the
+                                                                          proportions of predictions of each class would thus be
+   VI. (RQ2) I MPROVING THE R ELIABILITY OF O NLINE                       unlikely to detect such change in p(⃗x). However, that is
+                 JIT-SDP C LASSIFIERS                                     not a problem, because this change is not detrimental to
+   The findings from RQ1 (Section V) show that new methods                the predictive performance of the JIT-SDP classifier.
+to improve JIT-SDP’s reliability are desirable, in view of issues      Therefore, our proposed approach will track the predictions
+caused by concept drift and verification latency. The current       given by the classifier in order to achieve earlier detection and
+section answers RQ2 by building on the knowledge obtained           reaction to concept drift in JIT-SDP.
+through RQ1 to propose a new JIT-SDP method aimed at
+improving reliability. Section VI-A briefly explains how the
+findings from RQ1 led us to the design of an approach able to       B. Prediction-Based Sampling Adjustment (PBSA)
+detect and react earlier to concept drifts in JIT-SDP. Section         Given that JIT-SDP is a binary classification problem, a
+VI-B explains the proposed approach, called Prediction-Based        plausible strategy to track the proportion of predictions of each
+Sampling Adjustment (PBSA), in detail.                              class is to monitor the moving average of predictions:
+                                                                                                                                                                12
+
+
+
+
+                             Pt
+
+
+
+
+                                                                       Predictions Moving Average
+                                                                                                    1.0
+                                i=t−ws+1 ŷi
+                    maŷ =                   .                (3)
+
+
+
+
+                                                                                                    0.8
+                                   ws
+where ws is the size of the sliding window, t is the current
+
+
+
+
+                                                                                                    0.6
+commit time step, and ŷi is the prediction of the classifier to
+
+
+
+
+                                                                                                    0.4
+the software change produced at commit time step i (0 for the
+
+
+
+
+                                                                                                    0.2
+clean class and 1 for the defect-inducing class).
+
+
+
+
+                                                                                                    0.0
+   As JIT-SDP is a class imbalanced problem, monitoring maŷ
+means monitoring the class imbalance ratio of the predictions                                             0   3000   6000       9000    12000   15000   18000
+                                                                                                                            Commit Time Step
+provided by the classifier. This monitoring can be performed in
+real time (without delay) so that a significant deviation from an     Fig. 5: Moving average of the predictions (ws = 100) for the
+expected classifier’s behaviour (in this case, an expected class      Tomcat dataset. Green line represents target moving average
+imbalance ratio in the predictions) might provide an earlier          (th) and red dashed lines represent boundaries of the accept-
+indication of the need for adjusting the classifier.                  able interval.
+   Given that JIT-SDP is a class imbalanced problem, our
+approach is based on the following assumption:
+Assumption 1: Given that JIT-SDP is a class imbalanced
+problem, the moving average of the predictions (maŷ ) must
+be skewed towards the majority class (i.e., the clean class).
+   PBSA manipulates the training procedure to maintain maŷ
+within a given acceptable/expected interval around a target
+value th for the moving average. If maŷ moves outside this
+interval, this indicates a suspected concept drift, requiring         Fig. 6: PDF curves for picking an unlabeled example (blue
+adjustments to avoid drops in predictive performance. Such            curve) and for picking a defect-inducing example (red curve)
+adjustments are made through a concept drift recovery mech-           for retraining the classifier.
+anism that is explained later in this section.
+   The target value th is set by taking Assumption 1 into ac-
+                                                                            If the skew is towards predicting the defect-inducing
+                                                                                            •
+count. In particular, given that the clean class (0) is a majority,
+                                                                            class, the recovery training is performed with examples
+th should be smaller than 0.5. In a perfect scenario, th should
+                                                                            sampled from an unlabeled pool, by (pseudo-)labeling
+match the true class imbalance ratio exactly. However, this is
+                                                                            them as clean training examples. The unlabeled pool
+unrealistic given that there will always be some errors in the
+                                                                            stores all committed software changes that are currently
+predictions. Therefore, th should be set closer to 0.5 than the
+                                                                            unlabeled. It is worth noting that only software changes
+true imbalance ratio, so that we allow an accepted level of
+                                                                            produced up to w (waiting time) days ago are unlabeled
+error in the majority class for the sake of increasing rec(1).
+                                                                            (see Definition 5 in Section II). Clean examples older
+For example, given a true class imbalance ratio of 3:7, setting
+                                                                            than w days are not used as part of the recovery training
+a target maŷ to 40% implies in accepting an error of at least
+                                                                            because (1) the model has already been trained on plenty
+10% in the majority class for the sake of increasing rec(1).
+                                                                            of examples of the clean class older than w days (as
+   The interval around th is set based on a parameter p which
+                                                                            this is overall a majority class) and (2) the most recent
+represents the percentage of allowed deviation from th. The
+                                                                            examples may be representing a new concept still not
+lower boundary of the interval is set to th1 = th - (th * p)
+                                                                            learned well enough by the tree, such that training on
+and the upper boundary to th0 = th + ((1 - th) * p). Figure 5
+                                                                            them may improve predictive performance on the current
+shows an example of maŷ over time for the Tomcat dataset,
+                                                                            concept. Later on, once the real label of such examples
+where th = 0.4 and p = 0.2, resulting in lower and upper
+                                                                            is revealed, they will be used again for training.
+boundaries of 0.32 and 0.52, respectively.
+   To detect meaningful deviations from the interval, let −   →
+                                                             ma  ŷ
+                                                                         In the second case, as the clean class is a majority, it is more
+be a vector containing the last ws moving averages of the pre-        likely that the examples sampled from the unlabelled pool
+dictions maŷ . PBSA only triggers the concept drift recovery         belong to the clean class. Therefore, the number of mislabelled
+mechanism if avg(−    → ) is placed outside the boundaries of
+                     ma  ŷ
+                                                                      examples will typically be smaller than the number of correctly
+the interval.                                                         labelled examples. Such mislabelling is thus likely to be a
+   The concept drift recovery mechanism consists in per-              smaller problem when compared to the benefits of training
+forming a recovery training with recent examples from the             with very recent software changes3 , which can help to speed up
+“opposite” class from the biased class. In particular:                adaptation to concept drifts. This is a key difference between
+                                                                      the proposed method and existing ones such as ORB [8], OOB
+   • If the skew is towards predicting the clean class, the
+                                                                      and UOB [17], which need to rely solely on labelled examples
+     recovery training is performed with examples from the
+                                                                      affected by verification latency for training. Besides that, since
+     defect-inducing class sampled from a defect-inducing
+     pool containing all training examples labeled as defect-           3 These changes will be much more recent than labelled changes due to
+     inducing seen so far, sorted by their training time steps.       verification latency.
+                                                                                                                                  13
+
+
+
+existing methods such as ORB, OOB and UOB only resample              at each iteration of the loop using any new labeled training
+the last training example rather than sampling from a pool,          examples that may have arrived since the previous iteration.
+they are also more sensitive to noise. This is because if this       Once the examples in Labs are used for training, they are
+last training example is noisy, replicating it several times will    discarded (if they belong to the clean class) or moved to
+hinder predictive performance.                                       Def s (if they belong to the defect-inducing class). The array
+   Examples are repeatedly sampled from the corresponding            −→ contains the last ws values of ma . If the condition in
+                                                                     ma  ŷ                                     ŷ
+pool based on a probability density function and used for            Lines 15 or 24 is true, the concept drift recovery mechanism is
+recovery training until the average of the predictions for the       triggered and will then be ignored for at commit time steps as
+ws most recently committed software changes becomes larger           aforementioned. Note that in lines 19 and 28, the classifier is
+than the target moving average value th in the first case, and       trained without using any resampling strategy, different from
+smaller than th in the second case.                                  line 13, when it may inherit the resampling strategy from the
+   The probability density function was designed to prioritize       base learner.
+more recent examples, as defined by Equation 4 and illus-               In essence, PBSA monitors the classifiers’ outputs in order
+trated in Figure 6. This is important since prioritizing recent      to react to concept drift. It can be considered as a special
+examples helps to recover from concept drifts. The probability       resampling strategy to react to concept drifts in the presence
+density function associated to the defect-inducing changes has       of class imbalance and verification latency.
+a longer tail, because training examples of this class arrive
+less frequently, i.e., this class is typically a minority class in     Algorithm 1: PBSA
+JIT-SDP.                                                                input : th,p,ws,at
+                                                                      1 th1 = th - (th * p)
+                                xα−1 (1 − x)β−1
+                f (x, α, β) =                                 (4)     2 th0 = th + ((1 - th) * p)
+                                   B(α, β)
+                                                                      3 Def s = ∅
+                                  Γ(α)Γ(β)                            4 U nlabs = ∅
+                     B(α, β) =                                (5)     5 Labs = ∅
+                                  Γ(α + β)                              −→
+                                                                      6 maŷ = ∅
+Equation 4 is the probability density function of a Beta              7 lastRecovT S = 0
+distribution. It returns the relative likelihood of sampling an       8 while receiving new software changes - ⃗ci do
+example at location x of the pool, where x are the positions          9     ŷ = predict(⃗ci )
+of the examples in the pool, but scaled between 0 and 1. The         10     update(−  → , ŷ)
+                                                                                     ma   ŷ
+parameters α and β define the shape of the distribution and Γ        11     update(U nlabs, ⃗ci )
+(Eq. 5) stands for the Gamma function. In practice, an example       12     update(Labs)
+at a given position x is sampled from the pool based on a            13     trainOn(Labs)
+random number r, respecting the distribution defined by Eq.          14     update(Def s)
+4, if x is the closest position to r among all examples in the       15     if avg(−
+                                                                                   ma→ ) > th & lastRecovT S < i − at then
+                                                                                       ŷ      0
+pool.                                                                16         while maŷ > th do
+   After being triggered, PBSA prevents the concept drift            17             r = B(α, β).randSample()
+recovering mechanism from being triggered again for the              18             idx = r × size(U nlabs) + 1
+next at commit time steps. This is because, despite the use          19             trainN oSampling(U nlabs[idx])
+of strategies to speed up recovery from concept drift, such          20             update(maŷ )
+recovery will take some time to be reflected by the moving           21         end
+average ma⃗ y . This could cause PBSA to unnecessarily trigger       22         lastRecovT S = i
+the recovery mechanism again for dealing with the same               23     end
+concept drift, resulting in overfitting.                             24     if avg(−
+                                                                                   ma→ ) < th & lastRecovT S < i − at then
+                                                                                       ŷ      1
+   Algorithm 1 depicts PBSA. As input, it receives: th - a           25         while maŷ < th do
+target moving average of the predictions; p - the acceptable         26             r = B(α, β).randSample()
+percentage of deviation of avg(−    → ) from th; w - the wait-
+                                   ma ŷ                             27             idx = r × size(Def s) + 1
+ing time for receiving the true labels (in days); ws - the           28             trainN oSampling(Def s[idx])
+window size for computing the moving averages; and at -              29             update(maŷ )
+number of commit time steps before the concept drift recovery        30         end
+mechanism can be triggered again. Def s and U nlabs are              31         lastRecovT S = i
+the pools of defect-inducing and unlabeled software changes,         32     end
+respectively. Labs is an array of labeled examples. New              33 end
+training examples are inserted into Labs when (i) a software
+change is found to be defect-inducing or (ii) when an unlabeled
+change is labeled as clean as a result of the waiting time
+w (Line 12). The examples in Labs are used for training in           C. Experimental Setup
+Line 13, based on any existing online base learning algorithm.          1) Performance Metrics: The objective of the experiments
+In other words, the JIT-SDP model is continuously updated            is to evaluate PBSA’s reliability, which is defined in Section
+                                                                                                                                                                   14
+
+
+
+II. It requires an evaluation of the magnitude of the predictive                  TABLE V: Performance results for ORB and PBSA methods.
+                                                                                     Dataset       Classifier     rec(0)      rec(1)    |rec(0) - rec(1)|    g-mean
+performance and its stability over time.                                                             ORB          60.35       68.36           20.59           60.93
+                                                                                     Fabric8
+   As in Section V-A and in previous work [8], the perfor-                                           PBSA       66.37[b]    61.42[-b]       14.46[b]        61.20[s]
+                                                                                                     ORB          62.65       56.73           17.79           57.76
+mance metrics used for the comparison are the recalls on                              Jgroups
+                                                                                                     PBSA       65.64[b]    52.94[-b]       16.32[b]        57.68[-b]
+the cleanp(rec(0)) andp defect-inducing (rec(1)) classes, the                          Camel
+                                                                                                     ORB          60.74       70.41           17.03           63.63
+                                                                                                     PBSA       68.60[b]    66.99[-b]       11.67[b]        66.72[b]
+g-mean ( rec(0) × rec(1)) and the difference between the                                             ORB          59.43       64.37           16.08           60.18
+                                                                                      Tomcat
+recalls (|rec(0)−rec(1)|), calculated in a prequential way and                                       PBSA       66.33[b]    58.04[-b]       14.62[b]        61.19[b]
+with a fading factor θ = 0.99 [8], [10], [17], [11]. The Scott-                                      ORB          61.68       77.15           36.01           63.66
+                                                                                     Brackets
+                                                                                                     PBSA       65.56[b]    74.25[-b]       24.93[b]        65.49[b]
+Knott-A12 test and A12 effect sizes with respect to ORB are                                          ORB          79.89       81.12           13.98           79.93
+                                                                                     Neutron
+also used to support the analysis.                                                                   PBSA       74.96[-b]   86.44[b]        19.53[-b]       79.88[-b]
+                                                                                       Spring        ORB          74.33       44.31           37.30           52.20
+   In addition, the number of months Ξl where the difference                        Integration      PBSA       75.61[b]    43.58[-b]       36.31[b]        52.16[-b]
+in recalls |rec(0) − rec(1)| surpasses a threshold l will also                       Broadleaf
+                                                                                                     ORB          61.60       67.00           19.17           61.97
+                                                                                                     PBSA       66.48[b]    62.55[-b]       12.41[b]        62.65[b]
+be analyzed.                                                                                         ORB          75.44       79.78           20.28           75.57
+                                                                                       Nova
+   2) Parameters Choice: The proposed method can be used                                             PBSA       75.15[-b]   82.93[-b]       13.63[b]        77.72[b]
+                                                                                                     ORB          55.25       63.95           31.74           54.26
+with any online base learner. For this work, given its top                             NPM
+                                                                                                     PBSA       61.83[b]    56.11[-b]       16.57[b]        56.87[b]
+performance when compared with existing methods [8], ORB                                             ORB            2           8               1               3
+                                                                                        Wins
+was adopted as base learner for PBSA. ORB’s parameters                                               PBSA           8           2               9               6
+were assigned as in previous work [8]. In addition to ORB’s                                 p-values             2.2e-16     2.2e-16         2.2e-16         2.2e-16
+
+parameters, the proposed method incorporates four parameters,
+                                                                                  the supplementary material also contains a comparison that
+th, p, ws and at, as shown in Algorithm 1. The tested values
+                                                                                  includes the other approaches OOB, UOB and OOB-SW. The
+for these parameters were th = {0.2, 0.3, 0.4, 0.5, 0.6} and
+                                                                                  analysis shows that the proposed method obtained a larger
+p = {0.15, 0.25, 0.35}. Values in bold represent the values
+                                                                                  number of significantly better results in all metrics but rec(1).
+used in the experiments. These values were chosen based on
+                                                                                  The difference between the recalls, |rec(0) − rec(1)|, is a
+a grid search carried out on a smaller number of executions
+                                                                                  particularly important performance metric, as explained in
+(5 repetitions) for each dataset up to the commit time step
+                                                                                  Section V. Table V shows that PBSA reduced the overall
+5000. A single unique set of parameter values was chosen
+                                                                                  |rec(0) − rec(1)| by a maximum of 47% and a minimum of
+based on the values that most often led to top g-mean across
+                                                                                  2.7% in comparison with ORB. However, for Neutron, PBSA
+all datasets. This is because, in practice, the best parameter
+                                                                                  performed worse in terms of this metric. PBSA operates by
+values may change over time and it is impossible to know
+                                                                                  maintaining the detection rate close to a pre-defined value (i.e.,
+which values would lead to the best results before observing
+                                                                                  th). Specifically for Neutron, further experiments shown that
+the whole data stream of labeled examples 4 . Since they were
+                                                                                  a smaller value for th, such as 0.2, produces classifiers with
+not shown to be crucial parameters based on a preliminary
+                                                                                  much better and stabler performances.
+analysis, ws = 100 and at = 30 were used. Equation 5 also
+relies on parameters, nevertheless, these parameters were also                       Table V also shows that PBSA predominantly obtained
+not crucial, and thus fixed to α = 5 and β = 2. Based on                          a better rec(0) than ORB (by a maximum of 13% and
+the chosen parameters, 30 runs were performed for PBSA on                         a minimum of -0.4%, except for the Neutron dataset), in
+each full data stream.                                                            detriment of rec(1). Still, the magnitude of the improvement
+   3) Open Science and Reproducibility: The code im-                              in rec(0) is mostly larger than the respective deterioration
+plementing PBSA, the scripts used to run the exper-                               in rec(1). It is worth mentioning that the ORB’s worse
+iments, the datasets used in the experiments and csv                              performance in terms of rec(0) means a high rate of false
+files with the results of all runs are available at                               alarms. This may add a significant, and unnecessary, workload
+http://doi.org/10.5281/zenodo.6548768.                                            to the test team, besides reducing practitioners’ trust in the
+                                                                                  method. For instance, software developers at Facebook prefer a
+                                                                                  conservative lower bound on fix detection [27] when using the
+D. Analysis of the Average Predictive Performances                                tools Infer [28] and Sapienz [29]. In a scenario where the cost
+   Cabral and Minku [8] showed that ORB overcame state-                           of analyzing the source code is high, the recommendation is to
+of-art methods in terms of g-mean and |rec(0) − rec(1)|.                          prioritize rec(0). Other authors [30], [31] also emphasize the
+Those methods were also further analyzed and discussed in                         problem of wasting effort on a large number false alarms. For
+Section V. Therefore, this section will focus on comparing                        safety critical applications, rec(1) may be prioritized. Table 1
+the proposed method against ORB.                                                  in the supplementary material expands the comparisons of the
+   Table V shows the predictive performance results for                           proposed method against methods present in Section V.
+ORB and PBSA. Figure 3 in the supplementary material                                 Figure 1 discussed in Section V shows two large perfor-
+contains plots to facilitate visualization of the g-mean and                      mance drops in datasets Camel and Tomcat. As discussed
+|rec(0) − rec(1)| obtained by these approaches. Table 1 in                        in that section, these drops were caused by, among others,
+                                                                                  concept drifts in p(y|x). Table VI presents the performance
+   4 Note that, after the whole data stream of labeled examples is observed,
+                                                                                  of ORB and PBSA for these specific time intervals (commit
+predictions to its software changes would not be necessary anymore. There-
+fore, in practice, it would be unreasonable to choose the best parameter values   time step 25500 to 27000 for Camel and 17400 to 18878 for
+only after observing the whole data stream.                                       Tomcat). In these periods, PBSA enhanced ORB’s g-mean by
+                                                                                                                                                                                                                                                   15
+
+
+
+                                        ORB                                          PBSA
+                                                                                                                                                                     1) Classifiers’ Stability: Table VII presents the standard
+  Recall(0)                                                                  Recall(1)
+                              Fabric8                                                                        Fabric8                                              deviations through time of the performance metrics for all
+                       s                      NP                                                      s                            NP
+                     up                                                                        up
+           JG
+             ro                                      M
+                                                                                      JG
+                                                                                        ro                                              M
+                                                                                                                                                                  methods. According to paired Wincoxon Signed-rank test,
+                                                                                                                                                                  PBSA obtained a much larger number of better results than
+     el
+
+
+
+
+                                                                                el
+                                                                    Nov
+
+
+
+
+                                                                                                                                                        Nov
+                                                                                                                                                                  ORB for all metrics. PBSA overcame ORB in terms of rec(0)
+   Cam
+
+
+
+
+                                                                             Cam
+                                                                       a
+
+
+
+
+                                                                                                                                                           a
+                                                                                                                                                                  in 9 out of 10 results with a maximum of 42%, in terms
+                                                                                                                                                                  of rec(1) in 8 out of 10 results with a maximum of 34%,
+
+
+                                                                       af
+
+
+
+
+                                                                                                                                                           af
+   Tom
+
+
+
+
+                                                                             Tom
+                                                                      adle
+
+
+
+
+                                                                                                                                                         adle
+                                                                                                                                                                  in terms of |rec(0) − rec(1)| in 9 out of 10 results with a
+       c
+
+
+
+
+                                                                                 c
+                                                                    Bro
+
+
+
+
+                                                                                                                                                        Bro
+     at
+
+
+
+
+                                                                               at
+           Br
+                ac                                       ra
+                                                            tio
+                                                                n
+                                                                                     Br
+                                                                                          ac                                                  ra
+                                                                                                                                                  tio
+                                                                                                                                                     n
+                                                                                                                                                                  maximum of 36% and in terms of g-mean in 7 out of 10
+                                                     eg                                                                                   eg
+                  ke                             Int                                        ke                                         Int
+                       ts
+                                          rin
+                                             g-                                                  ts
+                                                                                                                               ring
+                                                                                                                                    -
+                                                                                                                                                                  results with a maximum of 22%. The A12 effect size of the
+                            Neutron     Sp                                                                  Neutron       Sp
+                                                                                                                                                                  difference in standard deviations was almost always large.
+  Diff.                       Fabric8
+                                                                             Gmean                           Fabric8
+  Recalls
+                       ps                     NP                                                      s                            NP
+                                                                                                                                                                  The aforementioned improvement in stability can be visually
+                  ou                                                                           up                                       M
+                Gr
+                                                     M                                     ro
+            J                                                                          JG                                                                         assessed in Fig. 8. For almost all metrics and datasets, PBSA
+                                                                                                                                                                  obtained higher stability (i.e., smaller standard deviations).
+      el
+
+
+
+
+                                                                                l
+                                                                    Nov
+
+
+
+
+                                                                                                                                                        Nov
+                                                                                 e
+   Cam
+
+
+
+
+                                                                             Cam
+
+
+
+
+                                                                                                                                                                  For the datasets Neutron and Spring-Integration, ORB slightly
+                                                                       a
+
+
+
+
+                                                                                                                                                            a
+                                                                                                                                                                  outperformed PBSA. In Table 2 in the supplementary material,
+                                                                       af
+
+
+
+
+                                                                                                                                                             af
+                                                                                                                                                                  the PBSA stability is further compared to the methods in
+   Tom
+
+
+
+
+                                                                             Tom
+                                                                      adle
+
+
+
+
+                                                                                                                                                         adle
+       c
+
+
+
+
+                                                                                c
+     at
+
+
+
+
+                                                                               at
+                                                                    Bro
+
+
+
+
+                                                                                                                                                        Bro
+                                                                                                                                                                  literature.
+                                                                  n                                                                                 n
+           Br                                                 tio                    Br                                                        tio
+                                                          ra                                                                                 ra
+             ac                                        eg                              ac                                                eg
+                  ke
+                      ts
+                                             ing
+                                                 -Int                                       ke
+                                                                                                ts
+                                                                                                                               ing
+                                                                                                                                   -Int                           TABLE VII: Performance stability for ORB and PBSA meth-
+                                          r                                                                                 r
+                                        Sp                                                                                Sp
+                            Neutron                                                                         Neutron
+                                                                                                                                                                  ods.
+                                                                                                                                                                     Dataset       Classifier     rec(0)     rec(1)    |rec(0) - rec(1)|    g-mean
+Fig. 7: Performance comparison for the average results of each                                                                                                       Fabric8
+                                                                                                                                                                                     ORB          15.31      18.35           22.75           16.08
+                                                                                                                                                                                     PBSA       11.30[b]   16.89[b]        20.52[b]        15.32[b]
+metrics for ORB and PBSA classifiers.                                                                                                                                                ORB          14.09      13.36           17.36           10.71
+                                                                                                                                                                      Jgroups
+                                                                                                                                                                                     PBSA       11.45[b]   11.28[b]        16.22[b]         9.66[b]
+                                                                                                                                                                                     ORB          14.58      11.87           19.45           10.80
+                                                                                                                                                                       Camel
+                                                                                                                                                                                     PBSA        8.86[b]   11.39[b]        13.57[b]         9.42[b]
+11% and 27% for Camel and Tomcat, respectively. Regarding                                                                                                             Tomcat
+                                                                                                                                                                                     ORB          15.48      10.00           18.04            9.66
+|rec(0) − rec(1)|, the achieved reductions were 32% and 52%                                                                                                                          PBSA       10.98[b]    8.93[b]        12.37[b]         7.4[b]9
+                                                                                                                                                                                     ORB          16.25      25.29           23.81           18.57
+over ORB, respectively. This substantial improvement may be                                                                                                          Brackets
+                                                                                                                                                                                     PBSA       11.27[b]   22.35[b]        22.77[b]        18.98[-b]
+explained by the concept drift recovering mechanism present                                                                                                                          ORB           7.42      12.51           11.34            6.14
+                                                                                                                                                                     Neutron
+                                                                                                                                                                                     PBSA       8.58[-b]   13.07[*]         9.91[b]        6.81[-b]
+in PBSA.                                                                                                                                                               Spring        ORB          18.74      21.39           28.91           17.57
+                                                                                                                                                                    Integration      PBSA       17.38[b]   23.34[-b]       32.12[-b]       18.33[-b]
+TABLE VI: PBSA and ORB predictive performances during                                                                                                                Broadleaf
+                                                                                                                                                                                     ORB          15.01      14.49           18.74           12.64
+                                                                                                                                                                                     PBSA       10.27[b]   12.52[b]        16.09[b]        11.64[b]
+the large drops in Camel and Tomcat datasets depicted in                                                                                                                             ORB          15.13      15.57           17.93           13.96
+                                                                                                                                                                       Nova
+Figure 1 around timesteps 26000 and 18000, respectively.                                                                                                                             PBSA        9.15[b]   15.16[b]        14.50[b]        13.46[b]
+ Dataset         Classifier          rec(0)                                rec(1)                     |rec(0) - rec(1)|               gmean                                          ORB          22.87      19.98           26.96           14.80
+                                                                                                                                                                       NPM
+                   ORB            40.48 (2.61)                          80.52 (1.95)                    40.34 (3.54)               55.00 (2.18)                                      PBSA       13.28[b]   13.20[b]        17.20[b]        11.88[b]
+ Camel
+                  PBSA            49.46 (2.39)                          76.78 (1.38)                    27.32 (3.17)               61.28 (1.49)                                      ORB             1         1               1               3
+                   ORB            25.20 (2.35)                          76.92 (2.39)                    51.82 (3.96)               42.03 (1.91)                         Wins
+ Tomcat                                                                                                                                                                              PBSA            9         8               9               7
+                  PBSA            43.62 (2.73)                          66.94 (2.13)                    24.93 (3.69)               53.41 (1.60)
+                                                                                                                                                                            p-values            2.2e-16     2.2e-16         2.2e-16         2.2e-16
+Standard deviations are shown in brackets. Values in bold are statistically
+better according the paired Wilcoxon Signed-rank test.                                                                                                               2) Large Class Imbalance in the Predictions Periods (Ξ):
+                                                                                                                                                                  According to Table V, for some datasets such as Camel,
+RQ2.1: The proposed PBSA achieved top ranked average                                                                                                              Tomcat, Nova and NPM, when comparing PBSA to ORB,
+predictive performance in terms of all metrics but rec(1)                                                                                                         it is possible to notice considerable improvements on the
+compared to the state of the art. Improvements were larger                                                                                                        performance stability considering |rec(0)−rec(1)|. Moreover,
+especially in terms of |rec(0) − rec(1)|, where PBSA’s per-                                                                                                       as presented in Fig. 4, many Ξs present in ORB (e.g., in
+formance was from 2.7% (minimum) to 47.8% (maximum)                                                                                                               Fabric8 (commit time step 4.7k to 6.5k and 6.5k to 10k),
+better, except for Neutron. PBSA outperformed ORB in terms                                                                                                        in Camel (commit time step 3k to 6k and 25.5k to 29k)
+of rec(0) by a maximum of 13% and, in the worst case, was                                                                                                         and in NPM (commit time step 0.4k to 3.4k)) were totally
+outperformed by 0.4% (except for Neutron), demonstrating                                                                                                          or partially eliminated by PBSA. These results further illus-
+that PBSA throws less false alarms than ORB. Improvements                                                                                                         trate the improvements in stability obtained by PBSA, which
+were particularly large during periods affected by concept                                                                                                        had a positive effect on the standard deviations presented
+drifts in p(y|⃗x).                                                                                                                                                in Table VII. For Brackets, PBSA obtained a long Ξ, but
+                                                                                                                                                                  |rec(0) − rec(1)| was considerably decreased in comparison
+                                                                                                                                                                  to ORB. Nevertheless, new Ξs were introduced by PBSA,
+                                                                                                                                                                  however, these new Ξs tended to be less accentuated (i.e.,
+E. Analysis of the Stability of the Predictive Performance
+                                                                                                                                                                  smaller l) than the ones present in ORB.
+   This section will further examine (i) the standard deviation                                                                                                      Figure 9 presents the average and standard deviation of the
+of the predictive performance through time and (ii) periods of                                                                                                    amount of time (in months) comprised in Ξl with l longer
+large class imbalance in the predictions Ξs.                                                                                                                      than month periods in x axis. It illustrates how detrimental
+                                                                                                                                                                                                                          16
+
+
+
+                                      ORB                                           PBSA
+
+  Recall(0)                                                                 Recall(1)
+                            Fabric8                                                                     Fabric8
+                        s                   NP                                                      s                      NP
+                     up                            M                                          up                                M
+              ro                                                                       ro
+           JG                                                                        JG
+     el
+
+
+
+
+                                                                               el
+                                                                   Nov
+
+
+
+
+                                                                                                                                                Nov
+   Cam
+
+
+
+
+                                                                            Cam
+                                                                      a
+
+
+
+
+                                                                                                                                                    a
+                                                                     leaf
+
+
+
+
+                                                                                                                                                     af
+   Tom
+
+
+
+
+                                                                            Tom
+
+
+
+
+                                                                                                                                                 adle
+                                                                      ad
+       c
+
+
+
+
+                                                                                c
+                                                                  Bro
+
+
+
+
+                                                                                                                                                Bro
+     at
+
+
+
+
+                                                                              at
+                                                              n                                                                              n
+           Br                                             tio                       Br                                                    tio
+                ac                                     ra                                ac                                           ra
+                                                   eg                                                                             eg
+                  ke                           Int                                         ke                                  Int
+                       ts                  g-                                                  ts
+                                                                                                                        ing
+                                                                                                                            -
+                                        rin                                                                            r
+                            Neutron   Sp                                                                Neutron   Sp
+
+  Diff.                     Fabric8
+                                                                            Gmean                       Fabric8
+  Recalls
+                       ps                   NP                                                up
+                                                                                                    s                      NP
+                  ou                               M                                   ro                                       M
+            J   Gr                                                                   JG
+     el
+
+
+
+
+                                                                               l
+                                                                   Nov
+
+
+
+
+                                                                                                                                                Nov
+                                                                                e
+   Cam
+
+
+
+
+                                                                            Cam
+                                                                     a
+
+
+
+
+                                                                                                                                                  a
+                                                                      af
+
+
+
+
+                                                                                                                                                   af
+   Tom
+
+
+
+
+                                                                            Tom
+                                                                     adle
+
+
+
+
+                                                                                                                                                 adle
+       c
+
+
+
+
+                                                                               c
+     at
+
+
+
+
+                                                                              at
+                                                                  Bro
+
+
+
+
+                                                                                                                                                Bro
+                                                                n                                                                          on
+           Br                                               tio                     Br                                                 ati
+                                                        ra                                                                           gr
+             ac                                      eg                               ac                                        e
+                  ke
+                      ts                       -Int                                       ke
+                                                                                              ts                           -Int
+                                        r  ing                                                                      r  ing
+                            Neutron   Sp                                                                Neutron   Sp
+
+
+
+Fig. 8: Stability comparison for the average standard deviations                                                                                          Fig. 9: Average number of months comprised in Ξl with l in
+through time of each metrics for ORB and PBSA classifiers.                                                                                                the x axis. Blue area corresponds to the PBSA whereas the
+                                                                                                                                                          red one corresponds to ORB.
+
+increases in |rec(0) − rec(1)| resulting from poor stability
+can be in PBSA and ORB. In addition, the secondary y axis
+shows the percentage of the project duration corresponding to
+                                                                                                                                                          based on statistics collected from the data and information
+the number of months shown in the main y axis. For example,
+                                                                                                                                                          on the models generated from such data. There is a non-
+for Fabric8, ORB spent an average of around 35 months in
+                                                                                                                                                          zero chance that rules such as those in Eq. 1 and 2 became
+Ξl with l larger than 10, which corresponds to almost 50%
+                                                                                                                                                          inadequate as a result of overfitting instead of concept drift.
+of the project duration. The larger the number of months (or
+                                                                                                                                                          Nevertheless, as explained in Section V-B, there is a good
+percentage), the longer the Ξs are. Longer Ξs associated to
+                                                                                                                                                          number of training examples supporting these rules, mitigating
+larger magnitudes l are particularly detrimental.
+                                                                                                                                                          this threat. Another threat is the sensitivity of machine learning
+   According to Fig. 9, the PBSA performed better than ORB                                                                                                methods to their parameters. To mitigate this problem, a grid
+for minimizing Ξs, in 7 out of 10 datasets. ORB overcame                                                                                                  search based on the first 5,000 examples of each dataset was
+PBSA in two datasets (JGroups and Neutron). For the Spring-                                                                                               performed. In addition, preliminary experiments have shown
+integration dataset, both methods performed poorly.                                                                                                       that the proposed method is not too sensitive to the parameters
+                                                                                                                                                          α and β.
+RQ2.2: Given the class imbalance and concept drift challenges
+faced by JIT-SDP, creating a classifier able to keep a stable                                                                                                Construct Validity: The rules presented in Section V-B have
+performance throughout the whole project is, so far, virtually                                                                                            been used as proxies for the posterior probability distribution
+impossible. Nevertheless, based on a realistic analysis, the pro-                                                                                         p(y|⃗x) associated to a portion of the input space. We have
+posed PBSA was able to produce a more stable performance in                                                                                               also used the values of the input features of the software
+comparison to the state of the art (e.g., up to 42%, 34%, 36%                                                                                             changes as a proxy for the distribution p(⃗x). There may be
+and 22% stabler than ORB in terms of the standard deviation                                                                                               inaccuracies resulting from noise. The predictive performance
+of rec(0), rec(1), |rec(0) − rec(1)| and g-mean through time,                                                                                             was assessed by the recalls for each class and their geometric
+respectively). This better stability associated to the top average                                                                                        mean, which are insensitive to class imbalance, and by the
+predictive performance results shown in RQ2.1 render PBSA                                                                                                 difference between the recalls, which enables us to assess
+the most reliable JIT-SDP classifier to date.                                                                                                             how well the methods are dealing with class imbalance. These
+                                                                                                                                                          metrics were computed using fading factors as suggested by
+                                                                                                                                                          Gama et al. [12], enabling us to track changes in predic-
+                                VII. T REATS TO VALIDITY
+                                                                                                                                                          tive performance over time. In addition, the stability of the
+   Internal Validity: as with any real world data stream prob-                                                                                            classifier was measured by the overall standard deviation for
+lem, it is impossible to prove that concept drift really did occur                                                                                        each metric and experiment. External Validity: This work was
+in JIT-SDP, since we have no access to the true underlying                                                                                                conducted on ten open source GitHub projects. As with other
+probability distribution. To mitigate this threat, we have col-                                                                                           machine learning studies, the results may not generalize to
+lected strong evidence of the different types of concept drifts                                                                                           other projects.
+                                                                                                                                                              17
+
+
+
+           VIII. C ONCLUSIONS AND F UTURE W ORK                                  [14] T. Mende and R. Koschke, “Effort-aware defect prediction models,” in
+                                                                                      CSMR, 2010, pp. 107–116.
+   JIT-SDP has shown to be a problem affected by all several                     [15] G. Scanniello, C. Gravino, A. Marcus, and T. Menzies, “Class level fault
+types of concept drift. In the projects analyzed in this study,                       prediction using software clustering,” in ASE, 2013, pp. 640–645.
+gradual drifts in p(x) and p(x|y) usually happened along                         [16] T. Menzies, A. Butcher, D. Cok, A. Marcus, L. Layman, F. Shull,
+                                                                                      B. Turhan, and T. Zimmermann, “Local versus global lessons for defect
+the whole project while drifts in p(y|x) abruptly appeared                            prediction and effort estimation,” IEEE TSE, vol. 39, no. 6, pp. 822–834,
+in occasions where the projects were already mature. These                            2013.
+concept drifts have shown to be very detrimental to the                          [17] S. Wang, L. L. Minku, and X. Yao, “Resampling-based ensemble
+                                                                                      methods for online class imbalance learning,” IEEE TKDE, vol. 27,
+predictive performance, particularly, due to their combination                        no. 5, pp. 1356–1368, 2015.
+with the verification latency problem. These issues suggest                      [18] C. Rosen, B. Grawi, and E. Shihab, “Commit guru: analytics and risk
+the use of online methods able to learn labeled training                              prediction of software commits,” in FSE, 2015, pp. 966–969.
+                                                                                 [19] G. Hulten, L. Spencer, and P. Domingos, “Mining time-changing data
+examples as soon as they become available. Furthermore, the                           streams,” in ACM SIGKDD, 2001, pp. 97–106.
+analysis also suggests that strategies able to employ unlabeled                  [20] “The impact of class imbalance in classification performance metrics
+data to train the classifier may be necessary for improving                           based on the binary confusion matrix,” Pattern Recognition, vol. 91, pp.
+                                                                                      216–231, 2019.
+predictive performance through time. Making these issues                         [21] “Facing imbalanced data recommendations for the use of performance
+explicit contributes to better cope with the development of                           metrics,” in ACII, 2013.
+new JIT-SDP methods.                                                             [22] Q. Song, Y. Guo, and M. Shepperd, “A comprehensive investigation of
+                                                                                      the role of imbalanced learning for software defect prediction,” IEEE
+   Based on these observations, we proposed a new method                              Transactions on Software Engineering, vol. 45, no. 12, pp. 1253–1269,
+called PBSA that makes use of information about the predic-                           2018.
+tions given to unlabeled software changes in order to trigger                    [23] J. Gama, R. Sebastião, and P. P. Rodrigues, “On evaluating stream
+                                                                                      learning algorithms,” Machine Learning, vol. 90, no. 3, pp. 317–346,
+adaptation to suspected concept drifts. This approach was                             2013.
+able to obtain a more stable and high (i.e., reliable) JIT-                      [24] T. Menzies, Y. Yang, G. Mathew, B. Boehm, and J. Hihn, “Negative
+SDP classifier. Improvements in reliability are crucial for the                       results for software effort estimation,” EMSE, vol. 22, no. 5, pp. 2658–
+                                                                                      2683, 2017.
+adoption of JIT-SDP classifiers in practice.                                     [25] A. Vargha and H. D. Delaney, “A critique and improvement of the cl
+   Future work includes the proposal of online methods to                             common language effect size statistics of mcgraw and wong,” JEBS,
+automatically tune parameters of JIT-SDP approaches over                              vol. 25, no. 2, pp. 101–132, 2000.
+                                                                                 [26] N. Mittas and L. Angelis, “Ranking and clustering software cost
+time, experiments with other projects (including proprietary                          estimation models through a multiple comparisons algorithm,” IEEE
+projects) and base learners, and investigation of whether fea-                        TSE, vol. 39, no. 4, pp. 537–551, 2013.
+ture normalisation strategies could help dealing with concept                    [27] M. Harman and P. O’Hearn, “From start-ups to scale-ups: Opportunities
+                                                                                      and open problems for static and dynamic program analysis,” in SCAM,
+drift by addressing feature trends observed over time.                                2018, pp. 1–23.
+                                                                                 [28] “A tool to detect bugs in java and c/c++/objective-c code before it ships,”
+                              R EFERENCES                                             https://fbinfer.com/, accessed: 2020-04-16.
+                                                                                 [29] N. Alshahwan, X. Gao, M. Harman, Y. Jia, K. Mao, A. Mols, T. Tei, and
+ [1] X. Yang, D. Lo, X. Xia, Y. Zhang, and J. Sun, “Deep learning for just-           I. Zorin, “Deploying search based software engineering with sapienz at
+     in-time defect prediction,” in QRS, 2015, pp. 17–26.                             facebook,” 08 2018.
+ [2] X. Chen, Y. Zhao, Q. Wang, and Z. Yuan, “Multi: Multi-objective effort-     [30] D. Bowes, S. Counsell, T. Hall, J. Petric, and T. Shippey, “Getting defect
+     aware just-in-time software defect prediction,” IST, vol. 93, pp. 1 – 13,        prediction into industrial practice: the elff tool,” in ISSREW, 2017, pp.
+     2018.                                                                            44–47.
+ [3] X. Yang, H. Yu, G. Fan, K. Shi, and L. Chen, “Local versus global mod-      [31] C. Lewis, Z. Lin, C. Sadowski, X. Zhu, R. Ou, and E. J. Whitehead,
+     els for just-in-time software defect prediction,” Scientific Programming,        “Does bug prediction support human developers? findings from a
+     vol. 2019, pp. 1–13, 06 2019.                                                    google case study,” in 2013 35th International Conference on Software
+ [4] L. Qiao and Y. Wang, “Effort-aware and just-in-time defect prediction            Engineering (ICSE), 2013, pp. 372–381.
+     with neural network,” PLOS ONE, vol. 14, p. e0211359, 02 2019.
+ [5] Y. Kamei, E. Shihab, B. Adams, A. E. Hassan, A. Mockus, A. Sinha,
+     and N. Ubayashi, “A large-scale empirical study of just-in-time quality     George G. Cabral received his PhD degree from the Federal University of
+     assurance,” IEEE TSE, vol. 39, no. 6, pp. 757–773, 2013.                    Pernambuco (Brazil) in 2014. He conducted his postdoc at the University
+ [6] S. McIntosh and Y. Kamei, “Are fix-inducing changes a moving target?        of Birmingham (UK) in 2019. Currently, he is an adjunct professor at the
+     a longitudinal case study of just-in-time defect prediction,” IEEE TSE),    Department of Computing at the Federal Rural University of Pernambuco
+     vol. 44, no. 5, pp. 412–428, 2018.                                          (Brazil). He serves as reviewer for reputable journals such as Neurocomputing
+ [7] M. Tan, L. Tan, S. Dara, and C. Mayeux, “Online defect prediction for       and Applied Software Computing. He has systematically served as committee
+     imbalanced data,” in ICSE, 2015, pp. 99–108.                                member in prestigious conferences such as ICSE and ASE. His research
+ [8] G. G. Cabral, L. L. Minku, E. Shihab, and S. Mujahid, “Class imbal-         interests include Novelty Detection, One-class Classification, Artificial Neural
+     ance evolution and verification latency in just-in-time software defect     Networks, Data Mining, Class Imbalance, Software Defect Prediction, Con-
+     prediction,” in ICSE, 2019, pp. 666–676.                                    cept Drift, Online Learning, etc.
+ [9] Y. Kamei, T. Fukushima, S. McIntosh, K. Yamashita, N. Ubayashi,
+     and A. E. Hassan, “Studying just-in-time defect prediction using cross-
+     project models,” EMSE, vol. 21, no. 5, pp. 2072–2106, 2015.                 Leandro L. Minku is an Associate Professor at the School of Computer
+[10] S. Tabassum, L. Minku, D. Feng, G. Cabral, and L. Song, “An inves-          Science, University of Birmingham (UK). Prior to that, he was a Lecturer
+     tigation of cross-project learning in online just-in-time software defect   in Computer Science at the University of Leicester (UK), and a Research
+     prediction,” in ICSE, 2020, pp. 1–1.                                        Fellow at the University of Birmingham (UK). He received the PhD degree
+[11] S. Wang, L. L. Minku, and X. Yao, “A systematic study of online class       in Computer Science from the University of Birmingham (UK) in 2010. Dr.
+     imbalance learning with concept drift,” IEEE TNNLS, 2018.                   Minku’s main research interests are machine learning for software engineer-
+[12] J. Gama, I. Zliobaite, A. Bifet, M. Pechenizkiy, and A. Bouchachia, “A      ing, machine learning for non-stationary environments / data stream mining,
+     survey on concept drift adaptation,” ACM Computing Surveys, vol. 46,        class imbalanced learning, ensembles of learning machines and search-based
+     no. 4, 2014.                                                                software engineering. Among other roles, Dr. Minku is Associate Editor-in-
+[13] G. Catolino, D. Di Nucci, and F. Ferrucci, “Cross-project just-in-          Chief for Neurocomputing, Senior Editor for IEEE TNNLS, and Associate
+     time bug prediction for mobile apps: An empirical assessment,” in           Editor for EMSE and JSS.
+     MOBILESoft, 2019, p. 99–110.
+

@@ -1,5 +1,5 @@
 # HANDOFF — read this first
-*Auto-generated 2026-11-24T03:11:07+00:00 by scripts/write_handoff.py*
+*Auto-generated 2026-11-24T03:22:21+00:00 by scripts/write_handoff.py*
 
 ## Where we are
 - **Status:** RUNNING   **Cycle:** 1 / 12   **Phase:** PHASE2_LITERATURE   **Pivots:** 0 / 3
@@ -12,9 +12,9 @@
 - **Hypothesis:** None
 
 ## Running right now
-- Queue (full): {}; running jobs: none
+- Queue (full): {'pending': 192}; running jobs: none
 - Processes: `none`
-- Heartbeat age: 317s
+- Heartbeat age: 33s
 
 ## Compute
 - Cycle 1: 0.00 h / 15 h   Global: 0.00 h / 120 h (CPU-hours; machine has no GPU)

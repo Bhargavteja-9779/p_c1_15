@@ -1,2 +1,8 @@
 timestamp,cycle,variant_id,description,data_split_used,metric,value,outcome,notes
 2026-11-24T03:04:37+00:00,1,-,ledger created,,,,n/a,
+2026-11-24T03:22:41+00:00,1,oracle,exploratory code check,dev: fabric seed 0,gmean,0.751,exploratory,pre-plan sanity run
+2026-11-24T03:22:41+00:00,1,nowait,exploratory code check,dev: fabric seed 0,gmean,0.474,exploratory,pre-plan sanity run
+2026-11-24T03:22:41+00:00,1,wait_W90,exploratory code check,dev: fabric seed 0,gmean,0.636,exploratory,pre-plan sanity run
+2026-11-24T03:22:41+00:00,1,orb_W90 (buggy: factors cancelled),exploratory code check,dev: fabric seed 0,gmean,0.636,exploratory,pre-plan sanity run
+2026-11-24T03:22:41+00:00,1,orb_W90,exploratory code check,dev: fabric seed 0,gmean,0.655,exploratory,pre-plan sanity run
+2026-11-24T03:22:41+00:00,1,law_lagakos_model,exploratory code check,dev: fabric seed 0,gmean,0.67,exploratory,pre-plan sanity run

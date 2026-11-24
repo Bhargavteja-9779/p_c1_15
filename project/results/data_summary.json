@@ -1,0 +1,86 @@
+{
+ "brackets": {
+  "n": 17310,
+  "dropped": 1,
+  "unmatched_copies": 9,
+  "bug_rate": 0.2337
+ },
+ "broadleaf": {
+  "n": 14910,
+  "dropped": 1,
+  "unmatched_copies": 2,
+  "bug_rate": 0.1695
+ },
+ "camel": {
+  "n": 30517,
+  "dropped": 0,
+  "unmatched_copies": 2,
+  "bug_rate": 0.2049
+ },
+ "fabric": {
+  "n": 13003,
+  "dropped": 1,
+  "unmatched_copies": 4,
+  "bug_rate": 0.1991
+ },
+ "jgroups": {
+  "n": 18316,
+  "dropped": 1,
+  "unmatched_copies": 2,
+  "bug_rate": 0.1721
+ },
+ "matplotlib": {
+  "n": 19061,
+  "dropped": 1,
+  "unmatched_copies": 45,
+  "bug_rate": 0.161
+ },
+ "neutron": {
+  "n": 19450,
+  "dropped": 1,
+  "unmatched_copies": 444,
+  "bug_rate": 0.2369
+ },
+ "nova": {
+  "n": 48937,
+  "dropped": 1,
+  "unmatched_copies": 366,
+  "bug_rate": 0.254
+ },
+ "npm": {
+  "n": 7892,
+  "dropped": 1,
+  "unmatched_copies": 7,
+  "bug_rate": 0.1783
+ },
+ "sentry": {
+  "n": 21471,
+  "dropped": 1,
+  "unmatched_copies": 15,
+  "bug_rate": 0.2394
+ },
+ "spring-integration": {
+  "n": 8691,
+  "dropped": 1,
+  "unmatched_copies": 4,
+  "bug_rate": 0.2683
+ },
+ "tomcat": {
+  "n": 18877,
+  "dropped": 0,
+  "unmatched_copies": 0,
+  "bug_rate": 0.2758
+ },
+ "wagtail": {
+  "n": 8103,
+  "dropped": 1,
+  "unmatched_copies": 15,
+  "bug_rate": 0.1225
+ },
+ "zulip": {
+  "n": 18465,
+  "dropped": 1,
+  "unmatched_copies": 76,
+  "bug_rate": 0.2442
+ }
+}

@@ -1,0 +1,1115 @@
+Class Imbalance Evolution and Verification Latency
+    in Just-in-Time Software Defect Prediction
+                        George G. Cabral∗† , Leandro L. Minku∗ , Emad Shihab‡ , Suhaib Mujahid‡
+                                  ∗ School of Computer Science, University of Birmingham, UK
+
+                                            {G.Gomescabral, L.L.Minku}@cs.bham.ac.uk
+                                          † Federal Rural University of Pernambuco, Brazil
+                 ‡ Department of Computer Science and Software Engineering, Concordia University, Canada
+
+                                               {eshihab, s mujahi}@encs.concordia.ca
+
+
+   Abstract—Just-in-Time Software Defect Prediction (JIT-SDP)          defect-inducing software changes as soon as they are imple-
+is an SDP approach that makes defect predictions at the software       mented (i.e., “just-in-time”). As the changes are still fresh in
+change level. Most existing JIT-SDP work assumes that the              the developers’ minds, their inspection is much easier than at
+characteristics of the problem remain the same over time.
+However, JIT-SDP may suffer from class imbalance evolution.            later stages. In addition, software changes typically involve
+Specifically, the imbalance status of the problem (i.e., how           few lines of code (i.e., they have fine code granularity) and
+much underrepresented the defect-inducing changes are) may be          can be straightforwardly assigned to the right developers for
+intensified or reduced over time. If occurring, this could render      inspection, further facilitating their task. These are advantages
+existing JIT-SDP approaches unsuitable, including those that re-       over both (1) code debugging after a defect report is pro-
+build classifiers over time using only recent data. This work thus
+provides the first investigation of whether class imbalance evo-       duced and (2) more conventional SDP, which is concerned
+lution poses a threat to JIT-SDP. This investigation is performed      with predicting defects in software components (e.g., files or
+in a realistic scenario by taking into account verification latency    packages) [5]. Therefore, JIT-SDP has attracted special interest
+– the often overlooked fact that labeled training examples arrive      from industry. For instance, Lucent [1], BlackBerry [6] and
+with a delay. Based on 10 GitHub projects, we show that JIT-SDP        Cisco [7] have adopted this type of approach.
+suffers from class imbalance evolution, significantly hindering
+the predictive performance of existing JIT-SDP approaches.                Most existing work on JIT-SDP assumes that past defect-
+Compared to state-of-the-art class imbalance evolution learning        inducing software changes are always similar to future ones.
+approaches, the predictive performance of JIT-SDP approaches           However, as recently shown by McIntosh and Kamei [8],
+was up to 97.2% lower in terms of g-mean. Hence, it is essential       the characteristics (input feature values) of defect-inducing
+to tackle class imbalance evolution in JIT-SDP. We then propose        software changes fluctuate during the lifecycle of a software.
+a novel class imbalance evolution approach for the specific
+context of JIT-SDP. While maintaining top ranked g-means, this         These fluctuations can negatively impact the predictive per-
+approach managed to produce up to 63.59% more balanced                 formance of classifiers trained on old data, requiring machine
+recalls on the defect-inducing and clean classes than state-of-the-    learning algorithms able to not only take chronology into
+art class imbalance evolution approaches. We thus recommend            account, but also learn and adapt over time. Algorithms that
+it to avoid overemphasizing one class over the other in JIT-SDP.       can learn new training examples separately over time are often
+  Index Terms—Software defect prediction, class imbalance,             referred to as online learning algorithms [9].
+verification latency, online learning, concept drift, ensembles           Besides fluctuations in the characteristics of defect-inducing
+                                                                       software changes, JIT-SDP may also suffer from class imbal-
+                      I. I NTRODUCTION                                 ance evolution. This means that the imbalance status of the
+   Reducing the number of software defects (and their high             problem (i.e., how much underrepresented the defect-inducing
+debugging cost) is a challenging problem, specially consider-          software changes are in the training data) may be intensified or
+ing that software teams have limited testing resources [1], [2],       reduced over time. JIT-SDP is known to be a class imbalanced
+and often face strong pressure towards rapid delivery [1], [3].        problem, where defect-inducing software changes are typically
+Therefore, machine learning approaches have been proposed              a minority compared to clean software changes [5], [7], [2].
+for predicting defects in software source code [4]. Such               However, existing work assumes that the class imbalance
+Software Defect Prediction (SDP) approaches can potentially            status of JIT-SDP is static, i.e., it does not evolve over time. If
+help testing and inspection effort to be more easily and wisely        it actually does evolve over time, existing JIT-SDP approaches
+allocated, focusing more attention on software components              (e.g., [5], [2], [7]) are likely to become unsuitable (perform
+that are likely to contain defects.                                    poorly) over time, because they would be assuming the wrong
+   Just-in-Time (JIT) SDP is a specific type of SDP approach           level of class imbalance. Even the recent approach of re-
+that makes predictions at the software change level. It identifies     building classifiers using only recent data, recommended to
+                                                                       cope with fluctuations in the characteristics of defect-inducing
+  Corresponding author: L. L. Minku.
+  This work was funded by EPSRC Grant No. EP/R006660/1 and supported   software changes [8], would struggle to obtain good predictive
+by CNPq Universal Grant No. 408605/2016-2.                             performance. Despite being able to track the level of class
+imbalance, this would be at the cost of discarding old training         This paper is further organized as follows. Section II
+examples which may be vital for learning the minority class.         presents the research questions and summarises the novel
+Therefore, this is unlikely to be a suitable approach for coping     contributions of this work. Section III presents related work.
+with class imbalance evolution.                                      Section IV introduces the proposed approach. Section V details
+    Given the potential threat posed by class imbalance evolu-       the investigated datasets. Section VI explains the experimental
+tion to the predictive performance of JIT-SDP classifiers, the       setup to investigate the RQs. Section VII presents the analyses
+first aim of this work is to provide the first investigation         to answer the RQs. Section VIII presents threats to validity.
+of whether class imbalance evolution occurs and nega-                Section IX presents conclusions and implications of this work.
+tively impacts predictive performance of existing JIT-SDP
+                                                                      II. R ESEARCH Q UESTIONS AND N OVEL C ONTRIBUTIONS
+approaches. Our study, based on ten GitHub open source
+projects, reveals that class imbalance evolution is indeed an           Overall, this work answers the following research questions:
+issue in JIT-SDP and can have a very detrimental effect             RQ1 To what extent there is verification latency in JIT-SDP?
+on the predictive performance of JIT-SDP approaches from                   What would be reasonable waiting times to use in JIT-
+the literature. Their predictive performance in terms of g-                SDP studies? This RQ informs the proposal and applica-
+mean was up to 97.2% worse than that achieved by machine                   tion of machine learning approaches to JIT-SDP in this
+learning algorithms prepared to tackle class imbalance evolu-              and future studies, by investigating how long it typically
+tion. Therefore, class imbalance evolution must be taken into              takes for software changes to be found as defect-inducing.
+account to improve the applicability of JIT-SDP approaches.         RQ2 Does JIT-SDP suffer from class imbalance evolution?
+    However, our study also reveals that the existing machine              More specifically, do the ratios of defect-inducing and
+learning algorithms for class imbalance evolution [10] suffer              clean software changes evolve over time in JIT-SDP?
+from overemphasising one class (defect-inducing or clean)                  How? This RQ investigates whether the topic of class
+over the other in JIT-SDP. This can be very detrimental in                 imbalance evolution is really relevant in JIT-SDP.
+practice. Overemphasising the clean class means that defect-        RQ3 If class imbalance evolution does occur in JIT-SDP, what
+inducing software changes may be missed. Overemphasising                   is its effect on the predictive performance of (1) existing
+the defect-inducing class means that several changes are                   JIT-SDP approaches and (2) machine learning algorithms
+incorrectly flagged as defect-inducing, suggesting a too high              specifically designed to cope with class imbalance evo-
+number of clean software changes to be closely inspected                   lution, when taking verification latency into account?
+by developers and thus reducing their trust in the approach.               This RQ reveals whether the predictive performance of
+Therefore, the second aim of this paper is to propose a                    existing JIT-SDP approaches is negatively affected by
+novel JIT-SDP approach to address this problem. Our                        class imbalance evolution, and how well state-of-the-
+proposed approach was successful in obtaining top-ranked g-                art machine learning algorithms for coping with class
+means while reducing the difference in recalls between the                 imbalance evolution perform in the context of JIT-SDP.
+defect-inducing and clean classes by up to 63.59%.                  RQ4 How to improve the predictive performance of JIT-SDP,
+    Our investigation is performed in a realistic scenario where           given class imbalance evolution and verification latency?
+not only new software changes are produced over time and                   This RQ proposes a novel JIT-SDP approach to better
+arrive as incoming training examples, but also there is ver-               cope with class imbalance evolution in the presence of
+ification latency. This term refers to the fact that the labels            verification latency.
+associated to training examples arrive with delays [9]. We              Overall, the main novel contributions of this work are that
+cannot know at commit time whether a new software change             this is the first work to:
+induces a defect or not. If we knew that, we would not                  • show that class imbalance evolution occurs in JIT-SDP;
+need to provide a prediction of that, and JIT-SDP would be              • reveal that this negatively affects the predictive perfor-
+unnecessary. Instead, it takes time for defects to be found,               mance of existing JIT-SDP approaches;
+meaning that it takes time to assign the label of “defect-              • investigate if state-of-the-art online class imbalance learn-
+inducing” to a given training example. And it takes time for               ing algorithms from the machine learning literature can
+one to gain confidence that a given change is clean. Therefore,            help tackling this issue in JIT-SDP;
+we need to wait for a given amount of time (waiting time)               • propose a novel online class imbalance learning algorithm
+before assigning the label “clean” to a given training example.            to improve upon the results achieved by these state-of-
+Ignoring verification latency means training JIT-SDP models                the-art algorithms in the context of JIT-SDP; and
+on data not yet available in practice, leading to invalid studies       • investigate to what extent verification latency occurs in
+and over-optimistic estimations of predictive performance [7].             JIT-SDP, enabling researchers and practitioners to make
+And yet, this issue is often overlooked by JIT-SDP studies,                more informed choices when applying machine learning
+as alerted by Tan et al. [7]. Our study provides the first                 to JIT-SDP.
+investigation of the extent to which verification latency occurs
+in JIT-SDP. We found that verification latency caused delays                              III. R ELATED W ORK
+from 1 to 11.5 years (4210 days) in receiving the true label            We discuss four areas of SDP research that are most closely
+of defect-inducing software changes.                                 related to our paper, and contrast the prior work with ours. We
+also discuss the machine learning literature on online class         C. Concept Drift in SDP
+imbalance learning for tackling class imbalance evolution and           Concept drift is a change in the data generation process,
+verification latency.                                                affecting the underlying probabilities of the data [15]. They
+                                                                     can be changes in (1) the relationship between input features
+A. JIT-SDP
+                                                                     describing an example and the label being predicted (p(x|y)),
+   One of the first studies on JIT-SDP was conducted by Kim          and/or (2) the ratio of examples of each of the classes being
+et al. [11]. They used software change features like the terms       predicted (p(y)). In JIT-SDP, these correspond to changes
+in added and deleted deltas, terms in directory/file names,          in the defect generating process, and can occur due to the
+complexity metrics, etc., to classify changes as being defect-       evolution or maturing process of a software project. For
+inducing or not.                                                     example, the development team may be initially focused in the
+   Several other studies investigated the characteristics of         GUI and then turn its effort to implement the business logic,
+defect-inducing software changes and potential metrics (input        leading to a concept drift affecting p(x|y). Or, refactoring
+features) for predicting them, including the day of the week         could potentially affect the rate of defect-inducing software
+[12] or the time of the day [13] the change was committed,           changes, leading to concept drifts affecting p(y). Class imbal-
+and metrics for identifying changes that require a lot of effort     ance evolution corresponds to concept drifts affecting p(y) in
+to fix [14]. Shihab et al. [6] studied risky (defect-inducing)       class imbalanced problems.
+changes – as deemed by the developers who committed them.               Very few studies investigated concept drift in SDP.
+They found that lines of code added, bugginess of the touched        Ekanayake et al. [16] studied four open source projects and
+files (i.e., the ratio of bug fixing to total changes that touched   showed that SDP classifiers’ performance significantly varies
+a file), the number of bug reports linked to a commit and the        over time, suggesting that SDP suffers from concept drift.
+developer experience are the top indicators of risky changes.        This study did not investigate JIT-SDP. Recently, McIntosh
+   One of the largest JIT-SDP studies was conducted by Kamei         and Kamei [8] examined the impact of concept drift affecting
+et al. [5]. They used a variety of factors extracted from            p(x|y) in the specific context of JIT-SDP. They considered
+commits and bug reports, which were found as good indicators         three open source projects and found that (i) JIT-SDP classi-
+of defect-inducing software changes. They showed that the            fiers lose a significant amount of performance after one year
+metrics used in their study yield high predictive performance        and (ii) the important indicators of defect-inducing changes
+for both open source and commercial projects. Therefore, we          also vary over time. To tackle such concept drifts, they suggest
+use the same metrics in this work, as provided by the tool           re-building JIT-SDP classifiers on sliding windows containing
+Commit Guru (http://commit.guru). The dimensions used to             only recent software changes. To the best of our knowledge,
+create these metrics are further explained in Section V.             this is the first work to examine concept drift in JIT-SDP.
+   None of the papers above considered class imbalance evo-             However, McIntosh and Kamei [8] did not investigate class
+lution or verification latency.                                      imbalance evolution, which requires different strategies to
+                                                                     avoid reduction in predictive performance [15]. Their sug-
+B. Verification Latency in JIT-SDP
+                                                                     gested sliding windows strategies can be even detrimental
+   As explained in Section I, verification latency refers to the     to predictive performance in such scenario. This is because
+fact that the labels of training examples may arrive much later      despite being able to track the level of class imbalance,
+than their input features. Ignoring such delay means training        this is at the cost of discarding potentially vital information
+JIT-SDP models on data not year available in practice, which is      for learning the minority class. Therefore, sliding windows
+a serious threat to validity. Tan et al. [7] found that ignoring     are unlikely to be suitable for coping with class imbalance
+verification latency leads to over-optimistic estimates of the       evolution. In addition, their work did not take verification
+predictive performance. They proposed an approach that takes         latency into account, implicitly assuming that the labels of
+verification latency into account. It stores new batches of          training examples are available immediately after commit time.
+training examples over time, and uses all batches received              Tan et al. [7] investigated JIT-SDP in an updatable learning
+so far for building a JIT-SDP classifier. Training examples          scenario, where additional training examples can be received
+are available to compose new batches only after a pre-defined        over time. However, their updatable classifiers assume that all
+waiting time has passed. This waiting time should reflect the        training examples come from the same underlying probability
+time it takes for one to be confident enough that software           distribution, i.e., they assume that there is no concept drift.
+changes are not defect-inducing. However, their study does not       As explained by Ditzler et al. [9], learning in the presence of
+analyse how long it typically takes for defects to be found,         concept drift requires “approaches that can monitor and track
+and their proposed approach assumes that there is no class           the underlying changes, and adapt a model to accommodate
+imbalance evolution. Different from their work, our study            those changes accordingly.” The approaches investigated by
+(1) investigates class imbalance evolution and its impact on         Tan et al. [7] do not meet these requirements.
+the predictive performance of JIT-SDP classifiers over time,
+(2) proposes approaches to better deal with class imbalance          D. Class Imbalance Learning for SDP
+evolution, and (3) investigates how long it typically takes for         SDP is well-known to be a class imbalanced problem. Many
+software changes to be revealed as defect-inducing.                  studies consider this issue, independent of it being their central
+theme or not. Mahmood et al. [17] showed that the predictive       of class c and 0 otherwise; and θ0 , 0  θ0 ≤ 1, is a pre-
+performance of SDP classifiers (in terms of Mathews Correla-       defined parameter to tune the emphasis on the more recent
+                                                                                                                              (t)
+tion Coefficient) gets worse as the data get more imbalanced.      data. Smaller θ0 emphasizes the present, enabling ρc to
+Wang and Yao [18] provided a comprehensive study of dif-           reflect changes in the imbalance ratio more quickly, but being
+ferent class imbalance learning techniques in the context of       potentially more affected by noise. Tracking changes in the
+SDP, including resampling, threshold moving, and ensembles.        imbalance ratio means tracking (but not yet coping with) class
+Their study, based on performance measures such as balance,        imbalance evolution.
+                                                                                                                             (t)
+g-mean, and Area Under the ROC Curve (AUC), concluded                 To cope with class imbalance evolution, the rates ρc are
+that an ensemble approach called AdaBoost.NC yielded the           used to dynamically decide the resampling rate λ used by
+best overall predictive performance. They also proposed a          UOB and OOB to decide the number of times k that a given
+version of Adaboost.NC that is able to automatically tune its      training example is to be presented to a given classifier. The
+training parameters. Kamei et. al. [19] investigated the use       number k is drawn from a P oisson(λ) distribution. In UOB,
+                                                                                                                 (t)    (t)
+of four resampling methods for fault prone module detection        examples of the majority class use λ = pmin /pmax , where
+and showed that, when associated to linear discriminant anal-      min is the minority and max is the majority class. This re-
+ysis and logistic regression analysis, there is a performance      sults in frequently sampling them zero times (undersampling).
+improvement irrespective of the resampling method. Bennin          Training examples of the minority class use λ = 1. In OOB,
+et.al. [20] introduced a synthetic oversampling approach based     examples of the minority class have a resampling rate of
+on the chromosomal theory of inheritance that, according to                (t)   (t)
+                                                                   λ = pmax /pmin . This results in k being frequently greater
+their experiments, overcame four other resampling techniques.      than 1 (oversampling). Training examples of the majority
+These studies did not investigate JIT-SDP.                         class use λ = 1. Both UOB and OOB maintain an Online
+   In JIT-SDP, resampling is typically used to tackle class        Bagging ensemble [21] composed of n Hoeffding trees [22]
+imbalance [5], [2], [7]. For instance, Kamei et al. [5], [2]       as base classifiers. The pseudocode for OOB is in Algorithm
+applied an undersampling technique that randomly eliminates        1, removing the statements in blue.
+clean class examples to balance the number of training ex-            UOB and OOB are the state-of-the-art for dealing with
+amples from both classes. Tan et al. [7] investigated the          class imbalance evolution [15], making them good candidates
+effect of different resampling techniques on JIT-SDP while         to tackle that in JIT-SDP. Based on UOB and OOB, this
+taking the chronology of the data and verification latency         paper provides the first investigation of online class imbalance
+into account, including oversampling techniques that replicate     evolution learning approaches in the context of JIT-SDP.
+minority class examples. They concluded that resampling in
+general helps to improve predictive performance in terms           F. Machine Learning to Tackle Verification Latency
+of F1-measure. However, their approach adopts a fixed re-             Some work on learning data streams can be argued to take
+sampling rate, assuming that the imbalance ratio is fixed          verification latency into account. However, they are designed
+throughout time, i.e., assuming that there is no class imbalance   for very specific learning scenarios. For example, Zhang et
+evolution. Specifically, their parameter tuning procedure fixed    al. [23] assume that some training examples become available
+the resampling rate to be used for a whole dataset to a single     in a timely manner, whereas others never have their labels
+value, rather than enabling the resampling rate to dynamically     revealed. Dyer et al. [24] assume that labeled training exam-
+adapt to the current imbalance level of the data.                  ples are available only during an initial learning stage. After
+   None of the studies on class imbalance learning for SDP         that, no further labeled training examples are provided. These
+(including JIT-SDP) investigated the impact of class imbalance     studies proposed to use semi-supervised learning to cope with
+evolution, or techniques to handle class imbalance evolution.      that. Pozzolo et al. [25] is a very recent work in the context
+This paper is the first to provide such investigation.             of credit card fraud detection. It assumes that the system has
+                                                                   prior knowledge of which training examples will have their
+E. Machine Learning To Tackle Class Imbalance Evolution
+                                                                   labels arriving early and which examples are likely to have
+   Class imbalance evolution started to be investigated only       delayed labels. They propose to learn different classifiers with
+very recently by the machine learning community [15]. Wang         these two different types of training examples.
+et al. [10] proposed two online class imbalance learning              None of the learning scenarios above matches the case of
+approaches for coping with class imbalance evolution: Im-          JIT-SDP, where any example could receive its true label early
+proved Undersampling Online Bagging (UOB) and Improved             (if a defect associated to it is quickly found), at the end of the
+Oversampling Online Bagging (OOB). These approaches track          waiting time (if the example is believed to be clean) or after
+                                             (t)
+the current imbalance ratio, i.e., the rate ρc of examples         the waiting time (if an example previously considered clean is
+belonging to each class c ∈ {0, 1} as follows:                     found to actually be defect-inducing after the waiting time).
+                   0 (t−1)
+             ρ(t)
+              c = θ ρc     + (1 − θ0 )(y (t) == c) ,         (1)                     IV. P ROPOSED A PPROACH
+where t is the current time step; each time step corresponds to       Even though UOB and OOB are the state-of-the-art ap-
+the presentation of a new training example to the algorithm;       proaches to cope with class imbalance evolution, they have
+(y (t) == c) returns 1 if the training example at time t is        three potential problems in the context of JIT-SDP: (1) They
+do not consider verification latency. (2) They assume that           Algorithm 1: ORB’s training procedure. Statements in
+adjusting the resampling rate so that the class proportions          black correspond to statements used by OOB’s training.
+in the training data get closer to (1:1) is enough to obtain a         Input: Ensemble size n, incoming training examples d, parameters
+balanced predictive performance on different classes. If one of                of the adjustment function (th, l0 , l1 , m), noise mechanism
+                                                                               parameter o, decay factor θ0 , window size ws
+the classes is more difficult to learn, balancing their numbers      1 for each training example d
+                                                                                                     (t) = (x(t) , y (t) ), t ← 0 to ∞ do
+of training examples may still lead to unbalanced predictive         2      Obtain the ensemble prediction ŷ (t) for x(t)
+performances, where the recall on one class is still much worse      3      Compute the average ma(t) over the predictions on the most
+than the recall on the other. As explained in Section I, un-                  recent ws examples, including d(t)
+                                                                                                       (t)       (t)
+balanced predictive performances are undesirable in JIT-SDP.         4      Update the proportions ρ0 and ρ1 of each class using Eq. 1
+                                                                     5      for i ← 0 to n do
+(3) SDP frequently has noisy or outlier training examples,           6           λ=1
+containing exactly the same input feature values but different       7
+                                                                                                      (t)    (t)
+                                                                                 if y (t) == 1 and ρ1 < ρ0 then
+labels [26]. The effect of noisy or outlier training examples of     8
+                                                                                            (t)
+                                                                                       λ = ρ0 /ρ1
+                                                                                                 (t)
+                                                                                                      (t)    (t)
+the defect-inducing class could be magnified when adopting           9           if y (t) == 0 and ρ0 < ρ1 then
+                                                                                            (t)  (t)
+oversampling, potentially leading to false alarms.                  10                 λ = ρ1 /ρ0
+   Section IV-A explains how to take verification latency into      11           Set k ∼ P oisson(λ)
+                                                                    12           Calculate OBF (t) (ma(t) , th, l0 , l1 , m) using Eq. 2 or
+account, overcoming problem (1). Section IV-B proposes a                           Eq. 3
+novel approach to overcome problems (2) and (3) in the              13           k = k · OBF (t)
+presence of verification latency.                                   14           Run noise safety mechanism with parameter o
+                                                                                 /* Depending on the noise safety
+A. A Framework for Verification Latency Classification                                 mechanism outcome, update the ith
+                                                                                       Hoeffding tree with k copies of dt */
+   In practice, it is not possible to know, at commit time,         15           Update(HTi , k, dt )
+                                                                            end
+whether a new software change induces a defect or not. So,             end
+we consider that each change is labeled as defect-inducing
+or clean only ω (waiting time) days after the commit time,
+or as soon as it is found to be defect-inducing, whichever is
+shorter. The waiting time ω is a parameter to be set by software    predictions enables us to detect any classification bias towards
+managers. For instance, if it typically takes less than 90 days     each of the classes. According to the severity of this bias, the
+for a change to be found as defect-inducing, an appropriate         resampling rate of one of the classes will be boosted.
+value for ω would be 90 days. The reason is that, if no defect         After calculating the moving average of the predictions,
+associated to a change has been found in 90 days from its           OOB’s procedures are used to update the proportions of each
+                                                                           (t)      (t)
+commit, one can gain confidence that this change is clean.          class ρ0 and ρ1 and determine the resampling rate λ (lines 4
+Once a change is labeled, it is immediately used to create a        to 10). The resampling rate is used to determine the number of
+training example for learning. If a change that has already been    times k that the training example will be sampled for a given
+labeled as clean is found to be defect-inducing after the waiting   Hoeffding tree to learn (line 15). In OOB, k is directly taken
+time, the training example corresponding to that change will        from a P oisson(λ) distribution (line 11). However, in ORB,
+be updated with the label defect-inducing and presented again       the value taken from P oisson(λ) is multiplied by a boosting
+for learning. This framework can be applied to any classifier.      factor OBF (t) (lines 12 to 13) before being used to resample
+                                                                    the training example (line 15). This factor boosts (increases)
+B. Oversampling Rate Boosting (ORB)                                 the number of times that the training example is sampled.
+   This section proposes a novel approach (ORB) to overcome            The equations used to calculate the boosting factors for
+problems (2) and (3) discussed in the beginning of Section IV.      training examples of the clean and defect-inducing classes are
+To cope with (2), ORB builds upon OOB by monitoring the             shown below, respectively:
+model predictions to support the adjustment of the resampling                             (t)
+                                                                                                        
+rate. If the predictions are considerably biased towards a                              mma −m  th
+                                                                                                    ∗ l0 + 1, if ma(t) > th
+                                                                           (t)             m−mth
+given class c, the resampling rate of the opposite class c0          OBF0 (P0 ) =                                                              (2)
+                                                                                       
+should be boosted (increased). To cope with (3), a safety                                1, otherwise
+mechanism is adopted to prevent using potentially noisy (or
+                                                                                                 (t) )
+                                                                                                                 
+                                                                                        m(th−ma         −1
+                                                                                                            ∗ l1   + 1, if ma(t) ≤ th
+outlier) examples of the defect-inducing class for training.                (t)                mth −1
+                                                                      OBF1 (P1 ) =
+Algorithm 1 depicts the proposed approach. ORB is run within                           
+                                                                                           1, otherwise
+the framework explained in Section IV-A.                                                                                                       (3)
+   When a new training example d(t) = (x(t) , y (t) ) is received   where P0 and P1 are the set of parameters for each func-
+at time step t (line 1), the moving average of the predictions      tion, containing the following parameters: m – determines
+(ma(t) ) is calculated over a time window of size ws (lines 2       the growth of the exponential function; th – stands for the
+and 3). The current problem is a binary problem where ŷ ∈          threshold that indicates which class must be boosted; mat –
+{0,1}, with 0 representing the clean and 1 representing the         the predictions moving average at time t; and l0 and l1 –
+defect-inducing class. Therefore, the moving average of the         control the maximum boosting factor values (i.e., the boosting
+                                                                                                          lead to 14 metrics used as input features to describe software
+                 13                  c=1
+
+                 11
+                                     c=0                                                                  changes in this study. Further details on the specific metrics
+        ORB(t)
+           c
+                  9                                                                                       are omitted from this paper due to space constraints, and can
+                  7
+                  5
+                                                                                                          be found in Kamei et al. [5]’s work.
+                  3
+                  1
+                  0
+                      0       0.1   0.2     0.3      0.4      0.5     0.6   0.7      0.8   0.9    1
+                                                                                                                           VI. E XPERIMENTAL S ETUP
+                                                              ma t
+
+Fig. 1. Boosting factor functions with th = 0.4, l0 = 10, l1 = 12, m = 1.5.                                     a) Setup for RQ1: An analysis of the time it takes for
+                                              TABLE I                                                     changes to be revealed as defect-inducing (defect discovery
+                               S TATISTICS OF THE STUDIED PROJECTS                                        delay) will be provided based on statistics such as median,
+                          Dataset         #commits         %defect-         Period           Language     percentiles, minimum and maximum values. It will support
+                                                           inducing
+                 Fabric8                   13,004            20%       12/2011 - 12/2017        Java      the choice of waiting time (ω) explained in Section IV-A.
+                 JGroups                   18,317            17%       09/2003 - 12/2017        Java
+                  Camel                    30,517            20%       03/2007 - 12/2017        Java            b) Setup for RQ2: The proportion of examples from each
+                 Tomcat                    18,877            28%       03/2006 - 12/2017        Java
+                Brackets                   17,311            23%       12/2011 - 12/2017     JavaScript   class over time will be analysed using Eq. 1 with θ0 = 0.99.
+                 Neutron                   19,451            24%       12/2010 - 12/2017       Python
+            Spring-integration             8,692             27%       11/2007 - 01/2018        Java      This value was chosen for providing a good trade-off between
+                Broadleaf
+                  Nova
+                                           14,911
+                                           48,938
+                                                             17%
+                                                             25%
+                                                                       11/2008 - 12/2017
+                                                                       08/2010 - 01/2018
+                                                                                                Java
+                                                                                               Python
+                                                                                                          tracking changes and not being too affected by noise, based on
+                  NPM                      7,893             18%       09/2009 - 11/2017     JavaScript   preliminary experiments. The investigation takes into account
+factors varies from 1 to 1 + l0 and 1 + l1 ). The parameters th                                           verification latency as explained in Section IV-A, using the
+and mat must be scaled between 0 and 1.                                                                   waiting time of ω = 90 days informed by RQ1. Possible causes
+   The functions used to compute the boosting factors are                                                 for variations in the proportions of the classes are discussed.
+illustrated in Fig. 1. The condition ma(t) ≤ th implies that, at                                                c) Setup for RQ3: This RQ will be answered by compar-
+time t, less than th% of the commits are being classified as                                              ing five approaches, taking verification latency into account as
+defect-inducing, so, the resampling rate of the defect-inducing                                           explained in Section IV-A. The approaches are OOB, UOB,
+class must be boosted. On the other hand, if ma(t) > th,                                                  OOB(FixedIR), OOB(FixedIR)* and OOB-SW. OOB and
+more than th% of the commits are being classified as defect-                                              UOB [10] are two state-of-the-art online class imbalance learn-
+inducing. In this case, the resampling rate of the clean class                                            ing approaches explained in Section III-E. OOB(FixedIR) uses
+is boosted. As the moving average approaches the limits (0                                                a modified version of OOB that assumes that the imbalance
+or 1), the function growth gets steeper. The steepness level                                              ratio (and thus the resampling rate) of the problem is fixed over
+is controlled by the parameter m. The parameter th, should                                                time. It thus corresponds to the resampling strategy typically
+be chosen to represent a reasonable imbalance rate in the                                                 used in the JIT-SDP literature [5], [2]. OOB(FixedIR)* is
+classifier’s predictions. Future work could investigate methods                                           similar to OOB(FixedIR), but training examples of the defect-
+to automatically tune th.                                                                                 inducing class are only used for training at the end of the
+   ORB also contains a safety mechanism (line 14) to cope                                                 waiting time. This is the case even if their software changes are
+with noise on defect-inducing training examples. If such                                                  found to be defect-inducing earlier, as done in Tan et al. [7]’s
+examples have exactly the same input features x(t) as more                                                JIT-SDP work. Finally, OOB-SW trains an OOB ensemble on
+than o previous clean training examples, the algorithm skips to                                           a sliding window – the strategy recommended by McIntosh
+the next iteration of the outer loop without learning the current                                         and Kamei [8]. The oversampling rate is set to n0 /n1 , where
+defect-inducing training example d(t) .                                                                   n0 is the number of clean and n1 is the number of defect-
+                                                                                                          inducing changes within the window.
+                                              V. DATASETS                                                    The evaluation metrics used for the comparison are the
+   Our study uses the ten GitHub open source projects shown                                               recalls on the√clean (R0 ) and defect-inducing (R1 ) classes, and
+in Table I. These projects were randomly chosen among                                                     the g-mean ( Rec0 × Rec1 ). These are the most commonly
+projects with more than 5 years of duration, rich history (>10k                                           used metrics in the online class imbalance literature [15].
+commits) and good defect-inducing changes ratio (∼20%                                                     Different from precision and F-measure, they are robust to
+overall). Their size ranges from 74k to over 1.3m lines of code                                           the class imbalance problem [28]. The absolute differences
+(LOC), with development periods from 6 to over 14 years.                                                  between R0 and R1 was also adopted, as large gaps between
+To obtain defect-inducing software changes, we use Commit                                                 the recalls of different classes are undesirable in JIT-SDP,
+Guru [27], a tool that analyzes and provides change level                                                 as explained in Section I. All metrics are computed in a
+analytics. Commit Guru applies the SZZ algorithm [12]                                                     prequential way, as recommended for online learning studies
+to identify defect-inducing changes and their associated bug                                              in the presence of concept drift [29]. The decay parameter θ
+fixing commits. It provides a number of commit-level metrics                                              used in the calculation of the metrics enables them to track the
+related to five dimensions: (1) the size of the change, (2) the                                           impact of concept drift on predictive performance. Similar to
+history of the files changed, (3) the diffusion of the change,                                            the parameter θ0 used for RQ1, θ = 0.99 was used. It is worth
+(4) the experience of the developers making the modification,                                             noting that, given the online concept drifting nature of the
+and (5) the purpose of the change. These dimensions have                                                  problem, AUC (an extensively used metric for offline binary
+shown to perform well in JIT-SDP research [5], [2], [8], and                                              problems) is not applicable.
+   A grid search based on the first 5,000 changes of each                                         5000                     3821             3346           4210                                                3542               2906
+                                                                                                                                                                           2078               2079                                                    2355          2379
+dataset, using g-mean as evaluation criterion, was conducted
+
+
+
+
+                                                                                                                                                                                                                                                                                  180 days
+                                                                     Bug discovery delay (days)
+                                                                                                  1000   1110                                                                                                  1030
+                                                                                                                                                           871
+                                                                                                   500                     592
+to choose the best parameters for each approach. Values in                                                                                  266
+                                                                                                                                                           201
+                                                                                                                                                                                              272
+                                                                                                                                                                                                               416.5
+                                                                                                                                                                                                                                  285.5               268
+                                                                                                                                                                                                                                                                    363.5
+                                                                                                         153.5                                                             139.5
+bold face correspond to the chosen values for the experiments.                                    100
+                                                                                                   50
+                                                                                                                           117                                                                103
+                                                                                                                                                                                                                75
+                                                                                                                                                                                                                                   43
+                                                                                                                                                                                                                                                      97            113
+
+                                                                                                          40
+
+
+
+
+                                                                                                                                                                                                                                                                                  90 days
+                                                                                                                                             29                                               30
+Some parameters are shared among the classifiers: (n) ensem-                                                                                                11
+                                                                                                                                                                            15
+                                                                                                                                                                                                                                                      20             22
+                                                                                                   10                       10
+ble size = {10,20,30,40}; (θ0 ) decay factor = {0.9,0.99,0.999};                                    5     5                                                                                                                        5
+                                                                                                                                             2                              2
+and (ω) waiting period = {90,180}. For OOB(FixedIR), the                                            1     1                 1                1              1               1                  1                1                  1                   1             1
+
+imbalance ratio was fixed at time step 500. For the OOB-SW,
+
+
+
+
+                                                                                                                                                                                                                    integration
+                                                                                                                                  JGroups
+
+
+                                                                                                                                                   Camel
+
+
+
+
+                                                                                                                                                                                                     Neutron
+
+
+
+
+                                                                                                                                                                                                                                          Broadleaf
+
+
+
+
+                                                                                                                                                                                                                                                                            NPM
+                                                                                                                                                                                   Brackets
+                                                                                                                 Fabric8
+
+
+
+
+                                                                                                                                                                                                                                                             Nova
+                                                                                                                                                                  Tomcat
+
+
+
+
+                                                                                                                                                                                                                      Spring-
+sliding windows of size 90 and 180 days were tested.
+      d) Setup for RQ4: ORB was compared against the                                                                                                                                     Dataset
+
+approaches from RQ3 that obtained the best g-mean and              Fig. 2. Defect discovery delay (in days) for each software project, using a
+|R0 − R1 |. ORB has the same parameters of OOB plus (i)            logarithmic y-axis.
+the parameters for exponential functions (Eqs. 2 and 3) and
+(ii) noise detection mechanism (n). The values tested for these    to 4210 days (i.e., approximately 11.5 years). The medians
+parameters were: moving average window size = {50, 100,            delays varyied from 15 to 416.5 days, and were less than or
+200}; th = {0.3, 0.4, 0.5}; l0 = {5, 10, 15}; l1 = {6, 12, 18};    close to 90 days (lower red dashed line) in 8 out of 10 projects
+m = {1.5, 2.0, e}; and n = {3, 5, 7}. These values were cho-       (Fabric8, Jgroups, Camel, Brackets, Neutron, Broadleaf, Nova
+sen based on preliminary experiments. A sensitivity analysis       and NPM). Therefore, using a waiting time of 90 days implies
+showed that ORB is not very sensitive to parameters choice,        that more than, or approximately, half of the defect-inducing
+and is available at http://doi.org/10.5281/zenodo.2555695.         changes would produce correctly-labeled examples for training
+   For both RQ3 and RQ4, 30 executions of each approach            before the end of the waiting time.
+were performed. The comparisons among the approaches                  Increasing the waiting time yields a higher number of
+were supported by the Scott-Knott multiple comparison proce-       correctly labeled defect-inducing changes to be used at training
+dure to separate the approaches into non-overlapping groups,       time. However, as the waiting time increases, the chances
+regarding their overall predictive. This test was conducted        of a concept drift in p(x|y) occurring before the example is
+considering the total number of experiments (i.e., 10 datasets     available for training also increases. This means that the train-
+times 30 executions for each classifier). Scott-Knott was          ing examples are potentially obsolete and misleading when
+recommended by Mittas and Angelis [30] because it can (1)          they arrive for training [8]. In fact, McIntosh and Kamei’s [8]
+separate different approaches into non-overlapping groups and      recommended using changes produced within the past 90 days,
+(2) reduce the number of statistical tests performed, being a      as older changes can be detrimental to predictive performance
+powerful test. As suggested by Menzies et al. [31], Scott-Knott    due to concept drift in p(x|y). Therefore, a waiting period
+was run with non-parametric bootstrap sampling, making the         of 90 days can be argued to offer a good trade-off between
+test non-parametric. In addition, Vargha and Delaney’s non-        mislabeled training examples and concept drift in p(x|y).
+parametric A12 effect size [32] was used to ensure that groups      RQ1: Verification latency is intrinsic to JIT-SDP. Defect
+can only be split if medium or large effect sizes exist between     discovery delays ranged from 1 day to over 11 years, and
+them. Specifically, Scott-Knott only performed statistical tests    medians were typically close to, or lower than, 90 days. A
+to check whether groups should be separated if the A12 effect       waiting time of 90 days can be considered to provide a good
+size was medium or large. If A12 effect size was not medium         trade-off between correct labeling and concept drift in p(x|y).
+or large, groups were not separated. As suggested by Vargha
+and Delaney [32], A12 ≥ 0.56, ≥ 0.64 and ≥ 0.71 are                B. RQ2: Analysis of Class Imbalance Evolution
+considered small, medium and large, respectively. The use             Fig. 3 shows the evolution of the ratio of defect-inducing
+of effect size with Scott-Knott has also been recommended          and clean software changes over time for each dataset. It
+by Tantithamthavorn et al. [33], [34], even though they used       represents the imbalance status as perceived by machine
+Cohen’s parametric effect size. The code provided by Tim           learning algorithms, taking verification latency into account as
+Menzies (at https://github.com/txt/ase16/blob/master/doc/stats.    explained in Section IV-A. If a training example is considered
+md) was used to run the Scott-Knott procedure.                     as clean at the end of the waiting time and later on it is found to
+   All approaches use Hoeffding trees [22] as base learners, as    be defect-inducing, it will first be used to update the proportion
+explained in Sections III-E and IV. A replication package is       of each class as a clean example, and then later on it will be
+available at http://doi.org/10.5281/zenodo.2555695.                used again as a defect-inducing example.
+                                                                      For Fabric8, Jgroups, Camel, Spring-Integration, Nova and
+               VII. E XPERIMENTAL R ESULTS
+                                                                   NPM, there are several periods where the the ratio of defect-
+A. RQ1: Analysis of Verification Latency                           inducing software changes increases before reducing again.
+   We refer to the time taken for bug reports to be created        In Camel, for example, around time steps 11k, 15k, 18k and
+and their corresponding defects fixed, making defect-inducing      26k, this ratio increases from around 15-20% to more than
+training examples available, as defect discovery delay. Fig. 2     50%. The increases observed at time steps 5k and 13k in
+depicts the defect discovery delay. The delays ranged from 1       Fabric8 coincide with major refactorings around timeframes
+                                                 Fabric8                                                                       JGroups
+                                                                                                                                                                perceived rate of defect-inducing changes to be higher in the
+                 0.8
+
+
+
+
+                                                                                                     0.8
+                                                                                                                                                                beginning. Independent of the reason, this decreasing trend
+   class ratio
+
+
+
+
+                                                                                       class ratio
+                                                                                                                                                                shows that class imbalance evolution occurs continuously over
+                 0.4
+
+
+
+
+                                                                                                     0.4
+                                                                                                                                                                time in some projects. Classifiers unable to continuously adapt
+                 0.0
+
+
+
+
+                                                                                                     0.0
+                       0.0    2.0        4.0      6.0    8.0    10.0     12.0                              0.0   3.0     6.0    9.0   12.0 15.0        18.0
+                                               time step 10(−3)                                                             time step 10(−3)
+                                                                                                                                                                to that are likely to become unsuitable [15].
+                                                  Camel                                                                        Tomcat
+                                                                                                                                                                RQ2: In short, JIT-SDP does present class imbalance evo-
+                 0.8
+
+
+
+
+                                                                                                     0.8
+   class ratio
+
+
+
+
+                                                                                       class ratio
+                                                                                                                                                                lution, including (1) steep peaks increasing the ratio of
+                 0.4
+
+
+
+
+                                                                                                     0.4
+                                                                                                                                                                defect-inducing software changes, which cause the problem
+                 0.0
+
+
+
+
+                                                                                                     0.0
+                       0.0     5.0       10.0 15.0 20.0
+                                            time step 10(−3)
+                                                                  25.0      30.0                           0.0    4.0         8.0     12.0
+                                                                                                                             time step 10(−3)
+                                                                                                                                              16.0      20.0    to become more balanced; (2) sudden decreases in such
+                                                Brackets                                                                       Neutron                          ratio, leading to very severe levels of class imbalance (defect-
+                                                                                                                                                                inducing ratio of 0.001%); and (3) decreasing trends in such
+                 0.8
+
+
+
+
+                                                                                                     0.8
+   class ratio
+
+
+
+
+                                                                                       class ratio
+                                                                                                                                                                ratio, causing the problem to become even 4+ times more
+                 0.4
+
+
+
+
+                                                                                                     0.4
+                                                                                                                                                                imbalanced over prolonged periods of time.
+                 0.0
+
+
+
+
+                                                                                                     0.0
+
+
+                       0.0     3.0        6.0     9.0   12.0       15.0         18.0                       0.0    4.0         8.0     12.0      16.0     20.0
+                                            time step 10(−3)                                                                 time step 10(−3)
+
+                                     Spring−Integration                                                                       Broadleaf
+                                                                                                                                                                C. RQ3: The Impact of Class Imbalance Evolution on Predic-
+                                                                                                                                                                tive Performance of Existing Approaches
+                 0.8
+
+
+
+
+                                                                                                     0.8
+   class ratio
+
+
+
+
+                                                                                       class ratio
+
+
+
+
+                                                                                                                                                                   Table II presents the overall predictive performances
+                 0.4
+
+
+
+
+                                                                                                     0.4
+
+
+
+
+                                                                                                                                                                across time steps obtained by OOB, UOB, OOB(FixedIR),
+                 0.0
+
+
+
+
+                                                                                                     0.0
+
+
+
+
+                       0.0         2.0           4.0     6.0      8.0           10.0                       0.0    3.0          6.0     9.0      12.0     15.0
+                                               time step 10(−3)                                                              time step 10(−3)                   OOB(FixedIR)* and OOB-SW. ORB is also presented in this
+                                                   Nova                                                                          NPM
+                                                                                                                                                                table, but is analysed in Section VII-D.
+                 0.8
+
+
+
+
+                                                                                                     0.8
+
+
+
+
+                                                                                                                                                                   Regarding the approaches that adopt strategies recom-
+   class ratio
+
+
+
+
+                                                                                       class ratio
+                 0.4
+
+
+
+
+                                                                                                     0.4
+
+
+
+
+                                                                                                                                                                mended by the JIT-SDP literature:
+                                                                                                                                                                   OOB(FixedIR) obtained poor g-mean compared to the
+                 0.0
+
+
+
+
+                                                                                                     0.0
+
+
+
+
+                       0.0   6.0          18.0      30.0          42.0          54.0                       0.0         2.0        4.0         6.0        8.0
+                                            time step 10(−3)                                                                 time step 10(−3)
+                                                                                                                                                                other approaches. Together with OOB(FixedIR)*, it was
+Fig. 3. Class imbalance evolution for all datasets, calculated based on Eq. 1                                                                                   ranked worst in terms of g-mean by the Scott-Knott test
+with θ0 = 0.99 and waiting time ω = 90. Orange (dark grey) stands for the                                                                                       across datasets. Compared to OOB, which was ranked second,
+ratio of defect-inducing software changes whereas lime (light grey) stands for
+the ratio of clean software changes.                                                                                                                            OOB(FixedIR)’s g-mean was up to 70.34% lower (Tomcat),
+                                                                                                                                                                with large effect sizes in 9 out of 10 datasets. OOB(FixedIR)
+                                                                                                                                                                computes the oversampling rate based on the imbalance ra-
+3.x and 4.x reported in their official website http://fabric8.io/                                                                                               tio of the beginning of the project (until time step 500).
+gitbook/overview.html#history. We confirmed the time steps                                                                                                      This is unlikely to be suitable throughout the whole project,
+corresponding to refactorings based on the RefactoringMiner                                                                                                     given the class imbalance evolution presented in Section
+tool. This suggests that refactoring can indeed be linked                                                                                                       VII-B. Therefore, class imbalance evolution was detrimental
+to class imbalance evolution. Such large variations in the                                                                                                      to OOB(FixedIR).
+imbalance status of the problem are likely to disturb machine                                                                                                      OOB(FixedIR)* also fixes the oversampling rate based on
+learning algorithms that are unable to adapt rapidly to them                                                                                                    the imbalance ratio computed until time step 500. However,
+[15]. The remainder of the datasets also suffer from increases                                                                                                  changes found to be defect-inducing before the end of the
+in the defect-inducing ratio.                                                                                                                                   waiting period are only used for computing the imbalance
+   According to Fig. 3, Spring-Integration experiences a period                                                                                                 ratio at the end of the waiting period. This led to a lower ratio
+of time (from 1k to 3k) where the ratio of defect-inducing                                                                                                      of defect-inducing examples at the beginning of the project,
+software changes becomes very small (less than 0.001%). This                                                                                                    causing the approach to focus more on the clean class. As
+means that the problem becomes very highly imbalanced.As                                                                                                        a result, it obtained worse R1 than most other approaches.
+machine learning algorithms tend to struggle with more im-                                                                                                      Compared to OOB, for instance, its R1 was up to 99.82%
+balanced SDP problems [17], classifiers unable to identify and                                                                                                  lower (Fabric8), with large effect sizes for all datasets. Its g-
+tackle such class imbalance evolution may become unsuitable.                                                                                                    mean was as a result also lower. Similar to OOB(FixedIR),
+   For some datasets, such as Camel, Brackets, Neutron and                                                                                                      fixing the oversampling rate based on values that are not
+Nova, the ratio of defect-inducing software changes also                                                                                                        appropriate throughout the whole project was detrimental,
+presents a decreasing trend over time. For instance, for Camel,                                                                                                 meaning that class imbalance evolution also negatively affects
+the ratio of defect-inducing examples started at around 40%                                                                                                     this approach.
+and decreased to less than 10% by the end of the period                                                                                                            OOB-SW obtained worse g-mean compared to OOB with
+analysed, having become more than four times smaller, and                                                                                                       large effect sizes in 8 out of 10 datasets. Its g-mean was up to
+thus increasing the challenge posed by class imbalance [17].                                                                                                    38.41% lower than OOB’s (Broadleaf). In addition, OOB-SW
+There are two potential reasons behind such decreasing trends.                                                                                                  was ranked worse than OOB in terms of |R0 −R1 | (i.e., group
+First, as open source software matures, it may become less                                                                                                      4), based on the Scott-Knott test across datasets. OOB-SW’s
+defective over time. And second, defects might be found                                                                                                         |R0 − R1 | was up to 52.97% higher than OOB’s (Broadleaf).
+more quickly in the initial stages of the project, causing the                                                                                                  The effect sizes were large in 7 out of 10 datasets in favor of
+                          TABLE II                                                                              discards training examples from the majority class. This may
+ OVERALL PREDICTIVE PERFORMANCE , EFFECT SIZES AND STATISTICAL                                                  be a risky strategy since the discarded examples may contain
+                    TESTS TO COMPARE LEARNING APPROACHES
+   Dataset        Classifier           R0                  R1               |R0 - R1 |           G-Mean
+                                                                                                                useful information.
+                    OOB
+                    UOB
+                                   50.24 (2.20)
+                                42.27 (5.94) [-b]
+                                                       74.44 (2.15)
+                                                    83.70 (4.68) [b]
+                                                                           28.50 (2.97)
+                                                                        43.90 (8.76) [-b]
+                                                                                               59.03 (0.63)
+                                                                                            57.07 (2.42) [-b]      OOB was ranked in the second best group in terms of
+   Fabric8
+                OOB(FixedIR)
+                OOB(FixedIR)*
+                                 62.64 (3.19) [b]
+                                 99.95 (0.03) [b]
+                                                    59.02 (2.63) [-b]
+                                                     0.13 (0.17) [-b]
+                                                                        48.64 (2.88) [-b]
+                                                                        99.82 (0.20) [-b]
+                                                                                            50.92 (0.98) [-b]
+                                                                                             1.66 (1.47) [-b]   g-mean and |R0 − R1 | and in the first group in terms of
+                  OOB-SW         73.31 (0.11) [b]   46.35 (0.36) [-b]   47.73 (0.32) [-b]   50.74 (0.29) [-b]
+                    ORB          60.34 (1.75) [b]   68.35 (1.43) [-b]    20.59 (2.95) [b]   60.93 (0.87) [b]    R1 . However, based on the Scott-Knott test across datasets,
+                    OOB            59.38 (1.40)        56.67 (1.52)        28.13 (1.45)        54.71 (0.50)
+                    UOB          73.77 (3.10) [b]   45.12 (3.02) [-b]   36.81 (3.66) [-b]   55.09 (0.71) [m]    its R0 was worse than all the JIT-SDP approaches from the
+                OOB(FixedIR)    53.14 (0.62) [-b]   58.70 (0.59) [b]     21.98 (0.67) [b]   53.38 (0.31) [-b]
+   JGroups
+                OOB(FixedIR)*    68.24 (1.70) [b]   47.96 (1.43) [-b]   30.19 (1.65) [-b]   53.08 (0.63) [-b]   literature. Conversely, it overcame both FixedIR and OOB-SW
+                  OOB-SW         81.49 (0.07) [b]   35.33 (0.26) [-b]   57.51 (0.31) [-b]   47.95 (0.25) [-b]
+                    ORB          62.65 (0.79) [b]   56.73 (1.23) [*]     17.79 (1.30) [b]   57.76 (0.96) [b]    approaches, regarding R1 . OOB demonstrated a better balance
+                    OOB            57.06 (1.44)        73.99 (0.92)        25.47 (1.60)        62.90 (0.70)
+                    UOB
+                OOB(FixedIR)
+                                55.57 (2.53) [-b]
+                                 91.54 (0.54) [b]
+                                                    71.28 (2.34) [-b]
+                                                    20.97 (0.84) [-b]
+                                                                        29.27 (2.72) [-b]
+                                                                        76.82 (1.22) [-b]
+                                                                                            60.35 (1.05) [-b]
+                                                                                            38.24 (1.15) [-b]
+                                                                                                                between the finals R0 and R1 averages than the JIT-SDP
+    Camel
+                OOB(FixedIR)*
+                  OOB-SW
+                                 87.42 (0.88) [b]
+                                 71.67 (0.11) [b]
+                                                    33.85 (0.90) [-b]
+                                                    40.38 (0.27) [-b]
+                                                                        58.62 (1.20) [-b]
+                                                                        64.61 (0.31) [-b]
+                                                                                            50.81 (0.94) [-b]
+                                                                                            40.28 (0.41) [-b]
+                                                                                                                approaches from the literature. Nevertheless, the difference
+                    ORB
+                    OOB
+                                 60.74 (0.61) [b]
+                                   59.81 (2.41)
+                                                    70.41 (0.77) [-b]
+                                                       61.75 (1.79)
+                                                                         17.03 (0.87) [b]
+                                                                           29.42 (2.29)
+                                                                                            63.63 (0.50) [b]
+                                                                                               57.28 (0.88)
+                                                                                                                in recalls (R0 − R1 ) was still high (up to 49.67). Section
+                    UOB
+                OOB(FixedIR)
+                                 68.47 (2.51) [b]
+                                 93.54 (1.15) [b]
+                                                    50.04 (2.57) [-b]
+                                                     6.52 (1.44) [-b]
+                                                                        33.69 (2.85) [-b]
+                                                                        87.08 (2.51) [-b]
+                                                                                            55.18 (1.05) [-b]
+                                                                                            16.99 (2.29) [-b]
+                                                                                                                VII-D analyses the approach ORB proposed to overcome this
+   Tomcat
+                OOB(FixedIR)*    75.43 (1.06) [b]   45.06 (1.25) [-b]   42.59 (1.96) [-b]   53.04 (0.72) [-b]
+                  OOB-SW         65.19 (0.15) [b]   52.30 (0.27) [-b]   35.93 (0.25) [-b]   54.53 (0.19) [-b]   problem.
+                    ORB         59.43 (1.39) [-b]   64.37 (0.68) [b]     16.07 (1.52) [b]   60.18 (0.80) [b]
+                    OOB            49.10 (0.27)        89.48 (0.29)        41.90 (0.25)        63.93 (0.09)
+                    UOB
+                OOB(FixedIR)
+                                 54.59 (1.52) [b]
+                                 58.54 (1.94) [b]
+                                                    83.09 (1.64) [-b]
+                                                    76.25 (3.09) [-b]
+                                                                         32.98 (2.17) [b]
+                                                                         40.54 (2.35) [b]
+                                                                                            64.24 (0.44) [b]
+                                                                                            61.17 (1.15) [-b]
+                                                                                                                RQ3: Existing JIT-SDP approaches based on fixed class
+   Brackets
+                OOB(FixedIR)*
+                  OOB-SW
+                                 76.71 (1.39) [b]
+                                 56.28 (0.10) [b]
+                                                    60.59 (1.14) [-b]
+                                                    79.82 (0.28) [-b]
+                                                                         27.29 (1.75) [b]
+                                                                        42.80 (0.20) [-b]
+                                                                                            63.46 (0.91) [-b]
+                                                                                            61.67 (0.16) [-b]
+                                                                                                                imbalance ratio struggled to obtain competitive predictive
+                    ORB
+                    OOB
+                                 61.68 (1.07) [b]
+                                   69.71 (0.79)
+                                                    77.14 (1.05) [-b]
+                                                       91.89 (0.62)
+                                                                         36.00 (1.44) [b]
+                                                                           23.97 (1.33)
+                                                                                            63.66 (0.48) [-b]
+                                                                                               79.31 (0.45)
+                                                                                                                performance in the presence of class imbalance evolution,
+                    UOB         58.82 (1.60) [-b]   92.45 (0.34) [b]    38.40 (1.54) [-b]   70.72 (1.43) [-b]
+                OOB(FixedIR)     94.81 (0.38) [b]   22.23 (0.56) [-b]   77.35 (0.62) [-b]   41.09 (0.69) [-b]   obtaining g-mean up to 97.2% worse than OOB’s. OOB-SW
+   Neutron
+                OOB(FixedIR)*    82.72 (1.07) [b]   70.81 (1.71) [-b]    20.10 (2.02) [b]   75.59 (0.85) [-b]
+                  OOB-SW         73.82 (0.10) [b]   83.08 (0.36) [-b]    20.49 (0.32) [b]   76.73 (0.21) [-b]   tracks changes in the imbalance ratio, but discards historic
+                    ORB          79.89 (1.63) [b]   81.12 (1.37) [-b]    13.98 (2.14) [b]   79.92 (0.46) [b]
+                    OOB            62.47 (2.06)        53.74 (1.80)        47.27 (1.82)        48.11 (0.72)     data, which has shown to be detrimental, leading to g-
+                    UOB         55.65 (6.14) [-b]   59.30 (3.15) [b]     37.57 (4.86) [b]   52.19 (2.78) [b]
+  Spring-       OOB(FixedIR)    55.39 (0.38) [-b]   52.86 (0.68) [-b]   48.29 (0.60) [-b]   44.75 (0.49) [-b]   mean of up to 38.41% lower than OOB’s. OOB achieved
+  Integration   OOB(FixedIR)*    98.96 (0.19) [b]    1.59 (0.19) [-b]   97.37 (0.31) [-b]    9.47 (0.68) [-b]
+                  OOB-SW        45.55 (0.21) [-b]   79.87 (0.34) [b]     39.52 (0.30) [b]   56.11 (0.24) [b]    competitive g-mean, but may not be suitable for adoption in
+                    ORB          74.32 (0.86) [b]   44.31 (1.24) [-b]    37.30 (1.73) [b]   52.20 (0.83) [b]
+                    OOB            59.24 (1.23)        68.32 (1.89)        33.40 (2.50)        60.07 (0.75)     practice due to its high |R0 − R1 |.
+                    UOB          59.32 (4.45) [*]   62.69 (4.92) [-b]   43.26 (4.37) [-b]   55.45 (1.31) [-b]
+                OOB(FixedIR)     67.47 (1.21) [b]   58.39 (1.72) [-b]   39.77 (1.72) [-b]   58.17 (0.88) [-b]
+  Broadleaf
+                OOB(FixedIR)*    89.05 (0.96) [b]   26.74 (2.09) [-b]   62.55 (2.78) [-b]   45.68 (1.59) [-b]
+                  OOB-SW         78.20 (0.10) [b]   34.73 (0.31) [-b]   71.02 (0.33) [-b]   37.00 (0.60) [-b]   D. RQ4: The Benefit of the Proposed Approach ORB
+                    ORB          61.60 (1.48) [b]   67.00 (1.47) [-b]    19.17 (2.32) [b]   61.97 (0.76) [b]
+                    OOB            68.53 (0.35)        86.27 (0.70)        24.34 (0.59)        75.41 (0.23)
+                    UOB         65.56 (0.63) [-b]   90.84 (0.89) [b]    27.59 (0.75) [-b]   75.93 (0.15) [b]       RQ4 is partly answered by our proposed approach ORB. In
+                OOB(FixedIR)     81.62 (0.20) [b]   42.68 (0.46) [-b]   65.17 (0.34) [-b]   39.07 (0.73) [-b]
+    Nova
+                OOB(FixedIR)*    86.95 (0.64) [b]   55.90 (1.37) [-b]   36.96 (1.74) [-b]   66.29 (0.91) [-b]   this section, we check whether ORB is really able to improve
+                  OOB-SW        66.41 (0.05) [-b]   85.90 (0.17) [-b]   33.66 (0.17) [-b]   72.85 (0.10) [-b]
+                    ORB          75.30 (2.26) [b]   80.13 (4.07) [-b]    20.31 (1.57) [b]   75.68 (0.96) [*]    predictive performance against the approaches found to be
+                    OOB            37.91 (1.84)        74.88 (1.17)        49.67 (1.52)        46.17 (0.77)
+                    UOB          38.26 (2.67) [*]   72.82 (1.88) [-b]    48.89 (1.71) [b]   45.86 (0.94) [-b]   the most competitive in terms of g-mean and |R0 − R1 | in
+                OOB(FixedIR)     43.93 (1.52) [b]   67.66 (2.06) [-b]    47.74 (1.64) [b]   46.35 (1.08) [*]
+    NPM
+                OOB(FixedIR)*    82.77 (1.31) [b]   26.22 (1.13) [-b]   59.00 (1.86) [-b]   39.85 (1.03) [-b]   Section VII-C. These are OOB and UOB. ORB’s main goal
+                  OOB-SW         55.55 (0.18) [b]   62.74 (0.54) [-b]    43.68 (0.31) [b]   50.53 (0.35) [b]
+                    ORB
+                    OOB
+                                 55.24 (0.84) [b]
+                                 57.35 [3] (9.51)
+                                                    63.94 (1.31) [-b]
+                                                    73.14 [1] (13.32)
+                                                                         31.73 (1.70) [b]
+                                                                         33.21 [2] (9.61)
+                                                                                            54.26 (0.91) [b]
+                                                                                            60.69 [2] (10.53)
+                                                                                                                is to improve |R0 − R1 |. So, we are particularly interested in
+                    UOB
+                OOB(FixedIR)
+                                57.23 [3] (10.91)
+                                70.26 [2] (18.67)
+                                                    71.13 [1] (16.60)
+                                                    46.53 [4] (22.79)
+                                                                         37.24 [3] (6.71)
+                                                                        55.34 [5] (20.48)
+                                                                                            59.21 [2] (8.93)
+                                                                                            45.01 [4] (12.57)
+                                                                                                                this performance metric.
+  Averages
+                OOB(FixedIR)*
+                  OOB-SW
+                                 84.82 [1] (9.97)
+                                66.75 [2] (11.32)
+                                                    36.89 [5] (23.77)
+                                                    60.05 [3] (20.75)
+                                                                        53.45 [5] (27.78)
+                                                                        45.69 [4] (15.16)
+                                                                                            45.89 [4] (23.70)
+                                                                                            54.84 [3] (12.76)
+                                                                                                                   Regarding g-mean, ORB was isolated ranked in the best
+                    ORB          65.12 [2] (8.22)   67.35 [2] (11.17)    23.00 [1] (8.63)   63.02 [1] (8.70)
+                                                                                                                group, according to the Scott-Knott tests across datasets. The
+Standard deviations are shown in brackets. Symbols [*], [s], [m]                                                magnitudes of the differences in g-mean between these two
+and [b] represent insignificant, small, medium and large A12 effect                                             approaches are in favor of ORB in 9 out of 10 datasets, but
+size against WFL-OOB. Presence/absence of the sign “-” in the
+effect size means that the corresponding approach was worse/better
+                                                                                                                were not large – at most 7.8% (Spring-Integration). Therefore,
+than WFL-OOB. Cells in bold correspond to the approaches be-                                                    ORB and OOB perform quite similarly in terms of g-mean.
+longing to the best group according to Scott-Knott. The groups’                                                    Regarding |R0 − R1|, again, ORB ranked first according
+rankings are in square brackets in the average rows, with smaller                                               to Scott-Knott, having outperformed all other approaches
+numbers indicating better ranks. A table using larger font is available                                         including OOB and UOB. Its |R0 − R1| was up to 45.38%
+at http://doi.org/10.5281/zenodo.2555695.
+                                                                                                                lower than OOB’s (Tomcat) and up to 63.59% lower than
+OOB. OOB-SW can track class imbalance evolution based on                                                        UOB’s (Neutron). Overall, ORB was successful in obtaining
+its sliding windows. However, its strategy to deal with concept                                                 the top g-means while improving its |R0 − R1 |.
+drift discards potentially useful past information, not being                                                      Regarding R0 and R1 individually, ORB was ranked in the
+adequate to tackle class imbalance evolution, as discussed in                                                   second best group for both of these metrics. It sometimes
+Section III-C. This is probably the reason for its worse g-mean.                                                wins and sometimes looses against other approaches from the
+   Regarding the online class imbalance learning approaches                                                     best group on single datasets. This is because, to obtain a
+prepared to cope with class imbalance evolution:                                                                better |R0 − R1 |, sometimes R1 has to be reduced a bit and
+   UOB was more competitive against OOB in terms of g-                                                          sometimes increased. This prevents the recall on the defect-
+mean than OOB(FixedIR) and OOB(FixedIR)*, being ranked                                                          inducing class to be too high at the expense of a large number
+in the second group according to Scott-Knott. However, its                                                      of false alarms, or the recall on the clean class being too high
+|R0 − R1 | was still ranked worse than OOB (i.e., in group 3),                                                  at the cost of missing too many defect-inducing changes.
+based on the Scott-Knott test across datasets. Tackling class                                                      Fig. 4 shows an example of R0 , R1 and g-mean plotted over
+imbalance evolution seems to have helped UOB, but UOB                                                           time for Neutron. As we can see, during a large period of time,
+                                     Neutron OOB                                             Neutron ORB              characteristics, such as starting date, number of modified files
+      Performance
+
+
+
+
+                                                              Performance
+                    80
+
+
+
+
+                                                                            80
+                                                                                                                      per commit and number of commits per day. The programming
+                    40
+
+
+
+
+                                                                            40
+                                                                                                                      language was Java in most cases. The results obtained in
+                                                                                                                      this study may not generalize to other projects (specially
+                    0
+
+
+
+
+                                                                            0
+                         0   3   6      9    12     15   18                      0   3   6      9    12     15   18
+                                 time step 10(−3)                                        time step 10(−3)             proprietary projects) or to different problems than JIT-SDP.
+Fig. 4. R0 (in lime / light grey), R1 (in orange / dark grey) and g-mean (in
+                                                                                                                      We would be keen to perform additional case studies with
+black) over time for OOB and ORB on Neutron.                                                                          proprietary projects in the future.
+
+OOB obtained a very large R1 of around 90%, while its R0                                                                        IX. C ONCLUSIONS AND I MPLICATIONS
+was around 60%. So, even though OOB managed to retrieve                                                                  We conducted the first work to investigate and deal with
+most defect-inducing software changes in the project, around                                                          class imbalance evolution in JIT-SDP. We show that class
+half of the changes flagged as defect-inducing were actually                                                          imbalance evolution is a significant issue in JIT-SDP. The im-
+clean. Carefully inspecting all these changes that were actually                                                      balance status can vary between fairly balanced and extremely
+clean would be costly for practitioners and would likely make                                                         imbalanced during the course of a project (RQ2). Existing
+them loose trust in the approach. ORB managed to reduce this                                                          JIT-SDP approaches did not perform well under this scenario,
+problem, producing more balanced recalls.                                                                             obtaining g-means up to 97.2% lower than those obtained by
+ RQ4: Our proposed approach ORB adjusts the resampling                                                                OOB, an online class imbalance learning approach for cop-
+ rate based on the ratio of examples predicted as being of the                                                        ing with class imbalance evolution (RQ3). Despite obtaining
+ defect-inducing class. This enabled it to significantly reduce                                                       better g-mean, OOB still often favored the performance on
+ the problem of over-emphasising one class over the other,                                                            one class too much in detriment of the other (RQ3). Our
+ while maintaining top g-means. ORB is therefore successful                                                           proposed approach ORB was able to improve on that, being
+ in improving JIT-SDP predictive performance over state-                                                              top ranked both in terms of g-mean and differences in recalls.
+ of-the-art machine learning algorithms for class imbalance                                                           In particular, its difference in recals was up to 45.38% lower
+ evolution. In particular, ORB’s |R0 − R1 | was up to 45.38%                                                          than OOB’s (RQ4). We also provided an analysis of the typical
+ better than OOB’s and up to 63.59% better than UOB’s.                                                                defect discovery delay in the GitHub projects used in this
+                                                                                                                      study, showing to what extent verification latency occurs in
+                                 VIII. T HREATS TO VALIDITY                                                           JIT-SDP. The analysis suggests that a waiting time of 90 days
+   Internal validity: when using machine learning approaches,                                                         is adequate for those projects (RQ1).
+poor parameter choices can highly influence the results [35],                                                            Our work has implications to both practice and future
+[36]. We mitigate this threat by using a grid search based                                                            research. Regarding implications to practice:
+on the first 5,000 changes of each dataset, as detailed in                                                               1) Based on the results from RQ2 and RQ3, it is important
+Section VI. This strategy has shown to be effective and easily                                                        for practitioners to apply online learning algorithms able to
+automated.. The parameter values investigated included values                                                         tackle class imbalance evolution if they wish to perform JIT-
+that were used in previous work that investigated online class                                                        SDP. Otherwise, they risk using classifiers that, over time,
+imbalance learning in the machine learning literature [10]. The                                                       will get a high rate of false alarms (i.e., low recall on clean
+set of values P0 and P1 , used in Equations 3 and 2, were                                                             changes) or miss a substantial amount of defect-inducing
+chosen based on preliminary experiments. A sensitive analysis                                                         software changes (i.e., low recall on defect-inducing changes).
+has shown that ORB is not too sensitive to these parameters.                                                             2) Based on RQ3, even the sliding window strategy recom-
+   Construct validity: as explained in Section VI the evaluation                                                      mended in the JIT-SDP literature for dealing with concept drift
+metrics used in this work were R0 , R1 , |R0 − R1 | and g-                                                            in p(x|y) is not enough to cope with class imbalance evolution.
+mean. They were calculated prequentially with fading factors,                                                         Therefore, simply re-building classifiers from scratch over time
+as recommended for online learning studies [29]. These are                                                            is not enough to obtain good predictive performance over time.
+the most commonly used metrics in the online class imbalance                                                             3) Based on RQ4, practitioners adopting ORB could po-
+literature [15].                                                                                                      tentially be less overloaded by false alarms at the same time
+   Statistical conclusion validity: Bootstrap-based Scott-Knott                                                       as not missing too many defect-inducing changes w.r.t. other
+test and A12 effect size were used to address conclusion                                                              approaches in existing literature. Future studies within their
+validity. The benefits of using them is explained in Section VI.                                                      company’s environment would enable to check whether such
+Our work assumes that a given software change can become a                                                            findings generalize to their company.
+training example once 90 days have passed from its commit,                                                               4) Based on RQ1, our study further emphasizes that, when
+as explained in Section IV-A. However, projects that are not                                                          deciding which JIT-SDP to adopt, it is important to investigate
+changed very often may require longer time gaps to reflect the                                                        them taking verification latency into account.
+confidence on the label of committed software changes.                                                                   Future work includes: (i) quantitative and qualitative studies
+   External validity: this study was based on ten open source                                                         of ORB with industry using proprietary data; (ii) investigation
+projects from the GitHub repository, as explained in Section                                                          of other base classifiers than Hoeffding trees; (iii) and tech-
+V. All of these projects are currently and continuously being                                                         niques to automatically tune parameters of machine learning
+developed and maintained. They cover a variety of different                                                           approaches over time, including the waiting period.
+                              R EFERENCES                                        [22] P. Domingos and G. Hulten, “Mining high-speed data streams,” in
+                                                                                      Proceedings of the 6th ACM SIGKDD International Conference on
+ [1] A. Mockus and D. M. Weiss, “Predicting risk of software changes,” Bell           Knowledge Discovery and Data Mining (KDD), 2000, pp. 71–80.
+     Labs Technical Journal, vol. 5, no. 2, pp. 169–180, 2000.                   [23] P. Zhang, X. Zhu, J. Tan, and L. Guo, “Classifier and cluster ensembles
+ [2] Y. Kamei, T. Fukushima, S. McIntosh, K. Yamashita, N. Ubayashi,                  for mining concept drifting data streams,” in Proceedings of the 2010
+     and A. E. Hassan, “Studying just-in-time defect prediction using cross-          IEEE International Conference on Data Mining (ICDM), 2010, pp.
+     project models,” Empirical Software Engineering (EMSE), vol. 21, no. 5,          1175–1180.
+     pp. 2072–2106, 2015.                                                        [24] K. B. Dyer, R. Capo, and R. Polikar, “Compose: A semi-supervised
+ [3] N. Nan and D. E. Harter, “Impact of budget and schedule pressure                 learning framework for initially labeled non-stationary streaming data,”
+     on software development cycle time and effort,” IEEE Transactions on             IEEE Transactions on Neural Networks and Learning Systems (TNNLS),
+     Software Engineering (TSE), vol. 35, no. 5, pp. 624–637, 2009.                   vol. 25, no. 1, pp. 12–26, 2013.
+ [4] T. Hall, S. Beecham, D. Bowes, D. Gray, and S. Counsell, “A systematic      [25] A. D. Pozzolo, G. Boracchi, O. Caelen, C. Alippi, and G. Bontempi,
+     literature review on fault prediction performance in software engineer-          “Credit card fraud detection: a realistic modeling and a novel learning
+     ing,” IEEE Transactions on Software Engineering (TSE), vol. 38, no. 6,           strategy,” IEEE Transactions on Neural Networks and Learning Systems
+     pp. 1276–1304, 2012.                                                             (TNNLS), vol. 29, no. 8, pp. 3784–3797, 2018.
+ [5] Y. Kamei, E. Shihab, B. Adams, A. E. Hassan, A. Mockus, A. Sinha,           [26] M. Shepperd, Q. Song, Z. Sun, and C. Mair, “Data quality: Some
+     and N. Ubayashi, “A large-scale empirical study of just-in-time quality          comments on the nasa software defect datasets,” IEEE Transactions on
+     assurance,” IEEE Transactions on Software Engineering (TSE), vol. 39,            Software Engineering (TSE), vol. 39, no. 9, pp. 1208–1215, 2013.
+     no. 6, pp. 757–773, 2013.                                                   [27] C. Rosen, B. Grawi, and E. Shihab, “Commit guru: analytics and
+ [6] E. Shihab, A. E. Hassan, B. Adams, and Z. M. Jiang, “An industrial               risk prediction of software commits,” in Proceedings of the 10th Joint
+     study on the risk of software changes,” in Proceedings of the 20th               Meeting on Foundations of Software Engineering (FSE), 2015, pp. 966–
+     ACM SIGSOFT International Symposium on the Foundations of Software               969.
+     Engineering (FSE), 2012, pp. 1–11.                                          [28] H. He and E. A. Garcia, “Learning from imbalanced data,” IEEE
+ [7] M. Tan, L. Tan, S. Dara, and C. Mayeux, “Online defect prediction for            Transactions on Knowledge and Data Engineering (TKDE), vol. 21,
+     imbalanced data,” in Proceedings of the 37th International Conference            no. 9, pp. 1263–1284, 2009.
+     on Software Engineering (ICSE), 2015, pp. 99–108.                           [29] J. Gama, R. Sebastião, and P. P. Rodrigues, “On evaluating stream
+ [8] S. McIntosh and Y. Kamei, “Are fix-inducing changes a moving target?             learning algorithms,” Machine Learning, vol. 90, no. 3, pp. 317–346,
+     a longitudinal case study of just-in-time defect prediction,” IEEE Trans-        2013.
+     actions on Software Engineering (TSE), vol. 44, no. 5, pp. 412–428,         [30] N. Mittas and L. Angelis, “Ranking and clustering software cost
+     2018.                                                                            estimation models through a multiple comparisons algorithm,” IEEE
+ [9] G. Ditzler, M. Roveri, C. Alippi, and R. Polikar, “Learning in non-              Transactions on Software Engineering (TSE), vol. 39, no. 4, pp. 537–
+     stationary environments: A survey,” IEEE Computational Intelligence              551, 2013.
+     Magazine, vol. 10, no. 4, pp. 12–25, 2015.                                  [31] T. Menzies, Y. Yang, G. Mathew, B. Boehm, and J. Hihn, “Negative
+[10] S. Wang, L. L. Minku, and X. Yao, “Resampling-based ensemble                     results for software effort estimation,” Empirical Software Engineering
+     methods for online class imbalance learning,” IEEE Transactions on               (EMSE), vol. 22, no. 5, pp. 2658–2683, 2017.
+     Knowledge and Data Engineering (TKDE), vol. 27, no. 5, pp. 1356–            [32] A. Vargha and H. D. Delaney, “A critique and improvement of the cl
+     1368, 2015.                                                                      common language effect size statistics of mcgraw and wong,” Journal
+[11] S. Kim, E. J. W. Jr., and Y. Zhang, “Classifying software changes: Clean         of Educational and Behavioral Statistics, vol. 25, no. 2, pp. 101–132,
+     or buggy?” IEEE Transactions on Software Engineering (TSE), vol. 34,             2000.
+     no. 2, pp. 181–196, 2008.                                                   [33] C. Tantithamthavorn, S. McIntosh, A. E. Hassan, and K. Matsumoto,
+[12] J. Śliwerski, T. Zimmermann, and A. Zeller, “When do changes induce             “An empirical comparison of model validation techniques for defect
+     fixes?” in Proceedings of the 17th International Workshop on Mining              prediction models,” IEEE Transactions on Software Engineering (TSE),
+     Software Repositories, ser. MSR ’05, 2005, pp. 1–5.                              vol. 43, no. 1, pp. 1–18, 2017.
+[13] J. Eyolfson, L. Tan, and P. Lam, “Do time of day and developer              [34] ——, “The impact of automated parameter optimization on defect
+     experience affect commit bugginess?” in Proceedings of the 8th Working           prediction models,” IEEE Transactions on Software Engineering (TSE),
+     Conference on Mining Software Repositories (MSR), 2011, pp. 153–162.             pp. 1–1, 2018.
+[14] A. T. Misirli, E. Shihab, and Y. Kamei, “Studying high impact fix-          [35] T. Menzies and M. Shepperd, “Special issue on repeatable results
+     inducing changes,” Empirical Software Engineering Journal (EMSE),                in software engineering prediction,” Empirical Software Engineering
+     vol. 21, no. 2, pp. 605–641, 2016.                                               (EMSE), vol. 17, pp. 1–17, 2012.
+[15] S. Wang, L. L. Minku, and X. Yao, “A systematic study of online class       [36] L. Song, L. L. Minku, and X. Yao, “The impact of parameter tuning
+     imbalance learning with concept drift,” IEEE Transactions on Neural              on software effort estimation using learning machines,” in Proceedings
+     Networks and Learning Systems (TNNLS), 2018.                                     of the 9th International Conference on Predictive Models in Software
+[16] J. Ekanayake, J. Tappolet, H. C. Gall, and A. Bernstein, “Tracking               Engineering (PROMISE), 2013, pp. 1–10.
+     concept drift of software projects using defect prediction quality,”
+     in Proceedings of the 6th Working Conference on Mining Software
+     Repositories (MSR), 2009, pp. 51–60.
+[17] Z. Mahmood, D. Bowes, P. Lane, and T. Hall, “What is the impact of
+     imbalance on software defect prediction performance?” in Proceedings
+     of the 11th International Conference on Predictive Models and Data
+     Analytics in Software Engineering (PROMISE), 2015, pp. 4.1–4.4.
+[18] S. Wang and X. Yao, “Using class imbalance learning for software defect
+     prediction,” IEEE Transactions on Reliability (TR), vol. 62, no. 2, pp.
+     434–443, 2013.
+[19] Y. Kamei, A. Monden, S. Matsumoto, T. Kakimoto, and K. Matsumoto,
+     “The effects of over and under sampling on fault-prone module detec-
+     tion,” in Proceedings of the 1st International Symposium on Empirical
+     Software Engineering and Measurement (ESEM), 2007, pp. 196–204.
+[20] K. E. Bennin, J. Keung, P. Phannachitta, A. Monden, and S. Mensah,
+     “Mahakil: Diversity based oversampling approach to alleviate the class
+     imbalance issue in software defect prediction,” IEEE Transactions on
+     Software Engineering (TSE), vol. 44, no. 6, pp. 534–550, June 2018.
+[21] N. C. Oza, “Online bagging and boosting,” in Proceedings of the 2005
+     IEEE International Conference on Systems, Man and Cybernetics, vol. 3,
+     2005, pp. 2340–2345.
+

@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E0",
+    "project": "fabric",
+    "method": "wait",
+    "variant": "wait_W60",
+    "seed": 0,
+    "split": "dev",
+    "W": 60,
+    "gmean": 0.6491849009775138,
+    "r0": 0.7473326867119302,
+    "r1": 0.5639269406392694,
+    "rdiff": 0.1834057460726608,
+    "auc": 0.7225462710760931,
+    "mcc": 0.2564777086255578,
+    "n_eval": 2500,
+    "seconds": 1.38,
+    "job_id": "E0_fabric_wait_W60_s0_quick",
+    "written": "2026-11-24T03:21:47+00:00",
+    "cycle": 1
+  }
+]

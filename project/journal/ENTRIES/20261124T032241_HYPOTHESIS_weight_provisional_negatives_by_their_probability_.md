@@ -1,0 +1,5 @@
+# HYPOTHESIS: Weight provisional negatives by their probability of being undiscovered defects
+
+*Written 2026-11-24T03:22:41+00:00*
+
+Written before any held-out run. I believe the hard waiting-time cutoff wastes information: the probability that a provisionally clean commit of age a is actually defect-inducing is p·S(a)/(1−p+p·S(a)), where S(a) is the probability a defect is still undiscovered at age a and p is the model's current risk estimate. S(a) can be estimated from discoveries seen so far, but they are right-truncated (long delays are only visible for old commits), so a naive empirical CDF underestimates S; the Lagakos reverse-time estimator should correct this (it recovers a truncated exponential within 0.01 in tests/test_no_future.py). Prediction: the latency-aware weighting (LAW) beats the best tuned waiting-time baseline on held-out projects by ≥0.02 G-mean, and the Lagakos estimator matters (naive variant worse). This idea is borrowed from delayed-feedback conversion modelling (Chapelle 2014; ES-DFM; DEFUSE), which I must cite and differentiate from.
