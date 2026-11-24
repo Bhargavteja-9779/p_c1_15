@@ -10,10 +10,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:24:24+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:24:41+00:00",
+      "seconds": 16.6
     },
     {
       "id": "E0_fabric_oracle_s0",
@@ -25,10 +29,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:24:41+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:24:57+00:00",
+      "seconds": 16.6
     },
     {
       "id": "E0_fabric_wait_W15_s0",
@@ -59,10 +67,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:24:57+00:00",
+      "worker": 0
     },
     {
       "id": "E0_fabric_wait_W30_s0",
@@ -213,10 +223,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:23:08+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:23:36+00:00",
+      "seconds": 27.5
     },
     {
       "id": "E0_fabric_law_naive_model_s0",
@@ -231,10 +245,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:23:58+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:24:24+00:00",
+      "seconds": 26.7
     },
     {
       "id": "E0_fabric_law_lagakos_base_s0",
@@ -249,10 +267,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:22:43+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:23:08+00:00",
+      "seconds": 24.6
     },
     {
       "id": "E0_fabric_law_naive_base_s0",
@@ -267,10 +289,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:23:35+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:23:58+00:00",
+      "seconds": 22.3
     },
     {
       "id": "E0_fabric_nowait_s1",
@@ -282,10 +308,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:24:24+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:24:41+00:00",
+      "seconds": 16.5
     },
     {
       "id": "E0_fabric_oracle_s1",
@@ -297,10 +327,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:24:41+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:24:57+00:00",
+      "seconds": 16.6
     },
     {
       "id": "E0_fabric_wait_W15_s1",
@@ -331,10 +365,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:24:57+00:00",
+      "worker": 1
     },
     {
       "id": "E0_fabric_wait_W30_s1",
@@ -485,10 +521,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:23:08+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:23:35+00:00",
+      "seconds": 27.1
     },
     {
       "id": "E0_fabric_law_naive_model_s1",
@@ -503,10 +543,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:23:58+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:24:24+00:00",
+      "seconds": 26.2
     },
     {
       "id": "E0_fabric_law_lagakos_base_s1",
@@ -521,10 +565,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:22:43+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T03:23:08+00:00",
+      "seconds": 24.7
     },
     {
       "id": "E0_fabric_law_naive_base_s1",
@@ -539,10 +587,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:23:36+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T03:23:58+00:00",
+      "seconds": 22.0
     },
     {
       "id": "E0_fabric_nowait_s2",
@@ -554,10 +606,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:24:25+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:24:42+00:00",
+      "seconds": 16.5
     },
     {
       "id": "E0_fabric_oracle_s2",
@@ -569,10 +625,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:24:42+00:00",
+      "worker": 2
     },
     {
       "id": "E0_fabric_wait_W15_s2",
@@ -757,10 +815,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:23:09+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:23:37+00:00",
+      "seconds": 27.8
     },
     {
       "id": "E0_fabric_law_naive_model_s2",
@@ -775,10 +837,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:23:59+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:24:25+00:00",
+      "seconds": 26.4
     },
     {
       "id": "E0_fabric_law_lagakos_base_s2",
@@ -793,10 +859,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:22:43+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:23:09+00:00",
+      "seconds": 25.5
     },
     {
       "id": "E0_fabric_law_naive_base_s2",
@@ -811,10 +881,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T03:23:37+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T03:23:59+00:00",
+      "seconds": 22.3
     },
     {
       "id": "E0_neutron_nowait_s0",

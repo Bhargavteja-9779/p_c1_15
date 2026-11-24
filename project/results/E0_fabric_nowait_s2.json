@@ -1,0 +1,21 @@
+[
+  {
+    "experiment": "E0",
+    "project": "fabric",
+    "method": "nowait",
+    "variant": "nowait",
+    "seed": 2,
+    "split": "dev",
+    "gmean": 0.4689678871939689,
+    "r0": 0.962635512051363,
+    "r1": 0.22846744844318642,
+    "rdiff": 0.7341680636081765,
+    "auc": 0.775101312041855,
+    "mcc": 0.29047615582085135,
+    "n_eval": 11974,
+    "seconds": 16.46,
+    "job_id": "E0_fabric_nowait_s2",
+    "written": "2026-11-24T03:24:42+00:00",
+    "cycle": 1
+  }
+]

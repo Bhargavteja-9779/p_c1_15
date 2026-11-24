@@ -1,23 +1,29 @@
 # HANDOFF — read this first
-*Auto-generated 2026-11-24T03:22:21+00:00 by scripts/write_handoff.py*
+*Auto-generated 2026-11-24T03:24:58+00:00 by scripts/write_handoff.py*
 
 ## Where we are
-- **Status:** RUNNING   **Cycle:** 1 / 12   **Phase:** PHASE2_LITERATURE   **Pivots:** 0 / 3
-- **Step:** literature + topic candidates
-- **Last action:** Phase 1 done: journal_selection/selected_journal.md
-- **NEXT ACTION:** Phase 2/3: survey recent JKSU-CIS ML papers (Crossref/OpenAlex), generate >=10 CPU-feasible topic candidates, select topic
+- **Status:** RUNNING   **Cycle:** 1 / 12   **Phase:** PHASE5_RUN   **Pivots:** 0 / 3
+- **Step:** E0 dev tuning running
+- **Last action:** plan_v1 written; quick mode passed; 192 E0 jobs queued
+- **NEXT ACTION:** Wait for E0 (dev tuning) to finish (check python scripts/status.py), then run scripts/freeze_config.py (choose W* for wait/orb by mean dev G-mean), enqueue E1-E3 and launch
 
 - **Selected journal:** JKSU-CIS (Springer Nature, ISSN 1319-1578, IF 6.4 2025; turnaround median 71–74 d, marginal)
-- **Topic:** None
-- **Hypothesis:** None
+- **Topic:** Verification-latency-aware online JIT-SDP: latency-aware weighting (LAW) of provisionally-clean commits
+- **Hypothesis:** LAW beats the best tuned waiting-time baseline by >=0.02 G-mean on 10 held-out projects (Holm p<0.05)
 
 ## Running right now
-- Queue (full): {'pending': 192}; running jobs: none
-- Processes: `none`
-- Heartbeat age: 33s
+- Queue (full): {'done': 17, 'pending': 172, 'running': 3}; running jobs: ['E0_fabric_orb_W15_s0', 'E0_fabric_orb_W15_s1', 'E0_fabric_oracle_s2']
+- Processes: `1258 tmux new-session -d -s research_w0 python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
+1259 bash -c python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
+1261 python3 run_all.py --mode full --resume --worker 0
+1265 bash -c python3 run_all.py --mode full --resume --worker 1 >> logs/runner_w1.log 2>&1
+1268 python3 run_all.py --mode full --resume --worker 1
+1271 bash -c python3 run_all.py --mode full --resume --worker 2 >> logs/runner_w2.log 2>&1
+1273 python3 run_all.py --mode full --resume --worker 2`
+- Heartbeat age: 1s
 
 ## Compute
-- Cycle 1: 0.00 h / 15 h   Global: 0.00 h / 120 h (CPU-hours; machine has no GPU)
+- Cycle 1: 0.11 h / 15 h   Global: 0.11 h / 120 h (CPU-hours; machine has no GPU)
 
 ## Gate status (Section 7)
 | Gate | Status | Evidence |
@@ -39,6 +45,10 @@
 - 2026-11-24T03:04:37+00:00: Hardware: CPU-only (4 cores, 15 GB RAM, no CUDA/MPS). All compute budgets are counted as CPU-hours.
 - 2026-11-24T03:11:07+00:00: Selected journal: Journal of King Saud University – Computer and Information Sciences (Springer Nature, ISSN 1319-1578, IF 6.4 (2025))
 - 2026-11-24T03:11:07+00:00: Interpretation: "submission→acceptance ≤ 72" evaluated as the MEDIAN (Accepted−Received) of a random sample
+- 2026-11-24T03:22:41+00:00: Topic: verification-latency-aware online JIT-SDP (latency-aware weighting, LAW)
+- 2026-11-24T03:22:41+00:00: Dev/test split by project: dev={fabric,neutron,nova,sentry}, test=other 10 (rng seed 0 draw before modelling)
+- 2026-11-24T03:22:41+00:00: Primary metric G-mean over the evaluation window (commits from #500 to last-365-days), against final labels
+- 2026-11-24T03:22:41+00:00: Runner parallelised to 3 workers (cores-1); budget counts summed worker seconds (CPU-time-like)
 
 ## Last failures (journal entries)
 - none yet

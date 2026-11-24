@@ -1,0 +1,6 @@
+# SURPRISE: Waiting barely cleans the labels; it mostly changes what the recent data looks like
+
+*Written 2026-11-24T03:24:58+00:00*
+
+I expected the waiting-time rule (W=90) to remove most false-clean labels. It does not. In the model-free analysis (scripts/rq1_label_noise.py → tables/rq1_waiting_time_tradeoff.csv), the share of training negatives that are actually defect-inducing, averaged over update times, drops only from 0.125 to 0.119 for tomcat, 0.069 to 0.054 for nova and 0.057 to 0.044 for brackets when going from W=0 to W=90, while 4.8%–13.8% of the history is excluded. Most remaining false-clean commits are old ones whose defects take longer than W to surface (tables/rq1_false_clean_by_age.csv: still 1.4%–9.7% for commits older than 2 years). In contrast, among commits younger than 7 days that are not yet discovered, 12%–26% are truly defect-inducing — essentially the base rate, i.e. their "clean" label carries almost no information.
+My reading: the waiting rule's main effect is not denoising but changing the class composition of recent training data (recent commits enter only if already known buggy), which matches the R1-up/R0-down swing I saw on fabric. This is evidence for using an age-dependent probability rather than a hard cutoff. Caveat: this analysis uses all 14 projects but fits no model and selects nothing.
