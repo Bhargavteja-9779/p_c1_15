@@ -26745,10 +26745,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-24T15:35:03+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T15:43:21+00:00",
+      "seconds": 498.1
     },
     {
       "id": "E0c_nova_lawm_soft_W90_s0",
@@ -26765,10 +26769,12 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-24T15:43:21+00:00",
+      "worker": 1
     },
     {
       "id": "E0c_nova_lawm_count_W30_s0",
@@ -26809,12 +26815,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 13,
       "started": "2026-11-24T15:28:08+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-24T15:35:03+00:00",
+      "seconds": 414.5
     },
     {
       "id": "E0c_nova_lawm_soft_W30_s1",
@@ -26831,10 +26839,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-24T15:35:08+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T15:43:30+00:00",
+      "seconds": 502.1
     },
     {
       "id": "E0c_nova_lawm_soft_W90_s1",
@@ -26851,10 +26863,12 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-24T15:43:30+00:00",
+      "worker": 2
     },
     {
       "id": "E0c_nova_lawm_count_W30_s1",
@@ -26895,12 +26909,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 13,
       "started": "2026-11-24T15:28:14+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-24T15:35:08+00:00",
+      "seconds": 413.3
     },
     {
       "id": "E0c_nova_lawm_soft_W30_s2",
@@ -26917,10 +26933,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-24T15:35:14+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T15:43:40+00:00",
+      "seconds": 505.9
     },
     {
       "id": "E0c_nova_lawm_soft_W90_s2",
@@ -26937,10 +26957,12 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-24T15:43:40+00:00",
+      "worker": 0
     },
     {
       "id": "E0c_nova_lawm_count_W30_s2",
@@ -26981,12 +27003,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 13,
       "started": "2026-11-24T15:28:23+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-24T15:35:14+00:00",
+      "seconds": 411.5
     },
     {
       "id": "E0c_sentry_lawm_soft_W30_s0",
