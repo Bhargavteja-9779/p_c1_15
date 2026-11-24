@@ -28050,12 +28050,14 @@
         "experiment": "E0d",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 13,
       "started": "2026-11-24T16:04:29+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-24T16:07:18+00:00",
+      "seconds": 168.4
     },
     {
       "id": "E0d_neutron_odasc_W90_t0.9_s0",
@@ -28071,10 +28073,14 @@
         "experiment": "E0d",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-24T16:07:18+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T16:09:57+00:00",
+      "seconds": 159.3
     },
     {
       "id": "E0d_neutron_odasc_W30_t0.8_s1",
@@ -28136,12 +28142,14 @@
         "experiment": "E0d",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 13,
       "started": "2026-11-24T16:04:42+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-24T16:07:31+00:00",
+      "seconds": 168.9
     },
     {
       "id": "E0d_neutron_odasc_W90_t0.9_s1",
@@ -28157,10 +28165,14 @@
         "experiment": "E0d",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-24T16:07:31+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T16:10:09+00:00",
+      "seconds": 157.8
     },
     {
       "id": "E0d_neutron_odasc_W30_t0.8_s2",
@@ -28222,12 +28234,14 @@
         "experiment": "E0d",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 13,
       "started": "2026-11-24T16:04:42+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-24T16:07:36+00:00",
+      "seconds": 173.5
     },
     {
       "id": "E0d_neutron_odasc_W90_t0.9_s2",
@@ -28243,10 +28257,14 @@
         "experiment": "E0d",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-24T16:07:36+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T16:10:09+00:00",
+      "seconds": 153.3
     },
     {
       "id": "E0d_nova_odasc_W30_t0.8_s0",
@@ -28490,10 +28508,14 @@
         "experiment": "E0d",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-24T16:09:57+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T16:11:46+00:00",
+      "seconds": 108.8
     },
     {
       "id": "E0d_sentry_odasc_W30_t0.9_s0",
@@ -28509,10 +28531,14 @@
         "experiment": "E0d",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-24T16:11:46+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T16:13:39+00:00",
+      "seconds": 113.3
     },
     {
       "id": "E0d_sentry_odasc_W90_t0.8_s0",
@@ -28528,10 +28554,14 @@
         "experiment": "E0d",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-24T16:13:39+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T16:15:36+00:00",
+      "seconds": 117.1
     },
     {
       "id": "E0d_sentry_odasc_W90_t0.9_s0",
@@ -28547,10 +28577,12 @@
         "experiment": "E0d",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-24T16:15:36+00:00",
+      "worker": 0
     },
     {
       "id": "E0d_sentry_odasc_W30_t0.8_s1",
@@ -28566,10 +28598,14 @@
         "experiment": "E0d",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-24T16:10:09+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T16:11:59+00:00",
+      "seconds": 110.5
     },
     {
       "id": "E0d_sentry_odasc_W30_t0.9_s1",
@@ -28585,10 +28621,14 @@
         "experiment": "E0d",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-24T16:11:57+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T16:13:51+00:00",
+      "seconds": 113.8
     },
     {
       "id": "E0d_sentry_odasc_W90_t0.8_s1",
@@ -28604,10 +28644,14 @@
         "experiment": "E0d",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-24T16:13:51+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T16:15:52+00:00",
+      "seconds": 121.0
     },
     {
       "id": "E0d_sentry_odasc_W90_t0.9_s1",
@@ -28623,10 +28667,12 @@
         "experiment": "E0d",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-24T16:15:52+00:00",
+      "worker": 2
     },
     {
       "id": "E0d_sentry_odasc_W30_t0.8_s2",
@@ -28642,10 +28688,14 @@
         "experiment": "E0d",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-24T16:10:09+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T16:11:57+00:00",
+      "seconds": 107.6
     },
     {
       "id": "E0d_sentry_odasc_W30_t0.9_s2",
@@ -28661,10 +28711,14 @@
         "experiment": "E0d",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-24T16:11:59+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T16:13:53+00:00",
+      "seconds": 113.4
     },
     {
       "id": "E0d_sentry_odasc_W90_t0.8_s2",
@@ -28680,10 +28734,14 @@
         "experiment": "E0d",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-24T16:13:53+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T16:15:53+00:00",
+      "seconds": 120.0
     },
     {
       "id": "E0d_sentry_odasc_W90_t0.9_s2",
@@ -28699,10 +28757,12 @@
         "experiment": "E0d",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-24T16:15:53+00:00",
+      "worker": 1
     }
   ]
 }
