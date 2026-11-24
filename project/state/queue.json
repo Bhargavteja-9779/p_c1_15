@@ -3045,10 +3045,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T22:57:32+00:00",
+      "worker": 1
     },
     {
       "id": "E0_sentry_law_naive_model_s0",
@@ -3082,11 +3084,14 @@
         "split": "dev"
       },
       "status": "running",
-      "attempts": 1,
+      "attempts": 2,
       "cycle": 1,
       "priority": 10,
-      "started": "2026-11-24T03:35:49+00:00",
-      "worker": 2
+      "started": "2026-11-24T22:57:32+00:00",
+      "worker": 0,
+      "log": [
+        "2026-11-24T22:57:32+00:00 reset running->pending on restart"
+      ]
     },
     {
       "id": "E0_sentry_law_naive_base_s0",
@@ -3356,11 +3361,14 @@
         "split": "dev"
       },
       "status": "running",
-      "attempts": 1,
+      "attempts": 2,
       "cycle": 1,
       "priority": 10,
-      "started": "2026-11-24T03:35:52+00:00",
-      "worker": 1
+      "started": "2026-11-24T22:57:32+00:00",
+      "worker": 2,
+      "log": [
+        "2026-11-24T22:57:32+00:00 reset running->pending on restart"
+      ]
     },
     {
       "id": "E0_sentry_law_naive_base_s1",
@@ -3629,12 +3637,15 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "pending",
       "attempts": 1,
       "cycle": 1,
       "priority": 10,
       "started": "2026-11-24T03:35:52+00:00",
-      "worker": 0
+      "worker": 0,
+      "log": [
+        "2026-11-24T22:58:06+00:00 manual reset: orphaned by stale-own-worker restart bug"
+      ]
     },
     {
       "id": "E0_sentry_law_naive_base_s2",
