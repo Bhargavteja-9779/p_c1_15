@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E0b",
+    "project": "sentry",
+    "method": "awt",
+    "variant": "awt_e0.3",
+    "seed": 1,
+    "split": "dev",
+    "delay_est": "lagakos",
+    "label_noise_log": true,
+    "eps": 0.3,
+    "gmean": 0.6286403082130139,
+    "r0": 0.45991591249198316,
+    "r1": 0.8592628051699378,
+    "rdiff": 0.39934689267795465,
+    "auc": 0.6963572955998506,
+    "mcc": 0.2755740063659468,
+    "n_eval": 18211,
+    "seconds": 35.03,
+    "W_T_mean": 170.88571428571427,
+    "job_id": "E0b_sentry_awt_e0.3_s1",
+    "written": "2026-11-24T12:53:58+00:00",
+    "cycle": 1
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E0b",
+    "project": "sentry",
+    "method": "decomp",
+    "variant": "decomp_L1_W30",
+    "seed": 2,
+    "split": "dev",
+    "W": 30,
+    "level": 1,
+    "gmean": 0.7048015385660521,
+    "r0": 0.6379961519275992,
+    "r1": 0.7786022020105313,
+    "rdiff": 0.14060605008293214,
+    "auc": 0.7788722691097715,
+    "mcc": 0.35159430202353353,
+    "n_eval": 18211,
+    "seconds": 36.82,
+    "job_id": "E0b_sentry_decomp_L1_W30_s2",
+    "written": "2026-11-24T12:55:55+00:00",
+    "cycle": 1
+  }
+]
