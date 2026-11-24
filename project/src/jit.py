@@ -224,16 +224,38 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
             recent_preds.extend(pred[start:end].tolist())
     # evaluation window
     ev = (pred >= 0) & (t <= t.max() - eval_end_gap_days * DAY)
-    res = evaluate(y[ev], pred[ev], prob[ev])
+    eff = df["la"].to_numpy(float) + df["ld"].to_numpy(float) + 1.0
+    res = evaluate(y[ev], pred[ev], prob[ev], eff[ev])
     res.update(n_eval=int(ev.sum()), seconds=round(time.time() - t0, 2))
     out = {"metrics": res}
     if return_preds: out.update(pred=pred, prob=prob, eval_mask=ev)
     if diag: out["diag"] = diag
     return out
 
-def evaluate(y, pred, prob):
+def effort_aware(y, prob, effort):
+    """Effort-aware JIT-SDP metrics (Kamei et al. 2013; Yang et al. 2016): inspect commits in order of
+    predicted risk density prob/effort (effort = LA+LD+1). Recall@20%Effort, Popt (normalised area vs
+    optimal/worst), IFA (#clean commits inspected before the first defective one)."""
+    e = np.asarray(effort, float); n = len(y)
+    def curve(order):
+        ce = np.cumsum(e[order]) / e.sum(); cy = np.cumsum(y[order]) / max(y.sum(), 1)
+        return np.concatenate([[0], ce]), np.concatenate([[0], cy])
+    order = np.lexsort((e, -prob / e))
+    x, c = curve(order)
+    r20 = float(np.interp(0.2, x, c))
+    opt = curve(np.lexsort((e, -y / e))); worst = curve(np.lexsort((-e, y / e)))
+    area = lambda xc: float(np.trapezoid(xc[1], xc[0]))
+    popt = 1 - (area(opt) - area((x, c))) / max(area(opt) - area(worst), 1e-12)
+    ifa = int(np.argmax(y[order] == 1)) if y.sum() else n
+    return dict(recall20e=r20, popt=popt, ifa=ifa)
+
+def evaluate(y, pred, prob, effort=None):
+    from sklearn.metrics import precision_score, f1_score, accuracy_score
     r1 = float(np.mean(pred[y == 1] == 1)) if (y == 1).any() else np.nan
     r0 = float(np.mean(pred[y == 0] == 0)) if (y == 0).any() else np.nan
-    return dict(gmean=float(np.sqrt(r0 * r1)), r0=r0, r1=r1, rdiff=abs(r0 - r1),
-                auc=float(roc_auc_score(y, prob)) if len(np.unique(y)) > 1 else np.nan,
-                mcc=float(matthews_corrcoef(y, pred)))
+    res = dict(gmean=float(np.sqrt(r0 * r1)), r0=r0, r1=r1, rdiff=abs(r0 - r1),
+               auc=float(roc_auc_score(y, prob)) if len(np.unique(y)) > 1 else np.nan,
+               mcc=float(matthews_corrcoef(y, pred)), acc=float(accuracy_score(y, pred)),
+               precision=float(precision_score(y, pred, zero_division=0)), f1=float(f1_score(y, pred, zero_division=0)))
+    if effort is not None: res.update(effort_aware(y, prob, effort))
+    return res

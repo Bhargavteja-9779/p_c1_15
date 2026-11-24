@@ -20023,12 +20023,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 40,
       "started": "2026-11-24T19:11:03+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-24T19:11:32+00:00",
+      "seconds": 29.3
     },
     {
       "id": "E3_brackets_orb_W90_ds2_s103",
@@ -20112,12 +20114,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 40,
       "started": "2026-11-24T19:11:03+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-24T19:11:32+00:00",
+      "seconds": 29.0
     },
     {
       "id": "E3_brackets_orb_W90_ds2_s104",
@@ -20231,12 +20235,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 40,
       "started": "2026-11-24T19:11:12+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-24T19:12:02+00:00",
+      "seconds": 50.5
     },
     {
       "id": "E3_broadleaf_nowait_ds2_s101",
@@ -20305,10 +20311,12 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:11:32+00:00",
+      "worker": 1
     },
     {
       "id": "E3_broadleaf_nowait_ds2_s102",
@@ -20377,10 +20385,12 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:11:32+00:00",
+      "worker": 0
     },
     {
       "id": "E3_broadleaf_nowait_ds2_s103",
@@ -20449,10 +20459,12 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T19:12:02+00:00",
+      "worker": 2
     },
     {
       "id": "E3_broadleaf_nowait_ds2_s104",
