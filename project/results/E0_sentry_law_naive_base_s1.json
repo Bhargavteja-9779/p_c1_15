@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E0",
+    "project": "sentry",
+    "method": "law",
+    "variant": "law_naive_base",
+    "seed": 1,
+    "split": "dev",
+    "delay_est": "naive",
+    "prior": "base",
+    "gmean": 0.6835153696554238,
+    "r0": 0.7785933157557187,
+    "r1": 0.6000478697941599,
+    "rdiff": 0.17854544596155875,
+    "auc": 0.7767141713454815,
+    "mcc": 0.3447605484048937,
+    "n_eval": 18211,
+    "seconds": 64.15,
+    "job_id": "E0_sentry_law_naive_base_s1",
+    "written": "2026-11-24T23:01:08+00:00",
+    "cycle": 1
+  }
+]

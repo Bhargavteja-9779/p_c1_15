@@ -3045,12 +3045,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 10,
       "started": "2026-11-24T22:57:32+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-24T22:58:57+00:00",
+      "seconds": 85.3
     },
     {
       "id": "E0_sentry_law_naive_model_s0",
@@ -3065,10 +3067,15 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 2,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T23:01:21+00:00",
+      "worker": 1,
+      "log": [
+        "2026-11-24T23:01:21+00:00 reset running->pending on restart"
+      ]
     },
     {
       "id": "E0_sentry_law_lagakos_base_s0",
@@ -3083,7 +3090,7 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 2,
       "cycle": 1,
       "priority": 10,
@@ -3091,7 +3098,9 @@
       "worker": 0,
       "log": [
         "2026-11-24T22:57:32+00:00 reset running->pending on restart"
-      ]
+      ],
+      "finished": "2026-11-24T22:58:44+00:00",
+      "seconds": 72.4
     },
     {
       "id": "E0_sentry_law_naive_base_s0",
@@ -3106,10 +3115,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T22:59:56+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T23:01:01+00:00",
+      "seconds": 65.0
     },
     {
       "id": "E0_sentry_nowait_s1",
@@ -3324,10 +3337,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T22:58:45+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T23:00:04+00:00",
+      "seconds": 79.2
     },
     {
       "id": "E0_sentry_law_naive_model_s1",
@@ -3342,10 +3359,15 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 2,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T23:01:21+00:00",
+      "worker": 2,
+      "log": [
+        "2026-11-24T23:01:21+00:00 reset running->pending on restart"
+      ]
     },
     {
       "id": "E0_sentry_law_lagakos_base_s1",
@@ -3360,7 +3382,7 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 2,
       "cycle": 1,
       "priority": 10,
@@ -3368,7 +3390,9 @@
       "worker": 2,
       "log": [
         "2026-11-24T22:57:32+00:00 reset running->pending on restart"
-      ]
+      ],
+      "finished": "2026-11-24T22:58:45+00:00",
+      "seconds": 72.5
     },
     {
       "id": "E0_sentry_law_naive_base_s1",
@@ -3383,10 +3407,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T23:00:04+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T23:01:08+00:00",
+      "seconds": 64.2
     },
     {
       "id": "E0_sentry_nowait_s2",
@@ -3601,10 +3629,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T22:58:57+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T23:00:21+00:00",
+      "seconds": 83.4
     },
     {
       "id": "E0_sentry_law_naive_model_s2",
@@ -3637,15 +3669,17 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 1,
+      "status": "done",
+      "attempts": 2,
       "cycle": 1,
       "priority": 10,
-      "started": "2026-11-24T03:35:52+00:00",
+      "started": "2026-11-24T22:58:44+00:00",
       "worker": 0,
       "log": [
         "2026-11-24T22:58:06+00:00 manual reset: orphaned by stale-own-worker restart bug"
-      ]
+      ],
+      "finished": "2026-11-24T22:59:56+00:00",
+      "seconds": 71.6
     },
     {
       "id": "E0_sentry_law_naive_base_s2",
@@ -3660,10 +3694,1095 @@
         "experiment": "E0",
         "split": "dev"
       },
+      "status": "running",
+      "attempts": 2,
+      "cycle": 1,
+      "priority": 10,
+      "started": "2026-11-24T23:01:21+00:00",
+      "worker": 0,
+      "log": [
+        "2026-11-24T23:01:21+00:00 reset running->pending on restart"
+      ]
+    },
+    {
+      "id": "E0_fabric_odasc_W15_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 15,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W15",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
       "status": "pending",
       "attempts": 0,
       "cycle": 1,
-      "priority": 10
+      "priority": 11
+    },
+    {
+      "id": "E0_fabric_odasc_W30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_fabric_odasc_W60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 60,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W60",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_fabric_odasc_W90_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 90,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W90",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_fabric_odasc_W180_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 180,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W180",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_fabric_odasc_W15_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 15,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W15",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_fabric_odasc_W30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_fabric_odasc_W60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 60,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W60",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_fabric_odasc_W90_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 90,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W90",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_fabric_odasc_W180_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 180,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W180",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_fabric_odasc_W15_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 15,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W15",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_fabric_odasc_W30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_fabric_odasc_W60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 60,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W60",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_fabric_odasc_W90_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 90,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W90",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_fabric_odasc_W180_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 180,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W180",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_neutron_odasc_W15_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 15,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W15",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_neutron_odasc_W30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_neutron_odasc_W60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 60,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W60",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_neutron_odasc_W90_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 90,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W90",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_neutron_odasc_W180_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 180,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W180",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_neutron_odasc_W15_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 15,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W15",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_neutron_odasc_W30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_neutron_odasc_W60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 60,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W60",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_neutron_odasc_W90_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 90,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W90",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_neutron_odasc_W180_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 180,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W180",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_neutron_odasc_W15_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 15,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W15",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_neutron_odasc_W30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_neutron_odasc_W60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 60,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W60",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_neutron_odasc_W90_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 90,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W90",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_neutron_odasc_W180_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 180,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W180",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_nova_odasc_W15_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 15,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W15",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_nova_odasc_W30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_nova_odasc_W60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 60,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W60",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_nova_odasc_W90_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 90,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W90",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_nova_odasc_W180_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 180,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W180",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_nova_odasc_W15_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 15,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W15",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_nova_odasc_W30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_nova_odasc_W60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 60,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W60",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_nova_odasc_W90_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 90,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W90",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_nova_odasc_W180_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 180,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W180",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_nova_odasc_W15_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 15,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W15",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_nova_odasc_W30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_nova_odasc_W60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 60,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W60",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_nova_odasc_W90_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 90,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W90",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_nova_odasc_W180_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 180,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W180",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_sentry_odasc_W15_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 15,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W15",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_sentry_odasc_W30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_sentry_odasc_W60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 60,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W60",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_sentry_odasc_W90_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 90,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W90",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_sentry_odasc_W180_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 180,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W180",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_sentry_odasc_W15_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 15,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W15",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_sentry_odasc_W30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_sentry_odasc_W60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 60,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W60",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_sentry_odasc_W90_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 90,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W90",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_sentry_odasc_W180_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 180,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W180",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_sentry_odasc_W15_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 15,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W15",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_sentry_odasc_W30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_sentry_odasc_W60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 60,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W60",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_sentry_odasc_W90_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 90,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W90",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
+    },
+    {
+      "id": "E0_sentry_odasc_W180_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 180,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W180",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 11
     }
   ]
 }

@@ -28,3 +28,15 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-24T03:35:03+00:00** — User allowed Frontiers journals; checked Frontiers in AI (median 78 d), Big Data (74 d), Computer Science (100 d)
   - Reason: None faster than JKSU-CIS (71–74 d) and quartiles UNVERIFIED -> keep JKSU-CIS (journal_selection/journal_comparison.md addendum)
+
+- **2026-11-24T23:02:09+00:00** — Liu et al. 2024a (PU learning for JIT-SDP, EMSE 29(5):98) marked UNVERIFIED / not found
+  - Reason: 8 searches in Crossref/OpenAlex incl. EMSE 2024 listing found no such paper; EMSE 29(4):98 is an unrelated paper. Not used as prior art or reference unless a resolvable DOI appears.
+
+- **2026-11-24T23:02:09+00:00** — plan_v2: add ODaSC-style baseline (batch adaptation: kNN label confidence at labelling time, delta=0.9, k=50, pool=5000 recent labelled commits) tuned over W in {15,30,60,90,180} on dev = 5 configs, same budget as wait/orb
+  - Reason: ODaSC is the closest prior work (same noise, same data); Rule 6 requires strongest baselines with equal tuning budget. Exact DenStream/Hoeffding OOB reimplementation is outside our shared-learner protocol; adaptation keeps its label-confidence rule on the shared LightGBM learner and is described as an adaptation.
+
+- **2026-11-24T23:02:09+00:00** — plan_v2: LAW configuration for E1 chosen on dev from its 4 E0 variants (best mean dev G-mean), instead of the plan_v1 pre-specified lagakos+model
+  - Reason: Equal treatment: baselines pick W from 5 configs on dev; plan_v1 tuning_budget already allowed <=5 configs per method. Decided before any test-project run; partial E0 shows lagakos+model unstable (std .095).
+
+- **2026-11-24T23:02:09+00:00** — Runner fix: a restarted worker now resets its own stale 'running' jobs
+  - Reason: After the account handoff, E0_sentry_law_lagakos_base_s2 stayed 'running' forever because worker 0 holds its own lock and looked alive.

@@ -419,6 +419,70 @@
         "W2404969801"
       ],
       "time": "2026-11-24T03:25:23+00:00"
+    },
+    {
+      "claim": "C1_latency_weighting",
+      "query": "Positive and unlabeled learning for just-in-time defect prediction (exact title)",
+      "source": "Crossref query.bibliographic + filter issn 1382-3256",
+      "n_results_total": null,
+      "note": "no match; EMSE 29(4):98 = 10.1007/s10664-024-10474-4 'An empirical study of challenges in ML asset management' (unrelated)",
+      "time": "2026-11-24T23:02:09+00:00"
+    },
+    {
+      "claim": "C1_latency_weighting",
+      "query": "positive unlabeled just-in-time defect prediction",
+      "source": "Crossref query.title",
+      "n_results_total": null,
+      "note": "no PU+JIT paper in top 10",
+      "time": "2026-11-24T23:02:09+00:00"
+    },
+    {
+      "claim": "C1_latency_weighting",
+      "query": "title.search:positive unlabeled AND title.search:just-in-time",
+      "source": "OpenAlex filter",
+      "n_results_total": 0,
+      "note": "zero indexed works",
+      "time": "2026-11-24T23:02:09+00:00"
+    },
+    {
+      "claim": "C1_latency_weighting",
+      "query": "PU learning just-in-time defect",
+      "source": "OpenAlex search 2023-2026",
+      "n_results_total": null,
+      "note": "no relevant hit",
+      "time": "2026-11-24T23:02:09+00:00"
+    },
+    {
+      "claim": "C1_latency_weighting",
+      "query": "positive-unlabeled just-in-time",
+      "source": "OpenAlex search 2023-2026",
+      "n_results_total": null,
+      "note": "no SE hit",
+      "time": "2026-11-24T23:02:09+00:00"
+    },
+    {
+      "claim": "C1_latency_weighting",
+      "query": "PU learning defect prediction",
+      "source": "OpenAlex search 2023-2026",
+      "n_results_total": null,
+      "note": "only industrial/insulator defect detection",
+      "time": "2026-11-24T23:02:09+00:00"
+    },
+    {
+      "claim": "C1_latency_weighting",
+      "query": "unlabeled changes just-in-time defect prediction",
+      "source": "OpenAlex search 2023-2026",
+      "n_results_total": null,
+      "note": "no PU/latency method; noted 10.1007/s11219-026-09796-x 'Quantifying SZZ-induced evaluation bias in JIT-SDP' (2026) to open",
+      "time": "2026-11-24T23:02:09+00:00"
+    },
+    {
+      "claim": "C1_latency_weighting",
+      "query": "EMSE 2024 (Mar-Dec) full listing, titles containing 'unlabel'/'PU'",
+      "source": "Crossref journals/1382-3256 (159 items)",
+      "n_results_total": 159,
+      "note": "none",
+      "time": "2026-11-24T23:02:09+00:00"
     }
   ],
   "papers_opened": [
@@ -428,7 +492,8 @@
       "opened": "full text (literature/pdfs/Song_IJCNN2022.pdf)",
       "does": "Estimates label confidence of waiting-time-labelled clean examples from DenStream micro-cluster class composition in feature space; confidence modulates OOB sampling rate; 14 SDP datasets (Cabral data); 30 runs",
       "does_not": "Use elapsed time / discovery-delay distribution; use commits younger than W; correct right truncation",
-      "threat": "HIGH - closest prior work; must be a baseline or explicitly differentiated"
+      "threat": "HIGH - closest prior work; must be a baseline or explicitly differentiated",
+      "detail_read_2026_11_24": "Sec. VI: first 10k commits/project, Hoeffding-tree OOB, params tuned on first 2k commits, W=15 reported, fading-factor (0.99) prequential G-mean, 30 runs; Table II G-mean ODaSC vs OOB ~0.46-0.70 (text extraction of the ODaSC column is garbled; OOB column: Brackets .6367, Fabric .5799, Nova .6303, Tomcat .4944). Ambiguous clean examples (confidence < delta in {0.8,0.9}) counted as both classes."
     },
     {
       "doi": "10.1109/ICSE-Companion? see W2955232136 / 10.1109/icse.2019.00076",
@@ -465,10 +530,10 @@
       "closest_prior": [
         "ODaSC (Song et al. IJCNN 2022)",
         "DEFUSE/ES-DFM/FSIW (CVR delayed feedback)",
-        "Liu et al. 2024a PU learning for JIT-SDP, Empir Softw Eng 29(5):98 \u2014 NOT YET OPENED"
+        "Liu et al. 2024a 'PU learning for JIT-SDP' (cited by MSTDP, JKSU-CIS 2026) \u2014 UNVERIFIED: not found in Crossref/OpenAlex/EMSE listing (8 searches, 2026-11-24); treated as non-existent/miscited until a resolvable DOI is found"
       ],
       "exact_difference": "ODaSC derives label confidence from feature-space micro-clusters for examples already labelled clean after W days; LAW derives it from commit age via a right-truncation-corrected discovery-delay distribution combined with model risk, and also trains on commits younger than W. Difference vs CVR methods: domain transfer + truncation-aware nonparametric delay estimate (weaker).",
-      "status": "open \u2014 Liu 2024a must be read before any novelty claim; ODaSC should be added as a baseline (reimplementation) in plan_v2"
+      "status": "open \u2014 ODaSC-style baseline added (plan_v2); C1 claim stands or falls on E1 vs best baseline incl. ODaSC"
     },
     {
       "claim": "C2 (Type A/C): waiting time barely denoises labels; its effect is mainly class-composition shift of recent data",

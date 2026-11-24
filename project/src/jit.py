@@ -12,6 +12,10 @@ Label policies (`method`):
   nowait    : all commits, observed labels at face value
   wait      : positives as soon as found; clean only after W days (Cabral et al. 2019 framework)
   orb       : 'wait' + ORB-style class-weight boosting from the moving average of predictions
+  odasc     : ODaSC-style baseline (Song, Li, Minku & Yao, IJCNN 2022), batch adaptation: 'wait' labels;
+              when a commit is labelled clean (age >= W) its class-0 confidence alpha0 is computed once
+              from the labels of its k nearest recent labelled commits (stand-in for DenStream
+              micro-clusters); if alpha0 < delta it is counted as both class 0 and class 1.
   law       : latency-aware weighting (proposed): every provisionally-clean commit of age a is split
               into a positive copy with weight q and a negative copy with weight 1-q, where
               q = p S(a) / (1 - p + p S(a)), S(a)=P(not yet discovered at age a | defect-inducing),
@@ -74,7 +78,7 @@ def fit_lgb(X, y, w, seed, class_mult=(1.0, 1.0)):
 
 def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="lagakos",
              prior="model", orb_params=None, eval_end_gap_days=365, delay_scale=1.0, return_preds=False,
-             label_noise_log=False):
+             label_noise_log=False, odasc_delta=0.9, odasc_k=50, odasc_pool=5000):
     """df: one project's commits sorted by time (columns FEATS, t, y, t_found).
     delay_scale>1 stretches discovery delays (robustness: slower bug discovery)."""
     t0 = time.time()
@@ -88,6 +92,7 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
     prob = np.full(n, np.nan); pred = np.full(n, -1)
     model, oc = None, 1.0
     recent_preds = []; diag = []
+    alpha0 = np.full(n, np.nan)  # odasc: class-0 label confidence, fixed when a commit is labelled clean
     for start in range(warmup, n, update_every):
         T = t[start]; cmult = (1.0, 1.0)
         tr = np.where(t < T)[0]
@@ -102,6 +107,32 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
             Xi, yi, wi = X[tr][keep], found[keep].astype(int), np.ones(keep.sum())
             if method == "orb" and len(recent_preds) >= 10:
                 cmult = orb_factors(np.mean(recent_preds[-100:]), **(orb_params or {}))
+        elif method == "odasc":
+            keep = found | (age >= W)
+            Xi, yi = X[tr][keep], found[keep].astype(int)
+            cl = tr[keep & ~found]                       # labelled clean commits
+            new = cl[np.isnan(alpha0[cl])]               # just crossed W: confidence computed now, once
+            if len(new):
+                lab = tr[keep]; lab_lab = found[keep].astype(int)
+                # pool = most recent labelled commits whose label was known before this one was labelled
+                notnew = ~np.isin(lab, new); lab, lab_lab = lab[notnew], lab_lab[notnew]
+                pool = lab[-odasc_pool:]; pool_y = lab_lab[-odasc_pool:]
+                if pool_y.sum() >= 5 and len(pool) > odasc_k:
+                    from sklearn.neighbors import NearestNeighbors
+                    mu, sd = X[pool].mean(0), X[pool].std(0) + 1e-9
+                    nn = NearestNeighbors(n_neighbors=odasc_k).fit((X[pool] - mu) / sd)
+                    _, ind = nn.kneighbors((X[new] - mu) / sd)
+                    alpha0[new] = 1.0 - pool_y[ind].mean(1)
+                else:
+                    alpha0[new] = 1.0
+            amb = keep & ~found
+            amb[amb] = alpha0[tr[amb]] < odasc_delta    # low clean-confidence -> counted as both classes
+            Xi = np.vstack([Xi, X[tr][amb]]); yi = np.concatenate([yi, np.ones(amb.sum(), int)])
+            wi = np.ones(len(yi))
+            if label_noise_log:
+                truth = y[tr][amb]
+                diag.append(dict(T=T, frac_amb=float(amb.sum() / max((keep & ~found).sum(), 1)),
+                                 frac_amb_true_bug=float(truth.mean()) if len(truth) else np.nan))
         elif method == "law":
             pos_idx = tr[found]
             d_obs = (tf[pos_idx] - t[pos_idx]) / DAY; tau = (T - t[pos_idx]) / DAY

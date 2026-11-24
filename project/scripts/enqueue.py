@@ -22,6 +22,12 @@ def specs(exp):
                 J.append(dict(method="law", delay_est=de, prior=pr, variant=f"law_{de}_{pr}", project=p, seed=s))
         for j in J: j.update(experiment="E0", split="dev")
         return J, 10
+    if exp == "E0b":   # plan_v2: ODaSC-style baseline, same 5-config budget (W grid, delta=0.9)
+        for p, s in itertools.product(DEV, SE):
+            for W in WGRID:
+                J.append(dict(method="odasc", W=W, odasc_delta=0.9, variant=f"odasc_W{W}", project=p, seed=s))
+        for j in J: j.update(experiment="E0", split="dev")
+        return J, 11
     if exp in ("E1", "E2", "E3"):
         fz = read_json(STATE / "frozen_config.json")
         assert fz, "frozen_config.json missing: run scripts/freeze_config.py after E0"
