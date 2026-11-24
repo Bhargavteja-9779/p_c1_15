@@ -1,0 +1,21 @@
+[
+  {
+    "experiment": "E0",
+    "project": "nova",
+    "method": "oracle",
+    "variant": "oracle",
+    "seed": 1,
+    "split": "dev",
+    "gmean": 0.8384135195084852,
+    "r0": 0.8521768686462936,
+    "r1": 0.8248724596470687,
+    "rdiff": 0.027304408999224927,
+    "auc": 0.9251214280334131,
+    "mcc": 0.6388527134191507,
+    "n_eval": 44320,
+    "seconds": 206.25,
+    "job_id": "E0_nova_oracle_s1",
+    "written": "2026-11-24T04:38:04+00:00",
+    "cycle": 1
+  }
+]
