@@ -1,0 +1,21 @@
+[
+  {
+    "experiment": "E1",
+    "project": "zulip",
+    "method": "oracle",
+    "variant": "oracle",
+    "seed": 102,
+    "split": "test",
+    "gmean": 0.6862583092945229,
+    "r0": 0.7615081907202342,
+    "r1": 0.6184443881428934,
+    "rdiff": 0.14306380257734086,
+    "auc": 0.7644881204744784,
+    "mcc": 0.3543123585048635,
+    "n_eval": 14874,
+    "seconds": 28.35,
+    "job_id": "E1_zulip_oracle_s102",
+    "written": "2026-11-24T14:11:29+00:00",
+    "cycle": 1
+  }
+]
