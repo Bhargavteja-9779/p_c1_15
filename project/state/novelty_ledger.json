@@ -419,6 +419,49 @@
         "W2404969801"
       ],
       "time": "2026-11-24T03:25:23+00:00"
+    },
+    {
+      "claim": "C1_latency_weighting",
+      "query": "Positive and unlabeled learning for just-in-time defect prediction (exact title)",
+      "source": "Crossref query.title",
+      "n_results_total": null,
+      "result": "no matching record",
+      "time": "2026-11-24T19:48:43+00:00"
+    },
+    {
+      "claim": "C1_latency_weighting",
+      "query": "positive unlabeled just-in-time defect prediction, ISSN 1382-3256 (EMSE)",
+      "source": "Crossref filter issn",
+      "result": "no PU-learning JIT paper; EMSE 29(4):98 is 10.1007/s10664-024-10474-4 (ML asset management) -> citation 29(5):98 does not resolve",
+      "time": "2026-11-24T19:48:43+00:00"
+    },
+    {
+      "claim": "C1_latency_weighting",
+      "query": "EMSE 2024-01..2025-03 full listing filtered for 'unlabel' / 'just-in-time'",
+      "source": "Crossref journal works (218 records)",
+      "result": "no PU paper",
+      "time": "2026-11-24T19:48:43+00:00"
+    },
+    {
+      "claim": "C1_latency_weighting",
+      "query": "positive unlabeled just-in-time defect",
+      "source": "OpenAlex search",
+      "result": "no PU JIT paper in top 15; found Bludau & Pretschner 2026 SQJ (SZZ evaluation bias) and Tran et al. arXiv 2611.05013 (JIT-VP labeling strategies)",
+      "time": "2026-11-24T19:48:43+00:00"
+    },
+    {
+      "claim": "C1_latency_weighting",
+      "query": "\"Positive and unlabeled learning\" \"just-in-time\" defect prediction Empirical Software Engineering 2024 Liu",
+      "source": "web search (standard)",
+      "result": "not found",
+      "time": "2026-11-24T19:48:43+00:00"
+    },
+    {
+      "claim": "C1_latency_weighting",
+      "query": "Liu Li Yu \"positive and unlabeled\" \"defect prediction\" commits PU learning 2024",
+      "source": "web search (extended)",
+      "result": "not found; nearest: PILOT (ASE 2023, PU for vulnerability detection)",
+      "time": "2026-11-24T19:48:43+00:00"
     }
   ],
   "papers_opened": [
@@ -457,6 +500,38 @@
       "opened": "abstract",
       "does": "Nonparametric delay distribution jointly with CVR",
       "does_not": "JIT-SDP"
+    },
+    {
+      "doi": "10.1007/s11219-026-09796-x",
+      "title": "Quantifying SZZ-induced evaluation bias in just-in-time defect prediction (Bludau & Pretschner, SQJ 2026)",
+      "opened": "abstract (OpenAlex)",
+      "does": "Manual ground truth for 420 commits/6 projects; PR-SZZ ~12% wrong labels, mostly false positives; recall drops 0.72->0.64 under manual labels",
+      "does_not": "Verification latency / delay-aware training",
+      "threat": "LOW; relevant as threat-to-validity reference (final labels are themselves SZZ-noisy)"
+    },
+    {
+      "doi": "10.48550/arXiv.2611.05013",
+      "title": "One Strategy Does Not Fit All: Rethinking Data Labeling for JIT Vulnerability Prediction (Tran et al. 2026)",
+      "opened": "abstract page",
+      "does": "28 labelling-strategy datasets for JIT-VP (OpenSSL, Linux)",
+      "does_not": "Delay modelling, age weighting, PU",
+      "threat": "LOW"
+    },
+    {
+      "doi": "10.1109/IJCNN55064.2022.9891911",
+      "title": "ODaSC \u2014 second read (Sections IV-VII)",
+      "opened": "full text",
+      "does": "W=15 d reported; first 10k commits; grid over ensemble size/decay/delta on first 2000 commits; ODaSC > OOB (Holm p=0.0131); ODaSC vs ODaSC-opt (oracle confidence) n.s. p=0.7278",
+      "does_not": "Age/delay modelling; commits younger than W",
+      "threat": "HIGH (formulation pre-empted). Note: oracle label confidence did not beat estimated confidence -> consistent with our C2 (label noise is not the main driver)"
+    },
+    {
+      "doi": "UNVERIFIED",
+      "title": "Liu, Li & Yu 2024a 'Positive and unlabeled learning for just-in-time defect prediction', cited as Empir Softw Eng 29(5):98 by 10.1007/s44443-025-00401-y",
+      "opened": "NOT FOUND after 6 searches (Crossref title/journal, OpenAlex, web)",
+      "does": "UNVERIFIED",
+      "does_not": "UNVERIFIED",
+      "threat": "UNVERIFIED - the cited volume/issue/article points to a different EMSE paper; treated as a possibly mis-cited reference; re-search before writing the paper"
     }
   ],
   "claims": [
@@ -468,7 +543,7 @@
         "Liu et al. 2024a PU learning for JIT-SDP, Empir Softw Eng 29(5):98 \u2014 NOT YET OPENED"
       ],
       "exact_difference": "ODaSC derives label confidence from feature-space micro-clusters for examples already labelled clean after W days; LAW derives it from commit age via a right-truncation-corrected discovery-delay distribution combined with model risk, and also trains on commits younger than W. Difference vs CVR methods: domain transfer + truncation-aware nonparametric delay estimate (weaker).",
-      "status": "open \u2014 Liu 2024a must be read before any novelty claim; ODaSC should be added as a baseline (reimplementation) in plan_v2"
+      "status": "open \u2014 Liu 2024a could not be located (UNVERIFIED citation); ODaSC pre-empts the problem formulation, so C1 rests on the estimator + using commits younger than W; ODaSC to be added as baseline (plan_v2)"
     },
     {
       "claim": "C2 (Type A/C): waiting time barely denoises labels; its effect is mainly class-composition shift of recent data",

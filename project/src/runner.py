@@ -131,9 +131,9 @@ def run(mode="full", resume=True, only_kind=None, max_jobs=None, worker=0):
         th = threading.Thread(target=_heartbeat_thread, args=(stop_evt, budget, holder), daemon=True); th.start()
         with qlock(mode):
             q = load_queue(mode)
-            # resume: jobs left "running" by a dead worker go back to pending (resume from ckpt)
+            # resume: jobs left "running" by a dead worker -- or by a previous incarnation of THIS worker id -- go back to pending
             for j in q["jobs"]:
-                if j["status"] == "running" and not _worker_alive(mode, j.get("worker")):
+                if j["status"] == "running" and (j.get("worker") == worker or not _worker_alive(mode, j.get("worker"))):
                     j["status"] = "pending"; j.setdefault("log", []).append(f"{now_iso()} reset running->pending on restart")
             save_queue(mode, q)
         done_count = 0

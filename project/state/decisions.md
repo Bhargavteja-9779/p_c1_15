@@ -28,3 +28,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-24T03:35:03+00:00** — User allowed Frontiers journals; checked Frontiers in AI (median 78 d), Big Data (74 d), Computer Science (100 d)
   - Reason: None faster than JKSU-CIS (71–74 d) and quartiles UNVERIFIED -> keep JKSU-CIS (journal_selection/journal_comparison.md addendum)
+
+- **2026-11-24T19:48:44+00:00** — Liu et al. 2024a marked UNVERIFIED (citation does not resolve); not treated as pre-emption; re-search before writing
+  - Reason: 6 searches across Crossref/OpenAlex/web failed; EMSE 29 art. 98 is another paper
