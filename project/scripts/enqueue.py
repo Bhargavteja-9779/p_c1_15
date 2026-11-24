@@ -53,6 +53,24 @@ def specs(exp):
                     J.append(dict(method="odasc", W=W, theta=th, knn_k=20, variant=f"odasc_W{W}_t{th}", project=p, seed=s))
         for j in J: j.update(experiment="E0d", split="dev")
         return J, 13
+    if exp in ("E4", "E5", "E6"):   # plan_v5 test confirmation / ablation / robustness
+        fz = read_json(STATE / "frozen_config_v5.json"); assert fz, "run scripts/freeze_v5.py first"
+        lw = fz["lawm"]; _, mode, w = lw.split("_"); W = int(w[1:])
+        od = fz["odasc"]; _, ow, ot = od.split("_"); oW, th = int(ow[1:]), float(ot[1:])
+        L = dict(method="lawm", W=W, mode=mode, delay_est="lagakos")
+        O = dict(method="odasc", W=oW, theta=th, knn_k=20)
+        for p, s in itertools.product(TEST, SC):
+            if exp == "E4":
+                J += [dict(L, variant=lw, label_noise_log=True), dict(O, variant=od)]
+            if exp == "E5":
+                J += [dict(L, prior_src="online", variant=lw + "_abl_onlineprior"), dict(L, crossfit=False, variant=lw + "_abl_nocrossfit"),
+                      dict(L, use_S=False, variant=lw + "_abl_noS")]
+            if exp == "E6":
+                J += [dict(L, delay_scale=2.0, variant=lw + "_ds2"), dict(O, delay_scale=2.0, variant=od + "_ds2")]
+            k = {"E4": 2, "E5": 3, "E6": 2}[exp]
+            J[-k:] = [dict(j, project=p, seed=s) for j in J[-k:]]
+        for j in J: j.update(experiment=exp, split="test")
+        return J, {"E4": 14, "E5": 16, "E6": 15}[exp]
     if exp == "E3b":   # plan_v3 decomposition on test projects (pre-registered)
         for p, s in itertools.product(TEST, SC):
             for W in [30, 90]:

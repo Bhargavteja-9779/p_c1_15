@@ -28350,11 +28350,14 @@
         "split": "dev"
       },
       "status": "running",
-      "attempts": 1,
+      "attempts": 2,
       "cycle": 2,
       "priority": 14,
-      "started": "2026-11-24T17:49:48+00:00",
-      "worker": 0
+      "started": "2026-11-24T18:42:03+00:00",
+      "worker": 2,
+      "log": [
+        "2026-11-24T18:42:03+00:00 reset running->pending on restart"
+      ]
     },
     {
       "id": "E0d_nova_odasc_W30_t0.8_s1",
@@ -28440,11 +28443,14 @@
         "split": "dev"
       },
       "status": "running",
-      "attempts": 1,
+      "attempts": 2,
       "cycle": 2,
       "priority": 14,
-      "started": "2026-11-24T17:49:51+00:00",
-      "worker": 2
+      "started": "2026-11-24T18:42:03+00:00",
+      "worker": 0,
+      "log": [
+        "2026-11-24T18:42:03+00:00 reset running->pending on restart"
+      ]
     },
     {
       "id": "E0d_nova_odasc_W30_t0.8_s2",
@@ -28530,11 +28536,14 @@
         "split": "dev"
       },
       "status": "running",
-      "attempts": 1,
+      "attempts": 2,
       "cycle": 2,
       "priority": 14,
-      "started": "2026-11-24T17:50:12+00:00",
-      "worker": 1
+      "started": "2026-11-24T18:42:04+00:00",
+      "worker": 1,
+      "log": [
+        "2026-11-24T18:42:03+00:00 reset running->pending on restart"
+      ]
     },
     {
       "id": "E0d_sentry_odasc_W30_t0.8_s0",
