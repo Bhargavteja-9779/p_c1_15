@@ -46,3 +46,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-24T21:31:18+00:00** — plan_v3: add fixed-rate threshold baseline (Pessoa 2021) with 25-config dev grid (E0c, 300 runs)
   - Reason: Prior-art search found rate-driven threshold choice in online JIT-SDP; closest prior work to calibration must be a baseline
+
+- **2026-11-24T21:33:05+00:00** — plan_v4: dev selection on {fabric, neutron, sentry}; pending nova dev jobs cancelled (skipped_plan); test runs move to cycle 2
+  - Reason: Measured cost: nova runs 250-290 s; full dev grid would need ~25 CPU-h vs 15 h cycle budget

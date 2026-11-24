@@ -1,0 +1,8 @@
+# plan_v4 — 2026-11-24 21:35 UTC (cycle 1), BEFORE any test-project run. Amends plan_v3 for compute reasons only.
+# Measured cost: nova (48,937 commits) runs take ~250-290 s for LAW vs 18-76 s on the other dev projects; with nova the
+# E0b+E0c dev grid needs ~25 CPU-h (> 15 h cycle budget, 2.1 h already used).
+version: 4
+change: "Dev selection for ALL families (E0, E0b, E0c) uses dev projects {fabric, neutron, sentry}; pending nova jobs
+         of E0/E0b/E0c are cancelled (status skipped_plan). Nova E0 runs already done stay in the results as descriptive."
+unchanged: "everything else in plan_v3 (test projects, seeds, proposed config, baselines, statistics)"
+consequence: "E1v3/E2v3/E3v3 on test projects run in cycle 2 (new 15 CPU-h budget)."

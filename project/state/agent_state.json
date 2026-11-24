@@ -2,12 +2,12 @@
   "status": "RUNNING",
   "cycle": 1,
   "phase": "PHASE5_RUN",
-  "step": "E0 rest + E0b + E0c (fixed-rate baseline) running",
+  "step": "Dev grids E0b (calibration, fsc) + E0c (fixed-rate) running on fabric/neutron/sentry (plan_v4)",
   "pivots": 0,
   "topic_id": null,
   "journal": "JKSU-CIS (Springer Nature, ISSN 1319-1578, IF 6.4 2025; turnaround median 71\u201374 d, marginal)",
-  "last_action": "plan_v3 (fixed-rate baseline, Pessoa 2021) written, E0c enqueued; workers restarted",
-  "next_action": "1) python scripts/status.py; if workers dead: bash scripts/launch_runner.sh 3. 2) While E0/E0b run: prior-art work for G2 (>=30 papers opened; claims now: threshold-calibration under verification latency, waiting-time-as-operating-point insight); log in state/novelty_ledger.json. 3) When E0+E0b done: update scripts/freeze_config.py for plan_v2 (wait/orb/fsc W*, wait+lat W*, fsc+lat W*), run it, extend scripts/enqueue.py E1/E2/E3 per plan_v2, enqueue and launch. 4) Then scripts/final_report.py, statistics, gates.",
+  "last_action": "plan_v4: nova dropped from dev grids for compute; freeze_config_v3.py and E1v3/E2v3/E3v3 specs written",
+  "next_action": "1) python scripts/status.py; relaunch workers if dead (bash scripts/launch_runner.sh 3). 2) When queue has no pending E0b/E0c jobs: python scripts/freeze_config_v3.py --allow-partial (nova excluded by plan_v4) -> state/frozen_config_v3.json; write journal RESULT entry on dev results (H2 a/b). 3) Cycle 2 starts (budget): update agent_state cycle=2, then python scripts/enqueue.py E1v3 / E2v3 / E3v3 and launch; then scripts/final_report.py (extend for v3 statistics). 4) Prior-art: integrate background reading of 10 papers into state/novelty_ledger.json (G2 needs >=30 opened).",
   "config": {
     "TARGET_TIER": "Q1 journal (JCR), reputable publisher",
     "MAX_DAYS_SUBMIT_TO_ACCEPT": 72,
@@ -29,7 +29,7 @@
     ]
   },
   "seeds_confirm_fixed_at": "2026-11-24 (project start; never change)",
-  "updated": "2026-11-24T21:31:18+00:00",
+  "updated": "2026-11-24T21:33:13+00:00",
   "topic": "Verification-latency-aware online JIT-SDP: latency-aware weighting (LAW) of provisionally-clean commits",
   "hypothesis": "LAW beats the best tuned waiting-time baseline by >=0.02 G-mean on 10 held-out projects (Holm p<0.05)"
 }

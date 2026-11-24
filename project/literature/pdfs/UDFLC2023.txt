@@ -1,0 +1,849 @@
+                                                                    Unbiased Delayed Feedback Label Correction
+                                                                          for Conversion Rate Prediction
+                                                               Yifan Wang                                                    Peijie Sun                                  Min Zhang∗
+                                               DCST, BNRist, Tsinghua University                           DCST, BNRist, Tsinghua University                DCST, BNRist, Tsinghua University
+                                                       Beijing, China                                               Beijing, China                                   Beijing, China
+                                               yf-wang21@mails.tsinghua.edu.cn                                   sun.hfut@gmail.com                               z-m@tsinghua.edu.cn
+
+                                                               Qinglin Jia                                                   Jingjie Li                                 Shaoping Ma
+                                                      Noah’s Ark Lab, Huawei                                       Noah’s Ark Lab, Huawei                   DCST, BNRist, Tsinghua University
+                                                            Beijing, China                                              Beijing, China                              Beijing, China
+                                                      jiaqinglin2@huawei.com                                       lijingjie1@huawei.com                         msp@tsinghua.edu.cn
+arXiv:2307.12756v1 [cs.IR] 24 Jul 2023
+
+
+
+
+                                         ABSTRACT                                                                                    Discovery and Data Mining (KDD ’23), August 6–10, 2023, Long Beach, CA,
+                                         Conversion rate prediction is critical to many online applications                          USA. ACM, New York, NY, USA, 11 pages. https://doi.org/10.1145/3580305.
+                                                                                                                                     3599536
+                                         such as digital display advertising. To capture dynamic data dis-
+                                         tribution, industrial systems often require retraining models on
+                                         recent data daily or weekly. However, the delay of conversion be-
+                                         havior usually leads to incorrect labeling, which is called delayed                         1    INTRODUCTION
+                                         feedback problem. Existing work may fail to introduce the correct
+                                                                                                                                     Predicting the probability of users clicking or converting on ads or
+                                         information about false negative samples due to data sparsity and
+                                                                                                                                     items is critical to many online applications, such as digital display
+                                         dynamic data distribution. To directly introduce the correct feed-
+                                                                                                                                     advertising and recommender systems. Take online advertising as
+                                         back label information, we propose an Unbiased delayed feedback
+                                                                                                                                     an example. Generally, ad delivery platforms provide advertisers
+                                         Label Correction framework (ULC), which uses an auxiliary model
+                                                                                                                                     with several optional billing models, such as Cost Per thousand
+                                         to correct labels for observed negative feedback samples. Firstly,
+                                                                                                                                     iMpressions (CPM), Cost Per Click (CPC) and Cost Per Acquisition
+                                         we theoretically prove that the label-corrected loss is an unbiased
+                                                                                                                                     (CPA), in which CPA is preferred as the conversion is closer to
+                                         estimate of the oracle loss using true labels. Then, as there are no
+                                                                                                                                     advertisers’ profits. For the CPA model, predicting the click rate
+                                         ready training data for label correction, counterfactual labeling is
+                                                                                                                                     and conversion rate of users to the placed advertisements is the
+                                         used to construct artificial training data. Furthermore, since coun-
+                                                                                                                                     key to achieving more revenue, which are also known as the Click-
+                                         terfactual labeling utilizes only partial training data, we design
+                                                                                                                                     Through Rate (CTR) and Conversion Rate (CVR) prediction tasks.
+                                         an embedding-based alternative training method to enhance per-
+                                                                                                                                     These two tasks have received increasing attention from industry
+                                         formance. Comparative experiments on both public and private
+                                                                                                                                     and academia in recent years [5, 30, 32].
+                                         datasets and detailed analyses show that our proposed approach
+                                                                                                                                        Model freshness is important for CTR and CVR prediction mod-
+                                         effectively alleviates the delayed feedback problem and consistently
+                                                                                                                                     els as user interests change dynamically. A common strategy to
+                                         outperforms the previous state-of-the-art methods.
+                                                                                                                                     keep fresh in the industry is to retrain the model daily or weekly
+                                                                                                                                     on all collected data. This simple strategy can be effective for CTR
+                                         CCS CONCEPTS
+                                                                                                                                     prediction. However, the delay of conversion behavior makes it
+                                         • Information systems → Online advertising; Recommender                                     challenging to ensure the freshness of CVR models, which is called
+                                         systems.                                                                                    Delayed Feedback Problem. Unlike click behavior happening quickly
+                                                                                                                                     within minutes of impression, conversions occur much more slowly
+                                         KEYWORDS                                                                                    after days, sometimes taking up to weeks [2]. This leads that the
+                                         CVR prediction; Delayed Feedback; Feedback Label Correction                                 ground truth of recently clicked but unconverted samples is un-
+                                         ACM Reference Format:                                                                       known as they may convert in the future.
+                                         Yifan Wang, Peijie Sun, Min Zhang, Qinglin Jia, Jingjie Li, and Shaoping Ma.                   A vanilla solution is to treat all these unconverted samples as
+                                         2023. Unbiased Delayed Feedback Label Correction for Conversion Rate                        negative feedback, which will cause some positive samples (i.e., real
+                                         Prediction. In Proceedings of the 29th ACM SIGKDD Conference on Knowledge                   conversions) to be mislabeled, leading to the false negative problem.
+                                         ∗ Corresponding author                                                                      These mislabeled samples can significantly damage the performance
+                                                                                                                                     of the CVR prediction model as they are important to the model
+                                         Permission to make digital or hard copies of part or all of this work for personal or       freshness. Another obvious solution is to wait for a long time until
+                                         classroom use is granted without fee provided that copies are not made or distributed       the labels are accurate enough. However, this means that the data
+                                         for profit or commercial advantage and that copies bear this notice and the full citation
+                                         on the first page. Copyrights for third-party components of this work must be honored.      is old, which conflicts with the purpose of keeping models fresh.
+                                         For all other uses, contact the owner/author(s).                                            Thus, the delayed feedback problem reflects a trade-off between
+                                         KDD ’23, August 6–10, 2023, Long Beach, CA, USA                                             model freshness and label correctness. Therefore, handling fresh
+                                         © 2023 Copyright held by the owner/author(s).
+                                         ACM ISBN 979-8-4007-0103-0/23/08.                                                           unconverted data with unknown labels is an important challenge
+                                         https://doi.org/10.1145/3580305.3599536                                                     for CVR prediction.
+KDD ’23, August 6–10, 2023, Long Beach, CA, USA                                                                                      Yifan Wang et al.
+
+
+    Existing methods for the delayed feedback problem can be clas-           2 RELATED WORK
+sified into two types based on the problem setting: online training
+                                                                             2.1 CVR Prediction
+[3, 4, 7, 10, 11, 24, 25, 31] and offline training [2, 16, 27, 28]. In the
+online setting, when new user behaviors are logged, the model is             The CVR prediction task shares many similarities with the widely
+immediately updated on the new data to keep it fresh. In the offline         studied CTR prediction task. They both predict the probability of
+setting, the model is retrained daily or weekly on all collected data        a user performing a certain behavior on an ad or an item. Besides,
+to ensure freshness. Industrial systems often choose the appropri-           their inputs are generally the same. Generally, the model structure
+ate training setting based on their business requirements [4]. The           designed for the CTR task can also be applied to CVR prediction.
+methods under different settings are quite different, and here we            Thus, existing research on CVR prediction focuses more on the
+only focus on the offline training.                                          differences between CVR and CTR.
+    To our knowledge, DFM [2] first studied the delayed feedback                 There are three main challenges for CVR prediction. First, the
+problem. They propose to explicitly model delay time with delay              data for the CVR task are often more sparse than the CTR task. Ex-
+distribution assumptions. However, the actual delay may not obey             isting research mitigates this problem through multi-task learning
+the assumptions, which leads to its suboptimal performance. Recent           [9, 14] and pre-training [18]. Second, CVR prediction suffers from
+work [26, 27] in offline learning attempts to construct unbiased             selection bias. The CVR prediction model is trained on click samples
+estimates of the oracle loss that uses true labels to alleviate the          but infers for all exposure samples during inference. Differences
+delayed feedback problem. However, although these methods are                in exposure distribution and click distribution lead to selection
+theoretically unbiased, we argue that they may fail to introduce the         bias, which existing work addresses through entire sample space
+correct information about false negative samples, as they do not             modeling [13, 19, 22, 23], inverse propensity score [1, 29], and dou-
+construct the correct samples corresponding to these mislabeled              bly robust methods [6, 15]. Third, conversions do not happen as
+samples.                                                                     immediately as clicks, with some conversions taking days or even a
+    In this paper, we aim to address the delayed feedback prob-              week. This could result in some positive samples that have not yet
+lem in CVR prediction through label correction. We theoretically             converted being incorrectly treated as negative samples. Existing
+prove that if the label of the observed unconverted samples can              studies address it by delay time modeling [2, 21, 28] or importance
+be corrected to its probability of being a false negative sample, the        sampling [4, 27], which we will detail in Session 2.2. In this work,
+label-corrected loss will be an unbiased estimate of the oracle loss         we focus on the third challenge, the delayed feedback problem, and
+that uses true labels. Compared to existing unbiased methods for             leave the extension of our method to other problems for future
+delayed feedback, the advantage of label correction is that it directly      work.
+complements the information of the correct samples corresponding
+to the false negative samples. Further, we attempt to train a label          2.2    Delayed Feedback
+correction (LC) model to correct the labels for the observed uncon-          Here we only focus on the delayed feedback problem in the offline
+verted samples. If the LC model is accurate enough, the delayed              setting.
+feedback problem can be well addressed.                                          To our knowledge, the delayed feedback problem was first stud-
+    However, how to train an accurate LC model is non-trivial. Above         ied by DFM [2]. DFM models the delay time explicitly. It assumes
+all, there exist no ready training data for the LC model. We use             that the delay time obeys an exponential distribution and then
+a counterfactual labeling method to construct artificial training            optimizes the maximum likelihood of the currently observed data
+data by setting a counterfactual deadline. Nevertheless, counter-            labels. [28] extends this approach further by using a non-parametric
+factual labeling utilizes only partial training data. To enhance the         approach to modeling delay time. A drawback of the above methods
+performance of the LC model, we further designed an alternative              is that they try to optimize the observed conversion information
+learning method based on embedding transfer. To demonstrate the              instead of directly optimizing the true conversion information.
+effectiveness of our method, we conduct extensive experiments on                 In contrast to explicitly modeling delay time, recent work [26, 27]
+the public and private datasets. Experimental results show that our          attempts to address the delay feedback problem by constructing
+method can effectively alleviate the delayed feedback problem. Our           unbiased estimates of the oracle loss that uses true labels. FSIW
+main contributions can be summarized as follows.                             [27] leverages importance sampling to construct an unbiased loss.
+                                                                             Intuitively, it increases the weight of observed positive samples and
+                                                                             decreases the weight of potentially negative samples as these sam-
+                                                                             ples may be mislabeled. Besides, nnDF [26] assumes that the labels
+                                                                             of samples before a time window are accurate and then uses these
+• To the best of our knowledge, it is the first work in the offline          samples to correct for the biased loss of the whole training data.
+  training setting to use an unbiased label correction approach to           A drawback of the above methods is that, despite their theoretical
+  solve the delayed feedback problem of CVR prediction.                      guarantee of unbias, they might fail to introduce information about
+• We give a theoretical analysis of unbiased label learning and              the correct positive sample for each specific false negative sample.
+  propose an alternative learning framework for CVR prediction               For FSIW, it only reduces the weight of the mislabeled samples but
+  to meet the delayed feedback challenge.                                    cannot introduce the information of the corrected sample, i.e., the
+• Comparative experimental results on both public and private                weight of the corresponding correct sample is still zero. For nnDF,
+  datasets demonstrate the effectiveness of our proposed frame-              it does not process recent samples, and therefore cannot introduce
+  work.                                                                      information about the correct samples among them. This problem
+Unbiased Delayed Feedback Label Correction
+for Conversion Rate Prediction                                                                                      KDD ’23, August 6–10, 2023, Long Beach, CA, USA
+
+
+is worse when the data distribution has changed recently. As the                  in the rest of this paper for simplicity, which does not influence the
+information about the false negative samples may differ from the                  correctness of our proof and method.
+past observed positive samples, only using the observed positive
+samples cannot complement the correct information about the fresh                 3.3     Vanilla and Oracle Loss
+false negative samples.                                                           Next, we introduce the two basic loss functions in the delayed
+   Unlike the above state-of-art approaches, we propose to correct                feedback problem. Note that CVR prediction is essentially a binary
+the label for each observed negative sample so that the information               classification problem. Generally, the cross-entropy loss is adopted
+of the correct sample can be introduced directly. Besides, it can also            for training the CVR model. Let 𝑓 (·; 𝜃 ) denote the CVR model with
+be proved theoretically that the label-corrected loss is an unbiased              trainable parameters 𝜃 . Suppose we can now foresee the future and
+estimate of the oracle loss.                                                      obtain an ideal dataset D ∗ , which contains 𝑐𝑖 for each sample. Then
+                                                                                  the cross-entropy loss can be written as:
+3 PRELIMINARIES
+                                                                                                           |D | ∗
+3.1 Notations                                                                                          1 ∑︁
+                                                                                  L𝑜𝑟𝑎𝑐𝑙𝑒 (D ∗ ) =      ∗       (𝑐𝑖 log 𝑓 (𝑥𝑖 ; 𝜃 ) + (1 − 𝑐𝑖 ) log(1 − 𝑓 (𝑥𝑖 ; 𝜃 ))) ,
+In online advertising platforms, the user behaviors for the dis-                                     |D | 𝑖=1
+play ads are logged to train the CVR prediction model. Suppose                                                                                               (1)
+we collect training data D at timestamp 𝑇 , i.e., we can obtain                      Equation (1) is called the oracle loss L𝑜𝑟𝑎𝑐𝑙𝑒 as we suppose the
+all the user behaviors and corresponding features before 𝑇 . Let                  final conversion label 𝑐𝑖 for each click record is available.
+D = {(𝑥𝑖 , 𝑣𝑖 , 𝑒𝑖 , 𝑐𝑡𝑠𝑖 , 𝑐𝑣𝑡𝑖 ) , 𝑖 = 1, 2, ...}. The notation 𝑖 denotes the      However, in practice, we cannot obtain the oracle label 𝑐𝑖 for
+𝑖-th sample. Each sample represents a click record of users. For the              each sample at the data collection timestamp 𝑇 . If we ignore the
+𝑖-th sample (𝑥𝑖 , 𝑣𝑖 , 𝑒𝑖 , 𝑐𝑡𝑠𝑖 , 𝑐𝑣𝑡𝑖 ), 𝑥𝑖 denotes the feature information     delayed feedback and replace the oracle label 𝑐𝑖 with the observed
+of this sample. 𝑐𝑡𝑠𝑖 denotes the click timestamp. 𝑣𝑖 is a binary value            label 𝑣𝑖 , we can get the vanilla loss L𝑣𝑎𝑛𝑖𝑙𝑙𝑎 for CVR model training:
+that denotes whether the clicked ad has a further conversion before
+                                                                                                          |D|
+the observed timestamp 𝑇 . If 𝑣𝑖 = 1, 𝑐𝑣𝑡𝑖 will record the correspond-                             1 ∑︁
+ing conversion timestamp. Otherwise, 𝑐𝑣𝑡𝑖 is empty. 𝑒𝑖 denotes the                L𝑣𝑎𝑛𝑖𝑙𝑙𝑎 (D) =          (𝑣𝑖 log 𝑓 (𝑥𝑖 ; 𝜃 ) + (1 − 𝑣𝑖 ) log(1 − 𝑓 (𝑥𝑖 ; 𝜃 ))) .
+                                                                                                  |D| 𝑖=1
+time elapsed from 𝑐𝑡𝑠𝑖 to 𝑇 , i.e., 𝑇 − 𝑐𝑡𝑠𝑖 .                                                                                                             (2)
+   Let 𝑐𝑖 denote whether the 𝑖-th sample will finally lead to a conver-              Note that some samples may convert after the data collection
+sion. Note that we cannot wait forever for the possible conversion                timestamp 𝑇 . Obviously, the vanilla loss will incorrectly treat some
+to happen. In practice, a long time window 𝑤𝑎 is applied depending                positive samples as negative samples, which will damage the per-
+on the specific scenario, e.g., one month for Criteo [2]. Only con-               formance of CVR prediction model.
+versions within the time window after clicks are considered valid.
+In other words, if 𝑒𝑖 ≥ 𝑤𝑎 , then 𝑣𝑖 = 𝑐𝑖 . If 𝑒𝑖 < 𝑤𝑎 , 𝑐𝑖 is unknown.
+Thus, 𝑐𝑖 is not included in the training data D. For test data, we
+                                                                                  4  UNBIASED LABEL CORRECTION FOR
+can wait enough time to obtain 𝑐𝑖 for evaluation.                                    DELAYED FEEDBACK PROBLEM
+   For easy reading, the notations are summarized in Table 1.                     4.1 Overall Framework
+                                                                                  We propose an Unbiased delayed feedback Label Correction frame-
+       Table 1: Notations and Explanations of Variables
+                                                                                  work (ULC), which aims to address the delay feedback problem
+                                                                                  in CVR prediction through label correction. The key idea is that
+      Notation      Explanation                                                   delayed feedback leads to and only leads to incorrect labels. If we
+      𝑇             the training data collection timestamp                        are able to identify all the incorrect labels and correct them, we can
+      𝑥𝑖            the feature vector of 𝑖-th sample                             directly calculate the oracle loss.
+      𝑣𝑖            the observed conversion label of 𝑖-th sample                     Fig.1 illustrates the overall framework of ULC, which consists
+      𝑒𝑖            the elapsed time of 𝑖-th sample                               of a label correction (LC) model and a CVR prediction model. The
+      𝑐𝑖            the true conversion label of 𝑖-th sample                      LC model is designed to predict the probability that an observed
+      𝑐𝑡𝑠𝑖          the click timestamp of 𝑖-th sample                            unconverted training sample will finally convert, which is used to
+      𝑐𝑣𝑡𝑖          the conversion timestamp of 𝑖-th sample                       calculate our proposed label-corrected loss for CVR model training.
+                                                                                  We prove in Section 4.2 that if the LC model is accurate enough,
+                                                                                  the label-corrected loss is an unbiased estimate of the oracle loss.
+3.2     Task Formulation                                                             The next question is how to learn an accurate LC model. As there
+The conversion rate is defined as the probability of the final conver-            is no ready training data for the LC model, we leverage counterfac-
+sion for a clicked ad, i.e., 𝑝𝐶𝑉 𝑅 = 𝑝 (𝑐𝑖 = 1|𝑥𝑖 ). The CVR prediction           tual labeling to generate training data. It constructs the artificial
+task under delayed feedback is aimed to use the training data D                   data by imagining a counterfactual data collection time 𝑇 ′ < 𝑇 ,
+collected at 𝑇 to predict 𝑝𝐶𝑉 𝑅 for the clicked ads after 𝑇 .                     the details of which will be introduced in Section 4.3. However,
+   Note that training samples clicked before 𝑇 − 𝑤𝑎 (i.e., 𝑒𝑖 ≥ 𝑤𝑎 )              counterfactual labeling suffers from some problems, such as inade-
+can be fed directly into the model without any processing as their                quate utilization of the whole training data, which we analyze in
+labels are correct. Since the core issue for delayed feedback is how              Section 4.4. To mitigate this problem, we further apply alternative
+to handle the fresh data with unknown labels, we omit these data                  training to re-train these two models, enhancing the performance
+KDD ’23, August 6–10, 2023, Long Beach, CA, USA                                                                                                        Yifan Wang et al.
+
+
+                         Counterfactual                                            Click            Unbiased
+                           Labeling                                                                 LC Loss
+                                                          CD        AD             Conversion
+
+
+
+                                             Training                      Evaluation
+
+                                                                                        Time
+
+
+
+                                                        LC Task                                                                       CVR Task
+
+                          Counterfactual
+                             Label
+
+
+        Task-specific                                                    Frozen                    CVR                         Frozen
+                                         LC Model
+           Model                                                                                   Model                      LC Model
+                                                                     Alternative
+                                                                      Training
+
+         Embedding
+           Layer
+                                                    ···                                                 ···                     ···
+                                                                    Embedding
+                                                                     Transfer
+
+                                                    ···                                                 ···
+                             Elapse      Item/User/Context                                   Item/User/Context                          Elapse
+                              Time            Features                                            Features                               Time
+
+
+                                             Figure 1: Illustration for our proposed framework ULC.
+
+
+by transferring the underlying representation of the CVR model to                          Proof. For simplicity, we denote log 𝑓 (𝑥; 𝜃 ) as 𝑙𝜃 and log(1 −
+the LC model.                                                                           𝑓 (𝑥; 𝜃 )) as 𝑙 −𝜃 .
+   Next, we elaborate on our framework from unbiased loss, data                                      ∬
+generation with counterfactual labeling, and alternative training,                      𝐸 [L𝐿𝐶 ] =          𝑝 (𝑥, 𝑒) [𝑝 (𝑣 = 1|𝑥, 𝑒)𝑙𝜃 + 𝑝 (𝑐 = 1|𝑣 = 0, 𝑥, 𝑒)𝑝 (𝑣 = 0|𝑥, 𝑒)𝑙𝜃
+respectively.                                                                                     + 𝑝 (𝑐 = 0|𝑣 = 0, 𝑥, 𝑒)𝑝 (𝑣 = 0|𝑥, 𝑒)𝑙 −𝜃 )]𝑑𝑒𝑑𝑥
+                                                                                                    ∬
+                                                                                                  =      𝑝 (𝑥, 𝑒) [𝑝 (𝑣 = 1, 𝑐 = 1|𝑥, 𝑒)𝑙𝜃 + 𝑝 (𝑐 = 1, 𝑣 = 0|𝑥, 𝑒)𝑙𝜃
+4.2     Unbiased Loss via Label Correction
+If we have a label correction model 𝑔(·;𝜓 ), which can predict the                                + 𝑝 (𝑐 = 0, 𝑣 = 0|𝑥, 𝑒)𝑙 −𝜃 )]𝑑𝑒𝑑𝑥
+                                                                                                    ∬
+probability 𝑤𝑖 of a observed non-conversion sample 𝑖 to be a final
+                                                                                                  =      𝑝 (𝑥, 𝑒) [𝑝 (𝑐 = 1|𝑥, 𝑒)𝑙𝜃 + 𝑝 (𝑐 = 0|𝑥, 𝑒)𝑙 −𝜃 )]𝑑𝑒𝑑𝑥
+conversion sample, i.e., 𝑃 (𝑐𝑖 = 1|𝑥𝑖 , 𝑒𝑖 , 𝑣𝑖 = 0). Then we can directly
+                                                                                                    ∫
+correct the sample label for the observed negative samples and get
+                                                                                                  =     𝑝 (𝑥) [𝑝 (𝑐 = 1|𝑥)𝑙𝜃 + 𝑝 (𝑐 = 0|𝑥)𝑙 −𝜃 ))]𝑑𝑥
+the following label-corrected (LC) loss:
+                                                                                                  = 𝐸 [L𝑜𝑟𝑎𝑐𝑙𝑒 ]
+                                                                                                                                                                      □
+                  |D|
+              1 ∑︁
+   L𝐿𝐶 (D) =          [𝑣𝑖 log 𝑓 (𝑥𝑖 ; 𝜃 ) + 𝑤𝑖 (1 − 𝑣𝑖 ) log 𝑓 (𝑥𝑖 ; 𝜃 )                   The advantage of LC loss over the previous unbiased loss (e.g.,
+             |D | 𝑖=1                                                        (3)        FSIW and nnDF) is that it directly complements the information of
+                            + (1 − 𝑤𝑖 )(1 − 𝑣𝑖 ) log(1 − 𝑓 (𝑥𝑖 ; 𝜃 ))]                  the correct sample corresponding to the false negative samples, i.e.,
+                                                                                        𝑤𝑖 (1 − 𝑣𝑖 ) log 𝑓 (𝑥𝑖 ; 𝜃 ). The existing unbiased losses complement
+                                                                                        the corresponding information in indirect ways, which is strongly
+   The above loss is unbiased to the oracle loss if we have an ideal                    influenced by data sparsity and data dynamics. For example, in
+label correction model, as shown in the following theorem.                              practice, FSIW complements the correct information by increasing
+                                                                                        the weights of observed positive samples similar to the false nega-
+                                                                                        tive sample. However, for some fresh false negative samples, there
+   Theorem 1. If an ideal label correction model is satisfied, i.e.,                    may not exist similar observed positive samples due to the sparsity
+𝑤𝑖 = 𝑃 (𝑐𝑖 = 1|𝑥𝑖 , 𝑒𝑖 , 𝑣𝑖 = 0), then the LC loss is unbiased to the oracle            and dynamics of CVR data. In this case, these indirect methods
+loss.                                                                                   cannot effectively supplement the corresponding positive sample
+Unbiased Delayed Feedback Label Correction
+for Conversion Rate Prediction                                                                         KDD ’23, August 6–10, 2023, Long Beach, CA, USA
+
+
+information, which is important for the delayed feedback problem         retraining of the CVR model. The alternative training procedure is
+as false negative samples are often fresh. In contrast, the LC loss      shown in Algorithm 1.
+can adequately solve this problem as it directly corrects the label
+and complements the corresponding correct information.                   Algorithm 1 Alternative training with data generation
+   The remaining problem is how to train an accurate LC model,           Input: training data D = {(𝑥𝑖 , 𝑣𝑖 , 𝑒𝑖 , 𝑐𝑡𝑠𝑖 , 𝑐𝑣𝑡𝑖 )}, 𝑇 is the timestamp
+which we introduce in the next section.                                       when the data D are collected, where 𝑥𝑖 is the feature vector,
+                                                                              𝑣𝑖 is the observed conversion label, 𝑒𝑖 is elapsed time since the
+4.3    Data Generation with Counterfactual                                    click timestamp 𝑐𝑡𝑠𝑖 , 𝑐𝑣𝑡𝑖 is the conversion timestamp. 𝜏 is a
+                                                                              hyperparameter denoting the time interval between CD and
+       Labeling                                                               AD. 𝑛 is the rounds of alternative training.
+For the LC model, there is no ready training data. Note that we          Output: CVR prediction model 𝑀𝑐𝑣𝑟
+need samples with 𝑣𝑖 = 0 & 𝑐𝑖 = 1 as positive samples and with             1: Initialize CVR prediction model 𝑀𝑐𝑣𝑟 and LC model 𝑀𝑙𝑐
+𝑣𝑖 = 0 & 𝑐𝑖 = 0 as negative samples. However, there are only               2: // start to generate data D𝑙𝑐 for LC model training
+samples with 𝑣𝑖 = 1 & 𝑐𝑖 = 1 and samples with 𝑣𝑖 = 0 in the original       3: D𝑙𝑐 = ∅
+data. To train the LC model, we need to construct artificial samples.      4: for 𝑖 = 1 to |D| do
+   We leverage a counterfactual method [27] to generate training           5:    if 𝑐𝑡𝑠𝑖 < 𝑇 − 𝜏 and (𝑣𝑖 == 0 or 𝑐𝑣𝑡𝑖 > 𝑇 − 𝜏) then
+data for the LC model. First, we imagine that the training data            6:       if 𝑐𝑣𝑡𝑖 > 𝑇 − 𝜏 then
+was collected at a counterfactual deadline (CD) before the training        7:          Label the sample 𝑖 as 𝑤𝑖 = 1
+data’s actual deadline (AD), i.e., 𝑇 . The time interval 𝜏 between         8:       else
+the CD and the AD is a hyperparameter. Second, the samples that            9:          Label the sample 𝑖 as 𝑤𝑖 = 0
+are clicked but have not converted before the CD are collected as         10:       end if
+training data, together with 𝑒 ′ as the elapsed time of these samples     11:       Insert the sample (𝑥𝑖 , 𝑒𝑖 − 𝜏, 𝑤𝑖 ) to D𝑙𝑐
+at the CD. Third, we treat the samples with conversion between            12:    end if
+CD and AD as positive samples, i.e., 𝑤 = 1, and others as negative        13: end for
+samples, i.e., 𝑤 = 0. Obviously, there exist some samples converting      14: // finish data generation, start to alternative training
+after AD are ignored. Nevertheless, as 𝜏 increases, the proportion of     15: for 𝑖 = 1 to 𝑛 + 1 do
+these samples keeps getting smaller. The subsequent experiments           16:    Initialize 𝑀𝑐𝑣𝑟
+demonstrate that even a relatively short 𝜏 can effectively alleviate      17:    Initialize 𝑀𝑙𝑐 except bottom embeddings
+the delayed feedback problem.                                             18:    Training 𝑀𝑙𝑐 on D𝑙𝑐 until converge
+   After data generation, we can train the LC model via the classical     19:    Training 𝑀𝑐𝑣𝑟 on D using LC loss until converge
+binary cross-entropy loss. Then the LC model is frozen and utilized       20:    Transfer the bottom embeddings from 𝑀𝑐𝑣𝑟 to 𝑀𝑙𝑐
+to infer 𝑤 in the above LC loss. Note that the elapsed time 𝑒 at the      21: end for
+AD is used instead of 𝑒 ′ when inferring for LC loss. The detailed        22: return CVR prediction model 𝑀𝑐𝑣𝑟
+data generation procedure is shown in Algorithm 1 (lines 2-14).
+                                                                            There are some alternatives compared to alternative training
+4.4    Alternative Training                                              with embedding transfer. For example, joint learning is also a com-
+Although the training data required for the LC model can be con-         mon learning paradigm that enables the LC model to leverage the
+structed by counterfactual labeling, this method still has some          knowledge of the CVR model. Moreover, in addition to utilizing the
+drawbacks. First, data generation only leverages partial training        learned representation of the CVR model, another easily thought of
+data, i.e., samples that are clicked before CD and converted after       option is to leverage its prediction. It is possible to mine the misla-
+CD, which may result in the suboptimal performance of LC model.          beled samples in the training data for the LC model using the CVR
+Second, the LC model also suffers somewhat from delayed feedback.        prediction model as these potential positive samples might have
+Some potential positive samples that have a long delay and convert       a high predicted CVR. We also conduct experiments and compare
+after AD may be mistreated as negative samples. Next, we propose         these alternatives in experiment section 5.4.
+an alternative learning based approach to alleviate the first problem.
+The solution to the second problem we leave to future work.
+                                                                         5    EXPERIMENTS
+    Note that the CVR prediction model is trained on the whole data,     To validate the effectiveness of our proposed method, we conduct
+and the conversion rate 𝑃 (𝑐 = 1|𝑥) is similar to the label correction   a series of experiments to answer the following research questions:
+rate 𝑃 (𝑐 = 1|𝑥, 𝑒, 𝑣 = 0). We suppose that the bottom representation    - RQ1: How does ULC perform on the CVR prediction task com-
+(i.e., the embedding layer in Fig.1) learned by the CVR model may           pared to the state-of-the-art methods?
+facilitate the learning of the LC model and alleviate the first prob-    - RQ2: How do the label correctness and data freshness of coun-
+lem mentioned above. Therefore, we adopt an alternative learning            terfactual labeling affect the performance of ULC?
+paradigm. After training the CVR prediction model, the bottom            - RQ3: In addition to embedding-based alternative training, how
+representation of the LC model is initialized using the bottom rep-         do other common schemes such as joint learning perform?
+resentation of the CVR prediction model, and then the LC model           - RQ4: How does the ULC model perform on samples with different
+is retrained. The retrained LC model can be further used for the            delay time?
+KDD ’23, August 6–10, 2023, Long Beach, CA, USA                                                                                                Yifan Wang et al.
+
+
+5.1     Dataset and Settings                                                  • DFM[2]: a CVR model trained using delayed feedback loss.
+5.1.1 Datasets. To our knowledge, there exists only one public                • FSIW[27]: a CVR model trained using FSIW loss and pre-trained
+dataset [2] widely used in the research of the delayed feedback                 auxiliary models.
+problem in the offline setting. Other public CVR datasets do not have         • nnDF[26]: a CVR model trained using the nnDF loss.
+noticeably delayed feedback or lack enough temporal information.              • ULC(ours): a CVR model alternately trained with the LC model
+Following the common settings in previous work [2, 27] of using                 and the LC loss.
+one public and one private dataset, we also introduce a collected                The above methods can be applied to different CVR models. Due
+private production dataset.                                                   to the column anonymity of the Criteo dataset, we cannot use
+    Criteo dataset. This public dataset contains clicks and the cor-          the models that rely on user modeling. We consider the following
+responding conversions from Criteo live traffic data. Each sample             classical models that focus on feature interactions as backbones:
+corresponds to a single click and is described by several categorical         • MLP: the classical fully connected neural networks.
+features and continuous features, with the corresponding conver-              • DeepFM [5]: a model combining the factorization machines and
+sion information, if any. It also includes the timestamps of the click          deep neural networks.
+and the possible conversion behavior. We use this dataset’s last 23           • AutoInt [17]: a model using multi-head self-attention to learn
+days of data to conduct our experiments. Following previous work                the high-order feature interactions automatically.
+[2, 27], three consecutive weeks of data are leveraged as training            • DCNV2 [20]: a model using deep and cross networks to learn
+data, data of the 22nd day is used for validation and the last day              effective explicit and implicit feature crosses.
+is for the testing. Note that this dataset tracks conversion behav-
+ior for each click sample, so the ground truth 𝑐𝑖 is available for            5.1.4 Implementation Details. The embedding size is 64 for all the
+testing. For validation, we assume that 𝑐𝑖 is unknown and use the             methods. The MLP model in all the backbones is a simple three-layer
+label-corrected loss for parameter selection. The processed dataset           model with hidden units [256,256,128] and Leaky ReLU activation.
+includes 6,363,085 click samples with a conversion rate of 0.2294.            For AutoInt, the layer number is 3, the number of heads is 2, and the
+    Production dataset. This dataset is collected from a real pro-            attention size is 64. For DCNV2, we use the stacked structure and
+duction platform with game advertising. In-game payments are                  one cross-layer. Adam [8] is used as the optimizer, and the learning
+treated as conversions. Specifically, we collected and sampled one-           rate is tuned in the range of [1e-3, 5e-4, 1e-4] with L2 regularization
+month consecutive user feedback logs. The data format is similar              tuned in [0, 1e-7, 1e-6, 1e-5, 1e-4]. The batch size is set to 1024 for
+to Criteo, and the last two days are used for validation and testing,         all the methods except nnDF. Given that the nnDF approach cannot
+respectively. The dataset includes over 2,400,000 click samples with          apply to batch-wise training, we set the batch size to the size of the
+a conversion rate of about 0.005. Statistics are shown in Table 2.            whole training set. For a fair comparison, we consistently use the
+                                                                              MLP as the auxiliary model for all methods that rely on auxiliary
+                 Table 2: Statistics of the datasets.                         models. The additional hyperparameters for the baselines are fine-
+                                                                              tuned. Early stopping is applied to obtain the best parameters. We
+ Name Days #clicks          CVR      | Name       Days #clicks    CVR         repeat each experiment 5 times with different random seeds and
+ Criteo    23    6,363,085 0.2294 | Production     30   2,400,000 0.0050      report the average results and make the statistical tests. 1
+
+                                                                              5.2     Overall Performance: RQ1
+5.1.2 Evaluation Metrics. We adopt three metrics that are widely              From Table 3, we can observe that our proposed method ULC out-
+used in CVR prediction tasks [4, 24]. The first metric is area un-            performs all the baselines and achieves state-of-the-art performance
+der ROC curve (AUC) that measures the pairwise ranking perfor-                on all the backbones. There are some further observations. First,
+mance of the CVR prediction model. The second is area under the               the oracle model works significantly better than the vanilla model,
+precision-recall curve (PRAUC)[24], which also measures the pair-             which validates that the delayed feedback problem indeed hurts the
+wise ranking performance. The third one is the log loss (LL), which           performance of CVR model. Second, FSIW performs significantly
+measures the accuracy of the absolute value of the CVR prediction.            better than the DFM and Vanilla models, which is consistent with
+   To further analyze the benefits gained by solving the delayed              previous studies [27]. However, nnDF is significantly weaker than
+feedback problem, we calculate the relative improvements (RI) to              Vanilla method. It is because nnDF loss requires global dependence
+the maximum gain (i.e., the improvement of the oracle model over              computation and can only be optimized using full training data
+the vanilla model) on the above three metrics. For method 𝑓 , the rela-       when updating, which leads to a weaker performance than batch-
+                                                   𝑀 (𝑓 ) −𝑀 (𝑉 𝑎𝑛𝑖𝑙𝑙𝑎)
+tive improvements on metric 𝑀 (·) is defined as 𝑀 (𝑂𝑟𝑎𝑙𝑐𝑒 ) −𝑀 (𝑉 𝑎𝑛𝑖𝑙𝑙𝑎) .   wise optimization methods. Third, compared to the best baseline,
+Then we can obtain RI-AUC, RI-PRAUC and RI-LL.                                our method shows a significant improvement of 0.76% in the AUC
+                                                                              metric, 1.02% in the PRAUC metric, and 1.85% in the LL metric
+5.1.3 Compared Methods. The following state-of-the-art methods
+                                                                              on average across the four backbones, which demonstrates the
+are our baselines for solving delayed feedback in CVR prediction:
+                                                                              effectiveness of our proposed method.
+• Vanilla: a CVR model trained with the observed conversion label.               We further analyze the benefits gained by solving the delayed
+   This is the lower bound of possible improvements.                          feedback problem. As shown in Table 3, our method narrows the
+• Oracle: a CVR model trained with the ground truth label in-
+   stead of observed labels. This is the upper bound of possible              1 The codes can be found at https://github.com/yfwang2021/ULC. A mindspore version:
+   improvements.                                                              https://gitee.com/mindspore/models/tree/master/research/recommend/ULC.
+Unbiased Delayed Feedback Label Correction
+for Conversion Rate Prediction                                                                                   KDD ’23, August 6–10, 2023, Long Beach, CA, USA
+
+
+Table 3: Performance comparisons of the proposed model with baseline models on the public Criteo dataset. The best results
+are in boldface, and the best baselines are underlined. The superscripts ** indicate 𝑝 ≤ 0.01 for the t-test of ULC vs. the best
+baseline. ↑ means the higher the better, and ↓ is for the lower the better.
+
+                        Backbone       Method      AUC ↑      PRAUC ↑      LL ↓             RI-AUC ↑      RI-PRAUC ↑            RI-LL ↑
+                                       Vanilla      0.8208     0.6356      0.4505              0.000           0.000             0.000
+                                       Oracle       0.8441     0.6595      0.4025              1.000           1.000             1.000
+                                       DFM          0.8264     0.6398      0.4378             0.2403          0.1757            0.2645
+                        MLP
+                                       FSIW         0.8335     0.6465      0.4178             0.5450          0.4560            0.6812
+                                       nnDF         0.6859     0.4169      0.5969             -5.789          -9.150             -3.05
+                                       ULC(ours)   0.8403**   0.6543**    0.4104**           0.8369**        0.7824**          0.8354**
+                                       Vanilla       0.822     0.6379      0.4451              0.000           0.000             0.000
+                                       Oracle       0.8442       0.66      0.4023              1.000           1.000             1.000
+                                       DFM          0.8266     0.6416      0.4319             0.2072          0.1674            0.3084
+                        DeepFM
+                                       FSIW         0.8326     0.6451      0.4195             0.4774          0.3257            0.5981
+                                       nnDF         0.6994     0.4332       0.596             -5.522          -9.262            -3.525
+                                       ULC(ours)   0.8393**   0.6525**    0.4104**           0.7792**        0.6606**          0.8107**
+                                       Vanilla      0.8232     0.6383      0.4468              0.000           0.000             0.000
+                                       Oracle       0.8442     0.6601      0.4025              1.000           1.000             1.000
+                                       DFM          0.8276     0.6412      0.4306             0.2095          0.1330            0.3656
+                        AutoInt
+                                       FSIW         0.8329      0.646      0.4192             0.4619          0.3532            0.6230
+                                       nnDF         0.6903     0.4214      0.6123             -6.328          -9.949            -3.735
+                                       ULC(ours)   0.8388**   0.6517**    0.4114**           0.7428**        0.6146**          0.7990**
+                                       Vanilla      0.8229     0.6386      0.4454              0.000           0.000             0.000
+                                       Oracle       0.8447     0.6606      0.4018              1.000           1.000             1.000
+                                       DFM          0.8272     0.6417      0.4325             0.1972          0.1409            0.2958
+                        DCNV2
+                                       FSIW         0.8328     0.6461      0.4174             0.4541          0.3409            0.6422
+                                       nnDF         0.6867      0.423      0.6101             -6.247            -9.8            -3.777
+                                       ULC(ours)   0.8391**   0.6519**    0.4105**           0.7431**        0.6045**          0.8004**
+
+
+gap between Vanilla and Oracle by 77.55% in the AUC metric, 66.55%                0.81                                         0.036
+in the PRAUC metric, and 83.13% in the LL metric on average across
+                                                                                  0.80                                         0.034
+the four backbones. Compared to the best baseline, our method
+                                                                            AUC
+
+
+
+
+shows a significant improvement of 60.3% in the RI-AUC metric,                    0.79
+                                                                                                                          LL
+
+81.43% in the RI-PRAUC metric, and 27.76% in the RI-LL metric on                                                               0.032
+average across the four backbones. This shows that our method                     0.78
+can effectively alleviate the delayed feedback problem.                                                                        0.030
+                                                                                  0.77
+   Fig.2 shows the offline performance on the production dataset.                        Vanilla   DFM   FSIW ULC(ours)                DFM    FSIW    ULC(ours)
+For limited space, we only present the results with MLP as the back-
+bone. It is clearly observed that our proposed method alleviates the        Figure 2: Performance comparisons of the proposed method
+delayed feedback problem and outperforms the two best baselines.            with the top two baselines on the private dataset. The back-
+   To guarantee the reproducibility of our work, and also due to the        bone model is MLP. The red dotted line in the right figure
+page limitation, we make the following further detailed analyses            denotes Oracle.
+on the public-available dataset.
+
+                                                                            best 𝜏 on the Criteo dataset is around a week. Besides, smaller or
+5.3    Analysis on Counterfactual Labeling: RQ2                             larger 𝜏 will reduce the performance of CVR model. Smaller 𝜏 leads
+In counterfactual labeling, only the samples converted between              to more mislabeled samples in the training data of LC model, which
+CD and AD are treated as positive samples (i.e., 𝑤 = 1), which              in turn leads to lower performance of CVR model. Larger 𝜏 values,
+leads to some samples converted after AD being mislabeled as                while reducing the mislabeled samples, will make the training data
+negative samples. A long time interval between CD and AD can                of the LC model older, which leads to its inability to correct well for
+improve label correctness of counterfactual labeling but reduce data        false negative samples in the CVR training data, since these false
+freshness as only clicked data before CD are utilized. We further           negative samples are relatively fresh.
+analyze the effect of different time intervals.
+   Experimental results using different time intervals are shown in         5.4          Effectiveness of Alternative Training: RQ3
+Fig.3. First, increasing the time interval can effectively increase the     In addition to embedding-based alternative training, there are also
+recall of counterfactual labeling on positive samples. Second, the          some other design schemes that enable the LC model to exploit the
+KDD ’23, August 6–10, 2023, Long Beach, CA, USA                                                                                                                                               Yifan Wang et al.
+
+
+                                                                                                                                          0.425
+                                                      0.6                0.654                                            0.6                                                               0.6
+                  0.8400
+                                                      0.5                0.653                                            0.5                                                               0.5
+                                                                                                                                          0.420
+
+
+
+
+                                                                 PRAUC
+                                                      0.4                                                                 0.4                                                    ULC        0.4
+
+
+
+
+                                                        Recall
+
+
+
+
+                                                                                                                            Recall
+
+
+
+
+                                                                                                                                                                                              Recall
+            AUC
+
+
+
+
+                                                                                                                                     LL
+                  0.8395                                                 0.652                                                                                                   Recall
+                                                      0.3                                                                 0.3             0.415                                             0.3
+                                      ULC             0.2                0.651                              ULC           0.2                                                               0.2
+                  0.8390
+                                      Recall                                                                Recall
+                                                      0.1                0.650                                            0.1             0.410                                             0.1
+                           1 2 3 4 5 6 7 8 9 10                                  1 2 3 4 5 6 7 8 9 10                                             1 2 3 4 5 6 7 8 9 10
+                                Time Interval (day)                                   Time Interval (day)                                              Time Interval (day)
+
+
+Figure 3: Effect of different time intervals between counterfactual deadline (CD) and actual deadline (AD) on the Criteo
+dataset with MLP as the backbone. The blue line represents the performance of ULC and the red line represents the recall of
+counterfactual labeling on positive samples. Larger recall means fewer mislabels in the training data of LC model.
+
+                                                                                                          0.66                                                  0.44
+knowledge of CVR prediction model. We conduct experiments on
+these schemes.                                                                                                                                                  0.43
+                                                                                                          0.65
+5.4.1 Joint Learning Strategy. An obvious solution is to jointly
+
+
+
+
+                                                                                                  PRAUC
+                                                                                                                                                                0.42
+
+
+
+
+                                                                                                                                                           LL
+train the LC model and the CVR model, which also enables the LC
+                                                                                                          0.64
+model to utilize the information learned by the CVR model. We use                                                                                               0.41
+a simple shared-bottom structure [12] to validate the effectiveness
+                                                                                                          0.63                                                  0.40
+                                                                                                                               rd) ft)  p) -A LC                                        rd) ft)       p) -A LC
+of this scheme. The joint loss is a linear weighting of the LC model                                                 JL                                                    JL
+                                                                                                                            (ha (so (dro ULC U                                       (ha PT (so T (dro ULC U
+loss and the CVR model loss.                                                                                              PT PT PT                                              PT             P
+
+5.4.2 Prediction-based Alternative Training Strategy. In alternative
+training, in addition to using the learned representation of the                              Figure 4: Comparisons on different training strategies.
+CVR model, another easily thought of option is to leverage its                                Dataset: Criteo. Backbone: MLP. "ULC-A": Proposed ULC
+prediction. Note that in Section 4.3, we mention that some potential                          without alternative training. "JL": Joint learning. "PT":
+positive samples that have a long delay and convert after AD may                              Prediction-based alternative training.
+be mislabeled as negative samples during counterfactual labeling.
+To alleviate this problem, we consider using the prediction of the
+                                                                                                      0.660                                                    0.45 Vanilla
+CVR model to mine these potentially positive samples. Intuitively,                                               Oracle
+samples with high predicted CVR are more likely to be potentially                                     0.655                                                    0.44
+positive samples. Thus, we design three simple strategies to process                                  0.650                                                    0.43
+                                                                                              PRAUC
+
+
+
+
+                                                                                                                                                          LL
+the training data of the LC model: (i) hard strategy, i.e., negative
+                                                                                                      0.645 Best baseline                                      0.42 Best baseline
+samples (𝑤 = 0) with predicted CVR above a predefined threshold
+are treated as positive samples (𝑤 = 1); (ii) soft strategy, i.e., using                              0.640                                                    0.41
+                                                                                                                 Vanilla                                               Oracle
+predicted CVR as the label for each negative sample; (iii) drop                                       0.635
+                                                                                                                 0       1         2        3       4                  0        1         2        3       4
+strategy, i.e., dropping negative samples with predicted CVR above                                                   Rounds of Alternative Training                         Rounds of Alternative Training
+a predefined threshold from the training data of the LC model, as
+the labels of these samples are not reliable.                                                 Figure 5: Performance w.r.t. the alternative training rounds.
+5.4.3 Comparisons on Different Strategies. The results of the above                           Dataset: Criteo. Backbone: MLP. Note that 0 on the 𝑥 axis
+strategies on Criteo with MLP as backbone are shown in Fig.4.                                 means no alternative training.
+Results on AUC are similar to PRAUC and hence omitted. We
+have the following observations: (i) using a simple joint learning
+scheme cannot improve performance. Instead, there is a large loss of
+                                                                                              ULC. 𝑛 controls the rounds of alternative training, and 𝑛 = 0 means
+performance. The reason is that the inaccurate LC model at the early
+                                                                                              no alternative training. We conduct experiments using different
+training stage will mislead the CVR model, which in turn affects
+                                                                                              values of 𝑛 on the Criteo dataset with MLP as the backbone. As
+the subsequent training. (ii) the three prediction-based strategies
+                                                                                              shown in Fig.5, alternative training once can significantly improve
+cannot improve the performance of the CVR model and even cause
+                                                                                              the performance of the CVR prediction model, which validates the
+a slight degradation. The potential positive samples after AD have
+                                                                                              effectiveness of alternative training. Besides, one round is enough,
+a higher delay than 𝜏, and the number of these samples is very
+                                                                                              and more rounds have little impact, which is reasonable since the
+small compared to the number of true negative samples (about 1:50
+                                                                                              first round that changes the initialization of the LC model from
+ratio). Using only predicted CVR cannot effectively discover these
+                                                                                              random to the embeddings of CVR model brings more significant
+samples; instead, it introduces noise.
+                                                                                              changes than the subsequent rounds. Note that even without alter-
+5.4.4 Sensitivity of Alternative Training Rounds. We further ana-                             native learning, the performance of ULC is still significantly better
+lyze the effect of alternative training rounds on the performance of                          than the best baseline, which reflects the effectiveness of using
+Unbiased Delayed Feedback Label Correction
+for Conversion Rate Prediction                                                                                           KDD ’23, August 6–10, 2023, Long Beach, CA, USA
+
+
+
+                                  FSIW                                                      samples and true negative samples, each group is combined with
+                                                    0.50
+        0.8                       ULC(ours)                                                 all the true negative samples in the training data to form evaluation
+                                  Vanilla           0.45
+                                  Oracle
+                                                                                            data with different delay time.
+PRAUC
+
+
+
+
+        0.7                                         0.40
+
+
+
+
+                                               LL
+                                                                               FSIW
+        0.6                                         0.35                       ULC(ours)    Table 4: Label correction performance of ULC w.r.t. samples
+                                                    0.30                       Vanilla
+        0.5                                                                    Oracle       with different delay time. G5 is the group with the longest
+                                                    0.25                                    delay, and G1 has the shortest delay. ↑ means the higher the
+              G1   G2       G3     G4     G5               G1   G2       G3     G4     G5
+                        Delay Time                                   Delay Time             better, and ↓ is for the lower the better.
+
+Figure 6: Performance w.r.t. test samples with different delay                                     Metrics        G1        G2        G3        G4        G5
+time on the Criteo dataset with MLP as the backbone. A larger
+                                                                                                   AUC ↑        0.8698    0.8350    0.8117    0.7896     0.7811
+value of the 𝑥 axis means a longer delay time. Results on AUC
+                                                                                                   PRAUC ↑      0.1397    0.0757    0.0545    0.0434     0.0398
+are similar to PRAUC and hence omitted.
+                                                                                                   LL ↓         0.0549    0.0584    0.0604    0.0621     0.0628
+
+the LC model for label correction. Results on AUC are similar to
+PRAUC and hence omitted.                                                                       Experiment results on the Criteo dataset are shown in Table 4.
+                                                                                            We have the following observations: (i) AUC ranges from 0.7811
+5.5            Analysis on Different Delay Time: RQ4                                        to 0.8698 at different delay time, which reflects that the LC model
+                                                                                            can effectively recognize false negative samples from all negative
+The delay time is an important property of delayed feedback. We                             samples. (ii) the performance of the LC model decreases as the delay
+further analyze the performance of CVR model and LC model on                                time of the false negative samples increases. There are two possible
+samples with different delay time.                                                          reasons for this. First, samples with longer delays are more likely to
+5.5.1 CVR performance on different delay time. For a fair compari-                          be hard samples. Second, in counterfactual labeling, false negative
+son, we divide the positive samples in the test set into five groups in                     samples with longer delays are more likely to convert after AD
+ascending order based on their delay time. Each group has the same                          and be recognized as true negative examples, which damages the
+number of positive samples. Then, each group is combined with all                           performance of LC model.
+the negative samples in the test set to form test sets with different
+delay times. In this way, the number of positive and negative sam-                          6    CONCLUSIONS AND FUTURE WORK
+ples is the same for different test sets. Further, since the log loss is                    In this paper, we propose a framework ULC to address the delayed
+sensitive to the conversion rate, to ensure that the conversion rate                        feedback problem in the offline setting via unbiased label correction.
+in the test set is consistent with the original test set, we duplicate                      The key idea is that delayed feedback leads to and only leads to in-
+five copies of each positive sample.                                                        correct labels. If the incorrect labels can be effectively corrected, the
+   Experiment results on the Criteo dataset with MLP as backbone                            delayed feedback problem can be well addressed. ULC uses an ad-
+are shown in Fig.6. We have the following observations: (i) for the                         ditional LC model to guide the CVR prediction model for unbiased
+Oracle model without the delayed feedback problem, its perfor-                              label correction and enhances the performance through alternative
+mance decreases somewhat as the sample delay time increases,                                training. We prove theoretically that the label-corrected loss in
+which indicates that samples with a long delay time are more likely                         our method is an unbiased estimate of the oracle loss. Compara-
+to be hard samples. (ii) as the sample delay time increases, the Oracle                     tive experiments on both public and private datasets and detailed
+model performs increasingly better than Vanilla, which is because                           analyses show that ULC effectively alleviates the delayed feedback
+positive samples are more likely to be false negative samples as the                        problem and consistently outperforms the previous state-of-the-art
+delay time increases. (iii) our method significantly outperforms the                        methods.
+Vanilla model and the best baseline on samples with high delays                                For future work, we are interested in the following points. First,
+(e.g., G3, G4, and G5), and our boost increases as the delay time                           using multiple and dynamic counterfactual deadlines is likely to
+increases, which reflects the effectiveness of our method.                                  exploit training data more effectively. Second, given that samples
+   An interesting phenomenon is that the Vanilla model performs                             with a long delay time are more likely to be hard samples, we would
+better than the Oracle model on samples with short delays (G1). It                          like to design approaches to enhance the model performance on
+may be because samples with short delays have a higher percentage                           long-delay samples. Third, we are interested in the combination of
+of observed positive samples than actual positive samples. Further                          our method to selection bias in CVR prediction.
+analysis can be found in Appendix.
+5.5.2 LC performance on different delay time. We further analyze                            ACKNOWLEDGMENTS
+the performance of the LC model on samples with different delay                             This work is supported by the Natural Science Foundation of China
+time. Similarly, we divide the false negative samples in the training                       (Grant No.U21B2026), the fellowship of China Postdoctoral Science
+data into five groups in ascending order based on their delay time.                         Foundation (No.2022TQ0178) and Huawei (Huawei Innovation Re-
+Each group has the same number of false positive samples. Then,                             search Program). We also thank MindSpore for the partial support
+as the goal of the LC model is to distinguish between false negative                        of this work, which is a new deep learning computing framework.
+KDD ’23, August 6–10, 2023, Long Beach, CA, USA                                                                                                                    Yifan Wang et al.
+
+
+REFERENCES                                                                                       for Computing Machinery, New York, NY, USA, 2689–2697. https://doi.org/10.
+ [1] Wentian Bao, Hong Wen, Sha Li, Xiao-Yang Liu, Quan Lin, and Keping Yang.                    1145/3292500.3330783
+     2020. GMCM: Graph-Based Micro-Behavior Conversion Model for Post-Click                 [15] Yuta Saito. 2020. Doubly Robust Estimator for Ranking Metrics with Post-Click
+     Conversion Rate Estimation. In Proceedings of the 43rd International ACM SIGIR              Conversions. In Proceedings of the 14th ACM Conference on Recommender Systems
+     Conference on Research and Development in Information Retrieval (Virtual Event,             (Virtual Event, Brazil) (RecSys ’20). Association for Computing Machinery, New
+     China) (SIGIR ’20). Association for Computing Machinery, New York, NY, USA,                 York, NY, USA, 92–100. https://doi.org/10.1145/3383313.3412262
+     2201–2210. https://doi.org/10.1145/3397271.3401425                                     [16] Yuta Saito, Gota Morisihta, and Shota Yasui. 2020. Dual Learning Algorithm
+ [2] Olivier Chapelle. 2014. Modeling Delayed Feedback in Display Advertising. In                for Delayed Conversions. In Proceedings of the 43rd International ACM SIGIR
+     Proceedings of the 20th ACM SIGKDD International Conference on Knowledge                    Conference on Research and Development in Information Retrieval (Virtual Event,
+     Discovery and Data Mining (New York, New York, USA) (KDD ’14). Association                  China) (SIGIR ’20). Association for Computing Machinery, New York, NY, USA,
+     for Computing Machinery, New York, NY, USA, 1097–1105. https://doi.org/10.                  1849–1852. https://doi.org/10.1145/3397271.3401282
+     1145/2623330.2623634                                                                   [17] Weiping Song, Chence Shi, Zhiping Xiao, Zhijian Duan, Yewen Xu, Ming Zhang,
+ [3] Yu Chen, Jiaqi Jin, Hui Zhao, Pengjie Wang, Guojun Liu, Jian Xu, and Bo Zheng.              and Jian Tang. 2019. AutoInt: Automatic Feature Interaction Learning via
+     2022. Asymptotically Unbiased Estimation for Delayed Feedback Modeling via                  Self-Attentive Neural Networks. In Proceedings of the 28th ACM International
+     Label Correction. In Proceedings of the ACM Web Conference 2022 (Virtual Event,             Conference on Information and Knowledge Management (Beijing, China) (CIKM
+     Lyon, France) (WWW ’22). Association for Computing Machinery, New York,                     ’19). Association for Computing Machinery, New York, NY, USA, 1161–1170.
+     NY, USA, 369–379. https://doi.org/10.1145/3485447.3511965                                   https://doi.org/10.1145/3357384.3357925
+ [4] Siyu Gu, Xiang-Rong Sheng, Ying Fan, Guorui Zhou, and Xiaoqiang Zhu.                   [18] Yumin Su, Liang Zhang, Quanyu Dai, Bo Zhang, Jinyao Yan, Dan Wang, Yongjun
+     2021. Real Negatives Matter: Continuous Training with Real Negatives for                    Bao, Sulong Xu, Yang He, and Weipeng Yan. 2021. An Attention-Based Model for
+     Delayed Feedback Modeling. In Proceedings of the 27th ACM SIGKDD Confer-                    Conversion Rate Prediction with Delayed Feedback via Post-Click Calibration.
+     ence on Knowledge Discovery & Data Mining (Virtual Event, Singapore) (KDD                   In Proceedings of the Twenty-Ninth International Joint Conference on Artificial
+     ’21). Association for Computing Machinery, New York, NY, USA, 2890–2898.                    Intelligence (Yokohama, Yokohama, Japan) (IJCAI’20). Article 487, 7 pages.
+     https://doi.org/10.1145/3447548.3467086                                                [19] Hao Wang, Tai-Wei Chang, Tianqiao Liu, Jianmin Huang, Zhichao Chen, Chao
+ [5] Huifeng Guo, Ruiming Tang, Yunming Ye, Zhenguo Li, and Xiuqiang He. 2017.                   Yu, Ruopeng Li, and Wei Chu. 2022. ESCM2: Entire Space Counterfactual Multi-
+     DeepFM: A Factorization-Machine Based Neural Network for CTR Prediction.                    Task Model for Post-Click Conversion Rate Estimation. In Proceedings of the 45th
+     In Proceedings of the 26th International Joint Conference on Artificial Intelligence        International ACM SIGIR Conference on Research and Development in Information
+     (Melbourne, Australia) (IJCAI’17). AAAI Press, 1725–1731.                                   Retrieval (Madrid, Spain) (SIGIR ’22). Association for Computing Machinery, New
+ [6] Siyuan Guo, Lixin Zou, Yiding Liu, Wenwen Ye, Suqi Cheng, Shuaiqiang Wang,                  York, NY, USA, 363–372. https://doi.org/10.1145/3477495.3531972
+     Hechang Chen, Dawei Yin, and Yi Chang. 2021. Enhanced Doubly Robust Learn-             [20] Ruoxi Wang, Rakesh Shivanna, Derek Cheng, Sagar Jain, Dong Lin, Lichan Hong,
+     ing for Debiasing Post-Click Conversion Rate Estimation. In Proceedings of the              and Ed Chi. 2021. DCN V2: Improved Deep & Cross Network and Practical Lessons
+     44th International ACM SIGIR Conference on Research and Development in Informa-             for Web-Scale Learning to Rank Systems. In Proceedings of the Web Conference
+     tion Retrieval (Virtual Event, Canada) (SIGIR ’21). Association for Computing Ma-           2021 (Ljubljana, Slovenia) (WWW ’21). Association for Computing Machinery,
+     chinery, New York, NY, USA, 275–284. https://doi.org/10.1145/3404835.3462917                New York, NY, USA, 1785–1797. https://doi.org/10.1145/3442381.3450078
+ [7] Yuyao Guo, Haoming Li, Xiang Ao, Min Lu, Dapeng Liu, Lei Xiao, Jie Jiang, and          [21] Yanshi Wang, Jie Zhang, Qing Da, and Anxiang Zeng. 2020. Delayed Feedback
+     Qing He. 2022. Calibrated Conversion Rate Prediction via Knowledge Distillation             Modeling for the Entire Space Conversion Rate Prediction. CoRR abs/2011.11826
+     under Delayed Feedback in Online Advertising. In Proceedings of the 31st ACM                (2020). arXiv:2011.11826 https://arxiv.org/abs/2011.11826
+     International Conference on Information & Knowledge Management (Atlanta, GA,           [22] Hong Wen, Jing Zhang, Fuyu Lv, Wentian Bao, Tianyi Wang, and Zulong Chen.
+     USA) (CIKM ’22). Association for Computing Machinery, New York, NY, USA,                    2021. Hierarchically Modeling Micro and Macro Behaviors via Multi-Task Learn-
+     3983–3987. https://doi.org/10.1145/3511808.3557557                                          ing for Conversion Rate Prediction. In Proceedings of the 44th International ACM
+ [8] Diederik P. Kingma and Jimmy Ba. 2015. Adam: A Method for Stochastic Opti-                  SIGIR Conference on Research and Development in Information Retrieval (Virtual
+     mization. In 3rd International Conference on Learning Representations, ICLR 2015,           Event, Canada) (SIGIR ’21). Association for Computing Machinery, New York,
+     San Diego, CA, USA, May 7-9, 2015, Conference Track Proceedings, Yoshua Bengio              NY, USA, 2187–2191. https://doi.org/10.1145/3404835.3463053
+     and Yann LeCun (Eds.). http://arxiv.org/abs/1412.6980                                  [23] Hong Wen, Jing Zhang, Yuan Wang, Fuyu Lv, Wentian Bao, Quan Lin, and Keping
+ [9] Shunsuke Kitada, Hitoshi Iyatomi, and Yoshifumi Seki. 2019. Conversion Predic-              Yang. 2020. Entire Space Multi-Task Modeling via Post-Click Behavior Decom-
+     tion Using Multi-Task Conditional Attention Networks to Support the Creation                position for Conversion Rate Prediction. In Proceedings of the 43rd International
+     of Effective Ad Creatives. In Proceedings of the 25th ACM SIGKDD International              ACM SIGIR Conference on Research and Development in Information Retrieval
+     Conference on Knowledge Discovery & Data Mining (Anchorage, AK, USA) (KDD                   (Virtual Event, China) (SIGIR ’20). Association for Computing Machinery, New
+     ’19). Association for Computing Machinery, New York, NY, USA, 2069–2077.                    York, NY, USA, 2377–2386. https://doi.org/10.1145/3397271.3401443
+     https://doi.org/10.1145/3292500.3330789                                                [24] Jia-Qi Yang, Xiang Li, Shuguang Han, Tao Zhuang, De-Chuan Zhan, Xiaoyi Zeng,
+[10] Sofia Ira Ktena, Alykhan Tejani, Lucas Theis, Pranay Kumar Myana, Deepak Dilip-             and Bin Tong. 2021. Capturing Delayed Feedback in Conversion Rate Predic-
+     kumar, Ferenc Huszár, Steven Yoo, and Wenzhe Shi. 2019. Addressing Delayed                  tion via Elapsed-Time Sampling. In Thirty-Fifth AAAI Conference on Artificial
+     Feedback for Continuous Training with Neural Networks in CTR Prediction. In                 Intelligence, AAAI 2021, Thirty-Third Conference on Innovative Applications of Ar-
+     Proceedings of the 13th ACM Conference on Recommender Systems (Copenhagen,                  tificial Intelligence, IAAI 2021, The Eleventh Symposium on Educational Advances
+     Denmark) (RecSys ’19). Association for Computing Machinery, New York, NY,                   in Artificial Intelligence, EAAI 2021, Virtual Event, February 2-9, 2021. AAAI Press,
+     USA, 187–195. https://doi.org/10.1145/3298689.3347002                                       4582–4589. https://ojs.aaai.org/index.php/AAAI/article/view/16587
+[11] Haoming Li, Feiyang Pan, Xiang Ao, Zhao Yang, Min Lu, Junwei Pan, Dapeng Liu,          [25] Jia-Qi Yang and De-Chuan Zhan. 2022. Generalized Delayed Feedback Model
+     Lei Xiao, and Qing He. 2021. Follow the Prophet: Accurate Online Conversion Rate            with Post-Click Information in Recommender Systems. In NeurIPS. http://papers.
+     Prediction in the Face of Delayed Feedback. In Proceedings of the 44th International        nips.cc/paper_files/paper/2022/hash/a7f90da65dd41d699d00e95700e6fa1e-
+     ACM SIGIR Conference on Research and Development in Information Retrieval                   Abstract-Conference.html
+     (Virtual Event, Canada) (SIGIR ’21). Association for Computing Machinery, New          [26] Shota Yasui and Masahiro Kato. 2022. Learning Classifiers under Delayed Feed-
+     York, NY, USA, 1915–1919. https://doi.org/10.1145/3404835.3463045                           back with a Time Window Assumption. In Proceedings of the 28th ACM SIGKDD
+[12] Jiaqi Ma, Zhe Zhao, Xinyang Yi, Jilin Chen, Lichan Hong, and Ed H. Chi. 2018.               Conference on Knowledge Discovery and Data Mining (Washington DC, USA)
+     Modeling Task Relationships in Multi-Task Learning with Multi-Gate Mixture-                 (KDD ’22). Association for Computing Machinery, New York, NY, USA, 2286–2295.
+     of-Experts. In Proceedings of the 24th ACM SIGKDD International Conference                  https://doi.org/10.1145/3534678.3539372
+     on Knowledge Discovery & Data Mining (London, United Kingdom) (KDD ’18).               [27] Shota Yasui, Gota Morishita, Fujita Komei, and Masashi Shibata. 2020. A Feedback
+     Association for Computing Machinery, New York, NY, USA, 1930–1939. https:                   Shift Correction in Predicting Conversion Rates under Delayed Feedback. In
+     //doi.org/10.1145/3219819.3220007                                                           Proceedings of The Web Conference 2020 (Taipei, Taiwan) (WWW ’20). Association
+[13] Xiao Ma, Liqin Zhao, Guan Huang, Zhi Wang, Zelin Hu, Xiaoqiang Zhu, and Kun                 for Computing Machinery, New York, NY, USA, 2740–2746. https://doi.org/10.
+     Gai. 2018. Entire Space Multi-Task Model: An Effective Approach for Estimating              1145/3366423.3380032
+     Post-Click Conversion Rate. In The 41st International ACM SIGIR Conference on          [28] Yuya Yoshikawa and Yusaku Imai. 2018. A Nonparametric Delayed Feed-
+     Research & Development in Information Retrieval (Ann Arbor, MI, USA) (SIGIR                 back Model for Conversion Rate Prediction. CoRR abs/1802.00255 (2018).
+     ’18). Association for Computing Machinery, New York, NY, USA, 1137–1140.                    arXiv:1802.00255 http://arxiv.org/abs/1802.00255
+     https://doi.org/10.1145/3209978.3210104                                                [29] Wenhao Zhang, Wentian Bao, Xiao-Yang Liu, Keping Yang, Quan Lin, Hong Wen,
+[14] Junwei Pan, Yizhi Mao, Alfonso Lobos Ruiz, Yu Sun, and Aaron Flores. 2019.                  and Ramin Ramezani. 2020. Large-Scale Causal Approaches to Debiasing Post-
+     Predicting Different Types of Conversions with Multi-Task Learning in Online                Click Conversion Rate Estimation with Multi-Task Learning. In Proceedings of The
+     Advertising. In Proceedings of the 25th ACM SIGKDD International Conference on              Web Conference 2020 (Taipei, Taiwan) (WWW ’20). Association for Computing
+     Knowledge Discovery & Data Mining (Anchorage, AK, USA) (KDD ’19). Association               Machinery, New York, NY, USA, 2775–2781. https://doi.org/10.1145/3366423.
+                                                                                                 3380037
+Unbiased Delayed Feedback Label Correction
+for Conversion Rate Prediction                                                                                              KDD ’23, August 6–10, 2023, Long Beach, CA, USA
+
+
+[30] Weinan Zhang, Jiarui Qin, Wei Guo, Ruiming Tang, and Xiuqiang He. 2021.                  might have a strong impact on the prediction of the test sample.
+     Deep Learning for Click-Through Rate Estimation. In Proceedings of the Thirtieth         We calculate similarity using the L2 distance of sample embeddings
+     International Joint Conference on Artificial Intelligence, IJCAI 2021, Virtual Event /
+     Montreal, Canada, 19-27 August 2021, Zhi-Hua Zhou (Ed.). ijcai.org, 4695–4703.           in our model. As shown in Table 5 and 6, it can be found that our
+     https://doi.org/10.24963/ijcai.2021/636                                                  method effectively corrects the labels of false negative samples
+[31] Xiao Zhang, Haonan Jia, Hanjing Su, Wenhan Wang, Jun Xu, and Ji-Rong Wen.                without wrongly categorizing true negative samples as positive
+     2021. Counterfactual Reward Modification for Streaming Recommendation with
+     Delayed Feedback. In Proceedings of the 44th International ACM SIGIR Conference          ones. Consequently, the prediction accuracy of the test sample is
+     on Research and Development in Information Retrieval (Virtual Event, Canada)             enhanced.
+     (SIGIR ’21). Association for Computing Machinery, New York, NY, USA, 41–50.
+     https://doi.org/10.1145/3404835.3462892
+[32] Guorui Zhou, Xiaoqiang Zhu, Chenru Song, Ying Fan, Han Zhu, Xiao Ma, Yanghui
+                                                                                              Table 5: The first concrete case on the Criteo dataset with
+     Yan, Junqi Jin, Han Li, and Kun Gai. 2018. Deep Interest Network for Click-              MLP as the backbone. The false negatives are in boldface.
+     Through Rate Prediction. In Proceedings of the 24th ACM SIGKDD International             Our method effectively corrects the labels of false negative
+     Conference on Knowledge Discovery & Data Mining (London, United Kingdom)
+     (KDD ’18). Association for Computing Machinery, New York, NY, USA, 1059–1068.            samples (5063626, 5630493). Meanwhile, the true negative
+     https://doi.org/10.1145/3219819.3219823                                                  samples (1738500, 904961, 3478664) are not corrected to posi-
+                                                                                              tive samples.
+A APPENDIX
+A.1 Further Analysis on Different Delay Time                                                      Test Sample ID      Label          Vanilla Pred.    ULC(ours) Pred.
+
+An interesting phenomenon in Figure.6 is that the Vanilla model                                      186833             1                0.081              0.787
+performs better than the Oracle model on samples with short delays                               Ten Most Similar
+                                                                                                                    True Label     Observed Label     Corrected Label
+(G1). It may be because samples with short delays have a higher per-                             Training Samples
+centage of observed positive samples than actual positive samples.                                   5063626            1                  0                0.906
+Specifically, the proportion of G1 to the observed positive samples                                  4136975            1                  1                  1
+                                                                                                     3726489            1                  1                  1
+is 25.8%, which is higher than that of G1 to the true positive samples,
+                                                                                                     1738500            0                  0                0.000
+21.4%. Thus, the Vanilla model focuses more on these short-delay                                     5630493            1                  0                0.821
+samples and learns better about them. We analyze the training                                        904961             0                  0                0.023
+samples with different delay time in the same way as above. As                                       1980991            1                  1                  1
+shown in Fig.7, the Vanilla model indeed learns better on the short-                                 3424953            1                  1                  1
+                                                                                                     3478664            0                  0                0.044
+delay samples of training data than the Oracle model. Moreover,                                      5645863            1                  1                  1
+we can also observe that the samples with a longer delay time on
+the training set have a larger training loss for the Oracle model. As
+the number of true positive samples is the same for these groups,
+this also indicates that samples with longer delays are more likely                           Table 6: The second concrete case on the Criteo dataset with
+to be hard samples.                                                                           MLP as the backbone. The false negatives are in boldface.
+                                                                                              Our method effectively corrects the labels of false negative
+        0.9                                        0.6                                        samples (5782400, 5796674, 5801703). Meanwhile, the true
+                                   Vanilla                    Vanilla
+        0.8                        Oracle          0.5        Oracle                          negative samples (remaining part) are not corrected to posi-
+                                                                                              tive samples.
+        0.7                                        0.4
+PRAUC
+
+
+
+
+                                              LL
+
+
+
+
+        0.6                                        0.3                                            Test Sample ID      Label          Vanilla Pred.    ULC(ours) Pred.
+        0.5                                        0.2                                               146531             1                0.061              0.790
+
+        0.4                                        0.1                                           Ten Most Similar
+              G1   G2   G3    G4      G5                 G1    G2       G3   G4     G5           Training Samples
+                                                                                                                    True Label     Observed Label     Corrected Label
+
+                                                                                                     5782400            1                  0                0.538
+Figure 7: Performance w.r.t. training samples with different                                         5796674            1                  0                0.677
+delay time on the Criteo dataset with MLP as the backbone. A                                         5801703            1                  0                0.616
+larger value of the 𝑥 axis means a longer delay time. Results                                        2648493            0                  0                0.002
+                                                                                                     4545673            0                  0                0.012
+on AUC are similar and hence omitted.                                                                686762             0                  0                0.000
+                                                                                                     214715             0                  0                0.000
+                                                                                                     5184723            0                  0                0.007
+A.2           Case Study                                                                             602570             0                  0                0.000
+                                                                                                     5382003            0                  0                0.013
+Here are two concrete cases on the Criteo dataset with MLP as the
+backbone. For each test sample, we find the ten most similar samples
+in the training set, as the label correctness of these training samples
+
