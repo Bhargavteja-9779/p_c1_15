@@ -1,0 +1,10 @@
+checkpoints/*
+!checkpoints/.gitkeep
+data/*
+!data/.gitkeep
+backups/*.tar.gz
+__pycache__/
+*.pyc
+state/*.lock
+state/STOP_SUPERVISOR
+.tmp_*

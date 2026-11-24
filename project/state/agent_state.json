@@ -1,0 +1,33 @@
+{
+  "status": "RUNNING",
+  "cycle": 1,
+  "phase": "PHASE1_JOURNAL",
+  "step": "journal selection: candidate search",
+  "pivots": 0,
+  "topic_id": null,
+  "journal": null,
+  "last_action": "Built persistence (Section 2) and restart layers (Section 3); runner smoke-tested twice (idempotent)",
+  "next_action": "Phase 1: evaluate >=10 Q1 journal candidates, verify Received->Accepted days via Crossref assertions on >=10 recent articles each",
+  "config": {
+    "TARGET_TIER": "Q1 journal (JCR), reputable publisher",
+    "MAX_DAYS_SUBMIT_TO_ACCEPT": 72,
+    "COMPUTE_PER_CYCLE_H": 15,
+    "GLOBAL_COMPUTE_CEILING_H": 120,
+    "MAX_CYCLES": 12,
+    "MAX_PIVOTS": 3,
+    "SEEDS_EXPLORE": [
+      0,
+      1,
+      2
+    ],
+    "SEEDS_CONFIRM": [
+      100,
+      101,
+      102,
+      103,
+      104
+    ]
+  },
+  "seeds_confirm_fixed_at": "2026-11-24 (project start; never change)",
+  "updated": "2026-11-24T03:06:25+00:00"
+}
