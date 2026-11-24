@@ -1,0 +1,44 @@
+# plan_v2 — written 2026-11-24 (cycle 1) BEFORE any held-out (test-project) run. Supersedes plan_v1 for E1-E3.
+# Reasons (state/decisions.md, journal DIAGNOSIS/HYPOTHESIS 2026-11-24):
+#  (1) dev diagnostic: G-mean differences between waiting-time policies are mostly an operating-point effect
+#      (best-threshold G-mean spread 0.765-0.842 vs 0.246-0.839 at threshold 0.5, neutron);
+#  (2) pre-specified LAW loses to wait W180 on neutron dev (0.496 vs 0.838);
+#  (3) closest prior work ODaSC must be a baseline (adapted reimplementation 'fsc', same tuning budget).
+# plan_v1 E1-E3 are NOT run (LAW as pre-specified already fails on dev; spending the test set on it is pointless).
+version: 2
+cycle: 1
+data: same as plan_v1 (dev = fabric, neutron, nova, sentry; test = 10 other projects)
+protocol: same as plan_v1, plus optional decision-threshold calibration (thr_cal)
+new_components:
+  thr_cal_lat: "latency-corrected threshold calibration (src/jit.py calibrate_threshold): at each update, threshold
+               maximising G-mean of the method's own last 3000 prequential scores against labels observable at T;
+               undiscovered commits counted fractionally via truncation-corrected delay survival (Lagakos) and the
+               discovered-defect rate of commits older than 365 days. No tuned parameters."
+  thr_cal_naive: "ablation: same, undiscovered commits counted as clean (face-value labels)"
+  fsc: "ODaSC-inspired feature-space label confidence (k=50 nearest neighbours among commits with a waiting-time
+        label), same split-weighting as LAW; W tuned on dev over the same grid {15,30,60,90,180}"
+methods_and_tuning_budget:   # every family: 5 W values (or 4 LAW variants) x {uncalibrated, thr_cal_lat}
+  nowait: [none, lat, naive]
+  wait:   "W in grid x {none, lat}"
+  orb:    "W in grid x {none, lat}"
+  fsc:    "W in grid x {none, lat}"
+  law:    "{lagakos,naive} x {model,base} x {none, lat}; plus lagakos_model x naive-cal (ablation)"
+selection_rule_on_dev: "PROPOSED is fixed now, before E0b: law_lagakos_model + thr_cal_lat (no selection among LAW variants).
+  Baselines: for each family {wait, orb, fsc} and {wait+lat, fsc+lat}, the W with the highest mean dev G-mean
+  (4 projects x 3 explore seeds) is frozen by scripts/freeze_config.py."
+experiments:
+  E0b_dev:  {projects: dev, seeds: explore, est_cpu_h: 5.5, priority: 12}
+  E1_main_confirm: {projects: test, seeds: confirm, methods: "proposed, nowait, oracle, wait(W*), orb(W*), fsc(W*), wait+lat(W*), fsc+lat(W*)", priority: 20}
+  E2_ablation: {projects: test, seeds: confirm, variants: "law_lagakos_model (no cal), law_lagakos_model+naive-cal, nowait+lat, law_naive_model+lat, law_lagakos_base+lat", priority: 30}
+  E3_robustness: {projects: test, seeds: confirm, conditions: "delay_scale=2 for proposed, wait(W*), fsc(W*), wait+lat(W*)", priority: 40}
+  E4_generalization: "per-project results on 10 held-out projects"
+  E5_efficiency: "seconds per run"
+  E6_confirmation: "= E1"
+hypotheses:
+  H2_primary: "PROPOSED beats the best uncalibrated dev-tuned baseline among {wait, orb, fsc} by >= 0.02 mean G-mean
+              on 10 test projects (Wilcoxon, Holm over the 3 uncalibrated baselines, 95% bootstrap CI excl. 0)."
+  H3_insight: "calibration shrinks the across-W G-mean spread (max-min over W grid, wait family) on test projects —
+              measured on E3-free data from E1/E2 only if W grid is run on test: NOT run (W grid on test = no tuning, but
+              costly); H3 is reported on dev only and labelled as such."
+  H4_secondary: "PROPOSED vs wait+lat(W*) and fsc+lat(W*): reported with the same statistics, no claim fixed in advance."
+statistics: same as plan_v1 (project-level n=10, Wilcoxon, Holm, bootstrap CI, effect >= 0.02 G-mean)

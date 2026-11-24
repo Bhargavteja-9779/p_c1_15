@@ -1,0 +1,6 @@
+# ATTEMPT: Calibrated threshold on dev, and an ODaSC-style baseline that turns out strong
+
+*Written 2026-11-24T21:27:40+00:00*
+
+Seed 0, neutron and fabric (results/diag_dev/threshold_dev_seed0_cal.txt). With the latency-corrected threshold every method lands within 0.016 of its own best-threshold G-mean (e.g. nowait neutron 0.764 vs 0.765 possible; law-model 0.825 vs 0.829). The spread across W for wait shrinks on neutron from 0.485-0.839 to 0.817-0.832. LAW-model + calibration: 0.825 neutron (wait W180 uncalibrated: 0.839), 0.713 fabric (best uncalibrated baseline orb W30 0.683 over 3 seeds). nowait + calibration stays 0.075 below on neutron, so part of H2(b) already fails there: calibration fixes the threshold but cannot fix nowait's worse ranking (AUC 0.829 vs 0.897).
+I also implemented the ODaSC-inspired baseline (fsc: kNN label confidence among commits with waiting-time labels). On fabric seed 0 with W=30 it reaches G-mean 0.715 uncalibrated, 0.734 calibrated, AUC 0.805 - better ranking than anything else I have except the oracle. It may beat LAW. That would be an honest and important result, so it goes in as a full baseline with the same tuning grid. I fixed the proposed config (LAW lagakos-model + calibration) in plan_v2 before running the dev grid E0b.

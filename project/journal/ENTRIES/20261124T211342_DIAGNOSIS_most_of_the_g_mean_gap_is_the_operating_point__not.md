@@ -1,0 +1,6 @@
+# DIAGNOSIS: Most of the G-mean gap is the operating point, not the ranking
+
+*Written 2026-11-24T21:13:42+00:00*
+
+Dev diagnostic, seed 0 (scripts/diag_threshold_dev.py -> results/diag_dev/threshold_dev_seed0.txt). On neutron, G-mean at the fixed 0.5 threshold ranges from 0.246 (nowait) to 0.839 (wait W180), but the best achievable G-mean over thresholds only ranges 0.765-0.842, and AUC 0.829-0.897. The share of commits predicted defective swings from 0.023 (nowait) to 0.466 (W180) against a true rate of 0.256. LAW base: 0.684 at 0.5 but 0.818 at its best threshold; it predicts 0.214 positive. On fabric the order flips: W180 over-predicts (0.805 positive vs 0.207 true, G-mean 0.471), and LAW-model has the best ranking of the practical methods (best-threshold G-mean 0.709, AUC 0.769 vs wait W30 0.700/0.760). Also (scripts/diag_q_dev.py): LAW's posterior q for undiscovered true bugs averages only 0.086 on neutron vs 0.061 for true cleans - q is far too small and weakly separating, so LAW trains on too few positives and under-predicts.
+My reading: choosing W, as the literature does, mostly picks how many positives the model predicts. Waiting-time tuning is in large part implicit threshold tuning, and the best W differs per project in opposite directions (neutron wants 180, fabric 30).

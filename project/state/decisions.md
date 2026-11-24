@@ -37,3 +37,9 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-24T21:02:13+00:00** — Liu et al. 2024a (PU learning for JIT-SDP) marked UNVERIFIED; generic PU framing of clean commits conceded as prior art; LAW claim narrowed to age/delay-distribution weighting in the online setting
   - Reason: Primary source not found: Crossref scan of all 2024 EMSE works finds no such paper; EMSE 29(4):98 is a different article
+
+- **2026-11-24T21:27:40+00:00** — plan_v2 adopted: adds latency-corrected threshold calibration (thr_cal), ODaSC-inspired fsc baseline, E0b dev grid (324 runs); PROPOSED fixed in advance = law_lagakos_model + thr_cal_lat; plan_v1 E1-E3 dropped
+  - Reason: Dev diagnosis: G-mean gaps are mostly operating point; pre-specified LAW fails on neutron dev; closest prior work must be a baseline
+
+- **2026-11-24T21:27:40+00:00** — E0 jobs interrupted at 152/192 to load new code (3 running jobs reset and re-run, no results lost)
+  - Reason: Workers had the old module imported

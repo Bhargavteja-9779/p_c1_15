@@ -1,0 +1,21 @@
+[
+  {
+    "experiment": "E0",
+    "project": "sentry",
+    "method": "nowait",
+    "variant": "nowait",
+    "seed": 0,
+    "split": "dev",
+    "gmean": 0.5293615286125816,
+    "r0": 0.9233235943846647,
+    "r1": 0.3034944949736716,
+    "rdiff": 0.6198290994109932,
+    "auc": 0.7528637619108647,
+    "mcc": 0.284780962590505,
+    "n_eval": 18211,
+    "seconds": 42.4,
+    "job_id": "E0_sentry_nowait_s0",
+    "written": "2026-11-24T21:05:29+00:00",
+    "cycle": 1
+  }
+]

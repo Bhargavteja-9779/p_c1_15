@@ -13,10 +13,12 @@ def test_future_discoveries_do_not_leak():
     df2 = df.copy()
     late = df2.t_found > T0
     df2.loc[late & np.isfinite(df2.t_found), "t_found"] = np.inf        # hide future discoveries
-    for m in ["nowait", "wait", "orb", "law"]:
-        a = simulate(df, m, seed=0, return_preds=True, eval_end_gap_days=0)
-        b = simulate(df2, m, seed=0, return_preds=True, eval_end_gap_days=0)
-        assert np.allclose(np.nan_to_num(a["prob"][:cut]), np.nan_to_num(b["prob"][:cut])), m
+    for m, kw in [("nowait", {}), ("wait", {}), ("orb", {}), ("law", {}), ("fsc", {"W": 30}),
+                  ("law", {"thr_cal": "lat"}), ("nowait", {"thr_cal": "naive"}), ("fsc", {"W": 30, "thr_cal": "lat"})]:
+        a = simulate(df, m, seed=0, return_preds=True, eval_end_gap_days=0, **kw)
+        b = simulate(df2, m, seed=0, return_preds=True, eval_end_gap_days=0, **kw)
+        assert np.allclose(np.nan_to_num(a["prob"][:cut]), np.nan_to_num(b["prob"][:cut])), (m, kw)
+        assert np.array_equal(a["pred"][:cut], b["pred"][:cut]), (m, kw)   # threshold calibration too
 
 def test_lagakos_recovers_truncated_exponential():
     rng = np.random.default_rng(0); tc = rng.uniform(0, 1000, 20000); d = rng.exponential(200, 20000)

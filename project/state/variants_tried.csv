@@ -6,3 +6,6 @@ timestamp,cycle,variant_id,description,data_split_used,metric,value,outcome,note
 2026-11-24T03:22:41+00:00,1,orb_W90 (buggy: factors cancelled),exploratory code check,dev: fabric seed 0,gmean,0.636,exploratory,pre-plan sanity run
 2026-11-24T03:22:41+00:00,1,orb_W90,exploratory code check,dev: fabric seed 0,gmean,0.655,exploratory,pre-plan sanity run
 2026-11-24T03:22:41+00:00,1,law_lagakos_model,exploratory code check,dev: fabric seed 0,gmean,0.67,exploratory,pre-plan sanity run
+2026-11-24T21:27:40+00:00,1,diag_thr_best,diagnostic: best-threshold G-mean & positive rate for oracle/nowait/wait30/90/180/law base/model,"dev: neutron,fabric seed 0",gmean_bestthr,see results/diag_dev/threshold_dev_seed0.txt,diagnostic,operating-point effect
+2026-11-24T21:27:40+00:00,1,thr_cal_lat (7 methods),latency-corrected threshold calibration applied to oracle/nowait/wait30/90/180/law base/model,"dev: neutron,fabric seed 0",gmean,law_model+cal 0.825/0.713; wait180+cal 0.832/0.645,promising,results/diag_dev/threshold_dev_seed0_cal.txt
+2026-11-24T21:27:40+00:00,1,fsc_W30 (+cal),"ODaSC-inspired kNN label confidence baseline, smoke check",dev: fabric seed 0,gmean,0.715 / 0.734 (cal),strong baseline,"AUC 0.805, higher than all other practical methods on fabric"

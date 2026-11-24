@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E0b",
+    "project": "fabric",
+    "method": "fsc",
+    "variant": "fsc_W90",
+    "seed": 0,
+    "split": "dev",
+    "W": 90,
+    "gmean": 0.6642910274302002,
+    "r0": 0.7405431619786615,
+    "r1": 0.5958904109589042,
+    "rdiff": 0.1446527510197574,
+    "auc": 0.744031485147638,
+    "mcc": 0.2745297309690346,
+    "n_eval": 2500,
+    "seconds": 3.43,
+    "job_id": "E0b_fabric_fsc_W90_s0_quick",
+    "written": "2026-11-24T21:25:39+00:00",
+    "cycle": 1
+  }
+]

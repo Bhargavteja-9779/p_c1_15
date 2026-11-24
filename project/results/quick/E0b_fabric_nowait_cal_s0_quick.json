@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E0b",
+    "project": "fabric",
+    "method": "nowait",
+    "variant": "nowait_cal",
+    "seed": 0,
+    "split": "dev",
+    "thr_cal": "lat",
+    "gmean": 0.6063293412802181,
+    "r0": 0.6290009699321047,
+    "r1": 0.5844748858447488,
+    "rdiff": 0.04452608408735592,
+    "auc": 0.7020985300435363,
+    "mcc": 0.16509472261173352,
+    "n_eval": 2500,
+    "seconds": 2.03,
+    "thr_mean": 0.07503067840743563,
+    "job_id": "E0b_fabric_nowait_cal_s0_quick",
+    "written": "2026-11-24T21:25:56+00:00",
+    "cycle": 1
+  }
+]

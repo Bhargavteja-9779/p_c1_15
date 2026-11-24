@@ -2229,10 +2229,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 11
+      "priority": 11,
+      "started": "2026-11-24T21:17:10+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T21:21:58+00:00",
+      "seconds": 288.1
     },
     {
       "id": "E0_nova_law_naive_model_s0",
@@ -2247,10 +2251,15 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 2,
       "cycle": 1,
-      "priority": 11
+      "priority": 11,
+      "started": "2026-11-24T21:26:22+00:00",
+      "worker": 1,
+      "log": [
+        "2026-11-24T21:26:22+00:00 reset running->pending on restart"
+      ]
     },
     {
       "id": "E0_nova_law_lagakos_base_s0",
@@ -2265,10 +2274,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 11
+      "priority": 11,
+      "started": "2026-11-24T21:12:53+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T21:17:10+00:00",
+      "seconds": 257.2
     },
     {
       "id": "E0_nova_law_naive_base_s0",
@@ -2283,10 +2296,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 11
+      "priority": 11,
+      "started": "2026-11-24T21:21:58+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T21:26:05+00:00",
+      "seconds": 246.4
     },
     {
       "id": "E0_nova_nowait_s1",
@@ -2501,10 +2518,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 11
+      "priority": 11,
+      "started": "2026-11-24T21:17:21+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T21:22:09+00:00",
+      "seconds": 288.4
     },
     {
       "id": "E0_nova_law_naive_model_s1",
@@ -2519,10 +2540,15 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 2,
       "cycle": 1,
-      "priority": 11
+      "priority": 11,
+      "started": "2026-11-24T21:26:22+00:00",
+      "worker": 2,
+      "log": [
+        "2026-11-24T21:26:22+00:00 reset running->pending on restart"
+      ]
     },
     {
       "id": "E0_nova_law_lagakos_base_s1",
@@ -2537,10 +2563,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 11
+      "priority": 11,
+      "started": "2026-11-24T21:13:04+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T21:17:21+00:00",
+      "seconds": 257.3
     },
     {
       "id": "E0_nova_law_naive_base_s1",
@@ -2555,10 +2585,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 11
+      "priority": 11,
+      "started": "2026-11-24T21:22:09+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T21:26:15+00:00",
+      "seconds": 246.0
     },
     {
       "id": "E0_nova_nowait_s2",
@@ -2773,10 +2807,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 11
+      "priority": 11,
+      "started": "2026-11-24T21:17:49+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T21:22:31+00:00",
+      "seconds": 281.2
     },
     {
       "id": "E0_nova_law_naive_model_s2",
@@ -2809,10 +2847,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 11
+      "priority": 11,
+      "started": "2026-11-24T21:13:32+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T21:17:49+00:00",
+      "seconds": 257.4
     },
     {
       "id": "E0_nova_law_naive_base_s2",
@@ -2827,10 +2869,15 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 2,
       "cycle": 1,
-      "priority": 11
+      "priority": 11,
+      "started": "2026-11-24T21:26:22+00:00",
+      "worker": 0,
+      "log": [
+        "2026-11-24T21:26:22+00:00 reset running->pending on restart"
+      ]
     },
     {
       "id": "E0_sentry_nowait_s0",
@@ -2842,10 +2889,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:04:46+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T21:05:29+00:00",
+      "seconds": 42.4
     },
     {
       "id": "E0_sentry_oracle_s0",
@@ -2857,10 +2908,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:05:30+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T21:06:14+00:00",
+      "seconds": 44.3
     },
     {
       "id": "E0_sentry_wait_W15_s0",
@@ -2874,10 +2929,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:09:36+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T21:10:17+00:00",
+      "seconds": 40.7
     },
     {
       "id": "E0_sentry_orb_W15_s0",
@@ -2891,10 +2950,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:06:14+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T21:06:57+00:00",
+      "seconds": 43.1
     },
     {
       "id": "E0_sentry_wait_W30_s0",
@@ -2908,10 +2971,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:10:58+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T21:11:37+00:00",
+      "seconds": 38.8
     },
     {
       "id": "E0_sentry_orb_W30_s0",
@@ -2925,10 +2992,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:07:41+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T21:08:19+00:00",
+      "seconds": 38.2
     },
     {
       "id": "E0_sentry_wait_W60_s0",
@@ -2942,10 +3013,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:11:37+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T21:12:16+00:00",
+      "seconds": 39.1
     },
     {
       "id": "E0_sentry_orb_W60_s0",
@@ -2959,10 +3034,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:08:19+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T21:08:59+00:00",
+      "seconds": 39.6
     },
     {
       "id": "E0_sentry_wait_W90_s0",
@@ -2976,10 +3055,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:12:16+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T21:12:51+00:00",
+      "seconds": 35.4
     },
     {
       "id": "E0_sentry_orb_W90_s0",
@@ -2993,10 +3076,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:08:59+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T21:09:36+00:00",
+      "seconds": 37.4
     },
     {
       "id": "E0_sentry_wait_W180_s0",
@@ -3010,10 +3097,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:10:17+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T21:10:51+00:00",
+      "seconds": 34.1
     },
     {
       "id": "E0_sentry_orb_W180_s0",
@@ -3027,10 +3118,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:06:58+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T21:07:33+00:00",
+      "seconds": 34.7
     },
     {
       "id": "E0_sentry_law_lagakos_model_s0",
@@ -3067,10 +3162,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:03:38+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T21:04:46+00:00",
+      "seconds": 68.3
     },
     {
       "id": "E0_sentry_law_lagakos_base_s0",
@@ -3110,10 +3209,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:02:31+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T21:03:38+00:00",
+      "seconds": 67.5
     },
     {
       "id": "E0_sentry_nowait_s1",
@@ -3125,10 +3228,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:05:14+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T21:05:56+00:00",
+      "seconds": 41.6
     },
     {
       "id": "E0_sentry_oracle_s1",
@@ -3140,10 +3247,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:05:56+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T21:06:38+00:00",
+      "seconds": 42.3
     },
     {
       "id": "E0_sentry_wait_W15_s1",
@@ -3157,10 +3268,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:09:49+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T21:10:29+00:00",
+      "seconds": 39.7
     },
     {
       "id": "E0_sentry_orb_W15_s1",
@@ -3174,10 +3289,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:06:38+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T21:07:18+00:00",
+      "seconds": 40.1
     },
     {
       "id": "E0_sentry_wait_W30_s1",
@@ -3191,10 +3310,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:11:03+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T21:11:44+00:00",
+      "seconds": 41.4
     },
     {
       "id": "E0_sentry_orb_W30_s1",
@@ -3208,10 +3331,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:07:52+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T21:08:31+00:00",
+      "seconds": 39.6
     },
     {
       "id": "E0_sentry_wait_W60_s1",
@@ -3225,10 +3352,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:11:44+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T21:12:25+00:00",
+      "seconds": 40.6
     },
     {
       "id": "E0_sentry_orb_W60_s1",
@@ -3242,10 +3373,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:08:31+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T21:09:11+00:00",
+      "seconds": 39.3
     },
     {
       "id": "E0_sentry_wait_W90_s1",
@@ -3259,10 +3394,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:12:25+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T21:13:04+00:00",
+      "seconds": 38.6
     },
     {
       "id": "E0_sentry_orb_W90_s1",
@@ -3276,10 +3415,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:09:11+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T21:09:49+00:00",
+      "seconds": 38.6
     },
     {
       "id": "E0_sentry_wait_W180_s1",
@@ -3293,10 +3436,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:10:29+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T21:11:03+00:00",
+      "seconds": 34.0
     },
     {
       "id": "E0_sentry_orb_W180_s1",
@@ -3310,10 +3457,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:07:18+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T21:07:52+00:00",
+      "seconds": 33.7
     },
     {
       "id": "E0_sentry_law_lagakos_model_s1",
@@ -3350,10 +3501,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:03:58+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T21:05:14+00:00",
+      "seconds": 75.9
     },
     {
       "id": "E0_sentry_law_lagakos_base_s1",
@@ -3368,7 +3523,7 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 2,
       "cycle": 1,
       "priority": 10,
@@ -3376,7 +3531,9 @@
       "worker": 0,
       "log": [
         "2026-11-24T21:00:43+00:00 reset orphan running->pending (manual, stale-self-lock bug)"
-      ]
+      ],
+      "finished": "2026-11-24T21:02:31+00:00",
+      "seconds": 68.7
     },
     {
       "id": "E0_sentry_law_naive_base_s1",
@@ -3391,10 +3548,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:02:50+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T21:03:58+00:00",
+      "seconds": 68.2
     },
     {
       "id": "E0_sentry_nowait_s2",
@@ -3406,10 +3567,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:05:29+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T21:06:13+00:00",
+      "seconds": 43.9
     },
     {
       "id": "E0_sentry_oracle_s2",
@@ -3421,10 +3586,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:06:13+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T21:06:58+00:00",
+      "seconds": 45.5
     },
     {
       "id": "E0_sentry_wait_W15_s2",
@@ -3438,10 +3607,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:10:14+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T21:10:58+00:00",
+      "seconds": 43.5
     },
     {
       "id": "E0_sentry_orb_W15_s2",
@@ -3455,10 +3628,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:06:57+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T21:07:41+00:00",
+      "seconds": 43.9
     },
     {
       "id": "E0_sentry_wait_W30_s2",
@@ -3472,10 +3649,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:11:31+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T21:12:13+00:00",
+      "seconds": 42.5
     },
     {
       "id": "E0_sentry_orb_W30_s2",
@@ -3489,10 +3670,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:08:12+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T21:08:54+00:00",
+      "seconds": 41.9
     },
     {
       "id": "E0_sentry_wait_W60_s2",
@@ -3506,10 +3691,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:12:13+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T21:12:53+00:00",
+      "seconds": 40.2
     },
     {
       "id": "E0_sentry_orb_W60_s2",
@@ -3523,10 +3712,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:08:54+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T21:09:35+00:00",
+      "seconds": 40.7
     },
     {
       "id": "E0_sentry_wait_W90_s2",
@@ -3540,10 +3733,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:12:51+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T21:13:32+00:00",
+      "seconds": 41.0
     },
     {
       "id": "E0_sentry_orb_W90_s2",
@@ -3557,10 +3754,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:09:35+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T21:10:14+00:00",
+      "seconds": 39.9
     },
     {
       "id": "E0_sentry_wait_W180_s2",
@@ -3574,10 +3775,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:10:51+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T21:11:31+00:00",
+      "seconds": 39.5
     },
     {
       "id": "E0_sentry_orb_W180_s2",
@@ -3591,10 +3796,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:07:33+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T21:08:12+00:00",
+      "seconds": 38.9
     },
     {
       "id": "E0_sentry_law_lagakos_model_s2",
@@ -3609,12 +3818,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 10,
       "started": "2026-11-24T21:01:33+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-24T21:03:01+00:00",
+      "seconds": 87.7
     },
     {
       "id": "E0_sentry_law_naive_model_s2",
@@ -3629,10 +3840,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T21:04:14+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T21:05:30+00:00",
+      "seconds": 75.8
     },
     {
       "id": "E0_sentry_law_lagakos_base_s2",
@@ -3647,7 +3862,7 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 2,
       "cycle": 1,
       "priority": 10,
@@ -3655,7 +3870,9 @@
       "worker": 2,
       "log": [
         "2026-11-24T21:00:43+00:00 reset orphan running->pending (manual, stale-self-lock bug)"
-      ]
+      ],
+      "finished": "2026-11-24T21:02:50+00:00",
+      "seconds": 77.1
     },
     {
       "id": "E0_sentry_law_naive_base_s2",
@@ -3670,10 +3887,5822 @@
         "experiment": "E0",
         "split": "dev"
       },
+      "status": "done",
+      "attempts": 1,
+      "cycle": 1,
+      "priority": 10,
+      "started": "2026-11-24T21:03:01+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T21:04:14+00:00",
+      "seconds": 72.8
+    },
+    {
+      "id": "E0b_fabric_nowait_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_cal": "lat",
+        "variant": "nowait_cal",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
       "status": "pending",
       "attempts": 0,
       "cycle": 1,
-      "priority": 10
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_nowait_calnaive_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_cal": "naive",
+        "variant": "nowait_calnaive",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_law_lagakos_model_calnaive_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_cal": "naive",
+        "variant": "law_lagakos_model_calnaive",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_wait_W15_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "wait_W15_cal",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_orb_W15_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "orb_W15_cal",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W15_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 15,
+        "variant": "fsc_W15",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W15_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "fsc_W15_cal",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_wait_W30_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "wait_W30_cal",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_orb_W30_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "orb_W30_cal",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 30,
+        "variant": "fsc_W30",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W30_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "fsc_W30_cal",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_wait_W60_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "wait_W60_cal",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_orb_W60_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "orb_W60_cal",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 60,
+        "variant": "fsc_W60",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W60_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "fsc_W60_cal",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_wait_W90_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "wait_W90_cal",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_orb_W90_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "orb_W90_cal",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W90_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 90,
+        "variant": "fsc_W90",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W90_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "fsc_W90_cal",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_wait_W180_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "wait_W180_cal",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_orb_W180_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "orb_W180_cal",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W180_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 180,
+        "variant": "fsc_W180",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W180_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "fsc_W180_cal",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_law_lagakos_model_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_cal": "lat",
+        "variant": "law_lagakos_model_cal",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_law_naive_model_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "model",
+        "thr_cal": "lat",
+        "variant": "law_naive_model_cal",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_law_lagakos_base_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "base",
+        "thr_cal": "lat",
+        "variant": "law_lagakos_base_cal",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_law_naive_base_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "base",
+        "thr_cal": "lat",
+        "variant": "law_naive_base_cal",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_nowait_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_cal": "lat",
+        "variant": "nowait_cal",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_nowait_calnaive_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_cal": "naive",
+        "variant": "nowait_calnaive",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_law_lagakos_model_calnaive_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_cal": "naive",
+        "variant": "law_lagakos_model_calnaive",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_wait_W15_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "wait_W15_cal",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_orb_W15_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "orb_W15_cal",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W15_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 15,
+        "variant": "fsc_W15",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W15_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "fsc_W15_cal",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_wait_W30_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "wait_W30_cal",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_orb_W30_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "orb_W30_cal",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 30,
+        "variant": "fsc_W30",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W30_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "fsc_W30_cal",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_wait_W60_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "wait_W60_cal",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_orb_W60_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "orb_W60_cal",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 60,
+        "variant": "fsc_W60",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W60_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "fsc_W60_cal",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_wait_W90_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "wait_W90_cal",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_orb_W90_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "orb_W90_cal",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W90_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 90,
+        "variant": "fsc_W90",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W90_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "fsc_W90_cal",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_wait_W180_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "wait_W180_cal",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_orb_W180_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "orb_W180_cal",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W180_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 180,
+        "variant": "fsc_W180",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W180_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "fsc_W180_cal",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_law_lagakos_model_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_cal": "lat",
+        "variant": "law_lagakos_model_cal",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_law_naive_model_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "model",
+        "thr_cal": "lat",
+        "variant": "law_naive_model_cal",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_law_lagakos_base_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "base",
+        "thr_cal": "lat",
+        "variant": "law_lagakos_base_cal",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_law_naive_base_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "base",
+        "thr_cal": "lat",
+        "variant": "law_naive_base_cal",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_nowait_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_cal": "lat",
+        "variant": "nowait_cal",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_nowait_calnaive_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_cal": "naive",
+        "variant": "nowait_calnaive",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_law_lagakos_model_calnaive_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_cal": "naive",
+        "variant": "law_lagakos_model_calnaive",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_wait_W15_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "wait_W15_cal",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_orb_W15_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "orb_W15_cal",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W15_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 15,
+        "variant": "fsc_W15",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W15_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "fsc_W15_cal",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_wait_W30_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "wait_W30_cal",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_orb_W30_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "orb_W30_cal",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 30,
+        "variant": "fsc_W30",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W30_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "fsc_W30_cal",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_wait_W60_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "wait_W60_cal",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_orb_W60_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "orb_W60_cal",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 60,
+        "variant": "fsc_W60",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W60_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "fsc_W60_cal",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_wait_W90_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "wait_W90_cal",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_orb_W90_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "orb_W90_cal",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W90_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 90,
+        "variant": "fsc_W90",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W90_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "fsc_W90_cal",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_wait_W180_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "wait_W180_cal",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_orb_W180_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "orb_W180_cal",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W180_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 180,
+        "variant": "fsc_W180",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_fsc_W180_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "fsc_W180_cal",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_law_lagakos_model_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_cal": "lat",
+        "variant": "law_lagakos_model_cal",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_law_naive_model_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "model",
+        "thr_cal": "lat",
+        "variant": "law_naive_model_cal",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_law_lagakos_base_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "base",
+        "thr_cal": "lat",
+        "variant": "law_lagakos_base_cal",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_fabric_law_naive_base_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "base",
+        "thr_cal": "lat",
+        "variant": "law_naive_base_cal",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_nowait_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_cal": "lat",
+        "variant": "nowait_cal",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_nowait_calnaive_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_cal": "naive",
+        "variant": "nowait_calnaive",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_law_lagakos_model_calnaive_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_cal": "naive",
+        "variant": "law_lagakos_model_calnaive",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_wait_W15_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "wait_W15_cal",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_orb_W15_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "orb_W15_cal",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W15_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 15,
+        "variant": "fsc_W15",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W15_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "fsc_W15_cal",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_wait_W30_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "wait_W30_cal",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_orb_W30_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "orb_W30_cal",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 30,
+        "variant": "fsc_W30",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W30_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "fsc_W30_cal",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_wait_W60_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "wait_W60_cal",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_orb_W60_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "orb_W60_cal",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 60,
+        "variant": "fsc_W60",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W60_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "fsc_W60_cal",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_wait_W90_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "wait_W90_cal",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_orb_W90_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "orb_W90_cal",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W90_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 90,
+        "variant": "fsc_W90",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W90_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "fsc_W90_cal",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_wait_W180_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "wait_W180_cal",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_orb_W180_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "orb_W180_cal",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W180_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 180,
+        "variant": "fsc_W180",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W180_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "fsc_W180_cal",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_law_lagakos_model_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_cal": "lat",
+        "variant": "law_lagakos_model_cal",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_law_naive_model_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "model",
+        "thr_cal": "lat",
+        "variant": "law_naive_model_cal",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_law_lagakos_base_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "base",
+        "thr_cal": "lat",
+        "variant": "law_lagakos_base_cal",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_law_naive_base_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "base",
+        "thr_cal": "lat",
+        "variant": "law_naive_base_cal",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_nowait_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_cal": "lat",
+        "variant": "nowait_cal",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_nowait_calnaive_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_cal": "naive",
+        "variant": "nowait_calnaive",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_law_lagakos_model_calnaive_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_cal": "naive",
+        "variant": "law_lagakos_model_calnaive",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_wait_W15_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "wait_W15_cal",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_orb_W15_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "orb_W15_cal",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W15_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 15,
+        "variant": "fsc_W15",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W15_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "fsc_W15_cal",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_wait_W30_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "wait_W30_cal",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_orb_W30_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "orb_W30_cal",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 30,
+        "variant": "fsc_W30",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W30_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "fsc_W30_cal",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_wait_W60_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "wait_W60_cal",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_orb_W60_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "orb_W60_cal",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 60,
+        "variant": "fsc_W60",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W60_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "fsc_W60_cal",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_wait_W90_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "wait_W90_cal",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_orb_W90_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "orb_W90_cal",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W90_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 90,
+        "variant": "fsc_W90",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W90_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "fsc_W90_cal",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_wait_W180_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "wait_W180_cal",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_orb_W180_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "orb_W180_cal",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W180_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 180,
+        "variant": "fsc_W180",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W180_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "fsc_W180_cal",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_law_lagakos_model_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_cal": "lat",
+        "variant": "law_lagakos_model_cal",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_law_naive_model_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "model",
+        "thr_cal": "lat",
+        "variant": "law_naive_model_cal",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_law_lagakos_base_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "base",
+        "thr_cal": "lat",
+        "variant": "law_lagakos_base_cal",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_law_naive_base_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "base",
+        "thr_cal": "lat",
+        "variant": "law_naive_base_cal",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_nowait_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_cal": "lat",
+        "variant": "nowait_cal",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_nowait_calnaive_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_cal": "naive",
+        "variant": "nowait_calnaive",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_law_lagakos_model_calnaive_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_cal": "naive",
+        "variant": "law_lagakos_model_calnaive",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_wait_W15_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "wait_W15_cal",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_orb_W15_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "orb_W15_cal",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W15_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 15,
+        "variant": "fsc_W15",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W15_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "fsc_W15_cal",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_wait_W30_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "wait_W30_cal",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_orb_W30_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "orb_W30_cal",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 30,
+        "variant": "fsc_W30",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W30_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "fsc_W30_cal",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_wait_W60_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "wait_W60_cal",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_orb_W60_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "orb_W60_cal",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 60,
+        "variant": "fsc_W60",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W60_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "fsc_W60_cal",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_wait_W90_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "wait_W90_cal",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_orb_W90_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "orb_W90_cal",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W90_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 90,
+        "variant": "fsc_W90",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W90_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "fsc_W90_cal",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_wait_W180_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "wait_W180_cal",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_orb_W180_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "orb_W180_cal",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W180_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 180,
+        "variant": "fsc_W180",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_fsc_W180_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "fsc_W180_cal",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_law_lagakos_model_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_cal": "lat",
+        "variant": "law_lagakos_model_cal",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_law_naive_model_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "model",
+        "thr_cal": "lat",
+        "variant": "law_naive_model_cal",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_law_lagakos_base_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "base",
+        "thr_cal": "lat",
+        "variant": "law_lagakos_base_cal",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_neutron_law_naive_base_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "base",
+        "thr_cal": "lat",
+        "variant": "law_naive_base_cal",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_nova_nowait_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_cal": "lat",
+        "variant": "nowait_cal",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_nowait_calnaive_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_cal": "naive",
+        "variant": "nowait_calnaive",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_law_lagakos_model_calnaive_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_cal": "naive",
+        "variant": "law_lagakos_model_calnaive",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_wait_W15_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "wait_W15_cal",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_orb_W15_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "orb_W15_cal",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W15_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 15,
+        "variant": "fsc_W15",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W15_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "fsc_W15_cal",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_wait_W30_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "wait_W30_cal",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_orb_W30_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "orb_W30_cal",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 30,
+        "variant": "fsc_W30",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W30_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "fsc_W30_cal",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_wait_W60_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "wait_W60_cal",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_orb_W60_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "orb_W60_cal",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 60,
+        "variant": "fsc_W60",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W60_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "fsc_W60_cal",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_wait_W90_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "wait_W90_cal",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_orb_W90_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "orb_W90_cal",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W90_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 90,
+        "variant": "fsc_W90",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W90_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "fsc_W90_cal",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_wait_W180_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "wait_W180_cal",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_orb_W180_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "orb_W180_cal",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W180_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 180,
+        "variant": "fsc_W180",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W180_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "fsc_W180_cal",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_law_lagakos_model_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_cal": "lat",
+        "variant": "law_lagakos_model_cal",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_law_naive_model_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "model",
+        "thr_cal": "lat",
+        "variant": "law_naive_model_cal",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_law_lagakos_base_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "base",
+        "thr_cal": "lat",
+        "variant": "law_lagakos_base_cal",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_law_naive_base_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "base",
+        "thr_cal": "lat",
+        "variant": "law_naive_base_cal",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_nowait_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_cal": "lat",
+        "variant": "nowait_cal",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_nowait_calnaive_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_cal": "naive",
+        "variant": "nowait_calnaive",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_law_lagakos_model_calnaive_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_cal": "naive",
+        "variant": "law_lagakos_model_calnaive",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_wait_W15_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "wait_W15_cal",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_orb_W15_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "orb_W15_cal",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W15_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 15,
+        "variant": "fsc_W15",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W15_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "fsc_W15_cal",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_wait_W30_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "wait_W30_cal",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_orb_W30_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "orb_W30_cal",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 30,
+        "variant": "fsc_W30",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W30_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "fsc_W30_cal",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_wait_W60_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "wait_W60_cal",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_orb_W60_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "orb_W60_cal",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 60,
+        "variant": "fsc_W60",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W60_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "fsc_W60_cal",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_wait_W90_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "wait_W90_cal",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_orb_W90_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "orb_W90_cal",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W90_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 90,
+        "variant": "fsc_W90",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W90_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "fsc_W90_cal",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_wait_W180_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "wait_W180_cal",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_orb_W180_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "orb_W180_cal",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W180_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 180,
+        "variant": "fsc_W180",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W180_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "fsc_W180_cal",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_law_lagakos_model_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_cal": "lat",
+        "variant": "law_lagakos_model_cal",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_law_naive_model_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "model",
+        "thr_cal": "lat",
+        "variant": "law_naive_model_cal",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_law_lagakos_base_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "base",
+        "thr_cal": "lat",
+        "variant": "law_lagakos_base_cal",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_law_naive_base_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "base",
+        "thr_cal": "lat",
+        "variant": "law_naive_base_cal",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_nowait_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_cal": "lat",
+        "variant": "nowait_cal",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_nowait_calnaive_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_cal": "naive",
+        "variant": "nowait_calnaive",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_law_lagakos_model_calnaive_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_cal": "naive",
+        "variant": "law_lagakos_model_calnaive",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_wait_W15_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "wait_W15_cal",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_orb_W15_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "orb_W15_cal",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W15_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 15,
+        "variant": "fsc_W15",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W15_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "fsc_W15_cal",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_wait_W30_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "wait_W30_cal",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_orb_W30_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "orb_W30_cal",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 30,
+        "variant": "fsc_W30",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W30_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "fsc_W30_cal",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_wait_W60_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "wait_W60_cal",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_orb_W60_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "orb_W60_cal",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 60,
+        "variant": "fsc_W60",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W60_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "fsc_W60_cal",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_wait_W90_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "wait_W90_cal",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_orb_W90_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "orb_W90_cal",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W90_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 90,
+        "variant": "fsc_W90",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W90_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "fsc_W90_cal",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_wait_W180_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "wait_W180_cal",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_orb_W180_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "orb_W180_cal",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W180_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 180,
+        "variant": "fsc_W180",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_fsc_W180_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "fsc_W180_cal",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_law_lagakos_model_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_cal": "lat",
+        "variant": "law_lagakos_model_cal",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_law_naive_model_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "model",
+        "thr_cal": "lat",
+        "variant": "law_naive_model_cal",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_law_lagakos_base_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "base",
+        "thr_cal": "lat",
+        "variant": "law_lagakos_base_cal",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_nova_law_naive_base_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "base",
+        "thr_cal": "lat",
+        "variant": "law_naive_base_cal",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0b_sentry_nowait_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_cal": "lat",
+        "variant": "nowait_cal",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_nowait_calnaive_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_cal": "naive",
+        "variant": "nowait_calnaive",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_law_lagakos_model_calnaive_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_cal": "naive",
+        "variant": "law_lagakos_model_calnaive",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_wait_W15_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "wait_W15_cal",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_orb_W15_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "orb_W15_cal",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W15_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 15,
+        "variant": "fsc_W15",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W15_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "fsc_W15_cal",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_wait_W30_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "wait_W30_cal",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_orb_W30_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "orb_W30_cal",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W30_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 30,
+        "variant": "fsc_W30",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W30_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "fsc_W30_cal",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_wait_W60_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "wait_W60_cal",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_orb_W60_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "orb_W60_cal",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W60_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 60,
+        "variant": "fsc_W60",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W60_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "fsc_W60_cal",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_wait_W90_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "wait_W90_cal",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_orb_W90_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "orb_W90_cal",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W90_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 90,
+        "variant": "fsc_W90",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W90_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "fsc_W90_cal",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_wait_W180_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "wait_W180_cal",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_orb_W180_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "orb_W180_cal",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W180_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 180,
+        "variant": "fsc_W180",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W180_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "fsc_W180_cal",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_law_lagakos_model_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_cal": "lat",
+        "variant": "law_lagakos_model_cal",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_law_naive_model_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "model",
+        "thr_cal": "lat",
+        "variant": "law_naive_model_cal",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_law_lagakos_base_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "base",
+        "thr_cal": "lat",
+        "variant": "law_lagakos_base_cal",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_law_naive_base_cal_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "base",
+        "thr_cal": "lat",
+        "variant": "law_naive_base_cal",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_nowait_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_cal": "lat",
+        "variant": "nowait_cal",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_nowait_calnaive_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_cal": "naive",
+        "variant": "nowait_calnaive",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_law_lagakos_model_calnaive_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_cal": "naive",
+        "variant": "law_lagakos_model_calnaive",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_wait_W15_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "wait_W15_cal",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_orb_W15_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "orb_W15_cal",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W15_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 15,
+        "variant": "fsc_W15",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W15_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "fsc_W15_cal",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_wait_W30_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "wait_W30_cal",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_orb_W30_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "orb_W30_cal",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W30_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 30,
+        "variant": "fsc_W30",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W30_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "fsc_W30_cal",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_wait_W60_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "wait_W60_cal",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_orb_W60_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "orb_W60_cal",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W60_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 60,
+        "variant": "fsc_W60",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W60_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "fsc_W60_cal",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_wait_W90_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "wait_W90_cal",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_orb_W90_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "orb_W90_cal",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W90_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 90,
+        "variant": "fsc_W90",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W90_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "fsc_W90_cal",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_wait_W180_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "wait_W180_cal",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_orb_W180_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "orb_W180_cal",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W180_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 180,
+        "variant": "fsc_W180",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W180_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "fsc_W180_cal",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_law_lagakos_model_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_cal": "lat",
+        "variant": "law_lagakos_model_cal",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_law_naive_model_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "model",
+        "thr_cal": "lat",
+        "variant": "law_naive_model_cal",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_law_lagakos_base_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "base",
+        "thr_cal": "lat",
+        "variant": "law_lagakos_base_cal",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_law_naive_base_cal_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "base",
+        "thr_cal": "lat",
+        "variant": "law_naive_base_cal",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_nowait_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_cal": "lat",
+        "variant": "nowait_cal",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_nowait_calnaive_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_cal": "naive",
+        "variant": "nowait_calnaive",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_law_lagakos_model_calnaive_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_cal": "naive",
+        "variant": "law_lagakos_model_calnaive",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_wait_W15_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "wait_W15_cal",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_orb_W15_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "orb_W15_cal",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W15_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 15,
+        "variant": "fsc_W15",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W15_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 15,
+        "thr_cal": "lat",
+        "variant": "fsc_W15_cal",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_wait_W30_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "wait_W30_cal",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_orb_W30_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "orb_W30_cal",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W30_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 30,
+        "variant": "fsc_W30",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W30_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 30,
+        "thr_cal": "lat",
+        "variant": "fsc_W30_cal",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_wait_W60_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "wait_W60_cal",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_orb_W60_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "orb_W60_cal",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W60_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 60,
+        "variant": "fsc_W60",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W60_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 60,
+        "thr_cal": "lat",
+        "variant": "fsc_W60_cal",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_wait_W90_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "wait_W90_cal",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_orb_W90_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "orb_W90_cal",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W90_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 90,
+        "variant": "fsc_W90",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W90_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 90,
+        "thr_cal": "lat",
+        "variant": "fsc_W90_cal",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_wait_W180_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "wait_W180_cal",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_orb_W180_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "orb_W180_cal",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W180_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 180,
+        "variant": "fsc_W180",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_fsc_W180_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "fsc",
+        "W": 180,
+        "thr_cal": "lat",
+        "variant": "fsc_W180_cal",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_law_lagakos_model_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_cal": "lat",
+        "variant": "law_lagakos_model_cal",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_law_naive_model_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "model",
+        "thr_cal": "lat",
+        "variant": "law_naive_model_cal",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_law_lagakos_base_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "base",
+        "thr_cal": "lat",
+        "variant": "law_lagakos_base_cal",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0b_sentry_law_naive_base_cal_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "base",
+        "thr_cal": "lat",
+        "variant": "law_naive_base_cal",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0b",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
     }
   ]
 }

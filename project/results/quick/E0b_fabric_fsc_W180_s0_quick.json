@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E0b",
+    "project": "fabric",
+    "method": "fsc",
+    "variant": "fsc_W180",
+    "seed": 0,
+    "split": "dev",
+    "W": 180,
+    "gmean": 0.644771239599609,
+    "r0": 0.7618816682832201,
+    "r1": 0.545662100456621,
+    "rdiff": 0.21621956782659912,
+    "auc": 0.6928470828959781,
+    "mcc": 0.2571226020971935,
+    "n_eval": 2500,
+    "seconds": 2.82,
+    "job_id": "E0b_fabric_fsc_W180_s0_quick",
+    "written": "2026-11-24T21:25:17+00:00",
+    "cycle": 1
+  }
+]

@@ -74,7 +74,7 @@ def fit_lgb(X, y, w, seed, class_mult=(1.0, 1.0)):
 
 def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="lagakos",
              prior="model", orb_params=None, eval_end_gap_days=365, delay_scale=1.0, return_preds=False,
-             label_noise_log=False):
+             label_noise_log=False, thr_cal=False, cal_window=3000):
     """df: one project's commits sorted by time (columns FEATS, t, y, t_found).
     delay_scale>1 stretches discovery delays (robustness: slower bug discovery)."""
     t0 = time.time()
@@ -87,6 +87,7 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
     n = len(df)
     prob = np.full(n, np.nan); pred = np.full(n, -1)
     model, oc = None, 1.0
+    thr = 0.5; thr_log = []
     recent_preds = []; diag = []
     for start in range(warmup, n, update_every):
         T = t[start]; cmult = (1.0, 1.0)
@@ -123,6 +124,30 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
             if label_noise_log:
                 diag.append(dict(T=T, mean_q_true_bug=float(q[y[tr][unl] == 1].mean()) if (y[tr][unl] == 1).any() else np.nan,
                                  mean_q_clean=float(q[y[tr][unl] == 0].mean())))
+        elif method == "fsc":
+            # ODaSC-inspired baseline (Song et al. IJCNN 2022), adapted to the batch learner: label confidence of a
+            # provisionally-clean commit = share of defect-inducing commits among its k nearest neighbours in
+            # (standardised) feature space, using reference commits whose waiting-time label is available
+            # (discovered, or older than W days). Same positive/negative split weighting as LAW.
+            from sklearn.neighbors import NearestNeighbors
+            unl = ~found
+            ref = found | (age >= W)
+            Xtr = X[tr]; mu, sd = Xtr.mean(0), Xtr.std(0) + 1e-9
+            Z = (Xtr - mu) / sd
+            rng = np.random.default_rng(seed + start)
+            ridx = np.where(ref)[0]
+            if len(ridx) > 5000: ridx = rng.choice(ridx, 5000, replace=False)
+            if len(ridx) >= 60 and unl.any():
+                nn = NearestNeighbors(n_neighbors=50).fit(Z[ridx])
+                _, nb = nn.kneighbors(Z[unl])
+                q = found[ridx][nb].mean(1)
+            else:
+                q = np.zeros(unl.sum())
+            Xi = np.vstack([Xtr[found], Xtr[unl], Xtr[unl]])
+            yi = np.concatenate([np.ones(found.sum()), np.ones(unl.sum()), np.zeros(unl.sum())]).astype(int)
+            wi = np.concatenate([np.ones(found.sum()), q, 1 - q])
+            keepw = wi > 1e-4
+            Xi, yi, wi = Xi[keepw], yi[keepw], wi[keepw]
         else:
             raise ValueError(method)
         if label_noise_log and method in ("nowait", "wait", "orb"):
@@ -132,9 +157,12 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
         if m_new is not None:
             model, oc = m_new, oc_new
         end = min(start + update_every, n)
+        if thr_cal:
+            thr = calibrate_threshold(prob[:start], t[:start], tf[:start], T, thr, naive=(thr_cal == "naive"))
+            thr_log.append(thr)
         if model is not None:
             pr = model.predict_proba(X[start:end])[:, 1]
-            prob[start:end] = pr; pred[start:end] = (pr >= 0.5).astype(int)
+            prob[start:end] = pr; pred[start:end] = (pr >= thr).astype(int)
             recent_preds.extend(pred[start:end].tolist())
     # evaluation window
     ev = (pred >= 0) & (t <= t.max() - eval_end_gap_days * DAY)
@@ -143,7 +171,38 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
     out = {"metrics": res}
     if return_preds: out.update(pred=pred, prob=prob, eval_mask=ev)
     if diag: out["diag"] = diag
+    if thr_cal: out["metrics"]["thr_mean"] = float(np.mean(thr_log))
     return out
+
+def calibrate_threshold(prob_past, t_past, tf_past, T, default=0.5, window=3000, min_n=300, naive=False):
+    """Latency-corrected threshold calibration (uses only information available at T).
+    Past prequential scores of the last `window` scored commits are matched with the labels observable
+    at T: discovered -> positive (weight 1); not discovered at age a -> positive with weight
+    q = pS(a)/(1-p+pS(a)) and negative with weight 1-q, where S is the truncation-corrected discovery-delay
+    survival (Lagakos) and p the discovered-defect rate of commits older than 365 days.
+    naive=True: ablation - undiscovered commits counted as negatives (q=0), i.e. labels at face value.
+    Returns the threshold maximising the weighted G-mean."""
+    ok = np.where(np.isfinite(prob_past))[0]
+    if len(ok) < min_n:
+        return default
+    found_all = tf_past <= T
+    age_all = (T - t_past) / DAY
+    pos = np.where(found_all)[0]
+    S = survival_from_delays((tf_past[pos] - t_past[pos]) / DAY, age_all[pos], age_all, method="lagakos")
+    mature = age_all >= 365
+    p = found_all[mature].mean() if mature.sum() > 50 else found_all.mean()
+    idx = ok[-window:]
+    q = np.where(found_all[idx], 1.0, 0.0 if naive else p * S[idx] / np.clip(1 - p + p * S[idx], 1e-9, None))
+    sc = prob_past[idx]
+    if q.sum() < 5 or (1 - q).sum() < 5:
+        return default
+    order = np.argsort(-sc); sc_s = sc[order]; q_s = q[order]
+    tp = np.cumsum(q_s); fp = np.cumsum(1 - q_s)          # predicted positive = top-k
+    r1 = tp / q_s.sum(); r0 = 1 - fp / (1 - q_s).sum()
+    g = np.sqrt(np.clip(r1 * r0, 0, None))
+    k = int(np.argmax(g))
+    nxt = sc_s[k + 1] if k + 1 < len(sc_s) else sc_s[k] - 1e-6
+    return float((sc_s[k] + nxt) / 2)
 
 def evaluate(y, pred, prob):
     r1 = float(np.mean(pred[y == 1] == 1)) if (y == 1).any() else np.nan

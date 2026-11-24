@@ -22,6 +22,21 @@ def specs(exp):
                 J.append(dict(method="law", delay_est=de, prior=pr, variant=f"law_{de}_{pr}", project=p, seed=s))
         for j in J: j.update(experiment="E0", split="dev")
         return J, 10
+    if exp == "E0b":
+        for p, s in itertools.product(DEV, SE):
+            J += [dict(method="nowait", thr_cal="lat", variant="nowait_cal"),
+                  dict(method="nowait", thr_cal="naive", variant="nowait_calnaive"),
+                  dict(method="law", delay_est="lagakos", prior="model", thr_cal="naive", variant="law_lagakos_model_calnaive")]
+            for W in WGRID:
+                J += [dict(method="wait", W=W, thr_cal="lat", variant=f"wait_W{W}_cal"),
+                      dict(method="orb", W=W, thr_cal="lat", variant=f"orb_W{W}_cal"),
+                      dict(method="fsc", W=W, variant=f"fsc_W{W}"),
+                      dict(method="fsc", W=W, thr_cal="lat", variant=f"fsc_W{W}_cal")]
+            for de, pr in [("lagakos", "model"), ("naive", "model"), ("lagakos", "base"), ("naive", "base")]:
+                J.append(dict(method="law", delay_est=de, prior=pr, thr_cal="lat", variant=f"law_{de}_{pr}_cal"))
+            J = [dict(j, project=p, seed=s) if "project" not in j else j for j in J]
+        for j in J: j.update(experiment="E0b", split="dev")
+        return J, 12
     if exp in ("E1", "E2", "E3"):
         fz = read_json(STATE / "frozen_config.json")
         assert fz, "frozen_config.json missing: run scripts/freeze_config.py after E0"
@@ -48,6 +63,8 @@ if __name__ == "__main__":
     exp = sys.argv[1]; quick = "--quick" in sys.argv
     J, prio = specs(exp)
     qf = STATE / ("queue_quick.json" if quick else "queue.json")
+    from src.runner import qlock
+    _ql = qlock("quick" if quick else "full"); _ql.__enter__()
     q = read_json(qf, {"jobs": []}); have = {j["id"] for j in q["jobs"]}
     st = read_json(STATE / "agent_state.json", {})
     if quick:  # one job per method/variant on one project
@@ -63,4 +80,4 @@ if __name__ == "__main__":
         q["jobs"].append({"id": jid, "kind": "jit_run", "params": j, "status": "pending", "attempts": 0,
                           "cycle": st.get("cycle", 1), "priority": prio + (1 if j["project"] == "nova" else 0)})
         added += 1
-    write_json(qf, q); print(f"added {added} jobs to {qf.name} (total {len(q['jobs'])})")
+    write_json(qf, q); _ql.__exit__(None, None, None); print(f"added {added} jobs to {qf.name} (total {len(q['jobs'])})")
