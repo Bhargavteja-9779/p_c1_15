@@ -28,6 +28,17 @@ def specs(exp):
                 J.append(dict(method="odasc", W=W, odasc_delta=0.9, variant=f"odasc_W{W}", project=p, seed=s))
         for j in J: j.update(experiment="E0", split="dev")
         return J, 11
+    if exp == "E0c":   # 6.4 ladder (H2/H3): threshold policies, dev only; baselines get the same option
+        for p, s in itertools.product(DEV, SE):
+            for pol in ["ratematch", "gmax_lat"]:
+                J.append(dict(method="nowait", thr_policy=pol, variant=f"nowait_{pol}", project=p, seed=s))
+                for de in ["lagakos", "naive"]:
+                    J.append(dict(method="law", delay_est=de, prior="base", thr_policy=pol, variant=f"law_{de}_base_{pol}", project=p, seed=s))
+            for W in WGRID:
+                for m, extra in [("wait", {}), ("orb", {}), ("odasc", {"odasc_delta": 0.9})]:
+                    J.append(dict(method=m, W=W, thr_policy="gmax_lat", variant=f"{m}_W{W}_gmax_lat", project=p, seed=s, **extra))
+        for j in J: j.update(experiment="E0", split="dev")
+        return J, 12
     if exp in ("E1", "E2", "E3"):
         fz = read_json(STATE / "frozen_config.json")
         assert fz, "frozen_config.json missing: run scripts/freeze_config.py after E0"

@@ -43,3 +43,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-24T23:04:02+00:00** — Test projects are not touched until the selected LAW variant beats the best baseline (incl. ODaSC) on dev
   - Reason: Running E1 with a method already losing on dev would spend the held-out set; any later LAW revision would then be evaluated on test data already seen (Rule 5). Ladder 6.4 runs on dev first.
+
+- **2026-11-24T23:13:20+00:00** — 6.4 ladder rung 3-4: enqueue E0c (dev only, 252 runs): thr_policy in {ratematch (H3 as pre-written), gmax_lat (latency-corrected G-mean threshold)} for nowait and LAW-base; gmax_lat for all 15 wait/orb/odasc configs
+  - Reason: Dev diagnosis showed operating point dominates G-mean differences; baselines get the same threshold option so any gain is not an artefact of unequal treatment. ratematch already looked weak on a 5000-commit fabric slice (0.547 vs wait-W90 0.669); tested fully anyway as pre-registered.

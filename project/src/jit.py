@@ -78,7 +78,7 @@ def fit_lgb(X, y, w, seed, class_mult=(1.0, 1.0)):
 
 def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="lagakos",
              prior="model", orb_params=None, eval_end_gap_days=365, delay_scale=1.0, return_preds=False,
-             label_noise_log=False, odasc_delta=0.9, odasc_k=50, odasc_pool=5000):
+             label_noise_log=False, odasc_delta=0.9, odasc_k=50, odasc_pool=5000, thr_policy="fixed", thr_window=2000):
     """df: one project's commits sorted by time (columns FEATS, t, y, t_found).
     delay_scale>1 stretches discovery delays (robustness: slower bug discovery)."""
     t0 = time.time()
@@ -163,9 +163,13 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
         if m_new is not None:
             model, oc = m_new, oc_new
         end = min(start + update_every, n)
+        thr = 0.5
+        if thr_policy != "fixed":
+            thr = choose_threshold(thr_policy, T, t, tf, prob, start, thr_window)
+            if label_noise_log: diag.append(dict(T=T, thr=thr))
         if model is not None:
             pr = model.predict_proba(X[start:end])[:, 1]
-            prob[start:end] = pr; pred[start:end] = (pr >= 0.5).astype(int)
+            prob[start:end] = pr; pred[start:end] = (pr >= thr).astype(int)
             recent_preds.extend(pred[start:end].tolist())
     # evaluation window
     ev = (pred >= 0) & (t <= t.max() - eval_end_gap_days * DAY)
@@ -175,6 +179,42 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
     if return_preds: out.update(pred=pred, prob=prob, eval_mask=ev)
     if diag: out["diag"] = diag
     return out
+
+def choose_threshold(policy, T, t, tf, prob, start, window, min_n=200):
+    """Threshold for commits made in [T, next update) using ONLY information available at T:
+    prequential (out-of-sample, commit-time) scores of past commits and labels observable at T.
+      ratematch: among recent 'mature' commits (age >= 90th pct of the truncation-corrected discovery
+                 delay, fallback 365 d), flag the same share as were found defective.
+      gmax_lat : maximise G-mean on the last `window` scored commits, with not-yet-found commits given a
+                 soft positive weight q = b S(a) / (1 - b + b S(a)) (b = defect rate of mature commits)."""
+    past = np.where(np.isfinite(prob[:start]))[0]
+    if len(past) < min_n:
+        return 0.5
+    found_all = tf[:start] <= T
+    pos = np.where(found_all)[0]
+    age = (T - t) / DAY
+    grid = np.arange(0, 4000, 5.0)
+    S = survival_from_delays((tf[pos] - t[pos]) / DAY, (T - t[pos]) / DAY, grid, "lagakos")
+    a90 = float(grid[np.argmax(S <= 0.10)]) if (S <= 0.10).any() and len(pos) >= 5 else 365.0
+    mature = np.where(age[:start] >= a90)[0]
+    if policy == "ratematch":
+        m = np.intersect1d(mature, past)[-window:]
+        if len(m) < min_n:
+            return 0.5
+        r = found_all[m].mean()
+        return float(np.quantile(prob[m], 1 - r)) if 0 < r < 1 else 0.5
+    if policy == "gmax_lat":
+        w = past[-window:]
+        b = found_all[mature].mean() if len(mature) >= min_n else found_all[:start].mean()
+        Sa = np.interp(age[w], grid, S)
+        q = np.where(found_all[w], 1.0, b * Sa / np.clip(1 - b + b * Sa, 1e-9, None))
+        ps, sc = q, prob[w]
+        order = np.argsort(-sc); sc_o, p_o, n_o = sc[order], ps[order], (1 - ps)[order]
+        tp = np.cumsum(p_o); fp = np.cumsum(n_o)
+        r1 = tp / max(tp[-1], 1e-9); r0 = 1 - fp / max(fp[-1], 1e-9)
+        k = int(np.argmax(np.sqrt(np.clip(r1 * r0, 0, None))))
+        return float(sc_o[k])
+    raise ValueError(policy)
 
 def evaluate(y, pred, prob):
     r1 = float(np.mean(pred[y == 1] == 1)) if (y == 1).any() else np.nan

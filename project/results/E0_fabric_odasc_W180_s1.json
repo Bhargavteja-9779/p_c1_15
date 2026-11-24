@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E0",
+    "project": "fabric",
+    "method": "odasc",
+    "variant": "odasc_W180",
+    "seed": 1,
+    "split": "dev",
+    "W": 180,
+    "odasc_delta": 0.9,
+    "gmean": 0.48928294877425876,
+    "r0": 0.24658598867547463,
+    "r1": 0.9708491761723701,
+    "rdiff": 0.7242631874968954,
+    "auc": 0.7148182263909744,
+    "mcc": 0.22012161392732896,
+    "n_eval": 11374,
+    "seconds": 26.02,
+    "job_id": "E0_fabric_odasc_W180_s1",
+    "written": "2026-11-24T23:12:27+00:00",
+    "cycle": 1
+  }
+]
