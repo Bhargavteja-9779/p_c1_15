@@ -28280,12 +28280,14 @@
         "experiment": "E0d",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 14,
       "started": "2026-11-24T16:17:23+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-24T16:48:26+00:00",
+      "seconds": 1862.8
     },
     {
       "id": "E0d_nova_odasc_W30_t0.9_s0",
@@ -28301,10 +28303,12 @@
         "experiment": "E0d",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-24T16:48:25+00:00",
+      "worker": 2
     },
     {
       "id": "E0d_nova_odasc_W90_t0.8_s0",
@@ -28358,12 +28362,14 @@
         "experiment": "E0d",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 14,
       "started": "2026-11-24T16:17:39+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-24T16:48:40+00:00",
+      "seconds": 1861.1
     },
     {
       "id": "E0d_nova_odasc_W30_t0.9_s1",
@@ -28379,10 +28385,12 @@
         "experiment": "E0d",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-24T16:48:26+00:00",
+      "worker": 0
     },
     {
       "id": "E0d_nova_odasc_W90_t0.8_s1",
@@ -28436,12 +28444,14 @@
         "experiment": "E0d",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 14,
       "started": "2026-11-24T16:17:39+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-24T16:48:25+00:00",
+      "seconds": 1846.3
     },
     {
       "id": "E0d_nova_odasc_W30_t0.9_s2",
@@ -28457,10 +28467,12 @@
         "experiment": "E0d",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-24T16:48:40+00:00",
+      "worker": 1
     },
     {
       "id": "E0d_nova_odasc_W90_t0.8_s2",
