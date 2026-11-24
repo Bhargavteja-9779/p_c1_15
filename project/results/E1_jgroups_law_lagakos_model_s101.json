@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E1",
+    "project": "jgroups",
+    "method": "law",
+    "variant": "law_lagakos_model",
+    "seed": 101,
+    "split": "test",
+    "delay_est": "lagakos",
+    "prior": "model",
+    "gmean": 0.5604932259403339,
+    "r0": 0.8608233181378644,
+    "r1": 0.3649444081098757,
+    "rdiff": 0.4958789100279887,
+    "auc": 0.6722809334945485,
+    "mcc": 0.22368492727779976,
+    "n_eval": 17536,
+    "seconds": 59.67,
+    "job_id": "E1_jgroups_law_lagakos_model_s101",
+    "written": "2026-11-24T13:47:12+00:00",
+    "cycle": 1
+  }
+]
