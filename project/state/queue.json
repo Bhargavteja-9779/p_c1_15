@@ -17846,12 +17846,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 25,
       "started": "2026-11-24T14:50:24+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-24T14:50:56+00:00",
+      "seconds": 32.2
     },
     {
       "id": "E3b_tomcat_decomp_L1_W90_s100",
@@ -17974,12 +17976,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 25,
       "started": "2026-11-24T14:50:25+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-24T14:50:58+00:00",
+      "seconds": 32.7
     },
     {
       "id": "E3b_tomcat_decomp_L1_W90_s101",
@@ -18102,10 +18106,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:50:53+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:51:23+00:00",
+      "seconds": 30.3
     },
     {
       "id": "E3b_tomcat_decomp_L1_W90_s102",
@@ -18228,10 +18236,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:50:56+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:51:26+00:00",
+      "seconds": 29.9
     },
     {
       "id": "E3b_tomcat_decomp_L1_W90_s103",
@@ -18289,12 +18301,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 25,
       "started": "2026-11-24T14:50:19+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-24T14:50:53+00:00",
+      "seconds": 33.3
     },
     {
       "id": "E3b_tomcat_decomp_L1_W30_s104",
@@ -18352,10 +18366,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:50:58+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:51:28+00:00",
+      "seconds": 29.8
     },
     {
       "id": "E3b_tomcat_decomp_L1_W90_s104",
@@ -18413,10 +18431,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:52:15+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:52:24+00:00",
+      "seconds": 8.4
     },
     {
       "id": "E3b_wagtail_decomp_L1_W30_s100",
@@ -18431,10 +18453,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:51:23+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:51:31+00:00",
+      "seconds": 8.1
     },
     {
       "id": "E3b_wagtail_decomp_L2_W30_s100",
@@ -18449,10 +18475,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:51:49+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:51:58+00:00",
+      "seconds": 8.4
     },
     {
       "id": "E3b_wagtail_wait_W90_s100",
@@ -18466,10 +18496,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:52:29+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:52:36+00:00",
+      "seconds": 7.3
     },
     {
       "id": "E3b_wagtail_decomp_L1_W90_s100",
@@ -18484,10 +18518,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:51:36+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:51:43+00:00",
+      "seconds": 7.4
     },
     {
       "id": "E3b_wagtail_decomp_L2_W90_s100",
@@ -18502,10 +18540,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:52:02+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:52:10+00:00",
+      "seconds": 7.5
     },
     {
       "id": "E3b_wagtail_wait_W30_s101",
@@ -18519,10 +18561,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:52:17+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:52:25+00:00",
+      "seconds": 7.7
     },
     {
       "id": "E3b_wagtail_decomp_L1_W30_s101",
@@ -18537,10 +18583,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:51:26+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:51:34+00:00",
+      "seconds": 8.1
     },
     {
       "id": "E3b_wagtail_decomp_L2_W30_s101",
@@ -18555,10 +18605,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:51:51+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:51:59+00:00",
+      "seconds": 8.3
     },
     {
       "id": "E3b_wagtail_wait_W90_s101",
@@ -18572,10 +18626,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:52:31+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:52:39+00:00",
+      "seconds": 7.2
     },
     {
       "id": "E3b_wagtail_decomp_L1_W90_s101",
@@ -18590,10 +18648,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:51:39+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:51:46+00:00",
+      "seconds": 7.4
     },
     {
       "id": "E3b_wagtail_decomp_L2_W90_s101",
@@ -18608,10 +18670,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:52:06+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:52:14+00:00",
+      "seconds": 8.2
     },
     {
       "id": "E3b_wagtail_wait_W30_s102",
@@ -18625,10 +18691,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:52:21+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:52:29+00:00",
+      "seconds": 7.7
     },
     {
       "id": "E3b_wagtail_decomp_L1_W30_s102",
@@ -18643,10 +18713,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:51:28+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:51:36+00:00",
+      "seconds": 7.7
     },
     {
       "id": "E3b_wagtail_decomp_L2_W30_s102",
@@ -18661,10 +18735,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:51:54+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:52:02+00:00",
+      "seconds": 8.3
     },
     {
       "id": "E3b_wagtail_wait_W90_s102",
@@ -18678,10 +18756,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:52:32+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:52:40+00:00",
+      "seconds": 7.4
     },
     {
       "id": "E3b_wagtail_decomp_L1_W90_s102",
@@ -18696,10 +18778,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:51:42+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:51:49+00:00",
+      "seconds": 7.6
     },
     {
       "id": "E3b_wagtail_decomp_L2_W90_s102",
@@ -18714,10 +18800,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:52:07+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:52:15+00:00",
+      "seconds": 7.8
     },
     {
       "id": "E3b_wagtail_wait_W30_s103",
@@ -18731,10 +18821,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:52:24+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:52:31+00:00",
+      "seconds": 7.8
     },
     {
       "id": "E3b_wagtail_decomp_L1_W30_s103",
@@ -18749,10 +18843,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:51:31+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:51:39+00:00",
+      "seconds": 7.8
     },
     {
       "id": "E3b_wagtail_decomp_L2_W30_s103",
@@ -18767,10 +18865,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:51:58+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:52:06+00:00",
+      "seconds": 7.9
     },
     {
       "id": "E3b_wagtail_wait_W90_s103",
@@ -18784,10 +18886,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:52:36+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:52:44+00:00",
+      "seconds": 7.4
     },
     {
       "id": "E3b_wagtail_decomp_L1_W90_s103",
@@ -18802,10 +18908,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:51:43+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:51:51+00:00",
+      "seconds": 7.5
     },
     {
       "id": "E3b_wagtail_decomp_L2_W90_s103",
@@ -18820,10 +18930,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:52:10+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:52:17+00:00",
+      "seconds": 7.3
     },
     {
       "id": "E3b_wagtail_wait_W30_s104",
@@ -18837,10 +18951,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:52:25+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:52:32+00:00",
+      "seconds": 7.7
     },
     {
       "id": "E3b_wagtail_decomp_L1_W30_s104",
@@ -18855,10 +18973,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:51:34+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:51:42+00:00",
+      "seconds": 7.8
     },
     {
       "id": "E3b_wagtail_decomp_L2_W30_s104",
@@ -18873,10 +18995,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:51:59+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:52:07+00:00",
+      "seconds": 8.4
     },
     {
       "id": "E3b_wagtail_wait_W90_s104",
@@ -18890,10 +19016,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:52:39+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:52:46+00:00",
+      "seconds": 7.1
     },
     {
       "id": "E3b_wagtail_decomp_L1_W90_s104",
@@ -18908,10 +19038,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:51:46+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:51:54+00:00",
+      "seconds": 7.4
     },
     {
       "id": "E3b_wagtail_decomp_L2_W90_s104",
@@ -18926,10 +19060,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:52:14+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:52:21+00:00",
+      "seconds": 7.5
     },
     {
       "id": "E3b_zulip_wait_W30_s100",
@@ -18943,10 +19081,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:55:22+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:55:50+00:00",
+      "seconds": 28.1
     },
     {
       "id": "E3b_zulip_decomp_L1_W30_s100",
@@ -18961,10 +19103,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:52:40+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:53:08+00:00",
+      "seconds": 28.1
     },
     {
       "id": "E3b_zulip_decomp_L2_W30_s100",
@@ -18979,10 +19125,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:54:01+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:54:28+00:00",
+      "seconds": 26.9
     },
     {
       "id": "E3b_zulip_wait_W90_s100",
@@ -18996,10 +19146,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:56:11+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:56:36+00:00",
+      "seconds": 25.3
     },
     {
       "id": "E3b_zulip_decomp_L1_W90_s100",
@@ -19014,10 +19168,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:53:12+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:53:36+00:00",
+      "seconds": 24.4
     },
     {
       "id": "E3b_zulip_decomp_L2_W90_s100",
@@ -19032,10 +19190,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:54:51+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:55:16+00:00",
+      "seconds": 25.6
     },
     {
       "id": "E3b_zulip_wait_W30_s101",
@@ -19049,10 +19211,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:55:42+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:56:08+00:00",
+      "seconds": 26.0
     },
     {
       "id": "E3b_zulip_decomp_L1_W30_s101",
@@ -19067,10 +19233,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:52:44+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:53:12+00:00",
+      "seconds": 28.2
     },
     {
       "id": "E3b_zulip_decomp_L2_W30_s101",
@@ -19085,10 +19255,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:54:05+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:54:30+00:00",
+      "seconds": 25.8
     },
     {
       "id": "E3b_zulip_wait_W90_s101",
@@ -19102,10 +19276,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:56:17+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:56:42+00:00",
+      "seconds": 25.7
     },
     {
       "id": "E3b_zulip_decomp_L1_W90_s101",
@@ -19120,10 +19298,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:53:35+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:54:00+00:00",
+      "seconds": 24.9
     },
     {
       "id": "E3b_zulip_decomp_L2_W90_s101",
@@ -19138,10 +19320,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:54:55+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:55:19+00:00",
+      "seconds": 24.3
     },
     {
       "id": "E3b_zulip_wait_W30_s102",
@@ -19155,10 +19341,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:55:44+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:56:11+00:00",
+      "seconds": 26.7
     },
     {
       "id": "E3b_zulip_decomp_L1_W30_s102",
@@ -19173,10 +19363,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:52:46+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:53:12+00:00",
+      "seconds": 26.2
     },
     {
       "id": "E3b_zulip_decomp_L2_W30_s102",
@@ -19191,10 +19385,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:54:24+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:54:51+00:00",
+      "seconds": 26.7
     },
     {
       "id": "E3b_zulip_wait_W90_s102",
@@ -19208,10 +19406,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:56:35+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:57:01+00:00",
+      "seconds": 25.2
     },
     {
       "id": "E3b_zulip_decomp_L1_W90_s102",
@@ -19226,10 +19428,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:53:36+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:54:01+00:00",
+      "seconds": 24.2
     },
     {
       "id": "E3b_zulip_decomp_L2_W90_s102",
@@ -19244,10 +19450,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:54:57+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:55:22+00:00",
+      "seconds": 25.4
     },
     {
       "id": "E3b_zulip_wait_W30_s103",
@@ -19261,10 +19471,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:55:50+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:56:17+00:00",
+      "seconds": 26.4
     },
     {
       "id": "E3b_zulip_decomp_L1_W30_s103",
@@ -19279,10 +19493,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:53:08+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:53:35+00:00",
+      "seconds": 27.0
     },
     {
       "id": "E3b_zulip_decomp_L2_W30_s103",
@@ -19297,10 +19515,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:54:28+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:54:55+00:00",
+      "seconds": 27.1
     },
     {
       "id": "E3b_zulip_wait_W90_s103",
@@ -19314,10 +19536,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:56:36+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:57:01+00:00",
+      "seconds": 24.7
     },
     {
       "id": "E3b_zulip_decomp_L1_W90_s103",
@@ -19332,10 +19558,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:53:40+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:54:05+00:00",
+      "seconds": 25.0
     },
     {
       "id": "E3b_zulip_decomp_L2_W90_s103",
@@ -19350,10 +19580,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:55:16+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:55:42+00:00",
+      "seconds": 25.5
     },
     {
       "id": "E3b_zulip_wait_W30_s104",
@@ -19367,10 +19601,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:56:08+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:56:35+00:00",
+      "seconds": 27.3
     },
     {
       "id": "E3b_zulip_decomp_L1_W30_s104",
@@ -19385,10 +19623,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:53:12+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:53:40+00:00",
+      "seconds": 27.6
     },
     {
       "id": "E3b_zulip_decomp_L2_W30_s104",
@@ -19403,10 +19645,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:54:30+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:54:57+00:00",
+      "seconds": 26.3
     },
     {
       "id": "E3b_zulip_wait_W90_s104",
@@ -19420,10 +19666,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:56:42+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:57:07+00:00",
+      "seconds": 25.0
     },
     {
       "id": "E3b_zulip_decomp_L1_W90_s104",
@@ -19438,10 +19688,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:54:00+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:54:24+00:00",
+      "seconds": 24.3
     },
     {
       "id": "E3b_zulip_decomp_L2_W90_s104",
@@ -19456,10 +19710,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:55:19+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:55:44+00:00",
+      "seconds": 25.4
     },
     {
       "id": "E3_brackets_nowait_ds2_s100",
@@ -23074,10 +23332,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T14:58:52+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:59:34+00:00",
+      "seconds": 41.5
     },
     {
       "id": "E2_brackets_law_lagakos_base_s100",
@@ -23092,10 +23354,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T14:57:01+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:57:37+00:00",
+      "seconds": 36.6
     },
     {
       "id": "E2_brackets_law_naive_base_s100",
@@ -23110,10 +23376,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T14:57:44+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:58:21+00:00",
+      "seconds": 37.0
     },
     {
       "id": "E2_brackets_law_naive_model_s101",
@@ -23128,10 +23398,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T14:58:58+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:59:41+00:00",
+      "seconds": 42.3
     },
     {
       "id": "E2_brackets_law_lagakos_base_s101",
@@ -23146,10 +23420,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T14:57:01+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:57:38+00:00",
+      "seconds": 36.6
     },
     {
       "id": "E2_brackets_law_naive_base_s101",
@@ -23164,10 +23442,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T14:58:14+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:58:51+00:00",
+      "seconds": 36.6
     },
     {
       "id": "E2_brackets_law_naive_model_s102",
@@ -23182,10 +23464,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T14:59:28+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T15:00:11+00:00",
+      "seconds": 42.8
     },
     {
       "id": "E2_brackets_law_lagakos_base_s102",
@@ -23200,10 +23486,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T14:57:07+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:57:44+00:00",
+      "seconds": 36.9
     },
     {
       "id": "E2_brackets_law_naive_base_s102",
@@ -23218,10 +23508,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T14:58:15+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:58:52+00:00",
+      "seconds": 37.1
     },
     {
       "id": "E2_brackets_law_naive_model_s103",
@@ -23236,10 +23530,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T14:59:34+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T15:00:17+00:00",
+      "seconds": 43.8
     },
     {
       "id": "E2_brackets_law_lagakos_base_s103",
@@ -23254,10 +23552,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T14:57:37+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:58:14+00:00",
+      "seconds": 36.9
     },
     {
       "id": "E2_brackets_law_naive_base_s103",
@@ -23272,10 +23574,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T14:58:21+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:58:58+00:00",
+      "seconds": 37.1
     },
     {
       "id": "E2_brackets_law_naive_model_s104",
@@ -23290,10 +23596,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T14:59:41+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T15:00:24+00:00",
+      "seconds": 43.0
     },
     {
       "id": "E2_brackets_law_lagakos_base_s104",
@@ -23308,10 +23618,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T14:57:38+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:58:15+00:00",
+      "seconds": 37.3
     },
     {
       "id": "E2_brackets_law_naive_base_s104",
@@ -23326,10 +23640,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T14:58:51+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:59:28+00:00",
+      "seconds": 37.1
     },
     {
       "id": "E2_broadleaf_law_naive_model_s100",
@@ -23362,10 +23680,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T15:00:11+00:00",
+      "worker": 2
     },
     {
       "id": "E2_broadleaf_law_naive_base_s100",
@@ -23416,10 +23736,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T15:00:17+00:00",
+      "worker": 0
     },
     {
       "id": "E2_broadleaf_law_naive_base_s101",
@@ -23470,10 +23792,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-24T15:00:24+00:00",
+      "worker": 1
     },
     {
       "id": "E2_broadleaf_law_naive_base_s102",

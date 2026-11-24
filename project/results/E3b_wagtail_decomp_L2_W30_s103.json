@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E3b",
+    "project": "wagtail",
+    "method": "decomp",
+    "variant": "decomp_L2_W30",
+    "seed": 103,
+    "split": "test",
+    "W": 30,
+    "level": 2,
+    "gmean": 0.727311182448051,
+    "r0": 0.6732492532359774,
+    "r1": 0.7857142857142857,
+    "rdiff": 0.1124650324783083,
+    "auc": 0.7849453200906428,
+    "mcc": 0.3147262893221378,
+    "n_eval": 6908,
+    "seconds": 7.86,
+    "job_id": "E3b_wagtail_decomp_L2_W30_s103",
+    "written": "2026-11-24T14:52:06+00:00",
+    "cycle": 1
+  }
+]

@@ -1,5 +1,277 @@
 {
- "generated": "2026-11-24T13:21:26+00:00",
- "E1_H1_family_law_and_candidate_vs_baselines": [],
+ "generated": "2026-11-24T15:00:05+00:00",
+ "E1_main_law_vs_baselines": [
+  {
+   "proposed": "law_lagakos_model",
+   "baseline": "nowait",
+   "n_projects": 10,
+   "mean_diff": 0.1872,
+   "ci95": [
+    0.1472,
+    0.2288
+   ],
+   "wins": 10,
+   "losses": 0,
+   "wilcoxon_p": 0.001953125,
+   "paired_t_p": 1.4333414264286952e-05,
+   "rank_biserial": 1.0,
+   "holm_p": 0.005859375,
+   "G5_pass": true
+  },
+  {
+   "proposed": "law_lagakos_model",
+   "baseline": "wait_W90",
+   "n_projects": 10,
+   "mean_diff": -0.0381,
+   "ci95": [
+    -0.0848,
+    0.0014
+   ],
+   "wins": 3,
+   "losses": 7,
+   "wilcoxon_p": 0.130859375,
+   "paired_t_p": 0.13612852823803398,
+   "rank_biserial": -0.564,
+   "holm_p": 0.16796875,
+   "G5_pass": false
+  },
+  {
+   "proposed": "law_lagakos_model",
+   "baseline": "orb_W90",
+   "n_projects": 10,
+   "mean_diff": -0.0421,
+   "ci95": [
+    -0.0908,
+    -0.0034
+   ],
+   "wins": 2,
+   "losses": 8,
+   "wilcoxon_p": 0.083984375,
+   "paired_t_p": 0.10799677299662776,
+   "rank_biserial": -0.636,
+   "holm_p": 0.16796875,
+   "G5_pass": false
+  }
+ ],
+ "E2_ablation_full_vs_variants": [
+  {
+   "proposed": "law_lagakos_model",
+   "baseline": "law_naive_model",
+   "n_projects": 1,
+   "mean_diff": 0.0101,
+   "ci95": [
+    0.0101,
+    0.0101
+   ],
+   "wins": 1,
+   "losses": 0,
+   "wilcoxon_p": null,
+   "paired_t_p": NaN,
+   "rank_biserial": 1.0,
+   "holm_p": 1.0,
+   "G5_pass": false
+  },
+  {
+   "proposed": "law_lagakos_model",
+   "baseline": "law_lagakos_base",
+   "n_projects": 1,
+   "mean_diff": -0.0064,
+   "ci95": [
+    -0.0064,
+    -0.0064
+   ],
+   "wins": 0,
+   "losses": 1,
+   "wilcoxon_p": null,
+   "paired_t_p": NaN,
+   "rank_biserial": -1.0,
+   "holm_p": 1.0,
+   "G5_pass": false
+  },
+  {
+   "proposed": "law_lagakos_model",
+   "baseline": "law_naive_base",
+   "n_projects": 1,
+   "mean_diff": -0.0046,
+   "ci95": [
+    -0.0046,
+    -0.0046
+   ],
+   "wins": 0,
+   "losses": 1,
+   "wilcoxon_p": null,
+   "paired_t_p": NaN,
+   "rank_biserial": -1.0,
+   "holm_p": 1.0,
+   "G5_pass": false
+  }
+ ],
+ "E1_H1_family_law_and_candidate_vs_baselines": [
+  {
+   "proposed": "law_lagakos_model",
+   "baseline": "nowait",
+   "n_projects": 10,
+   "mean_diff": 0.1872,
+   "ci95": [
+    0.1472,
+    0.2288
+   ],
+   "wins": 10,
+   "losses": 0,
+   "wilcoxon_p": 0.001953125,
+   "paired_t_p": 1.4333414264286952e-05,
+   "rank_biserial": 1.0,
+   "holm_p": 0.005859375,
+   "G5_pass": true,
+   "holm_p_family6": 0.01171875
+  },
+  {
+   "proposed": "law_lagakos_model",
+   "baseline": "wait_W90",
+   "n_projects": 10,
+   "mean_diff": -0.0381,
+   "ci95": [
+    -0.0848,
+    0.0014
+   ],
+   "wins": 3,
+   "losses": 7,
+   "wilcoxon_p": 0.130859375,
+   "paired_t_p": 0.13612852823803398,
+   "rank_biserial": -0.564,
+   "holm_p": 0.16796875,
+   "G5_pass": false,
+   "holm_p_family6": 0.251953125
+  },
+  {
+   "proposed": "law_lagakos_model",
+   "baseline": "orb_W90",
+   "n_projects": 10,
+   "mean_diff": -0.0421,
+   "ci95": [
+    -0.0908,
+    -0.0034
+   ],
+   "wins": 2,
+   "losses": 8,
+   "wilcoxon_p": 0.083984375,
+   "paired_t_p": 0.10799677299662776,
+   "rank_biserial": -0.636,
+   "holm_p": 0.16796875,
+   "G5_pass": false,
+   "holm_p_family6": 0.251953125
+  },
+  {
+   "proposed": "awt_e0.4",
+   "baseline": "nowait",
+   "n_projects": 10,
+   "mean_diff": 0.1904,
+   "ci95": [
+    0.1396,
+    0.2522
+   ],
+   "wins": 10,
+   "losses": 0,
+   "wilcoxon_p": 0.001953125,
+   "paired_t_p": 0.00013953931642784144,
+   "rank_biserial": 1.0,
+   "holm_p": 0.005859375,
+   "G5_pass": true,
+   "holm_p_family6": 0.01171875
+  },
+  {
+   "proposed": "awt_e0.4",
+   "baseline": "wait_W90",
+   "n_projects": 10,
+   "mean_diff": -0.035,
+   "ci95": [
+    -0.0739,
+    -0.0027
+   ],
+   "wins": 2,
+   "losses": 8,
+   "wilcoxon_p": 0.083984375,
+   "paired_t_p": 0.10407513299644962,
+   "rank_biserial": -0.636,
+   "holm_p": 0.083984375,
+   "G5_pass": false,
+   "holm_p_family6": 0.251953125
+  },
+  {
+   "proposed": "awt_e0.4",
+   "baseline": "orb_W90",
+   "n_projects": 10,
+   "mean_diff": -0.039,
+   "ci95": [
+    -0.0772,
+    -0.009
+   ],
+   "wins": 2,
+   "losses": 8,
+   "wilcoxon_p": 0.037109375,
+   "paired_t_p": 0.06611970878501287,
+   "rank_biserial": -0.745,
+   "holm_p": 0.07421875,
+   "G5_pass": false,
+   "holm_p_family6": 0.1484375
+  }
+ ],
+ "E3b_H3_denoised_W30_vs_wait": [
+  {
+   "proposed": "decomp_L1_W30",
+   "baseline": "wait_W90",
+   "n_projects": 10,
+   "mean_diff": 0.0677,
+   "ci95": [
+    0.0487,
+    0.0918
+   ],
+   "wins": 10,
+   "losses": 0,
+   "wilcoxon_p": 0.001953125,
+   "paired_t_p": 0.000270606332888728,
+   "rank_biserial": 1.0,
+   "holm_p": 0.00390625,
+   "G5_pass": true
+  },
+  {
+   "proposed": "decomp_L1_W30",
+   "baseline": "wait_W30",
+   "n_projects": 10,
+   "mean_diff": 0.1017,
+   "ci95": [
+    0.0689,
+    0.1412
+   ],
+   "wins": 10,
+   "losses": 0,
+   "wilcoxon_p": 0.001953125,
+   "paired_t_p": 0.0005540504299986918,
+   "rank_biserial": 1.0,
+   "holm_p": 0.00390625,
+   "G5_pass": true
+  }
+ ],
+ "E3b_H3_decomposition": {
+  "gap_recovered_share_of_means": 1.0773,
+  "gap_recovered_share_per_project": {
+   "brackets": 0.849,
+   "broadleaf": 1.15,
+   "camel": 1.26,
+   "jgroups": 1.36,
+   "matplotlib": 0.974,
+   "npm": 1.092,
+   "spring-integration": 0.947,
+   "tomcat": 1.023,
+   "wagtail": 1.342,
+   "zulip": 0.972
+  },
+  "mean_gap_oracle_minus_wait30": 0.0944,
+  "denoise_gain_W30_mean": 0.1017,
+  "denoise_gap_share_W30": 1.0773,
+  "denoise_gain_W90_mean": 0.03,
+  "denoise_gap_share_W90": 0.4977,
+  "H3_pass": true
+ },
  "n_variants_logged": 28
 }

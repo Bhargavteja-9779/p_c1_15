@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E3b",
+    "project": "wagtail",
+    "method": "wait",
+    "variant": "wait_W30",
+    "seed": 101,
+    "split": "test",
+    "W": 30,
+    "gmean": 0.6181710627979965,
+    "r0": 0.8576169930302024,
+    "r1": 0.445578231292517,
+    "rdiff": 0.41203876173768544,
+    "auc": 0.7702232126394092,
+    "mcc": 0.2627540799916271,
+    "n_eval": 6908,
+    "seconds": 7.72,
+    "job_id": "E3b_wagtail_wait_W30_s101",
+    "written": "2026-11-24T14:52:25+00:00",
+    "cycle": 1
+  }
+]

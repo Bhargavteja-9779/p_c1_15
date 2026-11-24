@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E2",
+    "project": "brackets",
+    "method": "law",
+    "variant": "law_naive_model",
+    "seed": 104,
+    "split": "test",
+    "delay_est": "naive",
+    "prior": "model",
+    "gmean": 0.7110853770057568,
+    "r0": 0.8967034725556089,
+    "r1": 0.5638903259182617,
+    "rdiff": 0.3328131466373472,
+    "auc": 0.8524206087148801,
+    "mcc": 0.47859149118849226,
+    "n_eval": 16364,
+    "seconds": 43.03,
+    "job_id": "E2_brackets_law_naive_model_s104",
+    "written": "2026-11-24T15:00:24+00:00",
+    "cycle": 1
+  }
+]

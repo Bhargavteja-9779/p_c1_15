@@ -52,3 +52,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-24T13:20:12+00:00** — plan_v3 written and E1, E3b, E3, E2 enqueued on test projects (first test touch)
   - Reason: Config frozen on dev (state/frozen_config.json); decomposition pre-registered as H3 before test runs
+
+- **2026-11-24T15:00:34+00:00** — Cycle 1 outcome: H1 (LAW) and candidate awt not supported on test; H3 supported. Gates G5/G6 fail for a method claim -> Section 6.4 ladder, cycle 2 targets a feature-based dormant-bug denoiser without self-confirmation (plan_v4, dev first)
+  - Reason: results/statistics.json; journal RESULT entries
