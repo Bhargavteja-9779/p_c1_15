@@ -1,5 +1,5 @@
 # HANDOFF — read this first
-*Auto-generated 2026-11-24T21:27:46+00:00 by scripts/write_handoff.py*
+*Auto-generated 2026-11-24T21:27:53+00:00 by scripts/write_handoff.py*
 
 ## Where we are
 - **Status:** RUNNING   **Cycle:** 1 / 12   **Phase:** PHASE5_RUN   **Pivots:** 0 / 3
@@ -20,7 +20,7 @@
 1042 python3 run_all.py --mode full --resume --worker 1
 1046 bash -c python3 run_all.py --mode full --resume --worker 2 >> logs/runner_w2.log 2>&1
 1048 python3 run_all.py --mode full --resume --worker 2`
-- Heartbeat age: 23s
+- Heartbeat age: 1s
 
 ## Compute
 - Cycle 1: 1.92 h / 15 h   Global: 1.92 h / 120 h (CPU-hours; machine has no GPU)
@@ -71,8 +71,8 @@
 | Snapshot backup | `bash scripts/snapshot.sh` |
 
 ## Moving to a new account / machine
-1. Everything lives in git on branch `claude/dreamy-fermat-7983nm` of `bhargavteja-9779/p_c1_15` (pushed after every step).
-2. On the new machine: `git clone` that repo, `git checkout claude/dreamy-fermat-7983nm`, `pip install -r project/requirements.txt`.
+1. Everything lives in git on branch `claude/keen-edison-jo222n` of `bhargavteja-9779/p_c1_15` (pushed after every step; earlier history also on claude/dreamy-fermat-7983nm up to b18fc8e).
+2. On the new machine: `git clone` that repo, `git checkout claude/keen-edison-jo222n`, `pip install -r project/requirements.txt`.
 3. Paste the contents of `project/BOOTSTRAP_PROMPT.txt` into the new agent session.
 
 ## Known problems / environment facts
