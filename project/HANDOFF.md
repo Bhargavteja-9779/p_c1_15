@@ -1,5 +1,5 @@
 # HANDOFF — read this first
-*Auto-generated 2026-11-24T03:35:26+00:00 by scripts/write_handoff.py*
+*Auto-generated 2026-11-24T03:35:48+00:00 by scripts/write_handoff.py*
 
 ## Where we are
 - **Status:** RUNNING   **Cycle:** 1 / 12   **Phase:** PHASE5_RUN   **Pivots:** 0 / 3
@@ -20,10 +20,10 @@
 1268 python3 run_all.py --mode full --resume --worker 1
 1271 bash -c python3 run_all.py --mode full --resume --worker 2 >> logs/runner_w2.log 2>&1
 1273 python3 run_all.py --mode full --resume --worker 2`
-- Heartbeat age: 1s
+- Heartbeat age: 4s
 
 ## Compute
-- Cycle 1: 0.59 h / 15 h   Global: 0.59 h / 120 h (CPU-hours; machine has no GPU)
+- Cycle 1: 0.60 h / 15 h   Global: 0.60 h / 120 h (CPU-hours; machine has no GPU)
 
 ## Gate status (Section 7)
 | Gate | Status | Evidence |
