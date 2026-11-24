@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E0",
+    "project": "nova",
+    "method": "law",
+    "variant": "law_naive_model",
+    "seed": 1,
+    "split": "dev",
+    "delay_est": "naive",
+    "prior": "model",
+    "gmean": 0.5533381055938588,
+    "r0": 0.9652071810400766,
+    "r1": 0.3172200384711884,
+    "rdiff": 0.6479871425688882,
+    "auc": 0.8489406264257529,
+    "mcc": 0.39907086116690665,
+    "n_eval": 44320,
+    "seconds": 324.58,
+    "job_id": "E0_nova_law_naive_model_s1",
+    "written": "2026-11-24T04:31:14+00:00",
+    "cycle": 1
+  }
+]
