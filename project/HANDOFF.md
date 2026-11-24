@@ -1,5 +1,5 @@
 # HANDOFF — read this first
-*Auto-generated 2026-11-24T21:27:40+00:00 by scripts/write_handoff.py*
+*Auto-generated 2026-11-24T21:27:46+00:00 by scripts/write_handoff.py*
 
 ## Where we are
 - **Status:** RUNNING   **Cycle:** 1 / 12   **Phase:** PHASE5_RUN   **Pivots:** 0 / 3
@@ -20,7 +20,7 @@
 1042 python3 run_all.py --mode full --resume --worker 1
 1046 bash -c python3 run_all.py --mode full --resume --worker 2 >> logs/runner_w2.log 2>&1
 1048 python3 run_all.py --mode full --resume --worker 2`
-- Heartbeat age: 18s
+- Heartbeat age: 23s
 
 ## Compute
 - Cycle 1: 1.92 h / 15 h   Global: 1.92 h / 120 h (CPU-hours; machine has no GPU)
