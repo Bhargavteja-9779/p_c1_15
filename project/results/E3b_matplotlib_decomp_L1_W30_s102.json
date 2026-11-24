@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E3b",
+    "project": "matplotlib",
+    "method": "decomp",
+    "variant": "decomp_L1_W30",
+    "seed": 102,
+    "split": "test",
+    "W": 30,
+    "level": 1,
+    "gmean": 0.737697057550222,
+    "r0": 0.7802376688914211,
+    "r1": 0.6974758723088345,
+    "rdiff": 0.08276179658258664,
+    "auc": 0.8377620255960968,
+    "mcc": 0.3982435339490423,
+    "n_eval": 14980,
+    "seconds": 29.6,
+    "job_id": "E3b_matplotlib_decomp_L1_W30_s102",
+    "written": "2026-11-24T14:39:12+00:00",
+    "cycle": 1
+  }
+]

@@ -14596,10 +14596,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:31:20+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:32:30+00:00",
+      "seconds": 70.9
     },
     {
       "id": "E3b_camel_decomp_L1_W90_s100",
@@ -14657,12 +14661,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 25,
       "started": "2026-11-24T14:29:37+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-24T14:30:50+00:00",
+      "seconds": 72.9
     },
     {
       "id": "E3b_camel_decomp_L1_W30_s101",
@@ -14720,10 +14726,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:31:21+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:32:33+00:00",
+      "seconds": 71.8
     },
     {
       "id": "E3b_camel_decomp_L1_W90_s101",
@@ -14781,12 +14791,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 25,
       "started": "2026-11-24T14:30:07+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-24T14:31:20+00:00",
+      "seconds": 72.5
     },
     {
       "id": "E3b_camel_decomp_L1_W30_s102",
@@ -14844,10 +14856,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:32:05+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:33:14+00:00",
+      "seconds": 69.3
     },
     {
       "id": "E3b_camel_decomp_L1_W90_s102",
@@ -14905,12 +14921,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 25,
       "started": "2026-11-24T14:30:08+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-24T14:31:21+00:00",
+      "seconds": 72.8
     },
     {
       "id": "E3b_camel_decomp_L1_W30_s103",
@@ -14968,10 +14986,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:32:30+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:33:41+00:00",
+      "seconds": 70.6
     },
     {
       "id": "E3b_camel_decomp_L1_W90_s103",
@@ -15029,10 +15051,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:30:50+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:32:05+00:00",
+      "seconds": 74.9
     },
     {
       "id": "E3b_camel_decomp_L1_W30_s104",
@@ -15090,10 +15116,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:32:33+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:33:43+00:00",
+      "seconds": 70.3
     },
     {
       "id": "E3b_camel_decomp_L1_W90_s104",
@@ -15151,10 +15181,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:36:42+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:37:13+00:00",
+      "seconds": 30.5
     },
     {
       "id": "E3b_jgroups_decomp_L1_W30_s100",
@@ -15169,10 +15203,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:33:14+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:33:46+00:00",
+      "seconds": 31.3
     },
     {
       "id": "E3b_jgroups_decomp_L2_W30_s100",
@@ -15187,10 +15225,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:35:12+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:35:42+00:00",
+      "seconds": 30.5
     },
     {
       "id": "E3b_jgroups_wait_W90_s100",
@@ -15204,10 +15246,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:37:42+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:38:11+00:00",
+      "seconds": 29.1
     },
     {
       "id": "E3b_jgroups_decomp_L1_W90_s100",
@@ -15222,10 +15268,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:34:14+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:34:44+00:00",
+      "seconds": 29.8
     },
     {
       "id": "E3b_jgroups_decomp_L2_W90_s100",
@@ -15240,10 +15290,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:35:44+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:36:14+00:00",
+      "seconds": 30.7
     },
     {
       "id": "E3b_jgroups_wait_W30_s101",
@@ -15257,10 +15311,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:36:43+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:37:12+00:00",
+      "seconds": 29.7
     },
     {
       "id": "E3b_jgroups_decomp_L1_W30_s101",
@@ -15275,10 +15333,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:33:41+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:34:12+00:00",
+      "seconds": 30.7
     },
     {
       "id": "E3b_jgroups_decomp_L2_W30_s101",
@@ -15293,10 +15355,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:35:12+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:35:42+00:00",
+      "seconds": 29.1
     },
     {
       "id": "E3b_jgroups_wait_W90_s101",
@@ -15310,10 +15376,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:37:42+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:38:11+00:00",
+      "seconds": 29.2
     },
     {
       "id": "E3b_jgroups_decomp_L1_W90_s101",
@@ -15328,10 +15398,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:34:16+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:34:45+00:00",
+      "seconds": 29.0
     },
     {
       "id": "E3b_jgroups_decomp_L2_W90_s101",
@@ -15346,10 +15420,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:36:12+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:36:42+00:00",
+      "seconds": 29.6
     },
     {
       "id": "E3b_jgroups_wait_W30_s102",
@@ -15363,10 +15441,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:37:12+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:37:42+00:00",
+      "seconds": 29.8
     },
     {
       "id": "E3b_jgroups_decomp_L1_W30_s102",
@@ -15381,10 +15463,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:33:43+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:34:14+00:00",
+      "seconds": 30.5
     },
     {
       "id": "E3b_jgroups_decomp_L2_W30_s102",
@@ -15399,10 +15485,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:35:14+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:35:44+00:00",
+      "seconds": 29.7
     },
     {
       "id": "E3b_jgroups_wait_W90_s102",
@@ -15416,10 +15506,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:37:44+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:38:12+00:00",
+      "seconds": 28.7
     },
     {
       "id": "E3b_jgroups_decomp_L1_W90_s102",
@@ -15434,10 +15528,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:34:43+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:35:12+00:00",
+      "seconds": 29.0
     },
     {
       "id": "E3b_jgroups_decomp_L2_W90_s102",
@@ -15452,10 +15550,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:36:14+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:36:42+00:00",
+      "seconds": 28.7
     },
     {
       "id": "E3b_jgroups_wait_W30_s103",
@@ -15469,10 +15571,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:37:12+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:37:42+00:00",
+      "seconds": 29.1
     },
     {
       "id": "E3b_jgroups_decomp_L1_W30_s103",
@@ -15487,10 +15593,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:33:46+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:34:16+00:00",
+      "seconds": 29.7
     },
     {
       "id": "E3b_jgroups_decomp_L2_W30_s103",
@@ -15505,10 +15615,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:35:42+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:36:12+00:00",
+      "seconds": 30.7
     },
     {
       "id": "E3b_jgroups_wait_W90_s103",
@@ -15522,10 +15636,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:38:11+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:38:41+00:00",
+      "seconds": 30.7
     },
     {
       "id": "E3b_jgroups_decomp_L1_W90_s103",
@@ -15540,10 +15658,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:34:44+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:35:12+00:00",
+      "seconds": 28.8
     },
     {
       "id": "E3b_jgroups_decomp_L2_W90_s103",
@@ -15558,10 +15680,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:36:14+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:36:43+00:00",
+      "seconds": 28.4
     },
     {
       "id": "E3b_jgroups_wait_W30_s104",
@@ -15575,10 +15701,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:37:13+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:37:44+00:00",
+      "seconds": 30.6
     },
     {
       "id": "E3b_jgroups_decomp_L1_W30_s104",
@@ -15593,10 +15723,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:34:12+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:34:43+00:00",
+      "seconds": 30.7
     },
     {
       "id": "E3b_jgroups_decomp_L2_W30_s104",
@@ -15611,10 +15745,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:35:42+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:36:14+00:00",
+      "seconds": 31.6
     },
     {
       "id": "E3b_jgroups_wait_W90_s104",
@@ -15628,10 +15766,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:38:11+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:38:42+00:00",
+      "seconds": 31.6
     },
     {
       "id": "E3b_jgroups_decomp_L1_W90_s104",
@@ -15646,10 +15788,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:34:45+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:35:14+00:00",
+      "seconds": 29.3
     },
     {
       "id": "E3b_jgroups_decomp_L2_W90_s104",
@@ -15664,10 +15810,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:36:42+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:37:12+00:00",
+      "seconds": 29.9
     },
     {
       "id": "E3b_matplotlib_wait_W30_s100",
@@ -15699,10 +15849,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:38:12+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:38:45+00:00",
+      "seconds": 32.6
     },
     {
       "id": "E3b_matplotlib_decomp_L2_W30_s100",
@@ -15717,10 +15871,12 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:40:10+00:00",
+      "worker": 0
     },
     {
       "id": "E3b_matplotlib_wait_W90_s100",
@@ -15752,10 +15908,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:39:12+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:39:42+00:00",
+      "seconds": 30.4
     },
     {
       "id": "E3b_matplotlib_decomp_L2_W90_s100",
@@ -15805,10 +15965,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:38:41+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:39:11+00:00",
+      "seconds": 29.1
     },
     {
       "id": "E3b_matplotlib_decomp_L2_W30_s101",
@@ -15823,10 +15987,12 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:40:12+00:00",
+      "worker": 1
     },
     {
       "id": "E3b_matplotlib_wait_W90_s101",
@@ -15858,10 +16024,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:39:15+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:39:45+00:00",
+      "seconds": 29.7
     },
     {
       "id": "E3b_matplotlib_decomp_L2_W90_s101",
@@ -15911,10 +16081,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:38:42+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:39:12+00:00",
+      "seconds": 29.6
     },
     {
       "id": "E3b_matplotlib_decomp_L2_W30_s102",
@@ -15929,10 +16103,12 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:40:14+00:00",
+      "worker": 2
     },
     {
       "id": "E3b_matplotlib_wait_W90_s102",
@@ -15964,10 +16140,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:39:41+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:40:10+00:00",
+      "seconds": 29.5
     },
     {
       "id": "E3b_matplotlib_decomp_L2_W90_s102",
@@ -16017,10 +16197,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:38:45+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:39:15+00:00",
+      "seconds": 30.1
     },
     {
       "id": "E3b_matplotlib_decomp_L2_W30_s103",
@@ -16070,10 +16254,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:39:42+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T14:40:12+00:00",
+      "seconds": 29.3
     },
     {
       "id": "E3b_matplotlib_decomp_L2_W90_s103",
@@ -16123,10 +16311,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:39:11+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T14:39:41+00:00",
+      "seconds": 29.9
     },
     {
       "id": "E3b_matplotlib_decomp_L2_W30_s104",
@@ -16176,10 +16368,14 @@
         "experiment": "E3b",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 25
+      "priority": 25,
+      "started": "2026-11-24T14:39:45+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T14:40:14+00:00",
+      "seconds": 29.0
     },
     {
       "id": "E3b_matplotlib_decomp_L2_W90_s104",

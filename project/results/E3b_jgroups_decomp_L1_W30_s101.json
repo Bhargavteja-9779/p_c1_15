@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E3b",
+    "project": "jgroups",
+    "method": "decomp",
+    "variant": "decomp_L1_W30",
+    "seed": 101,
+    "split": "test",
+    "W": 30,
+    "level": 1,
+    "gmean": 0.6643593211227965,
+    "r0": 0.7122530736289543,
+    "r1": 0.6196860693263571,
+    "rdiff": 0.09256700430259723,
+    "auc": 0.7425212299737877,
+    "mcc": 0.2648396503947742,
+    "n_eval": 17536,
+    "seconds": 30.74,
+    "job_id": "E3b_jgroups_decomp_L1_W30_s101",
+    "written": "2026-11-24T14:34:12+00:00",
+    "cycle": 1
+  }
+]
