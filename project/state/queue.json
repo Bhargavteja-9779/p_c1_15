@@ -26169,10 +26169,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-24T15:05:41+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T15:06:37+00:00",
+      "seconds": 55.4
     },
     {
       "id": "E0c_fabric_lawm_soft_W90_s0",
@@ -26189,10 +26193,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-24T15:06:37+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T15:07:30+00:00",
+      "seconds": 53.6
     },
     {
       "id": "E0c_fabric_lawm_count_W30_s0",
@@ -26209,12 +26217,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 12,
       "started": "2026-11-24T15:04:04+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-24T15:04:54+00:00",
+      "seconds": 49.7
     },
     {
       "id": "E0c_fabric_lawm_count_W90_s0",
@@ -26231,10 +26241,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-24T15:04:53+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T15:05:41+00:00",
+      "seconds": 47.9
     },
     {
       "id": "E0c_fabric_lawm_soft_W30_s1",
@@ -26251,10 +26265,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-24T15:05:42+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T15:06:38+00:00",
+      "seconds": 55.9
     },
     {
       "id": "E0c_fabric_lawm_soft_W90_s1",
@@ -26271,10 +26289,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-24T15:06:38+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T15:07:32+00:00",
+      "seconds": 53.8
     },
     {
       "id": "E0c_fabric_lawm_count_W30_s1",
@@ -26291,12 +26313,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 12,
       "started": "2026-11-24T15:04:04+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-24T15:04:54+00:00",
+      "seconds": 49.7
     },
     {
       "id": "E0c_fabric_lawm_count_W90_s1",
@@ -26313,10 +26337,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-24T15:04:54+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T15:05:43+00:00",
+      "seconds": 49.1
     },
     {
       "id": "E0c_fabric_lawm_soft_W30_s2",
@@ -26333,10 +26361,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-24T15:05:43+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T15:06:38+00:00",
+      "seconds": 55.3
     },
     {
       "id": "E0c_fabric_lawm_soft_W90_s2",
@@ -26353,10 +26385,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-24T15:06:38+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T15:07:32+00:00",
+      "seconds": 54.1
     },
     {
       "id": "E0c_fabric_lawm_count_W30_s2",
@@ -26373,12 +26409,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 12,
       "started": "2026-11-24T15:04:04+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-24T15:04:53+00:00",
+      "seconds": 49.2
     },
     {
       "id": "E0c_fabric_lawm_count_W90_s2",
@@ -26395,10 +26433,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-24T15:04:54+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T15:05:42+00:00",
+      "seconds": 48.2
     },
     {
       "id": "E0c_neutron_lawm_soft_W30_s0",
@@ -26415,10 +26457,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-24T15:10:21+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T15:11:56+00:00",
+      "seconds": 94.6
     },
     {
       "id": "E0c_neutron_lawm_soft_W90_s0",
@@ -26435,10 +26481,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-24T15:11:56+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T15:13:27+00:00",
+      "seconds": 91.1
     },
     {
       "id": "E0c_neutron_lawm_count_W30_s0",
@@ -26455,10 +26505,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-24T15:07:30+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T15:08:57+00:00",
+      "seconds": 86.9
     },
     {
       "id": "E0c_neutron_lawm_count_W90_s0",
@@ -26475,10 +26529,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-24T15:08:57+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T15:10:21+00:00",
+      "seconds": 84.0
     },
     {
       "id": "E0c_neutron_lawm_soft_W30_s1",
@@ -26495,10 +26553,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-24T15:10:22+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T15:11:58+00:00",
+      "seconds": 96.1
     },
     {
       "id": "E0c_neutron_lawm_soft_W90_s1",
@@ -26515,10 +26577,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-24T15:11:58+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T15:13:30+00:00",
+      "seconds": 92.3
     },
     {
       "id": "E0c_neutron_lawm_count_W30_s1",
@@ -26535,10 +26601,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-24T15:07:32+00:00",
+      "worker": 1,
+      "finished": "2026-11-24T15:08:57+00:00",
+      "seconds": 85.2
     },
     {
       "id": "E0c_neutron_lawm_count_W90_s1",
@@ -26555,10 +26625,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-24T15:08:57+00:00",
+      "worker": 2,
+      "finished": "2026-11-24T15:10:22+00:00",
+      "seconds": 84.7
     },
     {
       "id": "E0c_neutron_lawm_soft_W30_s2",
@@ -26575,10 +26649,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-24T15:10:23+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T15:12:00+00:00",
+      "seconds": 96.3
     },
     {
       "id": "E0c_neutron_lawm_soft_W90_s2",
@@ -26595,10 +26673,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-24T15:12:00+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T15:13:34+00:00",
+      "seconds": 94.7
     },
     {
       "id": "E0c_neutron_lawm_count_W30_s2",
@@ -26615,10 +26697,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-24T15:07:32+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T15:08:59+00:00",
+      "seconds": 86.7
     },
     {
       "id": "E0c_neutron_lawm_count_W90_s2",
@@ -26635,10 +26721,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-24T15:08:59+00:00",
+      "worker": 0,
+      "finished": "2026-11-24T15:10:23+00:00",
+      "seconds": 84.3
     },
     {
       "id": "E0c_nova_lawm_soft_W30_s0",
@@ -26935,10 +27025,12 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-24T15:13:27+00:00",
+      "worker": 1
     },
     {
       "id": "E0c_sentry_lawm_count_W90_s0",
@@ -27015,10 +27107,12 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-24T15:13:30+00:00",
+      "worker": 2
     },
     {
       "id": "E0c_sentry_lawm_count_W90_s1",
@@ -27095,10 +27189,12 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-24T15:13:34+00:00",
+      "worker": 0
     },
     {
       "id": "E0c_sentry_lawm_count_W90_s2",

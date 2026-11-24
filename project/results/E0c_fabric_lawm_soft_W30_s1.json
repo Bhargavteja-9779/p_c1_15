@@ -1,0 +1,28 @@
+[
+  {
+    "experiment": "E0c",
+    "project": "fabric",
+    "method": "lawm",
+    "variant": "lawm_soft_W30",
+    "seed": 1,
+    "split": "dev",
+    "W": 30,
+    "delay_est": "lagakos",
+    "label_noise_log": true,
+    "mode": "soft",
+    "gmean": 0.6885961500895781,
+    "r0": 0.753604883696453,
+    "r1": 0.6291953093408815,
+    "rdiff": 0.12440957435557143,
+    "auc": 0.7640161997121804,
+    "mcc": 0.33073383063449135,
+    "n_eval": 11974,
+    "seconds": 55.79,
+    "mean_q_true_bug_mean": 0.1037582015783442,
+    "mean_q_clean_mean": 0.01857199030740461,
+    "auc_dormant_mean": 0.757332491266356,
+    "job_id": "E0c_fabric_lawm_soft_W30_s1",
+    "written": "2026-11-24T15:06:38+00:00",
+    "cycle": 2
+  }
+]
