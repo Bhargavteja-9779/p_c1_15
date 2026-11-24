@@ -3038,12 +3038,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 10,
       "started": "2026-11-24T04:06:09+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-24T04:06:54+00:00",
+      "seconds": 45.1
     },
     {
       "id": "E0_sentry_orb_W180_s0",
@@ -3363,10 +3365,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T04:06:54+00:00",
+      "worker": 0
     },
     {
       "id": "E0_sentry_orb_W180_s1",
@@ -3530,12 +3534,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 10,
       "started": "2026-11-24T04:06:07+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-24T04:06:56+00:00",
+      "seconds": 48.5
     },
     {
       "id": "E0_sentry_orb_W15_s2",
@@ -3684,10 +3690,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 10
+      "priority": 10,
+      "started": "2026-11-24T04:06:56+00:00",
+      "worker": 2
     },
     {
       "id": "E0_sentry_orb_W180_s2",
