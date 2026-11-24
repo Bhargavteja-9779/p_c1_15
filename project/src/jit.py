@@ -74,7 +74,8 @@ def fit_lgb(X, y, w, seed, class_mult=(1.0, 1.0)):
 
 def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="lagakos",
              prior="model", orb_params=None, eval_end_gap_days=365, delay_scale=1.0, return_preds=False,
-             label_noise_log=False, eps=0.3, level=1, mode="soft", mature_age=365):
+             label_noise_log=False, eps=0.3, level=1, mode="soft", mature_age=365,
+             prior_src="mature", crossfit=True, use_S=True, knn_k=20, theta=0.8):
     """df: one project's commits sorted by time (columns FEATS, t, y, t_found).
     delay_scale>1 stretches discovery delays (robustness: slower bug discovery)."""
     t0 = time.time()
@@ -126,7 +127,15 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
             keep = found | old_unl
             Xtr = X[tr]; mat = age >= mature_age
             p = None
-            if mat.sum() > 200 and found[mat].sum() > 20:
+            if prior_src == "online":     # ablation: online model's own score (self-confirmation possible)
+                if model is not None:
+                    pr_ = model.predict_proba(Xtr[old_unl])[:, 1]; od = pr_ / np.clip(1 - pr_, 1e-6, None) * oc; p = od / (1 + od)
+            elif not crossfit:            # ablation: one mature scorer, in-sample scores for mature commits
+                if mat.sum() > 200 and found[mat].sum() > 20:
+                    m_f, oc_f = fit_lgb(Xtr[mat], found[mat].astype(int), np.ones(mat.sum()), seed + 7)
+                    if m_f is not None:
+                        pr_ = m_f.predict_proba(Xtr[old_unl])[:, 1]; od = pr_ / np.clip(1 - pr_, 1e-6, None) * oc_f; p = od / (1 + od)
+            elif mat.sum() > 200 and found[mat].sum() > 20:
                 mi = np.where(mat)[0]; fold = np.arange(len(mi)) % 2
                 pm = np.zeros(len(tr)); cnt = np.zeros(len(tr))
                 for f in (0, 1):
@@ -139,7 +148,7 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
             if p is None:
                 Xi, yi, wi = Xtr[keep], found[keep].astype(int), np.ones(keep.sum())
             else:
-                S = survival_from_delays(d_obs, tau, age[old_unl], method=delay_est)
+                S = survival_from_delays(d_obs, tau, age[old_unl], method=delay_est) if use_S else np.ones(old_unl.sum())
                 q = p * S / np.clip(1 - p + p * S, 1e-9, None)
                 Xp, Xu = Xtr[found], Xtr[old_unl]
                 if mode == "soft":
@@ -154,6 +163,23 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
                     diag.append(dict(T=T, mean_q_true_bug=float(q[yt == 1].mean()) if (yt == 1).any() else np.nan,
                                      mean_q_clean=float(q[yt == 0].mean()) if (yt == 0).any() else np.nan,
                                      auc_dormant=float(roc_auc_score(yt, p)) if 0 < yt.sum() < len(yt) else np.nan))
+        elif method == "odasc":
+            # ODaSC-style baseline (Song et al. IJCNN 2022), adapted: label confidence of each wait-labelled
+            # clean example = share of clean labels among its k nearest labelled neighbours in feature space
+            # (kNN class composition instead of DenStream micro-clusters); confidence < theta -> the example
+            # is counted as BOTH classes (ODaSC's rule). Learner = same LightGBM as all methods.
+            from sklearn.neighbors import NearestNeighbors
+            keep = found | (age >= W)
+            Xk, yk = X[tr][keep], found[keep].astype(int)
+            neg = np.where(yk == 0)[0]
+            if len(neg) > knn_k and yk.sum() > 0:
+                nn = NearestNeighbors(n_neighbors=knn_k + 1).fit(Xk)
+                _, ind = nn.kneighbors(Xk[neg])
+                conf = 1.0 - yk[ind[:, 1:]].mean(axis=1)          # exclude self
+                dbl = neg[conf < theta]
+                Xi = np.vstack([Xk, Xk[dbl]]); yi = np.concatenate([yk, np.ones(len(dbl), int)]); wi = np.ones(len(yi))
+            else:
+                Xi, yi, wi = Xk, yk, np.ones(len(yk))
         elif method == "decomp":
             # DIAGNOSTIC ONLY (uses true labels -> not a competitor). Decomposes the wait->oracle gap:
             # level 1: same examples as wait(W) but true labels (pure denoising)

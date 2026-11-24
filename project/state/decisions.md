@@ -58,3 +58,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-24T15:04:02+00:00** — Cycle 2 started (plan_v4: lawm = mature cross-fitted dormant-bug posterior on the wait set); remaining cycle-1 E3/E2 jobs are charged to cycle 2 budget
   - Reason: Section 6.4 ladder rung 3; budget accounting kept simple and conservative
+
+- **2026-11-24T15:52:36+00:00** — H4 holds on dev -> plan_v5: freeze lawm_soft_W30; add ODaSC-style baseline (equal 4-config dev budget), lawm ablations, robustness; skip remaining cycle-1 E2 (LAW ablation)
+  - Reason: LAW failed on dev and test; ablating it supports no claim; saves ~2 CPU-h for the cycle-2 confirmation

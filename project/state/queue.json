@@ -19786,10 +19786,12 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T15:53:43+00:00",
+      "worker": 1
     },
     {
       "id": "E3_brackets_nowait_ds2_s101",
@@ -19858,10 +19860,12 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T15:53:58+00:00",
+      "worker": 2
     },
     {
       "id": "E3_brackets_nowait_ds2_s102",
@@ -19930,10 +19934,12 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-24T15:53:59+00:00",
+      "worker": 0
     },
     {
       "id": "E3_brackets_nowait_ds2_s103",
@@ -23992,10 +23998,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_camel_law_lagakos_base_s100",
@@ -24010,15 +24019,17 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 1,
+      "status": "done",
+      "attempts": 2,
       "cycle": 1,
       "priority": 30,
-      "started": "2026-11-24T15:02:57+00:00",
-      "worker": 2,
+      "started": "2026-11-24T15:51:48+00:00",
+      "worker": 1,
       "log": [
         "2026-11-24T15:04:04+00:00 reset running->pending on restart"
-      ]
+      ],
+      "finished": "2026-11-24T15:53:43+00:00",
+      "seconds": 115.7
     },
     {
       "id": "E2_camel_law_naive_base_s100",
@@ -24033,10 +24044,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_camel_law_naive_model_s101",
@@ -24051,10 +24065,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_camel_law_lagakos_base_s101",
@@ -24069,15 +24086,17 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 1,
+      "status": "done",
+      "attempts": 2,
       "cycle": 1,
       "priority": 30,
-      "started": "2026-11-24T15:03:12+00:00",
-      "worker": 0,
+      "started": "2026-11-24T15:52:01+00:00",
+      "worker": 2,
       "log": [
         "2026-11-24T15:04:04+00:00 reset running->pending on restart"
-      ]
+      ],
+      "finished": "2026-11-24T15:53:58+00:00",
+      "seconds": 117.6
     },
     {
       "id": "E2_camel_law_naive_base_s101",
@@ -24092,10 +24111,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_camel_law_naive_model_s102",
@@ -24110,10 +24132,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_camel_law_lagakos_base_s102",
@@ -24128,15 +24153,17 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 1,
+      "status": "done",
+      "attempts": 2,
       "cycle": 1,
       "priority": 30,
-      "started": "2026-11-24T15:03:18+00:00",
-      "worker": 1,
+      "started": "2026-11-24T15:52:01+00:00",
+      "worker": 0,
       "log": [
         "2026-11-24T15:04:04+00:00 reset running->pending on restart"
-      ]
+      ],
+      "finished": "2026-11-24T15:53:59+00:00",
+      "seconds": 117.8
     },
     {
       "id": "E2_camel_law_naive_base_s102",
@@ -24151,10 +24178,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_camel_law_naive_model_s103",
@@ -24169,10 +24199,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_camel_law_lagakos_base_s103",
@@ -24187,10 +24220,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_camel_law_naive_base_s103",
@@ -24205,10 +24241,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_camel_law_naive_model_s104",
@@ -24223,10 +24262,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_camel_law_lagakos_base_s104",
@@ -24241,10 +24283,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_camel_law_naive_base_s104",
@@ -24259,10 +24304,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_jgroups_law_naive_model_s100",
@@ -24277,10 +24325,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_jgroups_law_lagakos_base_s100",
@@ -24295,10 +24346,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_jgroups_law_naive_base_s100",
@@ -24313,10 +24367,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_jgroups_law_naive_model_s101",
@@ -24331,10 +24388,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_jgroups_law_lagakos_base_s101",
@@ -24349,10 +24409,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_jgroups_law_naive_base_s101",
@@ -24367,10 +24430,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_jgroups_law_naive_model_s102",
@@ -24385,10 +24451,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_jgroups_law_lagakos_base_s102",
@@ -24403,10 +24472,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_jgroups_law_naive_base_s102",
@@ -24421,10 +24493,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_jgroups_law_naive_model_s103",
@@ -24439,10 +24514,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_jgroups_law_lagakos_base_s103",
@@ -24457,10 +24535,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_jgroups_law_naive_base_s103",
@@ -24475,10 +24556,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_jgroups_law_naive_model_s104",
@@ -24493,10 +24577,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_jgroups_law_lagakos_base_s104",
@@ -24511,10 +24598,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_jgroups_law_naive_base_s104",
@@ -24529,10 +24619,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_matplotlib_law_naive_model_s100",
@@ -24547,10 +24640,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_matplotlib_law_lagakos_base_s100",
@@ -24565,10 +24661,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_matplotlib_law_naive_base_s100",
@@ -24583,10 +24682,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_matplotlib_law_naive_model_s101",
@@ -24601,10 +24703,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_matplotlib_law_lagakos_base_s101",
@@ -24619,10 +24724,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_matplotlib_law_naive_base_s101",
@@ -24637,10 +24745,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_matplotlib_law_naive_model_s102",
@@ -24655,10 +24766,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_matplotlib_law_lagakos_base_s102",
@@ -24673,10 +24787,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_matplotlib_law_naive_base_s102",
@@ -24691,10 +24808,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_matplotlib_law_naive_model_s103",
@@ -24709,10 +24829,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_matplotlib_law_lagakos_base_s103",
@@ -24727,10 +24850,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_matplotlib_law_naive_base_s103",
@@ -24745,10 +24871,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_matplotlib_law_naive_model_s104",
@@ -24763,10 +24892,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_matplotlib_law_lagakos_base_s104",
@@ -24781,10 +24913,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_matplotlib_law_naive_base_s104",
@@ -24799,10 +24934,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_npm_law_naive_model_s100",
@@ -24817,10 +24955,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_npm_law_lagakos_base_s100",
@@ -24835,10 +24976,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_npm_law_naive_base_s100",
@@ -24853,10 +24997,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_npm_law_naive_model_s101",
@@ -24871,10 +25018,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_npm_law_lagakos_base_s101",
@@ -24889,10 +25039,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_npm_law_naive_base_s101",
@@ -24907,10 +25060,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_npm_law_naive_model_s102",
@@ -24925,10 +25081,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_npm_law_lagakos_base_s102",
@@ -24943,10 +25102,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_npm_law_naive_base_s102",
@@ -24961,10 +25123,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_npm_law_naive_model_s103",
@@ -24979,10 +25144,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_npm_law_lagakos_base_s103",
@@ -24997,10 +25165,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_npm_law_naive_base_s103",
@@ -25015,10 +25186,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_npm_law_naive_model_s104",
@@ -25033,10 +25207,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_npm_law_lagakos_base_s104",
@@ -25051,10 +25228,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_npm_law_naive_base_s104",
@@ -25069,10 +25249,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_spring-integration_law_naive_model_s100",
@@ -25087,10 +25270,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_spring-integration_law_lagakos_base_s100",
@@ -25105,10 +25291,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_spring-integration_law_naive_base_s100",
@@ -25123,10 +25312,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_spring-integration_law_naive_model_s101",
@@ -25141,10 +25333,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_spring-integration_law_lagakos_base_s101",
@@ -25159,10 +25354,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_spring-integration_law_naive_base_s101",
@@ -25177,10 +25375,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_spring-integration_law_naive_model_s102",
@@ -25195,10 +25396,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_spring-integration_law_lagakos_base_s102",
@@ -25213,10 +25417,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_spring-integration_law_naive_base_s102",
@@ -25231,10 +25438,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_spring-integration_law_naive_model_s103",
@@ -25249,10 +25459,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_spring-integration_law_lagakos_base_s103",
@@ -25267,10 +25480,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_spring-integration_law_naive_base_s103",
@@ -25285,10 +25501,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_spring-integration_law_naive_model_s104",
@@ -25303,10 +25522,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_spring-integration_law_lagakos_base_s104",
@@ -25321,10 +25543,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_spring-integration_law_naive_base_s104",
@@ -25339,10 +25564,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_tomcat_law_naive_model_s100",
@@ -25357,10 +25585,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_tomcat_law_lagakos_base_s100",
@@ -25375,10 +25606,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_tomcat_law_naive_base_s100",
@@ -25393,10 +25627,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_tomcat_law_naive_model_s101",
@@ -25411,10 +25648,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_tomcat_law_lagakos_base_s101",
@@ -25429,10 +25669,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_tomcat_law_naive_base_s101",
@@ -25447,10 +25690,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_tomcat_law_naive_model_s102",
@@ -25465,10 +25711,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_tomcat_law_lagakos_base_s102",
@@ -25483,10 +25732,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_tomcat_law_naive_base_s102",
@@ -25501,10 +25753,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_tomcat_law_naive_model_s103",
@@ -25519,10 +25774,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_tomcat_law_lagakos_base_s103",
@@ -25537,10 +25795,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_tomcat_law_naive_base_s103",
@@ -25555,10 +25816,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_tomcat_law_naive_model_s104",
@@ -25573,10 +25837,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_tomcat_law_lagakos_base_s104",
@@ -25591,10 +25858,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_tomcat_law_naive_base_s104",
@@ -25609,10 +25879,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_wagtail_law_naive_model_s100",
@@ -25627,10 +25900,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_wagtail_law_lagakos_base_s100",
@@ -25645,10 +25921,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_wagtail_law_naive_base_s100",
@@ -25663,10 +25942,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_wagtail_law_naive_model_s101",
@@ -25681,10 +25963,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_wagtail_law_lagakos_base_s101",
@@ -25699,10 +25984,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_wagtail_law_naive_base_s101",
@@ -25717,10 +26005,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_wagtail_law_naive_model_s102",
@@ -25735,10 +26026,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_wagtail_law_lagakos_base_s102",
@@ -25753,10 +26047,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_wagtail_law_naive_base_s102",
@@ -25771,10 +26068,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_wagtail_law_naive_model_s103",
@@ -25789,10 +26089,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_wagtail_law_lagakos_base_s103",
@@ -25807,10 +26110,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_wagtail_law_naive_base_s103",
@@ -25825,10 +26131,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_wagtail_law_naive_model_s104",
@@ -25843,10 +26152,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_wagtail_law_lagakos_base_s104",
@@ -25861,10 +26173,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_wagtail_law_naive_base_s104",
@@ -25879,10 +26194,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_zulip_law_naive_model_s100",
@@ -25897,10 +26215,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_zulip_law_lagakos_base_s100",
@@ -25915,10 +26236,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_zulip_law_naive_base_s100",
@@ -25933,10 +26257,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_zulip_law_naive_model_s101",
@@ -25951,10 +26278,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_zulip_law_lagakos_base_s101",
@@ -25969,10 +26299,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_zulip_law_naive_base_s101",
@@ -25987,10 +26320,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_zulip_law_naive_model_s102",
@@ -26005,10 +26341,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_zulip_law_lagakos_base_s102",
@@ -26023,10 +26362,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_zulip_law_naive_base_s102",
@@ -26041,10 +26383,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_zulip_law_naive_model_s103",
@@ -26059,10 +26404,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_zulip_law_lagakos_base_s103",
@@ -26077,10 +26425,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_zulip_law_naive_base_s103",
@@ -26095,10 +26446,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_zulip_law_naive_model_s104",
@@ -26113,10 +26467,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_zulip_law_lagakos_base_s104",
@@ -26131,10 +26488,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E2_zulip_law_naive_base_s104",
@@ -26149,10 +26509,13 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_plan",
       "attempts": 0,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "log": [
+        "2026-11-24T15:52:36+00:00 skipped by plan_v5 (ablation of method that failed)"
+      ]
     },
     {
       "id": "E0c_fabric_lawm_soft_W30_s0",
@@ -26769,12 +27132,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 13,
       "started": "2026-11-24T15:43:21+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-24T15:51:48+00:00",
+      "seconds": 506.6
     },
     {
       "id": "E0c_nova_lawm_count_W30_s0",
@@ -26863,12 +27228,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 13,
       "started": "2026-11-24T15:43:30+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-24T15:52:01+00:00",
+      "seconds": 510.8
     },
     {
       "id": "E0c_nova_lawm_count_W30_s1",
@@ -26957,12 +27324,14 @@
         "experiment": "E0c",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 13,
       "started": "2026-11-24T15:43:40+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-24T15:52:01+00:00",
+      "seconds": 500.6
     },
     {
       "id": "E0c_nova_lawm_count_W30_s2",
