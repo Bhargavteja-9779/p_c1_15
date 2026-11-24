@@ -28,3 +28,12 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-24T03:35:03+00:00** — User allowed Frontiers journals; checked Frontiers in AI (median 78 d), Big Data (74 d), Computer Science (100 d)
   - Reason: None faster than JKSU-CIS (71–74 d) and quartiles UNVERIFIED -> keep JKSU-CIS (journal_selection/journal_comparison.md addendum)
+
+- **2026-11-24T04:05:16+00:00** — plan_v2: add E0b dev diagnostics (awt eps grid, decomposition with true labels); LAW kept as pre-specified but recorded as failing on dev
+  - Reason: Dev results + diagnosis (results/diag_law_neutron.json, results/diag_survival_dev.txt); no test project touched
+
+- **2026-11-24T04:05:16+00:00** — Liu et al. 2024a ('PU learning for JIT-SDP', EMSE 29(5):98) marked UNVERIFIED
+  - Reason: Cited only in MSTDP (JKSU-CIS 2026). Crossref and OpenAlex searches by title and venue/volume/issue return no such record; the paper cannot be opened. Not used as evidence either way
+
+- **2026-11-24T04:05:16+00:00** — ODaSC baseline reimplementation deferred
+  - Reason: Only needed if a method claim survives dev; ODaSC Table II is used now as literature evidence (opt≈estimated)

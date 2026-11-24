@@ -1,0 +1,20 @@
+# plan_v2 — written 2026-11-24 (cycle 1) BEFORE any held-out (test-project) run. plan_v1 is kept unchanged.
+# Reason for v2: on DEV projects the pre-specified proposed method (law_lagakos_model) lost to tuned waiting-time
+# baselines (results/diag_law_neutron.json; journal FAILURE + DIAGNOSIS entries 2026-11-24). No test project
+# has been touched. Everything in plan_v1 remains, plus:
+version: 2
+supersedes: plan_v1
+changes:
+  - id: E0b_dev_diagnostics
+    projects: dev
+    seeds: explore
+    runs:
+      awt: "adaptive waiting time: W_T = min{a : S_T(a) <= eps}, S_T = Lagakos estimate from discoveries seen before T; eps in {0.2, 0.3, 0.4, 0.5} (4 configs, dev only)"
+      decomp: "DIAGNOSTIC (uses true labels, never a competitor): level 1 = wait(W) examples with true labels (pure denoising); level 2 = level 1 + young not-yet-found true bugs; W in {30, 90}"
+    est_cpu_h: 1.5
+    priority: 11
+  - id: proposed_method_rule
+    rule: "The candidate for E1 is chosen on DEV ONLY by mean dev G-mean among {law_* (4), awt_* (4)}; it must beat the best tuned baseline on dev to be carried forward. If no candidate beats it on dev, E1 is still run on test as a NEGATIVE-RESULT confirmation (pre-registered here) and the paper is framed as Type C (analysis), not as a method paper."
+  - id: odasc_baseline
+    status: "deferred to plan_v3 — only needed if a method claim survives dev (decision logged)"
+statistics: "unchanged from plan_v1; Holm family now counts all candidates tried on dev (variants_tried.csv)"

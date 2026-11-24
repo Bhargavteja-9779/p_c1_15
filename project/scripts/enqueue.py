@@ -22,6 +22,15 @@ def specs(exp):
                 J.append(dict(method="law", delay_est=de, prior=pr, variant=f"law_{de}_{pr}", project=p, seed=s))
         for j in J: j.update(experiment="E0", split="dev")
         return J, 10
+    if exp == "E0b":   # plan_v2 dev diagnostics
+        for p, s in itertools.product(DEV, SE):
+            for eps in [0.2, 0.3, 0.4, 0.5]:
+                J.append(dict(method="awt", eps=eps, delay_est="lagakos", label_noise_log=True, variant=f"awt_e{eps}", project=p, seed=s))
+            for W in [30, 90]:
+                for lv in [1, 2]:
+                    J.append(dict(method="decomp", W=W, level=lv, variant=f"decomp_L{lv}_W{W}", project=p, seed=s))
+        for j in J: j.update(experiment="E0b", split="dev")
+        return J, 11
     if exp in ("E1", "E2", "E3"):
         fz = read_json(STATE / "frozen_config.json")
         assert fz, "frozen_config.json missing: run scripts/freeze_config.py after E0"

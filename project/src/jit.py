@@ -74,7 +74,7 @@ def fit_lgb(X, y, w, seed, class_mult=(1.0, 1.0)):
 
 def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="lagakos",
              prior="model", orb_params=None, eval_end_gap_days=365, delay_scale=1.0, return_preds=False,
-             label_noise_log=False):
+             label_noise_log=False, eps=0.3, level=1):
     """df: one project's commits sorted by time (columns FEATS, t, y, t_found).
     delay_scale>1 stretches discovery delays (robustness: slower bug discovery)."""
     t0 = time.time()
@@ -102,6 +102,26 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
             Xi, yi, wi = X[tr][keep], found[keep].astype(int), np.ones(keep.sum())
             if method == "orb" and len(recent_preds) >= 10:
                 cmult = orb_factors(np.mean(recent_preds[-100:]), **(orb_params or {}))
+        elif method == "awt":
+            # adaptive waiting time (plan_v2): W_T = smallest age a with S_T(a) <= eps, S_T from the
+            # truncation-corrected delay estimate on discoveries observed before T (no future info)
+            pos_idx = tr[found]
+            d_obs = (tf[pos_idx] - t[pos_idx]) / DAY; tau = (T - t[pos_idx]) / DAY
+            grid = np.arange(1, 731, 1.0)
+            Sg = survival_from_delays(d_obs, tau, grid, method=delay_est)
+            below = np.where(Sg <= eps)[0]
+            W_T = grid[below[0]] if (len(d_obs) >= 5 and len(below)) else 90.0
+            keep = found | (age >= W_T)
+            Xi, yi, wi = X[tr][keep], found[keep].astype(int), np.ones(keep.sum())
+            if label_noise_log: diag.append(dict(T=T, W_T=float(W_T)))
+        elif method == "decomp":
+            # DIAGNOSTIC ONLY (uses true labels -> not a competitor). Decomposes the wait->oracle gap:
+            # level 1: same examples as wait(W) but true labels (pure denoising)
+            # level 2: level 1 + young not-yet-found true bugs (adds fresh positives)
+            # oracle  : level 2 + young clean commits
+            keep = found | (age >= W)
+            if level >= 2: keep = keep | (y[tr] == 1)
+            Xi, yi, wi = X[tr][keep], y[tr][keep], np.ones(keep.sum())
         elif method == "law":
             pos_idx = tr[found]
             d_obs = (tf[pos_idx] - t[pos_idx]) / DAY; tau = (T - t[pos_idx]) / DAY

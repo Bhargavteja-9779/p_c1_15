@@ -6,3 +6,4 @@ timestamp,cycle,variant_id,description,data_split_used,metric,value,outcome,note
 2026-11-24T03:22:41+00:00,1,orb_W90 (buggy: factors cancelled),exploratory code check,dev: fabric seed 0,gmean,0.636,exploratory,pre-plan sanity run
 2026-11-24T03:22:41+00:00,1,orb_W90,exploratory code check,dev: fabric seed 0,gmean,0.655,exploratory,pre-plan sanity run
 2026-11-24T03:22:41+00:00,1,law_lagakos_model,exploratory code check,dev: fabric seed 0,gmean,0.67,exploratory,pre-plan sanity run
+2026-11-24T04:05:16+00:00,1,diag_law_neutron,"diagnostic run of law(model/base), wait30/90, oracle with label-noise logging",dev: neutron seed 0,gmean,see results/diag_law_neutron.json,diagnostic,explains LAW failure
