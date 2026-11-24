@@ -1,0 +1,539 @@
+                                                            Capturing Delayed Feedback in Conversion Rate Prediction
+                                                                           via Elapsed-Time Sampling
+                                                                       Jia-Qi Yang1 * , Xiang Li2† , Shuguang Han2 , Tao Zhuang2
+                                                                             De-Chuan Zhan1† , Xiaoyi Zeng2 , Bin Tong2
+                                                            1
+                                                                 State Key Laboratory for Novel Software Technology, Nanjing University, Nanjing, China
+                                                                                               2
+                                                                                                 Alibaba Group, Hangzhou, China
+                                                                                             1
+                                                                                               {yangjq,zhandc}@lamda.nju.edu.cn
+                                                                        2
+                                                                          {leo.lx,shuguang.sh,zhuangtao.zt,yuanhan,tongbin.tb}@alibaba-inc.com
+arXiv:2012.03245v4 [cs.LG] 16 Jul 2021
+
+
+
+
+                                                                       Abstract                                   industry (Lee et al. 2012; Chapelle, Manavoglu, and Rosales
+                                                                                                                  2014; Ma et al. 2018).
+                                            Conversion rate (CVR) prediction is one of the most critical             In order to capture the dynamic change of user needs,
+                                            tasks for digital display advertising. Commercial systems of-
+                                            ten require to update models in an online learning manner to
+                                                                                                                  commercial     systems often update learned models with up-
+                                            catch up with the evolving data distribution. However, con-           to-date data within a short time, i.e., in an online training
+                                            versions usually do not happen immediately after user clicks.         manner (Jugovac, Jannach, and Karimi 2018; Guo et al.
+                                            This may result in inaccurate labeling, which is called de-           2019; Ktena et al. 2019). This further complicates the CVR
+                                            layed feedback problem. In previous studies, delayed feed-            prediction since conversions usually do not happen imme-
+                                            back problem is handled either by waiting positive label for a        diately after user clicks. The Delayed Feedback issue intro-
+                                            long period of time, or by consuming the negative sample on           duces a dilemma for streaming CVR prediction — on the
+                                            its arrival and then insert a positive duplicate when conver-         one hand, we need to wait for a sufficient long time so that
+                                            sion happens later. Indeed, there is a trade-off between wait-        the observation information can approximately reflect the
+                                            ing for more accurate labels and utilizing fresh data, which          true conversion; on the other hand, we also tend to update
+                                            is not considered in existing works. To strike a balance in
+                                            this trade-off, we propose Elapsed-Time Sampling Delayed
+                                                                                                                  the learned models without much delay for model-freshness.
+                                            Feedback Model (ES-DFM), which models the relationship                    Chapelle (2014) was among the early studies to address
+                                            between the observed conversion distribution and the true             the delayed feedback problem. The proposed Delayed Feed-
+                                            conversion distribution. Then we optimize the expectation of          back Model (DFM) optimizes CVR as a joint probability
+                                            true conversion distribution via importance sampling under            over the predicted CVR and the delayed time distribution.
+                                            the elapsed-time sampling distribution. We further estimate           This joint probability is estimated in the observed time in-
+                                            the importance weight for each instance, which is used as the         terval, which may be biased from the true conversion distri-
+                                            weight of loss function in CVR prediction. To demonstrate             bution. The biased CVR is probably more inaccurate due to
+                                            the effectiveness of ES-DFM, we conduct extensive experi-             the delayed feedback problem in online learning settings.
+                                            ments on a public data and a private industrial dataset. Exper-
+                                            imental results confirm that our method consistently outper-             To achieve unbiased CVR estimation in delayed feedback
+                                            forms the previous state-of-the-art results.                          problem,    recent studies have explored the way of optimiz-
+                                                                                                                  ing the expectation of true conversion distribution via impor-
+                                                                                                                  tance sampling (Bishop 2007). Ktena et al. (2019) proposed
+                                                                   Introduction                                   the Fake Negative Weighted (FNW) approach, in which each
+                                                                                                                  arriving instance is firstly labeled as negative, and then cor-
+                                         Digital display advertising has become the main business                 rected upon its conversion at a later time. Each fake nega-
+                                         model for many online services, in which advertisers pay                 tive instance may have a side-effect for the learned model
+                                         for placing ads on those platforms. Among the available                  until it is amended. This side-effect is amplified if the data
+                                         payment options, paying per conversion (CPA) is usually                  distribution frequently changes. For example, in the begin-
+                                         the dominated mechanism as conversions can directly bring                ning of a promotion event, user clicks may increase dra-
+                                         profits. In the CPA model, advertisers pay only if users per-            matically while most conversions come after a certain time.
+                                         formed certain predefined conversion actions with the adver-             Such overwhelming fake negatives may harm the predictive
+                                         tisement. To effectively display ads, machine learning mod-              model. Instead of blindly labeling each incoming example as
+                                         els have been widely adopted to forecast the conversion rate             a negative instance, Yasui et al. (2020) proposed a Feedback
+                                         (CVR), which is widely investigated in both academia and                 Shift Importance Weighting (FSIW) algorithm, in which the
+                                              * Jia-Qi Yang performed this work as an intern at Alibaba.          model waits for the real conversion in a certain time inter-
+                                              †
+                                                De-Chuan Zhan and Xiang Li are the corresponding au-
+                                                                                                                  val. However, FSIW does not allow the data correction even
+                                         thors. This work was supported by NSFC (61773198, 6163000043,            a conversion event took place afterward. We argue that pos-
+                                         61921006, 61751306).                                                     itive examples are important for delayed feedback predic-
+                                         Copyright © 2021, Association for the Advancement of Artificial          tion as the positive examples are always more scarce than
+                                         Intelligence (www.aaai.org). All rights reserved.                        the negative examples. Moreover, FSIW may lack model-
+freshness due to a long-time wait. Therefore, either updating    the authors stated that such a problem is related to the sur-
+the model in nearly real time (Ktena et al. 2019), or waiting    vival time analysis (John D. Kalbfleisch 2002). The Delayed
+a sufficiently long time for conversion (Yasui et al. 2020)      Feedback Model (DFM) assumed an exponential delay for
+may not be able to address the delayed feedback problem in       conversion time distribution, and, based on that, proposed
+the streaming CVR prediction.                                    two models: one focusing on CVR prediction and the other
+   For unbiased CVR estimation in the online settings, we        on conversion delay prediction. Built on top of the DFM
+propose to wait for a time interval which is modeled as a dis-   model, Yoshikawa and Imai (2018) further proposed a non-
+tribution. The readily available conversion information al-      parametric delayed feedback model (NoDeF), in which the
+lows the model to trade-off the label correctness and online     delay time was modeled without any parametric assump-
+model-freshness, which are achieved in FSIW and FNW,             tions. One significant drawback of the above methods was
+respectively. Due to the introduction of the observed time       that both of them only attempted to optimize the observed
+distribution, delayed positive samples can be better handled     conversion information rather than the actual delayed con-
+than FNW via important sampling techniques. Especially in        version.
+scenarios of promotion events, FNW may fail to have unbi-
+ased estimation due to that the distribution of positive sam-    Importance Sampling
+ples in observed time may be dramatically different from the
+routines. On the other hand, FSIW is able to guarantee the       Using samples from one distribution to estimate the expec-
+label correctness but lacks of model-freshness. Furthermore,     tation with respect to another distribution can be achieved
+the model is not able to correct instance label even the de-     by importance sampling method. Ktena et al. (2019) pro-
+layed positive instance comes later. The introduction of time    posed fake negative weighted method (FNW) to optimize
+distribution in our proposal helps the model correct the label   the ground truth CVR prediction objective based on impor-
+of an instance by degrading the weight of negative instance      tance sampling. Under the assumption that all samples are
+and upgrading the weight of positive instance.                   initially labeled as negative, the delayed feedback problem
+                                                                 can be resolved by FNW in expectation. However, in the
+   In this work, we propose Elapsed-Time Sampling De-
+                                                                 streaming setting, every fake negative will affect the model
+layed Feedback Model (ES-DFM), which models the rela-
+                                                                 negatively until it’s corresponding positive duplicate arrives.
+tionship between the observed conversion distribution and
+                                                                 This negative effect can be amplified drastically under dis-
+the true conversion distribution. We optimize the expecta-
+                                                                 tribution change. Yasui et al. (2020) proposed a feedback
+tion of true conversion distribution via importance sampling
+                                                                 shift importance weighting method (FSIW), where the im-
+under the elapsed-time sampling distribution. We further es-
+                                                                 portance weight is estimated with the aid of waiting time in-
+timate the importance weight for each instance, which is
+                                                                 formation. However, FSIW does not allow duplicated sam-
+used as the weight of loss function in CVR prediction. To
+                                                                 ples, thus cannot correct the mislabeled samples using the
+demonstrate the effectiveness of ES-DFM, we conduct ex-
+                                                                 subsequent positive labels by inserting duplicates.
+tensive experiments on two widely-used datasets — a public
+ads conversion logs provided by Criteo, and a private data
+set provided by Taobao. Experimental results confirm that        Delayed Bandits
+our method consistently outperforms the previously state-        The delayed feedback in the bandit algorithm has been re-
+of-the-art results in most of the cases. Our main contribution   searched (Joulani, György, and Szepesvári 2013; Mandel
+can be summarized as following:                                  et al. 2015; Cesa-Bianchi, Gentile, and Mansour 2019).
+• To the best of our knowledge, we are the first to study        The aforementioned approaches often provide efficient and
+  the trade-off between waiting more accurate labels and         provably optimal algorithms for delayed feedback scenar-
+  exploiting fresher training data in the context of streaming   ios. However, such methods naturally wait for having re-
+  CVR prediction.                                                ceived enough feedback before actually learning something,
+                                                                 which may be quite unsuitable in a non-stationary environ-
+• By explicitly modeling the elapsed time as a probability       ment. Vernade, György, and Mann (2020) defined a new
+  distribution, we achieve the unbiased estimation of true       stochastic bandit model and addressed the real-world mod-
+  conversion distribution. Particularly, our model is shown      elling issues when dealing with non-stationary environments
+  to be robust even if the data distribution is different from   and delayed feedback. However, the objective in the bandit
+  the routines.                                                  problem is to sequentially make decisions in order to mini-
+• We provide a set of rigorous experimental setups for           mize the cumulative regret, our goal is to predict the CVR in
+  streaming training and evaluation, which better aligns         order to derive a bid price in ad auction.
+  with industrial systems, and can be easily applied to real-
+  world applications.                                                                   Background
+                                                                 In this work, we focus on the CVR prediction task, which
+                     Related Work                                takes the user features xu and the item features xi as in-
+                                                                 puts, all the features are denoted by x, and aims to learn the
+Delayed Feedback Models                                          probability that the user converts on the item. y ∈ {0, 1}
+The mostly cited work that were addressing the delayed           indicates the conversion label, where y = 1 means the con-
+feedback problem came from Chapelle (2014), in which             version, otherwise y = 0. Ideally, the CVR model is trained
+                                                                  more time to consider when buying high-priced products,
+                                                                  thus a long waiting time is required. When a click xi arrives,
+                                                                  an elapsed time ei is drawn from p(e|xi ). Then we wait the
+                                                                  sample xi for the time interval of ei before assigning a la-
+                                                                  bel, and subsequently train on the data. By introducing the
+                                                                  time distribution, we propose our Elapsed-Time Sampling
+                                                                  Delayed Feedback Model (ES-DFM), which modeling the
+                                                                  relationship between the observed conversion distribution
+                                                                  q(y|x) and the true conversion distribution p(y|x), accord-
+                                                                  ing to:
+Figure 1: An illustration of different kind of time informa-
+tion for the delayed feedback tasks.                                      q(y = 0|x) = p(y = 0|x)
+                                                                                                                            (2)
+                                                                                     + p(y = 1|x)p(h > e|x, y = 1)
+
+on top of the training data (x, y) drawn from the data distri-            q(y = 1|x) = p(y = 1|x)p(h ≤ e|x, y = 1)          (3)
+bution of ground-truth p(x, y), thereby optimizing the ideal
+loss shown as follows:                                            where
+             Lideal = E(x,y)∼p(x,y) `(y, fθ (x))          (1)              p(h > e|x, y = 1)
+                                                                              Z ∞         Z ∞                
+where f is the CVR model function, and θ is the parameter.                                                                  (4)
+                                                                            =       p(e|x)     p(h|x, y = 1)dh de
+` is the classification loss, and the widely-used cross entropy                0             e
+is adopted. However, due to the delayed feedback problem,
+the observed distribution of the training data q(x, y) often               p(h ≤ e|x, y = 1)
+deviates from the distribution of the ground-truth p(x, y).                   Z ∞         Z e                
+                                                                                                                            (5)
+Therefore, the ideal loss Lideal is unavailable.                            =       p(e|x)     p(h|x, y = 1)dh de
+   To formulate such a delayed feedback setting more pre-                       0             0
+cisely, we introduce three time points and corresponding             At the time of model training, some conversions that will
+time intervals in Figure 1. These three time points are the       occur eventually have not yet been observed, and previous
+click time ct when a user clicks an item, the conversion time     methods like DFM and FSIW have ignored these conver-
+vt when a conversion action happens, and the observation          sions. We argue this is important for a delayed feedback task
+time ot when we extract the training samples. Then the time       as the positive examples are way more scarce than the nega-
+interval between ct and ot is denoted as the elapsed time e,      tive examples, and the positives may define the direction for
+and the time interval between ct and the vt is denoted as the     model optimization. Therefore, in this work, as soon as the
+delayed feedback time h. Therefore, the samples are labeled       user engages with the ad, the data will be sent (duplicated if
+as y = 1 (positive) in the training data, when e > h, other-      there is already a fake negative) to the model with a positive
+wise some positive samples are mislabeled as y = 0 (fake          label. Then, q(y|x) should be re-normalized as following:
+negative) when e < h.
+                                                                                    p(y = 0) + p(y = 1)p(h > e|y = 1)
+                   Proposed Method                                   q(y = 0) =                                             (6)
+                                                                                        1 + p(y = 1)p(h > e|y = 1)
+In order to realize flexible control on the waiting time, we
+assume the elapsed time is drawn from an elapsed time dis-                                       p(y = 1)
+tribution p(e|x). Then we developed a probabilistic model                  q(y = 1) =                                       (7)
+                                                                                        1 + p(y = 1)p(h > e|y = 1)
+that combines the elapsed time distribution p(e|x), the de-
+lay time distribution p(h|x, y = 1) and the conversion rate       where the condition on x is omitted for conciseness, i.e.
+p(y = 1|x) into a unified framework. To achieve an unbi-          q(y = 0) = q(y = 0|x), p(y = 0) = p(y = 0|x), etc.
+ased estimation of the actual CVR prediction objective, we        Since we have inserted delayed positives, the total number
+propose an importance weighting method corresponding to           of samples will increase by p(y = 1)p(h > e|y = 1), so we
+our elapsed sampling method. Then we provide a practical          should normalize by dividing 1 + p(y = 1)p(h > e|y = 1).
+estimation of the importance weights, and give an analysis        The number of negatives will not change, so dividing Eq.
+of the bias introduced by this estimation, which can guide us     (2) by this normalizing factor yields Eq. (6). The number
+on designing an appropriate elapsed time distribution p(e|x).     of positives will increase by p(y = 1)p(h > e|y = 1),
+                                                                  so the numerator of q(y = 1) is p(y = 1)p(h <= e|y =
+Elapsed-Time Sampling Delayed Feedback Model                      1) + p(y = 1)p(h > e|y = 1). Using the fact that
+                                                                  p(h <= e|y = 1) + p(h > e|y = 1) = 1 yields Eq. (7).
+To strike the balance between obtaining accurate feedback
+information and keeping model freshness, a reasonable wait-
+ing time (elapsed time) should be integrated into the model-
+                                                                  Importance Weight of ES-DFM
+ing process. Moreover, the elapsed time e should be a dis-        To obtain unbiased CVR estimation in delayed feedback
+tribution depend on x, i.e, p(e|x). For example, users need       problem, we optimize the expectation of p(y|x) via impor-
+tance sampling (Bishop 2007). First, we provide the theoret-           classifier frn to predict the probability of being a real nega-
+ical background of importance sampling, as follows:                    tive (Eq. (16)). The model architecture of fdp (x) and frn (x)
+                                                                       is the same as the CVR prediction model. To construct the
+  Lideal = E(x,y)∼p(x,y) `(y, fθ (x))                            (8)   training dataset, for each sample (xi , yi ), an elapsed time e
+           Z         Z
+                                                                       is drawn from p(e|xi ). Then, for the fdp model, the delayed
+         = p(x)dx p(y|x)`(y, fθ (x))dy                           (9)   positives are labeled as 1, the others are labeled as 0; For
+           Z         Z
+                                  p(y|x)                               the frn model, the observed positives are excluded, then the
+         = p(x)dx q(y|x)                 `(y, fθ (x))dy         (10)   negatives are labeled as 1 and the delayed positives are la-
+                                  q(y|x)                               beled as 0. In practice, all these needed labels are available
+                         p(y|x)                                        in a delayed data stream (for example, delayed by 30 days
+         ≈ E(x,y)∼q(x,y)         `(y, fθ (x))                   (11)
+                         q(y|x)                                        to ensure label correctness), and the data selection can be
+         = Liw                                                  (12)   achieved by a mask on the loss function, thus we train the
+                                                                       frn and fdp models jointly with a shared network in stream-
+where f is the CVR model function, and θ is the param-                 ing training.
+eter. ` is the classification loss, and the widely-used cross             Importance sampling methods usually suffer from high
+entropy is adopted. Notice that we assume p(x) ≈ q(x) to               variance due to the division of two probabilities. Our method
+obtain (11) from (10), which is reasonable since the pro-              is less likely to introduce a large variance. The key is on how
+portion of delayed positive is small, and this approximation           the importance weight p(y|x)
+                                                                                                  q(y|x) is calculated. The high vari-
+is also used by Ktena et al. (2019). According to (11), we             ance of importance sampling is mainly introduced by the
+can optimize the ideal objective with a appropriate weight
+                                                                       large value of p(y|x)
+                                                                                        q(y|x) when q(y|x)  p(y|x) at some (x, y).
+w(x, y) = p(y|x)
+              q(y|x) . Second, we further provide the impor-           However, we estimate the importance weight using the de-
+tance weight under the proposed elapsed-sampling distribu-             layed positive rate pdp and the real negative rate prn (in Eq.
+tion. From Equation (6) and (7), we can obtain:                        (17)), and these two values are probabilities and bounded
+              p(y = 0|x)                                               within [0, 1].
+                         = [1 + pdp (x)] prn (x)                (13)
+              q(y = 0|x)
+                                                                       Bias Analysis of Estimated IW
+              p(y = 1|x)
+                         = 1 + pdp (x)                          (14)   The importance weighted loss function Eq. (17) is unbi-
+              q(y = 1|x)                                               ased using ideal pdp and prn . However, a bias may be in-
+where                                                                  troduced due to the estimated importance weights fdp and
+                                                                       frn . Through optimizing the loss function Eq. (17), and us-
+            pdp = p(y = 1)p(h > e)                              (15)   ing the estimated fdp , frn instead of ideal pdp , prn , the pre-
+                            p(y = 0)                                   dicted probability f (x) converges to:
+            prn =                                               (16)
+                  p(y = 0) + p(y = 1)p(h > e)                                                 p(y = 1|x)
+                                                                              f (x) =                                              (18)
+pdp (x) is the delayed positive probability, denote the proba-                        p(y = 1|x) + pneg (x)frn (x)
+bility that a sample is a duplicated positive; prn (x) is the real         pneg (x) = p(y = 0|x) + p(y = 1|x)p(h > e|x)            (19)
+negative probability, denote the probability that an observed
+negative is ground truth negative and will not convert.                Proof sketch. Take partial derivative of Eq. (17) with respect
+   Finally, considering Eq. (8) to Eq. (14), the importance            to f , and set the derivative to zero. A detailed proof is given
+weighed CVR loss function is:                                          in the supplementary material‡.
+                 n
+                 X                                                        From Eq. (18) and Eq. (19), we can draw the follow-
+   Lniw = −                  yi [1 + pdp (xi )] log(fθ (xi ))          ing observations, which can guide us to design appropriate
+              (xi ,yi )∈D̃
+                                                                (17)   elapsed-time sampling distribution p(e|x):
+    + (1 − yi ) [1 + pdp (xi )] prn (xi )log(1 − fθ (xi ))             • First, if frn is perfectly correct, we have frn = prn , then
+                                                                         f (x) = p(y = 1), thus leading to no bias. However, in
+where D̃ is the training data drawn from elapsed-time sam-               practice, frn is learned through historical data, bias al-
+pling distribution q(x, y).                                              ways exists.
+Estimation of Importance Weight (IW)                                   • Second, the bias is also related to p(y = 1|x) according
+The challenge of resolving the delayed feedback problem                  to Eq. (18) and Eq. (19). Therefore, if the absolute value
+through importance sampling is that we need to estimate the              of conversion rate is large, the bias introduced by frn may
+importance weights w(x, y).                                              be larger.
+   In this work, we decompose w(x, y) into two parts:                  • Last, the sampling distribution p(e|x) can be used to con-
+pdp (x) and prn (x), according to Eq. (13) and Eq. (14). More            trol the bias. If e is long, p(h > e) will be smaller. Thus
+precisely, we estimate these two probability with two binary             p(y = 0)+p(y = 1)p(h > e) will be close to p(y = 0|x).
+classifiers. Namely, we train a classifier fdp to predict the            frn will be more close to 1 since there are few fake nega-
+probability of being a delayed positive (Eq. (15)), and train a          tives.Thus pneg (x)frn (x) is more close to p(y = 0|x).
+   Therefore, we can control the waiting time(elapsed time)               than AUC in skewed data like CVR prediction task (Ya-
+distribution p(e|x) to reduce bias, which is the core to real-            sui et al. 2020). The last metric is negative log likelihood
+ize the aforementioned trade-off and is the missing part of               (NLL), which is sensitive to the absolute value of the CVR
+existing methods.                                                         prediction (Chapelle 2014). In a CPA model, the predicted
+                                                                          probabilities are important since they are directly used to
+                         Experiments*                                     compute the value of an impression.
+To evaluate the proposed model, we conduct a set of experi-               Streaming Experimental Protocol
+ments to answer the following research questions:
+RQ1 How does ES-DFM perform, compared to the state-of-                    We have designed an experimental evaluation method for the
+the-art models for the streaming CVR prediction task?                     streaming CVR prediction, which can fully verify the perfor-
+RQ2 How do different choices of elapsed time affect the                   mance of different methods in the online learning settings.
+performance? What is the best elapsed time of the dataset?                In this work, we divide the streaming dataset into multi-
+RQ3 How do mislabeled samples affect importance weight-                   ple datasets according to the click timestamp, each of which
+ing methods in streaming training?                                        contains one hour data. Following the online training man-
+                                                                          ner of industrial systems, the model is trained on the t-th
+RQ4 How does ES-DFM perform in online recommender
+                                                                          hour data and tested on the t + 1-th hour data, then trained
+systems?
+                                                                          on the t + 1-th hour data and tested on the t + 2-th hour data,
+                                                                          and so on and so forth. Note that, the training data is re-
+Datasets                                                                  constructed with fake negatives, while evaluation data is the
+Public Dataset We use the Criteo dataset† used                            original data. Therefore, we report the weighted metrics of
+in Chapelle (2014) to evaluate the proposed method.                       the evaluation dataset of different hours to verify the overall
+This dataset is formed by Criteo live traffic data in a period            performance of different methods on streaming data.
+of 60 days, which corresponds to conversions after a click
+has occurred. Each sample is described by a set of hashed                 Compared Methods
+categorical features and a few continuous features. It also               We compare our method with the state-of-the-art methods:
+includes the timestamps of the clicks and those of the
+conversions, if any. The statistics of Criteo dataset is shown            – Pre-trained: A CVR model without any finetuning.
+in Table 1.                                                               – Vanilla Finetune Model: A model finetuned on top of the
+Taobao Dataset We collect 98×108 samples in a period of                     pre-trained model using the streaming data, which is the
+14 days from the daily click and conversion logs in Taobao                  baseline method.
+system, which consist of the user and item features with                  – Delayed Feedback Model (DFM)(Chapelle 2014): A
+the labels (i.e., click or conversion) for the CVR task. The                model finetuned on top of the pre-trained model using de-
+feature set of an item contains several categorical features                layed feedback loss.
+and continuous features. The statistics of Taobao Dataset is              – Fake Negative Weighted (FNW) (Ktena et al. 2019): A
+shown in Table 1.                                                           model finetuned on top of the pre-trained model using the
+Dataset Preprocessing We divide both public and anony-                      fake negative weighted loss.
+mous dataset into two parts evenly. We use the first part for             – Fake Negative calibration(FNC) (Ktena et al. 2019): A
+model pre-training and achieve a well initialized CVR pre-                  model finetuned on top of the pre-trained model using the
+diction model. We use the second part for streaming data                    fake negative calibration loss.
+simulation to evaluate compared methods.
+                                                                          – Feedback Shift Importance Weighting (FSIW) (Yasui
+                                                                            et al. 2020): The pre-trained model will be fine-tuned us-
+Evaluation Metrics
+                                                                            ing the FSIW loss and pre-trained auxiliary model.
+We adopt three widely used metrics for the CVR prediction
+                                                                          – Elapsed-Time Sampling Delayed Feedback Model
+task (Ni et al. 2018; Zhou et al. 2019; Ktena et al. 2019; Ya-
+                                                                            (ES-DFM): Our proposed method which try to keep the
+sui et al. 2020), which show a model’s performance from dif-
+                                                                            model fresh while introducing low bias.
+ferent perspectives. The first metric is area under ROC curve
+(AUC) which assesses the pairwise ranking performance of                     We also reported performance of an Oracle* model: A
+the classification results between the conversion and non-                model finetuned using the ground truth label instead of ob-
+conversion samples. The second metric is area under the                   served label, assuming the conversion label is known at click
+precision-recall curve (PR-AUC) which is more sensitive                   time. This is the upper bound of possible improvements,
+                                                                          where the delayed feedback problem does not exist. The as-
+     * The code for reproducing our results on public dataset is avail-
+                                                                          terisk* denotes that it’s not a baseline method.
+able at https://github.com/ThyrixYang/es dfm
+     †
+       The     original    url    provided       by     Criteo       at   Parameter Settings
+https://labs.criteo.com/2013/12/conversion-logs-dataset/ is broken,
+thus we provide a copy at https://github.com/ThyrixYang/es dfm .          For fair comparison, all hyper-parameters are tuned care-
+The users should conform to the terms of use from Criteo to use           fully for all compared methods. The feature engineering of
+this dataset.                                                             the numerical features and the categorical features is the
+    Dataset         # Users        # Items       # categorical feature   # continuous feature    # conversions    # Samples     # average CVR   # log period
+ Criteo Dataset        -             5443                  9                       8                3619801       15898883          0.2269        60 days
+ Taobao Dataset   0.25 billion    0.8 billion             12                      10              0.32 billion    9.8 billion       0.03273       14 days
+
+                                                 Table 1: Statistics of Criteo and Taobao Dataset.
+
+                                          Criteo Dataset                                                           Taobao Dataset
+ Method
+               AUC       PR-AUC        NLL         R-AUC       R-PR-AUC      R-NLL      AUC         PR-AUC       NLL        R-AUC     R-PR-AUC     R-NLL
+ Pre-trained   0.8307    0.6251        0.4009      -0.9212     -0.2058       0.2139     0.8731      0.6525       0.1156     -1.0374   -0.5217      -0.2419
+ Vanilla       0.8376    0.6288        0.4047      0.0000      0.0000        0.0000     0.8842      0.6645       0.1141     0.0000    0.0000       0.0000
+ Oracle*       0.8450    0.6469        0.3868      1.0000      1.0000        1.0000     0.8949      0.6875       0.1079     1.0000    1.0000       1.0000
+ DFM           0.8132    0.5784        1.2599      -3.2581     -2.7833       -47.645    0.8702      0.6471       0.1271     -1.3084   -0.7565      -2.0968
+ FSIW          0.8290    0.6189        0.4099      -1.1432     -0.5479       -0.2891    0.8735      0.6591       0.1149     -0.9971   -0.2348      -0.1290
+ FNC           0.8373    0.6267        0.4382      -0.0393     -0.1147       -1.8646    0.8851      0.6669       0.1142     0.0841    0.1043       -0.0161
+ FNW           0.8373    0.6313        0.4033      -0.0308     0.1400        0.0773     0.8845      0.6672       0.1137     0.0280    0.1174       0.0645
+ ES-DFM        0.8402*   0.6393*       0.3924*     0.3560      0.5799        0.6831     0.8895*     0.6762*      0.1112*    0.4953    0.5087       0.4677
+
+Table 2: Performance comparisons of proposed model with baseline models on AUC, PR-AUC and NLL metrics. The bold
+value marks the best one in one column, while the underlined value corresponds to the best one among all baselines. Here,
+* indicates statistical significance improvement compared to the best baseline measured by t-test at p-value of 0.05. R-AUC,
+R-PR-AUC and R-NLL are relative metrics indicating the improvements within the delayed feedback gap.
+
+
+same as the settings in the work (Chapelle 2014). Since we                         Standard Streaming Experiments: RQ1
+mainly discuss the delayed feedback issue in this paper, the
+model architecture is a simple MLP model with the hidden                           From Table 2, we can see that our proposed method im-
+units fixed for all models with [256, 256, 128]. The activa-                       proves the performance significantly against all the base-
+tion functions are Leaky ReLU and every hidden layer is                            lines and achieves the state-of-the-art performance. More-
+followed by a BatchNorm layer (Ioffe and Szegedy 2015)                             over, some further observations can be made. First, the per-
+to accelerate learning. Adam (Kingma and Ba 2015) is used                          formance of DFM and FSIW is worse than the vanilla base-
+as the optimizer with the learning rate of 10−3 . L2 regular-                      line on both the public and Taobao Dataset. This is because
+ization strength is 10−6 . We describe the detailed setting of                     DFM is difficult to converge, thus failing to achieve a good
+compared methods in the Supplementary Material ‡ due to                            performance in streaming CVR prediction, and FSIW does
+the page limit.                                                                    not allow the data correction once a conversion took place
+                                                                                   afterwards, which is important for delayed feedback. Sec-
+                                                                                   ond, in most cases, FNC and FNW perform better than the
+Choice of p(e|x)                                                                   vanilla baseline. Specially, FNW outperforms the baseline
+The sampling elapsed time distribution p(e|x) can be de-                           in both PR-AUC and NLL, which is consistent with the re-
+signed based on expert knowledge and the aforementioned                            sults reported in Ktena et al. (2019). Third, existing methods
+bias analysis. For example, users need more time to con-                           show little superior performance in terms of AUC, while our
+sider when buying high-priced products, thus a long waiting                        method outperform the best baseline by 0.26% and 0.44%
+time is required. However, the public dataset is anonymized,                       AUC scores on the Criteo and Taobao Dataset, respectively.
+where information like price-level is unavailable. To verify                       As reported in Zhou et al. (2018), DIN improves AUC scores
+the effectiveness of introducing p(e|x) in the streaming set-                      by 1.13% and the improvement of online CTR is 10.0%,
+tings, we perform a simplified implementation of p(e|x).                           which means a small improvement in offline AUC is likely
+More precisely, we set p(e = c|x) = 1 where c is a con-                            to lead to a significant increase in online CTR. In our prac-
+stant, which means p(e|x) degenerates to a Dirac distribu-                         tice, for cutting-edge CVR prediction models, even 0.1%
+tion. This brings us two following advantages. First, we can                       of AUC improvement is substantial and achieves significant
+strike the balance between obtaining accurate feedback in-                         online promotion.
+formation and keeping model freshness with a single param-                            We further analyze the maximum benefit that can be
+eter c. Second, we conducted experiments with different c in                       achieved by resolving the delayed feedback problem. The
+the public dataset, and the experimental results show that                         maximum benefit is defined as the performance gap between
+choosing the best c can significantly improve performance.                         the oracle model and baseline. Therefore, the goal of any
+The c is also tuned on the private dataset and we report the                       method that tackling delayed feedback problem is to nar-
+best result which is achieved using c = 1.                                         row this gap. We report three relative metrics within the
+                                                                                   performance gap, i.e, Relative-AUC(R-AUC), Relative-PR-
+     ‡                                                                             AUC(R-PR-AUC) and Relative-NLL(R-NLL). As shown
+       Some experiment details and discussion are provided at https:
+//github.com/ThyrixYang/es dfm/blob/master/aaai21 sup.pdf                          in Table 2, our method can narrow the delayed feedback
+      0.8400                                                                            0.639                                                                      0.402
+      0.8395                                                                                                                                                       0.400
+                                                                                        0.638
+
+
+
+
+                                                                               PR-AUC
+      0.8390                                                                                                                                                       0.398
+AUC
+
+
+
+
+                                                                                                                                                             NLL
+      0.8385                                                                            0.637                                                                      0.396
+      0.8380                                                                                                                                                       0.394
+                                                                                        0.636
+      0.8375                                                                                                                                                       0.392
+               25 24 23 22 21                       20     21     22     23                      25 24 23 22 21                    20     21     22     23                 25 24 23 22 21                 20      21   22    23
+                                 Elapsed Time(hour)                                                                Elapsed Time(hour)                                                        Elapsed Time(hour)
+
+Figure 2: Experiments on the effect of elapsed time on performance. We control the elapsed time by a parameter c, which is the
+value on the x axis.
+
+      0.84                                                                                                                                                                       Proposed
+                                                                                                                                                                                 FNW
+      0.82                                                                              0.60                                                                         0.7         FSIW
+                                                                                                                                                                                 Pre-trained
+      0.80                                                                                                                                                           0.6
+
+
+
+
+                                                                                                                                                              NLL
+                                                                              PR-AUC
+
+                                                                                        0.55
+AUC
+
+
+
+
+                         Proposed                                                                           Proposed
+      0.78               FNW                                                            0.40                FNW                                                      0.5
+      0.60               FSIW                                                                               FSIW
+                         Pre-trained                                                                        Pre-trained
+                                                                                                                                                                     0.4
+      0.58                                                                              0.35
+             0.1   0.1    0.3    0.5   0.5    0.5    0.7    0.9    0.9                          0.1   0.1    0.3    0.5   0.5    0.5    0.7    0.9    0.9                  0.1         0.3          0.5        0.7          0.9
+                                Disturbance                                                                        Disturbance                                                                  Disturbance
+
+Figure 3: The experiment on resistance to disturbation. x axis is the disturbation strength which controls the portion of positive
+samples to be flipped.
+
+
+gap significantly comparing to other methods, and the abso-                                                                     pre-training dataset, so the initial CVR model and the pre-
+lute improvement is larger when the delayed feedback gap                                                                        trained importance weighting models are not disturbed. We
+is larger.                                                                                                                      conducted experiments with different disturbance strength
+                                                                                                                                d, the results are shown in Figure 3. We can see that our
+Influence of Elapsed Time: RQ2                                                                                                  method is more resistant to disturbance comparing to FNW
+To verify the performance of different choices of elapsed                                                                       and FSIW, and the performance gap is larger when distur-
+time, we have conducted experiments using different values                                                                      bance increases (especially on NLL). We give an intuitive
+of c on the Criteo dataset. As shown in Figure 2, the best c                                                                    analysis about the weak robustness of FNW and FSIW in
+on the Criteo dataset is around 15 minutes, where about 35%                                                                     the Supplementary Material‡.
+conversions can be observed. Moreover, larger or smaller
+c will reduce the performance. The performance decreases                                                                        Online Evaluation: RQ4
+slowly on smaller c, which indicates that the bias introduced                                                                   We conducted an A/B test in our online evaluation frame-
+by the importance weighting model is small. The perfor-                                                                         work. We observed a steady performance improvement,
+mance decreases faster on larger c, which indicates that the                                                                    AUC increases by 0.3% within a 7 days window compared
+data freshness matters more when c increase, and a c larger                                                                     with the best baseline, CVR increases by 0.7%, GMV(Gross
+than 1 hour will significantly harm the performance.                                                                            Merchandise Volume) increases by 1.8%, where GMV is
+                                                                                                                                computed by the transaction number of items multiplied by
+Experiment on Robustness: RQ3                                                                                                   the price of each item. The online A/B testing results align
+                                                                                                                                with our offline streaming evaluation and show the effective-
+In delayed feedback setting, the same sample may be la-
+                                                                                                                                ness of ES-DFM in industrial systems.
+beled as negative or positive. It is closely related to learning
+with noisy labels(Natarajan et al. 2013), where some of the
+labels are randomly flipped. We hypothesis that a method                                                                                                              Conclusion
+dealing with delayed feedback problem should not only cor-                                                                      The trade-off between the label accuracy and model fresh-
+rect incorrect labels, but also reduce the negative effect of                                                                   ness in streaming training setting has never been consid-
+the incorrect labels before they can be corrected or the cor-                                                                   ered, which is an active decision of the method rather than
+rection fails (for example, if the weighting model deviate a                                                                    a passive feature in offline setting. In this paper, we propose
+lot, the bias will be large and correction will fail). Thus we                                                                  elapsed-time distribution to balance the label accuracy and
+conducted a robustness experiment. We randomly select d                                                                         model freshness to address the delayed feedback problem
+portion of all the positive samples in streaming dataset, then                                                                  in the streaming CVR prediction. We optimize the expec-
+swap it’s label(and click time and pay time) with a random                                                                      tation of true conversion distribution via importance sam-
+selected negative one. Note that we do not disturb on the                                                                       pling under the elapsed-time sampling distribution. More-
+over, we propose a rigorous streaming training and testing       Vernade, C.; György, A.; and Mann, T. A. 2020. Non-
+experimental protocol, which aligns with real industrial ap-     Stationary Delayed Bandits with Intermediate Observations.
+plications better. Finally, extensive experiments show the su-   In ICML. PMLR.
+periority of our approach.                                       Yasui, S.; Morishita, G.; Fujita, K.; and Shibata, M. 2020. A
+                                                                 Feedback Shift Correction in Predicting Conversion Rates
+                       References                                under Delayed Feedback. In WWW ’20: The Web Confer-
+Bishop, C. M. 2007. Pattern recognition and machine learn-       ence 2020, 2740–2746. ACM / IW3C2.
+ing. Springer.                                                   Yoshikawa, Y.; and Imai, Y. 2018. A Nonparametric De-
+Cesa-Bianchi, N.; Gentile, C.; and Mansour, Y. 2019. Delay       layed Feedback Model for Conversion Rate Prediction .
+and cooperation in nonstochastic bandits. The Journal of         Zhou, G.; Mou, N.; Fan, Y.; Pi, Q.; Bian, W.; Zhou, C.; Zhu,
+Machine Learning Research 20(1): 613–650.                        X.; and Gai, K. 2019. Deep interest evolution network for
+Chapelle, O. 2014. Modeling delayed feedback in display          click-through rate prediction. In AAAI, volume 33, 5941–
+advertising. In KDD, 1097–1105. ACM.                             5948.
+Chapelle, O.; Manavoglu, E.; and Rosales, R. 2014. Sim-          Zhou, G.; Zhu, X.; Song, C.; Fan, Y.; Zhu, H.; Ma, X.; Yan,
+ple and scalable response prediction for display advertising.    Y.; Jin, J.; Li, H.; and Gai, K. 2018. Deep interest net-
+TIST 5(4): 1–34.                                                 work for click-through rate prediction. In KDD, 1059–1068.
+                                                                 ACM.
+Guo, L.; Yin, H.; Wang, Q.; Chen, T.; Zhou, A.; and Quoc
+Viet Hung, N. 2019. Streaming session-based recommenda-
+tion. In KDD, 1569–1577.
+Ioffe, S.; and Szegedy, C. 2015. Batch Normalization: Ac-
+celerating Deep Network Training by Reducing Internal Co-
+variate Shift. In ICML, 448–456. PMLR.
+John D. Kalbfleisch, R. L. P. 2002. The Statistical Analysis
+of Failure Time Data.
+Joulani, P.; György, A.; and Szepesvári, C. 2013. Online
+Learning under Delayed Feedback. In ICML, 1453–1461.
+JMLR.org.
+Jugovac, M.; Jannach, D.; and Karimi, M. 2018. Stream-
+ingrec: a framework for benchmarking stream-based news
+recommenders. In Recsys, 269–273.
+Kingma, D. P.; and Ba, J. 2015.       Adam: A method for
+stochastic optimization. In ICLR.
+Ktena, S. I.; Tejani, A.; Theis, L.; Myana, P. K.; Dilipkumar,
+D.; Huszár, F.; Yoo, S.; and Shi, W. 2019. Addressing de-
+layed feedback for continuous training with neural networks
+in CTR prediction. In RecSys, 187–195. ACM.
+Lee, K.-c.; Orten, B.; Dasdan, A.; and Li, W. 2012. Esti-
+mating conversion rate in display advertising from past er-
+formance data. In KDD, 768–776.
+Ma, X.; Zhao, L.; Huang, G.; Wang, Z.; Hu, Z.; Zhu, X.;
+and Gai, K. 2018. Entire space multi-task model: An effec-
+tive approach for estimating post-click conversion rate. In
+SIGIR, 1137–1140.
+Mandel, T.; Liu, Y.-E.; Brunskill, E.; and Popovic, Z. 2015.
+The Queue Method: Handling Delay, Heuristics, Prior Data,
+and Evaluation in Bandits. In AAAI, 2849–2856.
+Natarajan, N.; Dhillon, I. S.; Ravikumar, P.; and Tewari, A.
+2013. Learning with Noisy Labels. In NIPS.
+Ni, Y.; Ou, D.; Liu, S.; Li, X.; Ou, W.; Zeng, A.; and Si,
+L. 2018. Perceive Your Users in Depth: Learning Universal
+User Representations from Multiple E-commerce Tasks. In
+KDD, 596–605.
+

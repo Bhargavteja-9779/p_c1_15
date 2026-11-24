@@ -1,0 +1,1665 @@
+Data Mining and Knowledge Discovery (2020) 34:1237–1266
+https://doi.org/10.1007/s10618-019-00654-y
+
+
+
+
+Delayed labelling evaluation for data streams
+
+Maciej Grzenda1          · Heitor Murilo Gomes2,3            · Albert Bifet2,3
+
+Received: 20 November 2018 / Accepted: 5 September 2019 / Published online: 16 November 2019
+© The Author(s) 2019
+
+
+Abstract
+A large portion of the stream mining studies on classification rely on the availability of
+true labels immediately after making predictions. This approach is well exemplified by
+the test-then-train evaluation, where predictions immediately precede true label arrival.
+However, in many real scenarios, labels arrive with non-negligible latency. This raises
+the question of how to evaluate classifiers trained in such circumstances. This question
+is of particular importance when stream mining models are expected to refine their
+predictions between acquiring instance data and receiving its true label. In this work,
+we propose a novel evaluation methodology for data streams when verification latency
+takes place, namely continuous re-evaluation. It is applied to reference data streams
+and it is used to differentiate between stream mining techniques in terms of their
+ability to refine predictions based on newly arriving instances. Our study points out,
+discusses and shows empirically the importance of considering the delay of instance
+labels when evaluating classifiers for data streams.
+
+Keywords Stream mining · Delayed labels · Evaluation procedures · Classification
+
+
+
+
+Responsible editor: Po-Ling Loh, Evimaria Terzi, Antti Ukkonen, and Karsten Borgwardt.
+
+B Maciej Grzenda
+    M.Grzenda@mini.pw.edu.pl
+    Heitor Murilo Gomes
+    heitor.gomes@waikato.ac.nz
+    Albert Bifet
+    albert.bifet@waikato.ac.nz
+
+1   Faculty of Mathematics and Information Science, Warsaw University of Technology, Warsaw,
+    Poland
+2   LTCI, Télécom Paris, IP-Paris, Paris, France
+3   Department of Computer Science, University of Waikato, Hamilton, New Zealand
+
+
+                                                                                           123
+1238                                                                         M. Grzenda et al.
+
+
+1 Introduction
+
+The evaluation of stream mining algorithms in many cases relies on the test-then-train
+or prequential approach (Gama and Rodrigues 2009), i.e., first an unlabelled instance
+is used to generate model prediction; next, the model is provided with the label of the
+instance to trigger possible model updates. This approach, while clear and uniform
+over all stream instances, is not applicable when delayed labels are observed. In this
+case, the time period between using the unlabelled instance data as a model input and
+receiving the true label is non-negligible.
+    Since prequential evaluation does not match all stream mining settings, verification
+latency (Ditzler et al. 2015) and stream mining methods focusing the delayed label
+setting have been investigated (Kuncheva and Sánchez 2008; Masud et al. 2011; Souza
+et al. 2015). Many of these works assume that the prediction for an instance of interest
+is performed when the instance data arrives for the first time. However, in problems
+such as delay prediction in transportation systems an extension of this approach can
+be proposed aiming at iterative re-consideration of predictions already made. As an
+example, when the objective is to predict whether a plane will arrive in time, the pre-
+diction is made at departure time. However, such initial prediction can be refined in
+the period preceding planned arrival based on the most recent situation at the desti-
+nation airport. More formally, the on-line learning model that reflects the knowledge
+of the process arising from the most recent labelled instances may be polled to get a
+new prediction made for the data of the instance of interest. Such extension aiming at
+generating additional predictions can be applied to both classification and regression
+tasks.
+    The objective of such re-evaluation proposed in this study is to verify whether a
+model can improve its prediction for the same instance data when polled for further
+predictions before the true label arrives. The evaluation of such iterative predictions
+provides additional insight into the way different stream mining techniques exploit
+newly arriving labelled instances. We expect that some of the models may respond
+during the entire period with the same predicted class for the same input instance,
+while other models are going to update their predictions, either because they were
+given access to other instances’ labels or in response to concept drift detection. In fact,
+the evaluation process that we propose reveals the varied ability of the techniques to
+refine their predictions under delayed label scenarios. This is achieved through both
+numerical indicators and visual analysis that we outline in this work. A reference
+task that illustrates our approach is the delay prediction performed with airlines data.
+The objective is to investigate the ability of streaming classification models to refine
+their delay prediction after flight departure and before its real arrival. Other model
+evaluation methodologies rely on the first prediction only, while our extension consid-
+ers intermediary predictions. We claim that our approach yields model performance
+assessment better matching use cases where streaming classification models are used,
+i.e., where the evolution of the models is desirable and predictions provided by these
+models may evolve in turn.
+    In summary, the main contributions of this work are the following:
+
+ – We point out the need for a specific evaluation for delayed labelled streams;
+
+123
+Delayed labelling evaluation for data streams                                                   1239
+
+
+ – We propose a novel evaluation method to be applied when verification latency
+   takes place, and provide an open source implementation of it1 that can be used by
+   the community;
+ – We discuss the impact of delayed labels using synthetic and real world data streams
+   of flights’ delays and others;
+ – We present empirical experiments highlighting our evaluation procedures and the
+   traditional test-then-train procedure;
+ – Finally, we discuss possible extensions to this work as well as an experiment with
+   a regression problem.
+
+This work is organized as follows: we present in Sect. 2 relevant related work, and in
+Sect. 3 the problem statement and its motivation. Sect. 4 presents the new methodology
+proposed, and Sect. 5 shows a comprehensive evaluation, which is followed by Sect. 6
+discussing the role of hyper-parameters of the evaluation procedure, alongside con-
+siderations about the computational resources. Sect. 7 presents possible extensions to
+our methodology with special attention on how it can be applied to regression. Finally,
+the conclusions are presented in Sect. 8.
+
+
+2 Related work
+
+There are at least two major aspects to take into account when evaluating data stream
+mining algorithms. The first aspect concerns “how” past predictions will influence
+the current model learning performance estimation. The second aspect must take into
+account “when” the ground truth values will become available for estimating the
+learning performance.
+   The first aspect was thoroughly studied and there are already well established
+methods to provide robust evaluations that consider the time when predictions were
+obtained. These evaluation methods include: periodic holdout, test-then-train, pre-
+quential (Gama and Rodrigues 2009) and cross-validated prequential (Bifet et al.
+2015).
+   Periodic holdout evaluation interleaves training and testing using predefined win-
+dows, such that one window of instances is used for training, the next window for
+testing and so on. Test-then-train evaluation uses each instance first for testing
+and then right after for training. Prequential evaluation is similar to test-then-train
+except that prequential includes a fading factor (or windowed evaluation) (Gama and
+Rodrigues 2009) to ‘forget’ old predictions performance. Finally, in cross-validated
+prequential evaluation models are trained and tested in parallel on different folds of
+data to better estimate its performance.
+   The second aspect, which concerns “when” labels are made available has not yet
+been thoroughly explored. Until recently the majority of works assumed that instances
+appear sequentially in fixed intervals, and that an instance’s ground truth is available
+before the next instance arrives. This problem setting can be identified as the ‘immedi-
+
+1 Available at https://github.com/mgrzenda/ContinuousReEvaluation. The implementation is an extension
+of the Massive Online Analysis (MOA) framework.
+
+
+                                                                                         123
+1240                                                                                M. Grzenda et al.
+
+
+ate labelling setting’ (Gomes et al. 2017), and many algorithms (Domingos and Hulten
+2000; Hulten et al. 2001) were developed focusing this setting.
+   Formally, we can define a data stream as a sequence of tuples S1 , S2 , . . . which
+includes two types of tuples i.e.
+
+                      
+                          {(xk , ?)}     if no true label is available yet
+               Sa =
+                          {(xk , yk )}   when a true label becomes available
+
+
+Furthermore, xk denotes a feature vector xk ∈ R n and yk a discrete class label (Ditzler
+et al. 2015). Under the aforementioned assumption that an instance class label is
+available before the next instance arrives, the stream can be defined as a sequence of
+tuples {(xk , ?)}, {(xk , yk )},{(xk+1 , ?)},{(xk , yk+1 )}, . . .. Since the true class label yk of
+a given instance {(xk , ?)} is available before the next instance feature vector {(xk+1 , ?)}
+arrives, {(xk , yk )} can be used to update the learner performance and its internal model
+without any delay.
+   The existence of non-negligible delay between the instance data generation and the
+labels has been discussed on several works (Kuncheva and Sánchez 2008; Zliobaite
+2010; Abdulsalam et al. 2010; Plasse and Adams 2016; Gomes et al. 2017), which we
+briefly survey below.
+   Abdulsalam et al. (2010) discuss a streaming scenario where class labelling is
+intermittent, such that blocks of labelled instances are interleaved with blocks of
+unlabelled instances. Furthermore, the authors propose an algorithm that combines a
+streaming random forest implementation with several components to adapt to concept
+drifts and cope with multi-class problems. More importantly, the algorithm is designed
+to decide whether the current model can be used for predictions, based on a threshold,
+in situations where the number of labelled records is not sufficient to build or update it.
+   Gomes et al. (2017) present an approach to evaluate the classification performance
+assuming a problem setting where the labels are not readily available. It was identified
+as ‘delayed labelling setting’ and its definition was quite simple: the learner is evaluated
+based on its capacity to correctly predict an instance, which ground truth will only be
+available a fixed number of time units latter. In Gomes et al. (2017), authors show that
+useful information can be obtained when comparing the results for both the immediate
+and the delayed labelling settings, using the same algorithms and datasets.
+   Plasse and Adams (2016) introduce a taxonomy to determine the delay mecha-
+nism and magnitude, present real world applications where delayed labels occur (e.g.
+credit scoring), notation for the delayed setting and how the set of delayed labels can
+be used to pre-update the classifier. However, in Plasse and Adams (2016) no spe-
+cific evaluation procedure was introduced when verification latency occurs. Kuncheva
+and Sánchez (2008) present experiments focusing on different approaches to exploit
+delayed labelled instances using IB2 and IB3, however, the evaluation of the results
+followed the traditional holdout approach (i.e. 90% for training and 10% for testing).
+   Zliobaite (2010) presents an analytical view of the conditions that must be met
+to allow concept drift detection in a delayed labelled setting. Three types of concept
+drifts are analytically studied and two of them also empirically evaluated. Similar to
+
+123
+Delayed labelling evaluation for data streams                                             1241
+
+
+Kuncheva and Sánchez (2008) the experiments focusing on classification performance
+did not further explore the verification latency of the data.
+   In the current work we present a novel evaluation method that assumes labels will be
+presented to the model with verification latency, i.e. delay. The goal is to better estimate
+the learner capability to refine predictions by successively polling it for predictions
+before the true label arrives. This approach degenerates to test-then-train when there
+is no verification latency, but it is different from the delayed evaluation presented in
+Gomes et al. (2017) when delay exists, as in our approach there is no fixed amount of
+time units. Also, in the current work we take into account the intermediary predictions
+(re-evaluation), while in Gomes et al. (2017) only the prediction obtained at the time
+the instance data was first presented was used to update the learner performance.
+
+
+3 Problem statement and justification
+
+As discussed in Sect. 2, many stream classification studies assume that yk is available
+after {(xk , ?)} and immediately before the next unlabelled instance arrives. However,
+when labels are available with some delay, between {(xk , ?)} and {(xk , yk )}, other
+labelled and unlabelled instances may arrive in the stream. Let us use the term time
+to refer to the moment that an instance becomes available in the stream. Without the
+loss of generality, let us assume that time is represented by a numeric timestamp for
+real data streams and by an instance index for synthetic streams for which time notion
+has not been defined. In line with these assumptions, let t(Sa ) denote the time of
+observing instance Sa in the stream. Moreover, t(Sa ) ≤ t(Sb ), a < b. The unlabelled
+instance Sa = {(xk , ?)} appears in the stream before its labelled counterpart {(xk , yk )}.
+                                               t(S )
+Sa can be used to obtain prediction ŷk a from a model h a available at this stage of
+the stream processing. Let t˜(Sa ) denote the time that the label of Sa arrived, and
+Δtk = t˜(Sa ) − t(Sa ), Δtk ≥ 0 the latency for {(xk , yk )} to arrive in the stream. At this
+                                            t(S )
+stage, the loss between prediction ŷk a and yk can be computed.
+    Importantly, the presence of delayed labels means that the stream potentially
+includes sequences Sa = {(xk , ?)}, . . . , Sb = {(x j , y j )}, . . . , Sc = {(xk , yk )}, a <
+b < c. Hence, between an unlabelled instance Sa = {(xk , ?)} and its labelled version
+Sc = {(xk , yk )} other (possibly many) labelled instances {(x j , y j )} arrive. As a conse-
+quence, it is possible that the models differ, i.e., h a = h b = h c . In particular, perhaps
+h a (xk ) = h c (xk ), i.e., the prediction made for the same input data xk changes with time
+as model h a changes and becomes model h c . Such evolving predictions are possible
+when model h changes between the time of generating prediction t(Sa ) and the time
+of obtaining true label t˜(Sa ). Changes in the model are expected especially when con-
+cept drift occurs, i.e., the posterior probability pt (y|x) shifts. However, such changes
+are also expected in stationary conditions, for instance when a tree-based model is
+gradually extended by adding new branches, which refines the tree predictions.
+    Let us illustrate the aforementioned problem setting with the flight delay prediction
+task. Let the objective be to predict flight delay at a destination airport for individual
+flights. Hence, flight features such as planned duration, destination, time of the day or
+weather conditions at departure time can be placed in Sa = {(xk , ?)} to obtain delay
+
+
+                                                                                   123
+1242                                                                                                              M. Grzenda et al.
+
+                                                                   X k departure up to y k arrival
+
+
+                 Input data     …     Xw   Xj       Xl   …    Xk                  …                  Xp       …
+
+
+                   Labels       …     yg        …        yw   …        yl     …       yj             yk       …
+
+                                                                                                          h
+                   Models       …               …             …
+
+
+
+                                                              time
+
+Fig. 1 Illustration of the flight problem. From the time xk is generated up to the time its corresponding
+label yk is available the tree model h changes as new labelled instances (e.g., yl , y j ) are presented to it
+
+                              t(S )
+prediction h a (xk ) = ŷk a . Such prediction is made at the time of planned departure.
+However, during the flight the prediction model is likely to evolve taking into account
+recently observed delays of other flights. Moreover, the predictive features, such as
+weather conditions may change. Hence, requests for new predictions from an evolving
+model h are justified. We also show this example graphically on Fig. 1.
+    The aforementioned changes to model h and possible evolution of instance data
+enable new, and possibly more accurate predictions provided by h in the period pre-
+ceding the arrival of the delayed label. Not only, can initial prediction ŷkt0 be acquired
+at time t0 = t(Sa ), but also a sequence of predictions ŷkt1 , ŷkt2 , . . . ; ti ≤ t˜(Sa ) can
+be considered. Let us use the term continuous re-evaluation to refer to the process of
+obtaining and evaluating such predictions. Moreover, let y̌kt stand for the most recent
+prediction, i.e. the most recent refinement of the initial prediction for {(xk , ?)} available
+at time t.
+    In an ideal case, we expect the model to provide accurate predictions immediately,
+or shortly, after the original instance data x : Sa = {(x, ?)} was used to obtain the
+initial prediction. Obviously, such model would be preferred to a model that provides
+accurate predictions only shortly before true label arrives. In the case of flight data,
+this would mean a preference for the models capable of producing more accurate
+predictions shortly after the flight departure.
+    Therefore, we believe there is a need for both continuous re-evaluation and new
+evaluation procedures taking into account possible multiple requests made to evolving
+models to generate predictions for instance data between the time of knowing the
+instance data and the time of receiving its ground truth. Such evaluation procedures
+should extend existing procedures applied under both immediate and delayed label
+settings. Moreover, they should help differentiate models and techniques in terms of the
+ability of providing accurate response based on (if possible) limited volume of labelled
+instances Sk ; k > a following individual Sa instances, for which no labels have arrived
+yet. Furthermore, such extended evaluation should foster the development of novel
+stream classification techniques by providing additional insight into the process of
+model evolution.
+
+
+
+
+123
+Delayed labelling evaluation for data streams                                                                                                         1243
+
+
+instance 1                                                                    instance 1
+
+
+instance 2                                                                    instance 2
+
+
+instance 3                                                                    instance 3
+
+             0   10   20   30      40     50     60     70    80   90   100                0   10   20   30      40     50     60     70    80   90   100
+                                 label latency [mins]                                                          label latency [mins]
+
+                           b=1    b=2    b=3     b=4    b=5                                              b=1    b=2    b=3     b=4    b=5
+
+
+                                        (a)                                                                           (b)
+Fig. 2 Mapping predictions into bins, B = 5 under fixed (a) and varied (b) label latency
+
+
+
+
+4 New delayed evaluation methodology
+
+The question arises as of how frequently to get new predictions for an instance of
+interest awaiting its true label. Intuitively, we expect the unlabelled instance to be
+used as an input for a prediction model more frequently when: (a) the period between
+getting instance data for the first time and receiving delayed label is long, or (b) multiple
+new labelled instances Sm arrive before the ground truth label yk becomes available.
+This is because numerous Sm instances may cause the evolution of the model h during
+this period. Hence, let us propose continuous re-evaluation to be parameterised with
+the number K of labelled instances {(xi , yi )} that have to appear in the stream between
+                   t      t
+two consecutive ŷk j , ŷk j+1 predictions made for the instance {(xk , ?)}. In other words,
+a new prediction for {(xk , ?)} will be made every K new labelled instances until true
+label yk arrives.
+   The periods of waiting for the labels can be decomposed into subperiods to analyse
+the changes in the performance measures before the labels arrive. In case all labels
+arrive with the same latency, predictions made within same-length subperiods can
+be analysed, as illustrated in Fig. 2a for B = 5 subperiods. In the analysed case of
+Δti = 50 in Fig. 2a, every subperiod would share the same length of ΔtBi = 10 [mins].
+   Let us refer to every subperiod as a bin. Importantly, for some data streams true
+labels arrive with varied latency. Still, bins of varied lengths can be identified in this
+case, as shown in Fig. 2b. Furthermore, performance measures can be calculated for the
+predictions made in each of the periods of individual bins, separately. Hence, by defin-
+ing a number of bins, we can analyse how the values of performance measures change
+between making initial predictions and receiving true labels also in the case of varied
+label latencies. The label latency is always known when the true label arrives. Con-
+sequently, the periods of individual bins can be calculated and performance measures
+for individual bins can be updated, in turn. Before this happens all predictions made
+for the instance have to be buffered. Once the true label arrives, individual buffered
+predictions can be mapped to corresponding bins and the evaluation of performance
+measures for every bin can be made.
+   The proposed continuous re-evaluation algorithm is summarised in Algorithm 1.
+First, the algorithm checks whether an unlabelled instance, or a true label arrived.
+In the former case of an instance awaiting its true label, the instance is placed in a
+buffer L and the first prediction is made for it and placed in bin b = 0. When a true
+label arrives, the prediction immediately preceding model updates is placed in a bin
+B + 1. Next, performance measures are updated based on all the buffered predictions
+
+                                                                                                                                            123
+1244                                                                                         M. Grzenda et al.
+
+
+  Input: S1 , S2 , . . . - data stream, K - the number of labelled instances triggering new prediction, B -
+                                          
+         the number of bins, d (yˆ i , ti ) −→ Y - function converting possibly many predictions
+         made during a certain period into one prediction from the set Y denoting the set of possible
+         values of yk
+  Data: L - list of tuples ({(xk , ?)}, l), where {(xk , ?)} is an instance for which true label has not
+        arrived yet and l is the number of other labelled instanced received since t({(xk , ?)}); P(k) -
+        the list of prediction tuples made for Si = {(xk , ?)}, the list contains tuples (ŷ, t, b), where ŷ
+        denotes prediction, t - the time of generating it and b - the bin it belongs to, respectively, while
+        b = −1 denotes a placeholder bin i.e. a bin containing periodical predictions until true label
+        yk arrives i.e. until these predictions can be shuffled into proper bins b = 1, . . . , B associated
+        with subperiods between t(Si ) and t˜(Sa ) ; E(b), b = 0, . . . , B + 1 - evaluators for individual
+        bins calculating performance measures, e.g. accuracy, h i - the prediction model trained with
+        labelled instances S j ; j = 1, . . . , i − 1, C(i), CL (i) - the number of calculated predictions
+        following initial prediction, after processing i instances for all and labelled instances,
+        respectively
+  begin
+     h 1 = φ; C(0) = 0; CL (i) = 0;
+     for i = 1, . . . do
+         C(i)=C(i-1);
+         /* New unlabelled instance arrived                                                               */
+         if Si = {(xk , ?)} then
+              L.add({(xk , ?)}, l = 0);
+              /* obtain first time prediction, add it to bin b=0 and
+                   publish                                                                                */
+              P(k).add(h i (xk ), t(Si ), b = 0);
+         else
+              /* Si = {(xk , yk )}, i.e. true label arrived                                               */
+              /* obtain test-then-train prediction, add it to bin b = B + 1
+                   and publish                                                                            */
+              P(k).add(h i (xk ), t(Si ), b = B + 1);
+              E(b = 0, . . . , B + 1)=updatePerformanceMeasures(P(k),yk ,t(Si ));
+                                                       
+              CL (i)+ = car d P(k) : P(k).b = −1 ; L.remove(k);
+              for m ∈ L do
+                  if m.l % K = 0 then
+                        /* obtain periodical prediction, add it to
+                             placeholder bin b = −1 and publish                                           */
+                       t(Si )
+                      y̌k       := h i (m.x);
+                                    t(S )
+                   P(m).add( y̌k i , t(Si ), b = −1);
+                   C(i)=C(i)+1;
+               end
+               m.l=m.l+1;
+           end
+           h i+1 =train(h i , {(xk , yk )});
+        end
+     end
+  end
+                            Algorithm 1: Continuous re-evaluation
+
+
+
+
+123
+Delayed labelling evaluation for data streams                                        1245
+
+
+made for the instance. Furthermore, for every other instance m ∈ L still awaiting
+its true label, the number of other labelled instances received since t(m) is checked.
+Every K labelled instances a new prediction is made by the most recent model. In
+this way possible updates to the model can be reflected in refined predictions, which
+are immediately published and can be used in scenarios such as on-line monitoring
+of industrial processes. Such periodic predictions are all placed in a placeholder bin
+(b = −1) to be shuffled into proper bins once true label latency and bin length is
+known. Last, but not least the model h i is updated.
+    The way performance measures are updated is particularly important. This is
+achieved by updatePerformanceMeasures method, and takes as an input all
+prediction tuples P(k) obtained for the instance of interest, the true label yk and the
+time this true label arrived t(Si ). The way performance measures can be calculated
+based on prediction tuples is proposed below.
+
+4.1 Performance indicators
+
+Let us propose binned performance to be defined as an average performance of the
+models available in bth bin between attaining instance data and receiving its true label,
+where b = 0, . . . , B + 1 stands for bin index. We propose that every labelled instance
+contributes to binned performance with the same weight. The primary objective for
+binned performance is to enable visualization of performance evolution under evolving
+predictions. The performance can be defined through various indicators, including,
+but not limited to accuracy and kappa statistic. The first bin, denoted by b = 0 stands
+for the model performance observed at the time the instance data becomes available
+for the first time. The last bin, denoted by b = B + 1 stands for test-then-train
+performance. All the remaining bins are used to aggregate performance indicators of
+evolving predictions for individual subperiods of the periods between t(Si ) and t˜(Si ).
+The way such aggregation is performed for individual instances and the entire data
+stream is what we propose below.
+   Once true label becomes available, individual predictions can be linked to the appro-
+priate bins. Let us observe that for 1 ≤ b ≤ B, the sequence of predictions U (Si , b)
+available for instance Si = {(xk , ?)} and period b includes all predictions for the
+period of this bin. More precisely this means the prediction available at the beginning
+of bin period, predictions made during this period and the prediction available at the
+end of it. Formal definition of U (Si , b) is provided in “Appendix 1”.
+   In the case of flight data, these predictions would contain possibly changing pre-
+dicted flight status displayed at the beginning of and during bin period. Hence, the set
+of predictions made for Si and linked to bin b is as follows:
+                        ⎧
+                        ⎪
+                        ⎨{(yi , ti ) ∈ P(k) : bi = 0}        b=0
+             R(Si , b) = {(yi , ti ) ∈ U (Si , b)}           b ∈ {1, . . . , B}
+                        ⎪
+                        ⎩
+                          {(yi , ti ) ∈ P(k) : bi = B + 1}   b = B+1
+
+It follows from Algorithm 1 that R(Si , b) contains exactly one element for b ∈ {0, B +
+1} i.e. first time prediction and test-then-train prediction, respectively. In the case of
+
+                                                                                  123
+1246                                                                              M. Grzenda et al.
+
+
+periodic predictions, i.e., b ∈ {1, . . . , B}, car d(R(Si , b)) > 1. The question arises
+how to calculate performance indicators for individual bins, when it is possible that
+multiple, possibly different predictions exist for one bin period and one instance. We
+propose to handle such possibly diverse predictions in the same way the output of
+probabilistic classifier, taking the form of a vector of probabilities, is mapped to a
+single predicted class. Hence, we propose to determine a single averaged prediction
+d(U (Si , b)). The way the averaged prediction is selected is defined by d() function,
+which is a parameter of Algorithm 1. In the case of classification, we propose to use
+a function selecting dominating prediction i.e. the prediction displayed during the
+largest part of the bin period as an averaged prediction. Such prediction is defined as
+                                            car d(U (Si ,b))
+follows: dD (U (Si , b)) = arg maxc j=2                      (t j − t j−1 ) : y j−1 = c. In other
+words, we propose to determine the prediction that was announced for the longest
+period of time during bin subperiod, i.e. the prediction with the highest probability.
+In the case of airlines use case, the prediction would be the predicted delay status that
+was displayed during the longest total period of time during bin period. It is worth
+noting here that frequently multiple identical predictions contained in R(Si , b) will
+be replaced with a single one.
+    Hence, for every instance and bin combination, one predicted label ŷk is used to
+calculate performance measures. For every bin b ∈ {0, . . . , B + 1}, V (Si , b) denotes
+the pair {(yk , ŷk )} of true label and predicted label used to calculate performance
+measures. In the case of bins b ∈ {0, B + 1} a predicted label ŷk is the first time and
+test-then-train prediction for Si instance, respectively. In the case of remaining bins
+i.e. the bins representing periodic predictions, the predicted label ŷk , which is used to
+calculate performance measures is the averaged prediction for Si instance in b − th
+subperiod. Formal definition of V (Si , b) is provided in “Appendix 1”.
+    Furthermore, let us also propose aggregate loss function λ over a single bin b to be
+applied to a sequence of tuples V (Si , b), . . . V (S j , b), . . . gradually produced for indi-
+vidual labelled instances. In particular, ∀i, j t˜(Si ) ≤ t˜(S j ). Moreover, every labelled
+instance contributes to performance evaluation of every bin. Since performance eval-
+uation is not affected by varied number of predictions in bth sub-period for individual
+instances, performance evolution is due to changes in the models, not due to the varied
+sets of instances and their predictions used to calculate performance for different bins.
+Furthermore, for B = 0, the formula resolves to performance assessment taking into
+account only predictions made at the time of receiving unlabelled instance data for
+the first time (b=0) and at the time preceding receiving true label (b = B + 1).
+    Finally, let us propose
+                             aggregate loss function to be defined as a function of bin
+index: Λ(T , b) = λ V (Si , b), . . . , V (S j , b), . . . : Si , S j ∈ Ω(T ) , where Ω(T )
+denotes a sequence of all labelled instances {(xk , yk )} that arrived until time T , i.e.
+t({(xk , yk )}) ≤ T , and b ∈ {0, . . . , B + 1}. The function provides numerical assess-
+ment of the performance of evolving classification models as a function of discretised
+proportion of time that elapsed between getting instance data and receiving their true
+labels.
+    It is important to note that every V (Si , b) takes the form of one pair {(yk , ŷk )}.
+Hence, for every bin index, performance assessment performed by Λ(T , b) is based
+on the same sequence of true labels yk matched with ŷk predicted labels, which depend
+
+
+123
+Delayed labelling evaluation for data streams                                           1247
+
+
+on b value. The predicted labels ŷk are: first time predictions (for b = 0), averaged
+predictions (for b ∈ {1, . . . , B} i.e. for individual subperiods between first time predic-
+tion and true label arrival); and test-than-train predictions (for b = B + 1). Hence, this
+approach is uniform for all these three cases. In particular, Λ(T , 0) provides aggregate
+loss value for the first time predictions, Λ(T , B + 1) yields performance assessment
+calculated for test-then-train mode, and Λ(T , b), b ∈ {0, . . . , B} provides aggregate
+loss value for the predictions available in individual subperiods of the periods preced-
+ing true label arrivals. Hence, the aggregate loss function Λ(T , b) can be considered
+the generalisation of previously existing performance indicators used for delayed label
+setting.
+    To calculate Λ(T , b), different loss functions can be applied. Without loss of gen-
+erality, a zero-one loss function where the cost of misclassification ξ(ya , yˆa ) = 0 if
+yˆa = ya and 1 otherwise will be used throughout the rest of this study. In this case,
+                 Si ∈Ω(T ) ξ(yk , ŷk ):(yk , ŷk )=V (Si ,b)
+Λ(T , b) =                   car d(Ω(T ))                       .
+
+
+5 Experimental analysis
+
+In order to analyse the proposed performance indicators, we have used three synthetic
+and three real streaming datasets. Furthermore, we have selected stream classifica-
+tion methods illustrating both methods developed to address unique requirements of
+stream mining, and methods successfully adapted to stream processing needs. The
+first group of stream classification methods featured in the experiments was Hoeffd-
+ing tree (HT) (Domingos and Hulten 2000), Hoeffding Adaptive Tree (HAT) (Bifet
+and Gavaldà 2009), and recently proposed Adaptive Random Forest (ARF) (Gomes
+et al. 2017). Other methods included k Nearest Neighbours (kNN) and Naive Bayes
+(NB). Finally, the baseline models No Change (NC) and Majority Class (MC) were
+also used. Hence, methods typically used for comparison purposes in stream mining
+studies and representing different groups of classification methods i.e., tree models,
+distance-based models and probabilistic models, but also model ensembles were used
+to analyse the proposed performance indicators.
+    HT is a traditional stream classification algorithm based on the Hoeffding Bound.
+HT serves as the base for many stream classifiers, and ensemble methods, as it defines
+how to grow trees incrementally. HAT is an extension of HT in which the drift detec-
+tion algorithm ADaptive WINdow (ADWIN) (Bifet and Gavaldà 2007) is used for
+signalling changes, which triggers updates to the tree model. Adaptive Random Forest
+is an adaptation of the original Random Forest (Breiman 2001) algorithm to stream-
+ing data with the addition of drift detectors and a weighting function based on models
+prediction performance. NB is based on the Bayes’ theorem and it is called ‘naive’ as
+it assumes independence of the features. NB is straightforward to train incrementally
+since it does not add structure to the model. kNN is the classic lazy learning approach
+adapted to stream mining via a windowing approach, i.e. only the latest instances
+(stored in the window) are used for predictions. NC always predicts the next label
+as the latest ground-truth it had access to. This baseline model outperforms many
+classifiers when the data stream exhibit temporal dependencies (Zliobaite et al. 2015).
+
+
+                                                                                  123
+1248                                                                         M. Grzenda et al.
+
+
+Finally, the MC baseline simply predicts the majority class. In our experiments, the
+algorithms that are most likely to adapt faster are HAT and ARF, since both include
+strategies for detecting and adapting to concept drifts.
+   We briefly discuss each dataset below and present the results, per dataset, in the
+following subsections.
+
+5.1 Reference data
+
+Hyperplane We start with a synthetic generator often used to assess classification
+algorithms (Gomes et al. 2017; Masud et al. 2011) simulating incremental concept
+drifts. This generator is based on the hyperplane generator (Hulten et al. 2001). A
+hyperplane is a flat, n − 1 dimensional subset of that space that divides it into two
+disconnected parts. It is possible to change a hyperplane orientation and position by
+slightly changing its relative size of the weights wi . This generator can be used to
+simulate time-changing concepts, by varying the values of its weights as the stream
+progresses. Formally, a hyperplane in a n-dimensional space is the set of points x that
+satisfy Eq. 1 where xi is the ith coordinate of x.
+
+                                      n
+                                           wi xi = w0                                     (1)
+                                     i=1
+
+
+                                               n
+In binary classification, instances where i=1      wi xi ≥ w0 are labelled positive, and
+                         n
+instances for which i=1 wi xi < w0 are labelled negative. This generator can be
+used to simulate incremental concept drifts, by varying the values of its weights as the
+stream progresses (Bifet et al. 2011b).
+   The Hyperplane data represents the case of streams missing the notion of time.
+Therefore, first the time of every instance is set to instance index in this dataset. Next,
+labels from original instances Sa are removed and labelled instances Sb are added at
+t(Sb ) = t(Sa ) + 100. Hence, for this data stream we set the latency of true label to
+a fixed value. As a consequence the stream includes pairs Sa = {(xk , ?)}, . . . , Sb =
+{(xk , yk )}.
+LED The LED data set simulates both abrupt and gradual drifts based on the LED
+generator, early introduced in Breiman (2017). This generator yields instances with
+24 boolean features, 17 of which are irrelevant. The remaining 7 features corresponds
+to each segment of a seven-segment LED display. The goal is to predict the digit
+displayed on the LED display, where each feature has a 10% chance of being inverted.
+To simulate drifts in this data set the relevant features are swapped with irrelevant
+features. Concretely, we parametrize 3 abrupt drifts each with an amplitude of 3.75k
+up to 7.5k instances and centered at the 3.75 k, 7.5 k and 15 k instance, respectively.
+The first drift swaps 3 features, the second drift swaps 5 features, and the last one 7
+features. Furthermore, the delay for LED was set to 1000 instances.
+Agrawal The synthetic generator introduced in Agrawal et al. (1993), often referred to
+as AGRAWAL, produces data streams with six nominal and three continuous attributes.
+As commented in Bifet et al. (2011a), the synthetic data describes hypothetical loan
+
+123
+Delayed labelling evaluation for data streams                                         1249
+
+
+applications. There are ten different functions2 that map instances into two different
+classes. It is possible to simulate concept drift by changing the function. For example,
+the first function assign instances to class A according to age: age < 40 ∨ age ≤ 65;
+while the seventh function uses the salary, commission and loan attributes to assign
+instances to class A: (0.67 × (salar y + commission) − 0.2 × loan − 20000) > 0.
+A perturbation factor is used to add noise to the data. This factor changes the original
+value of an attribute by adding a deviation value to it, which is defined according to
+a uniform random distribution. In our experiments with AGRAWAL, we simulate 4
+gradual concept drifts. The size of the window of change for each drift was set to 400;
+the amount of instances per concept was set to 2000; the functions (concepts) vary
+from 1 to 5; the total amount of instances was set to 10, 000; and the delay was fixed
+to 1000.
+Airlines The airlines dataset comes from Data Expo 093 and contains flight depar-
+ture and arrival records for all commercial flights within the USA. A part of this
+dataset constrained to flights arriving to Atlanta International Airport (ATL) has been
+used. Only departure and arrival events for flights not cancelled and not diverted were
+included in our analysis. The objective is to predict whether a flight will arrive to
+ATL before time, on time or delayed based on instance data describing the flight and
+including features such as distance, planned departure and arrival time, origin airport
+and carrier. We assume that the instance data becomes available at planned depar-
+ture time. Moreover, delayed label becomes available at true arrival time. Hence, the
+time between obtaining the instance data t(Si ) and the time of receiving its true label
+t˜(Si ) = t(Si ) + Δti is the time between planned departure and true arrival. Not sur-
+prisingly, the latency individual labels arrive with strongly varies. Approximately two
+hours being the most frequent value, but some Δti values exceeding 13 hours. Before
+true label of an instance arrives evolving predictions for the instance are expected to
+be made. We expect temporal dependencies to occur in the data.
+Electricity The Electricity dataset, made available by J. Gama4 , contains class labels
+annotating energy price changes (UP or DOWN). Further details on Electricity data can
+be found inter alia in Bifet et al. (2013). Based on the raw Electricity data, we develop
+a stream of instances reflecting frequent practice in power systems of performing 24-
+hour-ahead prediction (Kuo et al. 2014; Srinivasan et al. 1995). More precisely, we
+create out of the raw instances including features such as energy prices and demand,
+a stream of instances each containing these features for 24 time periods of day d. The
+objective is to predict the price change (UP or DOWN) during ith period of day d + 2
+i.e. at least 24 hours ahead. Hence, we assume that after the midnight starting day
+d + 1, all instances containing day d data become available. Next, the true label which
+arrives on the day d + 2 after i × 30 minutes contains actual price change observed on
+the d + 2 day in the [(i − 1) × 30, i × 30] period, i = 1, . . . , 48. Therefore, the delay
+that every true label arrives with varies approximately between one and two days.
+Forest cover type The forest cover type dataset (Blackard and Dean 1999) contains
+581, 383 instances each of them representing one of 7 different forest cover types. The
+
+2 See Bifet et al. (2011a) for the complete list of functions.
+3 http://stat-computing.org/dataexpo/2009/.
+4 http://www.inescporto.pt/~jgama/ales/ales_5.html.
+
+
+
+                                                                                123
+1250                                                                              M. Grzenda et al.
+
+
+                90
+                                                                                             NB
+ Accuracy [%]
+
+                80                                                                           NC
+                                                                                             MC
+                70                                                                           kNN
+                60                                                                           HT
+                                                                                             HAT
+                50                                                                           ARF
+
+                     0   5   10   15     20      25      30        35   40   45    51
+                                       Delayed label bin index
+
+Fig. 3 Prediction accuracy for individual bins (hyperplane data)
+
+
+
+cover types are 30×30-meter cells obtained from the US Resource Information System
+(RIS), which are represented by 10 numeric and 44 binary features. This dataset does
+not contain a “natural” delay, therefore we simulated the delay using 1000 instances.
+
+5.2 Experimental results
+
+The primary objective of this section is to investigate the insights provided by the
+evaluation measures proposed in this study. All experiments were performed in the
+Massive Online Analysis (MOA) framework (Bifet et al. 2011b). For each dataset, the
+results were produced by running Algorithm 1 varying the learning algorithm. Table 1
+provides an overview of the results and characteristics of the datasets, including the
+number of labelled instances |Ω(T )| after which binned performance is reported. In
+all experiments, K = 10 was used to ensure a balance between the computational
+cost of polling models for refined predictions and additional insight arising from
+these predictions. Furthermore, B = 50 was applied to divide the periods between
+receiving individual unlabelled instances and their delayed labels into 50 sub-periods
+and produce smooth performance trends. How K and B values can be set, and their
+impact on computational cost and binned performance visualization will be discussed
+in Sect. 6.
+
+
+5.2.1 Hyperplane data
+
+Figure 3 depicts the binned accuracy ΛP (T , b) for hyperplane data. It is worth noting
+that Fig. 3 shows the results of the evaluation performed in the initial stage of stream
+processing when the scale of concept drift is relatively large. Furthermore, ΛP (T , b)
+values for individual bins are provided in Table 1.
+   It follows from Fig. 3 and Table 1 that the most accurate initial predictions are
+provided by NB, HT, HAT, and ARF. However, the accuracy of additional predictions
+made periodically by NB, HT, HAT, kNN and ARF while waiting for the true label
+grows over time, while the baseline models NC and MC maintain more stable results.
+This improvement in accuracy is due to exploiting new labelled instances that reflect
+incremental concept drift and provide a basis to move the decision border. The question
+arises whether such almost linear accuracy improvement from ΛP (T , 0), i.e., initial
+
+123
+Delayed labelling evaluation for data streams                                                     1251
+
+
+Table 1 Performance evaluation for different bins
+Data |Ω(T )|×dim(xi )       ΛP (T , b)     NB       NC       MC           kNN     HT      HAT     ARF
+
+Hyperplane 250 x 2          b=0            75.60    49.60    52.40        73.20   75.60   75.20   72.80
+                            b=45           90.80    51.20    48.00        89.60   88.00   89.20   90.00
+                            b=B + 1        92.40    46.40    46.80        92.80   91.60   91.20   92.40
+Airlines 6227 x 10          b=0            47.53    39.68    48.45        44.66   45.59   45.25   47.47
+                            b=45           48.92    40.13    48.48        47.63   47.13   46.76   48.34
+                            b=B + 1        49.24    42.52    48.58        50.33   47.34   46.92   48.76
+Electricity 44204 x 149     b=0            53.44    49.78    57.51        64.36   56.93   59.54   57.00
+                            b=45           53.33    55.33    57.51        59.68   56.13   59.37   54.42
+                            b=B + 1        54.34    85.37    57.56        71.58   61.59   64.99   68.27
+Cover type 24500 x 54       b=0            61.09    34.20    31.16        52.75   53.37   53.51   51.12
+                            b=45           68.36    43.28    38.13        71.02   65.38   67.24   69.42
+                            b=B + 1        70.92    70.51    39.62        79.94   70.85   73.09   80.87
+Agrawal 10000 x 9           b=0            56.47    53.18    50.11        54.39   56.80   56.07   53.29
+                            b=45           60.51    51.28    52.11        59.55   64.60   65.36   57.79
+                            b=B + 1        61.07    51.95    52.37        60.35   66.42   66.64   58.04
+LED 20000 x 24              b=0            53.74    9.75     10.58        56.66   59.56   59.13   56.17
+                            b=45           58.89    10.59    10.66        61.77   65.53   65.35   61.59
+                            b=B + 1        59.61    9.45     10.65        62.10   66.27   65.98   62.13
+Results for the best method for each bin and data set are shown in bold
+
+
+
+prediction accuracy to test-the-train accuracy ΛP (T , B + 1) takes place also for other
+data sets.
+
+
+
+5.2.2 Airlines data
+
+The Airlines dataset depicts a realistic scenario where the labels are presented with
+varied label latency, thus before discussing the results we elucidate the implications
+of such configuration. As a consequence of major differences among Δti values,
+the set of instances still waiting for their delayed labels after Δt is Δt-dependent.
+Hence, it remains impossible to analyse the accuracy of individual stream classification
+techniques over all instances as a function of time that elapsed since t(Si ). In the
+analysed case, time-based aggregate accuracy could be developed only for the period
+of 19 mins, when all instances are awaiting their true labels. Once the analysis is
+extended beyond this point, the set of instances over which any aggregate performance
+indicators would need to be calculated would vary for individual points on time axis. As
+a consequence, the aggregate performance changes could be caused by the changes in
+instance set. As an example, class distribution can be different for instances with major
+label latencies compared to short latency instances. Hence, under major differences
+of label latency times, the accuracy defined as a function of Δt can be misleading.
+The accuracy trends observed in such cases may be caused by the changes in {Si :
+
+                                                                                            123
+1252                                                                              M. Grzenda et al.
+
+
+Δti > Δt} rather than the ability of stream classification method to model the process
+of interest.
+   Therefore, let us analyse binned accuracy ΛP (T , b) for the airlines data set. Unlike
+in time-based accuracy, in binned accuracy, the predictions made for all instances
+contribute to every point in the accuracy trend plot. Figure 4 depicts binned accuracy
+ΛP (T , b) for the data set and a selection of stream classification methods previously
+analysed in the case of hyperplane data.
+   Bin 51 is reserved for the prediction made in test-then-train mode, i.e., immediately
+before getting the true label. It follows from the figure that kNN, followed by NB and
+ARF, provide the highest accuracy then. However, in the context of flight delays, the
+closer to the label arrival the less relevant the prediction is, i.e., if we accurately predict
+that a flight will be delayed minutes before it lands it is less relevant than a model with
+an average performance at the time the flight departs.
+   It can be observed that kNN, HT and HAT algorithms offer similar accuracy of
+predictions made when instance data becomes available, i.e., for b=0. However, when
+predictions preceding arrival of a true label are made, they can take into account most
+recent labels of other instances. Moreover, some algorithms, such as kNN, which
+operates on a sliding window of recent instances can exploit temporal dependencies
+in the data (Zliobaite et al. 2015). In the case of airlines data, this means that some
+techniques may identify periods of major delays and tune models to predict delays
+more accurately. In particular, NB, kNN, and ARF, clearly benefit from the evolution
+of the models based on most recent data. This is unlike MC, which yields the same
+accuracy irrespective of whether prediction is made at the time of departure or shortly
+before receiving true label. At the same time, Fig. 4 extends the comparison of test-
+then-train accuracy by showing that HT, kNN and NB largely differ in their ability to
+provide accuracy gains in the period between getting instance data and receiving its
+true label.
+
+5.2.3 Electricity data
+
+Let us investigate the results of similar analysis for Electricity data. Figure 5 shows the
+accuracy ΛP (T , b) of the same set of methods on the electricity instances, described
+above. Test-then-train results show that NC classifier yields largest accuracy, which
+shows major temporal dependence in the data successfully exploited by NC which
+simply predicts the next label to be the same as the last true label received. However,
+
+
+                50.0
+                                                                                             NB
+ Accuracy [%]
+
+
+
+
+                47.5                                                                         NC
+                                                                                             MC
+                45.0
+                                                                                             kNN
+                42.5                                                                         HT
+                                                                                             HAT
+                40.0
+                                                                                             ARF
+
+                       0   5   10   15     20      25      30      35   40   45    51
+                                         Delayed label bin index
+
+Fig. 4 Prediction accuracy for individual bins (airlines data)
+
+123
+Delayed labelling evaluation for data streams                                           1253
+
+
+
+                80                                                                      NB
+ Accuracy [%]
+
+                                                                                        NC
+                70                                                                      MC
+                                                                                        kNN
+                60                                                                      HT
+                                                                                        HAT
+                50                                                                      ARF
+
+                     0   5   10   15      20      25       30       35   40   45   51
+                                       Delayed label bin index
+
+Fig. 5 Prediction accuracy for individual bins (electricity data)
+
+
+
+once the prediction under delayed label setting is an objective, it should be performed
+within the period preceding true label arrival, not immediately before receiving it. The
+binned accuracy trends shown in Fig. 5 reveal that it is kNN method that for b = 0
+yields superior accuracy i.e. the accuracy higher than in the case of the remaining
+methods. However, when predictions made in the periods [t(Si ), t˜(Si )] are considered,
+kNN accuracy varies. In particular, it is lower than the accuracy of HAT during some
+bins. This is caused by periodical changes in the electricity data that reflect time of the
+day and week. Hence, a sliding window of recent instances that kNN relies on, may
+contain instances reflecting similar conditions as the conditions for which prediction is
+performed or not. Continuous re-evaluation answers the question whether additional
+labelled data can be used by the learner to improve on its initial predictions or not.
+kNN is an example of a technique that can both benefit from newer labelled instances
+for some stream mining tasks (hyperplane data) or not (electricity data at some bins)
+depending on to what extent these instances contribute to valid reasoning for the
+instance of interest.
+    Finally, let us investigate which of the methods yields highest accuracy models. It
+follows from Table 1 that the accuracy of the models and which of them offers the
+best performance largely varies. Importantly, the best model in terms of its ability
+to correctly predict the value of the feature of interest at the first time of receiving
+it (b = 0) is not the same as the one consuming additional data possibly reflecting
+concept drift and applied at b = B + 1 = 51. Interestingly, it is the value of binned
+accuracy in the intermediate period, here shown for b = 45 that reveals whether a
+modelling technique provides improved prediction capabilities within non-negligibly
+long period before true label becomes available or not.
+    Figure 6 presents the prediction accuracy throughout the execution for b = 0,
+b = 25, b = 45 and b = 51, in particular, this plot serves the purpose of observing
+some of the results depicted in Fig. 5 over time for kNN and HAT. We can observe
+in Fig. 6 that the accuracy of both algorithms is at its best when observing them at
+b = 51.
+
+5.2.4 Forest cover type data
+
+Figure 7 presents the results of the continuous evaluation for forest cover type. At time
+of the instance data generation, the most accurate model is NB, which is an interesting
+
+                                                                                    123
+1254                                                                                      M. Grzenda et al.
+
+
+                                                                                                b=0: kNN
+                70
+                                                                                                b=25: kNN
+ Accuracy [%]
+
+
+                                                                                                b=45: kNN
+                65
+                                                                                                b=51: kNN
+                60                                                                              b=0: HAT
+                                                                                                b=25: HAT
+                55                                                                              b=45: HAT
+                                                                                                b=51: HAT
+                         0       10000          20000         30000          40000
+                                              Labelled instances
+
+Fig. 6 Prediction accuracy at different stages of stream processing (electricity data)
+
+                80
+                                                                                                     NB
+ Accuracy [%]
+
+
+
+
+                70                                                                                   NC
+                60                                                                                   MC
+                                                                                                     kNN
+                50
+                                                                                                     HT
+                40                                                                                   HAT
+                                                                                                     ARF
+                30
+                     0       5   10      15      20     25     30       35   40      45    51
+                                              Delayed label bin index
+
+Fig. 7 Prediction accuracy for individual bins (forest cover type data)
+
+
+result, especially as we observe that the more complex models, such as HAT and
+ARF, can only outperform NB once we start considering the performance closer to
+bin 40. In other words, these results indicate that a simple NB model would be the
+most appropriate model if we are only interested in the quality of the first prediction.
+Furthermore, ARF and kNN only obtain reasonably good results for b = B + 1, i.e.,
+their accuracies rose as the bin index increase. In ARF, this might be due to how
+the algorithm relies on having access to labelled instances immediately as its feature
+drift detection method is most useful when the feedback (true labels) is immediately
+available.
+
+5.2.5 LED data
+
+In Fig. 8 we can observe how the synthetic stream LED combined with latency make
+the evolution of the models reasonably simple. Besides the baselines NC and MC,
+every model shows an increase in accuracy as we focus the evaluation closer to bin
+b = B +1. This evolution is not trivial in other synthetic streams, such as AGRAWAL.
+It is interesting to observe how continuous assessment reveal this ‘simple’ evolution
+characteristic in LED, something that would not be observable just evaluating at the
+first prediction and test-then-train.
+
+5.2.6 Agrawal data
+
+Figure 9 shows how accuracy changes under periodic re-evaluation for Agrawal data
+stream for which labels arrive with fixed latency of 500 instances. It can be observed
+
+123
+Delayed labelling evaluation for data streams                                        1255
+
+
+                60                                                                   NB
+ Accuracy [%]
+
+                50                                                                   NC
+                                                                                     MC
+                40
+                                                                                     kNN
+                30                                                                   HT
+                20                                                                   HAT
+                10                                                                   ARF
+
+                     0   5   10   15      20     25     30       35   40   45   51
+                                       Delayed label bin index
+
+Fig. 8 Prediction accuracy for individual bins (LED data)
+
+
+                65                                                                   NB
+ Accuracy [%]
+
+
+
+
+                                                                                     NC
+                60                                                                   MC
+                                                                                     kNN
+                55                                                                   HT
+                                                                                     HAT
+                50                                                                   ARF
+
+                     0   5   10   15      20    25      30       35   40   45   51
+                                       Delayed label bin index
+
+Fig. 9 Prediction accuracy for individual bins (Agrawal data)
+
+
+
+that additional predictions made before true label arrives provide substantially increas-
+ing accuracy. This is in spite of the complexity of the stream. Hence, additional
+predictions can yield performance gains even under complicated streaming scenar-
+ios, involving multiple concept drift periods. In particular, ΛP (T , 45) provided by HT
+and HAT shows that the predictions available in the period preceding the arrival of
+true labels are significantly more accurate than the best initial predictions. While the
+use of continuous re-evaluation is not limited to improving initial predictions, it may
+yield benefits also of this category even for complex concept drifting streams.
+   In Fig. 10 we can observe how HAT obtains the best performance in comparison to
+itself and kNN when we the predictions taken into account are those closer the arrival of
+the true class label (i.e., b = 45 and b = 51). However, we can also observe that kNN
+starts improving in comparison to itself, e.g., in b = 45, while HAT only decreases in
+accuracy after the first drift around instance 2000. This shows how complex accuracy
+evolution for concept drifting data streams can be.
+
+
+5.2.7 Discussion
+
+In summary, in these experiments we observe two main aspects of continuous re-
+evaluation. First, by evaluating intermediary predictions between the time of instance
+being presented and its label arrival we can better observe the model classification
+performance in these intermediary stages. Consistently, b = B + 1 (i.e. evaluating
+only the latest prediction before the label arrivals) depicts optimistic accuracy results
+comparing the same learner across b = 0 and b = 45 in all experiments, conversely
+
+                                                                                 123
+1256                                                                                   M. Grzenda et al.
+
+
+                                                                                            b=0: kNN
+                80                                                                          b=25: kNN
+ Accuracy [%]
+
+
+                                                                                            b=45: kNN
+                70                                                                          b=51: kNN
+                                                                                            b=0: HAT
+                                                                                            b=25: HAT
+                60
+                                                                                            b=45: HAT
+                                                                                            b=51: HAT
+                     0    2500              5000              7500             10000
+                                     Labelled instances
+
+Fig. 10 Prediction accuracy at different stages of stream processing (Agrawal data)
+
+
+
+b = 0 (i.e. evaluating only with the first prediction made) can be too pessimistic.
+The intermediary analysis given by b = 45 gives a clearer view of how the models
+perform when pooled several times for predictions. Second, the experiments confirm
+that additional predictions made with newer models may gradually provide higher
+accuracy than initial predictions. However, the newer model may also turn out to be
+less appropriate than the one existing at the time of initial predictions, which is shown
+in the electricity case. Both airlines and electricity data sets show that no linear trend
+in accuracy change between initial b = 0 and test-then-train b = B + 1 predictions
+can be assumed. This shows that periodic predictions and their continuous evaluation,
+i.e. both components of continuous re-evaluation are needed. In this way, the method
+providing potential accuracy improvement can be determined.
+    It is also interesting to note that a method operating with a sliding window i.e. kNN
+typically provides higher accuracy shortly before true label arrives e.g. at b = 45
+subperiod than at the time of making first prediction. However, Electricity data shows
+that in case major changes such as periodic changes occur in the data, the accuracy
+at b = 45 can also be substantially lower than at the time of first time prediction. In
+other words, the content of instance buffer, which kNN relies on, may be less suitable
+to derive true classification border e.g. at bin b = 45 i.e. shortly before true label
+arrival than the content of the instance buffer available at the time of first prediction.
+This shows that attempts to predict which group of stream mining methods is likely
+to provide better predictions at different times between first time prediction and true
+label arrival can be successful to some extent only.
+    These results show that additional insight into the way newer labelled instances
+influence a model is provided. This may suggest adaptive techniques of selecting
+instances for instance-based classifiers, going beyond sliding window technique,
+which directly follows from the experiments with electricity data. In this way, con-
+tinuous re-evaluation can be used to guide the development or tuning of classification
+methods. Hence, also under scenarios where only initial predictions are used to trigger
+immediate actions, e.g. to block suspicious network connections in intrusion detection
+systems, the methods we propose can be used.
+    Furthermore, experiments with hyperplane data show potential accuracy improve-
+ments, which occur in spite of limited number of labelled instances causing model
+updates. This shows that continuous re-evaluation can be used to reveal for which
+industrial use cases, initial predictions of events of interest, such as device failures,
+
+123
+Delayed labelling evaluation for data streams                                         1257
+
+
+can be refined based on newly arriving labelled data. This includes the scenarios when
+machine learning is used to predict whether a device will fail during the next main-
+tenance period. More precisely, during this period, as defined in Algorithm 1 new
+predictions are periodically published, which may change these previously made for a
+device of interest. These new predictions can be based on the knowledge arising from
+newly available labelled instances including failures of other devices in this period.
+Since in some industrial settings labelled data is very limited, the ability to exploit the
+benefits of on-line learning by updating first predictions with more accurate predictions
+based on newly available labelled data is of particular interest.
+   Let us note that as defined in Sect. 3 we assume that we rely on the processing on
+time feature, which is represented by a numeric timestamp (for real data streams) or by
+an instance index (for synthetic streams). In particular, bin periods are calculated based
+on the proportion of time between receiving instance data and receiving its true label.
+Hence, continuous re-evaluation can be used for data streams, including synthetic
+data streams, but also for time series data. In the latter case, any time series data
+that among its features include a timestamp and instance identifier can be used with
+continuous re-evaluation. Importantly, assigning timestamps and unique identifiers is
+a recommended industry practice for large volume realtime data systems (Marz and
+Warren 2015). Out of the data used in this study, Electricity and Airlines data illustrate
+the use of time series data with the evaluation method we propose and additional
+insight into the performance of evolving models this method provides.
+   Last but not least, results for diverse data streams including airlines, electricity
+and cover type show that during the period of waiting for true label, there can be no
+single model that provides most accurate predictions in all bins. This shows that hybrid
+methods, including the methods that switch between the use of different modelling
+techniques such as kNN and Hoeffding trees can yield the best performance when
+entire periods of waiting for true labels are concerned.
+
+
+6 Analysis of hyper-parameters
+
+6.1 Computational cost and memory consumption
+
+Continuous re-evaluation relies on additional predictions, the frequency of which
+depends on the value of hyper-parameter K . Hence, the question arises how frequently
+these predictions should be made. First of all, let use observe that under online learn-
+ing paradigm, every labelled instance is used to trigger potential model updates. For
+some models, such as instance-based classifiers, such a change occurs every time new
+labelled instance is used to update the model. Importantly, changes to a model may
+occur because of concept drift or may be caused by incremental updates aiming at
+improving the approximation of true decision borders in stationary cases. In general,
+when no assumptions regarding the stationarity of the process are made and different
+online learning methods are considered, generating new predictions every time new
+true label arrives i.e. setting K = 1 could be considered. However, this could cause
+major computational overhead.
+
+
+
+                                                                                123
+1258                                                                                                      M. Grzenda et al.
+
+                                                                     35000
+    10000                                                            10000
+
+        1000                                                              1000
+NC(T)
+
+
+
+
+                                                                  NB(T)
+                                                          K=1                                                         K=1
+                                                          K=5                                                         K=5
+         100                                              K=10             100                                        K=10
+                                                          K=50                                                        K=50
+          10                                                                10
+           2                                                                 2
+
+               0         5000         10000      15000                           0   5000         10000       15000
+                           Instances                                                  Instances
+
+                                (a)                                                         (b)
+Fig. 11 The number of predictions made (a) and the number of predictions in memory buffer awaiting their
+true labels (b)
+
+
+
+
+    Before we analyse the impact of K on the computational complexity of re-
+evaluation, let us note that we will focus on the predictions made for b ∈ {1, . . . , B}.
+This is because initial predictions (b = 0) and test-than-train predictions (b = B + 1)
+are made under delayed labelling scenario, irrespective of whether continuous re-
+evaluation is used or not. Furthermore, there is always exactly one prediction of each
+of these two types for any labelled instance.
+    To analyse the number of predictions made, let us define the number of calcu-
+                                                                              T
+lated predictions over a sliding window of 100 instances NC (T ) = i=T            −100 C(i)
+while C(i) is calculated in Algorithm 1. Furthermore, let L(T ) denote all instances
+stored in memory buffer and awaiting their true labels at time T , and let NB (T ) =
+   k∈L(T ) car d({P(k) : P(k).b = −1}) denote the number of additional predictions
+made for these instances. Hence, NC (T ) shows the number of extra predictions trig-
+gered by continuous re-evaluation, whereas NB (T ) reveals memory allocation needs
+of the method.
+    Figure 11 shows both resource use indicators for airlines data. It follows from the fig-
+ure that the number of predictions stored is closely related to the number of predictions
+made. Both indicators drop significantly at some periods, which is because of a signif-
+icantly lower number of overnight flights, which reduces substantially car d(L(T )).
+                                                                                     CL (T )
+Since NC (T ) and NB (T ) are influenced by car d(L(T )), we propose NR (T ) = |Ω(T       )|
+i.e. the average number of additional predictions per a labelled instance until time
+T to be analysed. Figure 12 shows how NR (T ) changes depending on K value. It
+follows from the figure that NR (T ) is stable. For K = 10 on average approx. 10
+additional predictions are made for every labelled instance. It is important to note
+that 
+      the number of predictions made for labelled
+                                                  instance {(xk , yk )} is no larger than
+car d      Sb ={(x j ,y j )}:t({(xk ,?)})≤t(Sb )≤t({(xk ,yk )})
+                                  K            . Hence, by calculating the average num-
+ber of labelled instances that arrive between initial and test-then-train prediction is
+made, we can estimate the number of additional predictions arising from K value
+under consideration. In this way and through the plots such as Fig. 12, K value can
+be set. In the analysed case of the airlines data K = 10 on average provides one new
+prediction for approx. every 10% of the period of waiting for a true label, which can
+be considered optimal. Importantly, all NR (T ) plots are very stable in spite of major
+volatility of the number of instances arriving at different times of the day.
+
+123
+Delayed labelling evaluation for data streams                                                       1259
+
+
+                 100
+                                                                                                   K=1
+NR(T)
+
+                     10                                                                            K=5
+                      2                                                                            K=10
+                                                                                                   K=50
+
+
+                          0              5000                      10000             15000
+                                                  Instances
+
+Fig. 12 Computational cost. The average number of re-predictions per a labelled instance since the begin-
+ning of the stream
+
+
+
+                60
+ Accuracy [%]
+
+
+
+
+                                                                                                  B=100
+                                                                                                  B=50
+                55                                                                                B=20
+                                                                                                  B=10
+                50                                                                                B=5
+
+
+
+                      1   10   20   30     40       50        60      70   80   90      100
+                                                bS(b, B, N)
+
+Fig. 13 The impact of the number of bins B on the calculation of performance indicators. Electricity data
+
+
+6.2 Performance aggregation settings
+
+The value of B parameter controls the number of bins, which are used to aggregate
+model performance. It is important to note that how many predictions are made and
+when is not driven by B value. The role of B is to control the calculation of performance
+indicators on the top of the same predictions and true labels.
+   To compare how different B values influence the aggregation process, let us define
+standardised bin index as bS (b, B, N ) = b NB . In this way, performance indicators such
+as accuracy or kappa attained for individual b = 1, . . . , B can be referred to the same
+range [1, N ] of x axis, irrespective of B value. Figure 13 shows the role of various
+B settings by presenting the accuracy ΛP (T , b) for electricity data set. We selected
+results for NC method to be shown in Fig. 13 as these results are particularly variable.
+The figure includes data for b = 1, . . . , B and skips the data of remaining two bins,
+since bins b ∈ {0, B + 1} contain the same values (for the same data stream and stream
+mining method), irrespective of B value. As noted before, individual [b, ΛP (T , b)]
+points were mapped to [bS (b, B, N ), ΛP (T , b)]. Moreover, N = 100 was applied.
+Not surprisingly, the higher B value, the more smooth accuracy trend is revealed as it
+relies on a larger number of accuracy points, each representing binned performance.
+B < 20 yields only coarse approximation of the performance evolution of a model
+during the periods between individual unlabelled instances and their true labels arrive.
+   Furthermore, only a minor difference between B = 50 and B = 100 can be
+observed in Fig. 13. This confirms that for continuous re-evaluation B ∈ [50, 100] is
+justified, as any B in this period provides precise estimation of the trends in the per-
+
+                                                                                              123
+1260                                                                                M. Grzenda et al.
+
+
+formance indicator changes. Moreover, under B = 50, every bin represents 2% of the
+length of the periods [t({(xk , ?)}), t({(xk , yk )}], which provides precise estimation of
+performance changes during such short sub-periods. This confirms that B ∈ [50, 100]
+can be applied to different stream mining settings.
+
+
+7 Extensions of the base continuous evaluation
+
+Let us observe that continuous evaluation defined in Algorithm 1 and discussed above
+can be extended to other related stream mining tasks, some of which are outlined
+below.
+
+7.1 Regression tasks
+
+7.1.1 The applicability of continuous evaluation
+
+Continuous evaluation is applicable both to classification and regression tasks. In both
+cases, delayed labels may result in verification latency. Hence, the accuracy of initial
+predictions made at the time of observing an instance for the first time may differ
+from the accuracy of test-then-train prediction also for regression tasks. Similarly, the
+accuracy of predictions made in the periods preceding arrival of individual delayed
+labels may change. Therefore, continuous evaluation can be used to reveal accuracy
+evolution also for these regression tasks for which verification latency occurs.
+   The only change, which has to be applied to adapt Algorithm 1 to regression tasks is
+to make it match continuous rather than discrete true and predicted labels. Furthermore,
+other than dD () functions can be used to obtain averaged prediction. In the case of
+regression tasks, we propose the use of weighted average to convert possibly many
+predictions made during bin period into a single averaged prediction dA (U (Si , b)).
+                                     |U (S ,b)| y j−1 ×(t j −t j−1 )
+More formally, dA (U (Si , b)) = j=2 i             t|U (Si ,b)| −t1 , b = 1, . . . , B. In this way
+predictions displayed over longer periods of time have a larger impact on averaged
+prediction.
+
+
+
+7.1.2 Sample results
+
+As in the case of classification, all experiments described in this subsection were
+performed with MOA framework (Bifet et al. 2011b). The results reported below
+were produced by running Algorithm 1 every time with a different learning algorithm.
+Bike sharing data was used for all experiments.
+Bike sharing data The bike dataset (Fanaee-T and Gama 2013) includes 2 years (2011
+and 2012) worth of a bike-sharing service from Washington D.C., USA. The goal
+is to predict how many bikes in total will be rented in the next hour using weather
+and temporal data (e.g., time of the day, the day of the week and so forth). Some
+features from the original data were removed to avoid data leakage (e.g., “registered”
+and “casual”), as their sum converges to the target variable (i.e., “cnt”). The delay for
+
+123
+Delayed labelling evaluation for data streams                                                        1261
+
+
+Table 2 Performance evaluation for different bins: regression task
+
+Data |Ω(T )|×dim(xi )        ΛP (T , b)        ORTO     FIMTDD        TMean     AMRules      ARFREG
+
+Bike sharing 17379 x 12      b=0               199.27   93.21         132.30    86.27        60.69
+                             b=45              228.20   102.58        131.81    84.75        58.37
+                             b=B + 1           183.22   93.35         131.80    82.55        54.85
+Results for the best method for each bin are shown in bold
+
+
+       250
+
+       200                                                                                     ORTO
+                                                                                               FIMTDD
+ MAE
+
+
+
+
+       150                                                                                     TMean
+                                                                                               AMRULES
+       100                                                                                     ARFREG
+
+       50
+             0   5      10      15        20      25    30       35    40      45       51
+                                     Delayed label bin index
+
+Fig. 14 Mean absolute error for individual bins (bike sharing data)
+
+
+
+bike sharing was set to one week, however, since there is no timestamp available in
+the data we used a delay of 168 instances, which corresponds to 24 hours × 7 days.
+   Table 2 provides a summary of bike sharing data used for the experiments including
+the number of labelled instances |Ω(T )| after which binned performance is reported
+below. This is combined with Mean Absolute Error (MAE) of the models developed
+with each of the regression methods.
+   The regression methods used in the experiments include decision trees, rule-
+based models, a random forest model, and a baseline model of Target Mean
+(TMean). The first regression tree used is the Fast and Incremental Model Trees
+(FIMTDD) (Ikonomovska et al. 2011a) algorithm, which grows the tree model simi-
+larly to the Hoeffding Trees (Domingos and Hulten 2000) algorithm. FIMTDD also
+includes a change detection scheme that periodically signals and adapts subbranches of
+the tree where significant variance increases are observed. The second tree algorithm
+used is ORTO (Ikonomovska et al. 2011b), which also grows trees incrementally as
+instances arrive. Yet, ORTO also includes the notion of “option” nodes, which allow an
+instance to follow all the branches available in a tree node. The Adaptive Model Rules
+(AMRules) (Almeida et al. 2013) was designed to learn both ordered and unordered
+rule sets from a data stream. AMRules associates each of its rules with a Page-Hinkley
+drift detector to make it possible to detect and adapt to concept drifts by pruning the rule
+set. Finally, Adaptive Random Forest for Regression (ARFReg) (Gomes et al. 2018)
+is an ensemble method based on the ARF (Gomes et al. 2017) algorithm for classifi-
+cation tasks. The main difference is that the base learner used in ARFReg is based on
+the FIMTDD algorithm instead of Hoeffding Trees. As a consequence, when using
+ARFReg, one can choose between using the external drift detection methods, as in
+ARF, or relying on the internal drift detection methods within FIMTDD. Experiments
+in Gomes et al. (2018) indicate that the latter is a more sustainable approach.
+
+                                                                                              123
+1262                                                                             M. Grzenda et al.
+
+
+   Figure 14 presents the results per bin index for the Bike sharing dataset, where we
+can observe that most of the learners produced better performance than the baseline
+TMean, except for ORTO. Interestingly, there is not much variation in MAE as the bin
+index varies, e.g., ARFReg outperforms all other methods for every bin. Moreover,
+MAE for ARFREG is lower for test-then-train predictions (b = B + 1) than for first
+time predictions (b = 0), which is in line with previously observed trend of the higher
+accuracy of predictions made shortly before true label arrival.
+
+7.2 Evolving instances
+
+Let us observe that even though we assume xk in Algorithm 1 to be fixed, it may
+be defined as xk (t) i.e. it may change with time. In the case of the reference flight
+delay prediction task we already assumed that Sa = {(xk , ?)} could include weather
+conditions at departure time. It is natural to observe that every time new prediction
+is made for Sa , it could use xk (t) as an input i.e. evolving instance data rather than
+static data available at the time of making first prediction t(Sa ) for this instance. In
+the case of flight prediction task, this could mean using weather conditions at the time
+of making periodical prediction rather than weather conditions at departure time as a
+part of input data for the classifier. Hence, in Algorithm 1 it is enough to use xk (t)
+as an input for h i () model when periodic and test-then-train predictions are made to
+consider evolving values of input features rather than constant xk data.
+   Importantly, the changes in instance data could also cause changes in predictions.
+Hence, a sequence of predictions made for an instance ŷkt1 , ŷkt2 , . . . ; ti ≤ t˜(Sa ) could
+contain different predictions not only because of the changes of h model, but also
+because of the changes in instance data xk .
+   To sum up, by replacing xk with xk (t), we can apply continuous re-evaluation
+to these classification tasks in which instance data evolves between making initial
+prediction and receiving true label.
+
+7.3 Weighted binned performance
+
+In some classification and regression tasks, it may be important to create a ranking
+of different methods in terms of their ability to create and evolve models of high
+accuracy. In such cases, based on individual performance indicators comprising on the
+vectors of [Λ(T , 0), Λ(T , 1), . . . , Λ(T , B + 1)], summary performance Ψ (T ) ∈ R
+can be developed. Furthermore, in some use cases, predictions made in different bins
+can be of different importance. As an example, predictions made in test-then-train
+mode may be considered not important in the evaluation or less important than initial
+predictions.
+   Let us propose to apply weight vector w to aggregate performance indicators
+calculated for individual bins. Furthermore, let us propose summary performance
+Ψ (T ) to be a function of [Λ(T , 0), Λ(T , 1), Λ(T , B + 1)] providing one sum-
+mary assessment of the performance of stream mining method attained for individual
+bins.
+
+
+
+123
+Delayed labelling evaluation for data streams                                           1263
+
+
+   In the simplest case, weighted average can be used to calculate summary perfor-
+                                                      B+1
+                                                      b=0 Λ(T ,b)×wb
+mance. More precisely, let us propose ΨW (T ) =           B+1          . Let us observe that
+                                                          b=0 wb
+by applying w = [1, 0, . . . , 0] summary performance will be equal to the perfor-
+mance observed for first time predictions. Furthermore, w = [0, . . . , 0, 1] yields
+test-then-train performance, w = [1, 0, . . . , 0, 1] provides summary performance
+equal to the average of first time and test-then-train method performance. Further-
+more, w = [1, 1, . . . , 1] gives equal weights to all binned performance indicators
+Λ(T , b), b = 0, . . . , B + 1. Importantly, w vector can be used to make summary
+performance take into account only some of the predictions e.g. only the predictions
+made in the second half of the period between making initial predictions and true label
+arrival. In this way, unique needs of individual settings can be considered.
+   Moreover, growing including exponential weights can be assigned to predictions
+made shortly before true label arrives. In this way methods providing particularly high
+performance indicators then can receive higher summary performance values.
+
+
+8 Conclusions
+
+Many applications of stream mining require non-negligible latency that the true labels
+arrive with to be taken into account. This results in the development of novel stream
+mining techniques. In this study we concentrate on the evaluation of these techniques
+both to select the best technique for a problem of interest and to foster the development
+of new techniques through increased understanding of the impact of model evolution
+on its accuracy in the period separating instance arrival and delayed label arrival.
+   Experiments were conducted with seven data sets widely used in research commu-
+nity, which revealed that the investigation of first time and test-then-train performance
+only, while important may not be sufficient to reveal the evolution of model prediction
+performance. The evaluation procedure proposed in this study reveals the evolution of
+performance and shows how the ranking of most accurate methods changes depend-
+ing on varied abilities of the techniques to exploit temporal dependencies and new
+evidence arriving before true label becomes available. Furthermore, our study reveals
+that some of the evolving models when polled for further predictions before ultimate
+true label arrives can gradually provide more accurate prediction for the same instance
+data. This provides basis for further development of methods that can refine previously
+made predictions. One limitation of our current evaluation method is that it does not
+account for evolving class labels, i.e. once the true label arrives, performance indi-
+cators are calculated and possible newer versions of this label are not considered.
+This aspect can also be addressed when developing new stream mining methods and
+extending continuous re-evaluation.
+   For future works, one of the objectives is the use of the proposed approach to analyse
+the evaluation metrics evolution under evolving instances. In fact, the airlines data used
+in this study provides an immediate use case for it by providing the data on departure
+delays, which can be used to update initial schedule-based instance data and in this way
+contribute to the prediction performance. Furthermore, it would be interesting to use
+this evaluation procedure to assess the performance of semi-supervised techniques,
+
+
+                                                                                 123
+1264                                                                                      M. Grzenda et al.
+
+
+as it can be used to verify how intermediary predictions are affected by leveraging
+unlabelled instances. Moreover, hybrid methods exploiting the fact that no single
+online learning method may yield the best performance during entire period before
+true label arrival, can be developed.
+
+Acknowledgements During the first stage of this research, Maciej Grzenda was both with Warsaw Uni-
+versity of Technology and Orange Polska.
+
+Compliance with Ethical Standards
+
+
+Conflict of interest The authors declare that they have no conflict of interest.
+
+Open Access This article is distributed under the terms of the Creative Commons Attribution 4.0 Interna-
+tional License (http://creativecommons.org/licenses/by/4.0/), which permits unrestricted use, distribution,
+and reproduction in any medium, provided you give appropriate credit to the original author(s) and the
+source, provide a link to the Creative Commons license, and indicate if changes were made.
+
+
+
+A Formal definitions
+
+As observed in Sect. 4, once true label becomes available, individual predictions can
+be linked to the appropriate bins. For every bin 1 ≤ b ≤ B the sequence of predictions
+U (Si , b) available for this bin Si = {(xk , ?)} and period b is as follows:
+
+                                                                     
+                    t({(xk ,?)})+Δtk b−1
+                                       B )
+                                                                 b−1
+U (Si , b) = y̌k                           , t({(xk , ?)}) + Δtk        ,
+                                                                  B
+                                                                                              
+                                                             b−1                             b
+ (yi , ti ) ∈ P(k) : bi = −1 ∧ t({(xk , ?)}) + Δtk                 ≤ ti < t({(xk , ?)}) + Δtk ) ,
+                                                               B                             B
+                                                     
+    t({(xk ,?)})+Δtk Bb )                         b
+  y̌k                     , t({(xk , ?)}) + Δtk
+                                                  B
+
+   Furthermore, V (Si , b) denoting the pair of true and predicted label for Si =
+{(xk , ?)}, which is used to calculate performance measures is defined as follows:
+
+                      
+                       {(yk , ŷk )} : ŷk ∈ R({(xk , ?)}, b).y b ∈ {0, B + 1}
+         V (Si , b) =
+                       {(yk , ŷk )} : ŷk = d(U ({(xk , ?)}, b)) b ∈ {1, . . . , B}
+
+
+References
+Abdulsalam H, Skillicorn DB, Martin P (2010) Classification using streaming random forests. IEEE Trans
+    Knowl Data Eng 23(1):22–36
+Agrawal R, Imilielinski T, Swani A (1993) Database mining: a performance perspective. IEEE Trans Knowl
+    Data Eng 5(6):914–925
+Almeida E, Ferreira C, Gama J (2013) Adaptive model rules from data streams. In: Joint European conference
+    on machine learning and knowledge discovery in databases. Springer, pp 480–492
+
+
+123
+Delayed labelling evaluation for data streams                                                           1265
+
+
+Bifet A, Gavaldà R (2007) Learning from time-changing data with adaptive windowing. In: Proceedings of
+      the 7th SIAM international conference on data mining, April 26–28, 2007, Minneapolis, Minnesota,
+      USA. Society for Industrial and Applied Mathematics SIAM, pp 443–448
+Bifet A, Gavaldà R (2009) Adaptive learning from evolving data streams. In: International symposium on
+      intelligent data analysis. Springer, pp 249–260. https://doi.org/10.1007/978-3-642-03915-7_22
+Bifet A, Holmes G, Kirkby R, Pfahringer B (2011a) MOA data stream mining—a practical approach. Centre
+      for Open Software Innovation COSI
+Bifet A, Holmes G, Pfahringer B, Read J, Kranen P, Kremer H, Jansen T, Seidl T (2011b) MOA: a real-time
+      analytics open source framework. In: Joint European conference on machine learning and knowledge
+      discovery in databases. Springer, pp 617–620
+Bifet A, Read J, Žliobaitė I, Pfahringer B, Holmes G (2013) Pitfalls in benchmarking data stream classifica-
+      tion and how to avoid them. Joint European conference on machine learning and knowledge discovery
+      in databases. Springer, Berlin, pp 465–479
+Bifet A, de Francisci Morales G, Read J, Holmes G, Pfahringer B (2015) Efficient online evaluation of big
+      data stream classifiers. In: 21st ACM SIGKDD international conference on knowledge discovery and
+      data mining. ACM, pp 59–68
+Blackard JA, Dean DJ (1999) Comparative accuracies of artificial neural networks and discriminant analysis
+      in predicting forest cover types from cartographic variables. Comput Electron Agric 24(3):131–151
+Breiman L (2001) Random forests. Mach Learn 45(1):5–32
+Breiman L (2017) Classification and regression trees. Routledge, New York
+Ditzler G, Roveri M, Alippi C, Polikar R (2015) Learning in nonstationary environments: a survey. IEEE
+      Comput Intell Mag 10(4):12–25
+Domingos P, Hulten G (2000) Mining high-speed data streams. In: 6th ACM SIGKDD international con-
+      ference on knowledge discovery and data mining. ACM, pp 71–80
+Fanaee-T H, Gama J (2013) Event labeling combining ensemble detectors and background knowledge.
+      Progr Artif Intell. http://dx.doi.org/10.1007/s13748-013-0040-3
+Gama J, Rodrigues P (2009) Issues in evaluation of stream learning algorithms. In: 15th ACM SIGKDD
+      international conference on knowledge discovery and data mining. ACM, pp 329–338
+Gomes HM, Bifet A, Read J, Barddal JP, Enembreck F, Pfharinger B, Holmes G, Abdessalem T (2017) Adap-
+      tive random forests for evolving data stream classification. Mach Learn 106(9):1469–1495. https://
+      doi.org/10.1007/s10994-017-5642-8
+Gomes HM, Barddal JP, Boiko LE, Bifet A (2018) Adaptive random forests for data stream regression. In:
+      Proceedings of the 26th European symposium on artificial neural networks (ESANN). pp 267–272
+Hulten G, Spencer L, Domingos P (2001) Mining time-changing data streams. In: 7th ACM SIGKDD
+      international conference on knowledge discovery and data mining. ACM, pp 97–106
+Ikonomovska E, Gama J, Džeroski S (2011a) Learning model trees from evolving data streams. Data Min
+      Knowl Discov 23(1):128–168
+Ikonomovska E, Gama J, Zenko B, Dzeroski S (2011b) Speeding-up Hoeffding-based regression trees with
+      options. In: International conference on machine learning. Omnipress, pp 537–544
+Kuncheva LI, Sánchez JS (2008) Nearest neighbour classifiers for streaming data with delayed labelling.
+      In: IEEE international conference on data mining. IEEE, pp 869–874
+Kuo Ss, Lee Cm, Ko Cn (2014) Hybrid learning algorithm based neural networks for short-term load
+      forecasting. In: International conference on fuzzy theory and its applications. IEEE, pp 105–110
+Marz N, Warren J (2015) Big data: principles and best practices of scalable realtime data systems. Manning
+      Publications Co., Greenwich
+Masud M, Gao J, Khan L, Han J, Thuraisingham BM (2011) Classification and novel class detection in
+      concept-drifting data streams under time constraints. IEEE TKDE 23(6):859–874
+Plasse J, Adams N (2016) Handling delayed labels in temporally evolving data streams. In: 2016 IEEE
+      International Conference on Big Data (Big Data). IEEE, pp 2416–2424
+Souza VMA, Silva DF, Batista GEAPA, Gama J (2015) Classification of evolving data streams with infinitely
+      delayed labels. In: IEEE International Conference on Machine Learning and Applications. IEEE, pp
+      214–219
+Srinivasan D, Chang CS, Liew AC (1995) Demand forecasting using fuzzy neural computation, with special
+      emphasis on weekend and public holiday forecasting. IEEE Trans Power Syst 10(4):1897–1903
+Žliobaitė I (2010) Change with delayed labeling: When is it detectable? In: IEEE International conference
+      on data mining workshops. IEEE, pp 843–850
+
+
+
+
+                                                                                                123
+1266                                                                                   M. Grzenda et al.
+
+
+Žliobaitė I, Bifet A, Read J, Pfahringer B, Holmes G (2015) Evaluation methods and decision theory for
+     classification of streaming data with temporal dependence. Mach Learn 98(3):455–482
+
+
+Publisher’s Note Springer Nature remains neutral with regard to jurisdictional claims in published maps
+and institutional affiliations.
+
+
+
+
+123
+

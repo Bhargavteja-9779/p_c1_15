@@ -1,0 +1,554 @@
+                                             A Nonparametric Delayed Feedback Model for Conversion Rate Prediction
+
+                                                                                Yuya Yoshikawa1 , Yusaku Imai2
+                                                                             STAIR Lab, Chiba Institute of Technology
+                                                                             1
+                                                                                       2
+                                                                                         CyberAgent, Inc.
+                                                                        yoshikawa@stair.center, y24twentyfour@gmail.com
+arXiv:1802.00255v1 [cs.LG] 1 Feb 2018
+
+
+
+
+                                                                 Abstract                                ID   Click date
+                                                                                                                           Conversion
+                                                                                                                              date
+                                                                                                                                        Ad feature 1   …   User feature 1   …
+
+
+                                             Predicting conversion rates (CVRs) in display ad-           1
+                                                                                                              2018/01/04
+                                                                                                               10:12:15
+                                                                                                                           2018/01/12
+                                                                                                                            16:30:02
+                                                                                                                                            0.1        …       10.3         …
+
+                                             vertising (e.g., predicting the proportion of users         2
+                                                                                                              2018/01/05
+                                                                                                                           unobserved       0.3        …        8.4         …
+                                             who purchase an item (i.e., a conversion) after                   08:42:33
+
+                                             its corresponding ad is clicked) is important when          …        …            …            …          …        …           …
+
+                                             measuring the effects of ads shown to users and to          n
+                                                                                                              2018/03/30
+                                                                                                               22:50:11
+                                                                                                                           unobserved       0.8        …       12.2         …
+                                             understanding the interests of the users. There is
+                                             generally a time delay (i.e., so-called delayed feed-      Figure 1: An example of a conversion log database. Each row (sam-
+                                             back) between the ad click and conversion. Owing           ple) includes the click date, conversion date, ad features and user
+                                             to the delayed feedback, samples that are converted        features. If the sample has not yet been converted, its conversion
+                                             after an observation period may be treated as neg-         date is recorded as ‘unobserved’.
+                                             ative. To overcome this drawback, CVR prediction
+                                             assuming that the time delay follows an exponential
+                                             distribution has been proposed. In practice, how-             Conversion logs are stored in a database like that shown in
+                                             ever, there is no guarantee that the delay is gener-       Figure 1. Between the ad click and conversion, a time delay
+                                             ated from the exponential distribution, and the best       (i.e., the so-called delayed feedback) basically occurs. As a
+                                             distribution with which to represent the delay de-         result, the conversion dates of the samples that have not been
+                                             pends on the data. In this paper, we propose a non-        converted by the end of the observation period are recorded
+                                             parametric delayed feedback model for CVR pre-             as ‘unobserved’ in the database. Because the time delay of
+                                             diction that represents the distribution of the time       the CVR is from hours to days, the ratio of such samples in
+                                             delay without assuming a parametric distribution,          the database is relatively large [Chappelle et al., 2014].
+                                             such as an exponential or Weibull distribution. Be-           Such samples can naively be treated as negative samples
+                                             cause the distribution of the time delay is modeled        when a training conversion model is based on logistic re-
+                                             depending on the content of an ad and the features         gression or a support vector machine. However, if some of
+                                             of a user, various shapes of the distribution can be       these samples are eventually converted, the model is learned
+                                             represented potentially. In experiments, we show           on samples with incorrect labels, resulting in poor CVR pre-
+                                             that the proposed model can capture the distribu-          diction. It is thus necessary in practice to construct CVR pre-
+                                             tion for the time delay on a synthetic dataset, even       diction models considering the delayed feedback.
+                                             when the distribution is complicated. Moreover, on            To deal with this drawback, Chapelle proposed a CVR
+                                             a real dataset, we show that the proposed model            prediction model that considers delayed feedback [Chapelle,
+                                             outperforms the existing method that assumes an            2014]. Here, the time delays of the conversion follow an ex-
+                                             exponential distribution for the time delay in terms       ponential distribution. As shown in Figure 5 in [Chapelle,
+                                             of conversion rate prediction.                             2014], however, the actual distribution of time delays is often
+                                                                                                        non-exponential and periodic, and the shape of the distribu-
+                                                                                                        tion varies by the sample. Thus, for the distribution of time
+                                        1   Introduction                                                delays for conversion, it is more desirable not to assume any
+                                        Predicting conversion rates (CVRs) in display advertising       shape of the distribution, such as an exponential or Weibull
+                                        (e.g., the proportion of users who purchase an item (i.e.,      distribution, and be able to change the distribution to fit the
+                                        conversion) after its corresponding ad is clicked) is impor-    sample.
+                                        tant when measuring the effects of advertisements shown to         In this paper, we propose a nonparametric delayed
+                                        users and to understanding the interests of the users. There-   feedback model (NoDeF for short) for CVR prediction that
+                                        fore, the models for CVR prediction has been well-studied       represents the distribution of the time delay without assuming
+                                        for several years [Lee et al., 2012; Rosales et al., 2012;      any parametric distributions. NoDeF partially borrows the
+                                        Ji et al., 2017].                                               ideas of kernel density estimation (KDE). More specifically,
+the distribution for the time delay is defined according to the                            Table 1: Notations
+weighted sum of kernel values of the conversion time and                    Variable     Description
+pseudo-points on the time axis, where the weights are learned
+from data. Then, as with [Chapelle, 2014], NoDeF assumes                   xi ∈ R   M
+                                                                                         A feature vector for the ith sample
+that each sample has a hidden variable indicating whether it                             representing its ad and user, where M
+will be converted eventually. In parameter estimation, while                             is the length of the feature vector.
+estimating the assignment of the hidden variable, the CVR                yi ∈ {0, 1}     An observed binary value of whether
+prediction model is learned by the EM algorithm [Dempster                                the ith sample is converted.
+et al., 1977]. NoDeF is a general framework that can be used             di ∈ [0, ∞]     The delay time between the click and
+for not only CVR prediction in display advertisement but also                            the conversion for the ith sample. If
+various circumstances in which delayed feedback occurs.                                  not converted, di = ∞.
+   In experiments, we demonstrate the effectiveness of the               ei ∈ [0, ∞)     The elapsed time since the click for
+proposed model on synthetic and real datasets. On the syn-                               the ith sample.
+thetic dataset, we show that NoDeF can estimate the shape                ci ∈ {0, 1}     A hidden binary value of whether the
+of the distribution of the time delay from data. On the real                             ith sample will be converted eventu-
+dataset, we show that NoDeF can predict the CVR for test                                 ally.
+samples, comparing with existing methods.                               V ∈ RL×M         A parameter matrix for the time de-
+                                                                                         lay model, L is the number of pseudo-
+2   Related Work                                                                         points placed on time axis.
+                                                                           w ∈ RM        A parameter vector for the conversion
+As described in Section 1, NoDeF extends the delayed feed-
+                                                                                         model.
+back model proposed by [Chapelle, 2014]. Their model as-
+sumes that the distribution of a time delay follows an expo-
+nential distribution with parameters determined by the input
+sample. [Ji et al., 2017] later proposed a model for which          analysis has also been conducted to model users’ opinion for-
+the distribution is a mixture of Weibull distributions, and [Sa-    mation [Yu et al., 2017] and information propagation phe-
+fari et al., 2017] proposed an efficient solution for the delayed   nomena on social networks [Rodriguez et al., 2013] in the
+feedback model with a Weibull distribution. To the best of our      area of data mining.
+knowledge, the present study is the first to represent the dis-        Given a random variable T > 0 corresponding to the time
+tribution of delayed feedback nonparametrically in the CVR          that an event happens, f (t) is defined as the probability den-
+                                                                                           Rt
+prediction model.                                                   sity of T and F (t) = 0 f (x)dx is its cumulative distribution
+   NoDeF was inspired by an idea of [Du et al., 2012] to            function. The probability that an event does not happen up to
+represent time delays of information diffusion on social net-       time t is given as the survival function s(t) = 1 − F (t). The
+works by nonparametric distributions. Because the present           event rate that an event has not yet happened up to time t but
+study deals with the problem of CVR prediction, the mathe-          happens at time t is then defined by a hazard function h(t).
+matical formulations of the previous and present papers are         The relationship among h(t), f (t) and s(t) is
+essentially different. Moreover, we extend the formulation
+of the distribution of the time delay to be able to predict the                                        f (t)
+                                                                                             h(t) =          .                    (1)
+distribution for unseen samples.                                                                       s(t)
+   Another topic well studied recently in display advertising
+is the multi-touch attribution setting, which considers that        Furthermore, the survival function s(t) can be derived using
+users are affected by the advertisement of an item via possibly     hazard function h(t):
+multiple advertising channels, such as display, social and paid                                 Z t          
+search advertising. Models that correctly measure the effect                       s(t) = exp −        h(x)dx .              (2)
+of an ad in each channel while considering the time delay be-                                           0
+tween click and conversion have been proposed [Zhang et al.,
+2015; Ji et al., 2016; Ji and Wang, 2017]. Here, the distribu-      4   Proposed Model
+tion of the time delay in multi-touch attribution also follows
+an exponential or Weibull distribution. The idea of NoDeF           This section explains the formulation of NoDeF and the learn-
+would thus be useful for modeling multi-touch attribution.          ing algorithm for NoDeF based on the EM algorithm.
+                                                                       Suppose that we observe a set of n quadruplets, denoted
+3   Preliminary: Survival Analysis                                  D = {(xi , yi , di , ei )}ni=1 . In particular, xi ∈ RM represents
+                                                                    the feature vector for the ith ad and user, where M is the
+This section briefly introduces the theory of survival analysis     length of the feature vector. yi ∈ {0, 1} is a binary variable
+required to explain NoDeF.                                          indicating whether the ith sample is converted. di ∈ [0, ∞]
+   Survival analysis was originally conducted to analyze the        is the delay between the click and the conversion for the ith
+time until one or more events happen, such as the death of          sample. If there is no conversion, di = ∞. ei ∈ [0, ∞) is the
+a biological organism or the failure of a mechanical sys-           time elapsed since the click. Table 1 summarizes the notation
+tem [Kleinbaum and Klein, 2012]. In recent years, survival          of variables used for NoDeF.
+                                                                                                  αl is an intensity function with weights V ∈ RL×M , which
+                                                                      ℎ(𝑑; 𝒙, 𝑽)                  controls a kernel value for the lth pseudo-point tl on the time
+             hazard function ℎ(𝑑; 𝒙, 𝑽)
+
+
+                                                                                                  axis, defined by
+                                                                                                                                               −1
+                                                                          𝛼* (𝒙; 𝑽)                          αl (xi ; V ) = 1 + exp −V >     x        .        (7)
+                                                                                                                                           l   i
+                                                                               𝑘(𝑡* , 𝑑)          Figure 2 illustrates the relationship among the hazard func-
+                                                                                                  tion h, intensity function αl and kernel k in (3).
+                                                                                                     The formulation of the hazard function (3) borrows the
+                                                                                                  ideas of KDE. However, the two differ on two points. First,
+                                                                                                  the hazard function controls the magnitude of the density by
+                                          𝑡.   𝑡/       𝑡0       𝑡1       𝑡2        𝑡-            the intensity function αl that has a feature vector xi as in-
+                                                               time 𝑑
+                                                                                                  put, while KDE represents the magnitude of the density by
+Figure 2: Relationship among the hazard function h, intensity func-                               the number of data points. Second, the hazard function com-
+tion αl and kernel k in NoDeF. The yellow dotted line indicates                                   putes the kernel values of an input time point di and only
+αl (x; V ) at each time tl while the pale blue line indicates the ker-                            L pseudo-points {tl }L l=1 to calculate the density, while KDE
+nel function value k(tl , d) at each time tl . The dark blue line is the                          needs to compute the kernel values of the input time point
+hazard function h(d; x, V ).
+                                                                                                  and all the observed time points whose size is generally larger
+                                                                                                  than L. The hazard function can thus be computed quickly for
+4.1        Model                                                                                  a newly coming feature vector.
+NoDeF is constructed from two probabilistic models. The                                              According to the definition of the survival function (2)
+first model, which we refer to as the time delay model, is used                                   and (3), the survival function for NoDeF is
+                                                                                                                                Z di                  !
+to represent the time delays between the click and conversion.
+The second model, which we refer to as the conversion model,                                      s(di ; xi , V ) = exp −            h(τ ; xi , V )dτ         (8)
+is a classifier that predicts whether a newly coming user is                                                                      0
+converted for a newly displayed ad. NoDeF is a joint model                                                                       L                    Z di                  !
+                                                                                                                                 X
+of these two models.                                                                                              =    exp −           αl (xi ; V )          k(tl , τ )dτ       .
+   In NoDeF, we define the time delay model according to                                                                         l=1                   0
+the framework of survival analysis as described in Section 3.                                         As in [Chapelle, 2014], we consider for each sample a hid-
+The distribution of the time delay varies according to the con-                                   den variable ci ∈ {0, 1}, which indicates whether the ith
+tents of the ad displayed and the characteristics of the users                                    sample is converted regardless of the time elapsed until the
+who watch the ad. Thus, in NoDeF, we define the time de-                                          conversion. If yi = 1 (i.e., the ith sample has been con-
+lay model without assuming any distribution, such as an ex-                                       verted), then ci = 1 obviously. Meanwhile, if yi = 0 (i.e.,
+ponential or Weibull distribution, such that the shape of the                                     the ith sample has not been converted before the elapsed time
+distribution can be determined by the contents of the ad and                                      ei ), then ci cannot be determined. Thus, for samples such
+the characteristics of the users.                                                                 that yi = 0, we need to estimate the assignment of ci during
+   We first explain the hazard function for NoDeF. To define                                      learning.
+the hazard function, NoDeF places L ∈ N+ equally spaced                                               We then define the probability that the conversion hap-
+pseudo-points {tl ≥ 0}L     l=1 on the time axis. The hazard func-                                pened at time di for the ith sample. According to the hazard
+tion (i.e., the rate that the conversion for the ith sample has                                   function (3) and the survival function (8), the probability that
+not yet happened up to time di but happens at time di ) is then                                   the conversion happened at time di for the ith sample can be
+defined as                                                                                        calculated according to
+                                XL
+                                                                                                           p(di |xi , ci = 1) = s(di ; xi , V )h(di ; xi , V ).    (9)
+             h(di ; xi , V ) =      αl (xi ; V )k(tl , di ),   (3)
+                                                         l=1                                      Note that this probability (9) is undefined in the case of the
+where k is a kernel function returning a positive value. In-                                      sample for which ci = 0.
+tuitively, the value of the kernel function represents the sim-                                       With the conversion model, one can use any binary classi-
+ilarity between two points on the time axis.                                                      fier whose likelihood is differentiable, such as logistic regres-
+                                                R a Here, one can                                 sion and neural network classifiers. In this paper, we simply
+use kernel functions as k such that k(tl , τ ), 0 k(tl , τ )dτ and
+R∞                                                                                                use logistic regression defined as
+  a
+     k(tl , τ )dτ for tl , τ, a ≥ 0 can be calculated analytically.                                                                                        −1
+For example, a Gaussian kernel with bandwidth parameter                                                   p(ci = 1|xi ; w) = 1 + exp(−w> xi )                   , (10)
+h > 0 can be used for NoDeF. In this case, the above three                                              p(ci = 0|xi ; w) = 1 − p(ci = 1|xi ),            (11)
+values are obtained as
+                                                                                                where w ∈ RM is a weight vector for the conversion classi-
+                                                           (tl − τ )2
+                             k(tl , τ )        =    exp −                ,                  (4)   fier.
+                                                              2h2
+      Z a                                              r                                       We then define the likelihood for NoDeF. For the sake of
+                                                         π         tl − a           tl
+            k(tl , τ )dτ                       =    −h       erf √           − erf √       ,(5)   convenience, we define two sets of sample indices:
+       0                                                 2            2h             2h
+   Z ∞                                               r                                                   I1 = {i|yi = 1, i = 1, 2, · · · , n},       (12)
+                                                       π              tl − a
+            k(tl , τ )dτ                       =    h      1 + erf √            .           (6)              I0 = {i|yi = 0, i = 1, 2, · · · , n}.       (13)
+      a                                                2                 2h
+We respectively refer to I1 and I0 as the positive sample set               which can be calculated using (11). Meanwhile, if c = 1, the
+and negative sample set.                                                    posterior of ci can be calculated according to
+   Given parameters Θ = {V , w}, the likelihood of observa-                           q̄i1 = p(ci = 1|xi , yi = 0, di , ei )
+                               n
+tion D = {(xi , yi , di , ei )}i=1 can be factorized as
+                                                                                             ∝ p(ci = 1|xi )p(yi = 0|xi , ci = 1, ei ), (25)
+             Yn    X                                                        where p(ci = 1|xi ) and p(yi = 0|xi , ci = 1, ei ) are re-
+p(D; Θ) =                 p(yi |xi , ci , ei )p(ci |xi )p(di |xi , ci = 1).
+                                                                            spectively calculated using (10) and (18). Note that q̄ic ob-
+            i=1 ci ∈{0,1}
+                                                                            tained using (24) and (25) needs to be normalized by q̄ic =
+                                                                     (14)   q̄ic /(q̄i0 + q̄i1 ). The E-step is to update the posterior of ci
+Note that if ci = 0, yi = 0 must be true. The equations                     under the current estimates of parameters Θ.
+                p(yi = 0|xi , ci = 0, ei ) = 1,                      (15)       In the M-step, we update the parameters Θ employing a
+                p(yi = 1|xi , ci = 0, ei ) = 0                       (16)   gradient-based      optimization method such as the gradient de-
+                                                                            scent method or quasi-Newton method, fixing the posterior of
+are thus satisfied consistently.                                            ci . In this paper, we use L-BFGS [Liu and Nocedal, 1989], an
+   Therefore, by plugging (15) and (16) into likelihood (14)                efficient implementation of the quasi-Newton method, which
+and dividing the sample indices into two sets I1 and I0 , the               needs the first-order gradients of the objective function (22)
+likelihood can be deformed as                                               with respect to the parameters Θ. We here add `2 regulariz-
+                     Y                                                      ers for w and V to (22), which are respectively controlled
+   p(D; Θ) =             p(ci = 1|xi )p(di |yi = 1, xi )             (17)
+                                                                            by strength parameters λw , λV ≥ 0. These regularizers are
+                    i∈I1
+                     Y X                                                    identical to put Gaussian priors with zero mean and precision
+               ×                   p(yi = 0|xi , ci , ei )p(ci |xi ).       λw and λV for them.
+                    i∈I0 ci ∈{0,1}                                              First, the gradient with respect to w is calculated as
+                                                                              ∂Q(Θ;      Θ̄)        X ∂
+p(yi = 0|xi , ci = 1, ei ) is the probability that the conversion                              =              log p(ci = 1|xi )              (26)
+has not happened before elapsed time ei for the ith sample                         ∂w
+                                                                                                   i∈I1
+                                                                                                        ∂w
+and that the conversion will happen afterward. This probabil-                                       X X                 ∂
+ity can be calculated as                                                                       +                  q̄ic    log p(ci |xi ) − λw w,
+                                                                                                                       ∂w
+          p(yi = 0|xi , ci = 1, ei )                                 (18)                          i∈I0 ci ∈{0,1}
+
+                = p(di > ei |xi , ci = 1, ei )                       (19)   where,
+                          Z ei                                                       ∂
+                = 1−            p(di = τ |ci = 1, xi )dτ             (20)                 log p(ci = 1|xi ) = x (1 − p(ci = 1|xi )) , (27)
+                                                                                    ∂w
+                            0
+                                                                                     ∂
+                = s(ei ; xi , V ),                                   (21)                 log p(ci = 0|xi ) = −xp(ci = 1|xi ).               (28)
+                                                                                    ∂w
+where the transformation from (20) to (21) is performed by                  Second, the gradient with respect to V l is calculated as
+applying the fact that s(t) = 1 − F (t) described in Section 3.              ∂Q(Θ; Θ̄)           X ∂
+                                                                                             =                  log p(di |xi , ci = 1)                              (29)
+4.2    Learning Algorithm                                                         ∂V l            i∈I1
+                                                                                                         ∂V l
+                                                                                                   X      X
+This section explains the learning algorithm for NoDeF de-                                   +                     q̄ic
+                                                                                                                           ∂
+                                                                                                                               log p(yi = 0|xi , ci , ei ) − λV V l ,
+rived on the basis of the EM algorithm.                                                           i∈I0 ci ∈{0,1}
+                                                                                                                          ∂V l
+   We first define the objective function in a standard way for
+                                                                               where,
+the EM algorithm. According to Jensen’s inequality, a lower
+                                                                                ∂                             ∂                         ∂
+bound Q(Θ; Θ̄) for the logarithm of likelihood (14) can be                          log p(di |xi , ci = 1) =      log s(di ; xi , V )+      log h(di ; xi , V ),
+                                                                               ∂V l                          ∂V l                      ∂V l
+derived as
+                                                                                                                                                               (30)
+   log p(D; Θ) ≥ Q(Θ; Θ̄)                                               (22)     ∂                                     ∂
+            X      h                               i                                 log p(yi = 0|xi , ci = 1, ei ) =      log s(ei ; xi , V ),
+                                                                                ∂V l                                  ∂V l
+        =       log p(ci = 1|xi )p(di |xi , ci = 1)                                                                                         (31)
+                                                                                                                               Z                    di
+               i∈I1                                                             ∂
+               X       X                 h                              i           log s(di ; xi , V ) = −xi αl (x; V )(1 − αl (x; V ))                 k(tl , τ )dτ,
+                                                                               ∂V l                                                             0
+        +                       q̄ici log p(yi |xi , ci , ei )p(ci |xi ) ,                                                                                     (32)
+               i∈I0 ci ∈{0,1}                                                     ∂                         xi αl (x; V )(1 − αl (x; V ))k(tl , di )
+                                                                                      log h(di ; xi , V ) =                                          .
+where q̄ici is a posterior of ci defined as                                      ∂V l                                    h(di ; xi , V )
+                                                                                                                                                               (33)
+        q̄ic   =      p(ci = c|xi , yi = 0, ei )                        (23)      We iteratively estimate the parameters Θ by alternating E-
+               ∝      p(yi = 0|xi , ci = c, ei )p(ci = c|xi ).                 and M-steps until converging the objective function (22). In
+                                                                               summary, the learning algorithm for NoDeF is shown in Al-
+If c = 0, p(yi = 0|xi , ci = c, ei ) must have the value 1                     gorithm 1. Here, lbfgs update w and lbfgs update V are
+obviously. Thus,                                                               functions that return w and V updated using L-BFGS, and
+   q̄i0 = p(ci = 0|xi , yi = 0, di , ei ) ∝ p(ci = 0|xi ),              (24)   the arguments are the initial values of the parameters and the
+                                                                               gradients of the parameters.
+Algorithm 1 Parameter estimation of NoDeF by EM-
+algorithm                                                                     1.0                                        NoDeF
+                                                                                                                         Exp (MLE)
+                                                                                                                                                      1.0                                           NoDeF
+                                                                                                                                                                                                    Exp (MLE)
+                                                                                                                         True dist.                                                                 True dist
+                                                                              0.8                                                                     0.8
+Input: training set D, kernel function k, maximum iterations
+  N ∈ N+ , tolerance  > 0.                                                   0.6                                                                     0.6
+
+
+
+
+                                                                                                                                            Density
+                                                                    Density
+  // Parameter initialization                                                 0.4                                                                     0.4
+
+  w(0) ∼ N (0, 1), V (0) ∼ N (0, 1), Θ(0) = {w(0) , V (0) }                   0.2                                                                     0.2
+
+  // Parameter estimation                                                     0.0                                                                     0.0
+  for j = 1, 2, · · · , N do                                                     0.0     0.2       0.4        0.6
+                                                                                                Normalized time delay
+                                                                                                                        0.8           1.0                0.0     0.2          0.4        0.6
+                                                                                                                                                                           Normalized time delay
+                                                                                                                                                                                                   0.8          1.0
+
+
+     // E-step computation                                                                     (a) all data                                                        (b) pattern 1
+     for i ∈ I0 do
+         for c ∈ {0, 1} do                                                    1.0                                        NoDeF
+                                                                                                                         Exp (MLE)
+                                                                                                                                                      1.0
+
+            q̄ic = p(ci = c|xi , yi = 0, ei ) // using (24)                   0.8
+                                                                                                                         True dist
+                                                                                                                                                      0.8
+
+         end for                                                              0.6                                                                     0.6      NoDeF
+
+
+
+
+                                                                    Density
+
+
+
+
+                                                                                                                                            Density
+     end for                                                                                                                                                   Exp (MLE)
+                                                                                                                                                               True dist
+                                                                              0.4                                                                     0.4
+     // M-step computation
+                                               ∂
+     w(j) = lbfgs update w(w(j−1) , ∂w            Q(Θ; Θ(j−1) ))              0.2                                                                     0.2
+
+
+
+     V (j) = lbfgs update V(V (j−1) , ∂V        ∂
+                                                  Q(Θ; Θ(j−1) ))              0.0
+                                                                                 0.0     0.2       0.4        0.6
+                                                                                                Normalized time delay
+                                                                                                                        0.8           1.0
+                                                                                                                                                      0.0
+                                                                                                                                                         0.0     0.2          0.4        0.6
+                                                                                                                                                                           Normalized time delay
+                                                                                                                                                                                                   0.8          1.0
+
+        (j)        (j)   (j)
+     Θ = {w , V }                                                                          (c) pattern 2                                                           (d) pattern 3
+     // Checking stop condition
+     if Q(Θ(j) ; Θ(j−1) ) − Q(Θ(j−1) ; Θ(j−2) ) <  then            Figure 3: Estimation results of the probability density function on
+         break                                                      the synthetic dataset. The blue solid line indicates NoDeF with
+                                                                    L = 40, λw = 0.01, λV = 0.01, the red dashed line indicates
+     end if
+                                                                    an exponential distribution fitted by MLE, and the green histogram
+  end for                                                           indicates the true distribution. The value of density for each method
+Output: Θ(j)                                                        is normalized such that the maximum value is 1.
+
+
+Selection of hyperparameters. NoDeF has four hyperpa-               5                  Experiments
+rameters: the number of pseudo-points L, bandwidth for              This section presents the results of experiments on synthetic
+Gaussian kernel h, precision parameters λw and λV . The             and real datasets.
+hyperparameters can be determined by cross-validation or by
+using a validation set. As another method of determining            5.1                 Experiments on Synthetic Dataset
+h, one can use the length between two neighboring pseudo-
+                                                                    This subsection shows how the correct NoDeF can estimate
+points ti+1 , ti because the pseudo-points are placed at equal
+                                                                    the complicated shape of a distribution of the time delay on a
+intervals as shown in Figure 2. We recommend using h =
+                                                                    synthetic dataset.
+(ti+1 − ti )/2 to estimate a smooth distribution for the time
+delay. This method is consistently used in the experiments          Dataset generation. The synthetic dataset is generated
+described in Section 5.                                             from a mixture of three different distributions so that the sin-
+                                                                    gle dataset includes three types of conversion behavior pat-
+4.3 Prediction                                                      terns. For the first pattern, the number of samples is 100,
+After the parameters are estimated, NoDeF can perform two           a 10-dimensional feature vector x ∈ R10 for each sample
+types of prediction. The first is to predict whether a newly        is generated from a normal distribution N (−3, 1), and delay
+coming sample will be converted, regardless of the elapsed          time d ≥ 0 for each sample is generated from a truncated
+time of delayed feedback. In this case, the CVR can be ob-          normal distribution T N (1, 1) that truncates values less than
+tained by simply applying conversion classifier (10) for the        0 and greater than 10. For the second pattern, the number
+sample.                                                             of samples is 70, the feature vector for each sample is gener-
+   The second type of prediction is to predict whether the          ated from a normal distribution N (0, 1), and the delay time
+newly coming sample will be converted up until the time cho-        for each sample is generated from a truncated normal distri-
+sen. In this case, the probability that the sample x will be        bution T N (4, 1). For the third pattern, the number of sam-
+converted up until observation time period E ≥ 0 can be cal-        ples is 30, the feature vector for each sample is generated
+culated as                                                          from a normal distribution N (3, 1), and the delay time for
+                                                                    each sample is generated from a truncated normal distribu-
+  p(y = 1|x, c = 1, E)    =   p(c = 1|x)p(d < E|c = 1, x)           tion T N (7, 1). For all samples, the elapsed time e is set to 10
+                                         Z E                        and label y ∈ {0, 1} is determined randomly from an uniform
+                          =   p(c = 1|x)     p(t|c = 1, x)dt        distribution.
+                                           0
+                          =   p(c = 1|x) (1 − s(E; x, V )) (. 34)   Results. Figure 3 shows the estimated density correspond-
+                                                                    ing to (9) on the synthetic dataset. For comparison, we dis-
+Note that the
+            R∞first prediction corresponds to (34) when E =         play the exponential distribution fitted by maximum likeli-
+∞ because 0 p(t|c = 1, x)dt = 1.                                    hood estimation (MLE), which is used in [Chapelle, 2014]
+Table 2: The average predictive performance for all the campaigns
+on the Criteo dataset. The bold face indicates the best values in each                        1.0       NoDeF                                                               1.0      NoDeF
+                                                                                                        Raw data                                                                     Raw data
+of the metrics.                                                                               0.8                                                                           0.8
+
+
+
+
+                                                                         Normalized density
+
+
+
+
+                                                                                                                                                       Normalized density
+                     Log loss          Accuracy               AUC                             0.6                                                                           0.6
+
+
+   NAIVE      0.3571 ± 0.006     0.8714 ± 0.003    0.7349 ± 0.007                             0.4                                                                           0.4
+    DFM       0.3450 ± 0.008     0.8702 ± 0.004   0.7423 ± 0.009
+   NoDeF     0.3438 ± 0.008     0.8725 ± 0.003     0.7387 ± 0.009                             0.2                                                                           0.2
+
+
+                                                                                              0.0                                                                           0.0
+                                                                                                 0.0     0.2         0.4       0.6         0.8   1.0                           0.0    0.2         0.4       0.6         0.8   1.0
+                                                                                                               Normalized log time delay                                                    Normalized log time delay
+Table 3: The average predictive performance for the recent cam-
+paigns on the Criteo dataset. The notation is the same as Table 2.                                             (a) L = 10                                                                   (b) L = 20
+                     Log loss          Accuracy               AUC        Figure 4: The estimated densities for the time delay in NoDeF with
+   NAIVE      0.2818 ± 0.021     0.9124 ± 0.013    0.7187 ± 0.019        different L. The other hyperparameters are set to λw = 0.1, λV =
+    DFM       0.3689 ± 0.051     0.9151 ± 0.012    0.7213 ± 0.022        0.1. h is automatically determined as described in Section 4.2.
+   NoDeF     0.2575 ± 0.020     0.9157 ± 0.012    0.7242 ± 0.025
+
+                                                                         methods were used by [Chapelle, 2014]. DFM is their pro-
+for modeling the time delay. As shown in Figure 3(a), NoDeF              posed method that considers the delayed feedback using an
+can correctly reconstruct three peaks of the true distribution.          exponential distribution for the time delay. NAIVE is a base-
+Panels (b)–(d) then show the estimated density when feature              line method that uses a logistic regression model 1 and treats
+vectors for each of the three patterns are given. As shown in            samples for which the conversion is unobserved as negative
+the figures, NoDeF can correctly estimate the density associ-            samples. The hyperparameters in DFM and NAIVE are de-
+ated with each pattern using the inputted feature vectors.               termined using the validation set of the dataset. For DFM, we
+                                                                         normalize the delay time and elapse time of each sample by
+5.2    Experiments on the Criteo Dataset                                 the observed maximum delay time in the training set.
+This subsection presents the effectiveness of NoDeF in terms
+                                                                         Results. Tables 2 and 3 show the predictive performance
+of the predictive performance on the Criteo dataset, which is
+                                                                         on the two types of the Criteo datasets. The results indicate
+a popular conversion log dataset used in [Chapelle, 2014].
+                                                                         that NoDeF outperforms NAIVE and DFM in terms of log
+Dataset preparation. As with [Chapelle, 2014], we use                    loss, accuracy and AUC, except for the AUC value for all the
+two types of the Criteo dataset. The first one includes the con-         campaigns on the Criteo dataset. Then, Figure 4 shows the
+version logs associated with all the campaigns, while the sec-           estimated densities for the time delay in NoDeF with differ-
+ond one includes those associated with the recent campaigns.             ent L. The figures shows that NoDeF could capture the two
+For each of the two dataset, we first extract six periods. For           peaks appearing in the raw data without the prior knowledge
+each period, we divide the samples in the period into training,          of the distribution of the raw data. Then, since the densities
+validation and test sets. The training set comprises 50,000              are smooth for different L, this indicates that the automated
+samples whose click date is within the first three days. Here,           determination of h for NoDeF is effective.
+the conversion date is replaced with ‘unobserved’ when the
+conversion date of the samples exceeds the first three days.
+The validation set comprises 10,000 samples whose click date
+                                                                         6                             Conclusion
+is between the final day of the training set and the next day.           We proposed a nonparametric delayed feedback model
+The test set comprises 10,000 samples whose click date is                (NoDeF) for the prediction of the conversion rate in dis-
+between the final day of the validation set and the next day.            played advertising. Unlike existing delayed feedback mod-
+For the validation and test sets, the samples whose conversion           els, NoDeF can estimate the distribution for the time delay
+date exceeds the final day of their sets are treated as negative         between an ad click and conversion nonparametrically. By
+samples.                                                                 doing so, NoDeF represents complicated distributions for the
+   For each sample, there are eight features taking integer val-         time delay that cannot be captured by parametric distribu-
+ues and nine categorical features. We represent each of the              tions, such as exponential and Weibull distributions. In ex-
+categorical features as a one-hot vector and then concatenate            periments, we showed that NoDeF better fitted a complicated
+the integer features and their one-hot vectors. The dimension-           distribution on a synthetic dataset than the existing model that
+ality of the resulting feature vector is 2,594. We then reduce           assumes an exponential distribution for the time delay, and
+the dimensionality of the feature vectors to 100 by conducting           outperformed other models in terms of the predictive perfor-
+principal component analysis.                                            mance on the Criteo dataset.
+Setting of NoDeF. For NoDeF, we use the normalized                          In future work, to update the parameters of NoDeF as soon
+log values of the delay and elapsed times of each sample.                as possible using the latest conversion logs, we will attempt to
+The hyperparameters of NoDeF, L ∈ {10, 20, 30}, λw ∈                     develop an efficient learning algorithm based on the stochas-
+{1.0, 0.1, 0.01} and λV ∈ {1.0, 0.1, 0.01} are optimized us-             tic EM algorithm [Nielsen, 2000] for NoDeF. In addition, we
+ing the validation set of the dataset. h is determined by the            will demonstrate the effectiveness of the idea of NoDeF by
+method described in the last paragraph of Section 4.2.                   applying the model to the multi-touch attribution setting.
+Setting of comparing methods. For comparison, we use                         1
+                                                                               We used the implementation of logistic regression in Scikit-
+two methods that are referred to as DFM and NAIVE. These                 learn 0.19.0. http://scikit-learn.org/.
+References                                                         ference on Web Search and Data Mining, page 293, New
+[Chapelle, 2014] Olivier Chapelle. Modeling Delayed Feed-          York, New York, USA, 2012. ACM Press.
+    back in Display Advertising. Proceedings of the 20th ACM    [Safari et al., 2017] Abdollah Safari, Rachel MacKay Alt-
+    SIGKDD International Conference on Knowledge Discov-           man, and Thomas M. Loughin. Display Advertising: Esti-
+    ery and Data Mining, pages 1097–1105, 2014.                    mating Conversion Probability Efficiently. arXiv preprint,
+[Chappelle et al., 2014] Oliver Chappelle, Eren Manavoglu,         oct 2017.
+    and Romer Rosales. Simple and Scalable Response Pre-        [Yu et al., 2017] Linyun Yu, Peng Cui, Chaoming Song,
+    diction for Display Advertising. ACM Transactions on In-       Tianyang Zhang, and Shiqiang Yang. A Temporally Het-
+    telligent Systems and Technology, 5(4):Article 61, 2014.       erogeneous Survival Framework with Application to So-
+[Dempster et al., 1977] Arthur P Dempster, Nan M Laird,            cial Behavior Dynamics. In Proceedings of the 23rd ACM
+                                                                   SIGKDD International Conference on Knowledge Discov-
+    and Donald B Rubin. Maximum Likelihood from Incom-
+                                                                   ery and Data Mining, pages 1295–1304, 2017.
+    plete Data via the EM Algorithm. Journal of the Royal
+    Statistical Society. Series B (Methodological), 1977.       [Zhang et al., 2015] Ya Zhang, Yi Wei, and Jianbiao Ren.
+[Du et al., 2012] Nan Du, Le Song, Ming Yuan, and Alex J           Multi-touch Attribution in Online Advertising with Sur-
+                                                                   vival Theory. In IEEE International Conference on Data
+    Smola. Learning Networks of Heterogeneous Influence.
+                                                                   Mining, number January, pages 687–696, 2015.
+    Advances in Neural Information Processing Systems 25,
+    pages 2780–2788, 2012.
+[Ji and Wang, 2017] Wendi Ji and Xiaoling Wang. Addi-
+    tional Multi-Touch Attribution for Online Advertising.
+    Proceedings of the 31th Conference on Artificial Intelli-
+    gence, pages 1360–1366, 2017.
+[Ji et al., 2016] Ji, W Wang, X Zhang, and Dell. A Proba-
+    bilistic Multi-Touch Attribution Model for Online Adver-
+    tising. In International Conference on Information and
+    Knowledge Management. Association for Computing Ma-
+    chinery, 2016.
+[Ji et al., 2017] Wendi Ji, Xiaoling Wang, and Feida Zhu.
+    Time-Aware Conversion Prediction. Frontiers of Com-
+    puter Science, 11(4):702–716, 2017.
+[Kleinbaum and Klein, 2012] David G. Kleinbaum and
+    Mitchel Klein. Survival Analysis. Statistics for Biology
+    and Health. Springer New York, New York, NY, 2012.
+[Lee et al., 2012] Kuang-chih Lee, Burkay Orten, Ali Das-
+    dan, and Wentong Li. Estimating Conversion Rate in Dis-
+    play Advertising from Past Erformance Data. In Proceed-
+    ings of the 18th ACM SIGKDD International Conference
+    on Knowledge Discovery and Data Miningg, page 768,
+    New York, New York, USA, 2012. ACM Press.
+[Liu and Nocedal, 1989] Dong C. Liu and Jorge Nocedal.
+    On the Limited Memory BFGS Method for Large Scale
+    Optimization. Mathematical Programming, 45(1-3):503–
+    528, aug 1989.
+[Nielsen, 2000] Søren Feodor Nielsen. The Stochastic EM
+    Algorithm: Estimation and Asymptotic Results. Bernoulli,
+    6(3):457, jun 2000.
+[Rodriguez et al., 2013] Manuel Gomez Rodriguez, Jure
+    Leskovec, and Bernhard Schoelkopf. Modeling Informa-
+    tion Propagation with Survival Theory. In Proceedings of
+    The 30th International Conference on Machine Learning,
+    2013.
+[Rosales et al., 2012] Rómer Rosales, Haibin Cheng, and
+    Eren Manavoglu. Post-Click Conversion Modeling and
+    Analysis for Non-Guaranteed Delivery Display Advertis-
+    ing. In Proceedings of the Fifth ACM International Con-
+

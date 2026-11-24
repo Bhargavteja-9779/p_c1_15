@@ -9,6 +9,27 @@ TEST = ["brackets", "broadleaf", "camel", "jgroups", "matplotlib", "npm", "sprin
 SE, SC = [0, 1, 2], [100, 101, 102, 103, 104]
 WGRID = [15, 30, 60, 90, 180]
 
+def variant_params(v):
+    """Inverse of the variant naming used in E0/E0b/E0c. Suffix '|ds2' = delay_scale 2 (robustness)."""
+    import re
+    ds = v.endswith("|ds2"); base = v.replace("|ds2", "")
+    d = {"variant": base + ("_ds2" if ds else "")}
+    if ds: d["delay_scale"] = 2.0
+    b = base
+    if b.endswith("_calnaive"): d["thr_cal"] = "naive"; b = b[:-9]
+    elif b.endswith("_cal"): d["thr_cal"] = "lat"; b = b[:-4]
+    m = re.match(r"^(wait|orb|fsc)_W(\d+)(?:_fr(\d+))?$", b)
+    if m:
+        d.update(method=m.group(1), W=int(m.group(2)))
+        if m.group(3): d["fixed_rate"] = int(m.group(3)) / 100
+    elif b.startswith("law_"):
+        _, de, pr = b.split("_"); d.update(method="law", delay_est=de, prior=pr)
+    elif b in ("nowait", "oracle"):
+        d["method"] = b
+    else:
+        raise ValueError(v)
+    return d
+
 def specs(exp):
     J = []
     if exp == "E0":
@@ -44,6 +65,20 @@ def specs(exp):
                     J.append(dict(method="wait", W=W, fixed_rate=fr, variant=f"wait_W{W}_fr{int(fr*100)}", project=p, seed=s))
         for j in J: j.update(experiment="E0c", split="dev")
         return J, 13
+    if exp in ("E1v3", "E2v3", "E3v3"):   # plan_v2/v3 test-project experiments (frozen_config_v3.json)
+        fz = read_json(STATE / "frozen_config_v3.json"); assert fz, "run scripts/freeze_config_v3.py first"
+        sel = fz["selected"]
+        if exp == "E1v3":
+            V = ["nowait", "oracle", fz["proposed"]] + [sel[k] for k in ("wait", "orb", "fsc", "fr", "wait_cal", "fsc_cal") if k in sel]
+        elif exp == "E2v3":
+            V = ["law_lagakos_model", "law_lagakos_model_calnaive", "nowait_cal", "law_naive_model_cal", "law_lagakos_base_cal"]
+        else:
+            V = [v + "|ds2" for v in [fz["proposed"]] + [sel[k] for k in ("wait", "fsc", "fr", "wait_cal") if k in sel]]
+        V = list(dict.fromkeys(V))
+        for p, s in itertools.product(TEST, SC):
+            for v in V:
+                J.append(dict(variant_params(v), project=p, seed=s, experiment=exp, split="test"))
+        return J, {"E1v3": 20, "E2v3": 30, "E3v3": 40}[exp]
     if exp in ("E1", "E2", "E3"):
         fz = read_json(STATE / "frozen_config.json")
         assert fz, "frozen_config.json missing: run scripts/freeze_config.py after E0"

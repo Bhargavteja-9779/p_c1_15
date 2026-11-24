@@ -1,0 +1,751 @@
+                                                 Asymptotically Unbiased Estimation for Delayed Feedback
+                                                              Modeling via Label Correction
+                                                            Yu Chen† , Jiaqi Jin† , Hui Zhao‡ , Pengjie Wang, Guojun Liu, Jian Xu and Bo Zheng∗
+                                                                                                       Alibaba Group
+                                                               {shuyuan.cy,jinjiaqi.jjq,shuqian.zh,pengjie.wpj,guojun.liugj,xiyu.xj,bozheng}@alibaba-inc.com
+
+                                         ABSTRACT
+                                         Alleviating the delayed feedback problem is of crucial importance                                          Positive
+                                         for the conversion rate(CVR) prediction in online advertising. Pre-
+arXiv:2202.06472v2 [cs.LG] 15 Feb 2022
+
+
+
+
+                                         vious delayed feedback modeling methods using an observation
+                                                                                                                                           Fake Negative
+                                         window to balance the trade-off between waiting for accurate labels
+                                         and consuming fresh feedback. Moreover, to estimate CVR upon
+                                         the freshly observed but biased distribution with fake negatives,                                 Real Negative
+                                         the importance sampling is widely used to reduce the distribution
+                                         bias. While effective, we argue that previous approaches falsely
+                                                                                                                                            Click         Conversion   Observation Window   Attribution Window
+                                         treat fake negative samples as real negative during the importance
+                                         weighting and have not fully utilized the observed positive samples,
+                                         leading to suboptimal performance.                                                            Figure 1: An illustration of different label types. The obser-
+                                            In this work, we propose a new method, DElayed Feedback mod-                               vation window 𝑤 0 denotes the least time interval between
+                                         eling with UnbiaSed Estimation, (DEFUSE), which aim to respec-                                the click time and the streaming training time; while the at-
+                                         tively correct the importance weights of the immediate positive, the                          tribution window 𝑤𝑎 determine the actual label.
+                                         fake negative, the real negative, and the delay positive samples at
+                                         finer granularity. Specifically, we propose a two-step optimization
+                                         approach that first infers the probability of fake negatives among                            1      INTRODUCTION
+                                         observed negatives before applying importance sampling. To fully                              Online advertising has become the primary business model for
+                                         exploit the ground-truth immediate positives from the observed                                intelligent e-commerce, which helps advertisers target potential
+                                         distribution, we further develop a bi-distribution modeling frame-                            customers [3, 4, 14]. Generally, cost per action (CPA) and cost per
+                                         work to jointly model the unbiased immediate positives and the                                click (CPC) are two widely used payment options, which directly in-
+                                         biased delay conversions. Experimental results on both public and                             fluence both revenue of the platform and the return-on-investment
+                                         our industrial datasets validate the superiority of DEFUSE. Codes                             (ROI) of all advertisers. As a fundamental part of both kinds of price
+                                         are available at https://github.com/ychen216/DEFUSE.git.                                      bidding, conversion rate(CVR) prediction, which focuses on ROI-
+                                                                                                                                       oriented optimization, always keeps an irreplaceable component to
+                                         CCS CONCEPTS                                                                                  ensure a healthy advertising platform [12].
+                                         • Information systems → Computational advertising.                                               As a widely used training framework, streaming learning, which
+                                                                                                                                       continuously finetunes the model according to real-time feedback,
+                                         KEYWORDS                                                                                      has shown promising performance in click-through rate(CTR) pre-
+                                         Delayed Feedback, Online Adevertising, CVR prediction                                         diction tasks [13, 18, 21, 22]. However, as shown in Table 1, it is
+                                         ACM Reference Format:                                                                         non-trivial to achieve better results via streaming learning due to
+                                         Yu Chen† , Jiaqi Jin† , Hui Zhao‡ , Pengjie Wang, Guojun Liu, Jian Xu and Bo                  the pervasively delayed and long-tailed conversion feedback for
+                                         Zheng∗ . 2022. Asymptotically Unbiased Estimation for Delayed Feedback                        CVR prediction. More specifically, as illustrated in Figure 1, a click
+                                         Modeling via Label Correction. In Proceedings of the ACM Web Conference                       that happened at time 𝑡 0 needs to wait for a sufficiently long at-
+                                         2022 (WWW ’22), April 25–29, 2022, Virtual Event, Lyon, France. ACM, New                      tribution window 𝑤𝑎 to determine its actual label — only samples
+                                         York, NY, USA, 11 pages. https://doi.org/10.1145/3485447.3511965                              convert before 𝑡 0 + 𝑤𝑎 are labeled as positive. Typically, the setting
+                                         † Co-first authorship. ‡ This author is the one who gives a lot of guidance in the work       for 𝑤𝑎 ranges from one day to several weeks for different business
+                                         ∗ Corresponding author.                                                                       scenarios. The issue, even for an attribution window that as short as
+                                                                                                                                       one day is still too long to ensure sample freshness, which remains
+                                         Permission to make digital or hard copies of all or part of this work for personal or
+                                         classroom use is granted without fee provided that copies are not made or distributed         a major obstacle for achieving effective streaming CVR prediction.
+                                         for profit or commercial advantage and that copies bear this notice and the full citation        To solve this challenge, existing efforts focus on introducing a
+                                         on the first page. Copyrights for components of this work owned by others than ACM            much shorter observation window 𝑤𝑜 , e.g., 30min, allowing clicks
+                                         must be honored. Abstracting with credit is permitted. To copy otherwise, or republish,
+                                         to post on servers or to redistribute to lists, requires prior specific permission and/or a   with observed labels to be collected and distributed to the training
+                                         fee. Request permissions from permissions@acm.org.                                            pipeline right after 𝑡 0 + 𝑤𝑜 . Optimizing 𝑤𝑜 provides the ability to
+                                         WWW ’22, April 25–29, 2022, Virtual Event, Lyon, France                                       balance the trade-off between utilizing more fresh samples and ac-
+                                         © 2022 Association for Computing Machinery.
+                                         ACM ISBN 978-1-4503-9096-5/22/04. . . $15.00                                                  cepting less accurate labels. This greatly improves sample freshness,
+                                         https://doi.org/10.1145/3485447.3511965                                                       with acceptable coverage of conversions within the observation
+WWW ’22, April 25–29, 2022, Virtual Event, Lyon, France                                                                               Yu Chen, et al.
+
+
+Table 1: The distribution for delay conversion on Taobao and                DPs on importance sampling. Distinct from previous methods only
+Criteo datasets, where Inc and Acc respectively denote the                  modelling observed positives and negatives, we formally recog-
+incremental and accumulate proportion.                                      nize the samples into four types, namely immediate positives(IP),
+                                                                            fake negatives(FN), real negatives(RN), and delay positives(DP).
+          Datasets           Taobao Dataset                    Criteo       Since FNs are adopted in the observed negatives, we propose a two-
+                                                                            step optimization, which firstly infers the probability of observed
+       delay interval       Inc (%)     Acc (%)     Inc (%)       Acc (%)
+                                                                            negatives being fake negatives before performing unbiased CVR
+           <30min              61          61             42        42      prediction via importance sampling on each of the four types of
+      30min - 12hour           13          74             14        56      samples. Moreover, we design a bi-distribution framework to make
+       12hour - 1day           4           78             5         61      full use of the immediate positives. Comprehensive experiments
+         1day - 3day           7           85             10        71      show DEFUSE achieves better performance than the state-of-the-art
+         3day - 7day           6           91             10        81      methods on both public and industrial datasets.
+        7day - 30day           9          100             19        100         Our main contributions can be summarized as follows:
+                                                                            • We emphasize the importance of dividing observed samples in a
+                                                                               more granular manner, which is crucial for accurate importance
+                                                                               sampling modeling.
+window, at the cost of temporarily marking feedback with long               • We proposed an unbiased importance sampling method, DEFUSE,
+delay as fake negative. Thus, current works mainly focus on making            with two-step optimization to address the delayed feedback issue.
+CVR estimations upon the freshly observed but biased distribution              Moreover, we implement a bi-distribution modeling framework
+with fake negatives.                                                           to fully exploit immediate positives during streaming learning.
+   Since it is hard to achieve unbiased estimation by using stan-           • We conduct extensive experiments on both public and industrial
+dard binary classification loss, e.g. cross-entropy, current efforts           datasets to demonstrate the state-of-the-art performance of our
+implement various auxiliary tasks to model conversion delay, so                DEFUSE.
+as to alleviate the bias caused by the fake negatives. Early meth-
+ods [2, 29] attempts to address the delayed feedback problem by             2 RELATED WORK
+jointly optimizing CVR prediction with a delay model that predicts
+the delay time 𝑑 from an assumed delay distribution. However, these
+                                                                            2.1 Delayed Feedback Models
+approaches are directly trained on the biased observed distribution         Learning with delayed feedback has received considerable attention
+and have not fully utilized the rare and sparse delayed positive            in the studies of predicting conversion rate (CVR). Chapelle [2] as-
+feedback. Having realized such drawbacks, recent studies mainly             sumed that the delay distribution is exponential and proposed two
+focus on reusing the delayed conversions as positive samples upon           generalized linear models for predicting the CVR and the delay time,
+conversion. Various sample duplicating mechanisms have been de-             respectively. However, such a strong hypothesis may be hard to
+signed to fully exploit each conversion. For instance, FNC/FNW [10]         model the delay distribution in practice. To address this issue, [29]
+set 𝑤𝑜 = 0 and re-sent all positive samples when conversion ar-             proposed a non-parametric delayed feedback model for CVR pre-
+rives. ES-DFM [27] only duplicate delay positive samples which              diction, which exploits the kernel density estimation and combines
+previously have been incorrectly labeled as fake negatives; While           multiple Gaussian distributions to approximate the actual delay
+DEFER [5] reuse all samples with actual label after completing the          distribution. Moreover, several recent works [23, 25] discretize the
+label attribution to maintain equal feature distribution and to utilize     delay time by day slot to achieve fine-grain survival analysis for
+the real negative samples. Moreover, to bridge the distribution bias,       delayed feedback problem. However, one significant drawback of
+importance sampling [1] is adopted to correct the disparity between         the above methods was that all of them only attempted to optimize
+the ground-truth and the observed but biased distribution.                  the observed conversion information rather than the actual delayed
+   Despite effectiveness, we argue that current methods still have          conversion, which cannot fully utilize the sparse positive feedback.
+some limitations. Firstly, they mainly focus on designing appro-
+priate training pipelines to reduce the bias in feature space and           2.2    Unbiased CVR Estimation
+only weight the loss of observed positives and negatives through            Distinct from previous methods, current mainstream approaches
+importance sampling. The issue is, observed negatives may poten-            employ the importance sampling method to estimate the real ex-
+tially be fake negatives, and these methods falsely treat them as real      pectation 𝑤 .𝑟 .𝑡 another observed distribution [5, 10, 27, 28]. Ktena
+negatives, leading to sub-optimal performance. Second, observed             et al. [10] assumes that all samples are initially labeled as negative,
+positives can be further divided into immediate positives(IP) and           then duplicate samples with a positive label and ingest them to
+delay positives(DP), which implies two potential improvements: (1)          the training pipeline upon their conversion. To further model CVR
+Intuitively, IPs and DPs contribute differently to the CVR model            prediction from the biased distribution, they propose two fake neg-
+due to duplication. (2) By excluding DPs, an unbiased estimation            ative weighted(FNW) and fake negative calibration(FNC) utilizing
+of IP prediction can be established directly based on the observed          importance sampling [1]. However, it only focuses on the time-
+dataset consistent with the actual distribution of IPs.                     liness of samples and neglects the accuracy of labels. To address
+   In this paper, We propose DElayed Feedback modeling with                 this, ES-DFM [12] introduces an observation window to study the
+Unbiased Estimation (DEFUSE) for streaming CVR prediction, which            trade-off between waiting for more accurate labels in the window
+investigates the influence of fake negatives and makes full use of          and exploiting fresher training data out of the window. Gu et al. [5]
+Asymptotically Unbiased Estimation for Delayed Feedback Modeling via Label Correction                                        WWW ’22, April 25–29, 2022, Virtual Event, Lyon, France
+
+
+              Table 2: Main notations used in the paper.                                                                        Observed samples       Duplicated samples
+
+                                                                                              Ground-truth      IP      DP             RN                                      Positive label
+
+
+    Notation            Explanation                                                            FNW(FNC)        FN       FN             RN                 DP   DP             Negative label
+
+
+    x, 𝑦, 𝑑             the input features, label, and interval be-                              ES-DFM         IP      FN             RN            DP
+
+                        tween click and pay time                                                   DEFER        IP      FN             RN                 IP   DP               RN
+    𝑝 (x, 𝑦), 𝑞(x, 𝑦)   the ground-truth and observed distribution                            IP: Immediate Positive         FN: Fake Negative     RN: Real Negative        DP: Delay Positive
+    𝑤𝑜 , 𝑤 𝑎            the observation and attribution window
+    𝑤𝑖 (x, 𝑦), 𝑧 (x)    the importance weight and hidden variable
+                                                                                        Figure 2: Data Distribution of previous online delayed feed-
+                        of x
+                                                                                        back methods.
+
+further duplicate the real negative and sparse positive in the obser-
+                                                                                        • Fake Negative(FN), e.g., 𝑤𝑜 < 𝑑 < 𝑤𝑎 . Fake negative denotes
+vation window to eliminate the feature distribution bias introduced
+                                                                                          samples that incorrectly labeled as negative at training time due
+by duplicating delayed positive samples.
+                                                                                          to delay conversion.
+                                                                                        • Real Negative(RN), e.g., 𝑑 > 𝑤𝑎 /𝑑 = ∞. The samples not convert
+2.3     Delay Bandits                                                                     after waiting a sufficient long attribution window 𝑤𝑎 are labeled
+The delayed feedback has attracted much attention in bandit meth-                         as real negative.
+ods [17, 20, 20]. Previous methods consider the delayed feedback                        • Delay Positive(DP). These samples are duplicated and investi-
+modeling as a sequential decision-making problem and maximum                              gated into the training pipeline with a positive label upon con-
+the long-term rewards [6, 8, 24]. Joulani et al. [8] provided meta-                       version.
+algorithms that transform algorithms developed for the non-delayed,
+and analyzed the effect of delayed feedback in streaming learning                       3.2       Importance Sampling
+problems. [24] provided a stochastic delayed bandit model and
+proof the algorithms in censored and uncensored settings under                          Importance sampling has been widely studied and applied in many
+the hypothesis that the delay distribution is known. [6] tried to                       recent tasks, e.g., counterfactual learning [26] and unbiased estima-
+examine the bandit streaming learning in games with continuous                          tion [5, 27]. Typically, previous approaches use importance sam-
+action spaces and introduced a gradient-free learning policy with                       pling to estimate the expectation of training loss from the observed
+delayed rewards and bandit feedback.                                                    distribution and rewrite the ideal CVR loss function as follows:
+                                                                                                                L = E (x,𝑦)∼𝑝 (x,𝑦) ℓ (𝑦, 𝑓𝜃 (x))                                                (2)
+3     PRELIMINARY                                                                                                      = E (x,𝑦)∼𝑞 (x,𝑦) 𝑤 (x, 𝑦)ℓ (𝑦, 𝑓𝜃 (x)),                                  (3)
+In this section, we first formulate the problem of streaming CVR
+                                                                                        where 𝑓𝜃 is the desired CVR model pursuing unbiased CVR pre-
+prediction with delayed feedback. Then we give a brief introduc-
+                                                                                        diction, 𝑝 (x, 𝑦) and 𝑞(x, 𝑦) respectively denote the joint density
+tion to the standard importance sampling algorithms used in the
+                                                                                        function of the ground truth and the observed and duplicated dis-
+previous methods. The notations used throughout this paper are
+                                                                                        tribution, and 𝑤 (x, 𝑦) is the likelihood ratio of the ground truth
+summarized in Table 2.
+                                                                                        distribution with respect to the observed and duplicated distribution
+3.1     Problem Formulation                                                             introduced by importance sampling, chasing for an unbiased 𝑓𝜃∗ (x).
+                                                                                           Currently, by assuming or ensuring 𝑝 (x) ≈ 𝑞(x) and carefully
+In a standard CVR prediction task, the input can be formally defined
+                                                                                        designing the sample duplicating mechanisms, all published meth-
+as (x, 𝑦) ∼ 𝑝 (x, 𝑦), where x denotes the features and 𝑦 ∈ {0, 1} is
+                                                                                        ods [5, 10, 27] apply the same derivation of the formulation of
+the conversion label. A generic CVR prediction model aims to learn
+                                                                                        𝑤 (x, 𝑦) that firstly published at [10] as follows:
+the parameters 𝜃 of the binary classifier function 𝑓 by optimizing
+following ideal loss [12, 14]:                                                                    L = E (x,𝑦)∼𝑞 (x,𝑦) 𝑤 (x, 𝑦)ℓ (𝑦, 𝑓𝜃 (x))                                                      (4)
+                                                                                                      ∫           ∫
+                                                                                                                              𝑝 (x, 𝑦)
+                                                                                                    = 𝑞(x)𝑑𝑥 𝑞(𝑦 | x)                   ℓ (x, 𝑦; 𝑓𝜃 (x))𝑑𝑦                                       (5)
+                    L𝑖𝑑𝑒𝑎𝑙 = E (x,𝑦)∼𝑝 (x,𝑦) ℓ (𝑦, 𝑓𝜃 (x)),                 (1)                                               𝑞(x, 𝑦)
+                                                                                                      ∫                 ∫
+where (x, 𝑦) is the training samples drawn from the ground-truth                                              𝑝 (x)                   𝑝 (𝑦|x)
+                                                                                                    = 𝑞(x)           𝑑𝑥 𝑞(𝑦 | x)               ℓ (x, 𝑦; 𝑓𝜃 (x))𝑑𝑦                                (6)
+distribution 𝑝 (x, 𝑦), and ℓ denotes the classification loss, e.g., the                                       𝑞(x)                    𝑞(𝑦|x)
+                                                                                                      ∫           ∫
+widely used cross-entropy loss. However, as mentioned above, due                                                              𝑝 (𝑦|x)
+                                                                                                    ≈ 𝑞(x)𝑑𝑥 𝑞(𝑦 | 𝑥)                   ℓ (x, 𝑦; 𝑓𝜃 (x))𝑑𝑦                                       (7)
+to the introduction of the observation window, the clicks with con-                                                           𝑞(𝑦|x)
+versions that happened outside the observation window will firstly                                       ∑︁ h 𝑝 (𝑦𝑖 = 1 | x𝑖 )
+be treated as fake negatives. Thus, the observation distribution                                    ≈             𝑦𝑖                 log 𝑓𝜃 (x𝑖 )
+                                                                                                                     𝑞(𝑦𝑖 = 1 | x𝑖 )
+                                                                                                          (x𝑖 ,𝑦𝑖 ) ∈D
+𝑞(x, 𝑦) is always biased from the ground-truth distribution 𝑝 (x, 𝑦).
+More specifically, as illustrated in Figure 1, there are four types of                                                  𝑝 (𝑦𝑖 = 0 | x𝑖 )                 i
+                                                                                                      + (1−𝑦𝑖 )                          log(1− 𝑓𝜃 (x𝑖 )) ,                                      (8)
+samples in the online advertising system:                                                                               𝑞(𝑦𝑖 = 0 | x𝑖 )
+• Immediate Positive(IP), e.g.,𝑑 < 𝑤𝑜 . The samples convert inside                      where D is the observed dataset. The difference among these pub-
+   the observation window are labeled as immediate positive.                            lished methods mainly lies in:
+WWW ’22, April 25–29, 2022, Virtual Event, Lyon, France                                                                                     Yu Chen, et al.
+
+
+Table 3: The label disparsity of observed distribution and ac-             4      METHODOLOGY
+tual distribution after attribution in terms of four sample
+                                                                           In this section, we present our proposed method DElayed Feedback
+types. The observability denotes whether the model can dis-
+                                                                           modeling with UnbiaSed Estimation (DEFUSE) in detail. We First
+tinguish the sample type during streaming training.
+                                                                           introduce our correction of unbiased estimation, which respectively
+                                                                           weight the importance of four types of samples. We then propose
+                                   IP        FN      RN       DP           a two-step optimization for DEFUSE. Finally, to further reduce
+                                                                           the influence caused by the observed bias distribution, we devise
+             observability        True      False   False    True
+                                                                           a bi-distribution modeling framework to sufficiently utilize the
+            observed label         1          0       0       1
+                                                                           immediate conversion under the actual distribution. Note that our
+            attributed label       1          1       0       1
+                                                                           DEFUSE is applicable for different training pipelines, but for ease
+                                                                           of description, we will introduce our approach on top of the design
+                                                                           of the training pipeline in ES-DFM.
+(1) Different designs of the training pipeline, e.g. choice of 𝑤𝑜 and
+    the definition of duplicated samples as illustrated in Figure 2,       4.1         Unbiased Delayed Feedback Modeling
+    which eventually results in different formulations of 𝑞(𝑦 | x)         As we describe in Section 3.2.1, our goal is to achieve unbiased
+(2) Different choices of modelling 𝑝 (𝑑 > 𝑤𝑜 | x, 𝑦 = 1) or 𝑝 (𝑑 >         delayed feedback modeling by further optimizing the loss of the
+    𝑤𝑜 |𝑦 = 1)𝑝 (𝑦 = 1|𝑥), etc.                                            fake negative samples. From Equation (5,12), we can obtain the
+   As demonstrated in Figure 2, FNW/FNC [10] firstly sets 𝑤𝑜 =             unbiased estimation as:
+0 and marks all clicks as negative samples at click time and all                  ∫        ∫
+                                                                                                     𝑝 (x) 𝑝 (𝑦 (𝑣, 𝑑)|x)
+positive samples are collected and replayed as DP at conversion             L𝑢𝑏 = 𝑞(x)𝑑𝑥 𝑞(𝑣 | 𝑥)                         ℓ (x, 𝑦 (𝑣, 𝑑); 𝑓𝜃 (x))𝑑𝑣 .
+                                                                                                     𝑞(x) 𝑞(𝑣 |x)
+time; ES-DFM [27] and DEFER [5] keep a reasonable observation                                                                                    (13)
+time 𝑤𝑜 , hence clicks with conversions happened within 𝑡 0 +𝑤𝑜 can
+be correctly labelled as IP. The only difference between ES-DFM               Where ℓ (x, 𝑦 (𝑣, 𝑑); 𝑓𝜃 (x)) is the loss function for observed sam-
+and DEFER is that ES-DFM only replay delayed positives while               ples with label 𝑦 (𝑣, 𝑑). Typically, Previous approaches eliminate
+                                                                           𝑝 (x)
+DEFER duplicates all clicks(including IP and RN). Both ES-DFM              𝑞 (x) by assuming 𝑝 (x) ≈ 𝑞(x) [10, 27] or design proper training
+and DEFER choose to model 𝑓𝑑𝑝 (x) = 𝑝 (𝑑 > 𝑤𝑜 , 𝑦 = 1 | x) = 𝑝 (𝑑 >        pipeline to guarantee equal feature distribution [5].
+𝑤𝑜 | x, 𝑦 = 1)𝑝 (𝑦 = 1 | x) as a whole. Such differences of these
+                                                                           4.1.1 Importance weighting of DEFUSE. In this work, different from
+methods in sample duplicating mechanisms eventually result in
+                                                                           previous works that focus on the duplicating mechanism, we aim
+their different formulation of 𝑞(𝑦|𝑥) as shown in equation (9), (10)
+                                                                           for unbiased CVR estimation by properly evaluating the importance
+and (11), respectively.
+                                                                           weight for ℓ (x, 𝑦 (𝑣, 𝑑); 𝑓𝜃 (x)). As shown in Table 3, the observed
+                                                                           samples can be formally divided into four parts. Intuitively, if we
+                                                1                          have all labels of each part, the Equation (13) can be rewritten as:
+                𝑞 fnw (𝑦 = 0 | x) =                                  (9)
+                                        1 + 𝑝 (𝑦 = 1 | x)                          ∫        h∑︁                                                       i
+                                        𝑝 (𝑦 = 0 | x) + 𝑓𝑑𝑝 (x)              L𝑢𝑏 = 𝑞(x)           𝑞(𝑣𝑖 | 𝑥)𝑤𝑖 (x, 𝑦 (𝑣𝑖 , 𝑑))ℓ (x, 𝑦 (𝑣𝑖 , 𝑑); 𝑓𝜃 (x)) 𝑑𝑥,
+              𝑞 esdfm (𝑦 = 0 | x) =                                 (10)                        𝑣𝑖
+                                           1 + 𝑓𝑑𝑝 (x)
+                                                                                                                                                      (14)
+                                                     1
+               𝑞 defer (𝑦 = 0 | x) = 𝑝 (𝑦 = 0 | x) + 𝑓𝑑𝑝 (x),       (11)                  𝑝 (x,𝑦 (𝑣 ,𝑑))                                          Í
+                                                     2                     where 𝑤𝑖 = 𝑞 (x,𝑣𝑖 ) and 𝑖 ∈ {𝐼𝑃, 𝐹 𝑁 , 𝑅𝑁 , 𝐷𝑃 }, subject to 𝑣𝑖 =
+                                                                                              𝑖
+3.2.1 Limitations. Despite their success in bias reduction, we no-         1 and 𝑣𝑖 ∈ {0, 1}. Note that present works merely model the ob-
+tice that these published methods still failed to achieve unbiased         served positives and negatives in Equation (8), which ignore the
+CVR prediction due to a hidden flaw introduced while deriving the          impact of fake negatives(FN) and lead to bias in label distribution.
+formulation of 𝑤 (x, 𝑦). Normally, importance sampling assumes             To solve equation (14), we first introduce a latent variable 𝑧, which
+no value modification during the transition from 𝑝 (x, 𝑦) to 𝑞(x, 𝑦),      is used to inference whether an observed negative is FN or not,
+whereas in CVR prediction as mentioned in Section 3.1, even for            then respectively modeling the importance weights 𝑤𝑖 of these four
+the same clicks, observed label from 𝑞(x, 𝑦) can be temporarily            types of observed samples. Thus, equation (14) is equivalent to:
+deviated to ground-truth label from 𝑝 (x, 𝑦). More specifically and              min L𝑢𝑏
+rigorously, if we distinguish the observed label as 𝑣 and re-express              𝜃
+                                                                                     ∫
+the biased distribution as 𝑞(x, 𝑣), we have:
+                                                                                            h
+                                                                               ⇔ min 𝑞(x) 𝑣 (𝑤 𝐷𝑃 𝑙𝑜𝑔𝑓𝜃 (x) + I𝐼 𝑃 (𝑤 𝐼 𝑃 − 𝑤 𝐷𝑃 ) log 𝑓𝜃 (x))
+                                                                                  𝜃
+                                
+                                 1,       𝑣=1                                                                                              i
+                                                                                 + (1 − 𝑣)(𝑤 𝐹 𝑁 log 𝑓𝜃 (x)𝑧 + 𝑤 𝑅𝑁 log(1 − 𝑓𝜃 (x))(1 − 𝑧)) 𝑑𝑥
+                                
+                                
+                                
+                  𝑦 = 𝑦 (𝑣, 𝑑) = 0,        𝑣 = 0, 𝑑 = +∞            (12)
+                                
+                                 1,                                                                                                           (15)
+                                           𝑣 = 0, 𝑑 > 𝑤𝑜 .
+                                
+                                
+                                                                               𝑠.𝑡 .
+   As a result, fake negative samples which should be denoted as
+𝑝 (𝑑 >𝑤𝑜 ,𝑦=1|x)                                                                                𝑤 𝐼 𝑃 (x) = 𝑤 𝑅𝑁 (x) = 1 + 𝑓𝑑𝑝 (x)
+    𝑞 (𝑦=0|x)    , are falsely treated as real negative in equation (8),
+leading to suboptimal performance and biased CVR prediction.                                    𝑤 𝐷𝑃 (x) + 𝑤 𝐹 𝑁 (x) = 1 + 𝑓𝑑𝑝 (x),
+Asymptotically Unbiased Estimation for Delayed Feedback Modeling via Label Correction                                WWW ’22, April 25–29, 2022, Virtual Event, Lyon, France
+
+
+                               pcvr                                                       is relatively sparse. As such, we strive to build an alternative learn-
+       Inw Data                               Outw Data
+                                                                                          ing framework that can fully exploit samples from the observed
+                                                                                          distribution directly.
+                                                                                              Recall that, distinct from previous methods merely using the
+                                                                                          observed positive and negative samples, we divide the samples into
+         Inw Gate                        Outw Gate         Desired/Observed inw data
+
+                                                           IP FN        RN
+                                                                                          four types. The IP and DP denote the immediate conversion and
+                                                            Desired outw data             the delay conversion, respectively.
+          Inw Exp         Share Exp      Outw Exp         RN DP         RN                    We thus adopt an multi-task learning [11, 15, 19, 26] framework
+                                                            Observed outw data
+
+                                                          RN FN         RN       DP
+                                                                                          to jointly optimizing following subtasks: 1) In window(Inw) model:
+                         Shared Layers
+                                                                                          predicting the IP probability F𝐼 𝑃 (x) = 𝑝 (𝑦 = 1, 𝑑 ≤ 𝑤𝑜 | x)
+                  (a) Model architecture.                 (b) Labeled data.               within the observation window 𝑤𝑜 . 2) Out window(Outw) model:
+                                                                                          predicting the DP probability F𝐷𝑃 (x) out of 𝑤𝑜 . Then the overall
+Figure 3: An illustration of Bi-Distribution model, where                                 conversion probability can be formalized as:
+Exp, Share Exp, Outw Exp respectively denotes the single                                                       𝑝 (𝑦 = 1 | x) = F𝐼 𝑃 (x) + F𝐷𝑃 (x).                     (18)
+layer in_window, shared, and out_window expert network.
+                                                                                             It’s worth mentioning that, as demonstrated in Figure 3b, for
+                                                                                          task 1), the samples used are nonduplicate and correctly labeled,
+where 𝑤 𝐼 𝑃 (x), 𝑤 𝐷𝑃 (x), 𝑤 𝐹 𝑁 (x), 𝑤 𝑅𝑁 (x) denotes the importance                     so the F𝐼 𝑃 (x) model can be directly trained upon the ground-truth
+weights; I𝐼 𝑃 is the indicator of observed immediate positives. Em-                       distribution without bias. For task 2), the F𝐷𝑃 (x) model has to
+pirically, we set 𝑤 𝐷𝑃 (x) = 1 and 𝑤 𝐹 𝑁 (x) = 𝑓𝑑𝑝 (x) since 𝐷𝑃 can be                    be trained on a biased observed distribution identical to that of
+observed. A detailed proof is given in the supplementary material.                        FNW [10] with 𝑤𝑜′ = 0. Thus, we implement our DEFUSE to the
+   Compared with the standard cross-entropy loss, we integrate an                         F𝐷𝑃 (x) model to achieve unbiased estimation with importance
+auxiliary task 𝑓𝑑𝑝 (x) to model the importance weights 𝑤𝑖 for each                        sampling. Similar to the derivation of equation (15), we have:
+                                                                                                   ∫
+type of sample, rather than directly using the observed label.
+                                                                                                                   h                                                 i
+                                                                                           L𝐼 𝑃 =      𝑝 (x, 𝑦𝐼 𝑃 ) 𝑦𝐼 𝑃 log 𝑓𝐼 𝑃 (x) + (1 − 𝑦𝐼 𝑃 ) log(1 − 𝑓𝐼 𝑃 (x)) 𝑑𝑥
+4.1.2 Optimization. Hereafter, the remaining question is how to                                                                                                        (19)
+optimize the unbiased loss function. Since the 𝑧 is inaccessible in                                  ∫              h
+                                                                                                                            ′
+Equation (15), we implement a two-step optimization by introduc-                          L𝐷𝑃 =          𝑞(x, 𝑣 𝐷𝑃 ) 𝑣 𝐷𝑃 𝑤 𝐷𝑃 (x) log 𝑓𝐷𝑃 (x)
+ing another auxiliary model 𝑧 (x) predicting the hidden 𝑧 to further
+decouple the observed negative samples into real negative and fake                                 + (1 − 𝑣 𝐷𝑃 )𝑤 𝐹′ 𝑁 (x)𝑧 ′ (x) log 𝑓𝐷𝑃 (x)
+                                                                                                                                                      i
+negative samples:                                                                                                 ′
+                                                                                                   + (1 − 𝑣 𝐷𝑃 )𝑤 𝑅𝑁 (x)(1 − 𝑧 ′ (x)) log(1 − 𝑓𝐷𝑃 (x)) 𝑑𝑥,             (20)
+  L𝑛𝑒𝑔 =𝑧 (x)𝑤 𝐹 𝑁 log 𝑓𝜃 (x) + (1 − 𝑧 (x))𝑤 𝑅𝑁 log(1 − 𝑓𝜃 (x)) (16)                      𝑠.𝑡 .
+                                                                                                    ′
+where                                                                                             𝑤 𝐷𝑃 (x) + 𝑤 𝐹′ 𝑁 (x) = 1 + 𝑓𝑑𝑝 (x),       ′
+                                                                                                                                           𝑤 𝑅𝑁 (x) = 1 + 𝑓𝑑𝑝 (x),
+                                 𝑝 (𝑦 = 1, 𝑑 > 𝑤𝑜 | x)                                     where 𝑝 (𝑥, 𝑦𝐼 𝑃 ), 𝑞(x, 𝑣 𝐷𝑃 ) respectively denote distributions of the
+              𝑧 (x) =                                          ,                   (17)
+                         𝑝 (𝑦 = 0 | x) + 𝑝 (𝑦 = 1, 𝑑 > 𝑤𝑜 | x)                            training datasets for the sub-tasks, 𝑤 𝐷𝑃  ′ (x), 𝑤 ′ (x), and 𝑤 ′ (x)
+                                                                                                                                              𝐹𝑁            𝑅𝑁
+where 𝑧 (x) is the fake negative probability, denotes the probability                     are the importance weights, and 𝑧 ′ (x) as the hidden model to fur-
+that an observed negative is a ground truth positive.                                     ther infer fake negatives. Finally, we devise our multi-task learning
+   In practice, we implement two ways to model the 𝑧 (x):                                 architecture as illustrated in Figure 3a to learn the desired CVR
+                                                                                          model by jointly optimizing the union loss:
+• 𝑧 1 (x) = 1 − 𝑓𝑟𝑛 (x). This adopts a binary classification model
+  𝑓𝑟𝑛 (x) to predict the probability of an observed negative being                                                       L = L𝐼 𝑃 + L𝐷𝑃 .                              (21)
+  a real negative [27]. For the training of 𝑓𝑟𝑛 model, the observed                          By doing so, we divide the delayed feedback modeling into an
+  positives are excluded, then the negatives are labeled as 1 and                         unbiased 𝑖𝑛_𝑤𝑖𝑛𝑑𝑜𝑤 prediction and an importance sampling-based
+  the delayed positives are labeled as 0.                                                 𝑜𝑢𝑡_𝑤𝑖𝑛𝑑𝑜𝑤 prediction task. Note that only the second part needs
+                   𝑑𝑝𝑓   (x)
+• 𝑧 2 (x) = 𝑓 (x)+1−𝑓         . This adopts the CVR model 𝑓𝜃 (x) and                      to be trained with importance weights and hidden variable 𝑧, which
+              𝑑𝑝        𝜃 (x)
+  delay model 𝑓𝑑𝑝 (x) to indirectly model the fake negative proba-                        implies that the negative impact introduced by the high variance
+  bility. For the learning of 𝑓𝑑𝑝 (x), the delayed positives are labeled                  of inferring 𝑤 and 𝑧 can be effectively limited.
+  as 1, the others are labeled as 0.
+                                                                                          5       EXPERIMENTS
+4.2     Bi-Distribution Modeling                                                          In this section, we first describe experimental settings and then con-
+Although theoretically unbiased, a potential drawback of our DEFUSE                       duct experiments on both public and industry advertising datasets
+is that the estimation of importance weights 𝑤, hidden model 𝑧 (x)                        to evaluate our proposed model by answering the following re-
+and especially the multiplicative term 𝑧 (x)𝑤 𝐹 𝑁 and (1 − 𝑧 (x))𝑤 𝑅𝑁                     search questions:
+may cause high variance. This typically implies slow convergence                          • RQ1 How does DEFUSE perform on streaming CVR prediction
+and leads to sub-optimal performance, especially when the feedback                           tasks as compared to other state-of-the-art methods?
+WWW ’22, April 25–29, 2022, Virtual Event, Lyon, France                                                                                           Yu Chen, et al.
+
+
+                                                        Table 4: Statistic of Criteo and Taobao Dataset.
+
+                        Dataset              #Users            #Items       #Features    #Conversions      #Samples     avg CVR     Duration
+                      Criteo                   -                 5443          17          3619801        15898883        0.2269     60 days
+                  Taobao Dataset          382 million        10.6 million      23         208 million     5.2 billion    0.04005     21 days
+
+
+• RQ2 How does DEFUSE perform under different duplicating                               To demonstrate the relative improvement over the pretrained model,
+  mechanisms?                                                                           follow previous works [5, 27], we also evaluate the RI-AUC as:
+• RQ3 How do different components (e.g., hidden variable esti-
+  mation, observation window size) and hyper-parameter settings                                                  AUCDEFUSE − AUCPre−trained
+                                                                                             RI−AUCDEFUSE =                                 × 100%.
+  affect the results of DEFUSE?                                                                                  AUCOracle − AUCPre−trained
+                                                                                        This indicates the relative improvements for DEFUSE. Obviously,
+5.1     Datasets                                                                        the closer the relative improvement to 100%, the better the method
+We evaluate our experiment on both public and industrial datasets.                      performs.
+The statistics of the processed datasets are shown in Table 4.
+• Criteo 1 is the well-researched public dataset for the delayed                        5.2.2 Baselines. We compared our DEFUSE with the following
+  feedback modeling task [2, 5, 10]. It is collected from the Criteo                    state-of-the-art methods:
+  live traffic data in a period of 60 days with 30 days attribution                     • Pre-trained: This model is trained by the first part of data but
+  window. we use the click and pay(if exists) timestamps and all                          without continuous training on the streaming data. The rest
+  the hashed categorical features and continuous features for train                       methods are all finetuned on top of this model during streaming
+  and evaluation. In particular, since 30 days attribution period is                      simulation.
+  unbearable for industrial online advertising, we further derive                       • Oracle: A model finetuned with the ground-truth label other
+  a one-day attribution version, namely Criteo-1d, which uses                             than the observed label, which denotes the upper bound of the
+  samples that convert within one day as positive.                                        delayed feedback modeling.
+• Taobao Dataset is collected from the daily click and conversion                       • Vanilla: A model training with the waiting window but without
+  logs in Taobao systems. The industrial dataset contains about                           any duplicate samples, using standard cross-entropy loss.
+  5.2 billion interactions between nearly 400 million users and 10                      • Vanilla-Win: Vanilla-Win is trained on the streaming data with
+  million items. We set 𝑤𝑎 = 1 day to wait for the actual label for                       a waiting window. DP samples are duplicated with the actual
+  each sample.                                                                            label and re-sent to the training pipeline after conversion.
+5.1.1 Data Stream. We divide each dataset into two parts to sim-                        • FNW [10]: A model finetuned on top of the Pre-trained model
+ulate the streaming training environment. Specifically, the first                         using the fake negative weighted loss.
+shuffled part is used for pre-training a well-initiallized model. To                    • FNC [10]: A model finetuned on top of the Pre-trained model
+prevent label leakage, we refer to the practice of [5] and set the la-                    using the fake negative calibration loss.
+bels as 0 if the conversion occurs in the second part of the data. For                  • ES-DFM [27]: It is trained on the same streaming data as Vanilla-
+the second part, observed samples are sorted by click time except                         Win but introduces auxiliary tasks and using the ES-DFM loss.
+that the delayed and duplicated samples are ordered by conversion                       • DEFER [5]: This model is trained on the DEFER pipeline as
+time. We then divide the data into pieces by hour. To simulate the                        illustrated in Figure 2 with the DEFER loss.
+online streaming, we train models on the 𝑡-th hour data and test                        We also tried DFM [2] but found that the delayed feedback loss is
+them on the 𝑡 + 1-th hour. The reported metrics are the weighted                        difficult to converge on our sizeable industrial dataset due to the
+average across different hours on streaming data.                                       difficultly of estimating the delay time based on a strong distribution
+                                                                                        assumption. Hence, although it achieved promising performance
+5.2     Experimental Setting                                                            in Criteo, we did not select it for comparison.
+5.2.1 Evaluation Metrics. We applied three widely used evaluation
+                                                                                        5.2.3 Parameter Settings. We implement the DEFUSE in Tensor-
+metrics to evaluate the streaming CVR prediction performance:
+                                                                                        flow. For a fair comparison, we tune the parameter settings of
+• AUC is the area under ROC curve which assesses the pairwise                           each model. The hidden units are fixed for all models with hidden
+   ranking performance of the classification results between the                        size {256, 256, 128}. The Leaky ReLU [16] and BatchNorm layer [7]
+   conversion and non-conversion samples.                                               are attached to each hidden layer. All methods are trained with
+• PR-AUC is the area under the precision-recall curve, which is                         Adam [9] for optimization. For the basic parameter settings of all
+   more sensitive than AUC in skewed data for CVR prediction task.                      models, we apply the grid search strategy to tune the coefficient
+• NLL is originally used in DFM [2], which is sensitive to the                          of 𝐿2 normalization in {0.0001, 0.0005, 0.001, 0.01} and search the
+   absolute value of the CVR prediction. In a CPA model, the pre-                       learning rate among {0.0001, 0.0005, 0.001}, or directly copy the
+   dicted probabilities are important since they are directly used to                   best parameter settings reported in the original papers [10, 27].
+   compute the value of an impression.                                                  Moreover, we tune the waiting window in {0.25, 0.5, 1} hour. The
+1 https://labs.criteo.com/2013/12/conversion-logs-dataset/                              same pretrained model is used to initialize the online models.
+Asymptotically Unbiased Estimation for Delayed Feedback Modeling via Label Correction                          WWW ’22, April 25–29, 2022, Virtual Event, Lyon, France
+
+
+Table 5: The overall performance comparison in terms of AUC, RI-AUC, PR-AUC, and NLL. The results in terms of RI-PR-AUC
+and RI-NLL are omitted due to space constraints and similar trends. Bold indicates the top-performing method.
+
+ Dataset                            Criteo-30d                                          Criteo-1d                                  Taobao Dataset
+ Metrics             AUC        RI-AUC      PR-AUC           NLL        AUC      RI-AUC        PR-AUC        NLL        AUC      RI-AUC       PR-AUC           NLL
+ Pre-trained        0.8307           0%        0.6251      0.4009     0.8285          0%         0.5218    0.3001      0.8015          0%        0.6074      0.1516
+ Vanilla            0.8098     -108.29%        0.5902      0.5453     0.8384      53.38%         0.5408    0.3088      0.8047      32.65%        0.6168      0.1504
+ Vanilla-Win        0.8375       35.23%        0.6288      0.4055     0.8385      52.91%         0.5408    0.3088      0.8059      44.90%        0.6169      0.1495
+ Oracle             0.8500        100%         0.6468      0.3869     0.8474       100%          0.5519    0.2874      0.8113       100%         0.6197      0.1470
+ FNC                0.8373       34.20%        0.6222      0.4688     0.8343      30.69%         0.4806     0.3145     0.8053      38.78%        0.6150      0.1495
+ FNW                0.8376       35.75%        0.6310      0.3971     0.8348      33.33%         0.4982     0.3367     0.8054      39.80%        0.6148      0.1497
+ ES-DFM             0.8396       46.11%        0.6384      0.3947     0.8459      92.06%         0.5492    0.2885      0.8066      52.04%        0.6155      0.1494
+ DEFER              0.8382       38.86%        0.6338      0.4800     0.8463      94.17%         0.5490     0.3098     0.8065      51.02%        0.6153      0.1529
+ DEFUSE            0.8408       52.33%        0.6400      0.3946      0.8465      95.24%          0.5490   0.3086      0.8069     55.10%         0.6177     0.1489
+ Bi-DEFUSE          0.8379      37.31%         0.6301      0.3963    0.8467       96.30%         0.5499    0.3092     0.8080      66.33%        0.6185       0.1512
+
+
+5.3     Performance Comparison (RQ1)                                                    Table 6: Performance of DEFUSE under different duplicat-
+                                                                                        ing mechanisms in Criteo.
+To demonstrate the overall performance of DEFUSE, we conduct
+5 random runs on the Criteo and Taobao Dataset, and report the
+average results of all methods in Table 5. The best-performing                                Dataset                  Criteo-30d               Criteo-1d
+method is boldfaced. Analyzing such performance comparison, we                                Metrics                 AUC       RI-AUC       AUC      RI-AUC
+have the following observations:
+                                                                                              FNW                    0.8376     35.75%      0.8348      33.33%
+• Our approach consistently yields significant improvements on                                FNW+DEFUSE             0.8393     44.60%      0.8351      34.92%
+  all the datasets. In particular, DEFUSE and Bi-DEFUSE improves
+                                                                                              ES-DFM                 0.8396     46.11%      0.8459      92.06%
+  over the strongest baselines 𝑤 .𝑟 .𝑡 . RI-AUC by 6.22%, 2.13%, and
+                                                                                              ES-DFM+DEFUSE          0.8408     52.33%      0.8465      95.24%
+  15.31% in Criteo-30d, Criteo-1d, and Taobao Dataset, respectively.
+  Unlike previous approaches that only utilize the observed posi-                             DEFER                  0.8382     38.86%      0.8463      94.17%
+  tive and negative samples during importance sampling, we divide                             DEFER+DEFUSE           0.8387     41.45%      0.8466      95.77%
+  the observed distribution into four types of feedbacks and intro-
+  duce an auxiliary task to infer fake negatives from the observed
+  negatives. Moreover, on Criteo-1d, our method can narrow the                            a result can be attributed to the distribution bias caused by the
+  delayed feedback gap significantly compared to other methods                            long-term attribution window — it ingests real negative samples
+  by comparing the relative metrics, RI-AUC. Note that as reported                        from 30 days before into the training pipeline.
+  in [30], a small improvement of offline AUC can lead to a signif-
+  icant increase in streaming CTR. In our scenario, even 0.1% of                        5.4     Experiments under Different Duplicating
+  AUC improvement in CVR prediction is substantial and achieves
+                                                                                                Mechanisms (RQ2)
+  significant online promotion.
+• ES-DFM and DEFER generally achieve better performance than                            Recall that, our DEFUSE is unbiased and can be applied to different
+  FNW and FNC. Such improvement can be attributed to the dupli-                         duplicating mechanisms. To further verify the performance, we
+  cating mechanism with a properly tuned 𝑤𝑜 , which provides a                          have conducted experiments using different training pipelines on
+  good balance for the trade-off between label accuracy and sam-                        Criteo dataset applied by FNW, ES-DFM and DEFER respectively,
+  ple freshness. Comparison between Vanilla-Win and Vanilla also                        and report the AUC and RI-AUC results in Table 6. In general, by
+  indicates the importance of duplicating mechanisms.                                   label correction and weighting the importance of four types of
+• Compared with the pre-trained model, almost all the continuous                        observed samples, our unbiased estimation demonstrates consis-
+  learning methods demonstrate promising performance. This ver-                         tent improvement on performance among the three duplicating
+  ifies the significant advantages of utilizing fresh samples for CVR                   pipelines.
+  prediction. Vanilla performs poorly on Criteo-30d but obtains a
+  better result on Criteo-1d, possibly caused by the fact that the                      5.5     Study of DEFUSE (RQ3)
+  observed distribution deviated much more from the ground-truth                        Ablation studies on DEFUSE are also conducted to investigate the
+  distribution with longer 𝑤𝑎 . This also indicates the importance                      rationality and effectiveness of some designs — to be more specific,
+  of utilizing all conversions and performing unbiased estimation                       (1) how different estimations of hidden variable 𝑧 may affect perfor-
+  with delayed feedback modeling. Moreover, DEFER also demon-                           mance, (2) contributions of each components of Bi-DEFUSE, and
+  strates similar performance when compared with ES-DFM. Such                           (3) influence of different attribution window length 𝑤𝑎 .
+WWW ’22, April 25–29, 2022, Virtual Event, Lyon, France                                                                                                                          Yu Chen, et al.
+
+
+Table 7: Impact of the ways of hidden variable inference
+𝑤 .𝑟 .𝑡 . AUC and RI-AUC in Criteo.                                                                0.845                       DEFUSE                               DEFUSE
+                                                                                                                              Bi-DEFUSE                            Bi-DEFUSE
+
+
+
+
+                                                                                                                                          PR-AUC
+                                                                                             AUC
+                                                                                                                                                   0.600
+
+      Dataset                          Criteo-30d                Criteo-1d                         0.840
+
+      Metrics                       AUC      RI-AUC          AUC          RI-AUC                                                                   0.550
+                                                                                                           1d     3d     7d   14d  30d                     1d     3d     7d   14d  30d
+                                                                                                                attribution window                              attribution window
+      DEFUSE+𝑧 1                  0.8408     52.33%        0.8465           96.30%
+      DEFUSE+𝑧 2                  0.8405     50.78%        0.8464           94.71%
+      DEFUSE+𝑧 oracle             0.8426     61.66%        0.8468           96.83%       Figure 5: The effect of different window length for 𝑤𝑎 .
+
+
+                                                                                     • ind uniformly dominates, indicating that IPs and DPs can be
+                   Bi-DEFUSE                                           Bi-DEFUSE
+          0.8500   w/o IOGate
+                                              0.6500
+                                                                       w/o IOGate      greatly different, independent models effectively avoid the con-
+                   ind                                                 ind
+          0.8450                                                                       flict caused by predicting both IPs and long DPs using shared
+                                              0.6000
+          0.8400                                                                       models. Yet, ind is highly impractical in industrial scenarios, since
+          0.8350                              0.5500                                   it doubles the computational and storage consumption.
+          0.8300                              0.5000                                 • Bi-DEFUSE still achieves comparable performance with ind on
+                   Criteo-30d    Criteo-1d             Criteo-30d     Criteo-1d        Criteo-1d, likely a result of the fact that smaller 𝑤𝑎 not only
+                           (a) AUC                            (b) PR-AUC
+                                                                                       greatly raises the ratio of IPs, making the unbiased estimation
+                                                                                       of IPs more decisive; but also effectively limits the difference
+              Figure 4: Ablation study for Bi-DEFUSE.                                  between IPs and DPs, allowing the introduction of shared net-
+                                                                                       works.
+
+                                                                                     5.5.3 Performance of Bi-DEFUSE 𝑤 .𝑟 .𝑡 . different 𝑤𝑎 . As im-
+5.5.1 Impact of the estimation of 𝑧 (𝑥). Since fake negatives                        plied in Table 5 , performance of Bi-DEFUSE may degrade with
+are falsely labelled, a hidden variable 𝑧 is further introduced to                   long 𝑤𝑎 . Towards this end, we investigate the influence of different
+infer whether the observed negatives are fake negatives. We hence                    attribution windows in depth. Since DEFUSE consistently outper-
+implement an additional auxiliary model — 𝑧 (𝑥) that directly pre-                   forms baseline methods, for clear comparison, we only evaluate the
+dicts FNs from observed negatives. As introduced in Section 4.1.2,                   performance of DEFUSE and Bi-DEFUSE with 𝑤𝑎 = {1, 3, 7, 14, 30}
+different choices of modelling 𝑧 (𝑥) is experimented. Besides, to                    days on the Criteo dataset. Results reported in Figure 5 suggest
+further explore the upper bound of our two-step optimization, we                     that Bi-DEFUSE achieves the better performance with smaller 𝑤𝑎 ,
+additionally investigate the ideal performance of DEFUSE given                       e.g., 𝑤𝑎 ≤ 7 in terms of AUC and PR-AUC, since smaller 𝑤𝑎 not
+𝑧𝑜𝑟𝑎𝑐𝑙𝑒 ∈ {0, 1}, which indicates the ground-truth label for 𝑧. As                   only makes the unbiased prediction of IPs more important, but also
+shown in Table 7, here are some observations:                                        implies smaller challenges in estimating 𝑧 (𝑥) and predicting DPs,
+• DEFUSE+𝑧 1 consistently outperforms DEFUSE+𝑧 2 . We credit                         which greatly amplifies the advantages of Bi-DEFUSE.
+  such improvement to the reduction of high variance of 𝑧 (𝑥).
+  Prediction of 𝑧 2 (𝑥) obviously involves divisions between two                     5.6    Online Evaluation
+  independent models, which may lead to unstable estimation and                      We conducted an A/B test in our online scenario to evaluate the
+  sub-optimal performance.                                                           proposed Bi-DEFUSE framework. We set 30min observation win-
+• DEFUSE+𝑧𝑜𝑟𝑎𝑐𝑙𝑒 achieves best performance uniformly, this in-                       dow and 1day attribution window and observed a steady perfor-
+  dicates the potential of optimizing our unbiased estimation by                     mance improvement in terms of CVR(+2.28%). This align with our
+  further improving the prediction of 𝑧 (𝑥).                                         offline streaming results and demonstrates the effectiveness of our
+• We also notice that the gap between +𝑧 1 and +𝑧𝑜𝑟𝑎𝑐𝑙𝑒 on Criteo-                   DEFUSE in industrial systems.
+  1d is smaller than that on Criteo-30d, indicating that lower pro-
+  portion of fake negatives with relatively shorter attribution win-                 6     CONCLUSION
+  dow makes it easier to estimate 𝑧 (𝑥).                              In this paper, we propose an asymptotically unbiased estimation
+                                                                      method for the streaming CVR prediction, which addresses the de-
+5.5.2 Contributions of different components in Bi-DEFUSE.             lay feedback problem by weighting the importance of four types of
+To have a better understanding of Bi-DEFUSE, we do ablation study     observed samples. We carefully devise a new delayed feedback mod-
+by evaluating three formulations of Bi-DEFUSE: (1) Bi-DEFUSE as       eling approach, DEFUSE, with a two-step optimization mechanism.
+demonstrated in Figure 3a; (2) a simpler version replacing the gates, Specifically, we first infer the probability of fake negative among ob-
+experts and heads by MLPs; marked as w/o IOGate; (3) completely       served negatives, then respectively correct the importance weights
+disabling the shared network and estimating the in/out window         of each type of observed samples. Furthermore, to fully exploit
+CVR with two independent models, marked as ind. From Figure 4,        the ground-truth immediate positives, we propose a bi-distribution
+we have:                                                              modeling framework. Comprehensive experiments show that the
+• Removal of the MMoE gates and experts always degrades model         proposed DEFUSE and Bi-DEFUSE significantly outperform the
+   performance since Bi−DEFUSE consistently outperforms w/o IOGate. competitive baselines.
+Asymptotically Unbiased Estimation for Delayed Feedback Modeling via Label Correction                                WWW ’22, April 25–29, 2022, Virtual Event, Lyon, France
+
+
+REFERENCES                                                                                     2019, Ankur Teredesai, Vipin Kumar, Ying Li, Rómer Rosales, Evimaria Terzi, and
+ [1] Christopher M Bishop. 2006. Pattern recognition. Machine learning 128, 9 (2006).          George Karypis (Eds.). ACM, 2689–2697. https://doi.org/10.1145/3292500.3330783
+ [2] Olivier Chapelle. 2014. Modeling delayed feedback in display advertising. In The     [20] Ciara Pike-Burke, Shipra Agrawal, Csaba Szepesvari, and Steffen Grunewalder.
+     20th ACM SIGKDD International Conference on Knowledge Discovery and Data                  2018. Bandits with delayed, aggregated anonymous feedback. In International
+     Mining, KDD ’14, New York, NY, USA - August 24 - 27, 2014, Sofus A. Macskassy,            Conference on Machine Learning. PMLR, 4105–4113.
+     Claudia Perlich, Jure Leskovec, Wei Wang, and Rayid Ghani (Eds.). ACM, 1097–         [21] Doyen Sahoo, Quang Pham, Jing Lu, and Steven C. H. Hoi. 2018. Online Deep
+     1105. https://doi.org/10.1145/2623330.2623634                                             Learning: Learning Deep Neural Networks on the Fly. In Proceedings of the
+ [3] David S Evans. 2009. The online advertising industry: Economics, evolution, and           Twenty-Seventh International Joint Conference on Artificial Intelligence, IJCAI
+     privacy. Journal of economic perspectives 23, 3 (2009), 37–60.                            2018, July 13-19, 2018, Stockholm, Sweden, Jérôme Lang (Ed.). ijcai.org, 2660–2666.
+ [4] Avi Goldfarb and Catherine Tucker. 2011. Online display advertising: Targeting            https://doi.org/10.24963/ijcai.2018/369
+     and obtrusiveness. Marketing Science 30, 3 (2011), 389–404.                          [22] Linqi Song, Cem Tekin, and Mihaela van der Schaar. 2016. Online Learning in
+ [5] Siyu Gu, Xiang-Rong Sheng, Ying Fan, Guorui Zhou, and Xiaoqiang Zhu. 2021.                Large-Scale Contextual Recommender Systems. IEEE Trans. Serv. Comput. 9, 3
+     Real Negatives Matter: Continuous Training with Real Negatives for Delayed                (2016), 433–445. https://doi.org/10.1109/TSC.2014.2365795
+     Feedback Modeling. In KDD ’21: The 27th ACM SIGKDD Conference on Knowledge           [23] Yumin Su, Liang Zhang, Quanyu Dai, Bo Zhang, Jinyao Yan, Dan Wang, Yongjun
+     Discovery and Data Mining, Virtual Event, Singapore, August 14-18, 2021, Feida            Bao, Sulong Xu, Yang He, and Weipeng Yan. 2020. An Attention-based Model for
+     Zhu, Beng Chin Ooi, and Chunyan Miao (Eds.). ACM, 2890–2898. https://doi.                 Conversion Rate Prediction with Delayed Feedback via Post-click Calibration.
+     org/10.1145/3447548.3467086                                                               In Proceedings of the Twenty-Ninth International Joint Conference on Artificial
+ [6] Amélie Héliou, Panayotis Mertikopoulos, and Zhengyuan Zhou. 2020. Gradient-               Intelligence, IJCAI 2020, Christian Bessiere (Ed.). ijcai.org, 3522–3528. https:
+     free Online Learning in Games with Delayed Rewards. In ICML’20: The 37th                  //doi.org/10.24963/ijcai.2020/487
+     International Conference on Machine Learning.                                        [24] Claire Vernade, Olivier Cappé, and Vianney Perchet. 2017. Stochastic bandit
+ [7] Sergey Ioffe and Christian Szegedy. 2015. Batch Normalization: Accelerating               models for delayed conversions. arXiv preprint arXiv:1706.09186 (2017).
+     Deep Network Training by Reducing Internal Covariate Shift. In Proceedings of        [25] Yanshi Wang, Jie Zhang, Qing Da, and Anxiang Zeng. 2020. Delayed Feedback
+     the 32nd International Conference on Machine Learning, ICML 2015, Lille, France,          Modeling for the Entire Space Conversion Rate Prediction. CoRR abs/2011.11826
+     6-11 July 2015 (JMLR Workshop and Conference Proceedings, Vol. 37), Francis R.            (2020). arXiv:2011.11826 https://arxiv.org/abs/2011.11826
+     Bach and David M. Blei (Eds.). JMLR.org, 448–456. http://proceedings.mlr.press/      [26] Zhuojian Xiao, Yunjiang Jiang, Guoyu Tang, Lin Liu, Sulong Xu, Yun Xiao, and
+     v37/ioffe15.html                                                                          Weipeng Yan. 2021. Adversarial Mixture Of Experts with Category Hierarchy
+ [8] Pooria Joulani, Andras Gyorgy, and Csaba Szepesvári. 2013. Online learning                Soft Constraint. In 37th IEEE International Conference on Data Engineering, ICDE
+     under delayed feedback. In International Conference on Machine Learning. PMLR,            2021, Chania, Greece, April 19-22, 2021. IEEE, 2453–2463. https://doi.org/10.1109/
+     1453–1461.                                                                                ICDE51399.2021.00278
+ [9] Diederik P. Kingma and Jimmy Ba. 2015. Adam: A Method for Stochastic Opti-           [27] Jia-Qi Yang, Xiang Li, Shuguang Han, Tao Zhuang, De-Chuan Zhan, Xiaoyi Zeng,
+     mization. In 3rd International Conference on Learning Representations, ICLR 2015,         and Bin Tong. 2021. Capturing Delayed Feedback in Conversion Rate Prediction
+     San Diego, CA, USA, May 7-9, 2015, Conference Track Proceedings, Yoshua Bengio            via Elapsed-Time Sampling. In Thirty-Fifth AAAI Conference on Artificial Intelli-
+     and Yann LeCun (Eds.). http://arxiv.org/abs/1412.6980                                     gence, AAAI 2021. AAAI Press, 4582–4589. https://ojs.aaai.org/index.php/AAAI/
+[10] Sofia Ira Ktena, Alykhan Tejani, Lucas Theis, Pranay Kumar Myana, Deepak                  article/view/16587
+     Dilipkumar, Ferenc Huszár, Steven Yoo, and Wenzhe Shi. 2019. Addressing              [28] Shota Yasui, Gota Morishita, Komei Fujita, and Masashi Shibata. 2020. A Feedback
+     delayed feedback for continuous training with neural networks in CTR prediction.          Shift Correction in Predicting Conversion Rates under Delayed Feedback. In
+     In Proceedings of the 13th ACM Conference on Recommender Systems, RecSys 2019,            WWW ’20: The Web Conference 2020, Taipei, Taiwan, April 20-24, 2020, Yennun
+     Copenhagen, Denmark, September 16-20, 2019, Toine Bogers, Alan Said, Peter                Huang, Irwin King, Tie-Yan Liu, and Maarten van Steen (Eds.). ACM / IW3C2,
+     Brusilovsky, and Domonkos Tikk (Eds.). ACM, 187–195. https://doi.org/10.1145/             2740–2746. https://doi.org/10.1145/3366423.3380032
+     3298689.3347002                                                                      [29] Yuya Yoshikawa and Yusaku Imai. 2018. A Nonparametric Delayed Feed-
+[11] Kuang-chih Lee, Burkay Orten, Ali Dasdan, and Wentong Li. 2012. Estimating                back Model for Conversion Rate Prediction. CoRR abs/1802.00255 (2018).
+     conversion rate in display advertising from past erformance data. In The 18th             arXiv:1802.00255 http://arxiv.org/abs/1802.00255
+     ACM SIGKDD International Conference on Knowledge Discovery and Data Mining,          [30] Guorui Zhou, Xiaoqiang Zhu, Chenru Song, Ying Fan, Han Zhu, Xiao Ma, Yanghui
+     KDD ’12, Beijing, China, August 12-16, 2012, Qiang Yang, Deepak Agarwal, and              Yan, Junqi Jin, Han Li, and Kun Gai. 2018. Deep interest network for click-through
+     Jian Pei (Eds.). ACM, 768–776. https://doi.org/10.1145/2339530.2339651                    rate prediction. In Proceedings of the 24th ACM SIGKDD International Conference
+[12] Kuang-chih Lee, Burkay Orten, Ali Dasdan, and Wentong Li. 2012. Estimating                on Knowledge Discovery & Data Mining. 1059–1068.
+     conversion rate in display advertising from past erformance data. In Proceedings
+     of the 18th ACM SIGKDD international conference on Knowledge discovery and
+     data mining. 768–776.
+[13] Xun Liu, Wei Xue, Lei Xiao, and Bo Zhang. 2017. PBODL : Parallel Bayesian Online
+     Deep Learning for Click-Through Rate Prediction in Tencent Advertising System.
+     CoRR abs/1707.00802 (2017). arXiv:1707.00802 http://arxiv.org/abs/1707.00802
+[14] Quan Lu, Shengjun Pan, Liang Wang, Junwei Pan, Fengdan Wan, and Hongxia
+     Yang. 2017. A practical framework of conversion rate prediction for online display
+     advertising. In Proceedings of the ADKDD’17. 1–9.
+[15] Jiaqi Ma, Zhe Zhao, Xinyang Yi, Jilin Chen, Lichan Hong, and Ed H. Chi. 2018.
+     Modeling Task Relationships in Multi-task Learning with Multi-gate Mixture-
+     of-Experts. In Proceedings of the 24th ACM SIGKDD International Conference on
+     Knowledge Discovery & Data Mining, KDD 2018, London, UK, August 19-23, 2018,
+     Yike Guo and Faisal Farooq (Eds.). ACM, 1930–1939. https://doi.org/10.1145/
+     3219819.3220007
+[16] Andrew L Maas, Awni Y Hannun, Andrew Y Ng, et al. 2013. Rectifier nonlin-
+     earities improve neural network acoustic models. In Proc. icml, Vol. 30. Citeseer,
+     3.
+[17] Travis Mandel, Yun-En Liu, Emma Brunskill, and Zoran Popović. 2015. The
+     queue method: Handling delay, heuristics, prior data, and evaluation in bandits.
+     In Twenty-Ninth AAAI Conference on Artificial Intelligence.
+[18] Taesup Moon, Lihong Li, Wei Chu, Ciya Liao, Zhaohui Zheng, and Yi Chang.
+     2010. Online learning for recency search ranking using real-time user feedback.
+     In Proceedings of the 19th ACM Conference on Information and Knowledge Man-
+     agement, CIKM 2010, Toronto, Ontario, Canada, October 26-30, 2010, Jimmy Huang,
+     Nick Koudas, Gareth J. F. Jones, Xindong Wu, Kevyn Collins-Thompson, and
+     Aijun An (Eds.). ACM, 1501–1504. https://doi.org/10.1145/1871437.1871657
+[19] Junwei Pan, Yizhi Mao, Alfonso Lobos Ruiz, Yu Sun, and Aaron Flores. 2019.
+     Predicting Different Types of Conversions with Multi-Task Learning in Online
+     Advertising. In Proceedings of the 25th ACM SIGKDD International Conference on
+     Knowledge Discovery & Data Mining, KDD 2019, Anchorage, AK, USA, August 4-8,
+WWW ’22, April 25–29, 2022, Virtual Event, Lyon, France                                                                                                        Yu Chen, et al.
+
+
+A APPENDIX                                                                                    as:
+                                                                                                                        ∑︁ h
+A.1 Detailed demonstration of Equation (15)                                                                  L𝑟𝑖𝑔ℎ𝑡 =       𝑦𝐼 𝑃 log(𝑓𝜃 (x)𝑝 (𝑑 < 𝑤𝑜 | x, 𝑦 = 1))
+    and derivations of 𝑤                                                                                                + 𝑦𝐷𝑃 log(𝑓𝜃 (x)𝑝 (𝑑 > 𝑤𝑜 | x, 𝑦 = 1))
+We first provide the demonstration of the equavilant of L𝑢𝑏 , then                                                                                i
+show the detailed derivations for the importance weight 𝑤𝑖 (x, 𝑦),                                                      + (1 − 𝑦) log(1 − 𝑓𝜃 (x))                        (26)
+where 𝑖 ∈ {𝐼𝑃, 𝐹 𝑁 , 𝑅𝑁 , 𝐷𝑃 }.                                                                  Take the middle term of equation (25,26) as an example, unbiased
+                                                                                              estimation would require either
+A.1.1 Demonstration of L𝑢𝑏 . Firstly, let 𝑣 denotes the observed                                      ∑︁
+label and 𝑣 𝐼 𝑃 , 𝑣 𝐷𝑃 respectively denote the label for immediate posi-                                 [𝑣 𝐷𝑃 𝑤 𝐷𝑃 (x, 𝑦) + 𝑧 (x)(1 − 𝑣)𝑤 𝐹 𝑁 (x, 𝑦)]ℓ𝐷𝑃 (x, 𝑦)
+tive and delay positive sample, we formulate the minimization for                                     ∑︁
+                                                                                                   =     𝑦𝐷𝑃 log(𝑓𝜃 (x)𝑝 (𝑑 > 𝑤𝑜 | x, 𝑦 = 1))
+L𝑢𝑏 as:
+                      ∫                                                                       or
+                             h
+  min L𝑢𝑏 = min 𝑞(x) 𝑣 𝐼 𝑃 𝑤 𝐼 𝑃 (x, 𝑦) log 𝑓𝜃 (x)                                                  𝑣 𝐷𝑃 (x)𝑤 𝐷𝑃 (x, 𝑦) + 𝑧 (x)(1 − 𝑣)𝑤 𝐹 𝑁 (x, 𝑦) = 𝑦𝐷𝑃 (x), ∀𝑥 .       (27)
+    𝜃                𝜃
+               +𝑣 𝐼 𝑃 𝑤 𝐼 𝑃 (x, 𝑦) log 𝑝 (𝑑 ≤ 𝑤𝑜 )                                              Although directly solving 𝑤 from above equations, we can rewrite
+                                                                                              equation (27) into following expectation form:
+               +(𝑣 𝐷𝑃 𝑤 𝐷𝑃 (x, 𝑦) + 𝑧 (1 − 𝑣)𝑤 𝐹 𝑁 (x, 𝑦)) log 𝑓𝜃 (x)
+               +(𝑣 𝐷𝑃 𝑤 𝐷𝑃 (x, 𝑦) + 𝑧 (1 − 𝑣)𝑤 𝐹 𝑁 (x, 𝑦)) log 𝑝 (𝑑 > 𝑤𝑜 )                            𝐸𝑞 [𝑣 𝐷𝑃 𝑤 𝐷𝑃 (x, 𝑦) + 𝑧 (1 − 𝑣)𝑤 𝐹 𝑁 (x, 𝑦)] = 𝐸𝑝 [𝑦𝐷𝑃 ].         (28)
+                                                             i                                   Emprically, equation always stands as well as the following un-
+               +(1 − 𝑣) (1 − 𝑧)𝑤 𝑅𝑁 (x, 𝑦) log(1 − 𝑓𝜃 (x)) 𝑑𝑥,         (22)
+                                                                                              biased estimations:
+
+where 𝑧 is the latent variable. Since the derivation of L𝑢𝑏 𝑤 .𝑟 .𝑡 . 𝑓𝜃                                                   𝑓𝑑𝑝 (x)
+is irrelevant with log 𝑝 (𝑑 ≤ 𝑤𝑜 ) and log 𝑝 (𝑑 > 𝑤𝑜 ), it’s trival to                               E𝑞 [𝑣 𝐷𝑃 ] (x) =                                                    (29)
+obtain following equivalence formula:                                                                                    1 + 𝑓𝑑𝑝 (x)
+                                                                                                                            𝑓𝑑𝑝 (x)
+     min L𝑢𝑏                                                                                            E𝑞 [𝑧] (x) =                                                     (30)
+      𝜃
+                                                                                                                    1 − 𝑝 𝑤𝑖𝑛 (x)
+        ∫    h                                                                                      E𝑝 [𝑦𝐷𝑃 ] (x) = 𝑓𝑑𝑝 (x)                                              (31)
+   ⇔ min 𝑞(x) 𝑣 𝐼 𝑃 𝑤 𝐼 𝑃 (x, 𝑦) log 𝑓𝜃 (x)
+         𝜃                                                                                                                                            1 − 𝑝 𝑤𝑖𝑛 (x)
+                                                                                                    E𝑞 [1 − 𝑣] (x) = E𝑞 [1 − (𝑣 𝐼 𝑃 + 𝑣 𝐷𝑃 )] (x) =                 ,    (32)
+      + (𝑣 𝐷𝑃 𝑤 𝐷𝑃 (x, 𝑦) + 𝑧 (1 − 𝑣)𝑤 𝐹 𝑁 (x, 𝑦)) log 𝑓𝜃 (x)                                                                                          1 + 𝑓𝑑𝑝 (x)
+                                                     i
+      + (1 − 𝑣) (1 − 𝑧)𝑤 𝑅𝑁 (x, 𝑦) log(1 − 𝑓𝜃 (x)) 𝑑𝑥                                         where 𝑝 𝑤𝑖𝑛 (x) = 𝑝 (𝑦 = 1 | x)𝑝 (𝑑 < 𝑤𝑜 | x, 𝑦 = 1). With sufficient
+          ∫        h                                                                          data, which is usually abundant in digital advertising, we may
+    = min 𝑞(x) 𝑣 (𝑤 𝐷𝑃 log 𝑓𝜃 (x) + I𝐼 𝑃 (𝑤 𝐼 𝑃 − 𝑤 𝐷𝑃 ) log 𝑓𝜃 (x))                          reasonably assume following asymptotically unbiased estimation:
+         𝜃
+                                                                                                   𝑓𝑑𝑝 (x)                       𝑓𝑑𝑝     1 − 𝑝 𝑤𝑖𝑛
+        + (1 − 𝑣) (𝑤 𝐹 𝑁 log 𝑓𝜃 (x)𝑧                                                                          𝑤 𝐷𝑃 (x, 𝑦) +                         𝑤 𝐹 𝑁 (x, 𝑦) −→ 𝑓𝑑𝑝 (x).
+                                                   i                                          1 + 𝑓𝑑𝑝 (x)                     1 − 𝑝 𝑤𝑖𝑛 1 + 𝑓𝑑𝑝 (x)
+        + 𝑤 𝑅𝑁 log(1 − 𝑓𝜃 (x))(1 − 𝑧)) 𝑑𝑥,                                             (23)                                                                             (33)
+                                                                                                This leads to 𝑤 𝐷𝑃 (x, 𝑦) + 𝑤 𝐹 𝑁 (x, 𝑦) = 1 + 𝑓𝑑𝑝 (x). Likewise, we
+Intuitively, to ensure an unbiased estimation, we must have L𝑢𝑏                               may derive that 𝑤 𝐼 𝑃 (x, 𝑦) = 𝑤 𝑅𝑁 (x, 𝑦) = 1 + 𝑓𝑑𝑝 (x).
+from equation (14) equals to L𝑖𝑑𝑒𝑎𝑙 from equation (1). That is,
+                                                                                              A.2        Unbiased Estimation for other duplicating
+                                                                                                         mechanisms
+        ∫            h∑︁                                                           i
+             𝑞(x)          𝑞(𝑣𝑖 | 𝑥)𝑤𝑖 (x, 𝑦 (𝑣𝑖 , 𝑑))ℓ (x, 𝑦 (𝑣𝑖 , 𝑑); 𝑓𝜃 (x)) 𝑑𝑥
+                      𝑣𝑖                                                                      Next, we state the unbiased estimation for other duplicating mech-
+        ∫            h ∑︁                                                 i                   anisms(FNW+DEFUSE, DEFER+DEFUSE). Since the derivation pro-
+    =        𝑝 (x)               𝑝 (𝑦 (𝑣𝑖 , 𝑑) | 𝑥)ℓ (x, 𝑦 (𝑣𝑖 , 𝑑); 𝑓𝜃 (x)) 𝑑𝑥,       (24)   cess is similar, we directly show the loss form.
+                     𝑦 (𝑣𝑖 ,𝑑)
+                                                                                              A.2.1 L𝑢𝑏 for dup-mechanism in FNW. For unbiased estimation
+Empirically, we can express the left part in the form of discrete                             for the dup-mechanism in FNW, since the size of 𝑤𝑜 is 0, we divide
+summation as:                                                                                 the observed samples into 𝐷𝑃, 𝐹 𝑁 , and 𝑅𝑁 . We have following
+             ∑︁ h                                                                             unbiased loss form:
+   L𝑙𝑒 𝑓 𝑡 =     𝑣 𝐼 𝑃 𝑤 𝐼 𝑃 (x, 𝑦) log(𝑓𝜃 (x)𝑝 (𝑑 ≤ 𝑤𝑜 | x, 𝑦 = 1))                                           min L𝑢𝑏
+                                                                                                                𝜃
+               +[𝑣 𝐷𝑃 𝑤 𝐷𝑃 (x, 𝑦) + 𝑧 (x)(1 − 𝑣)𝑤 𝐹 𝑁 (x, 𝑦)]ℓ𝐷𝑃 (x, 𝑦)                                           ∫    h
+                                                               i                                             ⇔ min 𝑞(x) 𝑣𝑤 𝐷𝑃 (x, 𝑦) log 𝑓𝜃 (x)
+               +(1 − 𝑣) (1 − 𝑧 (x))𝑤 𝑅𝑁 (x, 𝑦) log(1 − 𝑓𝜃 (x)) .        (25)                                     𝜃
+                                                                                                               + 𝑧 (1 − 𝑣)𝑤 𝐹 𝑁 (x, 𝑦)) log 𝑓𝜃 (x)
+where ℓ𝐷𝑃 (x, 𝑦) = log(𝑓𝜃 (x)𝑝 (𝑑 > 𝑤𝑜 | x, 𝑦 = 1)) and 𝑧 (x) denotes
+                                                                                                                                                          i
+                                                                                                               + (1 − 𝑣)(1 − 𝑧)𝑤 𝑅𝑁 (x, 𝑦) log(1 − 𝑓𝜃 (x)) 𝑑𝑥,           (34)
+fake negative probability. Similarly, we can express the right part
+Asymptotically Unbiased Estimation for Delayed Feedback Modeling via Label Correction                          WWW ’22, April 25–29, 2022, Virtual Event, Lyon, France
+
+
+𝑠.𝑡 .                                                                                   which will lead to different estimation forms of importance weights.
+                             𝑤 𝑅𝑁 (x, 𝑦) = 1 + 𝑓𝑑𝑝−𝑓 𝑛𝑤 (x)                                       min L𝑢𝑏
+                                                                                                   𝜃
+              𝑤 𝐷𝑃 (x, 𝑦) + 𝑤 𝐹 𝑁 (x, 𝑦) = 1 + 𝑓𝑑𝑝−𝑓 𝑛𝑤 (x),                                         ∫    h
+                                                                                                ⇔ min 𝑞(x) 𝑣 𝐼 𝑃 𝑤 𝐼 𝑃 (x, 𝑦) log 𝑓𝜃 (x)
+where 𝑓𝑑𝑝−𝑓 𝑛𝑤 = 𝑓𝜃 denotes the probability of observed negative                                    𝜃
+samples to be fake negative. Emprically, we set 𝑤 𝐷𝑃 (x, 𝑦) = 1 since                              + (𝑣 𝐷𝑃 𝑤 𝐷𝑃 (x, 𝑦) + 𝑧 (1 − 𝑣)𝑤 𝐹 𝑁 (x, 𝑦)) log 𝑓𝜃 (x)
+DP can be observed, and reduce the importance weight of fake                                                                                      i
+negative(𝑤 𝐹 𝑁 (x, 𝑦)) to 𝑓𝜃 .                                                                     + (1 − 𝑣)(1 − 𝑧)𝑤 𝑅𝑁 (x, 𝑦) log(1 − 𝑓𝜃 (x)) 𝑑𝑥,               (35)
+
+A.2.2 L𝑢𝑏 for dup-mechanism in DEFER. The loss form of unbi-                            𝑠.𝑡 .
+ased DEFER loss is same to ES-DFM+DEFUSE, as they both have                                                   𝑤 𝐼 𝑃 (x, 𝑦) = 𝑤 𝑅𝑁 (x) = 2
+observation window 𝑤𝑜 and attribution window 𝑤𝑎 . The main                                                    𝑤 𝐷𝑃 (x, 𝑦) + 𝑤 𝐹 𝑁 (x) = 2.
+difference lies in the way of duplication for real negative samples,
+                                                                                        The weights of both IPs and RNs are duplicated. Moreover, since
+                                                                                        DP samples has same feature distribution with FN samples, we
+                                                                                        emprically set 𝑤 𝐷𝑃 (x, 𝑦) = 𝑤 𝐹 𝑁 (x, 𝑦) = 1.
+
