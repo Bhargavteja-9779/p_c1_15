@@ -702,6 +702,150 @@
         "W3208913301"
       ],
       "time": "2026-11-24T20:00:48+00:00"
+    },
+    {
+      "claim": "C3_latency_threshold",
+      "query": "online just-in-time defect prediction verification latency waiting time recall balance",
+      "source": "OpenAlex search (title/abstract/fulltext)",
+      "n_results_total": 569,
+      "top15": [
+        "W4386715814",
+        "W4401253331",
+        "W4408099241",
+        "W4312786784",
+        "W4385696049",
+        "W4393233304",
+        "W7236789928",
+        "W7167743064",
+        "W2626741127",
+        "W7218048197",
+        "W1507123781",
+        "W3164016446",
+        "W7120815219",
+        "W2883065672",
+        "W3176185371"
+      ],
+      "time": "2026-11-24T20:11:50+00:00"
+    },
+    {
+      "claim": "C3_latency_threshold",
+      "query": "prior probability shift correction delayed labels classifier threshold",
+      "source": "OpenAlex search (title/abstract/fulltext)",
+      "n_results_total": 17039,
+      "top15": [
+        "W7236452912",
+        "W7225864225",
+        "W7221951564",
+        "W7127933398",
+        "W4396995174",
+        "W4400877915",
+        "W2964256806",
+        "W2914237854",
+        "W7164508661",
+        "W4309591702",
+        "W7226011073",
+        "W7202155479",
+        "W4200634137",
+        "W7201848665",
+        "W7225395206"
+      ],
+      "time": "2026-11-24T20:11:51+00:00"
+    },
+    {
+      "claim": "C3_latency_threshold",
+      "query": "label shift estimation streaming positive unlabeled time since event",
+      "source": "OpenAlex search (title/abstract/fulltext)",
+      "n_results_total": 4969,
+      "top15": [
+        "W2605253252",
+        "W4226333492",
+        "W4308671855",
+        "W2977499082",
+        "W4379474814",
+        "W2963218389",
+        "W7133202575",
+        "W2759864402",
+        "W4416105919",
+        "W7238562400",
+        "W4285676605",
+        "W4388817142",
+        "W7164820793",
+        "W3170999895",
+        "W2580717359"
+      ],
+      "time": "2026-11-24T20:11:52+00:00"
+    },
+    {
+      "claim": "C3_latency_threshold",
+      "query": "provisional negatives elapsed time weighting classifier calibration",
+      "source": "OpenAlex search (title/abstract/fulltext)",
+      "n_results_total": 55,
+      "top15": [
+        "W7238633806",
+        "W7234990520",
+        "W7214330960",
+        "W7213342557",
+        "W1516028496",
+        "W562640016",
+        "W7237337079",
+        "W7225833305",
+        "W7225984535",
+        "W7214209149",
+        "W4392446661",
+        "W7169884131",
+        "W7225243377",
+        "W7216469420",
+        "W2956867331"
+      ],
+      "time": "2026-11-24T20:11:53+00:00"
+    },
+    {
+      "claim": "C3_latency_threshold",
+      "query": "conversion delay importance weighting threshold calibration",
+      "source": "OpenAlex search (title/abstract/fulltext)",
+      "n_results_total": 7638,
+      "top15": [
+        "W4394581632",
+        "W4385261955",
+        "W2561934200",
+        "W4387846179",
+        "W2590507534",
+        "W7172489266",
+        "W7233673621",
+        "W7221951564",
+        "W7132880538",
+        "W3175576960",
+        "W3192190586",
+        "W2802336611",
+        "W4385145440",
+        "W7199082465",
+        "W2152308127"
+      ],
+      "time": "2026-11-24T20:11:54+00:00"
+    },
+    {
+      "claim": "C3_latency_threshold",
+      "query": "Kaplan-Meier weighting unlabeled examples classification censoring",
+      "source": "OpenAlex search (title/abstract/fulltext)",
+      "n_results_total": 67,
+      "top15": [
+        "W4411239428",
+        "W4386453696",
+        "W4403702100",
+        "W7217754091",
+        "W2147161150",
+        "W7221020562",
+        "W4382318120",
+        "W2486838537",
+        "W4412742805",
+        "W2968899331",
+        "W4385429682",
+        "W7161775552",
+        "W4315588764",
+        "W3041522598",
+        "W2921275280"
+      ],
+      "time": "2026-11-24T20:11:55+00:00"
     }
   ],
   "papers_opened": [
@@ -812,6 +956,38 @@
       "does": "RL reward shaping for FP reduction",
       "does_not": "Latency",
       "threat": "LOW"
+    },
+    {
+      "doi": "10.48550/arxiv.2611.21914",
+      "title": "A Temporal Algebraic Framework for Data Stream Evaluation Under Delayed Labels and Distribution Shifts (arXiv 2026)",
+      "opened": "abstract",
+      "does": "Stream EVALUATION with delayed labels: unlabelled instances counted with calibrated model probabilities (observation mask); separates prior shift from drift",
+      "does_not": "Use the estimate to SET a decision threshold; delay-survival (age) weighting; JIT-SDP",
+      "threat": "MEDIUM for C3 (the interim soft-label counting idea is close) - must be cited and differentiated"
+    },
+    {
+      "doi": "10.48550/arxiv.2610.18935",
+      "title": "Delay Complexity Dimension: Learning with Delayed and Censored Labels (arXiv 2026)",
+      "opened": "abstract",
+      "does": "PAC theory for labels with random delays censored beyond window W; oracle pseudo-label ERM",
+      "does_not": "Empirical JIT-SDP; threshold",
+      "threat": "LOW (theory; cite as motivation)"
+    },
+    {
+      "doi": "10.1145/3580305.3599536",
+      "title": "ULC: Unbiased delayed feedback label correction for CVR (KDD 2023)",
+      "opened": "abstract",
+      "does": "Auxiliary model corrects labels of observed negatives; unbiased loss",
+      "does_not": "SE / threshold",
+      "threat": "LOW-MEDIUM (training-side correction; LAW is the analogue)"
+    },
+    {
+      "doi": "10.1016/j.scico.2025.103296",
+      "title": "Human-in-the-loop online JIT-SDP: what have we achieved (SCICO 2025)",
+      "opened": "title only (no abstract in OpenAlex)",
+      "does": "UNVERIFIED",
+      "does_not": "UNVERIFIED",
+      "threat": "UNVERIFIED - open full text before writing"
     }
   ],
   "claims": [

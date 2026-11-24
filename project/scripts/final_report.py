@@ -25,7 +25,7 @@ def holm(ps):
     return adj
 
 metrics, statsout, md = {}, {"generated": now_iso()}, []
-for exp in sorted(df.experiment.unique()):
+for exp in sorted(x for x in df.experiment.unique() if not str(x).startswith("E12")):
     e = df[df.experiment == exp]
     g = e.groupby(["variant", "project"])[["gmean", "r0", "r1", "rdiff", "auc", "mcc", "seconds"]].mean()
     per_proj = g.gmean.unstack()
@@ -71,13 +71,28 @@ if "E1" in set(df.experiment) and fz:
     compare("E12", "law_lagakos_model", ["law_naive_model", "law_lagakos_base", "law_naive_base"], "E2_ablation_full_vs_variants")
 if "E3" in set(df.experiment) and fz:
     compare("E3", "law_lagakos_model_ds2", ["nowait_ds2", f"wait_W{fz['wait_W']}_ds2", f"orb_W{fz['orb_W']}_ds2"], "E3_robust_delay_x2")
+# ---------------- plan_v2 (experiments/plan_v2.yaml)
+v2 = fz.get("v2")
+if v2 and "E1b" in set(df.experiment):
+    W, Wo = fz["wait_W"], fz["orb_W"]
+    lat = v2["LAT"]["variant"]
+    bl = ["nowait", f"wait_W{W}", f"orb_W{Wo}", "law_lagakos_model", v2["MAT"]["variant"], v2["ODaSC"]["variant"], v2["OOB"]["variant"]]
+    compare("E1b", lat, bl, "E1b_main_LAT_vs_baselines")
+    # pre-registered plan_v1 H1: law_lagakos_model vs best v1 baseline on dev
+    compare("E1b", "law_lagakos_model", [x for x in [fz.get("best_baseline_on_dev")] if x], "E1b_planv1_H1_law_vs_best_v1_dev_baseline")
+    statsout["primary_baseline_v2"] = {"name": v2["best_baseline_on_dev"], "dev_baselines": v2["dev_baselines"]}
+    if "E2b" in set(df.experiment):
+        e = pd.concat([df[df.experiment == "E1b"], df[df.experiment == "E2b"]]).assign(experiment="E12b"); df = pd.concat([df, e])
+        compare("E12b", lat, [lat + "_ABL_face", lat + "_ABL_naive"], "E2b_ablation_LAT_vs_components_removed")
+    if "E3b" in set(df.experiment):
+        compare("E3b", lat + "_ds2", [f"wait_W{W}_ds2", f"orb_W{Wo}_ds2", v2["MAT"]["variant"] + "_ds2", v2["ODaSC"]["variant"] + "_ds2"], "E3b_robust_delay_x2")
 vt = pd.read_csv(STATE / "variants_tried.csv") if (STATE / "variants_tried.csv").exists() else pd.DataFrame()
 statsout["n_variants_logged"] = int(len(vt))
 json.dump(metrics, open(R / "metrics.json", "w"), indent=1)
 json.dump(statsout, open(R / "statistics.json", "w"), indent=1)
 
 # figures
-for exp in [x for x in ["E0", "E1"] if x in set(df.experiment)]:
+for exp in [x for x in ["E0", "E0b", "E1", "E1b", "E3b"] if x in set(df.experiment)]:
     pp = df[df.experiment == exp].groupby(["variant", "project"]).gmean.mean().unstack()
     pp = pp.loc[pp.mean(axis=1).sort_values().index]
     fig, ax = plt.subplots(figsize=(7, 0.35 * len(pp) + 1.5))
