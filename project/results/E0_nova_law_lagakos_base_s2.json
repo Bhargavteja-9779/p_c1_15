@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E0",
+    "project": "nova",
+    "method": "law",
+    "variant": "law_lagakos_base",
+    "seed": 2,
+    "split": "dev",
+    "delay_est": "lagakos",
+    "prior": "base",
+    "gmean": 0.6211631864141908,
+    "r0": 0.9350492846769459,
+    "r1": 0.4126453123693234,
+    "rdiff": 0.5224039723076226,
+    "auc": 0.8821552536600196,
+    "mcc": 0.422288522983429,
+    "n_eval": 44320,
+    "seconds": 305.34,
+    "job_id": "E0_nova_law_lagakos_base_s2",
+    "written": "2026-11-24T04:15:14+00:00",
+    "cycle": 1
+  }
+]
