@@ -21165,10 +21165,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:48:14+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:49:47+00:00",
+      "seconds": 92.9
     },
     {
       "id": "E2_camel_law_lagakos_model_s101",
@@ -21250,10 +21254,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:48:18+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:49:56+00:00",
+      "seconds": 97.9
     },
     {
       "id": "E2_camel_law_lagakos_model_s102",
@@ -21291,12 +21299,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 30,
       "started": "2026-11-25T09:45:28+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T09:48:14+00:00",
+      "seconds": 165.8
     },
     {
       "id": "E2_camel_law_lagakos_base_gmax_lat_s102",
@@ -21333,10 +21343,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:49:11+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:50:47+00:00",
+      "seconds": 96.5
     },
     {
       "id": "E2_camel_law_lagakos_model_s103",
@@ -21374,12 +21388,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 30,
       "started": "2026-11-25T09:45:29+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T09:48:18+00:00",
+      "seconds": 168.2
     },
     {
       "id": "E2_camel_law_lagakos_base_gmax_lat_s103",
@@ -21416,10 +21432,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:49:47+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:51:25+00:00",
+      "seconds": 98.3
     },
     {
       "id": "E2_camel_law_lagakos_model_s104",
@@ -21457,12 +21477,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 30,
       "started": "2026-11-25T09:46:23+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T09:49:11+00:00",
+      "seconds": 167.7
     },
     {
       "id": "E2_camel_law_lagakos_base_gmax_lat_s104",
@@ -21499,10 +21521,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:49:56+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:51:30+00:00",
+      "seconds": 94.8
     },
     {
       "id": "E2_jgroups_law_lagakos_model_s100",
@@ -21555,10 +21581,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:50:47+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:51:43+00:00",
+      "seconds": 56.1
     },
     {
       "id": "E2_jgroups_nowait_gmax_lat_s100",
@@ -21628,10 +21658,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:51:25+00:00",
+      "worker": 0
     },
     {
       "id": "E2_jgroups_nowait_gmax_lat_s101",
@@ -21701,10 +21733,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:51:30+00:00",
+      "worker": 2
     },
     {
       "id": "E2_jgroups_nowait_gmax_lat_s102",
@@ -21774,10 +21808,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:51:43+00:00",
+      "worker": 1
     },
     {
       "id": "E2_jgroups_nowait_gmax_lat_s103",

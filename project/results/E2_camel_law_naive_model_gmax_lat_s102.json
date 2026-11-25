@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E2",
+    "project": "camel",
+    "method": "law",
+    "variant": "law_naive_model_gmax_lat",
+    "seed": 102,
+    "split": "test",
+    "delay_est": "naive",
+    "prior": "model",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6974950186401008,
+    "r0": 0.6646944812812404,
+    "r1": 0.7319141571478021,
+    "rdiff": 0.06721967586656163,
+    "auc": 0.7910918784725058,
+    "mcc": 0.33634083196293885,
+    "n_eval": 25384,
+    "seconds": 165.82,
+    "job_id": "E2_camel_law_naive_model_gmax_lat_s102",
+    "written": "2026-11-25T09:48:14+00:00",
+    "cycle": 1
+  }
+]
