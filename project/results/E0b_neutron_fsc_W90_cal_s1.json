@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E0b",
+    "project": "neutron",
+    "method": "fsc",
+    "variant": "fsc_W90_cal",
+    "seed": 1,
+    "split": "dev",
+    "W": 90,
+    "thr_cal": "lat",
+    "gmean": 0.8305273896600779,
+    "r0": 0.7718219818047701,
+    "r1": 0.8936979785969085,
+    "rdiff": 0.12187599679213834,
+    "auc": 0.9108387735708298,
+    "mcc": 0.5934170187418413,
+    "n_eval": 16406,
+    "seconds": 98.78,
+    "thr_mean": 0.41210445547042746,
+    "job_id": "E0b_neutron_fsc_W90_cal_s1",
+    "written": "2026-11-24T22:07:49+00:00",
+    "cycle": 1
+  }
+]

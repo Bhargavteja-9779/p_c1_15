@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E0b",
+    "project": "neutron",
+    "method": "nowait",
+    "variant": "nowait_calnaive",
+    "seed": 2,
+    "split": "dev",
+    "thr_cal": "naive",
+    "gmean": 0.7525554282268457,
+    "r0": 0.7867387919023031,
+    "r1": 0.7198573127229488,
+    "rdiff": 0.06688147917935428,
+    "auc": 0.822709557441589,
+    "mcc": 0.465884212744978,
+    "n_eval": 16406,
+    "seconds": 36.7,
+    "thr_mean": 0.054748850112134886,
+    "job_id": "E0b_neutron_nowait_calnaive_s2",
+    "written": "2026-11-24T22:15:01+00:00",
+    "cycle": 1
+  }
+]

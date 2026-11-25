@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E0b",
+    "project": "fabric",
+    "method": "law",
+    "variant": "law_naive_model_cal",
+    "seed": 0,
+    "split": "dev",
+    "delay_est": "naive",
+    "prior": "model",
+    "thr_cal": "lat",
+    "gmean": 0.7130768704172477,
+    "r0": 0.6399326386696137,
+    "r1": 0.7945814799838253,
+    "rdiff": 0.15464884131421164,
+    "auc": 0.7759298582782675,
+    "mcc": 0.3535824005169446,
+    "n_eval": 11974,
+    "seconds": 33.77,
+    "thr_mean": 0.19714852774433153,
+    "job_id": "E0b_fabric_law_naive_model_cal_s0",
+    "written": "2026-11-24T21:48:54+00:00",
+    "cycle": 1
+  }
+]

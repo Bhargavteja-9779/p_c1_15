@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E0b",
+    "project": "sentry",
+    "method": "nowait",
+    "variant": "nowait_cal",
+    "seed": 0,
+    "split": "dev",
+    "thr_cal": "lat",
+    "gmean": 0.6755596981376335,
+    "r0": 0.6043611487208722,
+    "r1": 0.7551460028721877,
+    "rdiff": 0.15078485415131548,
+    "auc": 0.7528637619108647,
+    "mcc": 0.3026073891261838,
+    "n_eval": 18211,
+    "seconds": 41.27,
+    "thr_mean": 0.19203671246193824,
+    "job_id": "E0b_sentry_nowait_cal_s0",
+    "written": "2026-11-24T22:50:46+00:00",
+    "cycle": 1
+  }
+]

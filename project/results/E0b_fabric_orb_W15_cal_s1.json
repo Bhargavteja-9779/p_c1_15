@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E0b",
+    "project": "fabric",
+    "method": "orb",
+    "variant": "orb_W15_cal",
+    "seed": 1,
+    "split": "dev",
+    "W": 15,
+    "thr_cal": "lat",
+    "gmean": 0.6952861570322951,
+    "r0": 0.6430902010314704,
+    "r1": 0.7517185604528912,
+    "rdiff": 0.1086283594214208,
+    "auc": 0.7696271186556096,
+    "mcc": 0.32209945870900647,
+    "n_eval": 11974,
+    "seconds": 21.45,
+    "thr_mean": 0.11779588129545612,
+    "job_id": "E0b_fabric_orb_W15_cal_s1",
+    "written": "2026-11-24T21:50:02+00:00",
+    "cycle": 1
+  }
+]

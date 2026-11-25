@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E0b",
+    "project": "neutron",
+    "method": "orb",
+    "variant": "orb_W60_cal",
+    "seed": 0,
+    "split": "dev",
+    "W": 60,
+    "thr_cal": "lat",
+    "gmean": 0.8183208509770389,
+    "r0": 0.7651831817064175,
+    "r1": 0.8751486325802615,
+    "rdiff": 0.10996545087384402,
+    "auc": 0.8909622132881059,
+    "mcc": 0.5709137314551359,
+    "n_eval": 16406,
+    "seconds": 33.73,
+    "thr_mean": 0.19107758879647074,
+    "job_id": "E0b_neutron_orb_W60_cal_s0",
+    "written": "2026-11-24T22:17:03+00:00",
+    "cycle": 1
+  }
+]

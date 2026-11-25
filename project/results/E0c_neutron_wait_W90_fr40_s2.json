@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E0c",
+    "project": "neutron",
+    "method": "wait",
+    "variant": "wait_W90_fr40",
+    "seed": 2,
+    "split": "dev",
+    "W": 90,
+    "fixed_rate": 0.4,
+    "gmean": 0.824356904147115,
+    "r0": 0.7741988361609704,
+    "r1": 0.8777645659928657,
+    "rdiff": 0.10356572983189527,
+    "auc": 0.8942363547714116,
+    "mcc": 0.5828128400287986,
+    "n_eval": 16406,
+    "seconds": 30.81,
+    "thr_mean": 0.3281824400447013,
+    "job_id": "E0c_neutron_wait_W90_fr40_s2",
+    "written": "2026-11-24T23:19:24+00:00",
+    "cycle": 1
+  }
+]

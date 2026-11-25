@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E0c",
+    "project": "sentry",
+    "method": "wait",
+    "variant": "wait_W30_fr40",
+    "seed": 0,
+    "split": "dev",
+    "W": 30,
+    "fixed_rate": 0.4,
+    "gmean": 0.681479569881121,
+    "r0": 0.6853844509370769,
+    "r1": 0.6775969363331737,
+    "rdiff": 0.007787514603903145,
+    "auc": 0.7517587620945596,
+    "mcc": 0.31181022576382467,
+    "n_eval": 18211,
+    "seconds": 38.78,
+    "thr_mean": 0.5259892779222384,
+    "job_id": "E0c_sentry_wait_W30_fr40_s0",
+    "written": "2026-11-24T23:28:20+00:00",
+    "cycle": 1
+  }
+]

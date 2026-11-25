@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E0b",
+    "project": "sentry",
+    "method": "law",
+    "variant": "law_lagakos_model_calnaive",
+    "seed": 2,
+    "split": "dev",
+    "delay_est": "lagakos",
+    "prior": "model",
+    "thr_cal": "naive",
+    "gmean": 0.7134187883390904,
+    "r0": 0.6962873227392574,
+    "r1": 0.7309717568214457,
+    "rdiff": 0.03468443408218824,
+    "auc": 0.7940452251355682,
+    "mcc": 0.3664378406773286,
+    "n_eval": 18211,
+    "seconds": 75.2,
+    "thr_mean": 0.3642671209351991,
+    "job_id": "E0b_sentry_law_lagakos_model_calnaive_s2",
+    "written": "2026-11-24T22:48:35+00:00",
+    "cycle": 1
+  }
+]

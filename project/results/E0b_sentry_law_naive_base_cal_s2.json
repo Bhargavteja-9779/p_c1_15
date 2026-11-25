@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E0b",
+    "project": "sentry",
+    "method": "law",
+    "variant": "law_naive_base_cal",
+    "seed": 2,
+    "split": "dev",
+    "delay_est": "naive",
+    "prior": "base",
+    "thr_cal": "lat",
+    "gmean": 0.694325710878676,
+    "r0": 0.6595168531319033,
+    "r1": 0.7309717568214457,
+    "rdiff": 0.07145490368954233,
+    "auc": 0.7764325742879815,
+    "mcc": 0.3316299577941026,
+    "n_eval": 18211,
+    "seconds": 62.06,
+    "thr_mean": 0.4463694850851877,
+    "job_id": "E0b_sentry_law_naive_base_cal_s2",
+    "written": "2026-11-24T22:49:37+00:00",
+    "cycle": 1
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E0b",
+    "project": "sentry",
+    "method": "fsc",
+    "variant": "fsc_W90_cal",
+    "seed": 0,
+    "split": "dev",
+    "W": 90,
+    "thr_cal": "lat",
+    "gmean": 0.7129877470294734,
+    "r0": 0.6927242927385449,
+    "r1": 0.7338439444710387,
+    "rdiff": 0.04111965173249388,
+    "auc": 0.7936055431400041,
+    "mcc": 0.36534595020430327,
+    "n_eval": 18211,
+    "seconds": 152.96,
+    "thr_mean": 0.4563510574681572,
+    "job_id": "E0b_sentry_fsc_W90_cal_s0",
+    "written": "2026-11-24T22:42:11+00:00",
+    "cycle": 1
+  }
+]

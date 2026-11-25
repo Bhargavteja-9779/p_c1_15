@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E0b",
+    "project": "neutron",
+    "method": "law",
+    "variant": "law_lagakos_base_cal",
+    "seed": 2,
+    "split": "dev",
+    "delay_est": "lagakos",
+    "prior": "base",
+    "thr_cal": "lat",
+    "gmean": 0.8223013453989995,
+    "r0": 0.7192853044832391,
+    "r1": 0.9400713436385255,
+    "rdiff": 0.22078603915528638,
+    "auc": 0.8754109159099939,
+    "mcc": 0.5786767083198264,
+    "n_eval": 16406,
+    "seconds": 49.69,
+    "thr_mean": 0.3376698821964756,
+    "job_id": "E0b_neutron_law_lagakos_base_cal_s2",
+    "written": "2026-11-24T22:10:22+00:00",
+    "cycle": 1
+  }
+]

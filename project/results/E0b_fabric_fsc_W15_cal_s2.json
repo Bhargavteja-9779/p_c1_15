@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E0b",
+    "project": "fabric",
+    "method": "fsc",
+    "variant": "fsc_W15_cal",
+    "seed": 2,
+    "split": "dev",
+    "W": 15,
+    "thr_cal": "lat",
+    "gmean": 0.7274201819858566,
+    "r0": 0.7298179139037996,
+    "r1": 0.7250303275374039,
+    "rdiff": 0.004787586366395646,
+    "auc": 0.8041762731000754,
+    "mcc": 0.3826604309848778,
+    "n_eval": 11974,
+    "seconds": 64.87,
+    "thr_mean": 0.4168722913604994,
+    "job_id": "E0b_fabric_fsc_W15_cal_s2",
+    "written": "2026-11-24T21:36:30+00:00",
+    "cycle": 1
+  }
+]

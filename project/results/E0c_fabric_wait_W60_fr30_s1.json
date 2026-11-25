@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E0c",
+    "project": "fabric",
+    "method": "wait",
+    "variant": "wait_W60_fr30",
+    "seed": 1,
+    "split": "dev",
+    "W": 60,
+    "fixed_rate": 0.3,
+    "gmean": 0.6734896925509184,
+    "r0": 0.7736027786548785,
+    "r1": 0.5863323898099474,
+    "rdiff": 0.18727038884493108,
+    "auc": 0.7315054158429617,
+    "mcc": 0.3177378068962758,
+    "n_eval": 11974,
+    "seconds": 19.55,
+    "thr_mean": 0.6972546643750374,
+    "job_id": "E0c_fabric_wait_W60_fr30_s1",
+    "written": "2026-11-24T23:03:48+00:00",
+    "cycle": 1
+  }
+]
