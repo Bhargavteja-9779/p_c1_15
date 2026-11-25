@@ -29321,7 +29321,7 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 2,
       "cycle": 2,
       "priority": 12,
@@ -29329,7 +29329,9 @@
       "worker": 0,
       "log": [
         "2026-11-25T13:32:46+00:00 reset running->pending on restart"
-      ]
+      ],
+      "finished": "2026-11-25T13:37:07+00:00",
+      "seconds": 260.5
     },
     {
       "id": "E0e_neutron_dual_W30_k50_s0",
@@ -29346,10 +29348,14 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T13:37:07+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T13:41:42+00:00",
+      "seconds": 275.0
     },
     {
       "id": "E0e_neutron_dual_W90_k20_s0",
@@ -29366,10 +29372,12 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T13:41:39+00:00",
+      "worker": 2
     },
     {
       "id": "E0e_neutron_dual_W90_k50_s0",
@@ -29406,7 +29414,7 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 2,
       "cycle": 2,
       "priority": 12,
@@ -29414,7 +29422,9 @@
       "worker": 2,
       "log": [
         "2026-11-25T13:32:46+00:00 reset running->pending on restart"
-      ]
+      ],
+      "finished": "2026-11-25T13:37:08+00:00",
+      "seconds": 261.5
     },
     {
       "id": "E0e_neutron_dual_W30_k50_s1",
@@ -29431,10 +29441,14 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T13:37:08+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T13:41:39+00:00",
+      "seconds": 271.4
     },
     {
       "id": "E0e_neutron_dual_W90_k20_s1",
@@ -29451,10 +29465,12 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T13:41:42+00:00",
+      "worker": 0
     },
     {
       "id": "E0e_neutron_dual_W90_k50_s1",
@@ -29491,7 +29507,7 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 2,
       "cycle": 2,
       "priority": 12,
@@ -29499,7 +29515,9 @@
       "worker": 1,
       "log": [
         "2026-11-25T13:32:46+00:00 reset running->pending on restart"
-      ]
+      ],
+      "finished": "2026-11-25T13:37:10+00:00",
+      "seconds": 263.3
     },
     {
       "id": "E0e_neutron_dual_W30_k50_s2",
@@ -29516,10 +29534,14 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T13:37:10+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T13:41:49+00:00",
+      "seconds": 279.2
     },
     {
       "id": "E0e_neutron_dual_W90_k20_s2",
@@ -29536,10 +29558,12 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T13:41:49+00:00",
+      "worker": 1
     },
     {
       "id": "E0e_neutron_dual_W90_k50_s2",
