@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "D1",
+    "project": "sentry",
+    "method": "oracle_young",
+    "variant": "oracle_young_H30",
+    "seed": 0,
+    "split": "dev",
+    "oracle_H": 30,
+    "gmean": 0.7068661690522318,
+    "r0": 0.7913489631582697,
+    "r1": 0.6314025849688847,
+    "rdiff": 0.15994637818938506,
+    "auc": 0.8020330215957824,
+    "mcc": 0.3858457040651812,
+    "n_eval": 18211,
+    "seconds": 32.76,
+    "job_id": "D1_sentry_oracle_young_H30_s0",
+    "written": "2026-11-25T10:24:12+00:00",
+    "cycle": 2
+  }
+]

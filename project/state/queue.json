@@ -21566,10 +21566,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T10:19:45+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:20:38+00:00",
+      "seconds": 52.5
     },
     {
       "id": "E2_jgroups_law_lagakos_base_gmax_lat_s100",
@@ -21606,10 +21610,18 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T10:21:33+00:00",
+      "worker": 1,
+      "resets": 1,
+      "log": [
+        "2026-11-25T10:21:33+00:00 reset running->pending on restart (attempt refunded)"
+      ],
+      "finished": "2026-11-25T10:22:03+00:00",
+      "seconds": 30.0
     },
     {
       "id": "E2_jgroups_law_lagakos_model_s101",
@@ -21647,10 +21659,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T10:20:37+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:21:27+00:00",
+      "seconds": 49.4
     },
     {
       "id": "E2_jgroups_law_lagakos_base_gmax_lat_s101",
@@ -21687,10 +21703,18 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T10:21:33+00:00",
+      "worker": 2,
+      "resets": 1,
+      "log": [
+        "2026-11-25T10:21:33+00:00 reset running->pending on restart (attempt refunded)"
+      ],
+      "finished": "2026-11-25T10:22:03+00:00",
+      "seconds": 30.1
     },
     {
       "id": "E2_jgroups_law_lagakos_model_s102",
@@ -21728,10 +21752,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T10:20:38+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:21:27+00:00",
+      "seconds": 49.6
     },
     {
       "id": "E2_jgroups_law_lagakos_base_gmax_lat_s102",
@@ -21768,10 +21796,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T10:23:39+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:24:07+00:00",
+      "seconds": 28.0
     },
     {
       "id": "E2_jgroups_law_lagakos_model_s103",
@@ -21786,10 +21818,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T10:19:45+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:20:37+00:00",
+      "seconds": 52.0
     },
     {
       "id": "E2_jgroups_law_naive_model_gmax_lat_s103",
@@ -21805,10 +21841,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T10:20:39+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:21:28+00:00",
+      "seconds": 48.6
     },
     {
       "id": "E2_jgroups_law_lagakos_base_gmax_lat_s103",
@@ -21845,10 +21885,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T10:23:55+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:24:24+00:00",
+      "seconds": 29.1
     },
     {
       "id": "E2_jgroups_law_lagakos_model_s104",
@@ -21863,10 +21907,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T10:19:45+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:20:39+00:00",
+      "seconds": 54.2
     },
     {
       "id": "E2_jgroups_law_naive_model_gmax_lat_s104",
@@ -21882,10 +21930,18 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T10:21:33+00:00",
+      "worker": 0,
+      "resets": 1,
+      "log": [
+        "2026-11-25T10:21:33+00:00 reset running->pending on restart (attempt refunded)"
+      ],
+      "finished": "2026-11-25T10:22:25+00:00",
+      "seconds": 51.4
     },
     {
       "id": "E2_jgroups_law_lagakos_base_gmax_lat_s104",
@@ -21922,10 +21978,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T10:24:07+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:24:38+00:00",
+      "seconds": 30.6
     },
     {
       "id": "E2_matplotlib_law_lagakos_model_s100",
@@ -21978,10 +22038,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T10:24:12+00:00",
+      "worker": 2
     },
     {
       "id": "E2_matplotlib_nowait_gmax_lat_s100",
@@ -22051,10 +22113,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T10:24:24+00:00",
+      "worker": 0
     },
     {
       "id": "E2_matplotlib_nowait_gmax_lat_s101",
@@ -22124,10 +22188,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T10:24:38+00:00",
+      "worker": 1
     },
     {
       "id": "E2_matplotlib_nowait_gmax_lat_s102",
@@ -27966,6 +28032,318 @@
       "attempts": 0,
       "cycle": 2,
       "priority": 40
+    },
+    {
+      "id": "D1_fabric_oracle_young_H30_s0",
+      "kind": "jit_run",
+      "params": {
+        "experiment": "D1",
+        "split": "dev",
+        "project": "fabric",
+        "method": "oracle_young",
+        "oracle_H": 30,
+        "variant": "oracle_young_H30",
+        "seed": 0
+      },
+      "status": "done",
+      "attempts": 1,
+      "cycle": 2,
+      "priority": 5,
+      "started": "2026-11-25T10:22:21+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:22:37+00:00",
+      "seconds": 16.9,
+      "errors": [
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_young\n",
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_young\n",
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_young\n"
+      ]
+    },
+    {
+      "id": "D1_fabric_oracle_young_H180_s0",
+      "kind": "jit_run",
+      "params": {
+        "experiment": "D1",
+        "split": "dev",
+        "project": "fabric",
+        "method": "oracle_young",
+        "oracle_H": 180,
+        "variant": "oracle_young_H180",
+        "seed": 0
+      },
+      "status": "done",
+      "attempts": 1,
+      "cycle": 2,
+      "priority": 5,
+      "started": "2026-11-25T10:22:20+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:22:38+00:00",
+      "seconds": 17.1,
+      "errors": [
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_young\n",
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_young\n",
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_young\n"
+      ]
+    },
+    {
+      "id": "D1_fabric_oracle_old_H30_s0",
+      "kind": "jit_run",
+      "params": {
+        "experiment": "D1",
+        "split": "dev",
+        "project": "fabric",
+        "method": "oracle_old",
+        "oracle_H": 30,
+        "variant": "oracle_old_H30",
+        "seed": 0
+      },
+      "status": "done",
+      "attempts": 1,
+      "cycle": 2,
+      "priority": 5,
+      "started": "2026-11-25T10:22:03+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:22:20+00:00",
+      "seconds": 17.1,
+      "errors": [
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_old\n",
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_old\n",
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_old\n"
+      ]
+    },
+    {
+      "id": "D1_fabric_oracle_old_H180_s0",
+      "kind": "jit_run",
+      "params": {
+        "experiment": "D1",
+        "split": "dev",
+        "project": "fabric",
+        "method": "oracle_old",
+        "oracle_H": 180,
+        "variant": "oracle_old_H180",
+        "seed": 0
+      },
+      "status": "done",
+      "attempts": 1,
+      "cycle": 2,
+      "priority": 5,
+      "started": "2026-11-25T10:22:03+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:22:21+00:00",
+      "seconds": 17.3,
+      "errors": [
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_old\n",
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_old\n",
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_old\n"
+      ]
+    },
+    {
+      "id": "D1_neutron_oracle_young_H30_s0",
+      "kind": "jit_run",
+      "params": {
+        "experiment": "D1",
+        "split": "dev",
+        "project": "neutron",
+        "method": "oracle_young",
+        "oracle_H": 30,
+        "variant": "oracle_young_H30",
+        "seed": 0
+      },
+      "status": "done",
+      "attempts": 1,
+      "cycle": 2,
+      "priority": 5,
+      "started": "2026-11-25T10:22:53+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:23:22+00:00",
+      "seconds": 28.7,
+      "errors": [
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_young\n",
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_young\n",
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_young\n"
+      ]
+    },
+    {
+      "id": "D1_neutron_oracle_young_H180_s0",
+      "kind": "jit_run",
+      "params": {
+        "experiment": "D1",
+        "split": "dev",
+        "project": "neutron",
+        "method": "oracle_young",
+        "oracle_H": 180,
+        "variant": "oracle_young_H180",
+        "seed": 0
+      },
+      "status": "done",
+      "attempts": 1,
+      "cycle": 2,
+      "priority": 5,
+      "started": "2026-11-25T10:22:38+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:23:07+00:00",
+      "seconds": 28.9,
+      "errors": [
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_young\n",
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_young\n",
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_young\n"
+      ]
+    },
+    {
+      "id": "D1_neutron_oracle_old_H30_s0",
+      "kind": "jit_run",
+      "params": {
+        "experiment": "D1",
+        "split": "dev",
+        "project": "neutron",
+        "method": "oracle_old",
+        "oracle_H": 30,
+        "variant": "oracle_old_H30",
+        "seed": 0
+      },
+      "status": "done",
+      "attempts": 1,
+      "cycle": 2,
+      "priority": 5,
+      "started": "2026-11-25T10:22:37+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:23:07+00:00",
+      "seconds": 29.1,
+      "errors": [
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_old\n",
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_old\n",
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_old\n"
+      ]
+    },
+    {
+      "id": "D1_neutron_oracle_old_H180_s0",
+      "kind": "jit_run",
+      "params": {
+        "experiment": "D1",
+        "split": "dev",
+        "project": "neutron",
+        "method": "oracle_old",
+        "oracle_H": 180,
+        "variant": "oracle_old_H180",
+        "seed": 0
+      },
+      "status": "done",
+      "attempts": 1,
+      "cycle": 2,
+      "priority": 5,
+      "started": "2026-11-25T10:22:25+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:22:53+00:00",
+      "seconds": 28.8,
+      "errors": [
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_old\n",
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_old\n",
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_old\n"
+      ]
+    },
+    {
+      "id": "D1_sentry_oracle_young_H30_s0",
+      "kind": "jit_run",
+      "params": {
+        "experiment": "D1",
+        "split": "dev",
+        "project": "sentry",
+        "method": "oracle_young",
+        "oracle_H": 30,
+        "variant": "oracle_young_H30",
+        "seed": 0
+      },
+      "status": "done",
+      "attempts": 1,
+      "cycle": 2,
+      "priority": 5,
+      "started": "2026-11-25T10:23:39+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:24:12+00:00",
+      "seconds": 32.8,
+      "errors": [
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_young\n",
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_young\n",
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_young\n"
+      ]
+    },
+    {
+      "id": "D1_sentry_oracle_young_H180_s0",
+      "kind": "jit_run",
+      "params": {
+        "experiment": "D1",
+        "split": "dev",
+        "project": "sentry",
+        "method": "oracle_young",
+        "oracle_H": 180,
+        "variant": "oracle_young_H180",
+        "seed": 0
+      },
+      "status": "done",
+      "attempts": 1,
+      "cycle": 2,
+      "priority": 5,
+      "started": "2026-11-25T10:23:22+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:23:55+00:00",
+      "seconds": 32.4,
+      "errors": [
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_young\n",
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_young\n",
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_young\n"
+      ]
+    },
+    {
+      "id": "D1_sentry_oracle_old_H30_s0",
+      "kind": "jit_run",
+      "params": {
+        "experiment": "D1",
+        "split": "dev",
+        "project": "sentry",
+        "method": "oracle_old",
+        "oracle_H": 30,
+        "variant": "oracle_old_H30",
+        "seed": 0
+      },
+      "status": "done",
+      "attempts": 1,
+      "cycle": 2,
+      "priority": 5,
+      "started": "2026-11-25T10:23:07+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:23:39+00:00",
+      "seconds": 32.4,
+      "errors": [
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_old\n",
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_old\n",
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_old\n"
+      ]
+    },
+    {
+      "id": "D1_sentry_oracle_old_H180_s0",
+      "kind": "jit_run",
+      "params": {
+        "experiment": "D1",
+        "split": "dev",
+        "project": "sentry",
+        "method": "oracle_old",
+        "oracle_H": 180,
+        "variant": "oracle_old_H180",
+        "seed": 0
+      },
+      "status": "done",
+      "attempts": 1,
+      "cycle": 2,
+      "priority": 5,
+      "started": "2026-11-25T10:23:07+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:23:39+00:00",
+      "seconds": 32.7,
+      "errors": [
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_old\n",
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_old\n",
+        "Traceback (most recent call last):\n  File \"/home/user/p_c1_15/project/src/runner.py\", line 169, in run\n    fn(dict(job[\"params\"], quick=(mode == \"quick\")), ctx)\n    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/p_c1_15/project/src/jobs.py\", line 22, in jit_run\n    out = simulate(df, params[\"method\"], seed=params[\"seed\"],\n                   eval_end_gap_days=0 if params.get(\"quick\") else 365, **kw)\n  File \"/home/user/p_c1_15/project/src/jit.py\", line 158, in simulate\n    keepw = wi > 1e-4\nValueError: oracle_old\n"
+      ]
     }
   ]
 }

@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "D1",
+    "project": "fabric",
+    "method": "oracle_old",
+    "variant": "oracle_old_H30",
+    "seed": 0,
+    "split": "dev",
+    "oracle_H": 30,
+    "gmean": 0.5589486761323691,
+    "r0": 0.9433743816440374,
+    "r1": 0.3311767084512738,
+    "rdiff": 0.6121976731927636,
+    "auc": 0.8041780180799492,
+    "mcc": 0.35061384148784885,
+    "n_eval": 11974,
+    "seconds": 17.11,
+    "job_id": "D1_fabric_oracle_old_H30_s0",
+    "written": "2026-11-25T10:22:20+00:00",
+    "cycle": 2
+  }
+]

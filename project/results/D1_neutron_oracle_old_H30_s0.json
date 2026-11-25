@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "D1",
+    "project": "neutron",
+    "method": "oracle_old",
+    "variant": "oracle_old_H30",
+    "seed": 0,
+    "split": "dev",
+    "oracle_H": 30,
+    "gmean": 0.5743828417608822,
+    "r0": 0.9613966068355053,
+    "r1": 0.34316290130796673,
+    "rdiff": 0.6182337055275386,
+    "auc": 0.8959489490393812,
+    "mcc": 0.41420729810864504,
+    "n_eval": 16406,
+    "seconds": 29.04,
+    "job_id": "D1_neutron_oracle_old_H30_s0",
+    "written": "2026-11-25T10:23:07+00:00",
+    "cycle": 2
+  }
+]

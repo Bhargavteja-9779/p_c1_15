@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E2",
+    "project": "jgroups",
+    "method": "nowait",
+    "variant": "nowait_gmax_lat",
+    "seed": 102,
+    "split": "test",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.620161228367877,
+    "r0": 0.558986047796657,
+    "r1": 0.6880313930673643,
+    "rdiff": 0.12904534527070732,
+    "auc": 0.6356680206074375,
+    "mcc": 0.18755130172941914,
+    "n_eval": 17536,
+    "seconds": 27.96,
+    "job_id": "E2_jgroups_nowait_gmax_lat_s102",
+    "written": "2026-11-25T10:24:07+00:00",
+    "cycle": 2
+  }
+]

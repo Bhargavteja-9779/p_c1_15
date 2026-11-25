@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "D1",
+    "project": "neutron",
+    "method": "oracle_young",
+    "variant": "oracle_young_H180",
+    "seed": 0,
+    "split": "dev",
+    "oracle_H": 180,
+    "gmean": 0.8718954632485943,
+    "r0": 0.8465699532825178,
+    "r1": 0.8979785969084423,
+    "rdiff": 0.051408643625924455,
+    "auc": 0.9450716355192421,
+    "mcc": 0.6841646358135137,
+    "n_eval": 16406,
+    "seconds": 28.9,
+    "job_id": "D1_neutron_oracle_young_H180_s0",
+    "written": "2026-11-25T10:23:07+00:00",
+    "cycle": 2
+  }
+]
