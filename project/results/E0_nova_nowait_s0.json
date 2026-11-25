@@ -1,0 +1,21 @@
+[
+  {
+    "experiment": "E0",
+    "project": "nova",
+    "method": "nowait",
+    "variant": "nowait",
+    "seed": 0,
+    "split": "dev",
+    "gmean": 0.2958424121196391,
+    "r0": 0.986342428081451,
+    "r1": 0.0887346324328845,
+    "rdiff": 0.8976077956485665,
+    "auc": 0.6108997726873531,
+    "mcc": 0.1841005787912393,
+    "n_eval": 44320,
+    "seconds": 185.24,
+    "job_id": "E0_nova_nowait_s0",
+    "written": "2026-11-24T20:21:36+00:00",
+    "cycle": 1
+  }
+]
