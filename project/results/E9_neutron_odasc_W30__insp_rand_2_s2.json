@@ -1,0 +1,26 @@
+[
+  {
+    "experiment": "E9",
+    "project": "neutron",
+    "method": "odasc",
+    "variant": "odasc_W30__insp_rand_2",
+    "seed": 2,
+    "split": "dev",
+    "W": 30,
+    "odasc_delta": 0.9,
+    "insp_policy": "rand",
+    "insp_budget": 0.02,
+    "gmean": 0.8042107707254075,
+    "r0": 0.835259404966806,
+    "r1": 0.7743162901307967,
+    "rdiff": 0.06094311483600923,
+    "auc": 0.878735373925511,
+    "mcc": 0.5700662545083668,
+    "n_eval": 16406,
+    "seconds": 39.31,
+    "n_inspected": 379,
+    "job_id": "E9_neutron_odasc_W30__insp_rand_2_s2",
+    "written": "2026-11-25T10:43:24+00:00",
+    "cycle": 2
+  }
+]

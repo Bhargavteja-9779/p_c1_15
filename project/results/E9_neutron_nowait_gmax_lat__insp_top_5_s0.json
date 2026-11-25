@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E9",
+    "project": "neutron",
+    "method": "nowait",
+    "variant": "nowait_gmax_lat__insp_top_5",
+    "seed": 0,
+    "split": "dev",
+    "thr_policy": "gmax_lat",
+    "insp_policy": "top",
+    "insp_budget": 0.05,
+    "gmean": 0.7988837374243105,
+    "r0": 0.7849356610113926,
+    "r1": 0.8130796670630203,
+    "rdiff": 0.0281440060516277,
+    "auc": 0.8724087448827074,
+    "mcc": 0.5412824961398539,
+    "n_eval": 16406,
+    "seconds": 31.23,
+    "n_inspected": 947,
+    "job_id": "E9_neutron_nowait_gmax_lat__insp_top_5_s0",
+    "written": "2026-11-25T10:41:40+00:00",
+    "cycle": 2
+  }
+]

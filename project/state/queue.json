@@ -38901,12 +38901,14 @@
         "insp_policy": "rand",
         "insp_budget": 0.02
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 4,
       "started": "2026-11-25T10:39:40+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T10:40:08+00:00",
+      "seconds": 28.8
     },
     {
       "id": "E9_neutron_nowait_gmax_lat__insp_rand_5_s0",
@@ -38922,10 +38924,14 @@
         "insp_policy": "rand",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:40:08+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:40:38+00:00",
+      "seconds": 29.6
     },
     {
       "id": "E9_neutron_nowait_gmax_lat__insp_top_2_s0",
@@ -38941,10 +38947,14 @@
         "insp_policy": "top",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:40:38+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:41:09+00:00",
+      "seconds": 30.8
     },
     {
       "id": "E9_neutron_nowait_gmax_lat__insp_top_5_s0",
@@ -38960,10 +38970,14 @@
         "insp_policy": "top",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:41:09+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:41:40+00:00",
+      "seconds": 31.2
     },
     {
       "id": "E9_neutron_nowait_gmax_lat__insp_unc_2_s0",
@@ -38979,10 +38993,14 @@
         "insp_policy": "unc",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:41:40+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:42:10+00:00",
+      "seconds": 30.3
     },
     {
       "id": "E9_neutron_nowait_gmax_lat__insp_unc_5_s0",
@@ -38998,10 +39016,14 @@
         "insp_policy": "unc",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:42:10+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:42:41+00:00",
+      "seconds": 30.1
     },
     {
       "id": "E9_neutron_law_lagakos_model_gmax_lat__insp_rand_2_s0",
@@ -39168,10 +39190,14 @@
         "insp_policy": "rand",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:42:41+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:43:20+00:00",
+      "seconds": 39.3
     },
     {
       "id": "E9_neutron_odasc_W30__insp_rand_5_s0",
@@ -39188,10 +39214,14 @@
         "insp_policy": "rand",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:43:20+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:43:58+00:00",
+      "seconds": 38.4
     },
     {
       "id": "E9_neutron_odasc_W30__insp_top_2_s0",
@@ -39208,10 +39238,14 @@
         "insp_policy": "top",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:43:58+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:44:37+00:00",
+      "seconds": 38.6
     },
     {
       "id": "E9_neutron_odasc_W30__insp_top_5_s0",
@@ -39228,10 +39262,12 @@
         "insp_policy": "top",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:44:37+00:00",
+      "worker": 0
     },
     {
       "id": "E9_neutron_odasc_W30__insp_unc_2_s0",
@@ -39287,12 +39323,14 @@
         "insp_policy": "rand",
         "insp_budget": 0.02
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 4,
       "started": "2026-11-25T10:39:40+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T10:40:09+00:00",
+      "seconds": 29.4
     },
     {
       "id": "E9_neutron_nowait_gmax_lat__insp_rand_5_s1",
@@ -39308,10 +39346,14 @@
         "insp_policy": "rand",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:40:09+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:40:38+00:00",
+      "seconds": 29.3
     },
     {
       "id": "E9_neutron_nowait_gmax_lat__insp_top_2_s1",
@@ -39327,10 +39369,14 @@
         "insp_policy": "top",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:40:38+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:41:10+00:00",
+      "seconds": 31.6
     },
     {
       "id": "E9_neutron_nowait_gmax_lat__insp_top_5_s1",
@@ -39346,10 +39392,14 @@
         "insp_policy": "top",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:41:10+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:41:41+00:00",
+      "seconds": 31.0
     },
     {
       "id": "E9_neutron_nowait_gmax_lat__insp_unc_2_s1",
@@ -39365,10 +39415,14 @@
         "insp_policy": "unc",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:41:41+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:42:11+00:00",
+      "seconds": 29.8
     },
     {
       "id": "E9_neutron_nowait_gmax_lat__insp_unc_5_s1",
@@ -39384,10 +39438,14 @@
         "insp_policy": "unc",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:42:11+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:42:41+00:00",
+      "seconds": 29.8
     },
     {
       "id": "E9_neutron_law_lagakos_model_gmax_lat__insp_rand_2_s1",
@@ -39554,10 +39612,14 @@
         "insp_policy": "rand",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:42:41+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:43:20+00:00",
+      "seconds": 39.2
     },
     {
       "id": "E9_neutron_odasc_W30__insp_rand_5_s1",
@@ -39574,10 +39636,14 @@
         "insp_policy": "rand",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:43:20+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:43:58+00:00",
+      "seconds": 38.5
     },
     {
       "id": "E9_neutron_odasc_W30__insp_top_2_s1",
@@ -39594,10 +39660,14 @@
         "insp_policy": "top",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:43:58+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:44:37+00:00",
+      "seconds": 38.7
     },
     {
       "id": "E9_neutron_odasc_W30__insp_top_5_s1",
@@ -39614,10 +39684,12 @@
         "insp_policy": "top",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:44:37+00:00",
+      "worker": 2
     },
     {
       "id": "E9_neutron_odasc_W30__insp_unc_2_s1",
@@ -39673,12 +39745,14 @@
         "insp_policy": "rand",
         "insp_budget": 0.02
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 4,
       "started": "2026-11-25T10:39:43+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T10:40:11+00:00",
+      "seconds": 28.8
     },
     {
       "id": "E9_neutron_nowait_gmax_lat__insp_rand_5_s2",
@@ -39694,10 +39768,14 @@
         "insp_policy": "rand",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:40:12+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:40:41+00:00",
+      "seconds": 29.9
     },
     {
       "id": "E9_neutron_nowait_gmax_lat__insp_top_2_s2",
@@ -39713,10 +39791,14 @@
         "insp_policy": "top",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:40:41+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:41:14+00:00",
+      "seconds": 32.5
     },
     {
       "id": "E9_neutron_nowait_gmax_lat__insp_top_5_s2",
@@ -39732,10 +39814,14 @@
         "insp_policy": "top",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:41:14+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:41:45+00:00",
+      "seconds": 31.0
     },
     {
       "id": "E9_neutron_nowait_gmax_lat__insp_unc_2_s2",
@@ -39751,10 +39837,14 @@
         "insp_policy": "unc",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:41:45+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:42:15+00:00",
+      "seconds": 30.2
     },
     {
       "id": "E9_neutron_nowait_gmax_lat__insp_unc_5_s2",
@@ -39770,10 +39860,14 @@
         "insp_policy": "unc",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:42:15+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:42:44+00:00",
+      "seconds": 29.1
     },
     {
       "id": "E9_neutron_law_lagakos_model_gmax_lat__insp_rand_2_s2",
@@ -39940,10 +40034,14 @@
         "insp_policy": "rand",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:42:44+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:43:24+00:00",
+      "seconds": 39.3
     },
     {
       "id": "E9_neutron_odasc_W30__insp_rand_5_s2",
@@ -39960,10 +40058,14 @@
         "insp_policy": "rand",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:43:24+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:44:03+00:00",
+      "seconds": 39.0
     },
     {
       "id": "E9_neutron_odasc_W30__insp_top_2_s2",
@@ -39980,10 +40082,14 @@
         "insp_policy": "top",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:44:03+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:44:41+00:00",
+      "seconds": 38.8
     },
     {
       "id": "E9_neutron_odasc_W30__insp_top_5_s2",
@@ -40000,10 +40106,12 @@
         "insp_policy": "top",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:44:41+00:00",
+      "worker": 1
     },
     {
       "id": "E9_neutron_odasc_W30__insp_unc_2_s2",
