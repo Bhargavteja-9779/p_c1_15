@@ -11629,12 +11629,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T07:56:59+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T07:57:33+00:00",
+      "seconds": 34.1
     },
     {
       "id": "E1_brackets_wait_W90_s100",
@@ -11683,10 +11685,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T07:59:25+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T08:00:08+00:00",
+      "seconds": 42.6
     },
     {
       "id": "E1_brackets_wait_W30_gmax_lat_s100",
@@ -11720,10 +11726,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T07:58:26+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T07:59:11+00:00",
+      "seconds": 45.8
     },
     {
       "id": "E1_brackets_oracle_s100",
@@ -11736,10 +11746,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:00:39+00:00",
+      "worker": 2
     },
     {
       "id": "E1_brackets_law_lagakos_model_gmax_lat_s101",
@@ -11775,10 +11787,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T07:57:33+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T07:58:06+00:00",
+      "seconds": 33.1
     },
     {
       "id": "E1_brackets_wait_W90_s101",
@@ -11827,10 +11843,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T07:59:55+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T08:00:34+00:00",
+      "seconds": 39.3
     },
     {
       "id": "E1_brackets_wait_W30_gmax_lat_s101",
@@ -11864,10 +11884,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T07:58:28+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T07:59:12+00:00",
+      "seconds": 44.1
     },
     {
       "id": "E1_brackets_oracle_s101",
@@ -11880,10 +11904,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:00:53+00:00",
+      "worker": 1
     },
     {
       "id": "E1_brackets_law_lagakos_model_gmax_lat_s102",
@@ -11919,10 +11945,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T07:57:51+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T07:58:26+00:00",
+      "seconds": 34.3
     },
     {
       "id": "E1_brackets_wait_W90_s102",
@@ -11971,10 +12001,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T07:59:56+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T08:00:39+00:00",
+      "seconds": 42.4
     },
     {
       "id": "E1_brackets_wait_W30_gmax_lat_s102",
@@ -12008,10 +12042,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T07:58:40+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T07:59:25+00:00",
+      "seconds": 44.7
     },
     {
       "id": "E1_brackets_oracle_s102",
@@ -12043,12 +12081,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T07:56:56+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T07:57:51+00:00",
+      "seconds": 54.9
     },
     {
       "id": "E1_brackets_nowait_s103",
@@ -12061,10 +12101,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T07:57:53+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T07:58:28+00:00",
+      "seconds": 34.7
     },
     {
       "id": "E1_brackets_wait_W90_s103",
@@ -12113,10 +12157,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:00:08+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T08:00:53+00:00",
+      "seconds": 45.7
     },
     {
       "id": "E1_brackets_wait_W30_gmax_lat_s103",
@@ -12150,10 +12198,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T07:59:11+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T07:59:56+00:00",
+      "seconds": 44.8
     },
     {
       "id": "E1_brackets_oracle_s103",
@@ -12185,12 +12237,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T07:56:58+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T07:57:53+00:00",
+      "seconds": 55.1
     },
     {
       "id": "E1_brackets_nowait_s104",
@@ -12203,10 +12257,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T07:58:06+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T07:58:40+00:00",
+      "seconds": 34.1
     },
     {
       "id": "E1_brackets_wait_W90_s104",
@@ -12255,10 +12313,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:00:34+00:00",
+      "worker": 0
     },
     {
       "id": "E1_brackets_wait_W30_gmax_lat_s104",
@@ -12292,10 +12352,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T07:59:12+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T07:59:55+00:00",
+      "seconds": 43.0
     },
     {
       "id": "E1_brackets_oracle_s104",

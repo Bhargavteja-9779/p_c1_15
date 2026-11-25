@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E1",
+    "project": "brackets",
+    "method": "odasc",
+    "variant": "odasc_W30",
+    "seed": 101,
+    "split": "test",
+    "W": 30,
+    "odasc_delta": 0.9,
+    "gmean": 0.7375576386746706,
+    "r0": 0.5771323411745879,
+    "r1": 0.9425763062596999,
+    "rdiff": 0.365443965085112,
+    "auc": 0.842874145947159,
+    "mcc": 0.44337298751923626,
+    "n_eval": 16364,
+    "seconds": 39.25,
+    "job_id": "E1_brackets_odasc_W30_s101",
+    "written": "2026-11-25T08:00:34+00:00",
+    "cycle": 1
+  }
+]

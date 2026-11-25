@@ -1,0 +1,21 @@
+[
+  {
+    "experiment": "E1",
+    "project": "brackets",
+    "method": "nowait",
+    "variant": "nowait",
+    "seed": 103,
+    "split": "test",
+    "gmean": 0.5423719151952426,
+    "r0": 0.9556729076652264,
+    "r1": 0.30781169167097777,
+    "rdiff": 0.6478612159942486,
+    "auc": 0.8031615218807486,
+    "mcc": 0.3627099706457501,
+    "n_eval": 16364,
+    "seconds": 34.7,
+    "job_id": "E1_brackets_nowait_s103",
+    "written": "2026-11-25T07:58:28+00:00",
+    "cycle": 1
+  }
+]
