@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E2",
+    "project": "brackets",
+    "method": "nowait",
+    "variant": "nowait_gmax_lat",
+    "seed": 103,
+    "split": "test",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.751771005276163,
+    "r0": 0.7317170747319571,
+    "r1": 0.7723745473357475,
+    "rdiff": 0.04065747260379038,
+    "auc": 0.8031615218807486,
+    "mcc": 0.4395498114192325,
+    "n_eval": 16364,
+    "seconds": 34.27,
+    "job_id": "E2_brackets_nowait_gmax_lat_s103",
+    "written": "2026-11-25T09:30:37+00:00",
+    "cycle": 1
+  }
+]

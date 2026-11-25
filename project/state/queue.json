@@ -20208,12 +20208,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 30,
       "started": "2026-11-25T09:25:56+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T09:26:53+00:00",
+      "seconds": 57.2
     },
     {
       "id": "E2_brackets_law_naive_model_gmax_lat_s100",
@@ -20229,10 +20231,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:27:31+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:28:32+00:00",
+      "seconds": 60.7
     },
     {
       "id": "E2_brackets_law_lagakos_base_gmax_lat_s100",
@@ -20269,10 +20275,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:29:28+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:30:03+00:00",
+      "seconds": 35.6
     },
     {
       "id": "E2_brackets_law_lagakos_model_s101",
@@ -20287,12 +20297,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 30,
       "started": "2026-11-25T09:26:31+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T09:27:28+00:00",
+      "seconds": 57.5
     },
     {
       "id": "E2_brackets_law_naive_model_gmax_lat_s101",
@@ -20308,10 +20320,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:27:48+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:28:47+00:00",
+      "seconds": 58.8
     },
     {
       "id": "E2_brackets_law_lagakos_base_gmax_lat_s101",
@@ -20348,10 +20364,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:29:29+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:30:02+00:00",
+      "seconds": 33.8
     },
     {
       "id": "E2_brackets_law_lagakos_model_s102",
@@ -20366,12 +20386,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 30,
       "started": "2026-11-25T09:26:33+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T09:27:31+00:00",
+      "seconds": 58.4
     },
     {
       "id": "E2_brackets_law_naive_model_gmax_lat_s102",
@@ -20387,10 +20409,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:28:29+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:29:29+00:00",
+      "seconds": 59.9
     },
     {
       "id": "E2_brackets_law_lagakos_base_gmax_lat_s102",
@@ -20427,10 +20453,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:29:42+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:30:18+00:00",
+      "seconds": 36.0
     },
     {
       "id": "E2_brackets_law_lagakos_model_s103",
@@ -20445,10 +20475,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:26:53+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:27:48+00:00",
+      "seconds": 54.7
     },
     {
       "id": "E2_brackets_law_naive_model_gmax_lat_s103",
@@ -20464,10 +20498,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:28:32+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:29:28+00:00",
+      "seconds": 55.8
     },
     {
       "id": "E2_brackets_law_lagakos_base_gmax_lat_s103",
@@ -20504,10 +20542,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:30:02+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:30:37+00:00",
+      "seconds": 34.3
     },
     {
       "id": "E2_brackets_law_lagakos_model_s104",
@@ -20522,10 +20564,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:27:28+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:28:29+00:00",
+      "seconds": 60.1
     },
     {
       "id": "E2_brackets_law_naive_model_gmax_lat_s104",
@@ -20541,10 +20587,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:28:47+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:29:42+00:00",
+      "seconds": 55.4
     },
     {
       "id": "E2_brackets_law_lagakos_base_gmax_lat_s104",
@@ -20581,10 +20631,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:30:03+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:30:38+00:00",
+      "seconds": 35.1
     },
     {
       "id": "E2_broadleaf_law_lagakos_model_s100",
@@ -20599,10 +20653,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:31:20+00:00",
+      "worker": 0
     },
     {
       "id": "E2_broadleaf_law_naive_model_gmax_lat_s100",
@@ -20637,10 +20693,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:30:18+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:30:58+00:00",
+      "seconds": 39.7
     },
     {
       "id": "E2_broadleaf_nowait_gmax_lat_s100",
@@ -20672,10 +20732,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:31:38+00:00",
+      "worker": 2
     },
     {
       "id": "E2_broadleaf_law_naive_model_gmax_lat_s101",
@@ -20710,10 +20772,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:30:37+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:31:18+00:00",
+      "seconds": 41.3
     },
     {
       "id": "E2_broadleaf_nowait_gmax_lat_s101",
@@ -20783,10 +20849,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:30:38+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:31:20+00:00",
+      "seconds": 41.8
     },
     {
       "id": "E2_broadleaf_nowait_gmax_lat_s102",
@@ -20856,10 +20926,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:30:58+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:31:38+00:00",
+      "seconds": 40.0
     },
     {
       "id": "E2_broadleaf_nowait_gmax_lat_s103",
@@ -20929,10 +21003,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:31:18+00:00",
+      "worker": 1
     },
     {
       "id": "E2_broadleaf_nowait_gmax_lat_s104",
