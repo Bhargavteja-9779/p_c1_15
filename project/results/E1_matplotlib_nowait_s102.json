@@ -1,0 +1,21 @@
+[
+  {
+    "experiment": "E1",
+    "project": "matplotlib",
+    "method": "nowait",
+    "variant": "nowait",
+    "seed": 102,
+    "split": "test",
+    "gmean": 0.6023656805091844,
+    "r0": 0.8790493244343155,
+    "r1": 0.41276911655530807,
+    "rdiff": 0.4662802078790074,
+    "auc": 0.7867301414771746,
+    "mcc": 0.29600688380273493,
+    "n_eval": 14980,
+    "seconds": 39.08,
+    "job_id": "E1_matplotlib_nowait_s102",
+    "written": "2026-11-25T08:49:51+00:00",
+    "cycle": 1
+  }
+]

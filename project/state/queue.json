@@ -14402,12 +14402,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T08:45:56+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T08:46:36+00:00",
+      "seconds": 39.6
     },
     {
       "id": "E1_jgroups_orb_W90_s101",
@@ -14572,12 +14574,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T08:46:14+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T08:46:53+00:00",
+      "seconds": 39.8
     },
     {
       "id": "E1_jgroups_orb_W90_s102",
@@ -14742,12 +14746,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T08:46:22+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T08:47:00+00:00",
+      "seconds": 38.0
     },
     {
       "id": "E1_jgroups_orb_W90_s103",
@@ -14912,10 +14918,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:46:36+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T08:47:18+00:00",
+      "seconds": 42.4
     },
     {
       "id": "E1_jgroups_orb_W90_s104",
@@ -15039,10 +15049,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:46:54+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T08:48:04+00:00",
+      "seconds": 70.4
     },
     {
       "id": "E1_matplotlib_nowait_s100",
@@ -15055,10 +15069,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:48:25+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T08:49:03+00:00",
+      "seconds": 37.9
     },
     {
       "id": "E1_matplotlib_wait_W90_s100",
@@ -15107,10 +15125,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:51:09+00:00",
+      "worker": 0
     },
     {
       "id": "E1_matplotlib_wait_W30_gmax_lat_s100",
@@ -15144,10 +15164,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:49:51+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T08:50:38+00:00",
+      "seconds": 47.7
     },
     {
       "id": "E1_matplotlib_oracle_s100",
@@ -15179,10 +15203,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:47:00+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T08:48:08+00:00",
+      "seconds": 67.9
     },
     {
       "id": "E1_matplotlib_nowait_s101",
@@ -15195,10 +15223,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:49:03+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T08:49:42+00:00",
+      "seconds": 39.6
     },
     {
       "id": "E1_matplotlib_wait_W90_s101",
@@ -15284,10 +15316,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:49:52+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T08:50:41+00:00",
+      "seconds": 49.4
     },
     {
       "id": "E1_matplotlib_oracle_s101",
@@ -15319,10 +15355,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:47:18+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T08:48:25+00:00",
+      "seconds": 66.3
     },
     {
       "id": "E1_matplotlib_nowait_s102",
@@ -15335,10 +15375,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:49:11+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T08:49:51+00:00",
+      "seconds": 39.1
     },
     {
       "id": "E1_matplotlib_wait_W90_s102",
@@ -15424,10 +15468,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:50:23+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T08:51:09+00:00",
+      "seconds": 46.5
     },
     {
       "id": "E1_matplotlib_oracle_s102",
@@ -15459,10 +15507,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:48:04+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T08:49:11+00:00",
+      "seconds": 67.5
     },
     {
       "id": "E1_matplotlib_nowait_s103",
@@ -15475,10 +15527,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:49:14+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T08:49:52+00:00",
+      "seconds": 38.0
     },
     {
       "id": "E1_matplotlib_wait_W90_s103",
@@ -15564,10 +15620,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:50:38+00:00",
+      "worker": 2
     },
     {
       "id": "E1_matplotlib_oracle_s103",
@@ -15599,10 +15657,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:48:08+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T08:49:14+00:00",
+      "seconds": 66.0
     },
     {
       "id": "E1_matplotlib_nowait_s104",
@@ -15615,10 +15677,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:49:42+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T08:50:23+00:00",
+      "seconds": 40.5
     },
     {
       "id": "E1_matplotlib_wait_W90_s104",
@@ -15704,10 +15770,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:50:41+00:00",
+      "worker": 1
     },
     {
       "id": "E1_matplotlib_oracle_s104",
