@@ -1,0 +1,36 @@
+{
+  "frozen": "2026-11-25T20:59:35+00:00",
+  "plan": "plan_v6/plan_v7",
+  "dual": "dual_W30_k50",
+  "dev_means": {
+    "dual_W30_k50": 0.6812,
+    "lawm_soft_W30": 0.7551,
+    "odasc_W30_t0.8": 0.7598
+  },
+  "primary_candidate": "odasc_W30_t0.8",
+  "H5_dual_beats_lawm_and_odasc_on_dev": false,
+  "candidates_specs": [
+    {
+      "method": "lawm",
+      "mode": "dual",
+      "W": 30,
+      "knn_k": 50,
+      "delay_est": "lagakos",
+      "variant": "dual_W30_k50"
+    },
+    {
+      "method": "lawm",
+      "mode": "soft",
+      "W": 30,
+      "delay_est": "lagakos",
+      "variant": "lawm_soft_W30"
+    },
+    {
+      "method": "odasc",
+      "W": 30,
+      "theta": 0.8,
+      "knn_k": 20,
+      "variant": "odasc_W30_t0.8"
+    }
+  ]
+}

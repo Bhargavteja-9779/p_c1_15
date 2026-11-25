@@ -29693,7 +29693,7 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 3,
       "priority": 13,
@@ -29701,7 +29701,9 @@
         "2026-11-25T20:19:39+00:00 re-queued for cycle 3"
       ],
       "started": "2026-11-25T20:19:39+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T20:58:45+00:00",
+      "seconds": 2345.2
     },
     {
       "id": "E0e_nova_dual_W30_k20_s1",
@@ -29793,7 +29795,7 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 3,
       "priority": 13,
@@ -29801,7 +29803,9 @@
         "2026-11-25T20:19:39+00:00 re-queued for cycle 3"
       ],
       "started": "2026-11-25T20:19:39+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T20:58:55+00:00",
+      "seconds": 2356.0
     },
     {
       "id": "E0e_nova_dual_W30_k20_s2",
@@ -29893,7 +29897,7 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 3,
       "priority": 13,
@@ -29901,7 +29905,9 @@
         "2026-11-25T20:19:39+00:00 re-queued for cycle 3"
       ],
       "started": "2026-11-25T20:19:39+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T20:58:51+00:00",
+      "seconds": 2351.2
     },
     {
       "id": "E0e_sentry_dual_W30_k20_s0",

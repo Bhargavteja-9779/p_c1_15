@@ -42,3 +42,7 @@ timestamp,cycle,variant_id,description,data_split_used,metric,value,outcome,note
 2026-11-24T19:11:12+00:00,2,odasc_W90_t0.9,E0c/E0d dev tuning,dev projects x seeds 0-2,gmean_mean_dev,0.7354,not selected,
 2026-11-25T13:07:06+00:00,2,dual_W30_k20 (sanity),exploratory code check,dev: fabric seed 0,gmean,0.716,exploratory,"lawm 0.689, odasc 0.713 same seed"
 2026-11-25T13:07:06+00:00,2,threshold_sweep (diagnostic),"hindsight best threshold, not a method",dev: fabric/neutron/sentry seed 0,gmean,results/diag_threshold_dev.json,diagnostic,denoisers lose <=0.02 to threshold 0.5
+2026-11-25T20:59:35+00:00,2,dual_W30_k20,E0e dev tuning (dual-evidence denoiser),dev projects x seeds 0-2,gmean_mean_dev,0.6218,not selected,
+2026-11-25T20:59:35+00:00,2,dual_W30_k50,E0e dev tuning (dual-evidence denoiser),dev projects x seeds 0-2,gmean_mean_dev,0.6812,selected,
+2026-11-25T20:59:35+00:00,2,dual_W90_k20,E0e dev tuning (dual-evidence denoiser),dev projects x seeds 0-2,gmean_mean_dev,0.5828,not selected,
+2026-11-25T20:59:35+00:00,2,dual_W90_k50,E0e dev tuning (dual-evidence denoiser),dev projects x seeds 0-2,gmean_mean_dev,0.6368,not selected,
