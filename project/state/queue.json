@@ -8435,10 +8435,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T02:34:16+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T02:36:43+00:00",
+      "seconds": 147.7
     },
     {
       "id": "E0_nova_orb_W30_gmax_lat_s0",
@@ -8498,10 +8502,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T02:36:43+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T02:39:09+00:00",
+      "seconds": 145.8
     },
     {
       "id": "E0_nova_orb_W60_gmax_lat_s0",
@@ -8561,10 +8569,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T02:39:09+00:00",
+      "worker": 2
     },
     {
       "id": "E0_nova_orb_W90_gmax_lat_s0",
@@ -8624,12 +8634,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 13,
       "started": "2026-11-25T02:32:01+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T02:34:16+00:00",
+      "seconds": 134.2
     },
     {
       "id": "E0_nova_orb_W180_gmax_lat_s0",
@@ -8894,10 +8906,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T02:34:17+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T02:36:44+00:00",
+      "seconds": 146.9
     },
     {
       "id": "E0_nova_orb_W30_gmax_lat_s1",
@@ -8957,10 +8973,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T02:36:44+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T02:39:09+00:00",
+      "seconds": 146.0
     },
     {
       "id": "E0_nova_orb_W60_gmax_lat_s1",
@@ -9020,10 +9040,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T02:39:09+00:00",
+      "worker": 0
     },
     {
       "id": "E0_nova_orb_W90_gmax_lat_s1",
@@ -9083,12 +9105,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 13,
       "started": "2026-11-25T02:32:05+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T02:34:17+00:00",
+      "seconds": 131.6
     },
     {
       "id": "E0_nova_orb_W180_gmax_lat_s1",
@@ -9353,10 +9377,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T02:34:20+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T02:36:48+00:00",
+      "seconds": 147.7
     },
     {
       "id": "E0_nova_orb_W30_gmax_lat_s2",
@@ -9416,10 +9444,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T02:36:48+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T02:39:14+00:00",
+      "seconds": 146.0
     },
     {
       "id": "E0_nova_orb_W60_gmax_lat_s2",
@@ -9479,10 +9511,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T02:39:14+00:00",
+      "worker": 1
     },
     {
       "id": "E0_nova_orb_W90_gmax_lat_s2",
@@ -9542,12 +9576,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 13,
       "started": "2026-11-25T02:32:05+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T02:34:20+00:00",
+      "seconds": 134.4
     },
     {
       "id": "E0_nova_orb_W180_gmax_lat_s2",

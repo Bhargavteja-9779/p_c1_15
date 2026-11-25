@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E0",
+    "project": "nova",
+    "method": "wait",
+    "variant": "wait_W30_gmax_lat",
+    "seed": 0,
+    "split": "dev",
+    "W": 30,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.7781762806978295,
+    "r0": 0.7679139758366035,
+    "r1": 0.7885757296980848,
+    "rdiff": 0.02066175386148128,
+    "auc": 0.7860648642991029,
+    "mcc": 0.508298948276438,
+    "n_eval": 44320,
+    "seconds": 147.66,
+    "job_id": "E0_nova_wait_W30_gmax_lat_s0",
+    "written": "2026-11-25T02:36:43+00:00",
+    "cycle": 1
+  }
+]
