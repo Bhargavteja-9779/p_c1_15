@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E1",
+    "project": "brackets",
+    "method": "wait",
+    "variant": "wait_W30_gmax_lat",
+    "seed": 100,
+    "split": "test",
+    "W": 30,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.7656965055695495,
+    "r0": 0.733102253032929,
+    "r1": 0.7997399219765929,
+    "rdiff": 0.06663766894366396,
+    "auc": 0.8472875484829157,
+    "mcc": 0.4965923151929841,
+    "n_eval": 2500,
+    "seconds": 1.64,
+    "job_id": "E1_brackets_wait_W30_gmax_lat_s100_quick",
+    "written": "2026-11-25T07:55:23+00:00",
+    "cycle": 1
+  }
+]

@@ -41,28 +41,23 @@ def specs(exp):
                     J.append(dict(method=m, W=W, thr_policy="gmax_lat", variant=f"{m}_W{W}_gmax_lat", project=p, seed=s, **extra))
         for j in J: j.update(experiment="E0", split="dev")
         return J, 12
-    if exp in ("E1", "E2", "E3"):
+    if exp in ("E1", "E2", "E3"):   # plan_v3: everything comes from state/frozen_config.json
         fz = read_json(STATE / "frozen_config.json")
-        assert fz, "frozen_config.json missing: run scripts/freeze_config.py after E0"
+        assert fz and fz.get("plan") == "plan_v3", "frozen_config.json (plan_v3) missing"
+        P = fz["proposed"]
+        if exp == "E1":
+            cfgs = [P] + fz["baselines"] + [fz["oracle"]]
+        elif exp == "E2":
+            cfgs = [dict(variant="law_lagakos_model", method="law", delay_est="lagakos", prior="model"),
+                    dict(variant="law_naive_model_gmax_lat", method="law", delay_est="naive", prior="model", thr_policy="gmax_lat"),
+                    dict(variant="law_lagakos_base_gmax_lat", method="law", delay_est="lagakos", prior="base", thr_policy="gmax_lat"),
+                    dict(variant="nowait_gmax_lat", method="nowait", thr_policy="gmax_lat")]
+        else:
+            keep = {P["variant"], "odasc_W30", "wait_W90", "odasc_W15_gmax_lat"}
+            cfgs = [dict(c, delay_scale=2.0, variant=c["variant"] + "_ds2") for c in [P] + fz["baselines"] if c["variant"] in keep]
         for p, s in itertools.product(TEST, SC):
-            if exp == "E1":
-                J += [dict(method="nowait"), dict(method="oracle"),
-                      dict(method="wait", W=fz["wait_W"], variant=f"wait_W{fz['wait_W']}"),
-                      dict(method="orb", W=fz["orb_W"], variant=f"orb_W{fz['orb_W']}"),
-                      dict(method="odasc", W=fz["odasc_W"], odasc_delta=fz["odasc_delta"], variant=f"odasc_W{fz['odasc_W']}"),
-                      dict(method="law", delay_est=fz["law_delay_est"], prior=fz["law_prior"], variant=fz["law_variant"])]
-            if exp == "E2":
-                J += [dict(method="law", delay_est=de, prior=pr, variant=f"law_{de}_{pr}")
-                      for de, pr in [("lagakos", "model"), ("naive", "model"), ("lagakos", "base"), ("naive", "base")]
-                      if f"law_{de}_{pr}" != fz["law_variant"]]
-            if exp == "E3":
-                J += [dict(method="nowait", delay_scale=2.0, variant="nowait_ds2"),
-                      dict(method="wait", W=fz["wait_W"], delay_scale=2.0, variant=f"wait_W{fz['wait_W']}_ds2"),
-                      dict(method="orb", W=fz["orb_W"], delay_scale=2.0, variant=f"orb_W{fz['orb_W']}_ds2"),
-                      dict(method="odasc", W=fz["odasc_W"], odasc_delta=fz["odasc_delta"], delay_scale=2.0, variant=f"odasc_W{fz['odasc_W']}_ds2"),
-                      dict(method="law", delay_est=fz["law_delay_est"], prior=fz["law_prior"], delay_scale=2.0, variant=fz["law_variant"] + "_ds2")]
-            k = {"E1": 6, "E2": 3, "E3": 5}[exp]
-            J[-k:] = [dict(j, project=p, seed=s) for j in J[-k:]]
+            for c in cfgs:
+                J.append(dict(c, project=p, seed=s))
         for j in J: j.update(experiment=exp, split="test")
         return J, {"E1": 20, "E2": 30, "E3": 40}[exp]
     raise SystemExit("unknown experiment")

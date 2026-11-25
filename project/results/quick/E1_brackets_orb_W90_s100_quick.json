@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E1",
+    "project": "brackets",
+    "method": "orb",
+    "variant": "orb_W90",
+    "seed": 100,
+    "split": "test",
+    "W": 90,
+    "gmean": 0.7108656440979118,
+    "r0": 0.5305439330543933,
+    "r1": 0.9524752475247524,
+    "rdiff": 0.42193131447035914,
+    "auc": 0.8184340693483574,
+    "mcc": 0.45315545492042336,
+    "n_eval": 1700,
+    "seconds": 1.32,
+    "job_id": "E1_brackets_orb_W90_s100_quick",
+    "written": "2026-11-25T07:55:21+00:00",
+    "cycle": 1
+  }
+]

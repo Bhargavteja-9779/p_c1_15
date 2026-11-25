@@ -52,3 +52,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-25T00:25:33+00:00** — Runner: dead-worker resets refund the attempt; enqueue.py takes the queue lock
   - Reason: Container restart on 2026-11-25 would otherwise push healthy jobs toward failed_permanent; enqueue previously required stopping workers.
+
+- **2026-11-25T07:54:45+00:00** — FROZEN (plan_v3): proposed = LAW lagakos+model with latency-corrected G-mean threshold; comparators nowait, wait_W90, orb_W90, odasc_W30 (primary), wait_W30_gmax_lat, odasc_W15_gmax_lat
+  - Reason: Best mean dev G-mean 0.763 vs best baseline odasc_W30 0.750 (+0.013, below the 0.02 margin; 44 dev variants). Freezing now and letting the held-out confirmation decide, instead of further dev tuning that would only add forking paths.
