@@ -21098,10 +21098,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:37:47+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:40:33+00:00",
+      "seconds": 166.3
     },
     {
       "id": "E2_camel_law_naive_model_gmax_lat_s100",
@@ -21136,12 +21140,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 30,
       "started": "2026-11-25T09:35:03+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T09:37:27+00:00",
+      "seconds": 144.4
     },
     {
       "id": "E2_camel_nowait_gmax_lat_s100",
@@ -21173,10 +21179,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:39:44+00:00",
+      "worker": 2
     },
     {
       "id": "E2_camel_law_naive_model_gmax_lat_s101",
@@ -21211,12 +21219,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 30,
       "started": "2026-11-25T09:35:04+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T09:37:30+00:00",
+      "seconds": 146.4
     },
     {
       "id": "E2_camel_nowait_gmax_lat_s101",
@@ -21248,10 +21258,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:39:47+00:00",
+      "worker": 0
     },
     {
       "id": "E2_camel_law_naive_model_gmax_lat_s102",
@@ -21286,12 +21298,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 30,
       "started": "2026-11-25T09:35:20+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T09:37:47+00:00",
+      "seconds": 147.1
     },
     {
       "id": "E2_camel_nowait_gmax_lat_s102",
@@ -21323,10 +21337,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:40:33+00:00",
+      "worker": 1
     },
     {
       "id": "E2_camel_law_naive_model_gmax_lat_s103",
@@ -21361,10 +21377,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:37:27+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:39:44+00:00",
+      "seconds": 136.4
     },
     {
       "id": "E2_camel_nowait_gmax_lat_s103",
@@ -21434,10 +21454,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:37:30+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:39:47+00:00",
+      "seconds": 136.1
     },
     {
       "id": "E2_camel_nowait_gmax_lat_s104",
