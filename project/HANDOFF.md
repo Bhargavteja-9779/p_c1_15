@@ -1,5 +1,5 @@
 # HANDOFF — read this first
-*Auto-generated 2026-11-25T21:37:55+00:00 by scripts/write_handoff.py*
+*Auto-generated 2026-11-25T21:47:57+00:00 by scripts/write_handoff.py*
 
 ## READ ALSO: USER_DIRECTIVES.md (owner standing orders)
 
@@ -16,7 +16,7 @@
 ## Running right now
 - Queue (full): {'done': 1526, 'skipped_budget': 144, 'skipped_plan': 117}; running jobs: none
 - Processes: `none`
-- Heartbeat age: 116s
+- Heartbeat age: 718s
 
 ## Compute
 - Cycle 3: 3.31 h / 15 h   Global: 29.50 h / 120 h (CPU-hours; machine has no GPU)
@@ -37,8 +37,6 @@
 | G11 | unknown |  |
 
 ## Last 10 decisions
-- 2026-11-25T13:07:06+00:00: GitHub push currently fails (403, authentication must be reconnected by owner); commits accumulate locally and autocommit retries
-- 2026-11-25T13:15:25+00:00: Parallel branches found (dreamy-fermat cycle 2, zealous-lamport, keen-edison, magical-bardeen) forked from b18fc8e; continue on zen-cray (most recent, owner directives); Cabral test projects declared 'used'; fresh confirmation on ApacheJIT (plan_v7)
 - 2026-11-25T13:34:47+00:00: Session magical-bardeen resumed 2026-11-25: adopted zen-cray-ajbt81 state (most advanced: cycle 2, plan_v6 E0e running, plan_v7 pre-registered) into branch claude/magical-bardeen-9yglkz via merge -s ours; zen-cray's heartbeat was 12 min stale (session presumed stopped)
 - 2026-11-25T13:34:47+00:00: Added scripts/freeze_v6.py and enqueue E8 (plan_v7 ApacheJIT confirmation, exactly the plan_v7 method list); ApacheJIT downloaded and sha256-verified; smoke test on the first 1200 kafka commits checked only that every method runs (no metrics inspected)
 - 2026-11-25T14:53:00+00:00: Owner asked to continue from the most recent branch: adopted claude/magical-bardeen-9yglkz (cycle 2, heartbeat 28 min stale → session presumed stopped) into claude/keen-edison-jo222n via merge -s ours (keen-edison history kept). Keen-edison's parallel cycle-1 dev selection (E0b/E0c calibration/fsc/fixed-rate grids, dev only, never run on test) is kept under archive/keen_edison_cycle1/ for reference; its compute is not counted in this lineage's budget.json. Runners + autocommit relaunched on keen-edison.
@@ -47,6 +45,8 @@
 - 2026-11-25T21:00:02+00:00: E8 enqueued exactly as pre-registered in plan_v7 (9 ApacheJIT projects x 5 confirm seeds x 9 methods = 405 jobs) despite H5 being false on dev
 - 2026-11-25T21:04:27+00:00: final_report E8/H6: the primary candidate (best dev mean) is odasc_W30_t0.8 itself, so the pre-registered 'primary vs odasc' test is a degenerate self-comparison; dropped, Holm over the 2 waiting baselines. Our own methods (dual_W30_k50, lawm_soft_W30) vs wait_W90/orb_W90/odasc are reported descriptively as pre-registered
 - 2026-11-25T21:37:55+00:00: Gates: G5 stays fail (H6 failed on fresh data); G7 -> pass (H3 replicated on ApacheJIT 9/9). ApacheJIT declared used for confirmation. Next round (plan_v8, dev only): fix dual's nova failure with a principled latency-corrected neighbour posterior, then find an untouched confirmation dataset
+- 2026-11-25T21:47:57+00:00: Adopted keen-edison (cycle 3) into zealous-lamport; zealous cycle-1 lineage archived; dreamy-fermat (cycle 2 copy of zealous) left on its branch
+- 2026-11-25T21:47:57+00:00: Wrote SUBMISSION_READINESS.md in answer to the owner's request for a final submission
 
 ## Last failures (journal entries)
 - journal/ENTRIES/20261124T040516_FAILURE_the_pre_specified_law_method_loses_to_a_tuned_wait.md
@@ -86,4 +86,9 @@
 - Code: `src/` (runner, jobs, models), `scripts/` (status, report, audit, supervisor), `tests/`
 - Results: `results/raw_results.jsonl` (canonical), `results/*.json`, `tables/`, `figures/`
 - Paper: `paper/` ; reviews: `review/`
+
+## Untouched confirmation data (needed after ApacheJIT was used by E8, 2026-11-25)
+- JIT-Defects4J (Ni et al., 2022; built on Herbold et al.'s LLTC4J): 21 Java projects, 2,332 buggy / 24,987 clean commits. Buggy commits come from manually labelled fix lines via git blame, so fix commits (and their dates) can in principle be recovered via git. NOT yet checked whether the released files contain the bug->fix link; that would need data engineering (clone repos for timestamps).
+- ApacheJIT projects excluded by plan_v7 for size (<2000 commits: spark, zeppelin, mapreduce, zookeeper): untouched but small, weak.
+- Defectors (Zenodo 10.5281/zenodo.7708984): file-level Python dataset, not commit-level JIT -> probably unsuitable (UNVERIFIED).
 

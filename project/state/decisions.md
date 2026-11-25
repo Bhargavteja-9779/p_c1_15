@@ -103,3 +103,9 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-25T21:37:55+00:00** — Gates: G5 stays fail (H6 failed on fresh data); G7 -> pass (H3 replicated on ApacheJIT 9/9). ApacheJIT declared used for confirmation. Next round (plan_v8, dev only): fix dual's nova failure with a principled latency-corrected neighbour posterior, then find an untouched confirmation dataset
   - Reason: pre-registered plan_v7 analysis; owner directive to keep iterating
+
+- **2026-11-25T21:47:57+00:00** — Adopted keen-edison (cycle 3) into zealous-lamport; zealous cycle-1 lineage archived; dreamy-fermat (cycle 2 copy of zealous) left on its branch
+  - Reason: Owner asked to continue from the latest branch; keen-edison is most advanced. All lineages agree: no proposed method beats ODaSC-style on held-out data.
+
+- **2026-11-25T21:47:57+00:00** — Wrote SUBMISSION_READINESS.md in answer to the owner's request for a final submission
+  - Reason: No manuscript is handed out as a 'better method' paper because G5 fails on 3 confirmation sets; two honest routes documented (empirical decomposition paper vs plan_v8 iteration).
