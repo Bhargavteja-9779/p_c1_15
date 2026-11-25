@@ -31076,10 +31076,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:06:51+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:07:10+00:00",
+      "seconds": 19.4
     },
     {
       "id": "E8_aj_flink_dual_W30_k50_s100",
@@ -31096,10 +31100,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:07:19+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:08:48+00:00",
+      "seconds": 88.5
     },
     {
       "id": "E8_aj_flink_lawm_soft_W30_s100",
@@ -31115,10 +31123,12 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:08:57+00:00",
+      "worker": 1
     },
     {
       "id": "E8_aj_flink_odasc_W30_t0.8_s100",
@@ -31233,10 +31243,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:06:54+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:07:13+00:00",
+      "seconds": 19.3
     },
     {
       "id": "E8_aj_flink_dual_W30_k50_s101",
@@ -31253,10 +31267,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:07:29+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:08:56+00:00",
+      "seconds": 86.5
     },
     {
       "id": "E8_aj_flink_lawm_soft_W30_s101",
@@ -31390,10 +31408,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:07:00+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:07:19+00:00",
+      "seconds": 19.2
     },
     {
       "id": "E8_aj_flink_dual_W30_k50_s102",
@@ -31410,10 +31432,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:07:33+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:08:57+00:00",
+      "seconds": 84.4
     },
     {
       "id": "E8_aj_flink_lawm_soft_W30_s102",
@@ -31547,10 +31573,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:07:10+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:07:29+00:00",
+      "seconds": 19.2
     },
     {
       "id": "E8_aj_flink_dual_W30_k50_s103",
@@ -31567,10 +31597,12 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:08:48+00:00",
+      "worker": 0
     },
     {
       "id": "E8_aj_flink_lawm_soft_W30_s103",
@@ -31704,10 +31736,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:07:13+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:07:33+00:00",
+      "seconds": 19.9
     },
     {
       "id": "E8_aj_flink_dual_W30_k50_s104",
@@ -31724,10 +31760,12 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:08:56+00:00",
+      "worker": 2
     },
     {
       "id": "E8_aj_flink_lawm_soft_W30_s104",
@@ -32581,10 +32619,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:05:36+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:05:46+00:00",
+      "seconds": 10.5
     },
     {
       "id": "E8_aj_cassandra_wait_W90_s100",
@@ -32598,10 +32640,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:06:32+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:06:43+00:00",
+      "seconds": 11.0
     },
     {
       "id": "E8_aj_cassandra_orb_W90_s100",
@@ -32615,10 +32661,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:05:59+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:06:09+00:00",
+      "seconds": 10.0
     },
     {
       "id": "E8_aj_cassandra_wait_W30_s100",
@@ -32632,10 +32682,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:06:18+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:06:28+00:00",
+      "seconds": 10.3
     },
     {
       "id": "E8_aj_cassandra_decomp_L1_W30_s100",
@@ -32720,12 +32774,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 3,
       "priority": 14,
       "started": "2026-11-25T21:05:11+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T21:05:31+00:00",
+      "seconds": 19.8
     },
     {
       "id": "E8_aj_cassandra_nowait_s101",
@@ -32756,10 +32812,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:05:46+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:05:57+00:00",
+      "seconds": 10.5
     },
     {
       "id": "E8_aj_cassandra_wait_W90_s101",
@@ -32773,10 +32833,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:06:39+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:06:51+00:00",
+      "seconds": 11.8
     },
     {
       "id": "E8_aj_cassandra_orb_W90_s101",
@@ -32790,10 +32854,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:06:01+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:06:12+00:00",
+      "seconds": 11.0
     },
     {
       "id": "E8_aj_cassandra_wait_W30_s101",
@@ -32807,10 +32875,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:06:19+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:06:29+00:00",
+      "seconds": 10.2
     },
     {
       "id": "E8_aj_cassandra_decomp_L1_W30_s101",
@@ -32895,10 +32967,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:05:14+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:05:32+00:00",
+      "seconds": 18.2
     },
     {
       "id": "E8_aj_cassandra_nowait_s102",
@@ -32929,10 +33005,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:05:49+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:05:59+00:00",
+      "seconds": 10.3
     },
     {
       "id": "E8_aj_cassandra_wait_W90_s102",
@@ -32946,10 +33026,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:06:40+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:06:50+00:00",
+      "seconds": 10.2
     },
     {
       "id": "E8_aj_cassandra_orb_W90_s102",
@@ -32963,10 +33047,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:06:07+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:06:18+00:00",
+      "seconds": 10.5
     },
     {
       "id": "E8_aj_cassandra_wait_W30_s102",
@@ -32980,10 +33068,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:06:22+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:06:32+00:00",
+      "seconds": 9.8
     },
     {
       "id": "E8_aj_cassandra_decomp_L1_W30_s102",
@@ -33068,10 +33160,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:05:16+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:05:36+00:00",
+      "seconds": 19.9
     },
     {
       "id": "E8_aj_cassandra_nowait_s103",
@@ -33102,10 +33198,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:05:50+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:06:01+00:00",
+      "seconds": 10.5
     },
     {
       "id": "E8_aj_cassandra_wait_W90_s103",
@@ -33119,10 +33219,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:06:43+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:06:54+00:00",
+      "seconds": 10.8
     },
     {
       "id": "E8_aj_cassandra_orb_W90_s103",
@@ -33136,10 +33240,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:06:09+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:06:19+00:00",
+      "seconds": 9.7
     },
     {
       "id": "E8_aj_cassandra_wait_W30_s103",
@@ -33153,10 +33261,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:06:28+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:06:39+00:00",
+      "seconds": 10.7
     },
     {
       "id": "E8_aj_cassandra_decomp_L1_W30_s103",
@@ -33241,10 +33353,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:05:31+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:05:49+00:00",
+      "seconds": 17.5
     },
     {
       "id": "E8_aj_cassandra_nowait_s104",
@@ -33256,12 +33372,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 3,
       "priority": 14,
       "started": "2026-11-25T21:05:03+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T21:05:13+00:00",
+      "seconds": 10.8
     },
     {
       "id": "E8_aj_cassandra_oracle_s104",
@@ -33273,10 +33391,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:05:57+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:06:07+00:00",
+      "seconds": 10.3
     },
     {
       "id": "E8_aj_cassandra_wait_W90_s104",
@@ -33290,10 +33412,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:06:50+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:07:00+00:00",
+      "seconds": 9.8
     },
     {
       "id": "E8_aj_cassandra_orb_W90_s104",
@@ -33307,10 +33433,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:06:12+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:06:22+00:00",
+      "seconds": 9.9
     },
     {
       "id": "E8_aj_cassandra_wait_W30_s104",
@@ -33324,10 +33454,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:06:29+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:06:40+00:00",
+      "seconds": 10.7
     },
     {
       "id": "E8_aj_cassandra_decomp_L1_W30_s104",
@@ -33389,12 +33523,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 3,
       "priority": 14,
       "started": "2026-11-25T21:04:38+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T21:05:16+00:00",
+      "seconds": 37.5
     },
     {
       "id": "E8_aj_cassandra_odasc_W30_t0.8_s104",
@@ -33410,10 +33546,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:05:32+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:05:50+00:00",
+      "seconds": 18.7
     },
     {
       "id": "E8_aj_groovy_nowait_s100",
