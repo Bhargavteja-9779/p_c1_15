@@ -1,5 +1,5 @@
 # HANDOFF — read this first
-*Auto-generated 2026-11-25T10:28:12+00:00 by scripts/write_handoff.py*
+*Auto-generated 2026-11-25T10:29:58+00:00 by scripts/write_handoff.py*
 
 ## Where we are
 - **Status:** RUNNING   **Cycle:** 2 / 12   **Phase:** PHASE5_RUN   **Pivots:** 0 / 3
@@ -12,7 +12,7 @@
 - **Hypothesis:** LAW beats the best tuned waiting-time baseline by >=0.02 G-mean on 10 held-out projects (Holm p<0.05)
 
 ## Running right now
-- Queue (full): {'done': 1074, 'pending': 951, 'running': 1}; running jobs: ['E9_fabric_law_lagakos_model_gmax_lat__insp_rand_2_s0']
+- Queue (full): {'done': 1083, 'pending': 940, 'running': 3}; running jobs: ['E9_fabric_law_lagakos_model_gmax_lat__insp_top_5_s0', 'E9_fabric_law_lagakos_model_gmax_lat__insp_top_5_s1', 'E9_fabric_law_lagakos_model_gmax_lat__insp_top_5_s2']
 - Processes: `965 tmux new-session -d -s research_w0 python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
 966 bash -c python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
 968 python3 run_all.py --mode full --resume --worker 0
@@ -20,10 +20,10 @@
 974 python3 run_all.py --mode full --resume --worker 1
 978 bash -c python3 run_all.py --mode full --resume --worker 2 >> logs/runner_w2.log 2>&1
 980 python3 run_all.py --mode full --resume --worker 2`
-- Heartbeat age: 5s
+- Heartbeat age: 15s
 
 ## Compute
-- Cycle 2: 0.40 h / 15 h   Global: 15.44 h / 120 h (CPU-hours; machine has no GPU)
+- Cycle 2: 0.47 h / 15 h   Global: 15.51 h / 120 h (CPU-hours; machine has no GPU)
 
 ## Gate status (Section 7)
 | Gate | Status | Evidence |
@@ -54,6 +54,7 @@
 
 ## Last failures (journal entries)
 - journal/ENTRIES/20261125T101945_FAILURE_the_primary_hypothesis_fails_on_held_out_data__and.md
+- journal/ENTRIES/20261125T102820_DEAD END_a_feature_dependent_discovery_delay_model.md
 
 ## Commands (run from `project/`)
 | What | Command |

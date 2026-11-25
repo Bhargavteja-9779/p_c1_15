@@ -31,3 +31,16 @@ def test_lagakos_recovers_truncated_exponential():
 
 if __name__ == "__main__":
     test_lagakos_recovers_truncated_exponential(); test_future_discoveries_do_not_leak(); print("tests passed")
+
+def test_inspection_uses_only_inspected_labels():
+    """With an inspection budget, predictions before T0 must not depend on discoveries after T0 (the only
+    early labels allowed are those of inspected commits, which the simulator reveals itself)."""
+    df = load_project("fabric").iloc[:3000].copy(); cut = 1700; T0 = df.t.iloc[cut]
+    df2 = df.copy(); late = (df2.t_found > T0) & np.isfinite(df2.t_found); df2.loc[late, "t_found"] = np.inf
+    for pol in ["rand", "top", "unc"]:
+        a = simulate(df, "law", seed=0, return_preds=True, eval_end_gap_days=0, thr_policy="gmax_lat", insp_policy=pol, insp_budget=0.05)
+        b = simulate(df2, "law", seed=0, return_preds=True, eval_end_gap_days=0, thr_policy="gmax_lat", insp_policy=pol, insp_budget=0.05)
+        assert np.allclose(np.nan_to_num(a["prob"][:cut]), np.nan_to_num(b["prob"][:cut])), pol
+
+if __name__ == "__main__":
+    test_inspection_uses_only_inspected_labels(); print("inspection leakage test passed")
