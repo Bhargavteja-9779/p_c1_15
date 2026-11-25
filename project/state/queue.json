@@ -14230,10 +14230,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:45:43+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T08:46:22+00:00",
+      "seconds": 39.2
     },
     {
       "id": "E1_jgroups_orb_W90_s100",
@@ -14247,10 +14251,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:43:36+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T08:44:18+00:00",
+      "seconds": 41.4
     },
     {
       "id": "E1_jgroups_odasc_W30_s100",
@@ -14265,12 +14273,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T08:40:58+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T08:41:52+00:00",
+      "seconds": 53.7
     },
     {
       "id": "E1_jgroups_wait_W30_gmax_lat_s100",
@@ -14285,10 +14295,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:44:40+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T08:45:19+00:00",
+      "seconds": 38.7
     },
     {
       "id": "E1_jgroups_odasc_W15_gmax_lat_s100",
@@ -14324,10 +14338,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:42:19+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T08:42:59+00:00",
+      "seconds": 40.4
     },
     {
       "id": "E1_jgroups_law_lagakos_model_gmax_lat_s101",
@@ -14384,10 +14402,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:45:56+00:00",
+      "worker": 0
     },
     {
       "id": "E1_jgroups_orb_W90_s101",
@@ -14401,10 +14421,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:43:47+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T08:44:28+00:00",
+      "seconds": 40.6
     },
     {
       "id": "E1_jgroups_odasc_W30_s101",
@@ -14419,10 +14443,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:41:24+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T08:42:18+00:00",
+      "seconds": 54.4
     },
     {
       "id": "E1_jgroups_wait_W30_gmax_lat_s101",
@@ -14437,10 +14465,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:44:55+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T08:45:33+00:00",
+      "seconds": 38.4
     },
     {
       "id": "E1_jgroups_odasc_W15_gmax_lat_s101",
@@ -14476,10 +14508,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:42:44+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T08:43:22+00:00",
+      "seconds": 37.6
     },
     {
       "id": "E1_jgroups_law_lagakos_model_gmax_lat_s102",
@@ -14536,10 +14572,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:46:14+00:00",
+      "worker": 2
     },
     {
       "id": "E1_jgroups_orb_W90_s102",
@@ -14553,10 +14591,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:44:04+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T08:44:40+00:00",
+      "seconds": 35.8
     },
     {
       "id": "E1_jgroups_odasc_W30_s102",
@@ -14571,10 +14613,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:41:25+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T08:42:19+00:00",
+      "seconds": 54.0
     },
     {
       "id": "E1_jgroups_wait_W30_gmax_lat_s102",
@@ -14589,10 +14635,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:45:06+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T08:45:43+00:00",
+      "seconds": 37.0
     },
     {
       "id": "E1_jgroups_odasc_W15_gmax_lat_s102",
@@ -14628,10 +14678,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:42:59+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T08:43:36+00:00",
+      "seconds": 37.0
     },
     {
       "id": "E1_jgroups_law_lagakos_model_gmax_lat_s103",
@@ -14688,10 +14742,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:46:22+00:00",
+      "worker": 1
     },
     {
       "id": "E1_jgroups_orb_W90_s103",
@@ -14705,10 +14761,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:44:18+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T08:44:55+00:00",
+      "seconds": 36.7
     },
     {
       "id": "E1_jgroups_odasc_W30_s103",
@@ -14723,10 +14783,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:41:52+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T08:42:44+00:00",
+      "seconds": 52.1
     },
     {
       "id": "E1_jgroups_wait_W30_gmax_lat_s103",
@@ -14741,10 +14805,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:45:19+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T08:45:56+00:00",
+      "seconds": 37.6
     },
     {
       "id": "E1_jgroups_odasc_W15_gmax_lat_s103",
@@ -14760,12 +14828,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T08:40:27+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T08:41:25+00:00",
+      "seconds": 57.8
     },
     {
       "id": "E1_jgroups_oracle_s103",
@@ -14778,10 +14848,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:43:11+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T08:43:47+00:00",
+      "seconds": 36.5
     },
     {
       "id": "E1_jgroups_law_lagakos_model_gmax_lat_s104",
@@ -14855,10 +14929,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:44:28+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T08:45:06+00:00",
+      "seconds": 37.5
     },
     {
       "id": "E1_jgroups_odasc_W30_s104",
@@ -14873,10 +14951,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:42:18+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T08:43:11+00:00",
+      "seconds": 52.6
     },
     {
       "id": "E1_jgroups_wait_W30_gmax_lat_s104",
@@ -14891,10 +14973,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:45:33+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T08:46:14+00:00",
+      "seconds": 40.6
     },
     {
       "id": "E1_jgroups_odasc_W15_gmax_lat_s104",
@@ -14910,12 +14996,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T08:40:29+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T08:41:24+00:00",
+      "seconds": 55.0
     },
     {
       "id": "E1_jgroups_oracle_s104",
@@ -14928,10 +15016,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:43:22+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T08:44:04+00:00",
+      "seconds": 42.5
     },
     {
       "id": "E1_matplotlib_law_lagakos_model_gmax_lat_s100",

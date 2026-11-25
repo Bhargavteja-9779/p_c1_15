@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E1",
+    "project": "jgroups",
+    "method": "wait",
+    "variant": "wait_W30_gmax_lat",
+    "seed": 101,
+    "split": "test",
+    "W": 30,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6174885570575015,
+    "r0": 0.6156237049316204,
+    "r1": 0.6193590582079791,
+    "rdiff": 0.003735353276358655,
+    "auc": 0.6651291858800945,
+    "mcc": 0.18034458224394978,
+    "n_eval": 17536,
+    "seconds": 38.36,
+    "job_id": "E1_jgroups_wait_W30_gmax_lat_s101",
+    "written": "2026-11-25T08:45:33+00:00",
+    "cycle": 1
+  }
+]

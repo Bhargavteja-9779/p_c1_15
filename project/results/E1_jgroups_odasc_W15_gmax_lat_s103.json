@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E1",
+    "project": "jgroups",
+    "method": "odasc",
+    "variant": "odasc_W15_gmax_lat",
+    "seed": 103,
+    "split": "test",
+    "W": 15,
+    "odasc_delta": 0.9,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.644681675270228,
+    "r0": 0.6458074319657411,
+    "r1": 0.6435578809679529,
+    "rdiff": 0.00224955099778823,
+    "auc": 0.7095958541910773,
+    "mcc": 0.22369817638691875,
+    "n_eval": 17536,
+    "seconds": 57.75,
+    "job_id": "E1_jgroups_odasc_W15_gmax_lat_s103",
+    "written": "2026-11-25T08:41:25+00:00",
+    "cycle": 1
+  }
+]

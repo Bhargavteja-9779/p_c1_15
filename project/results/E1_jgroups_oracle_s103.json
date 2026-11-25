@@ -1,0 +1,21 @@
+[
+  {
+    "experiment": "E1",
+    "project": "jgroups",
+    "method": "oracle",
+    "variant": "oracle",
+    "seed": 103,
+    "split": "test",
+    "gmean": 0.6390212209977273,
+    "r0": 0.8541234977206796,
+    "r1": 0.4780902550686723,
+    "rdiff": 0.3760332426520073,
+    "auc": 0.76011621475528,
+    "mcc": 0.3129244826663888,
+    "n_eval": 17536,
+    "seconds": 36.47,
+    "job_id": "E1_jgroups_oracle_s103",
+    "written": "2026-11-25T08:43:47+00:00",
+    "cycle": 1
+  }
+]
