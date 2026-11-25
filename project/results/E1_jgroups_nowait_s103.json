@@ -1,0 +1,21 @@
+[
+  {
+    "experiment": "E1",
+    "project": "jgroups",
+    "method": "nowait",
+    "variant": "nowait",
+    "seed": 103,
+    "split": "test",
+    "gmean": 0.3430014699512567,
+    "r0": 0.974996546484321,
+    "r1": 0.12066710268149117,
+    "rdiff": 0.8543294438028298,
+    "auc": 0.6329107192338282,
+    "mcc": 0.18161094705492892,
+    "n_eval": 17536,
+    "seconds": 37.43,
+    "job_id": "E1_jgroups_nowait_s103",
+    "written": "2026-11-25T08:39:35+00:00",
+    "cycle": 1
+  }
+]
