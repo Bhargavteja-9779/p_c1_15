@@ -9519,10 +9519,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:26:11+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T01:26:55+00:00",
+      "seconds": 44.4
     },
     {
       "id": "E0_sentry_orb_W15_gmax_lat_s0",
@@ -9537,12 +9541,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
       "started": "2026-11-25T01:22:35+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T01:23:20+00:00",
+      "seconds": 45.0
     },
     {
       "id": "E0_sentry_odasc_W15_gmax_lat_s0",
@@ -9580,10 +9586,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:27:37+00:00",
+      "worker": 1
     },
     {
       "id": "E0_sentry_orb_W30_gmax_lat_s0",
@@ -9598,10 +9606,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:24:01+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T01:24:45+00:00",
+      "seconds": 44.0
     },
     {
       "id": "E0_sentry_odasc_W30_gmax_lat_s0",
@@ -9657,10 +9669,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:24:45+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T01:25:29+00:00",
+      "seconds": 43.3
     },
     {
       "id": "E0_sentry_odasc_W60_gmax_lat_s0",
@@ -9716,10 +9732,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:25:29+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T01:26:11+00:00",
+      "seconds": 42.2
     },
     {
       "id": "E0_sentry_odasc_W90_gmax_lat_s0",
@@ -9757,10 +9777,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:26:55+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T01:27:37+00:00",
+      "seconds": 41.5
     },
     {
       "id": "E0_sentry_orb_W180_gmax_lat_s0",
@@ -9775,10 +9799,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:23:20+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T01:24:01+00:00",
+      "seconds": 41.4
     },
     {
       "id": "E0_sentry_odasc_W180_gmax_lat_s0",
@@ -9950,10 +9978,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:26:12+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T01:26:57+00:00",
+      "seconds": 44.9
     },
     {
       "id": "E0_sentry_orb_W15_gmax_lat_s1",
@@ -9968,12 +10000,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
       "started": "2026-11-25T01:22:36+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T01:23:21+00:00",
+      "seconds": 44.8
     },
     {
       "id": "E0_sentry_odasc_W15_gmax_lat_s1",
@@ -10011,10 +10045,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:27:39+00:00",
+      "worker": 2
     },
     {
       "id": "E0_sentry_orb_W30_gmax_lat_s1",
@@ -10029,10 +10065,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:24:03+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T01:24:47+00:00",
+      "seconds": 43.6
     },
     {
       "id": "E0_sentry_odasc_W30_gmax_lat_s1",
@@ -10088,10 +10128,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:24:47+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T01:25:30+00:00",
+      "seconds": 43.1
     },
     {
       "id": "E0_sentry_odasc_W60_gmax_lat_s1",
@@ -10147,10 +10191,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:25:30+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T01:26:12+00:00",
+      "seconds": 42.4
     },
     {
       "id": "E0_sentry_odasc_W90_gmax_lat_s1",
@@ -10188,10 +10236,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:26:57+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T01:27:39+00:00",
+      "seconds": 41.4
     },
     {
       "id": "E0_sentry_orb_W180_gmax_lat_s1",
@@ -10206,10 +10258,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:23:21+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T01:24:03+00:00",
+      "seconds": 41.7
     },
     {
       "id": "E0_sentry_odasc_W180_gmax_lat_s1",
@@ -10381,10 +10437,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:26:38+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T01:27:24+00:00",
+      "seconds": 45.7
     },
     {
       "id": "E0_sentry_orb_W15_gmax_lat_s2",
@@ -10399,10 +10459,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:22:58+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T01:23:44+00:00",
+      "seconds": 46.0
     },
     {
       "id": "E0_sentry_odasc_W15_gmax_lat_s2",
@@ -10458,10 +10522,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:24:27+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T01:25:11+00:00",
+      "seconds": 44.6
     },
     {
       "id": "E0_sentry_odasc_W30_gmax_lat_s2",
@@ -10517,10 +10585,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:25:11+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T01:25:55+00:00",
+      "seconds": 43.8
     },
     {
       "id": "E0_sentry_odasc_W60_gmax_lat_s2",
@@ -10576,10 +10648,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:25:55+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T01:26:38+00:00",
+      "seconds": 43.4
     },
     {
       "id": "E0_sentry_odasc_W90_gmax_lat_s2",
@@ -10595,12 +10671,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
       "started": "2026-11-25T01:21:58+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T01:22:58+00:00",
+      "seconds": 60.1
     },
     {
       "id": "E0_sentry_wait_W180_gmax_lat_s2",
@@ -10615,10 +10693,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:27:24+00:00",
+      "worker": 0
     },
     {
       "id": "E0_sentry_orb_W180_gmax_lat_s2",
@@ -10633,10 +10713,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:23:44+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T01:24:27+00:00",
+      "seconds": 42.8
     },
     {
       "id": "E0_sentry_odasc_W180_gmax_lat_s2",

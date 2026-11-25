@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E0",
+    "project": "sentry",
+    "method": "orb",
+    "variant": "orb_W90_gmax_lat",
+    "seed": 2,
+    "split": "dev",
+    "W": 90,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6616874727222449,
+    "r0": 0.6369272429273855,
+    "r1": 0.6874102441359502,
+    "rdiff": 0.05048300120856475,
+    "auc": 0.7101594487479198,
+    "mcc": 0.27489980669782227,
+    "n_eval": 18211,
+    "seconds": 43.43,
+    "job_id": "E0_sentry_orb_W90_gmax_lat_s2",
+    "written": "2026-11-25T01:26:38+00:00",
+    "cycle": 1
+  }
+]
