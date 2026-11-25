@@ -29793,13 +29793,15 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 3,
       "priority": 13,
       "log": [
         "2026-11-25T20:19:39+00:00 re-queued for cycle 3"
-      ]
+      ],
+      "started": "2026-11-25T20:19:39+00:00",
+      "worker": 2
     },
     {
       "id": "E0e_nova_dual_W30_k20_s2",
@@ -29891,13 +29893,15 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 3,
       "priority": 13,
       "log": [
         "2026-11-25T20:19:39+00:00 re-queued for cycle 3"
-      ]
+      ],
+      "started": "2026-11-25T20:19:39+00:00",
+      "worker": 1
     },
     {
       "id": "E0e_sentry_dual_W30_k20_s0",

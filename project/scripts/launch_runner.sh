@@ -3,6 +3,8 @@
 # each worker holds its own lock, so re-running only starts missing workers.
 cd "$(dirname "$0")/.." || exit 1
 mkdir -p logs
+# data/ is gitignored: restore datasets after a container reset (idempotent, sha256-checked)
+python3 scripts/get_data.py >> logs/get_data.log 2>&1 || echo "WARNING: data download failed (see logs/get_data.log)"
 N=${1:-$(( $(nproc) > 1 ? $(nproc) - 1 : 1 ))}
 for w in $(seq 0 $((N-1))); do
   if pgrep -f "run_all.py --mode full --resume --worker $w\$" >/dev/null; then echo "worker $w already running"; continue; fi
