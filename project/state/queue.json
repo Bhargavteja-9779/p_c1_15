@@ -8405,12 +8405,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 13,
       "started": "2026-11-25T02:01:54+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T02:05:07+00:00",
+      "seconds": 192.7
     },
     {
       "id": "E0_nova_wait_W30_gmax_lat_s0",
@@ -8462,10 +8464,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T02:08:02+00:00",
+      "worker": 2
     },
     {
       "id": "E0_nova_wait_W60_gmax_lat_s0",
@@ -8627,10 +8631,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T02:05:07+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T02:08:02+00:00",
+      "seconds": 175.5
     },
     {
       "id": "E0_nova_nowait_ratematch_s1",
@@ -8820,12 +8828,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 13,
       "started": "2026-11-25T02:01:55+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T02:05:09+00:00",
+      "seconds": 193.8
     },
     {
       "id": "E0_nova_wait_W30_gmax_lat_s1",
@@ -8877,10 +8887,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T02:08:05+00:00",
+      "worker": 0
     },
     {
       "id": "E0_nova_wait_W60_gmax_lat_s1",
@@ -9042,10 +9054,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T02:05:08+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T02:08:05+00:00",
+      "seconds": 176.9
     },
     {
       "id": "E0_nova_nowait_ratematch_s2",
@@ -9235,12 +9251,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 13,
       "started": "2026-11-25T02:01:58+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T02:05:08+00:00",
+      "seconds": 190.8
     },
     {
       "id": "E0_nova_wait_W30_gmax_lat_s2",
@@ -9292,10 +9310,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T02:08:06+00:00",
+      "worker": 1
     },
     {
       "id": "E0_nova_wait_W60_gmax_lat_s2",
@@ -9457,10 +9477,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T02:05:09+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T02:08:06+00:00",
+      "seconds": 176.8
     },
     {
       "id": "E0_sentry_nowait_ratematch_s0",
