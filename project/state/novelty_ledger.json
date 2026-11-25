@@ -1010,6 +1010,455 @@
         "W7166877802"
       ],
       "time": "2026-11-24T15:56:26+00:00"
+    },
+    {
+      "claim": "C1_latency_weighting",
+      "query": "Positive and unlabeled learning for just-in-time defect prediction (exact title)",
+      "source": "Crossref query.title",
+      "n_results_total": null,
+      "result": "no matching record",
+      "time": "2026-11-24T19:48:43+00:00",
+      "source_session": "magical-bardeen"
+    },
+    {
+      "claim": "C1_latency_weighting",
+      "query": "positive unlabeled just-in-time defect prediction, ISSN 1382-3256 (EMSE)",
+      "source": "Crossref filter issn",
+      "result": "no PU-learning JIT paper; EMSE 29(4):98 is 10.1007/s10664-024-10474-4 (ML asset management) -> citation 29(5):98 does not resolve",
+      "time": "2026-11-24T19:48:43+00:00",
+      "source_session": "magical-bardeen"
+    },
+    {
+      "claim": "C1_latency_weighting",
+      "query": "EMSE 2024-01..2025-03 full listing filtered for 'unlabel' / 'just-in-time'",
+      "source": "Crossref journal works (218 records)",
+      "result": "no PU paper",
+      "time": "2026-11-24T19:48:43+00:00",
+      "source_session": "magical-bardeen"
+    },
+    {
+      "claim": "C1_latency_weighting",
+      "query": "positive unlabeled just-in-time defect",
+      "source": "OpenAlex search",
+      "result": "no PU JIT paper in top 15; found Bludau & Pretschner 2026 SQJ (SZZ evaluation bias) and Tran et al. arXiv 2611.05013 (JIT-VP labeling strategies)",
+      "time": "2026-11-24T19:48:43+00:00",
+      "source_session": "magical-bardeen"
+    },
+    {
+      "claim": "C1_latency_weighting",
+      "query": "\"Positive and unlabeled learning\" \"just-in-time\" defect prediction Empirical Software Engineering 2024 Liu",
+      "source": "web search (standard)",
+      "result": "not found",
+      "time": "2026-11-24T19:48:43+00:00",
+      "source_session": "magical-bardeen"
+    },
+    {
+      "claim": "C1_latency_weighting",
+      "query": "Liu Li Yu \"positive and unlabeled\" \"defect prediction\" commits PU learning 2024",
+      "source": "web search (extended)",
+      "result": "not found; nearest: PILOT (ASE 2023, PU for vulnerability detection)",
+      "time": "2026-11-24T19:48:43+00:00",
+      "source_session": "magical-bardeen"
+    },
+    {
+      "claim": "C3_latency_threshold",
+      "query": "decision threshold verification latency just-in-time defect prediction",
+      "source": "OpenAlex search (title/abstract/fulltext)",
+      "n_results_total": 8885,
+      "top15": [
+        "W4405212656",
+        "W3211813532",
+        "W4389572555",
+        "W7162997702",
+        "W4391188170",
+        "W4401326936",
+        "W4396216090",
+        "W4386715814",
+        "W4416933233",
+        "W4403536521",
+        "W4389208769",
+        "W4304688778",
+        "W4387838160",
+        "W4401253331",
+        "W2963520355"
+      ],
+      "time": "2026-11-24T20:00:38+00:00",
+      "source_session": "magical-bardeen"
+    },
+    {
+      "claim": "C3_latency_threshold",
+      "query": "threshold moving online defect prediction class imbalance",
+      "source": "OpenAlex search (title/abstract/fulltext)",
+      "n_results_total": 5138,
+      "top15": [
+        "W2790397506",
+        "W2998772565",
+        "W4386969897",
+        "W4387838160",
+        "W4310214799",
+        "W2803590506",
+        "W4386715814",
+        "W3201933410",
+        "W3182306886",
+        "W4384026501",
+        "W4416945491",
+        "W4389208769",
+        "W4391329493",
+        "W2412173772",
+        "W2547620887"
+      ],
+      "time": "2026-11-24T20:00:39+00:00",
+      "source_session": "magical-bardeen"
+    },
+    {
+      "claim": "C3_latency_threshold",
+      "query": "operating point calibration delayed labels data stream classification",
+      "source": "OpenAlex search (title/abstract/fulltext)",
+      "n_results_total": 19510,
+      "top15": [
+        "W7224092546",
+        "W4388817142",
+        "W3021596612",
+        "W4303968668",
+        "W4295548218",
+        "W3006424452",
+        "W3170815168",
+        "W4412221149",
+        "W4414493109",
+        "W1996494007",
+        "W7131642119",
+        "W7233663042",
+        "W4415186964",
+        "W7163404981",
+        "W2770921026"
+      ],
+      "time": "2026-11-24T20:00:40+00:00",
+      "source_session": "magical-bardeen"
+    },
+    {
+      "claim": "C3_latency_threshold",
+      "query": "threshold adjustment positive unlabeled learning label delay",
+      "source": "OpenAlex search (title/abstract/fulltext)",
+      "n_results_total": 7953,
+      "top15": [
+        "W4318621078",
+        "W4390867307",
+        "W2997392292",
+        "W4416953873",
+        "W4416033860",
+        "W4404534236",
+        "W2302517508",
+        "W4221156503",
+        "W4385473618",
+        "W7220677989",
+        "W4392093970",
+        "W4416935210",
+        "W7198361794",
+        "W4312729595",
+        "W2294737577"
+      ],
+      "time": "2026-11-24T20:00:41+00:00",
+      "source_session": "magical-bardeen"
+    },
+    {
+      "claim": "C3_latency_threshold",
+      "query": "G-mean threshold optimization online class imbalance learning",
+      "source": "OpenAlex search (title/abstract/fulltext)",
+      "n_results_total": 74081,
+      "top15": [
+        "W2936503027",
+        "W3170120958",
+        "W3204833602",
+        "W2950226878",
+        "W2900789046",
+        "W4390511453",
+        "W4389513437",
+        "W2803590506",
+        "W4389074726",
+        "W1623006543",
+        "W4385482741",
+        "W3082059448",
+        "W4410464841",
+        "W3160285281",
+        "W1990795458"
+      ],
+      "time": "2026-11-24T20:00:42+00:00",
+      "source_session": "magical-bardeen"
+    },
+    {
+      "claim": "C3_latency_threshold",
+      "query": "delayed feedback calibration threshold selection fake negatives",
+      "source": "OpenAlex search (title/abstract/fulltext)",
+      "n_results_total": 1380,
+      "top15": [
+        "W2027107178",
+        "W4413852416",
+        "W3135690805",
+        "W7166855846",
+        "W3033899205",
+        "W4412385360",
+        "W4287521234",
+        "W3022099801",
+        "W4417002127",
+        "W7168036317",
+        "W2963690452",
+        "W3102929920",
+        "W7117898532",
+        "W2580703410",
+        "W7204003279"
+      ],
+      "time": "2026-11-24T20:00:43+00:00",
+      "source_session": "magical-bardeen"
+    },
+    {
+      "claim": "C3_latency_threshold",
+      "query": "label latency evaluation classifier threshold concept drift streams",
+      "source": "OpenAlex search (title/abstract/fulltext)",
+      "n_results_total": 10823,
+      "top15": [
+        "W7236420913",
+        "W4300773606",
+        "W2759864402",
+        "W2604457090",
+        "W2898017895",
+        "W4220851938",
+        "W2989114215",
+        "W3146478267",
+        "W2591110321",
+        "W2797218539",
+        "W4406068194",
+        "W4404573142",
+        "W7203944937",
+        "W4415160301",
+        "W7163910994"
+      ],
+      "time": "2026-11-24T20:00:45+00:00",
+      "source_session": "magical-bardeen"
+    },
+    {
+      "claim": "C3_latency_threshold",
+      "query": "just-in-time defect prediction cut-off threshold tuning",
+      "source": "OpenAlex search (title/abstract/fulltext)",
+      "n_results_total": 11960,
+      "top15": [
+        "W4401326936",
+        "W4396216090",
+        "W4393372102",
+        "W7161640654",
+        "W7223398710",
+        "W3162356827",
+        "W2547620887",
+        "W2560021451",
+        "W4400525853",
+        "W7216166844",
+        "W4417448061",
+        "W3174208377",
+        "W4415366341",
+        "W2024147048",
+        "W4411271362"
+      ],
+      "time": "2026-11-24T20:00:46+00:00",
+      "source_session": "magical-bardeen"
+    },
+    {
+      "claim": "C3_latency_threshold",
+      "query": "survival analysis label delay imbalanced stream classification",
+      "source": "OpenAlex search (title/abstract/fulltext)",
+      "n_results_total": 6096,
+      "top15": [
+        "W7225395509",
+        "W2900115826",
+        "W3184514712",
+        "W4401729341",
+        "W7126091003",
+        "W7154061019",
+        "W4226306543",
+        "W4390749428",
+        "W4300773606",
+        "W7106783149",
+        "W7163927536",
+        "W4409255526",
+        "W7212162274",
+        "W4406796190",
+        "W4291222583"
+      ],
+      "time": "2026-11-24T20:00:47+00:00",
+      "source_session": "magical-bardeen"
+    },
+    {
+      "claim": "C3_latency_threshold",
+      "query": "bug discovery delay weighting training data defect prediction",
+      "source": "OpenAlex search (title/abstract/fulltext)",
+      "n_results_total": 231,
+      "top15": [
+        "W2922320079",
+        "W7133331918",
+        "W7202394791",
+        "W4224436806",
+        "W4226424272",
+        "W4416933233",
+        "W7216166844",
+        "W7162997702",
+        "W4416400906",
+        "W4401179469",
+        "W587918866",
+        "W3145506869",
+        "W7212036529",
+        "W3124456606",
+        "W3208913301"
+      ],
+      "time": "2026-11-24T20:00:48+00:00",
+      "source_session": "magical-bardeen"
+    },
+    {
+      "claim": "C3_latency_threshold",
+      "query": "online just-in-time defect prediction verification latency waiting time recall balance",
+      "source": "OpenAlex search (title/abstract/fulltext)",
+      "n_results_total": 569,
+      "top15": [
+        "W4386715814",
+        "W4401253331",
+        "W4408099241",
+        "W4312786784",
+        "W4385696049",
+        "W4393233304",
+        "W7236789928",
+        "W7167743064",
+        "W2626741127",
+        "W7218048197",
+        "W1507123781",
+        "W3164016446",
+        "W7120815219",
+        "W2883065672",
+        "W3176185371"
+      ],
+      "time": "2026-11-24T20:11:50+00:00",
+      "source_session": "magical-bardeen"
+    },
+    {
+      "claim": "C3_latency_threshold",
+      "query": "prior probability shift correction delayed labels classifier threshold",
+      "source": "OpenAlex search (title/abstract/fulltext)",
+      "n_results_total": 17039,
+      "top15": [
+        "W7236452912",
+        "W7225864225",
+        "W7221951564",
+        "W7127933398",
+        "W4396995174",
+        "W4400877915",
+        "W2964256806",
+        "W2914237854",
+        "W7164508661",
+        "W4309591702",
+        "W7226011073",
+        "W7202155479",
+        "W4200634137",
+        "W7201848665",
+        "W7225395206"
+      ],
+      "time": "2026-11-24T20:11:51+00:00",
+      "source_session": "magical-bardeen"
+    },
+    {
+      "claim": "C3_latency_threshold",
+      "query": "label shift estimation streaming positive unlabeled time since event",
+      "source": "OpenAlex search (title/abstract/fulltext)",
+      "n_results_total": 4969,
+      "top15": [
+        "W2605253252",
+        "W4226333492",
+        "W4308671855",
+        "W2977499082",
+        "W4379474814",
+        "W2963218389",
+        "W7133202575",
+        "W2759864402",
+        "W4416105919",
+        "W7238562400",
+        "W4285676605",
+        "W4388817142",
+        "W7164820793",
+        "W3170999895",
+        "W2580717359"
+      ],
+      "time": "2026-11-24T20:11:52+00:00",
+      "source_session": "magical-bardeen"
+    },
+    {
+      "claim": "C3_latency_threshold",
+      "query": "provisional negatives elapsed time weighting classifier calibration",
+      "source": "OpenAlex search (title/abstract/fulltext)",
+      "n_results_total": 55,
+      "top15": [
+        "W7238633806",
+        "W7234990520",
+        "W7214330960",
+        "W7213342557",
+        "W1516028496",
+        "W562640016",
+        "W7237337079",
+        "W7225833305",
+        "W7225984535",
+        "W7214209149",
+        "W4392446661",
+        "W7169884131",
+        "W7225243377",
+        "W7216469420",
+        "W2956867331"
+      ],
+      "time": "2026-11-24T20:11:53+00:00",
+      "source_session": "magical-bardeen"
+    },
+    {
+      "claim": "C3_latency_threshold",
+      "query": "conversion delay importance weighting threshold calibration",
+      "source": "OpenAlex search (title/abstract/fulltext)",
+      "n_results_total": 7638,
+      "top15": [
+        "W4394581632",
+        "W4385261955",
+        "W2561934200",
+        "W4387846179",
+        "W2590507534",
+        "W7172489266",
+        "W7233673621",
+        "W7221951564",
+        "W7132880538",
+        "W3175576960",
+        "W3192190586",
+        "W2802336611",
+        "W4385145440",
+        "W7199082465",
+        "W2152308127"
+      ],
+      "time": "2026-11-24T20:11:54+00:00",
+      "source_session": "magical-bardeen"
+    },
+    {
+      "claim": "C3_latency_threshold",
+      "query": "Kaplan-Meier weighting unlabeled examples classification censoring",
+      "source": "OpenAlex search (title/abstract/fulltext)",
+      "n_results_total": 67,
+      "top15": [
+        "W4411239428",
+        "W4386453696",
+        "W4403702100",
+        "W7217754091",
+        "W2147161150",
+        "W7221020562",
+        "W4382318120",
+        "W2486838537",
+        "W4412742805",
+        "W2968899331",
+        "W4385429682",
+        "W7161775552",
+        "W4315588764",
+        "W3041522598",
+        "W2921275280"
+      ],
+      "time": "2026-11-24T20:11:55+00:00",
+      "source_session": "magical-bardeen"
     }
   ],
   "papers_opened": [
@@ -1052,7 +1501,7 @@
     {
       "doi": "UNVERIFIED (claimed Empir Softw Eng 29(5):98)",
       "title": "Liu B, Li B, Yu Z et al (2024a) Positive and unlabeled learning for just-in-time defect prediction",
-      "opened": "NOT FOUND — Crossref/OpenAlex/web search 2026-11-24 return only the MSTDP citation",
+      "opened": "NOT FOUND \u2014 Crossref/OpenAlex/web search 2026-11-24 return only the MSTDP citation",
       "threat": "UNVERIFIED; cannot be assessed"
     },
     {
@@ -1066,10 +1515,10 @@
     {
       "doi": "10.1145/3467895",
       "title": "Impact of Dormant Defects on Defect Prediction (TOSEM 2021, 19 Apache projects)",
-      "opened": "abstract",
-      "does": "release-level offline SDP; dormant defects lower recall; dropping classes labelled non-defective in the last release improves accuracy",
-      "does_not": "online JIT/commit-level; does not separate denoising from composition; no delay estimate",
-      "threat": "MEDIUM for C3 — closest to 'drop recent negatives'; must be cited and differentiated"
+      "opened": "full text (literature/pdfs/Falessi_TOSEM2021.pdf, arXiv 2105.12372)",
+      "does": "Release/class-level (offline) defect prediction, 19 Apache projects, 15 classifiers: 'snoring' (classes labelled clean while their defects are dormant) significantly lowers recall (large effect), precision not significantly affected; countermeasure = drop classes labelled clean in the last release(s): Recall/F1/Kappa/MCC up about 30% (Section 1 summary of results)",
+      "does_not": "Commit-level JIT-SDP; online/prequential updating; discovery-delay modelling; denoising that keeps recent data",
+      "threat": "MEDIUM for H3/C2 (same phenomenon at release level; the waiting-time rule is its JIT analogue) - must be cited as prior evidence; our contribution is the commit-level online decomposition and the denoiser"
     },
     {
       "doi": "10.1007/s10664-023-10341-8",
@@ -1230,6 +1679,96 @@
       "does": "Multimodal (metrics/logs/traces) fault detection + RCA; AIOps2022 and TrainTicket TT; 5 seeds; F1 0.949/0.951 and Hit@1 0.872/0.901 (abstract; Tables 14-15, 18-19); Wilcoxon (Table 13); leakage-controlled split (Table 9); Threats + Reproducibility sections",
       "does_not": "Defect prediction, label latency; code link not found",
       "threat": "LOW - but its split-protocol/leakage table (Table 9) is a good template for describing our prequential protocol"
+    },
+    {
+      "doi": "10.48550/arXiv.2611.05013",
+      "title": "One Strategy Does Not Fit All: Rethinking Data Labeling for JIT Vulnerability Prediction (Tran et al. 2026)",
+      "opened": "abstract page",
+      "does": "28 labelling-strategy datasets for JIT-VP (OpenSSL, Linux)",
+      "does_not": "Delay modelling, age weighting, PU",
+      "threat": "LOW",
+      "source_session": "magical-bardeen 2026-11-24"
+    },
+    {
+      "doi": "10.1021/acs.jcim.1c00160",
+      "title": "GHOST: Adjusting the decision threshold to handle imbalanced data (2021)",
+      "opened": "abstract",
+      "does": "Generic post-hoc decision-threshold selection for imbalanced classification without retraining",
+      "does_not": "Label delay / provisional negatives; streams",
+      "threat": "MEDIUM for C3 (generic threshold moving) -> MAT competitor gets equal budget",
+      "source_session": "magical-bardeen 2026-11-24"
+    },
+    {
+      "doi": "10.1145/3637226",
+      "title": "Estimating uncertainty in labeled changes by SZZ tools on JIT-DP (CLI, TOSEM 2024)",
+      "opened": "abstract",
+      "does": "Confident-learning filtering of SZZ-noisy labels, offline",
+      "does_not": "Verification latency, age, online threshold",
+      "threat": "LOW-MEDIUM (label-noise filtering competitor family, offline)",
+      "source_session": "magical-bardeen 2026-11-24"
+    },
+    {
+      "doi": "10.48550/arxiv.2310.12289",
+      "title": "CPI-JIT: Deep incremental learning of imbalanced data for JIT-SDP (2023)",
+      "opened": "abstract",
+      "does": "Incremental JIT-SDP with SMOTE-PC and time-series component",
+      "does_not": "Verification latency correction; threshold",
+      "threat": "LOW",
+      "source_session": "magical-bardeen 2026-11-24"
+    },
+    {
+      "doi": "10.1007/s10618-019-00654-y",
+      "title": "Delayed labelling evaluation for data streams (Grzenda et al., DMKD 2019)",
+      "opened": "abstract",
+      "does": "Evaluation protocol (continuous re-evaluation) under verification latency",
+      "does_not": "Training/threshold correction",
+      "threat": "LOW (related evaluation work, cite)",
+      "source_session": "magical-bardeen 2026-11-24"
+    },
+    {
+      "doi": "10.1109/access.2024.3382991",
+      "title": "DQN to reduce false positives in JIT-SDP (IEEE Access 2024)",
+      "opened": "abstract",
+      "does": "RL reward shaping for FP reduction",
+      "does_not": "Latency",
+      "threat": "LOW",
+      "source_session": "magical-bardeen 2026-11-24"
+    },
+    {
+      "doi": "10.48550/arxiv.2611.21914",
+      "title": "A Temporal Algebraic Framework for Data Stream Evaluation Under Delayed Labels and Distribution Shifts (arXiv 2026)",
+      "opened": "abstract",
+      "does": "Stream EVALUATION with delayed labels: unlabelled instances counted with calibrated model probabilities (observation mask); separates prior shift from drift",
+      "does_not": "Use the estimate to SET a decision threshold; delay-survival (age) weighting; JIT-SDP",
+      "threat": "MEDIUM for C3 (the interim soft-label counting idea is close) - must be cited and differentiated",
+      "source_session": "magical-bardeen 2026-11-24"
+    },
+    {
+      "doi": "10.48550/arxiv.2610.18935",
+      "title": "Delay Complexity Dimension: Learning with Delayed and Censored Labels (arXiv 2026)",
+      "opened": "abstract",
+      "does": "PAC theory for labels with random delays censored beyond window W; oracle pseudo-label ERM",
+      "does_not": "Empirical JIT-SDP; threshold",
+      "threat": "LOW (theory; cite as motivation)",
+      "source_session": "magical-bardeen 2026-11-24"
+    },
+    {
+      "doi": "10.1145/3580305.3599536",
+      "title": "ULC: Unbiased delayed feedback label correction for CVR (KDD 2023)",
+      "opened": "abstract",
+      "does": "Auxiliary model corrects labels of observed negatives; unbiased loss",
+      "does_not": "SE / threshold",
+      "threat": "LOW-MEDIUM (training-side correction; LAW is the analogue)",
+      "source_session": "magical-bardeen 2026-11-24"
+    },
+    {
+      "doi": "10.1016/j.scico.2025.103296",
+      "title": "Human-in-the-loop online JIT-SDP: what have we achieved (SCICO 2025)",
+      "opened": "title only (no abstract in OpenAlex)",
+      "does": "UNVERIFIED",
+      "does_not": "UNVERIFIED",
+      "threat": "UNVERIFIED - open full text before writing",
+      "source_session": "magical-bardeen 2026-11-24"
     }
   ],
   "claims": [
@@ -1238,7 +1777,7 @@
       "closest_prior": [
         "ODaSC (Song et al. IJCNN 2022)",
         "DEFUSE/ES-DFM/FSIW (CVR delayed feedback)",
-        "Liu et al. 2024a PU learning for JIT-SDP, Empir Softw Eng 29(5):98 — NOT YET OPENED"
+        "Liu et al. 2024a PU learning for JIT-SDP, Empir Softw Eng 29(5):98 \u2014 NOT YET OPENED"
       ],
       "exact_difference": "ODaSC derives label confidence from feature-space micro-clusters for examples already labelled clean after W days; LAW derives it from commit age via a right-truncation-corrected discovery-delay distribution combined with model risk, and also trains on commits younger than W. Difference vs CVR methods: domain transfer + truncation-aware nonparametric delay estimate (weaker).",
       "status": "FAILING ON DEV (cycle 1): LAW loses to tuned wait/ORB on dev projects; see journal FAILURE/DIAGNOSIS. Liu 2024a UNVERIFIED."
@@ -1251,7 +1790,7 @@
     {
       "claim": "C3 (Type C): most of the verification-latency penalty in online JIT-SDP is due to training-set composition (missing young commits), not label noise",
       "closest_prior": [
-        "ODaSC IJCNN 2022 (opt≈estimated confidence)",
+        "ODaSC IJCNN 2022 (opt\u2248estimated confidence)",
         "Cabral ICSE 2019 / Cabral & Minku TSE 2022 (waiting-time trade-off)",
         "Song, Minku & Yao EMSE 2023 (evaluation validity vs W)"
       ],
@@ -1264,7 +1803,7 @@
         "Cabral ICSE 2019 (single W=90 chosen from delay analysis)"
       ],
       "exact_difference": "W is re-estimated per project at each update from the Lagakos survival curve instead of fixed globally",
-      "status": "E0b dev; prior-art queries 1/8 done (web: 'adaptive waiting time verification latency JIT-SDP' — no match)"
+      "status": "E0b dev; prior-art queries 1/8 done (web: 'adaptive waiting time verification latency JIT-SDP' \u2014 no match)"
     },
     {
       "claim": "C5 (Type B): dormant-bug posterior from mature-only, cross-fitted scorers x truncation-corrected delay survival, applied to the wait set, beats tuned waiting/ORB/ODaSC-style in online JIT-SDP",
@@ -1276,6 +1815,16 @@
       ],
       "exact_difference": "Unlike DEFUSE/ES-DFM the fake-negative probability is not learned by the online model (which we show self-confirms in JIT-SDP: LAW-model) but by scorers trained only on mature commits and cross-fitted, combined with a right-truncation-corrected delay survival; unlike ODaSC the confidence uses commit age and a supervised scorer instead of micro-cluster class composition.",
       "status": "dev only (E0c); differentiation is moderate"
+    },
+    {
+      "claim": "C3: Under verification latency, label-policy differences in online JIT-SDP are mainly operating-point effects; a latency-aware decision threshold (LAT: G-mean-optimal threshold on recent prequential scores with delay-survival-weighted provisional labels) beats fixed waiting times and generic mature-label threshold moving (MAT)",
+      "closest_prior": [
+        "ORB (Cabral et al. 2019): adjusts class weights from the predicted-positive moving average",
+        "GHOST (2021): generic threshold moving",
+        "ODaSC (2022): label confidence from micro-clusters"
+      ],
+      "exact_difference": "LAT sets the decision threshold from recent scored commits whose provisional labels are weighted by a right-truncation-corrected discovery-delay survival, so it can use commits younger than any waiting time; ORB changes training weights toward a fixed target positive rate, GHOST/MAT use only labelled/mature data, ODaSC changes sampling not the threshold.",
+      "status": "archived with magical-bardeen plan_v2 (not carried forward: threshold effects small for denoisers, diag_threshold_dev.json)"
     }
   ],
   "scores": [
