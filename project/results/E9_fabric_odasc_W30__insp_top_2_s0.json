@@ -1,0 +1,26 @@
+[
+  {
+    "experiment": "E9",
+    "project": "fabric",
+    "method": "odasc",
+    "variant": "odasc_W30__insp_top_2",
+    "seed": 0,
+    "split": "dev",
+    "W": 30,
+    "odasc_delta": 0.9,
+    "insp_policy": "top",
+    "insp_budget": 0.02,
+    "gmean": 0.7015623915865025,
+    "r0": 0.6128828544363751,
+    "r1": 0.8030731904569349,
+    "rdiff": 0.1901903360205598,
+    "auc": 0.7745265965363511,
+    "mcc": 0.33726234498778934,
+    "n_eval": 11974,
+    "seconds": 21.48,
+    "n_inspected": 250,
+    "job_id": "E9_fabric_odasc_W30__insp_top_2_s0",
+    "written": "2026-11-25T10:33:57+00:00",
+    "cycle": 2
+  }
+]
