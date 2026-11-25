@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E1",
+    "project": "tomcat",
+    "method": "odasc",
+    "variant": "odasc_W15_gmax_lat",
+    "seed": 103,
+    "split": "test",
+    "W": 15,
+    "odasc_delta": 0.9,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6881240399559158,
+    "r0": 0.6638676015000815,
+    "r1": 0.7132667617689016,
+    "rdiff": 0.049399160268820075,
+    "auc": 0.7506883204515783,
+    "mcc": 0.3429185425217688,
+    "n_eval": 17173,
+    "seconds": 55.11,
+    "job_id": "E1_tomcat_odasc_W15_gmax_lat_s103",
+    "written": "2026-11-25T09:07:22+00:00",
+    "cycle": 1
+  }
+]
