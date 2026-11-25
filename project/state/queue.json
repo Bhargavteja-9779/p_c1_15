@@ -37796,12 +37796,14 @@
         "insp_policy": "top",
         "insp_budget": 0.05
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 4,
       "started": "2026-11-25T10:29:38+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T10:30:08+00:00",
+      "seconds": 29.9
     },
     {
       "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_unc_2_s0",
@@ -37819,10 +37821,12 @@
         "insp_policy": "unc",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:30:08+00:00",
+      "worker": 0
     },
     {
       "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_unc_5_s0",
@@ -38170,12 +38174,14 @@
         "insp_policy": "top",
         "insp_budget": 0.05
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 4,
       "started": "2026-11-25T10:29:38+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T10:30:09+00:00",
+      "seconds": 30.5
     },
     {
       "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_unc_2_s1",
@@ -38193,10 +38199,12 @@
         "insp_policy": "unc",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:30:08+00:00",
+      "worker": 2
     },
     {
       "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_unc_5_s1",
@@ -38544,12 +38552,14 @@
         "insp_policy": "top",
         "insp_budget": 0.05
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 4,
       "started": "2026-11-25T10:29:39+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T10:30:08+00:00",
+      "seconds": 29.6
     },
     {
       "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_unc_2_s2",
@@ -38567,10 +38577,12 @@
         "insp_policy": "unc",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:30:09+00:00",
+      "worker": 1
     },
     {
       "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_unc_5_s2",
