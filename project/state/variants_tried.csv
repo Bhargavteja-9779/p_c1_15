@@ -50,3 +50,4 @@ timestamp,cycle,variant_id,description,data_split_used,metric,value,outcome,note
 2026-11-25T07:54:45+00:00,1,law_naive_model,dev tuning (E0/E0b/E0c),dev projects x seeds 0-2,gmean_mean_dev,0.58,not selected,
 2026-11-25T07:54:45+00:00,1,wait_W15,dev tuning (E0/E0b/E0c),dev projects x seeds 0-2,gmean_mean_dev,0.5457,not selected,
 2026-11-25T07:54:45+00:00,1,nowait,dev tuning (E0/E0b/E0c),dev projects x seeds 0-2,gmean_mean_dev,0.3855,selected,
+2026-11-25T10:28:20+00:00,2,D2_delay_from_features,predict discovery delay from features (cure-model idea),dev,spearman,0.061/0.130/-0.001/0.047,dead end,

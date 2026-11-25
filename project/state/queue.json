@@ -37721,12 +37721,14 @@
         "insp_policy": "rand",
         "insp_budget": 0.02
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 4,
       "started": "2026-11-25T10:28:12+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T10:28:42+00:00",
+      "seconds": 29.5
     },
     {
       "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_rand_5_s0",
@@ -37744,10 +37746,14 @@
         "insp_policy": "rand",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:28:41+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:29:09+00:00",
+      "seconds": 27.5
     },
     {
       "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_top_2_s0",
@@ -37765,10 +37771,14 @@
         "insp_policy": "top",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:29:09+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:29:38+00:00",
+      "seconds": 29.2
     },
     {
       "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_top_5_s0",
@@ -37786,10 +37796,12 @@
         "insp_policy": "top",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:29:38+00:00",
+      "worker": 0
     },
     {
       "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_unc_2_s0",
@@ -38083,10 +38095,14 @@
         "insp_policy": "rand",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:28:12+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:28:41+00:00",
+      "seconds": 29.2
     },
     {
       "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_rand_5_s1",
@@ -38104,10 +38120,14 @@
         "insp_policy": "rand",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:28:42+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:29:09+00:00",
+      "seconds": 27.7
     },
     {
       "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_top_2_s1",
@@ -38125,10 +38145,14 @@
         "insp_policy": "top",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:29:09+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:29:38+00:00",
+      "seconds": 29.5
     },
     {
       "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_top_5_s1",
@@ -38146,10 +38170,12 @@
         "insp_policy": "top",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:29:38+00:00",
+      "worker": 1
     },
     {
       "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_unc_2_s1",
@@ -38443,10 +38469,14 @@
         "insp_policy": "rand",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:28:12+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:28:42+00:00",
+      "seconds": 29.3
     },
     {
       "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_rand_5_s2",
@@ -38464,10 +38494,14 @@
         "insp_policy": "rand",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:28:42+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:29:09+00:00",
+      "seconds": 27.1
     },
     {
       "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_top_2_s2",
@@ -38485,10 +38519,14 @@
         "insp_policy": "top",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:29:09+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:29:39+00:00",
+      "seconds": 29.1
     },
     {
       "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_top_5_s2",
@@ -38506,10 +38544,12 @@
         "insp_policy": "top",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:29:39+00:00",
+      "worker": 2
     },
     {
       "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_unc_2_s2",
