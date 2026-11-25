@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E0",
+    "project": "nova",
+    "method": "law",
+    "variant": "law_lagakos_base_ratematch",
+    "seed": 1,
+    "split": "dev",
+    "delay_est": "lagakos",
+    "prior": "base",
+    "thr_policy": "ratematch",
+    "gmean": 0.7088077595186482,
+    "r0": 0.8908939220715014,
+    "r1": 0.5639374425022999,
+    "rdiff": 0.3269564795692015,
+    "auc": 0.8810419057395904,
+    "mcc": 0.4783910858283319,
+    "n_eval": 44320,
+    "seconds": 228.42,
+    "job_id": "E0_nova_law_lagakos_base_ratematch_s1",
+    "written": "2026-11-25T01:41:29+00:00",
+    "cycle": 1
+  }
+]
