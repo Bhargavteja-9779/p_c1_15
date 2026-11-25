@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E1",
+    "project": "matplotlib",
+    "method": "orb",
+    "variant": "orb_W90",
+    "seed": 101,
+    "split": "test",
+    "W": 90,
+    "gmean": 0.6980507757033229,
+    "r0": 0.7544359433501546,
+    "r1": 0.6458797327394209,
+    "rdiff": 0.10855621061073373,
+    "auc": 0.7969675136782699,
+    "mcc": 0.3302561336036394,
+    "n_eval": 14980,
+    "seconds": 36.37,
+    "job_id": "E1_matplotlib_orb_W90_s101",
+    "written": "2026-11-25T08:54:17+00:00",
+    "cycle": 1
+  }
+]

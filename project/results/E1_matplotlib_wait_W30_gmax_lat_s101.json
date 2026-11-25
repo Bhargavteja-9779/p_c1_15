@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E1",
+    "project": "matplotlib",
+    "method": "wait",
+    "variant": "wait_W30_gmax_lat",
+    "seed": 101,
+    "split": "test",
+    "W": 30,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.7244610803189429,
+    "r0": 0.6158228878398176,
+    "r1": 0.852264291017075,
+    "rdiff": 0.23644140317725737,
+    "auc": 0.7976743587410227,
+    "mcc": 0.36026359718240103,
+    "n_eval": 14980,
+    "seconds": 39.44,
+    "job_id": "E1_matplotlib_wait_W30_gmax_lat_s101",
+    "written": "2026-11-25T08:55:24+00:00",
+    "cycle": 1
+  }
+]
