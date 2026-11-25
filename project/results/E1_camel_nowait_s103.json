@@ -1,0 +1,21 @@
+[
+  {
+    "experiment": "E1",
+    "project": "camel",
+    "method": "nowait",
+    "variant": "nowait",
+    "seed": 103,
+    "split": "test",
+    "gmean": 0.4728070824958093,
+    "r0": 0.9490462103437723,
+    "r1": 0.23554863274489443,
+    "rdiff": 0.7134975775988779,
+    "auc": 0.7569272464363468,
+    "mcc": 0.26653634770198115,
+    "n_eval": 25384,
+    "seconds": 88.53,
+    "job_id": "E1_camel_nowait_s103",
+    "written": "2026-11-25T08:19:29+00:00",
+    "cycle": 1
+  }
+]

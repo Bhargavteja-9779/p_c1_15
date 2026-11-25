@@ -13349,12 +13349,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T08:15:21+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T08:16:49+00:00",
+      "seconds": 87.5
     },
     {
       "id": "E1_camel_wait_W90_s100",
@@ -13440,10 +13442,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:19:29+00:00",
+      "worker": 2
     },
     {
       "id": "E1_camel_oracle_s100",
@@ -13495,10 +13499,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:16:49+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T08:18:21+00:00",
+      "seconds": 91.9
     },
     {
       "id": "E1_camel_wait_W90_s101",
@@ -13584,10 +13592,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:19:29+00:00",
+      "worker": 0
     },
     {
       "id": "E1_camel_oracle_s101",
@@ -13639,10 +13649,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:17:59+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T08:19:29+00:00",
+      "seconds": 90.5
     },
     {
       "id": "E1_camel_wait_W90_s102",
@@ -13728,10 +13742,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:19:48+00:00",
+      "worker": 1
     },
     {
       "id": "E1_camel_oracle_s102",
@@ -13763,12 +13779,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T08:15:04+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T08:17:59+00:00",
+      "seconds": 174.9
     },
     {
       "id": "E1_camel_nowait_s103",
@@ -13781,10 +13799,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:18:00+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T08:19:29+00:00",
+      "seconds": 88.5
     },
     {
       "id": "E1_camel_wait_W90_s103",
@@ -13905,12 +13927,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T08:15:07+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T08:18:00+00:00",
+      "seconds": 173.2
     },
     {
       "id": "E1_camel_nowait_s104",
@@ -13923,10 +13947,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:18:21+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T08:19:48+00:00",
+      "seconds": 87.3
     },
     {
       "id": "E1_camel_wait_W90_s104",
