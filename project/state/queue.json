@@ -8334,10 +8334,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T01:45:41+00:00",
+      "worker": 1
     },
     {
       "id": "E0_nova_wait_W15_gmax_lat_s0",
@@ -8731,10 +8733,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T01:45:41+00:00",
+      "worker": 2
     },
     {
       "id": "E0_nova_wait_W15_gmax_lat_s1",
@@ -9128,10 +9132,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T01:45:43+00:00",
+      "worker": 0
     },
     {
       "id": "E0_nova_wait_W15_gmax_lat_s2",
@@ -11105,12 +11111,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 13,
       "started": "2026-11-25T01:41:27+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T01:45:41+00:00",
+      "seconds": 254.6
     },
     {
       "id": "E0_nova_law_naive_model_gmax_lat_s0",
@@ -11145,12 +11153,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 13,
       "started": "2026-11-25T01:41:29+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T01:45:41+00:00",
+      "seconds": 252.4
     },
     {
       "id": "E0_nova_law_naive_model_gmax_lat_s1",
@@ -11185,12 +11195,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 13,
       "started": "2026-11-25T01:41:29+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T01:45:43+00:00",
+      "seconds": 253.8
     },
     {
       "id": "E0_nova_law_naive_model_gmax_lat_s2",

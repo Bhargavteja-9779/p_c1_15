@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E0",
+    "project": "nova",
+    "method": "law",
+    "variant": "law_lagakos_model_gmax_lat",
+    "seed": 1,
+    "split": "dev",
+    "delay_est": "lagakos",
+    "prior": "model",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.7998831166247405,
+    "r0": 0.738868460896703,
+    "r1": 0.8659362716400435,
+    "rdiff": 0.1270678107433405,
+    "auc": 0.8589339012333049,
+    "mcc": 0.5431455514217947,
+    "n_eval": 44320,
+    "seconds": 252.38,
+    "job_id": "E0_nova_law_lagakos_model_gmax_lat_s1",
+    "written": "2026-11-25T01:45:41+00:00",
+    "cycle": 1
+  }
+]
