@@ -1,0 +1,21 @@
+[
+  {
+    "experiment": "E1",
+    "project": "spring-integration",
+    "method": "nowait",
+    "variant": "nowait",
+    "seed": 103,
+    "split": "test",
+    "gmean": 0.34697044979705643,
+    "r0": 0.9810283687943262,
+    "r1": 0.12271662763466042,
+    "rdiff": 0.8583117411596658,
+    "auc": 0.6930528426927102,
+    "mcc": 0.21777128552468236,
+    "n_eval": 7775,
+    "seconds": 12.57,
+    "job_id": "E1_spring-integration_nowait_s103",
+    "written": "2026-11-25T09:00:21+00:00",
+    "cycle": 1
+  }
+]

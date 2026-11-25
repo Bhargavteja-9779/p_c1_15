@@ -1,0 +1,21 @@
+[
+  {
+    "experiment": "E1",
+    "project": "spring-integration",
+    "method": "oracle",
+    "variant": "oracle",
+    "seed": 101,
+    "split": "test",
+    "gmean": 0.7694013415868839,
+    "r0": 0.7984042553191489,
+    "r1": 0.7414519906323185,
+    "rdiff": 0.056952264686830456,
+    "auc": 0.8470974305313336,
+    "mcc": 0.5052095949230777,
+    "n_eval": 7775,
+    "seconds": 12.76,
+    "job_id": "E1_spring-integration_oracle_s101",
+    "written": "2026-11-25T09:01:28+00:00",
+    "cycle": 1
+  }
+]

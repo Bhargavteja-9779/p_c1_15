@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E1",
+    "project": "spring-integration",
+    "method": "odasc",
+    "variant": "odasc_W15_gmax_lat",
+    "seed": 104,
+    "split": "test",
+    "W": 15,
+    "odasc_delta": 0.9,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6774816216576094,
+    "r0": 0.623758865248227,
+    "r1": 0.7358313817330211,
+    "rdiff": 0.1120725164847941,
+    "auc": 0.6901586194296344,
+    "mcc": 0.3213810325082292,
+    "n_eval": 7775,
+    "seconds": 15.32,
+    "job_id": "E1_spring-integration_odasc_W15_gmax_lat_s104",
+    "written": "2026-11-25T09:00:52+00:00",
+    "cycle": 1
+  }
+]
