@@ -78,6 +78,19 @@ def specs(exp):
                     J.append(dict(method="lawm", mode="dual", W=W, knn_k=k, delay_est="lagakos", variant=f"dual_W{W}_k{k}", project=p, seed=s))
         for j in J: j.update(experiment="E0e", split="dev")
         return J, 12
+    if exp == "E7":   # plan_v6 MSTDP protocol: offline chronological 80/20, one training at the split, test on last 20%
+        from src.data import load_project
+        fz = read_json(STATE / "frozen_config_v6.json"); assert fz, "freeze plan_v6 first"
+        MST = ["brackets", "camel", "fabric", "jgroups", "neutron", "nova", "npm", "spring-integration", "tomcat"]
+        cands = [dict(method="oracle", variant="final_labels"), dict(method="nowait", variant="observed_at_split"),
+                 dict(method="wait", W=90, variant="wait_W90")] + [dict(c) for c in fz["candidates_specs"]]
+        for p in MST:
+            n = len(load_project(p)); w = int(0.8 * n)
+            for s, c in itertools.product(SC, cands):
+                J.append(dict(c, project=p, seed=s, warmup=w, update_every=n, eval_end_gap_days=0,
+                              split="dev" if p in DEV else "test"))
+        for j in J: j.update(experiment="E7")
+        return J, 18
     if exp == "E3b":   # plan_v3 decomposition on test projects (pre-registered)
         for p, s in itertools.product(TEST, SC):
             for W in [30, 90]:
