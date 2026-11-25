@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E0",
+    "project": "sentry",
+    "method": "wait",
+    "variant": "wait_W60_gmax_lat",
+    "seed": 0,
+    "split": "dev",
+    "W": 60,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.668714840975112,
+    "r0": 0.6590180289318036,
+    "r1": 0.6785543322163715,
+    "rdiff": 0.019536303284567902,
+    "auc": 0.7233678687421364,
+    "mcc": 0.28772685066769577,
+    "n_eval": 18211,
+    "seconds": 44.03,
+    "job_id": "E0_sentry_wait_W60_gmax_lat_s0",
+    "written": "2026-11-25T01:29:05+00:00",
+    "cycle": 1
+  }
+]

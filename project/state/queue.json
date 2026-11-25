@@ -8303,10 +8303,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T01:29:49+00:00",
+      "worker": 1
     },
     {
       "id": "E0_nova_law_naive_base_gmax_lat_s0",
@@ -8688,10 +8690,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T01:29:51+00:00",
+      "worker": 2
     },
     {
       "id": "E0_nova_law_naive_base_gmax_lat_s1",
@@ -9073,10 +9077,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T01:30:23+00:00",
+      "worker": 0
     },
     {
       "id": "E0_nova_law_naive_base_gmax_lat_s2",
@@ -9586,12 +9592,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
       "started": "2026-11-25T01:27:37+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T01:28:21+00:00",
+      "seconds": 44.2
     },
     {
       "id": "E0_sentry_orb_W30_gmax_lat_s0",
@@ -9651,10 +9659,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:28:21+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T01:29:05+00:00",
+      "seconds": 44.0
     },
     {
       "id": "E0_sentry_orb_W60_gmax_lat_s0",
@@ -9714,10 +9726,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:29:05+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T01:29:49+00:00",
+      "seconds": 43.5
     },
     {
       "id": "E0_sentry_orb_W90_gmax_lat_s0",
@@ -10045,12 +10061,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
       "started": "2026-11-25T01:27:39+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T01:28:23+00:00",
+      "seconds": 44.1
     },
     {
       "id": "E0_sentry_orb_W30_gmax_lat_s1",
@@ -10110,10 +10128,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:28:23+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T01:29:07+00:00",
+      "seconds": 44.5
     },
     {
       "id": "E0_sentry_orb_W60_gmax_lat_s1",
@@ -10173,10 +10195,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:29:07+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T01:29:51+00:00",
+      "seconds": 43.6
     },
     {
       "id": "E0_sentry_orb_W90_gmax_lat_s1",
@@ -10504,10 +10530,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:28:07+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T01:28:53+00:00",
+      "seconds": 45.4
     },
     {
       "id": "E0_sentry_orb_W30_gmax_lat_s2",
@@ -10567,10 +10597,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:28:53+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T01:29:38+00:00",
+      "seconds": 45.5
     },
     {
       "id": "E0_sentry_orb_W60_gmax_lat_s2",
@@ -10630,10 +10664,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:29:38+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T01:30:23+00:00",
+      "seconds": 44.6
     },
     {
       "id": "E0_sentry_orb_W90_gmax_lat_s2",
@@ -10693,12 +10731,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
       "started": "2026-11-25T01:27:24+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T01:28:07+00:00",
+      "seconds": 43.2
     },
     {
       "id": "E0_sentry_orb_W180_gmax_lat_s2",
