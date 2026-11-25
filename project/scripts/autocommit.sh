@@ -7,7 +7,7 @@ while true; do
   git commit -qm "auto: results/state checkpoint $(date -u +%FT%TZ)
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
-Claude-Session: https://claude.ai/code/session_01D3tzdh4Fx9PiXw5MnE116i" >/dev/null 2>&1 && \
+Claude-Session: https://claude.ai/code/session_01CVvjt3B8bL86tfxLK7h6jK" >/dev/null 2>&1 && \
     for i in 1 2 3 4; do git push -q origin "$BR" && break; sleep $((i*15)); done
   sleep 600
 done
