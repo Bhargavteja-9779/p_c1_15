@@ -96,13 +96,32 @@ if "E3b" in set(df.experiment) and "E1" in set(df.experiment):
     statsout["E3b_H3_decomposition"] = h3
 if "E3" in set(df.experiment) and fz:
     compare("E3", "law_lagakos_model_ds2", ["nowait_ds2", f"wait_W{fz['wait_W']}_ds2", f"orb_W{fz['orb_W']}_ds2"], "E3_robust_delay_x2")
+fz6 = read_json(STATE / "frozen_config_v6.json", {})
+if "E8" in set(df.experiment) and fz6:
+    # plan_v7 H6 (fresh ApacheJIT confirmation): primary dev candidate vs wait_W90, orb_W90, odasc (one Holm over 3)
+    prim = fz6["primary_candidate"]; od = [c["variant"] for c in fz6["candidates_specs"] if c["method"] == "odasc"][0]
+    rows = compare("E8", prim, ["wait_W90", "orb_W90", od], "E8_planv7_H6_primary_vs_baselines") or []
+    for r in rows:   # plan_v7: margin >= 0.02 required vs waiting baselines; vs odasc reported as is (no margin)
+        need_margin = r["baseline"] != od
+        r["H6_pass"] = bool(r["holm_p"] < 0.05 and r["ci95"][0] > 0 and (r["mean_diff"] >= NONTRIVIAL if need_margin else r["mean_diff"] > 0))
+    statsout["E8_H6_all_pass"] = bool(rows and all(r["H6_pass"] for r in rows))
+    for c in fz6["candidates_specs"]:   # descriptive: every candidate vs the same baselines (not part of the H6 family)
+        if c["variant"] != prim:
+            compare("E8", c["variant"], ["wait_W90", "orb_W90"] + ([od] if c["variant"] != od else []), f"E8_descriptive_{c['variant']}")
+    pp = df[df.experiment == "E8"].groupby(["variant", "project"]).gmean.mean().unstack(); h = {}
+    if {"oracle", "wait_W30", "decomp_L1_W30", "wait_W90"} <= set(pp.index):
+        gap = pp.loc["oracle"] - pp.loc["wait_W30"]; rec = pp.loc["decomp_L1_W30"] - pp.loc["wait_W30"]
+        h["gap_recovered_share_of_means"] = round(float(rec.mean() / gap.mean()), 4)
+        h["gap_recovered_share_per_project"] = {k: round(float(v), 3) for k, v in (rec / gap).items()}
+        compare("E8", "decomp_L1_W30", ["wait_W90", "wait_W30"], "E8_secondary_H3_replication")
+    statsout["E8_secondary_H3_decomposition"] = h
 vt = pd.read_csv(STATE / "variants_tried.csv") if (STATE / "variants_tried.csv").exists() else pd.DataFrame()
 statsout["n_variants_logged"] = int(len(vt))
 json.dump(metrics, open(R / "metrics.json", "w"), indent=1)
 json.dump(statsout, open(R / "statistics.json", "w"), indent=1)
 
 # figures
-for exp in [x for x in ["E0", "E0b", "E1", "E3b"] if x in set(df.experiment)]:
+for exp in [x for x in ["E0", "E0b", "E1", "E3b", "E8"] if x in set(df.experiment)]:
     pp = df[df.experiment == exp].groupby(["variant", "project"]).gmean.mean().unstack()
     pp = pp.loc[pp.mean(axis=1).sort_values().index]
     fig, ax = plt.subplots(figsize=(7, 0.35 * len(pp) + 1.5))
