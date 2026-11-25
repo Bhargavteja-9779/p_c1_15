@@ -11609,12 +11609,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T07:56:01+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T07:56:58+00:00",
+      "seconds": 56.8
     },
     {
       "id": "E1_brackets_nowait_s100",
@@ -11627,10 +11629,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T07:56:59+00:00",
+      "worker": 1
     },
     {
       "id": "E1_brackets_wait_W90_s100",
@@ -11751,12 +11755,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T07:56:01+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T07:56:59+00:00",
+      "seconds": 57.5
     },
     {
       "id": "E1_brackets_nowait_s101",
@@ -11893,12 +11899,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T07:56:01+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T07:56:56+00:00",
+      "seconds": 55.0
     },
     {
       "id": "E1_brackets_nowait_s102",
@@ -12035,10 +12043,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T07:56:56+00:00",
+      "worker": 2
     },
     {
       "id": "E1_brackets_nowait_s103",
@@ -12175,10 +12185,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T07:56:58+00:00",
+      "worker": 0
     },
     {
       "id": "E1_brackets_nowait_s104",
