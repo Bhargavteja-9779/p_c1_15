@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E9",
+    "project": "sentry",
+    "method": "nowait",
+    "variant": "nowait_gmax_lat__insp_rand_5",
+    "seed": 1,
+    "split": "dev",
+    "thr_policy": "gmax_lat",
+    "insp_policy": "rand",
+    "insp_budget": 0.05,
+    "gmean": 0.6825522692179152,
+    "r0": 0.6224613411244923,
+    "r1": 0.7484442316898038,
+    "rdiff": 0.12598289056531153,
+    "auc": 0.7584710483942027,
+    "mcc": 0.3127773375924069,
+    "n_eval": 18211,
+    "seconds": 34.28,
+    "n_inspected": 1049,
+    "job_id": "E9_sentry_nowait_gmax_lat__insp_rand_5_s1",
+    "written": "2026-11-25T10:53:50+00:00",
+    "cycle": 2
+  }
+]

@@ -40197,10 +40197,14 @@
         "insp_policy": "rand",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:52:36+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:53:11+00:00",
+      "seconds": 34.2
     },
     {
       "id": "E9_sentry_nowait_gmax_lat__insp_rand_5_s0",
@@ -40216,10 +40220,14 @@
         "insp_policy": "rand",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:53:11+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:53:45+00:00",
+      "seconds": 34.1
     },
     {
       "id": "E9_sentry_nowait_gmax_lat__insp_top_2_s0",
@@ -40235,10 +40243,14 @@
         "insp_policy": "top",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:53:45+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:54:21+00:00",
+      "seconds": 36.1
     },
     {
       "id": "E9_sentry_nowait_gmax_lat__insp_top_5_s0",
@@ -40254,10 +40266,14 @@
         "insp_policy": "top",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:54:21+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:54:57+00:00",
+      "seconds": 36.0
     },
     {
       "id": "E9_sentry_nowait_gmax_lat__insp_unc_2_s0",
@@ -40273,10 +40289,12 @@
         "insp_policy": "unc",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:54:57+00:00",
+      "worker": 2
     },
     {
       "id": "E9_sentry_nowait_gmax_lat__insp_unc_5_s0",
@@ -40388,12 +40406,14 @@
         "insp_policy": "top",
         "insp_budget": 0.05
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 4,
       "started": "2026-11-25T10:49:35+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T10:50:36+00:00",
+      "seconds": 60.7
     },
     {
       "id": "E9_sentry_law_lagakos_model_gmax_lat__insp_unc_2_s0",
@@ -40411,10 +40431,14 @@
         "insp_policy": "unc",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:50:36+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:51:36+00:00",
+      "seconds": 60.2
     },
     {
       "id": "E9_sentry_law_lagakos_model_gmax_lat__insp_unc_5_s0",
@@ -40432,10 +40456,14 @@
         "insp_policy": "unc",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:51:36+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:52:36+00:00",
+      "seconds": 60.3
     },
     {
       "id": "E9_sentry_odasc_W30__insp_rand_2_s0",
@@ -40571,10 +40599,14 @@
         "insp_policy": "rand",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:52:41+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:53:16+00:00",
+      "seconds": 34.3
     },
     {
       "id": "E9_sentry_nowait_gmax_lat__insp_rand_5_s1",
@@ -40590,10 +40622,14 @@
         "insp_policy": "rand",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:53:16+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:53:50+00:00",
+      "seconds": 34.3
     },
     {
       "id": "E9_sentry_nowait_gmax_lat__insp_top_2_s1",
@@ -40609,10 +40645,14 @@
         "insp_policy": "top",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:53:50+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:54:26+00:00",
+      "seconds": 36.0
     },
     {
       "id": "E9_sentry_nowait_gmax_lat__insp_top_5_s1",
@@ -40628,10 +40668,14 @@
         "insp_policy": "top",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:54:26+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:55:01+00:00",
+      "seconds": 35.5
     },
     {
       "id": "E9_sentry_nowait_gmax_lat__insp_unc_2_s1",
@@ -40647,10 +40691,12 @@
         "insp_policy": "unc",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:55:01+00:00",
+      "worker": 0
     },
     {
       "id": "E9_sentry_nowait_gmax_lat__insp_unc_5_s1",
@@ -40762,12 +40808,14 @@
         "insp_policy": "top",
         "insp_budget": 0.05
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 4,
       "started": "2026-11-25T10:49:39+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T10:50:40+00:00",
+      "seconds": 61.1
     },
     {
       "id": "E9_sentry_law_lagakos_model_gmax_lat__insp_unc_2_s1",
@@ -40785,10 +40833,14 @@
         "insp_policy": "unc",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:50:40+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:51:40+00:00",
+      "seconds": 60.3
     },
     {
       "id": "E9_sentry_law_lagakos_model_gmax_lat__insp_unc_5_s1",
@@ -40806,10 +40858,14 @@
         "insp_policy": "unc",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:51:40+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:52:41+00:00",
+      "seconds": 61.2
     },
     {
       "id": "E9_sentry_odasc_W30__insp_rand_2_s1",
@@ -40945,10 +41001,14 @@
         "insp_policy": "rand",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:52:57+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:53:33+00:00",
+      "seconds": 35.6
     },
     {
       "id": "E9_sentry_nowait_gmax_lat__insp_rand_5_s2",
@@ -40964,10 +41024,14 @@
         "insp_policy": "rand",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:53:33+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:54:10+00:00",
+      "seconds": 36.7
     },
     {
       "id": "E9_sentry_nowait_gmax_lat__insp_top_2_s2",
@@ -40983,10 +41047,14 @@
         "insp_policy": "top",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:54:10+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:54:48+00:00",
+      "seconds": 38.0
     },
     {
       "id": "E9_sentry_nowait_gmax_lat__insp_top_5_s2",
@@ -41002,10 +41070,12 @@
         "insp_policy": "top",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:54:48+00:00",
+      "worker": 1
     },
     {
       "id": "E9_sentry_nowait_gmax_lat__insp_unc_2_s2",
@@ -41136,12 +41206,14 @@
         "insp_policy": "top",
         "insp_budget": 0.05
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 4,
       "started": "2026-11-25T10:49:47+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T10:50:50+00:00",
+      "seconds": 63.3
     },
     {
       "id": "E9_sentry_law_lagakos_model_gmax_lat__insp_unc_2_s2",
@@ -41159,10 +41231,14 @@
         "insp_policy": "unc",
         "insp_budget": 0.02
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:50:50+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:51:54+00:00",
+      "seconds": 63.4
     },
     {
       "id": "E9_sentry_law_lagakos_model_gmax_lat__insp_unc_5_s2",
@@ -41180,10 +41256,14 @@
         "insp_policy": "unc",
         "insp_budget": 0.05
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 4
+      "priority": 4,
+      "started": "2026-11-25T10:51:54+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:52:57+00:00",
+      "seconds": 63.4
     },
     {
       "id": "E9_sentry_odasc_W30__insp_rand_2_s2",
