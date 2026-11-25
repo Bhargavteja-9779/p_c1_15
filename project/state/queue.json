@@ -32646,10 +32646,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:02:14+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:02:26+00:00",
+      "seconds": 12.0
     },
     {
       "id": "E8_aj_cassandra_dual_W30_k50_s100",
@@ -32666,10 +32670,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:02:30+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:03:15+00:00",
+      "seconds": 45.9
     },
     {
       "id": "E8_aj_cassandra_lawm_soft_W30_s100",
@@ -32685,10 +32693,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:03:28+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:04:03+00:00",
+      "seconds": 35.8
     },
     {
       "id": "E8_aj_cassandra_odasc_W30_t0.8_s100",
@@ -32803,10 +32815,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:02:16+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:02:28+00:00",
+      "seconds": 12.1
     },
     {
       "id": "E8_aj_cassandra_dual_W30_k50_s101",
@@ -32823,10 +32839,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:02:38+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:03:26+00:00",
+      "seconds": 47.4
     },
     {
       "id": "E8_aj_cassandra_lawm_soft_W30_s101",
@@ -32842,10 +32862,12 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:04:02+00:00",
+      "worker": 2
     },
     {
       "id": "E8_aj_cassandra_odasc_W30_t0.8_s101",
@@ -32960,10 +32982,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:02:18+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:02:29+00:00",
+      "seconds": 11.6
     },
     {
       "id": "E8_aj_cassandra_dual_W30_k50_s102",
@@ -32980,10 +33006,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:02:41+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:03:28+00:00",
+      "seconds": 46.9
     },
     {
       "id": "E8_aj_cassandra_lawm_soft_W30_s102",
@@ -32999,10 +33029,12 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:04:03+00:00",
+      "worker": 1
     },
     {
       "id": "E8_aj_cassandra_odasc_W30_t0.8_s102",
@@ -33117,10 +33149,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:02:26+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:02:38+00:00",
+      "seconds": 12.1
     },
     {
       "id": "E8_aj_cassandra_dual_W30_k50_s103",
@@ -33137,10 +33173,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:03:15+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:04:02+00:00",
+      "seconds": 46.4
     },
     {
       "id": "E8_aj_cassandra_lawm_soft_W30_s103",
@@ -33156,10 +33196,12 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:04:15+00:00",
+      "worker": 0
     },
     {
       "id": "E8_aj_cassandra_odasc_W30_t0.8_s103",
@@ -33274,10 +33316,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:02:28+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:02:41+00:00",
+      "seconds": 12.3
     },
     {
       "id": "E8_aj_cassandra_dual_W30_k50_s104",
@@ -33294,10 +33340,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:03:26+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:04:15+00:00",
+      "seconds": 49.0
     },
     {
       "id": "E8_aj_cassandra_lawm_soft_W30_s104",
@@ -34917,10 +34967,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:01:06+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:01:11+00:00",
+      "seconds": 4.8
     },
     {
       "id": "E8_aj_activemq_oracle_s100",
@@ -34932,10 +34986,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:01:31+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:01:39+00:00",
+      "seconds": 7.8
     },
     {
       "id": "E8_aj_activemq_wait_W90_s100",
@@ -34949,10 +35007,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:02:05+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:02:10+00:00",
+      "seconds": 5.2
     },
     {
       "id": "E8_aj_activemq_orb_W90_s100",
@@ -34966,10 +35028,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:01:47+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:01:52+00:00",
+      "seconds": 5.4
     },
     {
       "id": "E8_aj_activemq_wait_W30_s100",
@@ -34983,10 +35049,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:01:57+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:02:02+00:00",
+      "seconds": 5.0
     },
     {
       "id": "E8_aj_activemq_decomp_L1_W30_s100",
@@ -35025,10 +35095,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:00:03+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:00:24+00:00",
+      "seconds": 21.5
     },
     {
       "id": "E8_aj_activemq_lawm_soft_W30_s100",
@@ -35044,10 +35118,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:00:32+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:00:48+00:00",
+      "seconds": 16.6
     },
     {
       "id": "E8_aj_activemq_odasc_W30_t0.8_s100",
@@ -35063,10 +35141,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:01:20+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:01:28+00:00",
+      "seconds": 8.8
     },
     {
       "id": "E8_aj_activemq_nowait_s101",
@@ -35078,10 +35160,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:01:11+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:01:16+00:00",
+      "seconds": 4.7
     },
     {
       "id": "E8_aj_activemq_oracle_s101",
@@ -35093,10 +35179,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:01:38+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:01:45+00:00",
+      "seconds": 6.7
     },
     {
       "id": "E8_aj_activemq_wait_W90_s101",
@@ -35110,10 +35200,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:02:08+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:02:12+00:00",
+      "seconds": 4.8
     },
     {
       "id": "E8_aj_activemq_orb_W90_s101",
@@ -35127,10 +35221,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:01:48+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:01:54+00:00",
+      "seconds": 6.1
     },
     {
       "id": "E8_aj_activemq_wait_W30_s101",
@@ -35144,10 +35242,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:01:58+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:02:02+00:00",
+      "seconds": 4.5
     },
     {
       "id": "E8_aj_activemq_decomp_L1_W30_s101",
@@ -35162,12 +35264,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 3,
       "priority": 14,
       "started": "2026-11-25T20:59:55+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T21:00:03+00:00",
+      "seconds": 8.2
     },
     {
       "id": "E8_aj_activemq_dual_W30_k50_s101",
@@ -35184,10 +35288,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:00:09+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:00:31+00:00",
+      "seconds": 21.8
     },
     {
       "id": "E8_aj_activemq_lawm_soft_W30_s101",
@@ -35203,10 +35311,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:00:46+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:01:02+00:00",
+      "seconds": 15.7
     },
     {
       "id": "E8_aj_activemq_odasc_W30_t0.8_s101",
@@ -35222,10 +35334,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:01:21+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:01:31+00:00",
+      "seconds": 10.3
     },
     {
       "id": "E8_aj_activemq_nowait_s102",
@@ -35237,10 +35353,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:01:11+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:01:16+00:00",
+      "seconds": 4.7
     },
     {
       "id": "E8_aj_activemq_oracle_s102",
@@ -35252,10 +35372,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:01:39+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:01:47+00:00",
+      "seconds": 7.8
     },
     {
       "id": "E8_aj_activemq_wait_W90_s102",
@@ -35269,10 +35393,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:02:08+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:02:14+00:00",
+      "seconds": 6.1
     },
     {
       "id": "E8_aj_activemq_orb_W90_s102",
@@ -35286,10 +35414,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:01:52+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:01:57+00:00",
+      "seconds": 5.3
     },
     {
       "id": "E8_aj_activemq_wait_W30_s102",
@@ -35303,10 +35435,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:01:59+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:02:05+00:00",
+      "seconds": 5.3
     },
     {
       "id": "E8_aj_activemq_decomp_L1_W30_s102",
@@ -35321,12 +35457,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 3,
       "priority": 14,
       "started": "2026-11-25T20:59:55+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T21:00:03+00:00",
+      "seconds": 8.4
     },
     {
       "id": "E8_aj_activemq_dual_W30_k50_s102",
@@ -35343,10 +35481,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:00:10+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:00:32+00:00",
+      "seconds": 22.1
     },
     {
       "id": "E8_aj_activemq_lawm_soft_W30_s102",
@@ -35362,10 +35504,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:00:48+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:01:06+00:00",
+      "seconds": 17.7
     },
     {
       "id": "E8_aj_activemq_odasc_W30_t0.8_s102",
@@ -35381,10 +35527,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:01:21+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:01:30+00:00",
+      "seconds": 9.2
     },
     {
       "id": "E8_aj_activemq_nowait_s103",
@@ -35396,10 +35546,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:01:16+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:01:21+00:00",
+      "seconds": 5.1
     },
     {
       "id": "E8_aj_activemq_oracle_s103",
@@ -35411,10 +35565,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:01:40+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:01:48+00:00",
+      "seconds": 7.8
     },
     {
       "id": "E8_aj_activemq_wait_W90_s103",
@@ -35428,10 +35586,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:02:10+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:02:16+00:00",
+      "seconds": 6.3
     },
     {
       "id": "E8_aj_activemq_orb_W90_s103",
@@ -35445,10 +35607,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:01:52+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:01:58+00:00",
+      "seconds": 5.5
     },
     {
       "id": "E8_aj_activemq_wait_W30_s103",
@@ -35462,10 +35628,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:02:02+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:02:08+00:00",
+      "seconds": 5.5
     },
     {
       "id": "E8_aj_activemq_decomp_L1_W30_s103",
@@ -35480,12 +35650,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 3,
       "priority": 14,
       "started": "2026-11-25T21:00:02+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T21:00:09+00:00",
+      "seconds": 6.8
     },
     {
       "id": "E8_aj_activemq_dual_W30_k50_s103",
@@ -35502,10 +35674,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:00:24+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:00:46+00:00",
+      "seconds": 21.9
     },
     {
       "id": "E8_aj_activemq_lawm_soft_W30_s103",
@@ -35521,10 +35697,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:00:53+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:01:11+00:00",
+      "seconds": 17.8
     },
     {
       "id": "E8_aj_activemq_odasc_W30_t0.8_s103",
@@ -35540,10 +35720,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:01:28+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:01:38+00:00",
+      "seconds": 9.5
     },
     {
       "id": "E8_aj_activemq_nowait_s104",
@@ -35555,10 +35739,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:01:16+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:01:21+00:00",
+      "seconds": 4.5
     },
     {
       "id": "E8_aj_activemq_oracle_s104",
@@ -35570,10 +35758,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:01:45+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:01:52+00:00",
+      "seconds": 7.0
     },
     {
       "id": "E8_aj_activemq_wait_W90_s104",
@@ -35587,10 +35779,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:02:12+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:02:18+00:00",
+      "seconds": 5.5
     },
     {
       "id": "E8_aj_activemq_orb_W90_s104",
@@ -35604,10 +35800,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:01:54+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:01:59+00:00",
+      "seconds": 5.4
     },
     {
       "id": "E8_aj_activemq_wait_W30_s104",
@@ -35621,10 +35821,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:02:02+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:02:08+00:00",
+      "seconds": 5.8
     },
     {
       "id": "E8_aj_activemq_decomp_L1_W30_s104",
@@ -35639,10 +35843,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:00:03+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:00:10+00:00",
+      "seconds": 6.8
     },
     {
       "id": "E8_aj_activemq_dual_W30_k50_s104",
@@ -35659,10 +35867,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:00:31+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:00:53+00:00",
+      "seconds": 22.4
     },
     {
       "id": "E8_aj_activemq_lawm_soft_W30_s104",
@@ -35678,10 +35890,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:01:02+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:01:20+00:00",
+      "seconds": 17.5
     },
     {
       "id": "E8_aj_activemq_odasc_W30_t0.8_s104",
@@ -35697,10 +35913,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:01:30+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:01:40+00:00",
+      "seconds": 9.9
     },
     {
       "id": "E8_aj_hadoop-hdfs_nowait_s100",

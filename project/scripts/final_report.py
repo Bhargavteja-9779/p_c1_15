@@ -100,7 +100,10 @@ fz6 = read_json(STATE / "frozen_config_v6.json", {})
 if "E8" in set(df.experiment) and fz6:
     # plan_v7 H6 (fresh ApacheJIT confirmation): primary dev candidate vs wait_W90, orb_W90, odasc (one Holm over 3)
     prim = fz6["primary_candidate"]; od = [c["variant"] for c in fz6["candidates_specs"] if c["method"] == "odasc"][0]
-    rows = compare("E8", prim, ["wait_W90", "orb_W90", od], "E8_planv7_H6_primary_vs_baselines") or []
+    # a self-comparison is degenerate (all differences 0): if the primary IS odasc, the family is the 2 waiting baselines
+    rows = compare("E8", prim, ["wait_W90", "orb_W90"] + ([od] if prim != od else []), "E8_planv7_H6_primary_vs_baselines") or []
+    statsout["E8_H6_family_note"] = (f"primary={prim}; " + ("Holm over 3 tests" if prim != od else
+        "primary is the odasc baseline itself -> self-comparison dropped, Holm over 2 tests (decision 2026-11-25, before E8 analysis)"))
     for r in rows:   # plan_v7: margin >= 0.02 required vs waiting baselines; vs odasc reported as is (no margin)
         need_margin = r["baseline"] != od
         r["H6_pass"] = bool(r["holm_p"] < 0.05 and r["ci95"][0] > 0 and (r["mean_diff"] >= NONTRIVIAL if need_margin else r["mean_diff"] > 0))

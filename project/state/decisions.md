@@ -97,3 +97,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-25T21:00:02+00:00** — E8 enqueued exactly as pre-registered in plan_v7 (9 ApacheJIT projects x 5 confirm seeds x 9 methods = 405 jobs) despite H5 being false on dev
   - Reason: plan_v7 pre-registration; no changes after seeing dev results
+
+- **2026-11-25T21:04:27+00:00** — final_report E8/H6: the primary candidate (best dev mean) is odasc_W30_t0.8 itself, so the pre-registered 'primary vs odasc' test is a degenerate self-comparison; dropped, Holm over the 2 waiting baselines. Our own methods (dual_W30_k50, lawm_soft_W30) vs wait_W90/orb_W90/odasc are reported descriptively as pre-registered
+  - Reason: fixed before any E8 result was inspected; Wilcoxon on all-zero differences is undefined
