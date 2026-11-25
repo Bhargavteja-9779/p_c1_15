@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E0",
+    "project": "nova",
+    "method": "nowait",
+    "variant": "nowait_gmax_lat",
+    "seed": 1,
+    "split": "dev",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.5997005765554193,
+    "r0": 0.8256960108766184,
+    "r1": 0.4355607593878063,
+    "rdiff": 0.39013525148881206,
+    "auc": 0.5975144105701446,
+    "mcc": 0.2696955970657933,
+    "n_eval": 44320,
+    "seconds": 152.61,
+    "job_id": "E0_nova_nowait_gmax_lat_s1",
+    "written": "2026-11-25T01:59:20+00:00",
+    "cycle": 1
+  }
+]
