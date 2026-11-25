@@ -4736,8 +4736,12 @@
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
-      "started": "2026-11-25T00:45:59+00:00",
-      "worker": 0
+      "started": "2026-11-25T00:47:42+00:00",
+      "worker": 0,
+      "resets": 1,
+      "log": [
+        "2026-11-25T00:47:42+00:00 reset running->pending on restart (attempt refunded)"
+      ]
     },
     {
       "id": "E0_nova_odasc_W30_s0",
@@ -4828,8 +4832,12 @@
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
-      "started": "2026-11-25T00:46:03+00:00",
-      "worker": 1
+      "started": "2026-11-25T00:47:42+00:00",
+      "worker": 1,
+      "resets": 1,
+      "log": [
+        "2026-11-25T00:47:42+00:00 reset running->pending on restart (attempt refunded)"
+      ]
     },
     {
       "id": "E0_nova_odasc_W30_s1",
@@ -4920,8 +4928,12 @@
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
-      "started": "2026-11-25T00:46:23+00:00",
-      "worker": 2
+      "started": "2026-11-25T00:47:42+00:00",
+      "worker": 2,
+      "resets": 1,
+      "log": [
+        "2026-11-25T00:47:42+00:00 reset running->pending on restart (attempt refunded)"
+      ]
     },
     {
       "id": "E0_nova_odasc_W30_s2",
