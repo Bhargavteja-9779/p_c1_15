@@ -1,9 +1,9 @@
 # HANDOFF — read this first
-*Auto-generated 2026-11-25T07:55:59+00:00 by scripts/write_handoff.py*
+*Auto-generated 2026-11-25T21:45:40+00:00 by scripts/write_handoff.py*
 
 ## Where we are
-- **Status:** RUNNING   **Cycle:** 1 / 12   **Phase:** PHASE5_RUN   **Pivots:** 0 / 3
-- **Step:** E1-E3 confirmation running on 10 held-out projects (frozen plan_v3)
+- **Status:** RUNNING   **Cycle:** 2 / 12   **Phase:** PHASE5_RUN   **Pivots:** 0 / 3
+- **Step:** cycle 2: finishing E2/E3 of frozen plan_v3; E1 done (G5 fails vs ODaSC, passes vs waiting-time baselines)
 - **Last action:** Dev tuning complete (528 runs, 44 variants); frozen plan_v3: LAW lagakos+model+gmax_lat vs 6 baselines; E1/E2/E3 enqueued
 - **NEXT ACTION:** 1) Keep runners alive: bash scripts/watch_and_checkpoint.sh (relaunches workers, commits every 5 min). If cycle-1 budget (15 h) runs out, remaining jobs become skipped_budget: set cycle=2 in state/agent_state.json, reset skipped_budget->pending, relaunch. 2) When E1 is done: update scripts/final_report.py for plan_v3 (primary = law_lagakos_model_gmax_lat vs odasc_W30, Holm over 6 baselines, bootstrap CI, 0.02 margin) and run it. 3) Update gates G4-G8, novelty score, journal RESULT entry; then 6.4/Section 11 decision.
 
@@ -12,30 +12,29 @@
 - **Hypothesis:** LAW beats the best tuned waiting-time baseline by >=0.02 G-mean on 10 held-out projects (Holm p<0.05)
 
 ## Running right now
-- Queue (full): {'done': 528, 'pending': 800}; running jobs: none
+- Queue (full): {'done': 996, 'pending': 332}; running jobs: none
 - Processes: `none`
-- Heartbeat age: 17s
+- Heartbeat age: 42697s
 
 ## Compute
-- Cycle 1: 10.09 h / 15 h   Global: 10.09 h / 120 h (CPU-hours; machine has no GPU)
+- Cycle 2: 0.00 h / 15 h   Global: 15.04 h / 120 h (CPU-hours; machine has no GPU)
 
 ## Gate status (Section 7)
 | Gate | Status | Evidence |
 |---|---|---|
 | G1 | pass (marginal; caveat stated) | journal_selection/selected_journal.md — median 71 d (12 m) / 74 d (24 m); 2025 quartile UNVERIFIED |
-| G2 | unknown |  |
-| G3 | unknown |  |
-| G4 | unknown |  |
-| G5 | unknown |  |
-| G6 | unknown |  |
-| G7 | unknown |  |
-| G8 | unknown |  |
+| G2 | pass (partial) | state/novelty_ledger.json: 41 papers opened, 83 queries; claim table updated; DFM weight credited |
+| G3 | fail | self-score 11/25 (differentiation 2, mechanism 3, evidence 3, breadth 2, significance 1); no blind re-score yet |
+| G4 | pass (caveat) | wait/ORB (Cabral 2019) and ODaSC-style baseline reproduced under one protocol, equal 5-config budget; absolute numbers not comparable to published ones (different learner/eval window) |
+| G5 | fail | results/statistics.json E1: vs odasc_W30 +0.0009, CI [-0.0086,0.0114], Holm p=1.0; vs wait_W90 +0.0417 Holm p=0.0195; vs orb_W90 +0.0377 Holm p=0.0195 |
+| G6 | unknown | E2 68/200 runs; continuing in cycle 2 |
+| G7 | partial | 10 held-out projects (Java/JS/Python); E3 delay x2 pending |
+| G8 | pass | tests/test_no_future.py (all methods + threshold policies); project-level dev/test split; test touched only after freeze |
 | G9 | unknown |  |
 | G10 | unknown |  |
 | G11 | unknown |  |
 
 ## Last 10 decisions
-- 2026-11-24T03:35:03+00:00: User allowed Frontiers journals; checked Frontiers in AI (median 78 d), Big Data (74 d), Computer Science (100 d)
 - 2026-11-24T23:02:09+00:00: Liu et al. 2024a (PU learning for JIT-SDP, EMSE 29(5):98) marked UNVERIFIED / not found
 - 2026-11-24T23:02:09+00:00: plan_v2: add ODaSC-style baseline (batch adaptation: kNN label confidence at labelling time, delta=0.9, k=50, pool=5000 recent labelled commits) tuned over W in {15,30,60,90,180} on dev = 5 configs, same budget as wait/orb
 - 2026-11-24T23:02:09+00:00: plan_v2: LAW configuration for E1 chosen on dev from its 4 E0 variants (best mean dev G-mean), instead of the plan_v1 pre-specified lagakos+model
@@ -45,9 +44,10 @@
 - 2026-11-25T00:25:33+00:00: E0c extended with law_{lagakos,naive}_model_gmax_lat (24 runs, dev only)
 - 2026-11-25T00:25:33+00:00: Runner: dead-worker resets refund the attempt; enqueue.py takes the queue lock
 - 2026-11-25T07:54:45+00:00: FROZEN (plan_v3): proposed = LAW lagakos+model with latency-corrected G-mean threshold; comparators nowait, wait_W90, orb_W90, odasc_W30 (primary), wait_W30_gmax_lat, odasc_W15_gmax_lat
+- 2026-11-25T21:45:40+00:00: Start cycle 2 to finish E2 (132 runs) and E3 (200 runs) of the unchanged frozen plan_v3
 
 ## Last failures (journal entries)
-- none yet
+- journal/ENTRIES/20261125T214540_FAILURE_on_the_held_out_projects__law_ties_odasc.md
 
 ## Commands (run from `project/`)
 | What | Command |

@@ -1508,5 +1508,18 @@
       "status": "model-free evidence on 14 projects; needs a model-based confirmation (E3 diag)"
     }
   ],
-  "scores": []
+  "scores": [
+    {
+      "cycle": 1,
+      "time": "2026-11-25T21:45:40+00:00",
+      "differentiation": 2,
+      "mechanism": 3,
+      "evidence": 3,
+      "breadth": 2,
+      "significance": 1,
+      "total": 11,
+      "blind_reviewer": null,
+      "note": "Weight is DFM's; LAW ties ODaSC on test; beats waiting-time baselines (Holm p=0.02)"
+    }
+  ]
 }

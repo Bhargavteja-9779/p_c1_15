@@ -55,3 +55,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-25T07:54:45+00:00** — FROZEN (plan_v3): proposed = LAW lagakos+model with latency-corrected G-mean threshold; comparators nowait, wait_W90, orb_W90, odasc_W30 (primary), wait_W30_gmax_lat, odasc_W15_gmax_lat
   - Reason: Best mean dev G-mean 0.763 vs best baseline odasc_W30 0.750 (+0.013, below the 0.02 margin; 44 dev variants). Freezing now and letting the held-out confirmation decide, instead of further dev tuning that would only add forking paths.
+
+- **2026-11-25T21:45:40+00:00** — Start cycle 2 to finish E2 (132 runs) and E3 (200 runs) of the unchanged frozen plan_v3
+  - Reason: Cycle-1 budget (15 CPU-h) ran out after E1; E2/E3 are part of the same pre-registered confirmation, no re-planning, no change after seeing E1.
