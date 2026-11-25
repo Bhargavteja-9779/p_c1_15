@@ -79,3 +79,9 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-25T13:15:25+00:00** — Parallel branches found (dreamy-fermat cycle 2, zealous-lamport, keen-edison, magical-bardeen) forked from b18fc8e; continue on zen-cray (most recent, owner directives); Cabral test projects declared 'used'; fresh confirmation on ApacheJIT (plan_v7)
   - Reason: git branch -a 2026-11-25; dreamy-fermat RESULTS_SUMMARY shows the same test projects used with many variants
+
+- **2026-11-25T13:34:47+00:00** — Session magical-bardeen resumed 2026-11-25: adopted zen-cray-ajbt81 state (most advanced: cycle 2, plan_v6 E0e running, plan_v7 pre-registered) into branch claude/magical-bardeen-9yglkz via merge -s ours; zen-cray's heartbeat was 12 min stale (session presumed stopped)
+  - Reason: Owner asked to check the most recent branch and continue; development branch for this session is magical-bardeen. magical-bardeen's own cycle-1 work (plan_v2: LAT threshold policy, river-based ODaSC reimplementation) stays in git history (commit b90ea74); zen-cray found threshold effects small for denoisers (diag_threshold_dev.json), so LAT is not carried forward as a candidate.
+
+- **2026-11-25T13:34:47+00:00** — Added scripts/freeze_v6.py and enqueue E8 (plan_v7 ApacheJIT confirmation, exactly the plan_v7 method list); ApacheJIT downloaded and sha256-verified; smoke test on the first 1200 kafka commits checked only that every method runs (no metrics inspected)
+  - Reason: plan_v7 required these and they did not exist yet

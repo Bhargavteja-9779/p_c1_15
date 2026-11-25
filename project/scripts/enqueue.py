@@ -91,6 +91,16 @@ def specs(exp):
                               split="dev" if p in DEV else "test"))
         for j in J: j.update(experiment="E7")
         return J, 18
+    if exp == "E8":   # plan_v7: FRESH confirmation on ApacheJIT (9 projects), frozen configs, no re-tuning
+        from src.data import AJ_PROJECTS
+        fz = read_json(STATE / "frozen_config_v6.json"); assert fz, "run scripts/freeze_v6.py first"
+        meths = [dict(method="nowait"), dict(method="oracle"), dict(method="wait", W=90, variant="wait_W90"),
+                 dict(method="orb", W=90, variant="orb_W90"), dict(method="wait", W=30, variant="wait_W30"),
+                 dict(method="decomp", W=30, level=1, variant="decomp_L1_W30")] + [dict(c) for c in fz["candidates_specs"]]
+        for p, s, m in itertools.product(AJ_PROJECTS, SC, meths):
+            J.append(dict(m, project="aj_" + p, seed=s))
+        for j in J: j.update(experiment="E8", split="fresh")
+        return J, 14
     if exp == "E3b":   # plan_v3 decomposition on test projects (pre-registered)
         for p, s in itertools.product(TEST, SC):
             for W in [30, 90]:

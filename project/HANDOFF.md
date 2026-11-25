@@ -1,31 +1,31 @@
 # HANDOFF — read this first
-*Auto-generated 2026-11-25T13:15:31+00:00 by scripts/write_handoff.py*
+*Auto-generated 2026-11-25T13:34:47+00:00 by scripts/write_handoff.py*
 
 ## READ ALSO: USER_DIRECTIVES.md (owner standing orders)
 
 ## Where we are
 - **Status:** RUNNING   **Cycle:** 2 / 12   **Phase:** PHASE5_RUN   **Pivots:** 0 / 3
-- **Step:** cycle 2: owner directive -> benchmark vs JKSU-CIS + stronger methods on dev; E4 test held
-- **Last action:** Cycle 1 closed: H1 negative on test, H3 confirmed (10/10); gates updated; novelty 14/25; plan_v4 lawm implemented + leakage test
-- **NEXT ACTION:** 1) Finish E0d (3 nova jobs) then python scripts/freeze_v5.py (dev only). 2) Build literature/jksu_benchmark.md from literature/fulltext/*.html (structure, datasets, metrics, numbers). 3) New methods on dev (plan_v6): combine feature-based denoisers, add effort-aware metrics (Recall@20%Effort, Popt, IFA), stronger learners. 4) Only then one frozen test confirmation of the final candidates.
+- **Step:** cycle 2: E0e (dual denoiser, dev) running; plan_v7 ApacheJIT confirmation ready to enqueue
+- **Last action:** Adopted zen-cray state; restarted runners+autocommit; ApacheJIT downloaded/verified; freeze_v6.py + E8 spec written; smoke test OK
+- **NEXT ACTION:** 1) When E0e is done (48/48): python scripts/freeze_v6.py. 2) python scripts/enqueue.py E8 && bash scripts/launch_runner.sh 3 (ApacheJIT fresh confirmation, 9 projects x 5 confirm seeds x 9 methods; set priority above remaining E3). 3) Optionally enqueue E7 (MSTDP protocol). 4) Analyse E8 per plan_v7 H6 (Holm over 3 Wilcoxon tests), update gates/novelty/journal. 5) Continue owner directive: jksu_benchmark.md, more prior art (G2 needs >=30 opened).
 
 - **Selected journal:** JKSU-CIS (Springer Nature, ISSN 1319-1578, IF 6.4 2025; turnaround median 71–74 d, marginal)
 - **Topic:** Verification-latency-aware online JIT-SDP: latency-aware weighting (LAW) of provisionally-clean commits
 - **Hypothesis:** LAW beats the best tuned waiting-time baseline by >=0.02 G-mean on 10 held-out projects (Holm p<0.05)
 
 ## Running right now
-- Queue (full): {'done': 1082, 'pending': 180, 'skipped_plan': 117, 'running': 3}; running jobs: ['E0e_fabric_dual_W90_k50_s0', 'E0e_fabric_dual_W90_k50_s1', 'E0e_fabric_dual_W90_k50_s2']
-- Processes: `233 tmux new-session -d -s research_w0 python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
-234 bash -c python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
-236 python3 run_all.py --mode full --resume --worker 0
-240 bash -c python3 run_all.py --mode full --resume --worker 1 >> logs/runner_w1.log 2>&1
-243 python3 run_all.py --mode full --resume --worker 1
-246 bash -c python3 run_all.py --mode full --resume --worker 2 >> logs/runner_w2.log 2>&1
-248 python3 run_all.py --mode full --resume --worker 2`
-- Heartbeat age: 17s
+- Queue (full): {'done': 1085, 'pending': 177, 'skipped_plan': 117, 'running': 3}; running jobs: ['E0e_neutron_dual_W30_k20_s0', 'E0e_neutron_dual_W30_k20_s1', 'E0e_neutron_dual_W30_k20_s2']
+- Processes: `357 tmux new-session -d -s research_w0 python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
+358 bash -c python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
+360 python3 run_all.py --mode full --resume --worker 0
+364 bash -c python3 run_all.py --mode full --resume --worker 1 >> logs/runner_w1.log 2>&1
+367 python3 run_all.py --mode full --resume --worker 1
+370 bash -c python3 run_all.py --mode full --resume --worker 2 >> logs/runner_w2.log 2>&1
+372 python3 run_all.py --mode full --resume --worker 2`
+- Heartbeat age: 0s
 
 ## Compute
-- Cycle 2: 9.60 h / 15 h   Global: 19.82 h / 120 h (CPU-hours; machine has no GPU)
+- Cycle 2: 9.82 h / 15 h   Global: 20.04 h / 120 h (CPU-hours; machine has no GPU)
 
 ## Gate status (Section 7)
 | Gate | Status | Evidence |
@@ -43,8 +43,6 @@
 | G11 | unknown |  |
 
 ## Last 10 decisions
-- 2026-11-24T13:20:12+00:00: plan_v3 written and E1, E3b, E3, E2 enqueued on test projects (first test touch)
-- 2026-11-24T15:00:34+00:00: Cycle 1 outcome: H1 (LAW) and candidate awt not supported on test; H3 supported. Gates G5/G6 fail for a method claim -> Section 6.4 ladder, cycle 2 targets a feature-based dormant-bug denoiser without self-confirmation (plan_v4, dev first)
 - 2026-11-24T15:04:02+00:00: Cycle 2 started (plan_v4: lawm = mature cross-fitted dormant-bug posterior on the wait set); remaining cycle-1 E3/E2 jobs are charged to cycle 2 budget
 - 2026-11-24T15:52:36+00:00: H4 holds on dev -> plan_v5: freeze lawm_soft_W30; add ODaSC-style baseline (equal 4-config dev budget), lawm ablations, robustness; skip remaining cycle-1 E2 (LAW ablation)
 - 2026-11-24T19:00:23+00:00: Owner directive recorded in USER_DIRECTIVES.md, BOOTSTRAP_PROMPT.txt and MASTER_PROMPT addendum: iterate until top-notch, benchmark vs JKSU-CIS papers, no honest exit
@@ -53,6 +51,8 @@
 - 2026-11-25T13:07:06+00:00: plan_v6: dual-evidence denoiser (noisy-OR of mature-scorer posterior and kNN label composition) on dev; MSTDP-protocol experiment E7 pre-registered
 - 2026-11-25T13:07:06+00:00: GitHub push currently fails (403, authentication must be reconnected by owner); commits accumulate locally and autocommit retries
 - 2026-11-25T13:15:25+00:00: Parallel branches found (dreamy-fermat cycle 2, zealous-lamport, keen-edison, magical-bardeen) forked from b18fc8e; continue on zen-cray (most recent, owner directives); Cabral test projects declared 'used'; fresh confirmation on ApacheJIT (plan_v7)
+- 2026-11-25T13:34:47+00:00: Session magical-bardeen resumed 2026-11-25: adopted zen-cray-ajbt81 state (most advanced: cycle 2, plan_v6 E0e running, plan_v7 pre-registered) into branch claude/magical-bardeen-9yglkz via merge -s ours; zen-cray's heartbeat was 12 min stale (session presumed stopped)
+- 2026-11-25T13:34:47+00:00: Added scripts/freeze_v6.py and enqueue E8 (plan_v7 ApacheJIT confirmation, exactly the plan_v7 method list); ApacheJIT downloaded and sha256-verified; smoke test on the first 1200 kafka commits checked only that every method runs (no metrics inspected)
 
 ## Last failures (journal entries)
 - journal/ENTRIES/20261124T040516_FAILURE_the_pre_specified_law_method_loses_to_a_tuned_wait.md
