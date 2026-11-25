@@ -16,20 +16,20 @@
     "evidence": ""
   },
   "G5": {
-    "status": "unknown",
-    "evidence": ""
+    "status": "fail",
+    "evidence": "results/statistics.json E1: LAW vs ODaSC-W30 +0.0009, CI [-0.0086,0.0114], Holm p=1.0 (wins vs waiting-time family pass)"
   },
   "G6": {
-    "status": "unknown",
-    "evidence": ""
+    "status": "fail (partial)",
+    "evidence": "E2 partial: Lagakos vs naive +0.0001 (no effect); threshold +0.0687; model prior +0.016"
   },
   "G7": {
     "status": "unknown",
     "evidence": ""
   },
   "G8": {
-    "status": "unknown",
-    "evidence": ""
+    "status": "pass",
+    "evidence": "tests/test_no_future.py (future discoveries do not change past predictions); dev/test split by project; features commit-time"
   },
   "G9": {
     "status": "unknown",

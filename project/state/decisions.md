@@ -55,3 +55,9 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-25T07:54:45+00:00** — FROZEN (plan_v3): proposed = LAW lagakos+model with latency-corrected G-mean threshold; comparators nowait, wait_W90, orb_W90, odasc_W30 (primary), wait_W30_gmax_lat, odasc_W15_gmax_lat
   - Reason: Best mean dev G-mean 0.763 vs best baseline odasc_W30 0.750 (+0.013, below the 0.02 margin; 44 dev variants). Freezing now and letting the held-out confirmation decide, instead of further dev tuning that would only add forking paths.
+
+- **2026-11-25T10:19:45+00:00** — Cycle 2 starts (cycle-1 budget of 15 CPU-h exhausted at 15.04 h). Finish frozen plan_v3 E2/E3 (332 skipped_budget jobs) first
+  - Reason: They are pre-registered parts of the frozen confirmation; leaving them unfinished would hide ablation/robustness evidence
+
+- **2026-11-25T10:19:45+00:00** — Consolidated on lineage claude/zealous-lamport-bjc4um (latest, 73 commits: E0 done, plan_v3 frozen, E1 done). Fast-forwarded working branch claude/dreamy-fermat-7983nm to it. Branches zen-cray (cycle-2 JKSU benchmark, owner directive), keen-edison and magical-bardeen were parallel forks from the same handoff and are NOT merged; useful items will be ported explicitly
+  - Reason: User asked to continue from the latest branch; parallel sessions diverged after the 2026-11-24 handoff

@@ -1,4 +1,179 @@
 {
- "generated": "2026-11-25T07:56:28+00:00",
+ "generated": "2026-11-25T10:18:45+00:00",
+ "E1_main_proposed_vs_baselines": [
+  {
+   "proposed": "law_lagakos_model_gmax_lat",
+   "baseline": "nowait",
+   "n_projects": 10,
+   "mean_diff": 0.267,
+   "ci95": [
+    0.2165,
+    0.3199
+   ],
+   "wins": 10,
+   "losses": 0,
+   "wilcoxon_p": 0.001953125,
+   "paired_t_p": 5.019410082692971e-06,
+   "rank_biserial": 1.0,
+   "holm_p": 0.01171875,
+   "G5_pass": true
+  },
+  {
+   "proposed": "law_lagakos_model_gmax_lat",
+   "baseline": "wait_W90",
+   "n_projects": 10,
+   "mean_diff": 0.0417,
+   "ci95": [
+    0.0258,
+    0.0575
+   ],
+   "wins": 9,
+   "losses": 1,
+   "wilcoxon_p": 0.00390625,
+   "paired_t_p": 0.000941668170484443,
+   "rank_biserial": 0.964,
+   "holm_p": 0.01953125,
+   "G5_pass": true
+  },
+  {
+   "proposed": "law_lagakos_model_gmax_lat",
+   "baseline": "orb_W90",
+   "n_projects": 10,
+   "mean_diff": 0.0377,
+   "ci95": [
+    0.0216,
+    0.0511
+   ],
+   "wins": 9,
+   "losses": 1,
+   "wilcoxon_p": 0.005859375,
+   "paired_t_p": 0.0011187150714508604,
+   "rank_biserial": 0.927,
+   "holm_p": 0.01953125,
+   "G5_pass": true
+  },
+  {
+   "proposed": "law_lagakos_model_gmax_lat",
+   "baseline": "odasc_W30",
+   "n_projects": 10,
+   "mean_diff": 0.0009,
+   "ci95": [
+    -0.0086,
+    0.0114
+   ],
+   "wins": 6,
+   "losses": 4,
+   "wilcoxon_p": 0.76953125,
+   "paired_t_p": 0.8634546291541089,
+   "rank_biserial": 0.127,
+   "holm_p": 1.0,
+   "G5_pass": false
+  },
+  {
+   "proposed": "law_lagakos_model_gmax_lat",
+   "baseline": "wait_W30_gmax_lat",
+   "n_projects": 10,
+   "mean_diff": 0.0202,
+   "ci95": [
+    0.0115,
+    0.0289
+   ],
+   "wins": 9,
+   "losses": 1,
+   "wilcoxon_p": 0.00390625,
+   "paired_t_p": 0.0019154862775619945,
+   "rank_biserial": 0.964,
+   "holm_p": 0.01953125,
+   "G5_pass": true
+  },
+  {
+   "proposed": "law_lagakos_model_gmax_lat",
+   "baseline": "odasc_W15_gmax_lat",
+   "n_projects": 10,
+   "mean_diff": 0.0008,
+   "ci95": [
+    -0.005,
+    0.0067
+   ],
+   "wins": 7,
+   "losses": 3,
+   "wilcoxon_p": 0.625,
+   "paired_t_p": 0.8058545015479147,
+   "rank_biserial": 0.2,
+   "holm_p": 1.0,
+   "G5_pass": false
+  }
+ ],
+ "E1_primary_comparator": "odasc_W30",
+ "E2_ablation_full_vs_component_removed": [
+  {
+   "proposed": "law_lagakos_model_gmax_lat",
+   "baseline": "law_lagakos_model",
+   "n_projects": 4,
+   "mean_diff": 0.0687,
+   "ci95": [
+    0.0493,
+    0.0882
+   ],
+   "wins": 4,
+   "losses": 0,
+   "wilcoxon_p": null,
+   "paired_t_p": 0.009022756087921618,
+   "rank_biserial": 1.0,
+   "holm_p": 1.0,
+   "G5_pass": false
+  },
+  {
+   "proposed": "law_lagakos_model_gmax_lat",
+   "baseline": "law_naive_model_gmax_lat",
+   "n_projects": 3,
+   "mean_diff": 0.0001,
+   "ci95": [
+    -0.0015,
+    0.0012
+   ],
+   "wins": 2,
+   "losses": 1,
+   "wilcoxon_p": null,
+   "paired_t_p": 0.894624828953791,
+   "rank_biserial": 0.0,
+   "holm_p": 1.0,
+   "G5_pass": false
+  },
+  {
+   "proposed": "law_lagakos_model_gmax_lat",
+   "baseline": "law_lagakos_base_gmax_lat",
+   "n_projects": 4,
+   "mean_diff": 0.016,
+   "ci95": [
+    0.0077,
+    0.0244
+   ],
+   "wins": 4,
+   "losses": 0,
+   "wilcoxon_p": null,
+   "paired_t_p": 0.047955018173734994,
+   "rank_biserial": 1.0,
+   "holm_p": 1.0,
+   "G5_pass": false
+  },
+  {
+   "proposed": "law_lagakos_model_gmax_lat",
+   "baseline": "nowait_gmax_lat",
+   "n_projects": 3,
+   "mean_diff": 0.0164,
+   "ci95": [
+    0.0093,
+    0.0222
+   ],
+   "wins": 3,
+   "losses": 0,
+   "wilcoxon_p": null,
+   "paired_t_p": 0.049319690676050576,
+   "rank_biserial": 1.0,
+   "holm_p": 1.0,
+   "G5_pass": false
+  }
+ ],
  "n_variants_logged": 51
 }

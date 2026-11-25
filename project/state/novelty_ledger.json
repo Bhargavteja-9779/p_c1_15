@@ -1508,5 +1508,19 @@
       "status": "model-free evidence on 14 projects; needs a model-based confirmation (E3 diag)"
     }
   ],
-  "scores": []
+  "scores": [
+    {
+      "time": "2026-11-25T10:19:45+00:00",
+      "cycle": 1,
+      "self": {
+        "differentiation": 2,
+        "mechanism": 2,
+        "evidence": 3,
+        "breadth": 3,
+        "significance": 2
+      },
+      "total": 12,
+      "note": "After E1: tie with ODaSC; weight is Chapelle DFM; truncation estimator null; strongest finding is operating-point (threshold) effect. Blind reviewer score pending."
+    }
+  ]
 }
