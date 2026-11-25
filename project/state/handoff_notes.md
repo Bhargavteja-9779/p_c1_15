@@ -31,3 +31,8 @@
 - Code: `src/` (runner, jobs, models), `scripts/` (status, report, audit, supervisor), `tests/`
 - Results: `results/raw_results.jsonl` (canonical), `results/*.json`, `tables/`, `figures/`
 - Paper: `paper/` ; reviews: `review/`
+
+## Untouched confirmation data (needed after ApacheJIT was used by E8, 2026-11-25)
+- JIT-Defects4J (Ni et al., 2022; built on Herbold et al.'s LLTC4J): 21 Java projects, 2,332 buggy / 24,987 clean commits. Buggy commits come from manually labelled fix lines via git blame, so fix commits (and their dates) can in principle be recovered via git. NOT yet checked whether the released files contain the bug->fix link; that would need data engineering (clone repos for timestamps).
+- ApacheJIT projects excluded by plan_v7 for size (<2000 commits: spark, zeppelin, mapreduce, zookeeper): untouched but small, weak.
+- Defectors (Zenodo 10.5281/zenodo.7708984): file-level Python dataset, not commit-level JIT -> probably unsuitable (UNVERIFIED).
