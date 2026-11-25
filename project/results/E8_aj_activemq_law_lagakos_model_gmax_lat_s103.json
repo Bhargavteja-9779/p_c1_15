@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_activemq",
+    "method": "law",
+    "variant": "law_lagakos_model_gmax_lat",
+    "seed": 103,
+    "split": "apachejit",
+    "delay_est": "lagakos",
+    "prior": "model",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6151369454322195,
+    "r0": 0.47904719894133213,
+    "r1": 0.7898876404494382,
+    "rdiff": 0.310840441508106,
+    "auc": 0.6689140228882402,
+    "mcc": 0.2466682082766263,
+    "n_eval": 3157,
+    "seconds": 5.71,
+    "job_id": "E8_aj_activemq_law_lagakos_model_gmax_lat_s103",
+    "written": "2026-11-25T10:26:55+00:00",
+    "cycle": 2
+  }
+]

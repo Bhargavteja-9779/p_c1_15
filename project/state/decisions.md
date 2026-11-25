@@ -67,3 +67,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-25T10:26:41+00:00** — plan_v4: E7 latency-cost decomposition (H5) on 18 non-dev projects and E8 frozen replication (H6) on 8 fresh ApacheJIT projects
   - Reason: Dev D1 pointed to a mechanism; a fresh benchmark is the only honest confirmation after the Cabral test projects were used in E1
+
+- **2026-11-25T10:28:10+00:00** — E9 dev grid: inspection policies {rand, top, unc} x budgets {2%,5%} x base methods {nowait_gmax_lat, LAW, ODaSC_W30}; 162 dev runs; all counted as variants
+  - Reason: Targets the D1 mechanism; dev only; confirmation later on ApacheJIT

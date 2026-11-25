@@ -78,14 +78,18 @@ def fit_lgb(X, y, w, seed, class_mult=(1.0, 1.0)):
 
 def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="lagakos",
              prior="model", orb_params=None, eval_end_gap_days=365, delay_scale=1.0, return_preds=False,
-             label_noise_log=False, odasc_delta=0.9, odasc_k=50, odasc_pool=5000, thr_policy="fixed", thr_window=2000, oracle_H=180):
+             label_noise_log=False, odasc_delta=0.9, odasc_k=50, odasc_pool=5000, thr_policy="fixed", thr_window=2000, oracle_H=180,
+             insp_policy="none", insp_budget=0.0):
     """df: one project's commits sorted by time (columns FEATS, t, y, t_found).
     delay_scale>1 stretches discovery delays (robustness: slower bug discovery)."""
     t0 = time.time()
     df = df.reset_index(drop=True)
     X = np.log1p(np.clip(df[FEATS].to_numpy(float), 0, None))
     t = df["t"].to_numpy(float); y = df["y"].to_numpy(int)
-    tf = df["t_found"].to_numpy(float)
+    tf = df["t_found"].to_numpy(float).copy()
+    known_clean = np.zeros(len(df), bool)   # inspected and confirmed clean (inspection = true label at commit time)
+    rng_insp = np.random.default_rng(seed + 7919)
+    n_inspected = 0
     if delay_scale != 1.0:
         fin = np.isfinite(tf); tf = tf.copy(); tf[fin] = t[fin] + (tf[fin] - t[fin]) * delay_scale
     n = len(df)
@@ -97,6 +101,7 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
         T = t[start]; cmult = (1.0, 1.0)
         tr = np.where(t < T)[0]
         found = tf[tr] <= T
+        kc = known_clean[tr]
         age = (T - t[tr]) / DAY
         if method == "oracle":
             Xi, yi, wi = X[tr], y[tr], np.ones(len(tr))
@@ -109,12 +114,12 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
         elif method == "nowait":
             Xi, yi, wi = X[tr], found.astype(int), np.ones(len(tr))
         elif method in ("wait", "orb"):
-            keep = found | (age >= W)
+            keep = found | (age >= W) | kc
             Xi, yi, wi = X[tr][keep], found[keep].astype(int), np.ones(keep.sum())
             if method == "orb" and len(recent_preds) >= 10:
                 cmult = orb_factors(np.mean(recent_preds[-100:]), **(orb_params or {}))
         elif method == "odasc":
-            keep = found | (age >= W)
+            keep = found | (age >= W) | kc
             Xi, yi = X[tr][keep], found[keep].astype(int)
             cl = tr[keep & ~found]                       # labelled clean commits
             new = cl[np.isnan(alpha0[cl])]               # just crossed W: confidence computed now, once
@@ -142,7 +147,7 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
         elif method == "law":
             pos_idx = tr[found]
             d_obs = (tf[pos_idx] - t[pos_idx]) / DAY; tau = (T - t[pos_idx]) / DAY
-            unl = ~found
+            unl = ~found & ~kc
             S = survival_from_delays(d_obs, tau, age[unl], method=delay_est)
             if prior == "model" and model is not None:
                 p_raw = model.predict_proba(X[tr][unl])[:, 1]
@@ -152,9 +157,9 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
                 mature = age >= 365
                 p = np.full(unl.sum(), found[mature].mean() if mature.sum() > 50 else found.mean())
             q = p * S / np.clip(1 - p + p * S, 1e-9, None)
-            Xi = np.vstack([X[tr][found], X[tr][unl], X[tr][unl]])
-            yi = np.concatenate([np.ones(found.sum()), np.ones(unl.sum()), np.zeros(unl.sum())]).astype(int)
-            wi = np.concatenate([np.ones(found.sum()), q, 1 - q])
+            Xi = np.vstack([X[tr][found], X[tr][kc], X[tr][unl], X[tr][unl]])
+            yi = np.concatenate([np.ones(found.sum()), np.zeros(kc.sum()), np.ones(unl.sum()), np.zeros(unl.sum())]).astype(int)
+            wi = np.concatenate([np.ones(found.sum()), np.ones(kc.sum()), q, 1 - q])
             keepw = wi > 1e-4
             Xi, yi, wi = Xi[keepw], yi[keepw], wi[keepw]
             if label_noise_log:
@@ -177,10 +182,25 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
             pr = model.predict_proba(X[start:end])[:, 1]
             prob[start:end] = pr; pred[start:end] = (pr >= thr).astype(int)
             recent_preds.extend(pred[start:end].tolist())
+            if insp_policy != "none" and insp_budget > 0:
+                k = int(rng_insp.binomial(end - start, insp_budget)) if insp_budget * (end - start) < 1 else int(round(insp_budget * (end - start)))
+                if k > 0:
+                    if insp_policy == "rand":
+                        sel = rng_insp.choice(end - start, k, replace=False)
+                    elif insp_policy == "top":      # inspect the commits predicted most risky (HumLa-like)
+                        sel = np.argsort(-pr)[:k]
+                    elif insp_policy == "unc":      # inspect the commits closest to the decision threshold
+                        sel = np.argsort(np.abs(pr - thr))[:k]
+                    else:
+                        raise ValueError(insp_policy)
+                    idx = start + sel; n_inspected += len(idx)
+                    bug = y[idx] == 1
+                    tf[idx[bug]] = np.minimum(tf[idx[bug]], t[idx[bug]])   # defect revealed at commit time
+                    known_clean[idx[~bug]] = True
     # evaluation window
     ev = (pred >= 0) & (t <= t.max() - eval_end_gap_days * DAY)
     res = evaluate(y[ev], pred[ev], prob[ev])
-    res.update(n_eval=int(ev.sum()), seconds=round(time.time() - t0, 2))
+    res.update(n_eval=int(ev.sum()), seconds=round(time.time() - t0, 2), n_inspected=int(n_inspected))
     out = {"metrics": res}
     if return_preds: out.update(pred=pred, prob=prob, eval_mask=ev)
     if diag: out["diag"] = diag

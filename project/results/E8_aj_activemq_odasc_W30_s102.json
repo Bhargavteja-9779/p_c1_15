@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_activemq",
+    "method": "odasc",
+    "variant": "odasc_W30",
+    "seed": 102,
+    "split": "apachejit",
+    "W": 30,
+    "odasc_delta": 0.9,
+    "gmean": 0.6554078376040973,
+    "r0": 0.686369651521835,
+    "r1": 0.6258426966292134,
+    "rdiff": 0.06052695489262161,
+    "auc": 0.7091974247012583,
+    "mcc": 0.2865465825454943,
+    "n_eval": 3157,
+    "seconds": 3.92,
+    "job_id": "E8_aj_activemq_odasc_W30_s102",
+    "written": "2026-11-25T10:27:12+00:00",
+    "cycle": 2
+  }
+]

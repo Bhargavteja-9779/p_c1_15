@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_activemq",
+    "method": "wait",
+    "variant": "wait_W90",
+    "seed": 101,
+    "split": "apachejit",
+    "W": 90,
+    "gmean": 0.6346928464952223,
+    "r0": 0.8495809439788267,
+    "r1": 0.47415730337078654,
+    "rdiff": 0.3754236406080401,
+    "auc": 0.6925333187948236,
+    "mcc": 0.3402439664397512,
+    "n_eval": 3157,
+    "seconds": 3.44,
+    "job_id": "E8_aj_activemq_wait_W90_s101",
+    "written": "2026-11-25T10:27:36+00:00",
+    "cycle": 2
+  }
+]

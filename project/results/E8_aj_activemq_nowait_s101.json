@@ -1,0 +1,21 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_activemq",
+    "method": "nowait",
+    "variant": "nowait",
+    "seed": 101,
+    "split": "apachejit",
+    "gmean": 0.5929420877992645,
+    "r0": 0.8764887516541685,
+    "r1": 0.401123595505618,
+    "rdiff": 0.4753651561485505,
+    "auc": 0.6770512928534964,
+    "mcc": 0.31123580629152237,
+    "n_eval": 3157,
+    "seconds": 3.34,
+    "job_id": "E8_aj_activemq_nowait_s101",
+    "written": "2026-11-25T10:26:57+00:00",
+    "cycle": 2
+  }
+]

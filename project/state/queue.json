@@ -22162,12 +22162,16 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
-      "attempts": 1,
+      "status": "pending",
+      "attempts": 0,
       "cycle": 2,
       "priority": 30,
       "started": "2026-11-25T10:25:54+00:00",
-      "worker": 0
+      "worker": 0,
+      "resets": 1,
+      "log": [
+        "2026-11-25T10:26:43+00:00 reset running->pending on restart (attempt refunded)"
+      ]
     },
     {
       "id": "E2_matplotlib_law_naive_model_gmax_lat_s102",
@@ -22241,12 +22245,16 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
-      "attempts": 1,
+      "status": "pending",
+      "attempts": 0,
       "cycle": 2,
       "priority": 30,
       "started": "2026-11-25T10:26:13+00:00",
-      "worker": 1
+      "worker": 1,
+      "resets": 1,
+      "log": [
+        "2026-11-25T10:26:43+00:00 reset running->pending on restart (attempt refunded)"
+      ]
     },
     {
       "id": "E2_matplotlib_law_naive_model_gmax_lat_s103",
@@ -22320,12 +22328,16 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
-      "attempts": 1,
+      "status": "pending",
+      "attempts": 0,
       "cycle": 2,
       "priority": 30,
       "started": "2026-11-25T10:26:34+00:00",
-      "worker": 2
+      "worker": 2,
+      "resets": 1,
+      "log": [
+        "2026-11-25T10:26:43+00:00 reset running->pending on restart (attempt refunded)"
+      ]
     },
     {
       "id": "E2_matplotlib_law_naive_model_gmax_lat_s104",
@@ -28387,10 +28399,14 @@
         "project": "aj_activemq",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:26:43+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:26:50+00:00",
+      "seconds": 6.6
     },
     {
       "id": "E8_aj_activemq_nowait_s100",
@@ -28403,10 +28419,14 @@
         "project": "aj_activemq",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:26:50+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:26:53+00:00",
+      "seconds": 3.3
     },
     {
       "id": "E8_aj_activemq_wait_W90_s100",
@@ -28420,10 +28440,14 @@
         "project": "aj_activemq",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:32+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:27:35+00:00",
+      "seconds": 3.7
     },
     {
       "id": "E8_aj_activemq_orb_W90_s100",
@@ -28437,10 +28461,14 @@
         "project": "aj_activemq",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:20+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:27:24+00:00",
+      "seconds": 3.2
     },
     {
       "id": "E8_aj_activemq_odasc_W30_s100",
@@ -28455,10 +28483,14 @@
         "project": "aj_activemq",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:04+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:27:08+00:00",
+      "seconds": 4.1
     },
     {
       "id": "E8_aj_activemq_wait_W30_gmax_lat_s100",
@@ -28473,10 +28505,14 @@
         "project": "aj_activemq",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:25+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:27:29+00:00",
+      "seconds": 3.5
     },
     {
       "id": "E8_aj_activemq_odasc_W15_gmax_lat_s100",
@@ -28492,10 +28528,14 @@
         "project": "aj_activemq",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:26:59+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:27:04+00:00",
+      "seconds": 5.1
     },
     {
       "id": "E8_aj_activemq_oracle_s100",
@@ -28508,10 +28548,14 @@
         "project": "aj_activemq",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:12+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:27:17+00:00",
+      "seconds": 4.8
     },
     {
       "id": "E8_aj_activemq_law_lagakos_model_gmax_lat_s101",
@@ -28527,10 +28571,14 @@
         "project": "aj_activemq",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:26:43+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:26:50+00:00",
+      "seconds": 6.4
     },
     {
       "id": "E8_aj_activemq_nowait_s101",
@@ -28543,10 +28591,14 @@
         "project": "aj_activemq",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:26:53+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:26:57+00:00",
+      "seconds": 3.4
     },
     {
       "id": "E8_aj_activemq_wait_W90_s101",
@@ -28560,10 +28612,14 @@
         "project": "aj_activemq",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:32+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:27:36+00:00",
+      "seconds": 3.4
     },
     {
       "id": "E8_aj_activemq_orb_W90_s101",
@@ -28577,10 +28633,14 @@
         "project": "aj_activemq",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:22+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:27:25+00:00",
+      "seconds": 3.2
     },
     {
       "id": "E8_aj_activemq_odasc_W30_s101",
@@ -28595,10 +28655,14 @@
         "project": "aj_activemq",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:08+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:27:12+00:00",
+      "seconds": 3.9
     },
     {
       "id": "E8_aj_activemq_wait_W30_gmax_lat_s101",
@@ -28613,10 +28677,14 @@
         "project": "aj_activemq",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:27+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:27:30+00:00",
+      "seconds": 3.4
     },
     {
       "id": "E8_aj_activemq_odasc_W15_gmax_lat_s101",
@@ -28632,10 +28700,14 @@
         "project": "aj_activemq",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:26:59+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:27:04+00:00",
+      "seconds": 4.1
     },
     {
       "id": "E8_aj_activemq_oracle_s101",
@@ -28648,10 +28720,14 @@
         "project": "aj_activemq",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:12+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:27:17+00:00",
+      "seconds": 4.6
     },
     {
       "id": "E8_aj_activemq_law_lagakos_model_gmax_lat_s102",
@@ -28667,10 +28743,14 @@
         "project": "aj_activemq",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:26:43+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:26:50+00:00",
+      "seconds": 6.6
     },
     {
       "id": "E8_aj_activemq_nowait_s102",
@@ -28683,10 +28763,14 @@
         "project": "aj_activemq",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:26:55+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:26:59+00:00",
+      "seconds": 3.4
     },
     {
       "id": "E8_aj_activemq_wait_W90_s102",
@@ -28700,10 +28784,14 @@
         "project": "aj_activemq",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:34+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:27:37+00:00",
+      "seconds": 3.3
     },
     {
       "id": "E8_aj_activemq_orb_W90_s102",
@@ -28717,10 +28805,14 @@
         "project": "aj_activemq",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:22+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:27:25+00:00",
+      "seconds": 3.3
     },
     {
       "id": "E8_aj_activemq_odasc_W30_s102",
@@ -28735,10 +28827,14 @@
         "project": "aj_activemq",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:08+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:27:12+00:00",
+      "seconds": 3.9
     },
     {
       "id": "E8_aj_activemq_wait_W30_gmax_lat_s102",
@@ -28753,10 +28849,14 @@
         "project": "aj_activemq",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:28+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:27:32+00:00",
+      "seconds": 3.5
     },
     {
       "id": "E8_aj_activemq_odasc_W15_gmax_lat_s102",
@@ -28772,10 +28872,14 @@
         "project": "aj_activemq",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:00+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:27:04+00:00",
+      "seconds": 4.0
     },
     {
       "id": "E8_aj_activemq_oracle_s102",
@@ -28788,10 +28892,14 @@
         "project": "aj_activemq",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:16+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:27:20+00:00",
+      "seconds": 4.9
     },
     {
       "id": "E8_aj_activemq_law_lagakos_model_gmax_lat_s103",
@@ -28807,10 +28915,14 @@
         "project": "aj_activemq",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:26:50+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:26:55+00:00",
+      "seconds": 5.7
     },
     {
       "id": "E8_aj_activemq_nowait_s103",
@@ -28823,10 +28935,14 @@
         "project": "aj_activemq",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:26:55+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:26:59+00:00",
+      "seconds": 3.5
     },
     {
       "id": "E8_aj_activemq_wait_W90_s103",
@@ -28840,10 +28956,14 @@
         "project": "aj_activemq",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:35+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:27:39+00:00",
+      "seconds": 3.6
     },
     {
       "id": "E8_aj_activemq_orb_W90_s103",
@@ -28857,10 +28977,14 @@
         "project": "aj_activemq",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:24+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:27:27+00:00",
+      "seconds": 3.3
     },
     {
       "id": "E8_aj_activemq_odasc_W30_s103",
@@ -28875,10 +28999,14 @@
         "project": "aj_activemq",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:08+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:27:12+00:00",
+      "seconds": 4.1
     },
     {
       "id": "E8_aj_activemq_wait_W30_gmax_lat_s103",
@@ -28893,10 +29021,14 @@
         "project": "aj_activemq",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:29+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:27:32+00:00",
+      "seconds": 3.6
     },
     {
       "id": "E8_aj_activemq_odasc_W15_gmax_lat_s103",
@@ -28912,10 +29044,14 @@
         "project": "aj_activemq",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:04+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:27:08+00:00",
+      "seconds": 4.1
     },
     {
       "id": "E8_aj_activemq_oracle_s103",
@@ -28928,10 +29064,14 @@
         "project": "aj_activemq",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:17+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:27:22+00:00",
+      "seconds": 4.9
     },
     {
       "id": "E8_aj_activemq_law_lagakos_model_gmax_lat_s104",
@@ -28947,10 +29087,14 @@
         "project": "aj_activemq",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:26:50+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:26:55+00:00",
+      "seconds": 5.7
     },
     {
       "id": "E8_aj_activemq_nowait_s104",
@@ -28963,10 +29107,14 @@
         "project": "aj_activemq",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:26:57+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:27:00+00:00",
+      "seconds": 3.4
     },
     {
       "id": "E8_aj_activemq_wait_W90_s104",
@@ -28980,10 +29128,14 @@
         "project": "aj_activemq",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:36+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:27:39+00:00",
+      "seconds": 3.4
     },
     {
       "id": "E8_aj_activemq_orb_W90_s104",
@@ -28997,10 +29149,14 @@
         "project": "aj_activemq",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:25+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:27:28+00:00",
+      "seconds": 3.2
     },
     {
       "id": "E8_aj_activemq_odasc_W30_s104",
@@ -29015,10 +29171,14 @@
         "project": "aj_activemq",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:12+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:27:16+00:00",
+      "seconds": 3.9
     },
     {
       "id": "E8_aj_activemq_wait_W30_gmax_lat_s104",
@@ -29033,10 +29193,14 @@
         "project": "aj_activemq",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:30+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:27:34+00:00",
+      "seconds": 3.6
     },
     {
       "id": "E8_aj_activemq_odasc_W15_gmax_lat_s104",
@@ -29052,10 +29216,14 @@
         "project": "aj_activemq",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:04+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:27:08+00:00",
+      "seconds": 4.0
     },
     {
       "id": "E8_aj_activemq_oracle_s104",
@@ -29068,10 +29236,14 @@
         "project": "aj_activemq",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:17+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:27:22+00:00",
+      "seconds": 4.9
     },
     {
       "id": "E8_aj_cassandra_law_lagakos_model_gmax_lat_s100",
@@ -29087,10 +29259,14 @@
         "project": "aj_cassandra",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:37+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:27:50+00:00",
+      "seconds": 12.9
     },
     {
       "id": "E8_aj_cassandra_nowait_s100",
@@ -29103,10 +29279,14 @@
         "project": "aj_cassandra",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:53+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:28:00+00:00",
+      "seconds": 7.7
     },
     {
       "id": "E8_aj_cassandra_wait_W90_s100",
@@ -29227,10 +29407,14 @@
         "project": "aj_cassandra",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:39+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:27:52+00:00",
+      "seconds": 13.0
     },
     {
       "id": "E8_aj_cassandra_nowait_s101",
@@ -29243,10 +29427,14 @@
         "project": "aj_cassandra",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:28:00+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:28:08+00:00",
+      "seconds": 7.4
     },
     {
       "id": "E8_aj_cassandra_wait_W90_s101",
@@ -29367,10 +29555,14 @@
         "project": "aj_cassandra",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:39+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T10:27:53+00:00",
+      "seconds": 13.5
     },
     {
       "id": "E8_aj_cassandra_nowait_s102",
@@ -29386,7 +29578,13 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:28:03+00:00",
+      "worker": 1,
+      "resets": 1,
+      "log": [
+        "2026-11-25T10:28:12+00:00 reset running->pending on restart (attempt refunded)"
+      ]
     },
     {
       "id": "E8_aj_cassandra_wait_W90_s102",
@@ -29507,10 +29705,14 @@
         "project": "aj_cassandra",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:50+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T10:28:03+00:00",
+      "seconds": 12.8
     },
     {
       "id": "E8_aj_cassandra_nowait_s103",
@@ -29526,7 +29728,13 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:28:05+00:00",
+      "worker": 0,
+      "resets": 1,
+      "log": [
+        "2026-11-25T10:28:12+00:00 reset running->pending on restart (attempt refunded)"
+      ]
     },
     {
       "id": "E8_aj_cassandra_wait_W90_s103",
@@ -29647,10 +29855,14 @@
         "project": "aj_cassandra",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:27:52+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T10:28:05+00:00",
+      "seconds": 12.9
     },
     {
       "id": "E8_aj_cassandra_nowait_s104",
@@ -29666,7 +29878,13 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-25T10:28:08+00:00",
+      "worker": 2,
+      "resets": 1,
+      "log": [
+        "2026-11-25T10:28:12+00:00 reset running->pending on restart (attempt refunded)"
+      ]
     },
     {
       "id": "E8_aj_cassandra_wait_W90_s104",
@@ -37372,6 +37590,3248 @@
       "attempts": 0,
       "cycle": 2,
       "priority": 7
+    },
+    {
+      "id": "E9_fabric_nowait_gmax_lat__insp_rand_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 0,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_nowait_gmax_lat__insp_rand_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 0,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_nowait_gmax_lat__insp_top_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 0,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_nowait_gmax_lat__insp_top_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 0,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_nowait_gmax_lat__insp_unc_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 0,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_nowait_gmax_lat__insp_unc_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 0,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_rand_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 0,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "running",
+      "attempts": 1,
+      "cycle": 2,
+      "priority": 4,
+      "started": "2026-11-25T10:28:12+00:00",
+      "worker": 0
+    },
+    {
+      "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_rand_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 0,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_top_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 0,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_top_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 0,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_unc_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 0,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_unc_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 0,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_odasc_W30__insp_rand_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 0,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_odasc_W30__insp_rand_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 0,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_odasc_W30__insp_top_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 0,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_odasc_W30__insp_top_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 0,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_odasc_W30__insp_unc_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 0,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_odasc_W30__insp_unc_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 0,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_nowait_gmax_lat__insp_rand_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 1,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_nowait_gmax_lat__insp_rand_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 1,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_nowait_gmax_lat__insp_top_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 1,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_nowait_gmax_lat__insp_top_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 1,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_nowait_gmax_lat__insp_unc_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 1,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_nowait_gmax_lat__insp_unc_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 1,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_rand_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 1,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_rand_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 1,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_top_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 1,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_top_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 1,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_unc_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 1,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_unc_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 1,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_odasc_W30__insp_rand_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 1,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_odasc_W30__insp_rand_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 1,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_odasc_W30__insp_top_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 1,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_odasc_W30__insp_top_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 1,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_odasc_W30__insp_unc_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 1,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_odasc_W30__insp_unc_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 1,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_nowait_gmax_lat__insp_rand_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 2,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_nowait_gmax_lat__insp_rand_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 2,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_nowait_gmax_lat__insp_top_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 2,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_nowait_gmax_lat__insp_top_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 2,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_nowait_gmax_lat__insp_unc_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 2,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_nowait_gmax_lat__insp_unc_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 2,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_rand_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 2,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_rand_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 2,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_top_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 2,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_top_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 2,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_unc_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 2,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_law_lagakos_model_gmax_lat__insp_unc_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 2,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_odasc_W30__insp_rand_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 2,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_odasc_W30__insp_rand_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 2,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_odasc_W30__insp_top_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 2,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_odasc_W30__insp_top_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 2,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_odasc_W30__insp_unc_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 2,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_fabric_odasc_W30__insp_unc_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "fabric",
+        "seed": 2,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_nowait_gmax_lat__insp_rand_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 0,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_nowait_gmax_lat__insp_rand_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 0,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_nowait_gmax_lat__insp_top_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 0,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_nowait_gmax_lat__insp_top_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 0,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_nowait_gmax_lat__insp_unc_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 0,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_nowait_gmax_lat__insp_unc_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 0,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_law_lagakos_model_gmax_lat__insp_rand_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 0,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_law_lagakos_model_gmax_lat__insp_rand_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 0,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_law_lagakos_model_gmax_lat__insp_top_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 0,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_law_lagakos_model_gmax_lat__insp_top_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 0,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_law_lagakos_model_gmax_lat__insp_unc_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 0,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_law_lagakos_model_gmax_lat__insp_unc_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 0,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_odasc_W30__insp_rand_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 0,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_odasc_W30__insp_rand_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 0,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_odasc_W30__insp_top_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 0,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_odasc_W30__insp_top_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 0,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_odasc_W30__insp_unc_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 0,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_odasc_W30__insp_unc_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 0,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_nowait_gmax_lat__insp_rand_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 1,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_nowait_gmax_lat__insp_rand_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 1,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_nowait_gmax_lat__insp_top_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 1,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_nowait_gmax_lat__insp_top_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 1,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_nowait_gmax_lat__insp_unc_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 1,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_nowait_gmax_lat__insp_unc_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 1,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_law_lagakos_model_gmax_lat__insp_rand_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 1,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_law_lagakos_model_gmax_lat__insp_rand_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 1,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_law_lagakos_model_gmax_lat__insp_top_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 1,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_law_lagakos_model_gmax_lat__insp_top_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 1,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_law_lagakos_model_gmax_lat__insp_unc_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 1,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_law_lagakos_model_gmax_lat__insp_unc_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 1,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_odasc_W30__insp_rand_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 1,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_odasc_W30__insp_rand_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 1,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_odasc_W30__insp_top_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 1,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_odasc_W30__insp_top_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 1,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_odasc_W30__insp_unc_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 1,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_odasc_W30__insp_unc_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 1,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_nowait_gmax_lat__insp_rand_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 2,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_nowait_gmax_lat__insp_rand_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 2,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_nowait_gmax_lat__insp_top_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 2,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_nowait_gmax_lat__insp_top_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 2,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_nowait_gmax_lat__insp_unc_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 2,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_nowait_gmax_lat__insp_unc_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 2,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_law_lagakos_model_gmax_lat__insp_rand_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 2,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_law_lagakos_model_gmax_lat__insp_rand_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 2,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_law_lagakos_model_gmax_lat__insp_top_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 2,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_law_lagakos_model_gmax_lat__insp_top_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 2,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_law_lagakos_model_gmax_lat__insp_unc_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 2,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_law_lagakos_model_gmax_lat__insp_unc_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 2,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_odasc_W30__insp_rand_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 2,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_odasc_W30__insp_rand_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 2,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_odasc_W30__insp_top_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 2,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_odasc_W30__insp_top_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 2,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_odasc_W30__insp_unc_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 2,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_neutron_odasc_W30__insp_unc_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "neutron",
+        "seed": 2,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_nowait_gmax_lat__insp_rand_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 0,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_nowait_gmax_lat__insp_rand_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 0,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_nowait_gmax_lat__insp_top_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 0,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_nowait_gmax_lat__insp_top_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 0,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_nowait_gmax_lat__insp_unc_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 0,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_nowait_gmax_lat__insp_unc_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 0,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_law_lagakos_model_gmax_lat__insp_rand_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 0,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_law_lagakos_model_gmax_lat__insp_rand_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 0,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_law_lagakos_model_gmax_lat__insp_top_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 0,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_law_lagakos_model_gmax_lat__insp_top_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 0,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_law_lagakos_model_gmax_lat__insp_unc_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 0,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_law_lagakos_model_gmax_lat__insp_unc_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 0,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_odasc_W30__insp_rand_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 0,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_odasc_W30__insp_rand_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 0,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_odasc_W30__insp_top_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 0,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_odasc_W30__insp_top_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 0,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_odasc_W30__insp_unc_2_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 0,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_odasc_W30__insp_unc_5_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 0,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_nowait_gmax_lat__insp_rand_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 1,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_nowait_gmax_lat__insp_rand_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 1,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_nowait_gmax_lat__insp_top_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 1,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_nowait_gmax_lat__insp_top_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 1,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_nowait_gmax_lat__insp_unc_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 1,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_nowait_gmax_lat__insp_unc_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 1,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_law_lagakos_model_gmax_lat__insp_rand_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 1,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_law_lagakos_model_gmax_lat__insp_rand_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 1,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_law_lagakos_model_gmax_lat__insp_top_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 1,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_law_lagakos_model_gmax_lat__insp_top_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 1,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_law_lagakos_model_gmax_lat__insp_unc_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 1,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_law_lagakos_model_gmax_lat__insp_unc_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 1,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_odasc_W30__insp_rand_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 1,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_odasc_W30__insp_rand_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 1,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_odasc_W30__insp_top_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 1,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_odasc_W30__insp_top_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 1,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_odasc_W30__insp_unc_2_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 1,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_odasc_W30__insp_unc_5_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 1,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_nowait_gmax_lat__insp_rand_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 2,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_nowait_gmax_lat__insp_rand_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 2,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_nowait_gmax_lat__insp_top_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 2,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_nowait_gmax_lat__insp_top_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 2,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_nowait_gmax_lat__insp_unc_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 2,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_nowait_gmax_lat__insp_unc_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "thr_policy": "gmax_lat",
+        "variant": "nowait_gmax_lat__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 2,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_law_lagakos_model_gmax_lat__insp_rand_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 2,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_law_lagakos_model_gmax_lat__insp_rand_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 2,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_law_lagakos_model_gmax_lat__insp_top_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 2,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_law_lagakos_model_gmax_lat__insp_top_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 2,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_law_lagakos_model_gmax_lat__insp_unc_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 2,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_law_lagakos_model_gmax_lat__insp_unc_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 2,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_odasc_W30__insp_rand_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_rand_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 2,
+        "insp_policy": "rand",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_odasc_W30__insp_rand_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_rand_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 2,
+        "insp_policy": "rand",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_odasc_W30__insp_top_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_top_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 2,
+        "insp_policy": "top",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_odasc_W30__insp_top_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_top_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 2,
+        "insp_policy": "top",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_odasc_W30__insp_unc_2_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_unc_2",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 2,
+        "insp_policy": "unc",
+        "insp_budget": 0.02
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
+    },
+    {
+      "id": "E9_sentry_odasc_W30__insp_unc_5_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "odasc_delta": 0.9,
+        "variant": "odasc_W30__insp_unc_5",
+        "experiment": "E9",
+        "split": "dev",
+        "project": "sentry",
+        "seed": 2,
+        "insp_policy": "unc",
+        "insp_budget": 0.05
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 2,
+      "priority": 4
     }
   ]
 }

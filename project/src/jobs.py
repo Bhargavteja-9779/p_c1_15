@@ -17,7 +17,7 @@ def jit_run(params, ctx):
     df = load_project(params["project"])
     if params.get("quick"):
         df = df.iloc[:3000]
-    kw = {k: params[k] for k in ["W", "delay_est", "prior", "delay_scale", "label_noise_log", "odasc_delta", "thr_policy", "oracle_H"] if k in params}
+    kw = {k: params[k] for k in ["W", "delay_est", "prior", "delay_scale", "label_noise_log", "odasc_delta", "thr_policy", "oracle_H", "insp_policy", "insp_budget"] if k in params}
     ctx.heartbeat(f"{params['project']} {params['method']}")
     out = simulate(df, params["method"], seed=params["seed"],
                    eval_end_gap_days=0 if params.get("quick") else 365, **kw)
