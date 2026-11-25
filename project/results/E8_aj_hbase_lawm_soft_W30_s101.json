@@ -1,0 +1,30 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_hbase",
+    "method": "lawm",
+    "variant": "lawm_soft_W30",
+    "seed": 101,
+    "split": "fresh",
+    "W": 30,
+    "delay_est": "lagakos",
+    "mode": "soft",
+    "gmean": 0.7567500958641488,
+    "r0": 0.7351351351351352,
+    "r1": 0.7790005948839976,
+    "rdiff": 0.04386545974886247,
+    "auc": 0.8303317218718452,
+    "mcc": 0.514278926404364,
+    "acc": 0.7565799040279192,
+    "precision": 0.7377464788732394,
+    "f1": 0.7578125,
+    "recall20e": 0.6977989292088043,
+    "popt": 0.9210938002375259,
+    "ifa": 1,
+    "n_eval": 6877,
+    "seconds": 39.36,
+    "job_id": "E8_aj_hbase_lawm_soft_W30_s101",
+    "written": "2026-11-25T21:21:51+00:00",
+    "cycle": 3
+  }
+]
