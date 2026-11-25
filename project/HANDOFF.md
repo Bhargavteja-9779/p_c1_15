@@ -1,5 +1,5 @@
 # HANDOFF — read this first
-*Auto-generated 2026-11-25T13:07:13+00:00 by scripts/write_handoff.py*
+*Auto-generated 2026-11-25T13:15:31+00:00 by scripts/write_handoff.py*
 
 ## READ ALSO: USER_DIRECTIVES.md (owner standing orders)
 
@@ -14,7 +14,7 @@
 - **Hypothesis:** LAW beats the best tuned waiting-time baseline by >=0.02 G-mean on 10 held-out projects (Holm p<0.05)
 
 ## Running right now
-- Queue (full): {'done': 1070, 'running': 3, 'pending': 192, 'skipped_plan': 117}; running jobs: ['E3_camel_wait_W90_ds2_s100', 'E3_camel_orb_W90_ds2_s103', 'E3_camel_orb_W90_ds2_s104']
+- Queue (full): {'done': 1082, 'pending': 180, 'skipped_plan': 117, 'running': 3}; running jobs: ['E0e_fabric_dual_W90_k50_s0', 'E0e_fabric_dual_W90_k50_s1', 'E0e_fabric_dual_W90_k50_s2']
 - Processes: `233 tmux new-session -d -s research_w0 python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
 234 bash -c python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
 236 python3 run_all.py --mode full --resume --worker 0
@@ -22,10 +22,10 @@
 243 python3 run_all.py --mode full --resume --worker 1
 246 bash -c python3 run_all.py --mode full --resume --worker 2 >> logs/runner_w2.log 2>&1
 248 python3 run_all.py --mode full --resume --worker 2`
-- Heartbeat age: 28s
+- Heartbeat age: 17s
 
 ## Compute
-- Cycle 2: 9.28 h / 15 h   Global: 19.50 h / 120 h (CPU-hours; machine has no GPU)
+- Cycle 2: 9.60 h / 15 h   Global: 19.82 h / 120 h (CPU-hours; machine has no GPU)
 
 ## Gate status (Section 7)
 | Gate | Status | Evidence |
@@ -43,7 +43,6 @@
 | G11 | unknown |  |
 
 ## Last 10 decisions
-- 2026-11-24T13:19:55+00:00: Frozen config: wait W*=90, orb W*=90, best dev baseline=orb_W90
 - 2026-11-24T13:20:12+00:00: plan_v3 written and E1, E3b, E3, E2 enqueued on test projects (first test touch)
 - 2026-11-24T15:00:34+00:00: Cycle 1 outcome: H1 (LAW) and candidate awt not supported on test; H3 supported. Gates G5/G6 fail for a method claim -> Section 6.4 ladder, cycle 2 targets a feature-based dormant-bug denoiser without self-confirmation (plan_v4, dev first)
 - 2026-11-24T15:04:02+00:00: Cycle 2 started (plan_v4: lawm = mature cross-fitted dormant-bug posterior on the wait set); remaining cycle-1 E3/E2 jobs are charged to cycle 2 budget
@@ -53,6 +52,7 @@
 - 2026-11-24T19:11:12+00:00: plan_v5 freeze: lawm=lawm_soft_W30 (0.7551), odasc=odasc_W30_t0.8 (0.7598); lawm beats odasc on dev: False
 - 2026-11-25T13:07:06+00:00: plan_v6: dual-evidence denoiser (noisy-OR of mature-scorer posterior and kNN label composition) on dev; MSTDP-protocol experiment E7 pre-registered
 - 2026-11-25T13:07:06+00:00: GitHub push currently fails (403, authentication must be reconnected by owner); commits accumulate locally and autocommit retries
+- 2026-11-25T13:15:25+00:00: Parallel branches found (dreamy-fermat cycle 2, zealous-lamport, keen-edison, magical-bardeen) forked from b18fc8e; continue on zen-cray (most recent, owner directives); Cabral test projects declared 'used'; fresh confirmation on ApacheJIT (plan_v7)
 
 ## Last failures (journal entries)
 - journal/ENTRIES/20261124T040516_FAILURE_the_pre_specified_law_method_loses_to_a_tuned_wait.md

@@ -1,0 +1,20 @@
+# plan_v7 — cycle 2, written 2026-11-25 BEFORE any run on ApacheJIT. plan_v1-v6 unchanged.
+# Reason: the 10 Cabral test projects have been used by several parallel branches of this project
+# (dreamy-fermat, zealous-lamport, keen-edison, magical-bardeen; see decisions.md) with dozens of variants.
+# They can no longer serve as an untouched confirmation set. ApacheJIT (MSR 2022) provides SZZ links with
+# fix dates -> discovery times; nobody in this project has run anything on it from this branch.
+version: 7
+cycle: 2
+supersedes: plan_v6
+fresh_benchmark:
+  source: "ApacheJIT, Zenodo 5907847 (CC-BY-4.0), sha256 533e7c6f..."
+  projects: [ignite, flink, hbase, cassandra, groovy, hive, activemq, hadoop-hdfs, kafka]
+  excluded: "camel (same project as Cabral test 'camel'), hadoop (0 buggy), spark/zeppelin/mapreduce/zookeeper (<2000 commits)"
+  features: "13 Kamei metrics mapped (lt absent -> 0)"
+  caveat: "ApacheJIT filtered/sampled commits; buggy rates 20-76% are higher than in full histories (threat to validity)"
+protocol: "identical to plan_v1 prequential protocol (retrain every 100 commits, warmup 500, final labels, evaluation window excludes last 365 days); SEEDS_CONFIRM; NO re-tuning on ApacheJIT"
+confirmation:
+  candidates: "frozen after E0e on Cabral DEV only (state/frozen_config_v6.json): best dual config, lawm_soft_W30, odasc_W30_t0.8"
+  baselines: "nowait, wait_W90, orb_W90 (frozen cycle 1), oracle"
+  primary_H6: "the best dev candidate beats wait_W90, orb_W90 and odasc_W30_t0.8 on ApacheJIT: Holm over 3 Wilcoxon tests (9 projects) p<0.05, CI excludes 0, mean gain >= 0.02 vs waiting baselines; vs odasc: report as is (no margin)"
+  secondary: "H3-style decomposition (decomp_L1_W30 vs wait_W30/wait_W90/oracle) replicated on ApacheJIT"

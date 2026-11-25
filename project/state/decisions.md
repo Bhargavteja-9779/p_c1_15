@@ -76,3 +76,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-25T13:07:06+00:00** — GitHub push currently fails (403, authentication must be reconnected by owner); commits accumulate locally and autocommit retries
   - Reason: git push error 2026-11-25
+
+- **2026-11-25T13:15:25+00:00** — Parallel branches found (dreamy-fermat cycle 2, zealous-lamport, keen-edison, magical-bardeen) forked from b18fc8e; continue on zen-cray (most recent, owner directives); Cabral test projects declared 'used'; fresh confirmation on ApacheJIT (plan_v7)
+  - Reason: git branch -a 2026-11-25; dreamy-fermat RESULTS_SUMMARY shows the same test projects used with many variants

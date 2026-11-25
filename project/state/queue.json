@@ -29057,12 +29057,14 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 12,
       "started": "2026-11-25T13:10:27+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T13:12:46+00:00",
+      "seconds": 139.6
     },
     {
       "id": "E0e_fabric_dual_W90_k20_s0",
@@ -29079,10 +29081,14 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T13:12:46+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T13:14:47+00:00",
+      "seconds": 120.9
     },
     {
       "id": "E0e_fabric_dual_W90_k50_s0",
@@ -29099,10 +29105,12 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T13:14:47+00:00",
+      "worker": 1
     },
     {
       "id": "E0e_fabric_dual_W30_k20_s1",
@@ -29143,12 +29151,14 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 12,
       "started": "2026-11-25T13:10:33+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T13:12:54+00:00",
+      "seconds": 140.5
     },
     {
       "id": "E0e_fabric_dual_W90_k20_s1",
@@ -29165,10 +29175,14 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T13:12:54+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T13:14:55+00:00",
+      "seconds": 121.6
     },
     {
       "id": "E0e_fabric_dual_W90_k50_s1",
@@ -29185,10 +29199,12 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T13:14:55+00:00",
+      "worker": 0
     },
     {
       "id": "E0e_fabric_dual_W30_k20_s2",
@@ -29229,12 +29245,14 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 12,
       "started": "2026-11-25T13:10:34+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T13:12:55+00:00",
+      "seconds": 140.1
     },
     {
       "id": "E0e_fabric_dual_W90_k20_s2",
@@ -29251,10 +29269,14 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T13:12:55+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T13:14:58+00:00",
+      "seconds": 123.1
     },
     {
       "id": "E0e_fabric_dual_W90_k50_s2",
@@ -29271,10 +29293,12 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T13:14:58+00:00",
+      "worker": 2
     },
     {
       "id": "E0e_neutron_dual_W30_k20_s0",

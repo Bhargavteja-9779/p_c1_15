@@ -1,0 +1,5 @@
+# OBSERVATION: Other sessions worked on the same project in parallel, and the held-out projects are no longer untouched
+
+*Written 2026-11-25T13:15:25+00:00*
+
+Four other branches (claude/dreamy-fermat-7983nm, zealous-lamport-bjc4um, keen-edison-jo222n, magical-bardeen-9yglkz) continued from the same handoff commit b18fc8e. dreamy-fermat reached cycle 2: on the same 10 Cabral test projects it reports odasc_W30 0.695 and a threshold-corrected LAW 0.696 vs oracle 0.715 and wait_W90 0.654 (identical to my wait_W90/oracle numbers, so the code paths agree). It also reports a dev diagnostic that, measured by AUC from a no-wait start, the newest labels carry most of the ranking cost - which looks opposite to my H3 (G-mean, from a wait start: old dormant bugs carry the cost). These are different questions, and the paper must reconcile them, not pick one. Consequence for integrity: across branches the Cabral test projects have seen dozens of variants, so they are no longer an untouched confirmation set. I will confirm the final method on ApacheJIT (9 fresh projects), pre-registered in plan_v7.

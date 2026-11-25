@@ -15,3 +15,19 @@ with zipfile.ZipFile(io.BytesIO(raw)) as z:
         if n.endswith("License.txt"):
             open(os.path.join(dst, "License.txt"), "wb").write(z.read(n))
 print("extracted to", dst)
+
+# ---- ApacheJIT (fresh confirmation benchmark, plan_v7): Zenodo 5907847, CC-BY-4.0
+def get_apachejit():
+    import urllib.request, zipfile, hashlib, os
+    d = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "apachejit_raw"); os.makedirs(d, exist_ok=True)
+    z = os.path.join(d, "apachejit.zip")
+    if not os.path.exists(z):
+        urllib.request.urlretrieve("https://zenodo.org/api/records/5907847/files/apachejit_dataset_replication.zip/content", z)
+    h = hashlib.sha256(open(z, "rb").read()).hexdigest()
+    assert h == "533e7c6fc4f7cb6f34b35539a972d00baa63a125e88ddb5743283dd277edcd5c", h
+    with zipfile.ZipFile(z) as f:
+        f.extractall(d, [m for m in f.namelist() if m.startswith(("apachejit/data/", "apachejit/dataset/"))])
+    print("apachejit sha256", h, "extracted to", d)
+
+if __name__ == "__main__":
+    get_apachejit()
