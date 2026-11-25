@@ -9537,10 +9537,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:22:35+00:00",
+      "worker": 1
     },
     {
       "id": "E0_sentry_odasc_W15_gmax_lat_s0",
@@ -9556,12 +9558,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
       "started": "2026-11-25T01:17:39+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T01:18:39+00:00",
+      "seconds": 59.6
     },
     {
       "id": "E0_sentry_wait_W30_gmax_lat_s0",
@@ -9613,10 +9617,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:19:38+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T01:20:37+00:00",
+      "seconds": 59.5
     },
     {
       "id": "E0_sentry_wait_W60_gmax_lat_s0",
@@ -9668,10 +9676,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:20:37+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T01:21:36+00:00",
+      "seconds": 58.8
     },
     {
       "id": "E0_sentry_wait_W90_gmax_lat_s0",
@@ -9723,10 +9735,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:21:36+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T01:22:35+00:00",
+      "seconds": 58.9
     },
     {
       "id": "E0_sentry_wait_W180_gmax_lat_s0",
@@ -9778,10 +9794,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:18:39+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T01:19:38+00:00",
+      "seconds": 59.1
     },
     {
       "id": "E0_sentry_nowait_ratematch_s1",
@@ -9948,10 +9968,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:22:36+00:00",
+      "worker": 2
     },
     {
       "id": "E0_sentry_odasc_W15_gmax_lat_s1",
@@ -9967,12 +9989,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
       "started": "2026-11-25T01:17:42+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T01:18:42+00:00",
+      "seconds": 59.7
     },
     {
       "id": "E0_sentry_wait_W30_gmax_lat_s1",
@@ -10024,10 +10048,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:19:39+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T01:20:38+00:00",
+      "seconds": 59.3
     },
     {
       "id": "E0_sentry_wait_W60_gmax_lat_s1",
@@ -10079,10 +10107,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:20:38+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T01:21:38+00:00",
+      "seconds": 59.5
     },
     {
       "id": "E0_sentry_wait_W90_gmax_lat_s1",
@@ -10134,10 +10166,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:21:38+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T01:22:36+00:00",
+      "seconds": 58.6
     },
     {
       "id": "E0_sentry_wait_W180_gmax_lat_s1",
@@ -10189,10 +10225,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:18:42+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T01:19:39+00:00",
+      "seconds": 57.1
     },
     {
       "id": "E0_sentry_nowait_ratematch_s2",
@@ -10206,12 +10246,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
       "started": "2026-11-25T01:17:10+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T01:17:58+00:00",
+      "seconds": 47.7
     },
     {
       "id": "E0_sentry_law_lagakos_base_ratematch_s2",
@@ -10376,10 +10418,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:17:58+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T01:18:58+00:00",
+      "seconds": 60.7
     },
     {
       "id": "E0_sentry_wait_W30_gmax_lat_s2",
@@ -10431,10 +10477,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:19:57+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T01:20:57+00:00",
+      "seconds": 59.7
     },
     {
       "id": "E0_sentry_wait_W60_gmax_lat_s2",
@@ -10486,10 +10536,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:20:57+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T01:21:58+00:00",
+      "seconds": 60.6
     },
     {
       "id": "E0_sentry_wait_W90_gmax_lat_s2",
@@ -10541,10 +10595,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:21:58+00:00",
+      "worker": 0
     },
     {
       "id": "E0_sentry_wait_W180_gmax_lat_s2",
@@ -10596,10 +10652,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:18:58+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T01:19:57+00:00",
+      "seconds": 59.0
     },
     {
       "id": "E0_fabric_law_lagakos_model_gmax_lat_s0",
