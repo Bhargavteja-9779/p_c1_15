@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E0",
+    "project": "nova",
+    "method": "odasc",
+    "variant": "odasc_W60",
+    "seed": 0,
+    "split": "dev",
+    "W": 60,
+    "odasc_delta": 0.9,
+    "gmean": 0.8123943037369011,
+    "r0": 0.7063012850286422,
+    "r1": 0.9344234800838574,
+    "rdiff": 0.22812219505521525,
+    "auc": 0.8539341338025405,
+    "mcc": 0.5699771004587874,
+    "n_eval": 44220,
+    "seconds": 252.85,
+    "job_id": "E0_nova_odasc_W60_s0",
+    "written": "2026-11-25T01:04:39+00:00",
+    "cycle": 1
+  }
+]
