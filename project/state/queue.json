@@ -29645,12 +29645,14 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 13,
       "started": "2026-11-25T15:24:30+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T15:59:24+00:00",
+      "seconds": 2094.8
     },
     {
       "id": "E0e_nova_dual_W90_k20_s0",
@@ -29667,10 +29669,12 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T15:59:24+00:00",
+      "worker": 2
     },
     {
       "id": "E0e_nova_dual_W90_k50_s0",
@@ -29734,12 +29738,14 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 13,
       "started": "2026-11-25T15:24:38+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T15:59:39+00:00",
+      "seconds": 2100.8
     },
     {
       "id": "E0e_nova_dual_W90_k20_s1",
@@ -29756,10 +29762,12 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T15:59:39+00:00",
+      "worker": 0
     },
     {
       "id": "E0e_nova_dual_W90_k50_s1",
@@ -29823,12 +29831,14 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 13,
       "started": "2026-11-25T15:24:39+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T15:59:57+00:00",
+      "seconds": 2117.7
     },
     {
       "id": "E0e_nova_dual_W90_k20_s2",
@@ -29845,10 +29855,12 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T15:59:57+00:00",
+      "worker": 1
     },
     {
       "id": "E0e_nova_dual_W90_k50_s2",
