@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E0",
+    "project": "fabric",
+    "method": "wait",
+    "variant": "wait_W15_gmax_lat",
+    "seed": 2,
+    "split": "dev",
+    "W": 15,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.707617771903251,
+    "r0": 0.6607725502578676,
+    "r1": 0.7577840679336838,
+    "rdiff": 0.09701151767581617,
+    "auc": 0.7765493899741882,
+    "mcc": 0.3426842162263218,
+    "n_eval": 11974,
+    "seconds": 25.01,
+    "job_id": "E0_fabric_wait_W15_gmax_lat_s2",
+    "written": "2026-11-25T00:25:34+00:00",
+    "cycle": 1
+  }
+]

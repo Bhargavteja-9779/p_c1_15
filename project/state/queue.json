@@ -5726,12 +5726,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
       "started": "2026-11-25T00:25:11+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T00:25:33+00:00",
+      "seconds": 22.3
     },
     {
       "id": "E0_fabric_orb_W180_gmax_lat_s0",
@@ -6185,12 +6187,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
       "started": "2026-11-25T00:25:11+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T00:25:34+00:00",
+      "seconds": 22.5
     },
     {
       "id": "E0_fabric_orb_W180_gmax_lat_s1",
@@ -6384,12 +6388,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
       "started": "2026-11-25T00:25:09+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T00:25:34+00:00",
+      "seconds": 25.0
     },
     {
       "id": "E0_fabric_orb_W15_gmax_lat_s2",
@@ -10171,10 +10177,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:25:33+00:00",
+      "worker": 2
     },
     {
       "id": "E0_fabric_law_naive_model_gmax_lat_s0",
@@ -10209,10 +10217,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:25:34+00:00",
+      "worker": 1
     },
     {
       "id": "E0_fabric_law_naive_model_gmax_lat_s1",
@@ -10247,10 +10257,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:25:34+00:00",
+      "worker": 0
     },
     {
       "id": "E0_fabric_law_naive_model_gmax_lat_s2",
