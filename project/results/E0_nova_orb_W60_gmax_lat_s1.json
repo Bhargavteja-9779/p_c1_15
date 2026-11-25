@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E0",
+    "project": "nova",
+    "method": "orb",
+    "variant": "orb_W60_gmax_lat",
+    "seed": 1,
+    "split": "dev",
+    "W": 60,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6775691148886775,
+    "r0": 0.6246168137482583,
+    "r1": 0.7350104821802935,
+    "rdiff": 0.11039366843203524,
+    "auc": 0.768117291361768,
+    "mcc": 0.3196870709541671,
+    "n_eval": 44220,
+    "seconds": 143.65,
+    "job_id": "E0_nova_orb_W60_gmax_lat_s1",
+    "written": "2026-11-25T02:27:14+00:00",
+    "cycle": 1
+  }
+]

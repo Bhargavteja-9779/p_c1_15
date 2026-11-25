@@ -8449,12 +8449,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 13,
       "started": "2026-11-25T02:22:18+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T02:24:47+00:00",
+      "seconds": 149.5
     },
     {
       "id": "E0_nova_odasc_W30_gmax_lat_s0",
@@ -8510,10 +8512,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T02:24:47+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T02:27:09+00:00",
+      "seconds": 141.8
     },
     {
       "id": "E0_nova_odasc_W60_gmax_lat_s0",
@@ -8569,10 +8575,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T02:27:09+00:00",
+      "worker": 2
     },
     {
       "id": "E0_nova_odasc_W90_gmax_lat_s0",
@@ -8892,12 +8900,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 13,
       "started": "2026-11-25T02:22:22+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T02:24:50+00:00",
+      "seconds": 147.6
     },
     {
       "id": "E0_nova_odasc_W30_gmax_lat_s1",
@@ -8953,10 +8963,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T02:24:50+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T02:27:14+00:00",
+      "seconds": 143.7
     },
     {
       "id": "E0_nova_odasc_W60_gmax_lat_s1",
@@ -9012,10 +9026,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T02:27:14+00:00",
+      "worker": 0
     },
     {
       "id": "E0_nova_odasc_W90_gmax_lat_s1",
@@ -9335,12 +9351,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 13,
       "started": "2026-11-25T02:22:23+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T02:24:51+00:00",
+      "seconds": 148.5
     },
     {
       "id": "E0_nova_odasc_W30_gmax_lat_s2",
@@ -9396,10 +9414,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T02:24:51+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T02:27:16+00:00",
+      "seconds": 145.0
     },
     {
       "id": "E0_nova_odasc_W60_gmax_lat_s2",
@@ -9455,10 +9477,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T02:27:16+00:00",
+      "worker": 1
     },
     {
       "id": "E0_nova_odasc_W90_gmax_lat_s2",
