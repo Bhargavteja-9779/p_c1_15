@@ -29618,7 +29618,7 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 2,
       "cycle": 2,
       "priority": 13,
@@ -29626,7 +29626,9 @@
       "worker": 0,
       "log": [
         "2026-11-25T14:52:11+00:00 reset running->pending on restart"
-      ]
+      ],
+      "finished": "2026-11-25T15:24:38+00:00",
+      "seconds": 1947.0
     },
     {
       "id": "E0e_nova_dual_W30_k50_s0",
@@ -29643,10 +29645,12 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T15:24:30+00:00",
+      "worker": 2
     },
     {
       "id": "E0e_nova_dual_W90_k20_s0",
@@ -29703,7 +29707,7 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 2,
       "cycle": 2,
       "priority": 13,
@@ -29711,7 +29715,9 @@
       "worker": 1,
       "log": [
         "2026-11-25T14:52:11+00:00 reset running->pending on restart"
-      ]
+      ],
+      "finished": "2026-11-25T15:24:39+00:00",
+      "seconds": 1947.6
     },
     {
       "id": "E0e_nova_dual_W30_k50_s1",
@@ -29728,10 +29734,12 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T15:24:38+00:00",
+      "worker": 0
     },
     {
       "id": "E0e_nova_dual_W90_k20_s1",
@@ -29788,7 +29796,7 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 2,
       "cycle": 2,
       "priority": 13,
@@ -29796,7 +29804,9 @@
       "worker": 2,
       "log": [
         "2026-11-25T14:52:11+00:00 reset running->pending on restart"
-      ]
+      ],
+      "finished": "2026-11-25T15:24:30+00:00",
+      "seconds": 1938.3
     },
     {
       "id": "E0e_nova_dual_W30_k50_s2",
@@ -29813,10 +29823,12 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T15:24:39+00:00",
+      "worker": 1
     },
     {
       "id": "E0e_nova_dual_W90_k20_s2",
