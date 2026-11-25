@@ -29619,11 +29619,14 @@
         "split": "dev"
       },
       "status": "running",
-      "attempts": 1,
+      "attempts": 2,
       "cycle": 2,
       "priority": 13,
-      "started": "2026-11-25T14:09:03+00:00",
-      "worker": 2
+      "started": "2026-11-25T14:52:11+00:00",
+      "worker": 0,
+      "log": [
+        "2026-11-25T14:52:11+00:00 reset running->pending on restart"
+      ]
     },
     {
       "id": "E0e_nova_dual_W30_k50_s0",
@@ -29701,11 +29704,14 @@
         "split": "dev"
       },
       "status": "running",
-      "attempts": 1,
+      "attempts": 2,
       "cycle": 2,
       "priority": 13,
-      "started": "2026-11-25T14:09:04+00:00",
-      "worker": 0
+      "started": "2026-11-25T14:52:11+00:00",
+      "worker": 1,
+      "log": [
+        "2026-11-25T14:52:11+00:00 reset running->pending on restart"
+      ]
     },
     {
       "id": "E0e_nova_dual_W30_k50_s1",
@@ -29783,11 +29789,14 @@
         "split": "dev"
       },
       "status": "running",
-      "attempts": 1,
+      "attempts": 2,
       "cycle": 2,
       "priority": 13,
-      "started": "2026-11-25T14:09:37+00:00",
-      "worker": 1
+      "started": "2026-11-25T14:52:11+00:00",
+      "worker": 2,
+      "log": [
+        "2026-11-25T14:52:11+00:00 reset running->pending on restart"
+      ]
     },
     {
       "id": "E0e_nova_dual_W30_k50_s2",

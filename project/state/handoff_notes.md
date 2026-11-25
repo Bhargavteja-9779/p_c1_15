@@ -14,8 +14,8 @@
 | Snapshot backup | `bash scripts/snapshot.sh` |
 
 ## Moving to a new account / machine
-1. Everything lives in git on branch `claude/zen-cray-ajbt81` (older copy: claude/dreamy-fermat-7983nm) of `bhargavteja-9779/p_c1_15` (pushed after every step).
-2. On the new machine: `git clone` that repo, `git checkout claude/zen-cray-ajbt81`, `pip install -r project/requirements.txt`.
+1. Everything lives in git on branch `claude/keen-edison-jo222n` (older copies: claude/magical-bardeen-9yglkz, claude/zen-cray-ajbt81) of `bhargavteja-9779/p_c1_15` (pushed after every step).
+2. On the new machine: `git clone` that repo, `git checkout claude/keen-edison-jo222n`, `pip install -r project/requirements.txt`.
 3. Paste the contents of `project/BOOTSTRAP_PROMPT.txt` into the new agent session.
 
 ## Known problems / environment facts

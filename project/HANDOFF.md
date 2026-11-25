@@ -1,5 +1,5 @@
 # HANDOFF — read this first
-*Auto-generated 2026-11-25T13:34:47+00:00 by scripts/write_handoff.py*
+*Auto-generated 2026-11-25T14:52:50+00:00 by scripts/write_handoff.py*
 
 ## READ ALSO: USER_DIRECTIVES.md (owner standing orders)
 
@@ -14,18 +14,18 @@
 - **Hypothesis:** LAW beats the best tuned waiting-time baseline by >=0.02 G-mean on 10 held-out projects (Holm p<0.05)
 
 ## Running right now
-- Queue (full): {'done': 1085, 'pending': 177, 'skipped_plan': 117, 'running': 3}; running jobs: ['E0e_neutron_dual_W30_k20_s0', 'E0e_neutron_dual_W30_k20_s1', 'E0e_neutron_dual_W30_k20_s2']
-- Processes: `357 tmux new-session -d -s research_w0 python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
-358 bash -c python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
-360 python3 run_all.py --mode full --resume --worker 0
-364 bash -c python3 run_all.py --mode full --resume --worker 1 >> logs/runner_w1.log 2>&1
-367 python3 run_all.py --mode full --resume --worker 1
-370 bash -c python3 run_all.py --mode full --resume --worker 2 >> logs/runner_w2.log 2>&1
-372 python3 run_all.py --mode full --resume --worker 2`
-- Heartbeat age: 0s
+- Queue (full): {'done': 1109, 'pending': 153, 'skipped_plan': 117, 'running': 3}; running jobs: ['E0e_nova_dual_W30_k20_s0', 'E0e_nova_dual_W30_k20_s1', 'E0e_nova_dual_W30_k20_s2']
+- Processes: `383 tmux new-session -d -s research_w0 python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
+384 bash -c python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
+386 python3 run_all.py --mode full --resume --worker 0
+390 bash -c python3 run_all.py --mode full --resume --worker 1 >> logs/runner_w1.log 2>&1
+393 python3 run_all.py --mode full --resume --worker 1
+396 bash -c python3 run_all.py --mode full --resume --worker 2 >> logs/runner_w2.log 2>&1
+398 python3 run_all.py --mode full --resume --worker 2`
+- Heartbeat age: 8s
 
 ## Compute
-- Cycle 2: 9.82 h / 15 h   Global: 20.04 h / 120 h (CPU-hours; machine has no GPU)
+- Cycle 2: 11.59 h / 15 h   Global: 21.81 h / 120 h (CPU-hours; machine has no GPU)
 
 ## Gate status (Section 7)
 | Gate | Status | Evidence |
@@ -43,7 +43,6 @@
 | G11 | unknown |  |
 
 ## Last 10 decisions
-- 2026-11-24T15:04:02+00:00: Cycle 2 started (plan_v4: lawm = mature cross-fitted dormant-bug posterior on the wait set); remaining cycle-1 E3/E2 jobs are charged to cycle 2 budget
 - 2026-11-24T15:52:36+00:00: H4 holds on dev -> plan_v5: freeze lawm_soft_W30; add ODaSC-style baseline (equal 4-config dev budget), lawm ablations, robustness; skip remaining cycle-1 E2 (LAW ablation)
 - 2026-11-24T19:00:23+00:00: Owner directive recorded in USER_DIRECTIVES.md, BOOTSTRAP_PROMPT.txt and MASTER_PROMPT addendum: iterate until top-notch, benchmark vs JKSU-CIS papers, no honest exit
 - 2026-11-24T19:00:23+00:00: Hold the E4 test confirmation (lawm/odasc) until the next method-development round on dev is finished
@@ -53,6 +52,7 @@
 - 2026-11-25T13:15:25+00:00: Parallel branches found (dreamy-fermat cycle 2, zealous-lamport, keen-edison, magical-bardeen) forked from b18fc8e; continue on zen-cray (most recent, owner directives); Cabral test projects declared 'used'; fresh confirmation on ApacheJIT (plan_v7)
 - 2026-11-25T13:34:47+00:00: Session magical-bardeen resumed 2026-11-25: adopted zen-cray-ajbt81 state (most advanced: cycle 2, plan_v6 E0e running, plan_v7 pre-registered) into branch claude/magical-bardeen-9yglkz via merge -s ours; zen-cray's heartbeat was 12 min stale (session presumed stopped)
 - 2026-11-25T13:34:47+00:00: Added scripts/freeze_v6.py and enqueue E8 (plan_v7 ApacheJIT confirmation, exactly the plan_v7 method list); ApacheJIT downloaded and sha256-verified; smoke test on the first 1200 kafka commits checked only that every method runs (no metrics inspected)
+- 2026-11-25T14:53:00+00:00: Owner asked to continue from the most recent branch: adopted claude/magical-bardeen-9yglkz (cycle 2, heartbeat 28 min stale → session presumed stopped) into claude/keen-edison-jo222n via merge -s ours (keen-edison history kept). Keen-edison's parallel cycle-1 dev selection (E0b/E0c calibration/fsc/fixed-rate grids, dev only, never run on test) is kept under archive/keen_edison_cycle1/ for reference; its compute is not counted in this lineage's budget.json. Runners + autocommit relaunched on keen-edison.
 
 ## Last failures (journal entries)
 - journal/ENTRIES/20261124T040516_FAILURE_the_pre_specified_law_method_loses_to_a_tuned_wait.md
@@ -75,8 +75,8 @@
 | Snapshot backup | `bash scripts/snapshot.sh` |
 
 ## Moving to a new account / machine
-1. Everything lives in git on branch `claude/zen-cray-ajbt81` (older copy: claude/dreamy-fermat-7983nm) of `bhargavteja-9779/p_c1_15` (pushed after every step).
-2. On the new machine: `git clone` that repo, `git checkout claude/zen-cray-ajbt81`, `pip install -r project/requirements.txt`.
+1. Everything lives in git on branch `claude/keen-edison-jo222n` (older copies: claude/magical-bardeen-9yglkz, claude/zen-cray-ajbt81) of `bhargavteja-9779/p_c1_15` (pushed after every step).
+2. On the new machine: `git clone` that repo, `git checkout claude/keen-edison-jo222n`, `pip install -r project/requirements.txt`.
 3. Paste the contents of `project/BOOTSTRAP_PROMPT.txt` into the new agent session.
 
 ## Known problems / environment facts

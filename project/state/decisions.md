@@ -85,3 +85,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-25T13:34:47+00:00** — Added scripts/freeze_v6.py and enqueue E8 (plan_v7 ApacheJIT confirmation, exactly the plan_v7 method list); ApacheJIT downloaded and sha256-verified; smoke test on the first 1200 kafka commits checked only that every method runs (no metrics inspected)
   - Reason: plan_v7 required these and they did not exist yet
+
+- **2026-11-25T14:53:00+00:00** — Owner asked to continue from the most recent branch: adopted claude/magical-bardeen-9yglkz (cycle 2, heartbeat 28 min stale → session presumed stopped) into claude/keen-edison-jo222n via merge -s ours (keen-edison history kept). Keen-edison's parallel cycle-1 dev selection (E0b/E0c calibration/fsc/fixed-rate grids, dev only, never run on test) is kept under archive/keen_edison_cycle1/ for reference; its compute is not counted in this lineage's budget.json. Runners + autocommit relaunched on keen-edison.
+  - Reason: owner instruction ("check recent branch and continue from there")
