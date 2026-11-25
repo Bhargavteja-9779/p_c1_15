@@ -19349,12 +19349,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T09:15:36+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T09:16:48+00:00",
+      "seconds": 71.9
     },
     {
       "id": "E1_zulip_nowait_s100",
@@ -19367,10 +19369,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:16:50+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:17:23+00:00",
+      "seconds": 33.2
     },
     {
       "id": "E1_zulip_wait_W90_s100",
@@ -19419,10 +19425,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:19:22+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:20:09+00:00",
+      "seconds": 47.8
     },
     {
       "id": "E1_zulip_wait_W30_gmax_lat_s100",
@@ -19456,10 +19466,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:18:28+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:19:17+00:00",
+      "seconds": 48.7
     },
     {
       "id": "E1_zulip_oracle_s100",
@@ -19472,10 +19486,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:21:01+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:21:37+00:00",
+      "seconds": 36.2
     },
     {
       "id": "E1_zulip_law_lagakos_model_gmax_lat_s101",
@@ -19491,12 +19509,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T09:15:38+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T09:16:46+00:00",
+      "seconds": 67.6
     },
     {
       "id": "E1_zulip_nowait_s101",
@@ -19509,10 +19529,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:17:23+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:17:59+00:00",
+      "seconds": 35.8
     },
     {
       "id": "E1_zulip_wait_W90_s101",
@@ -19561,10 +19585,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:20:08+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:20:59+00:00",
+      "seconds": 51.2
     },
     {
       "id": "E1_zulip_wait_W30_gmax_lat_s101",
@@ -19598,10 +19626,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:18:31+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:19:21+00:00",
+      "seconds": 49.4
     },
     {
       "id": "E1_zulip_oracle_s101",
@@ -19614,10 +19646,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:21:03+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:21:41+00:00",
+      "seconds": 38.3
     },
     {
       "id": "E1_zulip_law_lagakos_model_gmax_lat_s102",
@@ -19633,12 +19669,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T09:15:41+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T09:16:50+00:00",
+      "seconds": 69.3
     },
     {
       "id": "E1_zulip_nowait_s102",
@@ -19651,10 +19689,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:17:54+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:18:28+00:00",
+      "seconds": 34.1
     },
     {
       "id": "E1_zulip_wait_W90_s102",
@@ -19703,10 +19745,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:20:09+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:21:01+00:00",
+      "seconds": 51.7
     },
     {
       "id": "E1_zulip_wait_W30_gmax_lat_s102",
@@ -19740,10 +19786,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:18:33+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:19:22+00:00",
+      "seconds": 48.3
     },
     {
       "id": "E1_zulip_oracle_s102",
@@ -19756,10 +19806,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:21:37+00:00",
+      "worker": 0
     },
     {
       "id": "E1_zulip_law_lagakos_model_gmax_lat_s103",
@@ -19775,10 +19827,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:16:46+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:17:54+00:00",
+      "seconds": 68.4
     },
     {
       "id": "E1_zulip_nowait_s103",
@@ -19791,10 +19847,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:17:56+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:18:31+00:00",
+      "seconds": 35.4
     },
     {
       "id": "E1_zulip_wait_W90_s103",
@@ -19843,10 +19903,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:20:11+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:21:03+00:00",
+      "seconds": 52.1
     },
     {
       "id": "E1_zulip_wait_W30_gmax_lat_s103",
@@ -19880,10 +19944,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:19:17+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:20:08+00:00",
+      "seconds": 50.9
     },
     {
       "id": "E1_zulip_oracle_s103",
@@ -19896,10 +19964,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:21:41+00:00",
+      "worker": 1
     },
     {
       "id": "E1_zulip_law_lagakos_model_gmax_lat_s104",
@@ -19915,10 +19985,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:16:48+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:17:56+00:00",
+      "seconds": 67.5
     },
     {
       "id": "E1_zulip_nowait_s104",
@@ -19931,10 +20005,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:17:59+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:18:33+00:00",
+      "seconds": 34.1
     },
     {
       "id": "E1_zulip_wait_W90_s104",
@@ -19983,10 +20061,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:20:59+00:00",
+      "worker": 2
     },
     {
       "id": "E1_zulip_wait_W30_gmax_lat_s104",
@@ -20020,10 +20100,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:19:21+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:20:11+00:00",
+      "seconds": 50.0
     },
     {
       "id": "E1_zulip_oracle_s104",

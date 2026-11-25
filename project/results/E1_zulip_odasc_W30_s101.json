@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E1",
+    "project": "zulip",
+    "method": "odasc",
+    "variant": "odasc_W30",
+    "seed": 101,
+    "split": "test",
+    "W": 30,
+    "odasc_delta": 0.9,
+    "gmean": 0.6621751164996568,
+    "r0": 0.5848814862267777,
+    "r1": 0.749683303775019,
+    "rdiff": 0.1648018175482413,
+    "auc": 0.7208757665312299,
+    "mcc": 0.29544707474130355,
+    "n_eval": 14874,
+    "seconds": 51.19,
+    "job_id": "E1_zulip_odasc_W30_s101",
+    "written": "2026-11-25T09:20:59+00:00",
+    "cycle": 1
+  }
+]

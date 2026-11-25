@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E1",
+    "project": "zulip",
+    "method": "law",
+    "variant": "law_lagakos_model_gmax_lat",
+    "seed": 101,
+    "split": "test",
+    "delay_est": "lagakos",
+    "prior": "model",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6633255460088912,
+    "r0": 0.6256062963301913,
+    "r1": 0.7033189764378008,
+    "rdiff": 0.07771268010760957,
+    "auc": 0.6931521204509212,
+    "mcc": 0.291314995294465,
+    "n_eval": 14874,
+    "seconds": 67.56,
+    "job_id": "E1_zulip_law_lagakos_model_gmax_lat_s101",
+    "written": "2026-11-25T09:16:46+00:00",
+    "cycle": 1
+  }
+]

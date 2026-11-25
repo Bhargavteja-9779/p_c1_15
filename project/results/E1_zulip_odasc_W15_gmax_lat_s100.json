@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E1",
+    "project": "zulip",
+    "method": "odasc",
+    "variant": "odasc_W15_gmax_lat",
+    "seed": 100,
+    "split": "test",
+    "W": 15,
+    "odasc_delta": 0.9,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6626489504187032,
+    "r0": 0.6597419236752997,
+    "r1": 0.6655687864200659,
+    "rdiff": 0.005826862744766181,
+    "auc": 0.7285514605078097,
+    "mcc": 0.2904139848734284,
+    "n_eval": 14874,
+    "seconds": 48.61,
+    "job_id": "E1_zulip_odasc_W15_gmax_lat_s100",
+    "written": "2026-11-25T09:19:17+00:00",
+    "cycle": 1
+  }
+]
