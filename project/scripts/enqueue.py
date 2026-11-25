@@ -34,6 +34,8 @@ def specs(exp):
                 J.append(dict(method="nowait", thr_policy=pol, variant=f"nowait_{pol}", project=p, seed=s))
                 for de in ["lagakos", "naive"]:
                     J.append(dict(method="law", delay_est=de, prior="base", thr_policy=pol, variant=f"law_{de}_base_{pol}", project=p, seed=s))
+            for de in ["lagakos", "naive"]:   # added 2026-11-25 after E0: LAW-model has best dev AUC but broken operating point
+                J.append(dict(method="law", delay_est=de, prior="model", thr_policy="gmax_lat", variant=f"law_{de}_model_gmax_lat", project=p, seed=s))
             for W in WGRID:
                 for m, extra in [("wait", {}), ("orb", {}), ("odasc", {"odasc_delta": 0.9})]:
                     J.append(dict(method=m, W=W, thr_policy="gmax_lat", variant=f"{m}_W{W}_gmax_lat", project=p, seed=s, **extra))
@@ -69,6 +71,8 @@ if __name__ == "__main__":
     exp = sys.argv[1]; quick = "--quick" in sys.argv
     J, prio = specs(exp)
     qf = STATE / ("queue_quick.json" if quick else "queue.json")
+    from src.runner import qlock
+    _lk = qlock("quick" if quick else "full"); _lk.__enter__()     # never race the running workers
     q = read_json(qf, {"jobs": []}); have = {j["id"] for j in q["jobs"]}
     st = read_json(STATE / "agent_state.json", {})
     if quick:  # one job per method/variant on one project
@@ -84,4 +88,4 @@ if __name__ == "__main__":
         q["jobs"].append({"id": jid, "kind": "jit_run", "params": j, "status": "pending", "attempts": 0,
                           "cycle": st.get("cycle", 1), "priority": prio + (1 if j["project"] == "nova" else 0)})
         added += 1
-    write_json(qf, q); print(f"added {added} jobs to {qf.name} (total {len(q['jobs'])})")
+    write_json(qf, q); _lk.__exit__(None, None, None); print(f"added {added} jobs to {qf.name} (total {len(q['jobs'])})")

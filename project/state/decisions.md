@@ -46,3 +46,9 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-24T23:13:20+00:00** — 6.4 ladder rung 3-4: enqueue E0c (dev only, 252 runs): thr_policy in {ratematch (H3 as pre-written), gmax_lat (latency-corrected G-mean threshold)} for nowait and LAW-base; gmax_lat for all 15 wait/orb/odasc configs
   - Reason: Dev diagnosis showed operating point dominates G-mean differences; baselines get the same threshold option so any gain is not an artefact of unequal treatment. ratematch already looked weak on a 5000-commit fabric slice (0.547 vs wait-W90 0.669); tested fully anyway as pre-registered.
+
+- **2026-11-25T00:25:33+00:00** — E0c extended with law_{lagakos,naive}_model_gmax_lat (24 runs, dev only)
+  - Reason: Post-E0 observation: LAW-model has best dev AUC but broken operating point; the latency-corrected threshold targets exactly that. Counted as 2 more variants in the forking-paths ledger.
+
+- **2026-11-25T00:25:33+00:00** — Runner: dead-worker resets refund the attempt; enqueue.py takes the queue lock
+  - Reason: Container restart on 2026-11-25 would otherwise push healthy jobs toward failed_permanent; enqueue previously required stopping workers.

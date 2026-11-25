@@ -5466,12 +5466,18 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
-      "started": "2026-11-25T00:23:57+00:00",
-      "worker": 0
+      "started": "2026-11-25T00:24:40+00:00",
+      "worker": 1,
+      "resets": 1,
+      "log": [
+        "2026-11-25T00:24:40+00:00 reset running->pending on restart (attempt refunded)"
+      ],
+      "finished": "2026-11-25T00:25:11+00:00",
+      "seconds": 31.0
     },
     {
       "id": "E0_fabric_orb_W15_gmax_lat_s0",
@@ -5720,10 +5726,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:25:11+00:00",
+      "worker": 2
     },
     {
       "id": "E0_fabric_orb_W180_gmax_lat_s0",
@@ -5917,12 +5925,18 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
-      "started": "2026-11-25T00:23:57+00:00",
-      "worker": 2
+      "started": "2026-11-25T00:24:40+00:00",
+      "worker": 2,
+      "resets": 1,
+      "log": [
+        "2026-11-25T00:24:40+00:00 reset running->pending on restart (attempt refunded)"
+      ],
+      "finished": "2026-11-25T00:25:11+00:00",
+      "seconds": 30.7
     },
     {
       "id": "E0_fabric_orb_W15_gmax_lat_s1",
@@ -6171,10 +6185,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:25:11+00:00",
+      "worker": 1
     },
     {
       "id": "E0_fabric_orb_W180_gmax_lat_s1",
@@ -6368,10 +6384,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:25:09+00:00",
+      "worker": 0
     },
     {
       "id": "E0_fabric_orb_W15_gmax_lat_s2",
@@ -6575,12 +6593,18 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
-      "started": "2026-11-25T00:23:52+00:00",
-      "worker": 1
+      "started": "2026-11-25T00:24:40+00:00",
+      "worker": 0,
+      "resets": 1,
+      "log": [
+        "2026-11-25T00:24:40+00:00 reset running->pending on restart (attempt refunded)"
+      ],
+      "finished": "2026-11-25T00:25:09+00:00",
+      "seconds": 29.3
     },
     {
       "id": "E0_fabric_odasc_W90_gmax_lat_s2",
@@ -10125,6 +10149,462 @@
         "project": "sentry",
         "seed": 2,
         "odasc_delta": 0.9,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_fabric_law_lagakos_model_gmax_lat_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_fabric_law_naive_model_gmax_lat_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_naive_model_gmax_lat",
+        "project": "fabric",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_fabric_law_lagakos_model_gmax_lat_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_fabric_law_naive_model_gmax_lat_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_naive_model_gmax_lat",
+        "project": "fabric",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_fabric_law_lagakos_model_gmax_lat_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_fabric_law_naive_model_gmax_lat_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_naive_model_gmax_lat",
+        "project": "fabric",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_neutron_law_lagakos_model_gmax_lat_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_neutron_law_naive_model_gmax_lat_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_naive_model_gmax_lat",
+        "project": "neutron",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_neutron_law_lagakos_model_gmax_lat_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_neutron_law_naive_model_gmax_lat_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_naive_model_gmax_lat",
+        "project": "neutron",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_neutron_law_lagakos_model_gmax_lat_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_neutron_law_naive_model_gmax_lat_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_naive_model_gmax_lat",
+        "project": "neutron",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_nova_law_lagakos_model_gmax_lat_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0_nova_law_naive_model_gmax_lat_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_naive_model_gmax_lat",
+        "project": "nova",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0_nova_law_lagakos_model_gmax_lat_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0_nova_law_naive_model_gmax_lat_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_naive_model_gmax_lat",
+        "project": "nova",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0_nova_law_lagakos_model_gmax_lat_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0_nova_law_naive_model_gmax_lat_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_naive_model_gmax_lat",
+        "project": "nova",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 13
+    },
+    {
+      "id": "E0_sentry_law_lagakos_model_gmax_lat_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_sentry_law_naive_model_gmax_lat_s0",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_naive_model_gmax_lat",
+        "project": "sentry",
+        "seed": 0,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_sentry_law_lagakos_model_gmax_lat_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_sentry_law_naive_model_gmax_lat_s1",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_naive_model_gmax_lat",
+        "project": "sentry",
+        "seed": 1,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_sentry_law_lagakos_model_gmax_lat_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "lagakos",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_lagakos_model_gmax_lat",
+        "project": "sentry",
+        "seed": 2,
+        "experiment": "E0",
+        "split": "dev"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 1,
+      "priority": 12
+    },
+    {
+      "id": "E0_sentry_law_naive_model_gmax_lat_s2",
+      "kind": "jit_run",
+      "params": {
+        "method": "law",
+        "delay_est": "naive",
+        "prior": "model",
+        "thr_policy": "gmax_lat",
+        "variant": "law_naive_model_gmax_lat",
+        "project": "sentry",
+        "seed": 2,
         "experiment": "E0",
         "split": "dev"
       },
