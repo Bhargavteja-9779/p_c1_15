@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E0",
+    "project": "neutron",
+    "method": "law",
+    "variant": "law_naive_model_gmax_lat",
+    "seed": 0,
+    "split": "dev",
+    "delay_est": "naive",
+    "prior": "model",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.8282421961155552,
+    "r0": 0.7582985001229408,
+    "r1": 0.9046373365041617,
+    "rdiff": 0.14633883638122092,
+    "auc": 0.8843975869504858,
+    "mcc": 0.5881291187171767,
+    "n_eval": 16406,
+    "seconds": 60.0,
+    "job_id": "E0_neutron_law_naive_model_gmax_lat_s0",
+    "written": "2026-11-25T00:33:57+00:00",
+    "cycle": 1
+  }
+]

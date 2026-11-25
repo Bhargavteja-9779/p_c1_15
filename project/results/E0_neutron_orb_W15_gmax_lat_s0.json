@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E0",
+    "project": "neutron",
+    "method": "orb",
+    "variant": "orb_W15_gmax_lat",
+    "seed": 0,
+    "split": "dev",
+    "W": 15,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6260291347023648,
+    "r0": 0.5798705024178346,
+    "r1": 0.6758620689655173,
+    "rdiff": 0.0959915665476827,
+    "auc": 0.7462658320924749,
+    "mcc": 0.22339442764863385,
+    "n_eval": 16406,
+    "seconds": 40.75,
+    "job_id": "E0_neutron_orb_W15_gmax_lat_s0",
+    "written": "2026-11-25T00:40:19+00:00",
+    "cycle": 1
+  }
+]

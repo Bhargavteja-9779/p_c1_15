@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E0",
+    "project": "neutron",
+    "method": "nowait",
+    "variant": "nowait_ratematch",
+    "seed": 2,
+    "split": "dev",
+    "thr_policy": "ratematch",
+    "gmean": 0.6712425968275351,
+    "r0": 0.8775510204081632,
+    "r1": 0.513436385255648,
+    "rdiff": 0.3641146351525152,
+    "auc": 0.822709557441589,
+    "mcc": 0.41031034421192664,
+    "n_eval": 16406,
+    "seconds": 41.28,
+    "job_id": "E0_neutron_nowait_ratematch_s2",
+    "written": "2026-11-25T00:35:39+00:00",
+    "cycle": 1
+  }
+]

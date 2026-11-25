@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E0",
+    "project": "fabric",
+    "method": "law",
+    "variant": "law_naive_model_gmax_lat",
+    "seed": 2,
+    "split": "dev",
+    "delay_est": "naive",
+    "prior": "model",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.7080606097314991,
+    "r0": 0.6414061677718135,
+    "r1": 0.7816417306914678,
+    "rdiff": 0.14023556291965433,
+    "auc": 0.7756397660143719,
+    "mcc": 0.34453067666312576,
+    "n_eval": 11974,
+    "seconds": 38.35,
+    "job_id": "E0_fabric_law_naive_model_gmax_lat_s2",
+    "written": "2026-11-25T00:26:53+00:00",
+    "cycle": 1
+  }
+]
