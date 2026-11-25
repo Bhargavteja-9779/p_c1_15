@@ -11,6 +11,7 @@
 | Install autostart (cron @reboot + 5-min watchdog) | `bash scripts/install_autostart.sh` |
 | Remove autostart (both layers) | `bash scripts/install_autostart.sh --remove` |
 | Regenerate this file | `python scripts/write_handoff.py` |
+| Keep runner alive + auto-commit (ephemeral container) | `bash scripts/watch_and_checkpoint.sh` |
 | Snapshot backup | `bash scripts/snapshot.sh` |
 
 ## Moving to a new account / machine

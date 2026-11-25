@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E0",
+    "project": "neutron",
+    "method": "wait",
+    "variant": "wait_W30_gmax_lat",
+    "seed": 2,
+    "split": "dev",
+    "W": 30,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.818565775995977,
+    "r0": 0.7475616752725186,
+    "r1": 0.8963139120095125,
+    "rdiff": 0.1487522367369939,
+    "auc": 0.8800489443517475,
+    "mcc": 0.5700438919301076,
+    "n_eval": 16406,
+    "seconds": 39.43,
+    "job_id": "E0_neutron_wait_W30_gmax_lat_s2",
+    "written": "2026-11-25T00:45:06+00:00",
+    "cycle": 1
+  }
+]

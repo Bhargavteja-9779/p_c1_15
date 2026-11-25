@@ -4732,10 +4732,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:45:59+00:00",
+      "worker": 0
     },
     {
       "id": "E0_nova_odasc_W30_s0",
@@ -4822,10 +4824,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:46:03+00:00",
+      "worker": 1
     },
     {
       "id": "E0_nova_odasc_W30_s1",
@@ -4912,10 +4916,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:46:23+00:00",
+      "worker": 2
     },
     {
       "id": "E0_nova_odasc_W30_s2",
@@ -6885,10 +6891,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:42:49+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T00:43:28+00:00",
+      "seconds": 39.1
     },
     {
       "id": "E0_neutron_orb_W15_gmax_lat_s0",
@@ -6948,10 +6958,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:44:04+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T00:44:43+00:00",
+      "seconds": 39.0
     },
     {
       "id": "E0_neutron_orb_W30_gmax_lat_s0",
@@ -6966,10 +6980,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:40:55+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T00:41:33+00:00",
+      "seconds": 38.8
     },
     {
       "id": "E0_neutron_odasc_W30_gmax_lat_s0",
@@ -7007,10 +7025,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:44:43+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T00:45:21+00:00",
+      "seconds": 38.3
     },
     {
       "id": "E0_neutron_orb_W60_gmax_lat_s0",
@@ -7025,10 +7047,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:41:33+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T00:42:11+00:00",
+      "seconds": 38.1
     },
     {
       "id": "E0_neutron_odasc_W60_gmax_lat_s0",
@@ -7066,10 +7092,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:45:21+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T00:45:59+00:00",
+      "seconds": 37.6
     },
     {
       "id": "E0_neutron_orb_W90_gmax_lat_s0",
@@ -7084,10 +7114,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:42:11+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T00:42:49+00:00",
+      "seconds": 37.5
     },
     {
       "id": "E0_neutron_odasc_W90_gmax_lat_s0",
@@ -7125,10 +7159,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:43:28+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T00:44:04+00:00",
+      "seconds": 35.8
     },
     {
       "id": "E0_neutron_orb_W180_gmax_lat_s0",
@@ -7143,12 +7181,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
       "started": "2026-11-25T00:40:19+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T00:40:55+00:00",
+      "seconds": 36.0
     },
     {
       "id": "E0_neutron_odasc_W180_gmax_lat_s0",
@@ -7320,10 +7360,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:42:51+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T00:43:31+00:00",
+      "seconds": 40.0
     },
     {
       "id": "E0_neutron_orb_W15_gmax_lat_s1",
@@ -7383,10 +7427,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:44:07+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T00:44:47+00:00",
+      "seconds": 39.8
     },
     {
       "id": "E0_neutron_orb_W30_gmax_lat_s1",
@@ -7401,10 +7449,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:40:55+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T00:41:34+00:00",
+      "seconds": 39.1
     },
     {
       "id": "E0_neutron_odasc_W30_gmax_lat_s1",
@@ -7442,10 +7494,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:44:47+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T00:45:26+00:00",
+      "seconds": 39.0
     },
     {
       "id": "E0_neutron_orb_W60_gmax_lat_s1",
@@ -7460,10 +7516,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:41:34+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T00:42:13+00:00",
+      "seconds": 38.9
     },
     {
       "id": "E0_neutron_odasc_W60_gmax_lat_s1",
@@ -7501,10 +7561,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:45:26+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T00:46:03+00:00",
+      "seconds": 37.8
     },
     {
       "id": "E0_neutron_orb_W90_gmax_lat_s1",
@@ -7519,10 +7583,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:42:13+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T00:42:51+00:00",
+      "seconds": 38.2
     },
     {
       "id": "E0_neutron_odasc_W90_gmax_lat_s1",
@@ -7560,10 +7628,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:43:31+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T00:44:07+00:00",
+      "seconds": 35.6
     },
     {
       "id": "E0_neutron_orb_W180_gmax_lat_s1",
@@ -7578,12 +7650,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
       "started": "2026-11-25T00:40:19+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T00:40:55+00:00",
+      "seconds": 35.9
     },
     {
       "id": "E0_neutron_odasc_W180_gmax_lat_s1",
@@ -7755,10 +7829,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:43:11+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T00:43:51+00:00",
+      "seconds": 39.7
     },
     {
       "id": "E0_neutron_orb_W15_gmax_lat_s2",
@@ -7818,10 +7896,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:44:27+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T00:45:06+00:00",
+      "seconds": 39.4
     },
     {
       "id": "E0_neutron_orb_W30_gmax_lat_s2",
@@ -7836,10 +7918,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:41:15+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T00:41:54+00:00",
+      "seconds": 39.3
     },
     {
       "id": "E0_neutron_odasc_W30_gmax_lat_s2",
@@ -7877,10 +7963,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:45:06+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T00:45:44+00:00",
+      "seconds": 38.3
     },
     {
       "id": "E0_neutron_orb_W60_gmax_lat_s2",
@@ -7895,10 +7985,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:41:54+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T00:42:33+00:00",
+      "seconds": 39.0
     },
     {
       "id": "E0_neutron_odasc_W60_gmax_lat_s2",
@@ -7936,10 +8030,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:45:44+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T00:46:23+00:00",
+      "seconds": 38.4
     },
     {
       "id": "E0_neutron_orb_W90_gmax_lat_s2",
@@ -7954,10 +8052,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:42:33+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T00:43:11+00:00",
+      "seconds": 37.6
     },
     {
       "id": "E0_neutron_odasc_W90_gmax_lat_s2",
@@ -7995,10 +8097,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:43:51+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T00:44:27+00:00",
+      "seconds": 35.7
     },
     {
       "id": "E0_neutron_orb_W180_gmax_lat_s2",
@@ -8013,12 +8119,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
       "started": "2026-11-25T00:40:39+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T00:41:15+00:00",
+      "seconds": 36.1
     },
     {
       "id": "E0_neutron_odasc_W180_gmax_lat_s2",
