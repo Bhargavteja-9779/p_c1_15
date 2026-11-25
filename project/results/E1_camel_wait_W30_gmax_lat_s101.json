@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E1",
+    "project": "camel",
+    "method": "wait",
+    "variant": "wait_W30_gmax_lat",
+    "seed": 101,
+    "split": "test",
+    "W": 30,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6809338404228273,
+    "r0": 0.6516882586963174,
+    "r1": 0.7114918656974731,
+    "rdiff": 0.05980360700115572,
+    "auc": 0.778213132564056,
+    "mcc": 0.30750553693638116,
+    "n_eval": 25384,
+    "seconds": 98.28,
+    "job_id": "E1_camel_wait_W30_gmax_lat_s101",
+    "written": "2026-11-25T08:33:22+00:00",
+    "cycle": 1
+  }
+]
