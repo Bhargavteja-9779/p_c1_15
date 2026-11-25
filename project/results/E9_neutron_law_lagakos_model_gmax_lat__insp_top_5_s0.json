@@ -1,0 +1,27 @@
+[
+  {
+    "experiment": "E9",
+    "project": "neutron",
+    "method": "law",
+    "variant": "law_lagakos_model_gmax_lat__insp_top_5",
+    "seed": 0,
+    "split": "dev",
+    "delay_est": "lagakos",
+    "prior": "model",
+    "thr_policy": "gmax_lat",
+    "insp_policy": "top",
+    "insp_budget": 0.05,
+    "gmean": 0.8313811441589158,
+    "r0": 0.7900172117039587,
+    "r1": 0.8749108204518431,
+    "rdiff": 0.08489360874788443,
+    "auc": 0.9084090493352477,
+    "mcc": 0.5979633595812801,
+    "n_eval": 16406,
+    "seconds": 48.82,
+    "n_inspected": 947,
+    "job_id": "E9_neutron_law_lagakos_model_gmax_lat__insp_top_5_s0",
+    "written": "2026-11-25T10:38:06+00:00",
+    "cycle": 2
+  }
+]
