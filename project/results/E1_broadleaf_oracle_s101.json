@@ -1,0 +1,21 @@
+[
+  {
+    "experiment": "E1",
+    "project": "broadleaf",
+    "method": "oracle",
+    "variant": "oracle",
+    "seed": 101,
+    "split": "test",
+    "gmean": 0.7280012201012092,
+    "r0": 0.846737935857728,
+    "r1": 0.6259147653895825,
+    "rdiff": 0.2208231704681456,
+    "auc": 0.831361180877804,
+    "mcc": 0.4313257462069973,
+    "n_eval": 12332,
+    "seconds": 30.24,
+    "job_id": "E1_broadleaf_oracle_s101",
+    "written": "2026-11-25T08:09:32+00:00",
+    "cycle": 1
+  }
+]

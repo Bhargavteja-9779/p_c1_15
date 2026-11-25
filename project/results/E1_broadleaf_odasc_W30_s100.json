@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E1",
+    "project": "broadleaf",
+    "method": "odasc",
+    "variant": "odasc_W30",
+    "seed": 100,
+    "split": "test",
+    "W": 30,
+    "odasc_delta": 0.9,
+    "gmean": 0.7300769603792822,
+    "r0": 0.6732940353681687,
+    "r1": 0.7916487300904004,
+    "rdiff": 0.1183546947222317,
+    "auc": 0.806325211313262,
+    "mcc": 0.3690563525360407,
+    "n_eval": 12332,
+    "seconds": 37.25,
+    "job_id": "E1_broadleaf_odasc_W30_s100",
+    "written": "2026-11-25T08:08:24+00:00",
+    "cycle": 1
+  }
+]
