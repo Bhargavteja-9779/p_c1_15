@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E3",
+    "project": "camel",
+    "method": "orb",
+    "variant": "orb_W90_ds2",
+    "seed": 101,
+    "split": "test",
+    "W": 90,
+    "delay_scale": 2.0,
+    "gmean": 0.6645733554694875,
+    "r0": 0.5994593491788228,
+    "r1": 0.7367601246105919,
+    "rdiff": 0.1373007754317691,
+    "auc": 0.7381360358777151,
+    "mcc": 0.2822494821544693,
+    "n_eval": 25384,
+    "seconds": 64.8,
+    "job_id": "E3_camel_orb_W90_ds2_s101",
+    "written": "2026-11-24T19:22:23+00:00",
+    "cycle": 1
+  }
+]
