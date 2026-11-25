@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T15:00:05+00:00",
+ "generated": "2026-11-25T21:37:21+00:00",
  "E1_main_law_vs_baselines": [
   {
    "proposed": "law_lagakos_model",
@@ -57,16 +57,16 @@
   {
    "proposed": "law_lagakos_model",
    "baseline": "law_naive_model",
-   "n_projects": 1,
-   "mean_diff": 0.0101,
+   "n_projects": 2,
+   "mean_diff": 0.0127,
    "ci95": [
-    0.0101,
-    0.0101
+    0.0093,
+    0.0161
    ],
-   "wins": 1,
+   "wins": 2,
    "losses": 0,
    "wilcoxon_p": null,
-   "paired_t_p": NaN,
+   "paired_t_p": 0.16715243846529462,
    "rank_biserial": 1.0,
    "holm_p": 1.0,
    "G5_pass": false
@@ -74,16 +74,16 @@
   {
    "proposed": "law_lagakos_model",
    "baseline": "law_lagakos_base",
-   "n_projects": 1,
-   "mean_diff": -0.0064,
+   "n_projects": 3,
+   "mean_diff": -0.0126,
    "ci95": [
-    -0.0064,
+    -0.0158,
     -0.0064
    ],
    "wins": 0,
-   "losses": 1,
+   "losses": 3,
    "wilcoxon_p": null,
-   "paired_t_p": NaN,
+   "paired_t_p": 0.05554002980531053,
    "rank_biserial": -1.0,
    "holm_p": 1.0,
    "G5_pass": false
@@ -91,16 +91,16 @@
   {
    "proposed": "law_lagakos_model",
    "baseline": "law_naive_base",
-   "n_projects": 1,
-   "mean_diff": -0.0046,
+   "n_projects": 2,
+   "mean_diff": -0.0077,
    "ci95": [
-    -0.0046,
+    -0.0108,
     -0.0046
    ],
    "wins": 0,
-   "losses": 1,
+   "losses": 2,
    "wilcoxon_p": null,
-   "paired_t_p": NaN,
+   "paired_t_p": 0.24360322930246942,
    "rank_biserial": -1.0,
    "holm_p": 1.0,
    "G5_pass": false
@@ -273,5 +273,254 @@
   "denoise_gap_share_W90": 0.4977,
   "H3_pass": true
  },
- "n_variants_logged": 28
+ "E3_robust_delay_x2": [
+  {
+   "proposed": "law_lagakos_model_ds2",
+   "baseline": "nowait_ds2",
+   "n_projects": 3,
+   "mean_diff": 0.1997,
+   "ci95": [
+    0.1557,
+    0.2506
+   ],
+   "wins": 3,
+   "losses": 0,
+   "wilcoxon_p": null,
+   "paired_t_p": 0.01854791781040511,
+   "rank_biserial": 1.0,
+   "holm_p": 1.0,
+   "G5_pass": false
+  },
+  {
+   "proposed": "law_lagakos_model_ds2",
+   "baseline": "wait_W90_ds2",
+   "n_projects": 3,
+   "mean_diff": -0.0463,
+   "ci95": [
+    -0.0765,
+    -0.0294
+   ],
+   "wins": 0,
+   "losses": 3,
+   "wilcoxon_p": null,
+   "paired_t_p": 0.09259897165814186,
+   "rank_biserial": -1.0,
+   "holm_p": 1.0,
+   "G5_pass": false
+  },
+  {
+   "proposed": "law_lagakos_model_ds2",
+   "baseline": "orb_W90_ds2",
+   "n_projects": 3,
+   "mean_diff": -0.0432,
+   "ci95": [
+    -0.0721,
+    -0.028
+   ],
+   "wins": 0,
+   "losses": 3,
+   "wilcoxon_p": null,
+   "paired_t_p": 0.09572833080478216,
+   "rank_biserial": -1.0,
+   "holm_p": 1.0,
+   "G5_pass": false
+  }
+ ],
+ "E8_planv7_H6_primary_vs_baselines": [
+  {
+   "proposed": "odasc_W30_t0.8",
+   "baseline": "wait_W90",
+   "n_projects": 9,
+   "mean_diff": 0.0012,
+   "ci95": [
+    -0.0117,
+    0.0117
+   ],
+   "wins": 6,
+   "losses": 3,
+   "wilcoxon_p": 0.5703125,
+   "paired_t_p": 0.8618882859627292,
+   "rank_biserial": 0.244,
+   "holm_p": 0.6015625,
+   "G5_pass": false,
+   "H6_pass": false
+  },
+  {
+   "proposed": "odasc_W30_t0.8",
+   "baseline": "orb_W90",
+   "n_projects": 9,
+   "mean_diff": 0.0114,
+   "ci95": [
+    -0.0071,
+    0.0297
+   ],
+   "wins": 6,
+   "losses": 3,
+   "wilcoxon_p": 0.30078125,
+   "paired_t_p": 0.2900614865143757,
+   "rank_biserial": 0.422,
+   "holm_p": 0.6015625,
+   "G5_pass": false,
+   "H6_pass": false
+  }
+ ],
+ "E8_H6_family_note": "primary=odasc_W30_t0.8; primary is the odasc baseline itself -> self-comparison dropped, Holm over 2 tests (decision 2026-11-25, before E8 analysis)",
+ "E8_H6_all_pass": false,
+ "E8_descriptive_dual_W30_k50": [
+  {
+   "proposed": "dual_W30_k50",
+   "baseline": "wait_W90",
+   "n_projects": 9,
+   "mean_diff": 0.0186,
+   "ci95": [
+    -0.0033,
+    0.0404
+   ],
+   "wins": 6,
+   "losses": 3,
+   "wilcoxon_p": 0.203125,
+   "paired_t_p": 0.15757963053946636,
+   "rank_biserial": 0.511,
+   "holm_p": 0.203125,
+   "G5_pass": false
+  },
+  {
+   "proposed": "dual_W30_k50",
+   "baseline": "orb_W90",
+   "n_projects": 9,
+   "mean_diff": 0.0288,
+   "ci95": [
+    0.0063,
+    0.0521
+   ],
+   "wins": 8,
+   "losses": 1,
+   "wilcoxon_p": 0.0546875,
+   "paired_t_p": 0.048525306715819075,
+   "rank_biserial": 0.733,
+   "holm_p": 0.1640625,
+   "G5_pass": false
+  },
+  {
+   "proposed": "dual_W30_k50",
+   "baseline": "odasc_W30_t0.8",
+   "n_projects": 9,
+   "mean_diff": 0.0175,
+   "ci95": [
+    0.003,
+    0.0323
+   ],
+   "wins": 8,
+   "losses": 1,
+   "wilcoxon_p": 0.0546875,
+   "paired_t_p": 0.05957730615487514,
+   "rank_biserial": 0.733,
+   "holm_p": 0.1640625,
+   "G5_pass": false
+  }
+ ],
+ "E8_descriptive_lawm_soft_W30": [
+  {
+   "proposed": "lawm_soft_W30",
+   "baseline": "wait_W90",
+   "n_projects": 9,
+   "mean_diff": 0.0113,
+   "ci95": [
+    0.0028,
+    0.0209
+   ],
+   "wins": 7,
+   "losses": 2,
+   "wilcoxon_p": 0.0546875,
+   "paired_t_p": 0.05189217546020266,
+   "rank_biserial": 0.733,
+   "holm_p": 0.1640625,
+   "G5_pass": false
+  },
+  {
+   "proposed": "lawm_soft_W30",
+   "baseline": "orb_W90",
+   "n_projects": 9,
+   "mean_diff": 0.0215,
+   "ci95": [
+    0.0028,
+    0.0433
+   ],
+   "wins": 6,
+   "losses": 3,
+   "wilcoxon_p": 0.09765625,
+   "paired_t_p": 0.08509184734149532,
+   "rank_biserial": 0.644,
+   "holm_p": 0.1953125,
+   "G5_pass": false
+  },
+  {
+   "proposed": "lawm_soft_W30",
+   "baseline": "odasc_W30_t0.8",
+   "n_projects": 9,
+   "mean_diff": 0.0102,
+   "ci95": [
+    0.0011,
+    0.0202
+   ],
+   "wins": 6,
+   "losses": 3,
+   "wilcoxon_p": 0.203125,
+   "paired_t_p": 0.09085919816656027,
+   "rank_biserial": 0.511,
+   "holm_p": 0.203125,
+   "G5_pass": false
+  }
+ ],
+ "E8_secondary_H3_replication": [
+  {
+   "proposed": "decomp_L1_W30",
+   "baseline": "wait_W90",
+   "n_projects": 9,
+   "mean_diff": 0.0453,
+   "ci95": [
+    0.0291,
+    0.0624
+   ],
+   "wins": 9,
+   "losses": 0,
+   "wilcoxon_p": 0.00390625,
+   "paired_t_p": 0.001074120743562676,
+   "rank_biserial": 1.0,
+   "holm_p": 0.0078125,
+   "G5_pass": true
+  },
+  {
+   "proposed": "decomp_L1_W30",
+   "baseline": "wait_W30",
+   "n_projects": 9,
+   "mean_diff": 0.0749,
+   "ci95": [
+    0.0461,
+    0.107
+   ],
+   "wins": 8,
+   "losses": 1,
+   "wilcoxon_p": 0.0078125,
+   "paired_t_p": 0.002036213625019109,
+   "rank_biserial": 0.956,
+   "holm_p": 0.0078125,
+   "G5_pass": true
+  }
+ ],
+ "E8_secondary_H3_decomposition": {
+  "gap_recovered_share_of_means": 0.903,
+  "gap_recovered_share_per_project": {
+   "aj_activemq": 0.936,
+   "aj_cassandra": 0.983,
+   "aj_flink": 0.902,
+   "aj_groovy": 0.926,
+   "aj_hadoop-hdfs": 0.828,
+   "aj_hbase": 0.9,
+   "aj_hive": 0.978,
+   "aj_ignite": 0.838,
+   "aj_kafka": 0.75
+  }
+ },
+ "n_variants_logged": 47
 }

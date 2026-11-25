@@ -100,3 +100,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-25T21:04:27+00:00** — final_report E8/H6: the primary candidate (best dev mean) is odasc_W30_t0.8 itself, so the pre-registered 'primary vs odasc' test is a degenerate self-comparison; dropped, Holm over the 2 waiting baselines. Our own methods (dual_W30_k50, lawm_soft_W30) vs wait_W90/orb_W90/odasc are reported descriptively as pre-registered
   - Reason: fixed before any E8 result was inspected; Wilcoxon on all-zero differences is undefined
+
+- **2026-11-25T21:37:55+00:00** — Gates: G5 stays fail (H6 failed on fresh data); G7 -> pass (H3 replicated on ApacheJIT 9/9). ApacheJIT declared used for confirmation. Next round (plan_v8, dev only): fix dual's nova failure with a principled latency-corrected neighbour posterior, then find an untouched confirmation dataset
+  - Reason: pre-registered plan_v7 analysis; owner directive to keep iterating

@@ -2,12 +2,12 @@
   "status": "RUNNING",
   "cycle": 3,
   "phase": "PHASE5_RUN",
-  "step": "cycle 3: E8 (ApacheJIT fresh confirmation, 405 jobs) running",
+  "step": "cycle 3: E8 analysed (H6 fail, H3 replicated); plan_v8 dev round on dual denoiser",
   "pivots": 0,
   "topic_id": null,
   "journal": "JKSU-CIS (Springer Nature, ISSN 1319-1578, IF 6.4 2025; turnaround median 71\u201374 d, marginal)",
-  "last_action": "freeze_v6 done (H5 false on dev; primary=odasc_W30_t0.8); journal RESULT; E8 enqueued and runners launched",
-  "next_action": "1) Keep runners alive (bash scripts/launch_runner.sh 3; it also restores data/). 2) When E8 is done: python scripts/final_report.py (plan_v7 H6: Holm over 3 Wilcoxon, 9 projects), update gates G5/G7, novelty, journal RESULT. 3) Dev-only method round (owner directive): diagnose dual collapse on nova (operating point / noisy-OR saturation) and threshold calibration (archive/keen_edison_cycle1 shows latency-corrected calibration brings all methods near best-threshold G-mean on dev). 4) E3 (144 skipped_budget) only if budget allows after E8.",
+  "last_action": "E8 done and analysed; gates G5/G7 updated; journal RESULT",
+  "next_action": "1) Dev-only: diagnose dual on nova (results/diag_dev/dual_nova_seed0.txt), design plan_v8 (latency-corrected neighbour posterior r_S = rS/(1-r+rS); combination rule) BEFORE running; grid on Cabral dev only. 2) Find an untouched confirmation dataset (e.g. other JIT datasets with fix dates; ApacheJIT and Cabral test are USED). 3) Update novelty score + blind review. 4) E3 (144 skipped_budget) low priority.",
   "config": {
     "TARGET_TIER": "Q1 journal (JCR), reputable publisher",
     "MAX_DAYS_SUBMIT_TO_ACCEPT": 72,
@@ -29,7 +29,7 @@
     ]
   },
   "seeds_confirm_fixed_at": "2026-11-24 (project start; never change)",
-  "updated": "2026-11-25T21:00:02+00:00",
+  "updated": "2026-11-25T21:37:55+00:00",
   "topic": "Verification-latency-aware online JIT-SDP: latency-aware weighting (LAW) of provisionally-clean commits",
   "hypothesis": "LAW beats the best tuned waiting-time baseline by >=0.02 G-mean on 10 held-out projects (Holm p<0.05)"
 }

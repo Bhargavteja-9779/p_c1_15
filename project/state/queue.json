@@ -30207,10 +30207,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:31:33+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:31:51+00:00",
+      "seconds": 17.9
     },
     {
       "id": "E8_aj_ignite_oracle_s100",
@@ -30222,10 +30226,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:33:07+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:33:27+00:00",
+      "seconds": 19.6
     },
     {
       "id": "E8_aj_ignite_wait_W90_s100",
@@ -30239,10 +30247,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:34:56+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:35:13+00:00",
+      "seconds": 17.1
     },
     {
       "id": "E8_aj_ignite_orb_W90_s100",
@@ -30256,10 +30268,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:33:55+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:34:11+00:00",
+      "seconds": 15.9
     },
     {
       "id": "E8_aj_ignite_wait_W30_s100",
@@ -30273,10 +30289,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:34:23+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:34:40+00:00",
+      "seconds": 17.2
     },
     {
       "id": "E8_aj_ignite_decomp_L1_W30_s100",
@@ -30338,12 +30358,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 3,
       "priority": 14,
       "started": "2026-11-25T21:29:41+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T21:30:32+00:00",
+      "seconds": 50.5
     },
     {
       "id": "E8_aj_ignite_odasc_W30_t0.8_s100",
@@ -30359,10 +30381,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:32:14+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:32:54+00:00",
+      "seconds": 39.5
     },
     {
       "id": "E8_aj_ignite_nowait_s101",
@@ -30374,10 +30400,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:31:51+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:32:09+00:00",
+      "seconds": 17.9
     },
     {
       "id": "E8_aj_ignite_oracle_s101",
@@ -30389,10 +30419,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:33:27+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:33:46+00:00",
+      "seconds": 19.3
     },
     {
       "id": "E8_aj_ignite_wait_W90_s101",
@@ -30406,10 +30440,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:34:57+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:35:13+00:00",
+      "seconds": 16.0
     },
     {
       "id": "E8_aj_ignite_orb_W90_s101",
@@ -30423,10 +30461,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:34:06+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:34:22+00:00",
+      "seconds": 16.6
     },
     {
       "id": "E8_aj_ignite_wait_W30_s101",
@@ -30440,10 +30482,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:34:27+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:34:44+00:00",
+      "seconds": 17.1
     },
     {
       "id": "E8_aj_ignite_decomp_L1_W30_s101",
@@ -30505,10 +30551,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:30:32+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:31:24+00:00",
+      "seconds": 52.1
     },
     {
       "id": "E8_aj_ignite_odasc_W30_t0.8_s101",
@@ -30524,10 +30574,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:32:27+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:33:06+00:00",
+      "seconds": 39.8
     },
     {
       "id": "E8_aj_ignite_nowait_s102",
@@ -30539,10 +30593,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:31:52+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:32:10+00:00",
+      "seconds": 18.2
     },
     {
       "id": "E8_aj_ignite_oracle_s102",
@@ -30554,10 +30612,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:33:35+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:33:55+00:00",
+      "seconds": 20.0
     },
     {
       "id": "E8_aj_ignite_wait_W90_s102",
@@ -30571,10 +30633,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:01+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:35:18+00:00",
+      "seconds": 17.5
     },
     {
       "id": "E8_aj_ignite_orb_W90_s102",
@@ -30588,10 +30654,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:34:06+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:34:23+00:00",
+      "seconds": 16.8
     },
     {
       "id": "E8_aj_ignite_wait_W30_s102",
@@ -30605,10 +30675,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:34:39+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:34:56+00:00",
+      "seconds": 17.0
     },
     {
       "id": "E8_aj_ignite_decomp_L1_W30_s102",
@@ -30670,10 +30744,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:30:42+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:31:33+00:00",
+      "seconds": 50.8
     },
     {
       "id": "E8_aj_ignite_odasc_W30_t0.8_s102",
@@ -30689,10 +30767,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:32:27+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:33:07+00:00",
+      "seconds": 39.9
     },
     {
       "id": "E8_aj_ignite_nowait_s103",
@@ -30704,10 +30786,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:32:09+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:32:27+00:00",
+      "seconds": 17.5
     },
     {
       "id": "E8_aj_ignite_oracle_s103",
@@ -30719,10 +30805,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:33:46+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:34:06+00:00",
+      "seconds": 19.6
     },
     {
       "id": "E8_aj_ignite_wait_W90_s103",
@@ -30736,10 +30826,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:13+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:35:29+00:00",
+      "seconds": 16.3
     },
     {
       "id": "E8_aj_ignite_orb_W90_s103",
@@ -30753,10 +30847,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:34:11+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:34:27+00:00",
+      "seconds": 16.3
     },
     {
       "id": "E8_aj_ignite_wait_W30_s103",
@@ -30770,10 +30868,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:34:40+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:34:57+00:00",
+      "seconds": 16.4
     },
     {
       "id": "E8_aj_ignite_decomp_L1_W30_s103",
@@ -30812,12 +30914,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 3,
       "priority": 14,
       "started": "2026-11-25T21:29:23+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T21:30:42+00:00",
+      "seconds": 79.2
     },
     {
       "id": "E8_aj_ignite_lawm_soft_W30_s103",
@@ -30833,10 +30937,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:31:01+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:31:52+00:00",
+      "seconds": 51.4
     },
     {
       "id": "E8_aj_ignite_odasc_W30_t0.8_s103",
@@ -30852,10 +30960,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:32:54+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:33:35+00:00",
+      "seconds": 40.6
     },
     {
       "id": "E8_aj_ignite_nowait_s104",
@@ -30867,10 +30979,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:32:10+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:32:27+00:00",
+      "seconds": 17.1
     },
     {
       "id": "E8_aj_ignite_oracle_s104",
@@ -30882,10 +30998,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:33:46+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:34:06+00:00",
+      "seconds": 19.9
     },
     {
       "id": "E8_aj_ignite_wait_W90_s104",
@@ -30899,10 +31019,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:13+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:35:29+00:00",
+      "seconds": 16.2
     },
     {
       "id": "E8_aj_ignite_orb_W90_s104",
@@ -30916,10 +31040,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:34:22+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:34:39+00:00",
+      "seconds": 16.7
     },
     {
       "id": "E8_aj_ignite_wait_W30_s104",
@@ -30933,10 +31061,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:34:44+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:35:01+00:00",
+      "seconds": 16.6
     },
     {
       "id": "E8_aj_ignite_decomp_L1_W30_s104",
@@ -30975,12 +31107,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 3,
       "priority": 14,
       "started": "2026-11-25T21:29:40+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T21:31:01+00:00",
+      "seconds": 80.8
     },
     {
       "id": "E8_aj_ignite_lawm_soft_W30_s104",
@@ -30996,10 +31130,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:31:24+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:32:14+00:00",
+      "seconds": 50.3
     },
     {
       "id": "E8_aj_ignite_odasc_W30_t0.8_s104",
@@ -31015,10 +31153,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:33:06+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:33:46+00:00",
+      "seconds": 39.6
     },
     {
       "id": "E8_aj_flink_nowait_s100",
@@ -37785,10 +37927,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:42+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:35:43+00:00",
+      "seconds": 1.6
     },
     {
       "id": "E8_aj_kafka_oracle_s100",
@@ -37800,10 +37946,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:48+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:35:50+00:00",
+      "seconds": 1.9
     },
     {
       "id": "E8_aj_kafka_wait_W90_s100",
@@ -37817,10 +37967,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:56+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:35:58+00:00",
+      "seconds": 1.6
     },
     {
       "id": "E8_aj_kafka_orb_W90_s100",
@@ -37834,10 +37988,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:51+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:35:53+00:00",
+      "seconds": 1.5
     },
     {
       "id": "E8_aj_kafka_wait_W30_s100",
@@ -37851,10 +38009,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:55+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:35:56+00:00",
+      "seconds": 1.5
     },
     {
       "id": "E8_aj_kafka_decomp_L1_W30_s100",
@@ -37869,10 +38031,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:18+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:35:20+00:00",
+      "seconds": 1.7
     },
     {
       "id": "E8_aj_kafka_dual_W30_k50_s100",
@@ -37889,10 +38055,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:27+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:35:31+00:00",
+      "seconds": 4.3
     },
     {
       "id": "E8_aj_kafka_lawm_soft_W30_s100",
@@ -37908,10 +38078,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:34+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:35:38+00:00",
+      "seconds": 4.0
     },
     {
       "id": "E8_aj_kafka_odasc_W30_t0.8_s100",
@@ -37927,10 +38101,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:45+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:35:47+00:00",
+      "seconds": 2.0
     },
     {
       "id": "E8_aj_kafka_nowait_s101",
@@ -37942,10 +38120,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:42+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:35:43+00:00",
+      "seconds": 1.7
     },
     {
       "id": "E8_aj_kafka_oracle_s101",
@@ -37957,10 +38139,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:49+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:35:51+00:00",
+      "seconds": 2.3
     },
     {
       "id": "E8_aj_kafka_wait_W90_s101",
@@ -37974,10 +38160,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:58+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:35:59+00:00",
+      "seconds": 1.5
     },
     {
       "id": "E8_aj_kafka_orb_W90_s101",
@@ -37991,10 +38181,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:51+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:35:53+00:00",
+      "seconds": 1.7
     },
     {
       "id": "E8_aj_kafka_wait_W30_s101",
@@ -38008,10 +38202,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:55+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:35:56+00:00",
+      "seconds": 1.7
     },
     {
       "id": "E8_aj_kafka_decomp_L1_W30_s101",
@@ -38026,10 +38224,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:20+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:35:22+00:00",
+      "seconds": 1.8
     },
     {
       "id": "E8_aj_kafka_dual_W30_k50_s101",
@@ -38046,10 +38248,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:29+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:35:33+00:00",
+      "seconds": 4.2
     },
     {
       "id": "E8_aj_kafka_lawm_soft_W30_s101",
@@ -38065,10 +38271,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:36+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:35:40+00:00",
+      "seconds": 3.7
     },
     {
       "id": "E8_aj_kafka_odasc_W30_t0.8_s101",
@@ -38084,10 +38294,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:45+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:35:47+00:00",
+      "seconds": 2.2
     },
     {
       "id": "E8_aj_kafka_nowait_s102",
@@ -38099,10 +38313,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:43+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:35:45+00:00",
+      "seconds": 1.6
     },
     {
       "id": "E8_aj_kafka_oracle_s102",
@@ -38114,10 +38332,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:50+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:35:51+00:00",
+      "seconds": 1.8
     },
     {
       "id": "E8_aj_kafka_wait_W90_s102",
@@ -38131,10 +38353,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:58+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:36:00+00:00",
+      "seconds": 1.6
     },
     {
       "id": "E8_aj_kafka_orb_W90_s102",
@@ -38148,10 +38374,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:53+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:35:54+00:00",
+      "seconds": 1.6
     },
     {
       "id": "E8_aj_kafka_wait_W30_s102",
@@ -38165,10 +38395,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:55+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:35:56+00:00",
+      "seconds": 1.6
     },
     {
       "id": "E8_aj_kafka_decomp_L1_W30_s102",
@@ -38183,10 +38417,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:22+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:35:24+00:00",
+      "seconds": 1.8
     },
     {
       "id": "E8_aj_kafka_dual_W30_k50_s102",
@@ -38203,10 +38441,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:29+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:35:34+00:00",
+      "seconds": 4.3
     },
     {
       "id": "E8_aj_kafka_lawm_soft_W30_s102",
@@ -38222,10 +38464,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:38+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:35:42+00:00",
+      "seconds": 3.9
     },
     {
       "id": "E8_aj_kafka_odasc_W30_t0.8_s102",
@@ -38241,10 +38487,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:46+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:35:48+00:00",
+      "seconds": 2.1
     },
     {
       "id": "E8_aj_kafka_nowait_s103",
@@ -38256,10 +38506,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:43+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:35:45+00:00",
+      "seconds": 1.6
     },
     {
       "id": "E8_aj_kafka_oracle_s103",
@@ -38271,10 +38525,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:50+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:35:51+00:00",
+      "seconds": 1.7
     },
     {
       "id": "E8_aj_kafka_wait_W90_s103",
@@ -38288,10 +38546,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:58+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:36:00+00:00",
+      "seconds": 1.6
     },
     {
       "id": "E8_aj_kafka_orb_W90_s103",
@@ -38305,10 +38567,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:53+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:35:55+00:00",
+      "seconds": 1.6
     },
     {
       "id": "E8_aj_kafka_wait_W30_s103",
@@ -38322,10 +38588,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:56+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:35:58+00:00",
+      "seconds": 1.5
     },
     {
       "id": "E8_aj_kafka_decomp_L1_W30_s103",
@@ -38340,10 +38610,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:24+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:35:25+00:00",
+      "seconds": 1.9
     },
     {
       "id": "E8_aj_kafka_dual_W30_k50_s103",
@@ -38360,10 +38634,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:31+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:35:36+00:00",
+      "seconds": 4.5
     },
     {
       "id": "E8_aj_kafka_lawm_soft_W30_s103",
@@ -38379,10 +38657,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:38+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:35:42+00:00",
+      "seconds": 3.7
     },
     {
       "id": "E8_aj_kafka_odasc_W30_t0.8_s103",
@@ -38398,10 +38680,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:47+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:35:49+00:00",
+      "seconds": 2.1
     },
     {
       "id": "E8_aj_kafka_nowait_s104",
@@ -38413,10 +38699,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:44+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:35:45+00:00",
+      "seconds": 1.6
     },
     {
       "id": "E8_aj_kafka_oracle_s104",
@@ -38428,10 +38718,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:51+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:35:53+00:00",
+      "seconds": 1.8
     },
     {
       "id": "E8_aj_kafka_wait_W90_s104",
@@ -38445,10 +38739,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:59+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:36:01+00:00",
+      "seconds": 1.7
     },
     {
       "id": "E8_aj_kafka_orb_W90_s104",
@@ -38462,10 +38760,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:53+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:35:55+00:00",
+      "seconds": 1.6
     },
     {
       "id": "E8_aj_kafka_wait_W30_s104",
@@ -38479,10 +38781,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:56+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:35:58+00:00",
+      "seconds": 1.7
     },
     {
       "id": "E8_aj_kafka_decomp_L1_W30_s104",
@@ -38497,10 +38803,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:25+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:35:27+00:00",
+      "seconds": 1.6
     },
     {
       "id": "E8_aj_kafka_dual_W30_k50_s104",
@@ -38517,10 +38827,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:33+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:35:38+00:00",
+      "seconds": 4.5
     },
     {
       "id": "E8_aj_kafka_lawm_soft_W30_s104",
@@ -38536,10 +38850,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:40+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:35:44+00:00",
+      "seconds": 4.0
     },
     {
       "id": "E8_aj_kafka_odasc_W30_t0.8_s104",
@@ -38555,10 +38873,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:35:47+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:35:50+00:00",
+      "seconds": 2.4
     }
   ]
 }
