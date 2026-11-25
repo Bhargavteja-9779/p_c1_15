@@ -16810,10 +16810,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:02:05+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:02:16+00:00",
+      "seconds": 10.9
     },
     {
       "id": "E1_spring-integration_orb_W90_s100",
@@ -16827,12 +16831,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T09:01:28+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T09:01:40+00:00",
+      "seconds": 12.0
     },
     {
       "id": "E1_spring-integration_odasc_W30_s100",
@@ -16869,10 +16875,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:01:49+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:02:00+00:00",
+      "seconds": 10.5
     },
     {
       "id": "E1_spring-integration_odasc_W15_gmax_lat_s100",
@@ -16972,10 +16982,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:02:12+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:02:24+00:00",
+      "seconds": 11.6
     },
     {
       "id": "E1_spring-integration_orb_W90_s101",
@@ -16989,12 +17003,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T09:01:30+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T09:01:41+00:00",
+      "seconds": 11.6
     },
     {
       "id": "E1_spring-integration_odasc_W30_s101",
@@ -17031,10 +17047,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:01:51+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:02:03+00:00",
+      "seconds": 12.9
     },
     {
       "id": "E1_spring-integration_odasc_W15_gmax_lat_s101",
@@ -17134,10 +17154,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:02:15+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:02:27+00:00",
+      "seconds": 11.1
     },
     {
       "id": "E1_spring-integration_orb_W90_s102",
@@ -17151,10 +17175,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:01:39+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:01:49+00:00",
+      "seconds": 10.2
     },
     {
       "id": "E1_spring-integration_odasc_W30_s102",
@@ -17191,10 +17219,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:01:52+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:02:05+00:00",
+      "seconds": 13.1
     },
     {
       "id": "E1_spring-integration_odasc_W15_gmax_lat_s102",
@@ -17294,10 +17326,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:02:16+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:02:27+00:00",
+      "seconds": 10.7
     },
     {
       "id": "E1_spring-integration_orb_W90_s103",
@@ -17311,10 +17347,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:01:40+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:01:51+00:00",
+      "seconds": 10.8
     },
     {
       "id": "E1_spring-integration_odasc_W30_s103",
@@ -17351,10 +17391,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:02:00+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:02:12+00:00",
+      "seconds": 12.5
     },
     {
       "id": "E1_spring-integration_odasc_W15_gmax_lat_s103",
@@ -17454,10 +17498,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:02:24+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:02:35+00:00",
+      "seconds": 10.6
     },
     {
       "id": "E1_spring-integration_orb_W90_s104",
@@ -17471,10 +17519,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:01:41+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:01:52+00:00",
+      "seconds": 10.6
     },
     {
       "id": "E1_spring-integration_odasc_W30_s104",
@@ -17511,10 +17563,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:02:03+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:02:15+00:00",
+      "seconds": 11.9
     },
     {
       "id": "E1_spring-integration_odasc_W15_gmax_lat_s104",
@@ -17550,12 +17606,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T09:01:27+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T09:01:39+00:00",
+      "seconds": 11.8
     },
     {
       "id": "E1_tomcat_law_lagakos_model_gmax_lat_s100",
@@ -17571,10 +17629,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:02:27+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:03:42+00:00",
+      "seconds": 75.5
     },
     {
       "id": "E1_tomcat_nowait_s100",
@@ -17587,10 +17649,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:03:48+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:04:28+00:00",
+      "seconds": 39.5
     },
     {
       "id": "E1_tomcat_wait_W90_s100",
@@ -17676,10 +17742,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:05:32+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:06:27+00:00",
+      "seconds": 54.9
     },
     {
       "id": "E1_tomcat_oracle_s100",
@@ -17711,10 +17781,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:02:27+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:03:41+00:00",
+      "seconds": 74.2
     },
     {
       "id": "E1_tomcat_nowait_s101",
@@ -17727,10 +17801,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:04:28+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:05:08+00:00",
+      "seconds": 40.3
     },
     {
       "id": "E1_tomcat_wait_W90_s101",
@@ -17816,10 +17894,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:05:37+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:06:32+00:00",
+      "seconds": 55.6
     },
     {
       "id": "E1_tomcat_oracle_s101",
@@ -17851,10 +17933,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:02:35+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:03:48+00:00",
+      "seconds": 73.9
     },
     {
       "id": "E1_tomcat_nowait_s102",
@@ -17867,10 +17953,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:04:54+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:05:32+00:00",
+      "seconds": 38.7
     },
     {
       "id": "E1_tomcat_wait_W90_s102",
@@ -17956,10 +18046,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:05:50+00:00",
+      "worker": 2
     },
     {
       "id": "E1_tomcat_oracle_s102",
@@ -17991,10 +18083,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:03:41+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:04:54+00:00",
+      "seconds": 72.6
     },
     {
       "id": "E1_tomcat_nowait_s103",
@@ -18007,10 +18103,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:04:57+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:05:37+00:00",
+      "seconds": 39.5
     },
     {
       "id": "E1_tomcat_wait_W90_s103",
@@ -18096,10 +18196,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:06:27+00:00",
+      "worker": 1
     },
     {
       "id": "E1_tomcat_oracle_s103",
@@ -18131,10 +18233,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:03:42+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:04:57+00:00",
+      "seconds": 75.1
     },
     {
       "id": "E1_tomcat_nowait_s104",
@@ -18147,10 +18253,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:05:08+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:05:50+00:00",
+      "seconds": 41.6
     },
     {
       "id": "E1_tomcat_wait_W90_s104",
@@ -18236,10 +18346,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:06:32+00:00",
+      "worker": 0
     },
     {
       "id": "E1_tomcat_oracle_s104",

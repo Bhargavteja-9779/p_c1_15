@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E1",
+    "project": "spring-integration",
+    "method": "wait",
+    "variant": "wait_W30_gmax_lat",
+    "seed": 101,
+    "split": "test",
+    "W": 30,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6581686776742444,
+    "r0": 0.6287234042553191,
+    "r1": 0.6889929742388758,
+    "rdiff": 0.0602695699835567,
+    "auc": 0.687099340608235,
+    "mcc": 0.28458190369803027,
+    "n_eval": 7775,
+    "seconds": 12.87,
+    "job_id": "E1_spring-integration_wait_W30_gmax_lat_s101",
+    "written": "2026-11-25T09:02:03+00:00",
+    "cycle": 1
+  }
+]

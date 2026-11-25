@@ -1,0 +1,21 @@
+[
+  {
+    "experiment": "E1",
+    "project": "tomcat",
+    "method": "nowait",
+    "variant": "nowait",
+    "seed": 103,
+    "split": "test",
+    "gmean": 0.3669877426025398,
+    "r0": 0.9647806946029676,
+    "r1": 0.13959649480334216,
+    "rdiff": 0.8251841997996254,
+    "auc": 0.6989058447003388,
+    "mcc": 0.1912140680664758,
+    "n_eval": 17173,
+    "seconds": 39.49,
+    "job_id": "E1_tomcat_nowait_s103",
+    "written": "2026-11-25T09:05:37+00:00",
+    "cycle": 1
+  }
+]
