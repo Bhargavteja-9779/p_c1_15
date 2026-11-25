@@ -8271,10 +8271,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T01:49:13+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T01:52:47+00:00",
+      "seconds": 214.1
     },
     {
       "id": "E0_nova_nowait_gmax_lat_s0",
@@ -8334,12 +8338,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 13,
       "started": "2026-11-25T01:45:41+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T01:49:13+00:00",
+      "seconds": 212.0
     },
     {
       "id": "E0_nova_wait_W15_gmax_lat_s0",
@@ -8670,10 +8676,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T01:49:13+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T01:52:48+00:00",
+      "seconds": 215.0
     },
     {
       "id": "E0_nova_nowait_gmax_lat_s1",
@@ -8733,12 +8743,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 13,
       "started": "2026-11-25T01:45:41+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T01:49:13+00:00",
+      "seconds": 211.2
     },
     {
       "id": "E0_nova_wait_W15_gmax_lat_s1",
@@ -9069,10 +9081,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T01:49:16+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T01:52:50+00:00",
+      "seconds": 214.5
     },
     {
       "id": "E0_nova_nowait_gmax_lat_s2",
@@ -9132,12 +9148,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 13,
       "started": "2026-11-25T01:45:43+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T01:49:16+00:00",
+      "seconds": 212.9
     },
     {
       "id": "E0_nova_wait_W15_gmax_lat_s2",
@@ -11134,10 +11152,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T01:52:47+00:00",
+      "worker": 2
     },
     {
       "id": "E0_nova_law_lagakos_model_gmax_lat_s1",
@@ -11176,10 +11196,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T01:52:48+00:00",
+      "worker": 1
     },
     {
       "id": "E0_nova_law_lagakos_model_gmax_lat_s2",
@@ -11218,10 +11240,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T01:52:50+00:00",
+      "worker": 0
     },
     {
       "id": "E0_sentry_law_lagakos_model_gmax_lat_s0",
