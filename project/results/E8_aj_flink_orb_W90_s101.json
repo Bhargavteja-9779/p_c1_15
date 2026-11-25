@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_flink",
+    "method": "orb",
+    "variant": "orb_W90",
+    "seed": 101,
+    "split": "apachejit",
+    "W": 90,
+    "gmean": 0.7299217637453539,
+    "r0": 0.8211883408071748,
+    "r1": 0.6487985212569316,
+    "rdiff": 0.17238981955024324,
+    "auc": 0.812730406032675,
+    "mcc": 0.4757575806778334,
+    "n_eval": 5732,
+    "seconds": 12.41,
+    "n_inspected": 0,
+    "job_id": "E8_aj_flink_orb_W90_s101",
+    "written": "2026-11-25T11:04:53+00:00",
+    "cycle": 2
+  }
+]

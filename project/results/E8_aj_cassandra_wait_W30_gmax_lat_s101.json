@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_cassandra",
+    "method": "wait",
+    "variant": "wait_W30_gmax_lat",
+    "seed": 101,
+    "split": "apachejit",
+    "W": 30,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.7332530054815062,
+    "r0": 0.7386519944979367,
+    "r1": 0.7278934790030728,
+    "rdiff": 0.010758515494863952,
+    "auc": 0.7961796523531308,
+    "mcc": 0.4598655178664043,
+    "n_eval": 7291,
+    "seconds": 9.19,
+    "n_inspected": 0,
+    "job_id": "E8_aj_cassandra_wait_W30_gmax_lat_s101",
+    "written": "2026-11-25T11:02:10+00:00",
+    "cycle": 2
+  }
+]

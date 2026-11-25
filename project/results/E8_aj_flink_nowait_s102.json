@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_flink",
+    "method": "nowait",
+    "variant": "nowait",
+    "seed": 102,
+    "split": "apachejit",
+    "gmean": 0.7170065650535442,
+    "r0": 0.8766816143497758,
+    "r1": 0.5864140480591498,
+    "rdiff": 0.290267566290626,
+    "auc": 0.8106371303142328,
+    "mcc": 0.4907561114275294,
+    "n_eval": 5732,
+    "seconds": 12.18,
+    "n_inspected": 0,
+    "job_id": "E8_aj_flink_nowait_s102",
+    "written": "2026-11-25T11:03:25+00:00",
+    "cycle": 2
+  }
+]

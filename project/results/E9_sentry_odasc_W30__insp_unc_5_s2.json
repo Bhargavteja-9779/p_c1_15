@@ -1,0 +1,26 @@
+[
+  {
+    "experiment": "E9",
+    "project": "sentry",
+    "method": "odasc",
+    "variant": "odasc_W30__insp_unc_5",
+    "seed": 2,
+    "split": "dev",
+    "W": 30,
+    "odasc_delta": 0.9,
+    "insp_policy": "unc",
+    "insp_budget": 0.05,
+    "gmean": 0.6861881862699961,
+    "r0": 0.5521271289104255,
+    "r1": 0.8528003829583533,
+    "rdiff": 0.3006732540479278,
+    "auc": 0.7772242952457991,
+    "mcc": 0.34165021391780487,
+    "n_eval": 18211,
+    "seconds": 48.39,
+    "n_inspected": 1049,
+    "job_id": "E9_sentry_odasc_W30__insp_unc_5_s2",
+    "written": "2026-11-25T11:01:19+00:00",
+    "cycle": 2
+  }
+]

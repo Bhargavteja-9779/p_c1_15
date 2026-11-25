@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_cassandra",
+    "method": "orb",
+    "variant": "orb_W90",
+    "seed": 100,
+    "split": "apachejit",
+    "W": 90,
+    "gmean": 0.7118762296740158,
+    "r0": 0.7377349839523154,
+    "r1": 0.6869238648002731,
+    "rdiff": 0.05081111915204228,
+    "auc": 0.7790480466250865,
+    "mcc": 0.42018102900154986,
+    "n_eval": 7291,
+    "seconds": 7.52,
+    "n_inspected": 0,
+    "job_id": "E8_aj_cassandra_orb_W90_s100",
+    "written": "2026-11-25T11:01:53+00:00",
+    "cycle": 2
+  }
+]
