@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E1",
+    "project": "wagtail",
+    "method": "awt",
+    "variant": "awt_e0.4",
+    "seed": 102,
+    "split": "test",
+    "delay_est": "lagakos",
+    "label_noise_log": true,
+    "eps": 0.4,
+    "gmean": 0.6464853120747815,
+    "r0": 0.801360769996681,
+    "r1": 0.5215419501133787,
+    "rdiff": 0.27981881988330237,
+    "auc": 0.7489483402609856,
+    "mcc": 0.25237033045292595,
+    "n_eval": 6908,
+    "seconds": 7.87,
+    "W_T_mean": 93.67532467532467,
+    "job_id": "E1_wagtail_awt_e0.4_s102",
+    "written": "2026-11-24T14:06:35+00:00",
+    "cycle": 1
+  }
+]

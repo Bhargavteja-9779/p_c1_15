@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E3b",
+    "project": "tomcat",
+    "method": "decomp",
+    "variant": "decomp_L1_W30",
+    "seed": 104,
+    "split": "test",
+    "W": 30,
+    "level": 1,
+    "gmean": 0.711377799065642,
+    "r0": 0.7187347138431437,
+    "r1": 0.7040961891175871,
+    "rdiff": 0.014638524725556601,
+    "auc": 0.789373642760398,
+    "mcc": 0.38958431033717783,
+    "n_eval": 17173,
+    "seconds": 30.01,
+    "job_id": "E3b_tomcat_decomp_L1_W30_s104",
+    "written": "2026-11-24T14:47:23+00:00",
+    "cycle": 1
+  }
+]

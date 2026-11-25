@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E0b",
+    "project": "neutron",
+    "method": "decomp",
+    "variant": "decomp_L1_W30",
+    "seed": 1,
+    "split": "dev",
+    "W": 30,
+    "level": 1,
+    "gmean": 0.8658158232272296,
+    "r0": 0.8432915334808623,
+    "r1": 0.8889417360285374,
+    "rdiff": 0.045650202547675156,
+    "auc": 0.9402661679258468,
+    "mcc": 0.6727915843045518,
+    "n_eval": 16406,
+    "seconds": 31.04,
+    "job_id": "E0b_neutron_decomp_L1_W30_s1",
+    "written": "2026-11-24T12:51:16+00:00",
+    "cycle": 1
+  }
+]

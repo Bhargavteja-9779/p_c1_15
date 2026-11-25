@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E1",
+    "project": "matplotlib",
+    "method": "law",
+    "variant": "law_lagakos_model",
+    "seed": 104,
+    "split": "test",
+    "delay_est": "lagakos",
+    "prior": "model",
+    "gmean": 0.6923271026387574,
+    "r0": 0.7970861142764122,
+    "r1": 0.6013363028953229,
+    "rdiff": 0.19574981138108927,
+    "auc": 0.8038915619216879,
+    "mcc": 0.34285748007394795,
+    "n_eval": 14980,
+    "seconds": 52.89,
+    "job_id": "E1_matplotlib_law_lagakos_model_s104",
+    "written": "2026-11-24T13:54:13+00:00",
+    "cycle": 1
+  }
+]

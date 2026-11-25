@@ -1,0 +1,28 @@
+[
+  {
+    "experiment": "E0c",
+    "project": "sentry",
+    "method": "lawm",
+    "variant": "lawm_soft_W30",
+    "seed": 0,
+    "split": "dev",
+    "W": 30,
+    "delay_est": "lagakos",
+    "label_noise_log": true,
+    "mode": "soft",
+    "gmean": 0.6924760777076625,
+    "r0": 0.630014964726003,
+    "r1": 0.7611297271421733,
+    "rdiff": 0.13111476241617026,
+    "auc": 0.7600011216125078,
+    "mcc": 0.3299945985111028,
+    "n_eval": 18211,
+    "seconds": 122.19,
+    "mean_q_true_bug_mean": 0.08690558814806085,
+    "mean_q_clean_mean": 0.016435921078873584,
+    "auc_dormant_mean": 0.7625944702339038,
+    "job_id": "E0c_sentry_lawm_soft_W30_s0",
+    "written": "2026-11-24T15:19:03+00:00",
+    "cycle": 2
+  }
+]

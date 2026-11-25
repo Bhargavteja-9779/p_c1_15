@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E1",
+    "project": "brackets",
+    "method": "awt",
+    "variant": "awt_e0.4",
+    "seed": 103,
+    "split": "test",
+    "delay_est": "lagakos",
+    "label_noise_log": true,
+    "eps": 0.4,
+    "gmean": 0.719260412788857,
+    "r0": 0.8583773403744599,
+    "r1": 0.6026901189860321,
+    "rdiff": 0.2556872213884278,
+    "auc": 0.8361526255996096,
+    "mcc": 0.45196796953781354,
+    "n_eval": 16364,
+    "seconds": 29.58,
+    "W_T_mean": 17.337278106508876,
+    "job_id": "E1_brackets_awt_e0.4_s103",
+    "written": "2026-11-24T13:21:12+00:00",
+    "cycle": 1
+  }
+]

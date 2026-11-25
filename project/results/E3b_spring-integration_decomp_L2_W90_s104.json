@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E3b",
+    "project": "spring-integration",
+    "method": "decomp",
+    "variant": "decomp_L2_W90",
+    "seed": 104,
+    "split": "test",
+    "W": 90,
+    "level": 2,
+    "gmean": 0.6065123460441384,
+    "r0": 0.3964539007092199,
+    "r1": 0.9278688524590164,
+    "rdiff": 0.5314149517497966,
+    "auc": 0.6966728121314797,
+    "mcc": 0.31370692479657425,
+    "n_eval": 7775,
+    "seconds": 9.39,
+    "job_id": "E3b_spring-integration_decomp_L2_W90_s104",
+    "written": "2026-11-24T14:45:56+00:00",
+    "cycle": 1
+  }
+]

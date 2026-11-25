@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E3b",
+    "project": "broadleaf",
+    "method": "decomp",
+    "variant": "decomp_L1_W30",
+    "seed": 104,
+    "split": "test",
+    "W": 30,
+    "level": 1,
+    "gmean": 0.738753178013257,
+    "r0": 0.800879208712159,
+    "r1": 0.6814464055101163,
+    "rdiff": 0.11943280320204275,
+    "auc": 0.8222959861307776,
+    "mcc": 0.41563168133619705,
+    "n_eval": 12332,
+    "seconds": 23.4,
+    "job_id": "E3b_broadleaf_decomp_L1_W30_s104",
+    "written": "2026-11-24T14:18:29+00:00",
+    "cycle": 1
+  }
+]

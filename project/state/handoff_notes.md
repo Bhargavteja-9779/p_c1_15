@@ -11,12 +11,11 @@
 | Install autostart (cron @reboot + 5-min watchdog) | `bash scripts/install_autostart.sh` |
 | Remove autostart (both layers) | `bash scripts/install_autostart.sh --remove` |
 | Regenerate this file | `python scripts/write_handoff.py` |
-| Keep runner alive + auto-commit (ephemeral container) | `bash scripts/watch_and_checkpoint.sh` |
 | Snapshot backup | `bash scripts/snapshot.sh` |
 
 ## Moving to a new account / machine
-1. Everything lives in git on branch `claude/zealous-lamport-bjc4um` of `bhargavteja-9779/p_c1_15` (pushed after every step; the earlier branch claude/dreamy-fermat-7983nm holds history up to the first handoff).
-2. On the new machine: `git clone` that repo, `git checkout claude/zealous-lamport-bjc4um`, `pip install -r project/requirements.txt`.
+1. Everything lives in git on branch `claude/keen-edison-jo222n` (older copies: claude/magical-bardeen-9yglkz, claude/zen-cray-ajbt81) of `bhargavteja-9779/p_c1_15` (pushed after every step).
+2. On the new machine: `git clone` that repo, `git checkout claude/keen-edison-jo222n`, `pip install -r project/requirements.txt`.
 3. Paste the contents of `project/BOOTSTRAP_PROMPT.txt` into the new agent session.
 
 ## Known problems / environment facts
@@ -32,3 +31,8 @@
 - Code: `src/` (runner, jobs, models), `scripts/` (status, report, audit, supervisor), `tests/`
 - Results: `results/raw_results.jsonl` (canonical), `results/*.json`, `tables/`, `figures/`
 - Paper: `paper/` ; reviews: `review/`
+
+## Untouched confirmation data (needed after ApacheJIT was used by E8, 2026-11-25)
+- JIT-Defects4J (Ni et al., 2022; built on Herbold et al.'s LLTC4J): 21 Java projects, 2,332 buggy / 24,987 clean commits. Buggy commits come from manually labelled fix lines via git blame, so fix commits (and their dates) can in principle be recovered via git. NOT yet checked whether the released files contain the bug->fix link; that would need data engineering (clone repos for timestamps).
+- ApacheJIT projects excluded by plan_v7 for size (<2000 commits: spark, zeppelin, mapreduce, zookeeper): untouched but small, weak.
+- Defectors (Zenodo 10.5281/zenodo.7708984): file-level Python dataset, not commit-level JIT -> probably unsuitable (UNVERIFIED).

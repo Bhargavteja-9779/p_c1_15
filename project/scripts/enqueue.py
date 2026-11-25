@@ -9,6 +9,14 @@ TEST = ["brackets", "broadleaf", "camel", "jgroups", "matplotlib", "npm", "sprin
 SE, SC = [0, 1, 2], [100, 101, 102, 103, 104]
 WGRID = [15, 30, 60, 90, 180]
 
+def _cand(fz):
+    """plan_v2 candidate chosen on dev by scripts/freeze_config.py (law_* or awt_*)."""
+    c = fz["candidate"]
+    if c.startswith("awt_e"):
+        return dict(method="awt", eps=float(c[5:]), delay_est="lagakos", label_noise_log=True, variant=c)
+    _, de, pr = c.split("_")
+    return dict(method="law", delay_est=de, prior=pr, variant=c + "_cand")
+
 def specs(exp):
     J = []
     if exp == "E0":
@@ -22,42 +30,104 @@ def specs(exp):
                 J.append(dict(method="law", delay_est=de, prior=pr, variant=f"law_{de}_{pr}", project=p, seed=s))
         for j in J: j.update(experiment="E0", split="dev")
         return J, 10
-    if exp == "E0b":   # plan_v2: ODaSC-style baseline, same 5-config budget (W grid, delta=0.9)
+    if exp == "E0b":   # plan_v2 dev diagnostics
         for p, s in itertools.product(DEV, SE):
-            for W in WGRID:
-                J.append(dict(method="odasc", W=W, odasc_delta=0.9, variant=f"odasc_W{W}", project=p, seed=s))
-        for j in J: j.update(experiment="E0", split="dev")
+            for eps in [0.2, 0.3, 0.4, 0.5]:
+                J.append(dict(method="awt", eps=eps, delay_est="lagakos", label_noise_log=True, variant=f"awt_e{eps}", project=p, seed=s))
+            for W in [30, 90]:
+                for lv in [1, 2]:
+                    J.append(dict(method="decomp", W=W, level=lv, variant=f"decomp_L{lv}_W{W}", project=p, seed=s))
+        for j in J: j.update(experiment="E0b", split="dev")
         return J, 11
-    if exp == "E0c":   # 6.4 ladder (H2/H3): threshold policies, dev only; baselines get the same option
+    if exp == "E0c":   # plan_v4 (cycle 2) dev
         for p, s in itertools.product(DEV, SE):
-            for pol in ["ratematch", "gmax_lat"]:
-                J.append(dict(method="nowait", thr_policy=pol, variant=f"nowait_{pol}", project=p, seed=s))
-                for de in ["lagakos", "naive"]:
-                    J.append(dict(method="law", delay_est=de, prior="base", thr_policy=pol, variant=f"law_{de}_base_{pol}", project=p, seed=s))
-            for de in ["lagakos", "naive"]:   # added 2026-11-25 after E0: LAW-model has best dev AUC but broken operating point
-                J.append(dict(method="law", delay_est=de, prior="model", thr_policy="gmax_lat", variant=f"law_{de}_model_gmax_lat", project=p, seed=s))
-            for W in WGRID:
-                for m, extra in [("wait", {}), ("orb", {}), ("odasc", {"odasc_delta": 0.9})]:
-                    J.append(dict(method=m, W=W, thr_policy="gmax_lat", variant=f"{m}_W{W}_gmax_lat", project=p, seed=s, **extra))
-        for j in J: j.update(experiment="E0", split="dev")
+            for mode in ["soft", "count"]:
+                for W in [30, 90]:
+                    J.append(dict(method="lawm", W=W, mode=mode, delay_est="lagakos", label_noise_log=True, variant=f"lawm_{mode}_W{W}", project=p, seed=s))
+        for j in J: j.update(experiment="E0c", split="dev")
         return J, 12
-    if exp in ("E1", "E2", "E3"):   # plan_v3: everything comes from state/frozen_config.json
-        fz = read_json(STATE / "frozen_config.json")
-        assert fz and fz.get("plan") == "plan_v3", "frozen_config.json (plan_v3) missing"
-        P = fz["proposed"]
-        if exp == "E1":
-            cfgs = [P] + fz["baselines"] + [fz["oracle"]]
-        elif exp == "E2":
-            cfgs = [dict(variant="law_lagakos_model", method="law", delay_est="lagakos", prior="model"),
-                    dict(variant="law_naive_model_gmax_lat", method="law", delay_est="naive", prior="model", thr_policy="gmax_lat"),
-                    dict(variant="law_lagakos_base_gmax_lat", method="law", delay_est="lagakos", prior="base", thr_policy="gmax_lat"),
-                    dict(variant="nowait_gmax_lat", method="nowait", thr_policy="gmax_lat")]
-        else:
-            keep = {P["variant"], "odasc_W30", "wait_W90", "odasc_W15_gmax_lat"}
-            cfgs = [dict(c, delay_scale=2.0, variant=c["variant"] + "_ds2") for c in [P] + fz["baselines"] if c["variant"] in keep]
+    if exp == "E0d":   # plan_v5 odasc-style baseline, dev, equal budget
+        for p, s in itertools.product(DEV, SE):
+            for W in [30, 90]:
+                for th in [0.8, 0.9]:
+                    J.append(dict(method="odasc", W=W, theta=th, knn_k=20, variant=f"odasc_W{W}_t{th}", project=p, seed=s))
+        for j in J: j.update(experiment="E0d", split="dev")
+        return J, 13
+    if exp in ("E4", "E5", "E6"):   # plan_v5 test confirmation / ablation / robustness
+        fz = read_json(STATE / "frozen_config_v5.json"); assert fz, "run scripts/freeze_v5.py first"
+        lw = fz["lawm"]; _, mode, w = lw.split("_"); W = int(w[1:])
+        od = fz["odasc"]; _, ow, ot = od.split("_"); oW, th = int(ow[1:]), float(ot[1:])
+        L = dict(method="lawm", W=W, mode=mode, delay_est="lagakos")
+        O = dict(method="odasc", W=oW, theta=th, knn_k=20)
         for p, s in itertools.product(TEST, SC):
-            for c in cfgs:
-                J.append(dict(c, project=p, seed=s))
+            if exp == "E4":
+                J += [dict(L, variant=lw, label_noise_log=True), dict(O, variant=od)]
+            if exp == "E5":
+                J += [dict(L, prior_src="online", variant=lw + "_abl_onlineprior"), dict(L, crossfit=False, variant=lw + "_abl_nocrossfit"),
+                      dict(L, use_S=False, variant=lw + "_abl_noS")]
+            if exp == "E6":
+                J += [dict(L, delay_scale=2.0, variant=lw + "_ds2"), dict(O, delay_scale=2.0, variant=od + "_ds2")]
+            k = {"E4": 2, "E5": 3, "E6": 2}[exp]
+            J[-k:] = [dict(j, project=p, seed=s) for j in J[-k:]]
+        for j in J: j.update(experiment=exp, split="test")
+        return J, {"E4": 14, "E5": 16, "E6": 15}[exp]
+    if exp == "E0e":   # plan_v6 dual-evidence denoiser, dev
+        for p, s in itertools.product(DEV, SE):
+            for W in [30, 90]:
+                for k in [20, 50]:
+                    J.append(dict(method="lawm", mode="dual", W=W, knn_k=k, delay_est="lagakos", variant=f"dual_W{W}_k{k}", project=p, seed=s))
+        for j in J: j.update(experiment="E0e", split="dev")
+        return J, 12
+    if exp == "E7":   # plan_v6 MSTDP protocol: offline chronological 80/20, one training at the split, test on last 20%
+        from src.data import load_project
+        fz = read_json(STATE / "frozen_config_v6.json"); assert fz, "freeze plan_v6 first"
+        MST = ["brackets", "camel", "fabric", "jgroups", "neutron", "nova", "npm", "spring-integration", "tomcat"]
+        cands = [dict(method="oracle", variant="final_labels"), dict(method="nowait", variant="observed_at_split"),
+                 dict(method="wait", W=90, variant="wait_W90")] + [dict(c) for c in fz["candidates_specs"]]
+        for p in MST:
+            n = len(load_project(p)); w = int(0.8 * n)
+            for s, c in itertools.product(SC, cands):
+                J.append(dict(c, project=p, seed=s, warmup=w, update_every=n, eval_end_gap_days=0,
+                              split="dev" if p in DEV else "test"))
+        for j in J: j.update(experiment="E7")
+        return J, 18
+    if exp == "E8":   # plan_v7: FRESH confirmation on ApacheJIT (9 projects), frozen configs, no re-tuning
+        from src.data import AJ_PROJECTS
+        fz = read_json(STATE / "frozen_config_v6.json"); assert fz, "run scripts/freeze_v6.py first"
+        meths = [dict(method="nowait"), dict(method="oracle"), dict(method="wait", W=90, variant="wait_W90"),
+                 dict(method="orb", W=90, variant="orb_W90"), dict(method="wait", W=30, variant="wait_W30"),
+                 dict(method="decomp", W=30, level=1, variant="decomp_L1_W30")] + [dict(c) for c in fz["candidates_specs"]]
+        for p, s, m in itertools.product(AJ_PROJECTS, SC, meths):
+            J.append(dict(m, project="aj_" + p, seed=s))
+        for j in J: j.update(experiment="E8", split="fresh")
+        return J, 14
+    if exp == "E3b":   # plan_v3 decomposition on test projects (pre-registered)
+        for p, s in itertools.product(TEST, SC):
+            for W in [30, 90]:
+                J.append(dict(method="wait", W=W, variant=f"wait_W{W}", project=p, seed=s))
+                for lv in [1, 2]:
+                    J.append(dict(method="decomp", W=W, level=lv, variant=f"decomp_L{lv}_W{W}", project=p, seed=s))
+        for j in J: j.update(experiment="E3b", split="test")
+        return J, 25
+    if exp in ("E1", "E2", "E3"):
+        fz = read_json(STATE / "frozen_config.json")
+        assert fz, "frozen_config.json missing: run scripts/freeze_config.py after E0"
+        for p, s in itertools.product(TEST, SC):
+            if exp == "E1":
+                J += [dict(method="nowait"), dict(method="oracle"),
+                      dict(method="wait", W=fz["wait_W"], variant=f"wait_W{fz['wait_W']}"),
+                      dict(method="orb", W=fz["orb_W"], variant=f"orb_W{fz['orb_W']}"),
+                      dict(method="law", delay_est="lagakos", prior="model", variant="law_lagakos_model"),
+                      _cand(fz)]
+            if exp == "E2":
+                J += [dict(method="law", delay_est=de, prior=pr, variant=f"law_{de}_{pr}")
+                      for de, pr in [("naive", "model"), ("lagakos", "base"), ("naive", "base")]]
+            if exp == "E3":
+                J += [dict(method="nowait", delay_scale=2.0, variant="nowait_ds2"),
+                      dict(method="wait", W=fz["wait_W"], delay_scale=2.0, variant=f"wait_W{fz['wait_W']}_ds2"),
+                      dict(method="orb", W=fz["orb_W"], delay_scale=2.0, variant=f"orb_W{fz['orb_W']}_ds2"),
+                      dict(method="law", delay_est="lagakos", prior="model", delay_scale=2.0, variant="law_lagakos_model_ds2")]
+            J[-(6 if exp == "E1" else 3 if exp == "E2" else 4):] = [dict(j, project=p, seed=s) for j in J[-(6 if exp == "E1" else 3 if exp == "E2" else 4):]]
         for j in J: j.update(experiment=exp, split="test")
         return J, {"E1": 20, "E2": 30, "E3": 40}[exp]
     raise SystemExit("unknown experiment")
@@ -66,8 +136,6 @@ if __name__ == "__main__":
     exp = sys.argv[1]; quick = "--quick" in sys.argv
     J, prio = specs(exp)
     qf = STATE / ("queue_quick.json" if quick else "queue.json")
-    from src.runner import qlock
-    _lk = qlock("quick" if quick else "full"); _lk.__enter__()     # never race the running workers
     q = read_json(qf, {"jobs": []}); have = {j["id"] for j in q["jobs"]}
     st = read_json(STATE / "agent_state.json", {})
     if quick:  # one job per method/variant on one project
@@ -83,4 +151,4 @@ if __name__ == "__main__":
         q["jobs"].append({"id": jid, "kind": "jit_run", "params": j, "status": "pending", "attempts": 0,
                           "cycle": st.get("cycle", 1), "priority": prio + (1 if j["project"] == "nova" else 0)})
         added += 1
-    write_json(qf, q); _lk.__exit__(None, None, None); print(f"added {added} jobs to {qf.name} (total {len(q['jobs'])})")
+    write_json(qf, q); print(f"added {added} jobs to {qf.name} (total {len(q['jobs'])})")

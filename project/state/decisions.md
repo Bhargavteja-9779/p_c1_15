@@ -29,32 +29,77 @@ Every decision with reason and UTC timestamp. Append-only.
 - **2026-11-24T03:35:03+00:00** — User allowed Frontiers journals; checked Frontiers in AI (median 78 d), Big Data (74 d), Computer Science (100 d)
   - Reason: None faster than JKSU-CIS (71–74 d) and quartiles UNVERIFIED -> keep JKSU-CIS (journal_selection/journal_comparison.md addendum)
 
-- **2026-11-24T23:02:09+00:00** — Liu et al. 2024a (PU learning for JIT-SDP, EMSE 29(5):98) marked UNVERIFIED / not found
-  - Reason: 8 searches in Crossref/OpenAlex incl. EMSE 2024 listing found no such paper; EMSE 29(4):98 is an unrelated paper. Not used as prior art or reference unless a resolvable DOI appears.
+- **2026-11-24T04:05:16+00:00** — plan_v2: add E0b dev diagnostics (awt eps grid, decomposition with true labels); LAW kept as pre-specified but recorded as failing on dev
+  - Reason: Dev results + diagnosis (results/diag_law_neutron.json, results/diag_survival_dev.txt); no test project touched
 
-- **2026-11-24T23:02:09+00:00** — plan_v2: add ODaSC-style baseline (batch adaptation: kNN label confidence at labelling time, delta=0.9, k=50, pool=5000 recent labelled commits) tuned over W in {15,30,60,90,180} on dev = 5 configs, same budget as wait/orb
-  - Reason: ODaSC is the closest prior work (same noise, same data); Rule 6 requires strongest baselines with equal tuning budget. Exact DenStream/Hoeffding OOB reimplementation is outside our shared-learner protocol; adaptation keeps its label-confidence rule on the shared LightGBM learner and is described as an adaptation.
+- **2026-11-24T04:05:16+00:00** — Liu et al. 2024a ('PU learning for JIT-SDP', EMSE 29(5):98) marked UNVERIFIED
+  - Reason: Cited only in MSTDP (JKSU-CIS 2026). Crossref and OpenAlex searches by title and venue/volume/issue return no such record; the paper cannot be opened. Not used as evidence either way
 
-- **2026-11-24T23:02:09+00:00** — plan_v2: LAW configuration for E1 chosen on dev from its 4 E0 variants (best mean dev G-mean), instead of the plan_v1 pre-specified lagakos+model
-  - Reason: Equal treatment: baselines pick W from 5 configs on dev; plan_v1 tuning_budget already allowed <=5 configs per method. Decided before any test-project run; partial E0 shows lagakos+model unstable (std .095).
+- **2026-11-24T04:05:16+00:00** — ODaSC baseline reimplementation deferred
+  - Reason: Only needed if a method claim survives dev; ODaSC Table II is used now as literature evidence (opt≈estimated)
 
-- **2026-11-24T23:02:09+00:00** — Runner fix: a restarted worker now resets its own stale 'running' jobs
-  - Reason: After the account handoff, E0_sentry_law_lagakos_base_s2 stayed 'running' forever because worker 0 holds its own lock and looked alive.
+- **2026-11-24T04:06:17+00:00** — Reset orphaned queue record E0_sentry_law_lagakos_base_s2 to pending
+  - Reason: Left 'running' by the reclaimed container; its worker id (0) is alive again in the new container so the automatic reset did not fire
 
-- **2026-11-24T23:04:02+00:00** — Test projects are not touched until the selected LAW variant beats the best baseline (incl. ODaSC) on dev
-  - Reason: Running E1 with a method already losing on dev would spend the held-out set; any later LAW revision would then be evaluated on test data already seen (Rule 5). Ladder 6.4 runs on dev first.
+- **2026-11-24T12:46:15+00:00** — Reset 96 E0b jobs to pending and relaunched workers
+  - Reason: Workers had imported src/jit.py before awt/decomp were added (ValueError: awt). Infrastructure failure, not a method result; no compute spent
 
-- **2026-11-24T23:13:20+00:00** — 6.4 ladder rung 3-4: enqueue E0c (dev only, 252 runs): thr_policy in {ratematch (H3 as pre-written), gmax_lat (latency-corrected G-mean threshold)} for nowait and LAW-base; gmax_lat for all 15 wait/orb/odasc configs
-  - Reason: Dev diagnosis showed operating point dominates G-mean differences; baselines get the same threshold option so any gain is not an artefact of unequal treatment. ratematch already looked weak on a 5000-commit fabric slice (0.547 vs wait-W90 0.669); tested fully anyway as pre-registered.
+- **2026-11-24T13:19:54+00:00** — plan_v2 rule outcome: no candidate (law_*, awt_*) beats best dev baseline -> E1 runs on test as pre-registered NEGATIVE-RESULT confirmation
+  - Reason: plan_v2.yaml proposed_method_rule
 
-- **2026-11-25T00:25:33+00:00** — E0c extended with law_{lagakos,naive}_model_gmax_lat (24 runs, dev only)
-  - Reason: Post-E0 observation: LAW-model has best dev AUC but broken operating point; the latency-corrected threshold targets exactly that. Counted as 2 more variants in the forking-paths ledger.
+- **2026-11-24T13:19:55+00:00** — Frozen config: wait W*=90, orb W*=90, best dev baseline=orb_W90
+  - Reason: Highest mean dev G-mean (E0, dev projects only); proposed method config pre-specified, not tuned
 
-- **2026-11-25T00:25:33+00:00** — Runner: dead-worker resets refund the attempt; enqueue.py takes the queue lock
-  - Reason: Container restart on 2026-11-25 would otherwise push healthy jobs toward failed_permanent; enqueue previously required stopping workers.
+- **2026-11-24T13:20:12+00:00** — plan_v3 written and E1, E3b, E3, E2 enqueued on test projects (first test touch)
+  - Reason: Config frozen on dev (state/frozen_config.json); decomposition pre-registered as H3 before test runs
 
-- **2026-11-25T07:54:45+00:00** — FROZEN (plan_v3): proposed = LAW lagakos+model with latency-corrected G-mean threshold; comparators nowait, wait_W90, orb_W90, odasc_W30 (primary), wait_W30_gmax_lat, odasc_W15_gmax_lat
-  - Reason: Best mean dev G-mean 0.763 vs best baseline odasc_W30 0.750 (+0.013, below the 0.02 margin; 44 dev variants). Freezing now and letting the held-out confirmation decide, instead of further dev tuning that would only add forking paths.
+- **2026-11-24T15:00:34+00:00** — Cycle 1 outcome: H1 (LAW) and candidate awt not supported on test; H3 supported. Gates G5/G6 fail for a method claim -> Section 6.4 ladder, cycle 2 targets a feature-based dormant-bug denoiser without self-confirmation (plan_v4, dev first)
+  - Reason: results/statistics.json; journal RESULT entries
 
-- **2026-11-25T21:45:40+00:00** — Start cycle 2 to finish E2 (132 runs) and E3 (200 runs) of the unchanged frozen plan_v3
-  - Reason: Cycle-1 budget (15 CPU-h) ran out after E1; E2/E3 are part of the same pre-registered confirmation, no re-planning, no change after seeing E1.
+- **2026-11-24T15:04:02+00:00** — Cycle 2 started (plan_v4: lawm = mature cross-fitted dormant-bug posterior on the wait set); remaining cycle-1 E3/E2 jobs are charged to cycle 2 budget
+  - Reason: Section 6.4 ladder rung 3; budget accounting kept simple and conservative
+
+- **2026-11-24T15:52:36+00:00** — H4 holds on dev -> plan_v5: freeze lawm_soft_W30; add ODaSC-style baseline (equal 4-config dev budget), lawm ablations, robustness; skip remaining cycle-1 E2 (LAW ablation)
+  - Reason: LAW failed on dev and test; ablating it supports no claim; saves ~2 CPU-h for the cycle-2 confirmation
+
+- **2026-11-24T19:00:23+00:00** — Owner directive recorded in USER_DIRECTIVES.md, BOOTSTRAP_PROMPT.txt and MASTER_PROMPT addendum: iterate until top-notch, benchmark vs JKSU-CIS papers, no honest exit
+  - Reason: Owner message 2026-11-24 (paper judged not good enough for the journal)
+
+- **2026-11-24T19:00:23+00:00** — Hold the E4 test confirmation (lawm/odasc) until the next method-development round on dev is finished
+  - Reason: Running test now and again after new methods would use the test projects twice; one frozen confirmation of the final candidate set keeps the test clean
+
+- **2026-11-24T19:11:12+00:00** — plan_v5 freeze: lawm=lawm_soft_W30 (0.7551), odasc=odasc_W30_t0.8 (0.7598); lawm beats odasc on dev: False
+  - Reason: best mean dev G-mean, dev projects only
+
+- **2026-11-25T13:07:06+00:00** — plan_v6: dual-evidence denoiser (noisy-OR of mature-scorer posterior and kNN label composition) on dev; MSTDP-protocol experiment E7 pre-registered
+  - Reason: Complementarity of lawm/odasc on dev; owner directive to compare with JKSU-CIS papers (MSTDP uses the same data)
+
+- **2026-11-25T13:07:06+00:00** — GitHub push currently fails (403, authentication must be reconnected by owner); commits accumulate locally and autocommit retries
+  - Reason: git push error 2026-11-25
+
+- **2026-11-25T13:15:25+00:00** — Parallel branches found (dreamy-fermat cycle 2, zealous-lamport, keen-edison, magical-bardeen) forked from b18fc8e; continue on zen-cray (most recent, owner directives); Cabral test projects declared 'used'; fresh confirmation on ApacheJIT (plan_v7)
+  - Reason: git branch -a 2026-11-25; dreamy-fermat RESULTS_SUMMARY shows the same test projects used with many variants
+
+- **2026-11-25T13:34:47+00:00** — Session magical-bardeen resumed 2026-11-25: adopted zen-cray-ajbt81 state (most advanced: cycle 2, plan_v6 E0e running, plan_v7 pre-registered) into branch claude/magical-bardeen-9yglkz via merge -s ours; zen-cray's heartbeat was 12 min stale (session presumed stopped)
+  - Reason: Owner asked to check the most recent branch and continue; development branch for this session is magical-bardeen. magical-bardeen's own cycle-1 work (plan_v2: LAT threshold policy, river-based ODaSC reimplementation) stays in git history (commit b90ea74); zen-cray found threshold effects small for denoisers (diag_threshold_dev.json), so LAT is not carried forward as a candidate.
+
+- **2026-11-25T13:34:47+00:00** — Added scripts/freeze_v6.py and enqueue E8 (plan_v7 ApacheJIT confirmation, exactly the plan_v7 method list); ApacheJIT downloaded and sha256-verified; smoke test on the first 1200 kafka commits checked only that every method runs (no metrics inspected)
+  - Reason: plan_v7 required these and they did not exist yet
+
+- **2026-11-25T14:53:00+00:00** — Owner asked to continue from the most recent branch: adopted claude/magical-bardeen-9yglkz (cycle 2, heartbeat 28 min stale → session presumed stopped) into claude/keen-edison-jo222n via merge -s ours (keen-edison history kept). Keen-edison's parallel cycle-1 dev selection (E0b/E0c calibration/fsc/fixed-rate grids, dev only, never run on test) is kept under archive/keen_edison_cycle1/ for reference; its compute is not counted in this lineage's budget.json. Runners + autocommit relaunched on keen-edison.
+  - Reason: owner instruction ("check recent branch and continue from there")
+
+- **2026-11-25T20:19:39+00:00** — Cycle 3 started (cycle-2 budget 15 h exhausted). Re-queued 3 E0e nova jobs (skipped_budget); E3 (144 jobs, Cabral test robustness, test set already declared 'used' by plan_v7) stays skipped_budget until E8 is done
+  - Reason: E0e completion is required by freeze_v6; E8 fresh confirmation has priority over E3
+
+- **2026-11-25T20:59:35+00:00** — plan_v6 freeze: dual=dual_W30_k50 (0.6812); lawm=lawm_soft_W30 (0.7551), odasc=odasc_W30_t0.8 (0.7598); primary (best dev) = odasc_W30_t0.8; H5 on dev: False
+  - Reason: best mean dev G-mean, dev projects only (plan_v6/plan_v7)
+
+- **2026-11-25T21:00:02+00:00** — E8 enqueued exactly as pre-registered in plan_v7 (9 ApacheJIT projects x 5 confirm seeds x 9 methods = 405 jobs) despite H5 being false on dev
+  - Reason: plan_v7 pre-registration; no changes after seeing dev results
+
+- **2026-11-25T21:04:27+00:00** — final_report E8/H6: the primary candidate (best dev mean) is odasc_W30_t0.8 itself, so the pre-registered 'primary vs odasc' test is a degenerate self-comparison; dropped, Holm over the 2 waiting baselines. Our own methods (dual_W30_k50, lawm_soft_W30) vs wait_W90/orb_W90/odasc are reported descriptively as pre-registered
+  - Reason: fixed before any E8 result was inspected; Wilcoxon on all-zero differences is undefined
+
+- **2026-11-25T21:37:55+00:00** — Gates: G5 stays fail (H6 failed on fresh data); G7 -> pass (H3 replicated on ApacheJIT 9/9). ApacheJIT declared used for confirmation. Next round (plan_v8, dev only): fix dual's nova failure with a principled latency-corrected neighbour posterior, then find an untouched confirmation dataset
+  - Reason: pre-registered plan_v7 analysis; owner directive to keep iterating

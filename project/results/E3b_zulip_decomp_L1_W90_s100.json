@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E3b",
+    "project": "zulip",
+    "method": "decomp",
+    "variant": "decomp_L1_W90",
+    "seed": 100,
+    "split": "test",
+    "W": 90,
+    "level": 1,
+    "gmean": 0.6685709628292295,
+    "r0": 0.5986674505193024,
+    "r1": 0.7466367713004485,
+    "rdiff": 0.1479693207811461,
+    "auc": 0.732892451925316,
+    "mcc": 0.3026118038353306,
+    "n_eval": 13774,
+    "seconds": 24.36,
+    "job_id": "E3b_zulip_decomp_L1_W90_s100",
+    "written": "2026-11-24T14:53:36+00:00",
+    "cycle": 1
+  }
+]

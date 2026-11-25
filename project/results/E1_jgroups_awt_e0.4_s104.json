@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E1",
+    "project": "jgroups",
+    "method": "awt",
+    "variant": "awt_e0.4",
+    "seed": 104,
+    "split": "test",
+    "delay_est": "lagakos",
+    "label_noise_log": true,
+    "eps": 0.4,
+    "gmean": 0.4817406357405024,
+    "r0": 0.28083989501312334,
+    "r1": 0.8263570961412688,
+    "rdiff": 0.5455172011281455,
+    "auc": 0.5771057907846198,
+    "mcc": 0.0924843000351627,
+    "n_eval": 17536,
+    "seconds": 33.28,
+    "W_T_mean": 198.66480446927375,
+    "job_id": "E1_jgroups_awt_e0.4_s104",
+    "written": "2026-11-24T13:46:16+00:00",
+    "cycle": 1
+  }
+]

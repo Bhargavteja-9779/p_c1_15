@@ -1,0 +1,28 @@
+[
+  {
+    "experiment": "E0c",
+    "project": "nova",
+    "method": "lawm",
+    "variant": "lawm_soft_W90",
+    "seed": 2,
+    "split": "dev",
+    "W": 90,
+    "delay_est": "lagakos",
+    "label_noise_log": true,
+    "mode": "soft",
+    "gmean": 0.8132964587098044,
+    "r0": 0.7740063642603108,
+    "r1": 0.85458099609043,
+    "rdiff": 0.08057463183011926,
+    "auc": 0.8728204249095588,
+    "mcc": 0.5699224112037047,
+    "n_eval": 43820,
+    "seconds": 500.6,
+    "mean_q_true_bug_mean": 0.14155187533611344,
+    "mean_q_clean_mean": 0.01382509482126961,
+    "auc_dormant_mean": 0.8800321610270807,
+    "job_id": "E0c_nova_lawm_soft_W90_s2",
+    "written": "2026-11-24T15:52:01+00:00",
+    "cycle": 2
+  }
+]

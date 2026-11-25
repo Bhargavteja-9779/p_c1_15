@@ -1,0 +1,1805 @@
+The Impact of Dormant Defects on Defect Prediction: a Study of 19 ApacheProjects
+DAVIDE FALESSI, University of Rome Tor Vergata, Italy
+AALOK AHLUWALIA, California Polytechnic State University, USA
+MASSIMILIANO DI PENTA, University of Sannio, Italy
+Defect prediction models can be beneficial to prioritize testing, analysis, or code review activities, and has been the subject of a substantial
+effort in academia, and some applications in industrial contexts. A necessary precondition when creating a defect prediction
+model is the availability of defect data from the history of projects. If this data is noisy, the resulting defect prediction model could result to be
+unreliable. One of the causes of noise for defect datasets is the presence of "dormant defects", i.e., of defects discovered several releases after their
+introduction. This can cause a class to be labeled as defect-free while it is not, and is, therefore "snoring". In this paper, we investigate the impact of
+snoring on classifiers’ accuracy and the effectiveness of a possible countermeasure, i.e., dropping too recent data from a training set. We analyze the
+accuracy of 15 machine learning defect prediction classifiers, on data from more than 4,000 defects and 600 releases of 19 open source projects from
+the Apache ecosystem. Our results show that on average across projects: (i) the presence of dormant defects decreases the recall of defect
+prediction classifiers, and (ii) removing from the
+training set the classes that in the last release are labeled as not defective significantly improves the accuracy of the classifiers. In summary, this
+paper provides insights on how to create defects datasets by mitigating the negative effect of dormant defects on defect prediction.
+CCS Concepts: • Software and its engineering → Software defect analysis. Additional Key
+Words and Phrases: Defect prediction, Fix-inducing changes, Dataset bias
+ACM Reference Format:
+
+1
+
+INTRODUCTION
+
+Defect prediction models aim at identifying software artifacts that are likely to exhibit a defect [47, 54–56, 72, 75]. The main
+purpose of defect prediction is to reduce the cost of testing, analysis, or code review, by prioritizing developers’ effort on specific
+artifacts. In this area, researchers have proposed the use of different models to predict defects, leveraging for example product
+metrics [4, 24, 26, 34, 52], process metrics [48], the knowledge of where previous defects
+occurred [37, 56], information about change-inducing fixes [33, 35] and, recently, using deep learning techniques to automatically
+engineer features from source code elements [74].
+Authors’ addresses: Davide Falessi, falessi@ing.uniroma2.it, University of Rome Tor Vergata, Italy; Aalok Ahluwalia, ahluwali@calpoly.edu, California Polytechnic State
+University, USA; Massimiliano Di Penta, dipenta@unisannio.it, University of Sannio, Italy.
+
+1
+
+2
+
+Falessi et al.
+Several researchers have worked on improving the performance of defect estimation models using techniques such as tuning [20, 23, 70],
+
+re-balancing [1, 5], or feature selection [71]. In order to promote the usage and improvement of prediction models, researchers have
+provided means to create [21, 81], collect [16] and select [22, 50, 63] defect datasets. Ultimately, the reliability of a prediction model depends
+on the quality of the dataset [40, 65]. Previous work has identified sources of noise in datasets, including defect misclassification [6, 27, 36,
+60, 69] and defect origin, [62] and proposed solutions to deal with them.
+In summary, while researchers are attempting to build better models for defect prediction, the quality of the datasets used to train such a
+model plays a paramount role in obtaining accurate and usable results. To predict which classes are defect-prone, defect prediction classifiers
+need to be trained on a dataset where classes in releases have been previously labeled as defective or not. The best way to identify when a
+defect has been introduced in a software project is to use a "realistic approach" , i.e., using the affected version reported in Jira [79]. Another
+viable approach is the SZZ algorithm [38, 66]. SZZ exploits the versioning system annotation mechanism (e.g., git blame) to determine, for
+the source code lines that have been changed in a defect fix, when they have last been changed before such a fix. On the one hand, assigning
+defects onto releases based on Jira fully reflects the outcome of the bug triaging, however such information, in existing datasets, not only is
+fairly incomplete, but, also, it may not be available immediately as soon as a bug is discovered. On the other hand, SZZ is particularly useful
+in complementing the realistic approach, i.e., SZZ can be used for defects where the affect version is not reported in Jira. At the same time, it
+is known to be subject to imprecisions [13].
+Regardless of the specific approach to identify the origin of defects, defects need to be fixed before any approach can be used to label classes
+as defective or not. Specifically, a defect may be discovered several releases after its introduction; this phenomenon has been called “dormant
+defect” [8, 61]. Thus, if we observe today the status of a class in its current version, it can be labeled as not defective while it is actually
+defective. Thus, a class has a noise that we call “snoring" under two conditions: (i) it contains at least one dormant defect, and (ii) it is labeled
+while all contained defects are stilldormant.
+In a recent paper [3] we found that most of the defects in a project slept for more than 20% of releases and that the proportion of defective
+classes that are not identified as defective is more than 25% even if we ignore 50% of releases. Now that we know that defects sleep and
+datasets snore, we want to know and inhibit their negative impact on defect prediction. Thus, in this study, we address the following research
+questions:
+• RQ1: Does snoring reduce defect prediction performance? We conjecture that the presence of snoring classes can bias classifiers during
+training and hence can negatively impact the classifiers’ performance. In this research question, we investigate the extent to which the
+snoring that exists in open source projects impacts the performance of classifiers in predicting defect-prone classes.
+• RQ2: Does defect prediction performance improve if we remove from the training set the classes that are labeled as non-defective in the
+last releases? Snoring classes are, by definition, more frequent in more recent releases, i.e., in releases closer to when classes are
+labeled. Moreover, classes labeled as defective cannot snore. This happens
+because such recent releases contain defects that may not have been discovered yet. Therefore, we might remove noise and hence
+improves the performance of the classifiers by ignoring in the training set the classes that in the last releases are labeled as not
+defective. At the same time, if we reduce too much the training set by removing several recent releases because they are potentially
+affected by snoring, the limited availability of data would also affect the classifiers’ performance. In other words, is it better to train a
+classifier on a big noisy dataset or on
+
+The Impact of Dormant Defects on Defect Prediction: a Study of 19 Apache Projects
+
+3
+
+a less noisy yet smaller dataset? Where is the sweet spot? In this research question, we measure the impact of a
+countermeasure for snoring, which consists of removing from the training set the classes that in the last releases are labeled
+as not defective.
+In our empirical study, we analyze data from 19 Apache projects featuring a total of more than 4,000 defects and 600 releases.
+Also, we compare the performance of 15 different machine learning classifiers in the context of within-project across-release defect
+prediction. Our results show that:
+(1) Snoring decreases the performance of each of the 15 classifiers. More specifically, while precision is not sig- nificantly
+affected, the presence of snoring significantly affects recall, with a large effect size on each of the 15 classifiers. The
+effect size of snoring on other performance indicators, such as the Matthews Correlation Coefficient (MCC), the Area
+Under the Receiving Operating Characteristics Curve (AUC), and Cohen Kappa is medium or large.
+(2) Removing from the training set the classes that are labeled as non-defective in the last release increases the classifiers’
+performance. For instance, Recall, F1, Kappa, and Matthews increase by about 30%. Removing a further release could
+further improve performance, however going behind worsen the performances, because the classifiers are trained with less
+and outdated data.
+The remainder of the paper is structured as follows. Section 2 describes the empirical study design. Section 3 reports and
+discusses the results of the empirical investigation. Section 5 discusses the threats to the study validity. Section 6 discusses the
+related literature, focusing in particular on noise and imprecision on defect prediction, and on techniques to build defect prediction
+datasets. Finally, Section 7 concludes the paper and outlines directions for future work.
+2 EMPIRICAL STUDY DESIGN
+The goal of this study is to investigate the effect of snoring data on classifiers’ performance, their evaluation, and the
+effectiveness of a countermeasure. The quality focus is the performance of such models, which can be affected by snoring. The
+perspective of the study is of researchers or practitioners that want to improve the way defect prediction datasets are constructed so
+that classifiers can more accurately predict defect-prone classes.
+2.1
+
+Definition of Snoring Classes
+
+To better understand when and how classes snore, let us consider a project with three releases, r1, r2, and r3. If a defect has been
+introduced in r1 and only fixed in r3, then the presence of the defect would not be considered in r1 and r2. If in r1 and r2 a class does
+not exhibit any other defect but the dormant defect in question, such a class will be erroneously labeled as non-defective in r1 and
+r2. This class is a false negative and it is a snoring noise in defect dataset. If in r1 and r2 a class does exhibit at least another defect,
+then the defect sleeping in r1 and r2 does not impact the labeling of the class since this class is labeled as defective anyway. This
+class is a true positive. Table 1 reports a scenario of a project in which events related to defects (I = introduced, N = nothing, and F
+= fixed) happen in three releases (columns) and impact three classes (rows). A defect is defined as a post-release defect if it is fixed
+in a release after the one it has been introduced. Thus, a defective class is a class having at least one post-release defect. For
+instance, in column 2, row 2 of Table 1, a defect in class C1 is introduced and fixed in the same release, r1. Thus, C1 is not
+defective as it contains no post-release defect.
+Based on the events described in Table 1, Table 2 reports the (post-release) defectiveness for a class, when it is labeled at r2
+(left-side), or r3 (right-side). Each class in each release is labeled as defective (D) or not defective (ND). It is
+
+4
+
+Falessi et al.
+
+Table 1. An example of a project in which events (I = introduced, N = nothing, and F = fixed) happen in three releases and three different classes.
+
+C1
+C2
+C3
+
+r1
+IF
+I
+II
+
+r2
+I
+N
+F
+
+r3
+F
+F
+F
+
+Table 2. Post-release defectiveness of a class in a specific release.
+Dataset created at r2
+
+Classes
+C1
+C2
+C3
+
+r1
+ND
+ND
+D
+
+Dataset created at r3.
+
+Classes
+C1
+C2
+C3
+
+r1
+ND
+D
+D
+
+r2
+D
+D
+D
+
+important to note that the label of C2 in r1 changes on whether it is labeled at the end of r2 or r3. Specifically, if C2 is labeled at the end of
+r2, then the introduction is not discovered and hence the class C2 at r1 is labeled as not defective.
+Table 3. How dormant defect bias datasets
+Dataset created at r2.
+
+Classes
+C1
+C2
+C3
+
+r1
+TN
+FN
+TP
+
+Dataset created at r3.
+
+Classes
+C1
+C2
+C3
+
+r1
+TN
+TP
+TP
+
+r2
+TP
+TP
+TP
+
+Table 3 reports the snoring caused by snoring, of a class in a release, according to when the dataset is created, in terms of FN = the class is
+erroneously marked as not defective despite being defective, TN = the class is marked as not defective and is not defective and TP = the
+class is marked as defective. Specifically, C2 at r1 is a FN for a dataset created at the end of r2 (left-side table) and a TP for dataset created at
+r3 (right-side table). Note that we consider FN and do not consider FP because the dormant defects cannot introduce FP, i.e., if a class is
+labeled as defective then one or more defects have been fixed already and no defect that is possibly discovered in the future can change the
+class label to non-defective. Finally, we note that the discussion above applies to all known labeling mechanisms such as SZZ [38, 66] and the
+realistic one [79]. The presence of snoring in the data is due to when the classes are labeled as defective or not, and it is entirely independent of
+the specific technique used to label classes such as the realistic or SZZ. As a matter of fact, both realistic and SZZ use the fixed tickets as
+input; thus, both approaches entirely fail in taking into consideration the bugs that are not fixed yet.
+The study context consists of data from 19 open source projects from the Apache ecosystem. We focused on Apache1 projects rather than
+random GitHub projects because the former have a higher quality of defect annotation, and this also avoided us to consider unrealistic/toy
+projects [49]. We select the 19 projects that are managed in Jira, versioned in Git, have at least ten releases, have most of the commits related to
+Java code, and have the highest proportion of defects
+1 https://people.apache.org/phonebook.html
+
+The Impact of Dormant Defects on Defect Prediction: a Study of 19 Apache Projects
+
+5
+
+Table 4. Details of the used projects.
+
+Project
+AVRO
+BOOKKEEPER
+CHUKWA
+CONNECTORS
+CRUNCH
+FALCON
+GIRAPH
+IVY
+OPENJPA
+PROTON
+SSHD
+STORM
+SYNCOPE
+TAJO
+TEZ
+TOMEE
+WHIRR
+ZEPPELIN
+ZOOKEEPER
+
+Releases
+46
+22
+11
+118
+17
+31
+10
+17
+31
+51
+26
+36
+48
+13
+34
+22
+8
+14
+49
+
+Days
+3528
+2880
+3638
+3311
+2663
+2450
+2719
+4977
+4671
+2513
+3652
+2634
+3214
+2407
+2163
+4792
+1788
+2067
+3923
+
+Commits
+1770
+2056
+849
+4672
+1055
+2227
+1096
+2973
+4978
+3929
+1589
+9754
+6320
+2273
+2661
+12135
+569
+4048
+1820
+
+Defects
+114
+184
+7
+261
+132
+219
+123
+133
+380
+53
+124
+442
+296
+286
+559
+277
+20
+200
+219
+
+AV in Jira
+0.60
+0.32
+0.47
+0.85
+0.48
+0.40
+0.29
+0.89
+0.82
+0.69
+0.64
+0.52
+0.93
+0.23
+0.14
+0.27
+0.37
+0.37
+0.71
+
+linked to commits in the source code. A defect is linked if it can be associated with at least one commit in the source code’s commit
+log. Table 4 reports the details of the used 19 projects in terms of releases, days, commits, defects, and proportion of defects
+providing the affected version in Jira.
+In the following, we describe the empirical design of each research question.
+2.2
+
+RQ1: Does snoring reduce defect prediction performance?
+
+We are in the shoes of a practitioner who uses previous project releases’ data to predict which classes of the current release are
+defect-prone. Thus, we want to measure the performance of the same classifier when trained on a dataset with versus without
+snoring. In this research question, we test the null hypothesis: H01: there is no difference between the prediction performance
+achieved by classifiers when trained on a dataset with snoring versus a dataset without snoring.
+2.2.1
+
+Independent Variables. The independent variable of this research question is the presence or absence of snoring in the
+
+training set.
+2.2.2
+
+Dependent Variables. The dependent variable is the relative loss (RL) that we measure as the relative distance between the
+
+performance of a classifier trained on a dataset with snoring versus trained on a dataset without snoring. Specifically,
+
+𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅 = |𝑝𝑝𝑝𝑝𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒 𝑓𝑓𝑓𝑓 𝑜𝑜𝑜𝑜𝑒𝑒𝑒𝑒𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑒𝑒𝑒𝑒𝑜𝑜𝑜𝑜𝑒𝑒𝑒𝑒𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑒𝑒𝑒𝑒𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜ℎ𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑒𝑒𝑒𝑒𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜−𝑝𝑝𝑝𝑝𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒 𝑓𝑓𝑓𝑓 𝑜𝑜𝑜𝑜𝑒𝑒𝑒𝑒𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑒𝑒𝑒𝑒𝑜𝑜𝑜𝑜𝑒𝑒𝑒𝑒𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑒𝑒𝑒𝑒𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜ℎ𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑒𝑒𝑒𝑒𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜|/𝑝𝑝𝑝𝑝𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒 𝑓𝑓𝑓𝑓 𝑜𝑜𝑜𝑜𝑒𝑒𝑒𝑒𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑒𝑒𝑒𝑒𝑜𝑜𝑜𝑜𝑒𝑒𝑒𝑒𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑒𝑒𝑒𝑒𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜ℎ𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑒𝑒𝑒𝑒𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜𝑜.
+Thus, the relative loss represents the detriment on performance caused by snoring, as observed by each different performance metric.
+As performance metrics we used the following metrics:
+• True Positive (TP): The class is actually defective and is predicted to be defective.
+
+6
+
+Falessi et al.
+• False Negative (FN): The class is actually defective and is predicted to be non-defective.
+
+• True Negative (TN): The class is actually non-defective and is predicted to be non-defective.
+
+• False Positive (FP): The class is actually non-defective and is predicted to be defective.
+𝑇𝑇𝑇𝑇 𝑃𝑃 𝑃𝑃
+• Precision: 𝑇𝑇𝑇𝑇 𝑃𝑃𝑃𝑃+𝐹𝐹𝐹𝐹 𝑃𝑃𝑃𝑃
+𝑇𝑇𝑇𝑇
+𝑃𝑃
+𝑃𝑃
+• Recal : 𝑇𝑇𝑇𝑇 𝑃𝑃𝑃𝑃+𝐹𝐹𝐹𝐹 𝑁𝑁𝑁𝑁 .
+2 𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑒𝑒𝑒𝑒𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑒𝑒𝑒𝑒𝑃𝑃𝑃𝑃𝑜𝑜𝑜𝑜𝑃𝑃𝑃𝑃 𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑃𝑃𝑃𝑃𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅
+l*
+•
+𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑒𝑒𝑒𝑒𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑃𝑒𝑒𝑒𝑒𝑃𝑃𝑃𝑃𝑜𝑜𝑜𝑜𝑃𝑃𝑃𝑃 +𝑅𝑅𝑅𝑅𝑒𝑒𝑒𝑒𝑃𝑃F1
+𝑃𝑃𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅
+• Cohen’s Kappa : A statistic that assesses the classifier’s performance against random guessing [10]. 𝐾𝐾𝐾𝐾𝐾𝐾𝐾𝐾𝐾𝐾𝐾𝐾𝐾𝐾𝐾𝐾𝐾𝐾𝐾𝐾 =
+𝑂𝑂𝑂𝑂𝑂𝑂𝑂𝑂𝑂𝑂𝑂𝑂𝑂𝑂𝑂𝑂𝑂𝑂𝑂𝑂 𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣𝑣 𝑣𝑣 – 𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸
+1−𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝐸𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝐸𝐸𝐸𝐸𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒
+
+– Observed: The proportionate agreement.
+
+𝑇𝑇 𝑇𝑇 𝑃𝑃𝑃𝑃+𝑇𝑇 𝑇𝑇 𝑁𝑁
+
+𝑇𝑇𝑇𝑇 𝑃𝑃𝑃𝑃+𝑇𝑇𝑇𝑇 𝑁𝑁𝑁𝑁 +𝐹𝐹𝐹𝐹 𝑃𝑃𝑃𝑃+𝐹𝐹𝐹𝐹 𝑁𝑁𝑁𝑁
+
+𝑁𝑁
+
+– Expected: The probability of random agre ement. 𝑃𝑃𝑃𝑃𝑌𝑌𝑌𝑌 𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒 + 𝑃𝑃𝑃𝑃𝑁𝑁𝑁𝑁 𝑜𝑜𝑜𝑜 where
+* 𝑃𝑃𝑃𝑃𝑌𝑌𝑌𝑌 𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒 : Probability of positive agreement.
+𝑇𝑇 𝑇𝑇 𝑃𝑃𝑃𝑃+𝐹𝐹𝐹𝐹 𝑃𝑃 𝑃𝑃
+𝑇𝑇 𝑇𝑇 𝑃𝑃𝑃𝑃+𝐹𝐹 𝐹𝐹 𝑁𝑁
+𝑁𝑁
+𝑇𝑇𝑇𝑇 𝑃𝑃𝑃𝑃+𝑇𝑇𝑇𝑇 𝑁𝑁𝑁𝑁 +𝐹𝐹𝐹𝐹 𝑃𝑃𝑃𝑃+𝐹𝐹𝐹𝐹 𝑁𝑁𝑁𝑁
+𝑇𝑇𝑇𝑇 𝑃𝑃𝑃𝑃+𝑇𝑇𝑇𝑇 𝑁𝑁𝑁𝑁 +𝐹𝐹𝐹𝐹 𝑃𝑃𝑃𝑃+𝐹𝐹𝐹𝐹 𝑁𝑁𝑁𝑁
+* 𝑃𝑃𝑃𝑃𝑁𝑁𝑁𝑁 𝑜𝑜𝑜𝑜 : Probability of negative agreement.
+𝑇𝑇 𝑇𝑇 𝑁𝑁𝑁𝑁 +𝐹𝐹𝐹𝐹 𝑃𝑃
+𝑃𝑃
+𝑇𝑇 𝑇𝑇 𝑁𝑁 𝑁𝑁 +𝐹𝐹 𝐹𝐹 𝑁𝑁
+𝑁𝑁
+𝑇𝑇𝑇𝑇 𝑃𝑃𝑃𝑃+𝑇𝑇𝑇𝑇 𝑁𝑁𝑁𝑁 +𝐹𝐹𝐹𝐹 𝑃𝑃𝑃𝑃+𝐹𝐹𝐹𝐹 𝑁𝑁𝑁𝑁
+𝑇𝑇𝑇𝑇 𝑃𝑃𝑃𝑃+𝑇𝑇𝑇𝑇 𝑁𝑁𝑁𝑁 +𝐹𝐹𝐹𝐹 𝑃𝑃𝑃𝑃+𝐹𝐹𝐹𝐹 𝑁𝑁𝑁𝑁
+
+• AUC (Area Under the Receiving Operating Characteristic Curve) [58] is the area under the curve, of truepositives rate versus false
+positive rate, that is defined by setting multiple thresholds. AUC has the advantage to
+be threshold independent.
+• MCC (Matthews Correlation Coefficient) is commonly used in assessing the performance of classifiers dealingwith unbalanced data
+𝑇𝑇𝑇𝑇 𝑃𝑃𝑃𝑃∗𝑇𝑇𝑇𝑇 𝑁𝑁𝑁𝑁 −𝐹𝐹𝐹𝐹 𝑃𝑃𝑃𝑃∗𝐹𝐹𝐹𝐹 𝑁𝑁
+𝑁𝑁
+. Its interpretation is similar to
+[44], and is defined as: √
+(𝑇𝑇𝑇𝑇 𝑃𝑃𝑃𝑃 +𝐹𝐹𝐹𝐹 𝑃𝑃𝑃𝑃 ) ( 𝑇𝑇𝑇𝑇 𝑃𝑃𝑃𝑃+𝐹𝐹𝐹𝐹 𝑁𝑁𝑁𝑁 ) ( 𝑇𝑇𝑇𝑇 𝑁𝑁𝑁𝑁 +𝐹𝐹𝐹𝐹 𝑃𝑃𝑃𝑃 ) (𝑇𝑇𝑇𝑇 𝑁𝑁𝑁𝑁 +𝐹𝐹𝐹𝐹 𝑁𝑁𝑁𝑁
+
+correlation measures, i.e., 𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀 < 0.2 is considered to be low, 0.2 ≤ 𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀 < 0.4—fair, 0.4 ≤ 𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀 < 0.6—moderate,
+0.6 ≤ 𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀 < 0.8—strong, and 𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀𝑀 ≥ 0.8—very strong.
+
+2.2.3
+
+Measurement. Our measurement procedure consists of the following steps:
+
+(1) Labeling defective classes: For each project, we created a dataset D by labeling classes in releases as defective or not. To do so, we used
+the "realistic approach" [79], i.e., using the affected version reported in Jira. This means that, given our point of observation (which, as
+explained below and shown as a photo camera in Fig. 2, is where a training set is built), we consider the affected version from all bug
+reports opened at that time. for each bug, we consider as affected versions those indicated by in the bug report. Moreover, since the
+realistic approach is based on the use of the affected version that is reported in Jira, and since according to Table 4 a considerable
+number of defects do not report the affected version in Jira, then, using only the realistic approach would have produced several false
+negative labels of classes. Therefore, to avoid noise in our datasets due to missing affected versions in JIRA, we used SZZ for defects
+where the affected version is not available. We re-implemented the SZZ algorithm [66] and improved it by ignoring comments2,
+indentation, white spaces, and documentation strings3 as changes introducing defects. Thus, similarly to what we have done in a
+recent paper [73], we identify the
+introduction version of each defect using SZZ if the ticket was without affected version, or as the oldest of the affected versions in the
+ticket. Afterward, regardless of how we identified the introduction version, we label the classes involved in the fix commit of the ticket
+as defective in releases in the range [introduction version, fixed version).
+2 https://goo.gl/X8fHFc
+
+3 https://goo.gl/dNXb6N
+
+The Impact of Dormant Defects on Defect Prediction: a Study of 19 Apache Projects
+
+7
+
+Fig. 1. The evaluation technique adopted in this paper. The first 66% of data is used as training set, the remaining 33% as test set. Several releases
+are unused to avoid that snoring impacts our results.
+
+(2) Avoiding snoring in our measurement: Since in a recent paper [3] we proved that removing most recent releases implies
+removing snoring, then, for each project, we created SD by removing the last 50% of releases from D. Therefore, by using
+SD, rather than D, we are confident that our ground truth is not significantly affected by snoring.
+(3) Training and test sets: Fig. 1 describes our overall validation technique which is then customized for the tworesearch
+questions. Our overall validation technique is a 66/33 holdout that preserves the order of data [15]. First,the data is ordered
+according to the releases of the project, i.e., we created D. Second, the last 50% of releasesare removed to avoid that
+snoring impacts our ground truth by more than 1% [3], i.e., we created SD. Third, thefirst 66% of SD is used as a training
+set (Tr), the remaining 33% of SD is used as a test set (Te). Fig. 2 reportsthe validation technique used in this research
+question. In the top part of Fig. 2 we have the ideal scenario: wecreate the test sets and training sets without snoring (i.e.,
+TrNS and TeNS) by executing the labeling technique,which is represented with a photo camera, at the end of the project.
+On the bottom part of Fig. 2 we replicatethe realistic scenario: we create the training sets with snoring (i.e., TrS) by
+executing the labeling technique,which is represented with a photo camera, at data collection, i.e., at the end of the training
+set. For example, inproject Bookkeeper, Tr is constructed using the first eight releases. The class BookieProtocol.java in
+releases seven and eight of TrS is marked as non-defective, but will become defective if observed after release 11 because of
+the defect BOOKKEEPER-10184. Thus, the same exact class BookieProtocol.java in releases seven and eight islabeled as
+defective in TrNS and as non-defective in TrS.
+(4) Classifiers’ performance: We train each classifier on TrS vs. TrNS and tested on TeNS. Thus, we compare the
+performance of the same classifier when trained with snoring versus trained and without snoring.
+We use 16 well-defined product and project metrics that previous work found to be useful for defect prediction [14, 17].
+These predictor metrics are detailed in Table 5. We note that TrS and TrNS share all predictor metrics and values, and differ
+only in the defectiveness label of some classes, since classes are labeled at different pointsof time, in the training set.
+Afterward, we perform four sub-steps.
+(a) Feature Selection. We filter the predictor variables described above by using the correlation-based feature subset selection
+[25]. The approach evaluates the worth of a subset of attributes by considering the individual predictive capability of each
+feature, as well as the degree of redundancy between different features. The approach searches the space of attribute
+subsets by greedy hill-climbing augmented with a backtracking facility. The approach starts with the empty set of
+attributes and performs a forward search by considering all possible single attribute additions and deletions at a given
+point.
+4 https://issues.apache.org/jira/browse/BOOKKEEPER-1018
+
+8
+
+Falessi et al.
+
+Fig. 2. A photo camera represents the technique that is used to label class defectiveness. We executed the technique at different points in time. On the
+bottom side, the labeling is performed in a realistic usage scenario, i.e., when one realistically collects the data to be used in the prediction model. This
+execution produces a training set with snoring (TrS). On the top side, the collection is performed in an ideal scenario, i.e., at the end of the project. This
+execution produces a training and test set without snoring (TrNSand TeNS).
+Table 5. Defect prediction features.
+
+Metric
+Size
+LOC Touched
+NR
+Nfix
+Nauth
+LOC Added
+MAX LOC Added
+AVG LOC Added
+Churn
+Max Churn
+Average Churn
+Change Set Size
+Max Change Set
+Average Change Set
+Age
+Weighted Age
+
+Description
+Lines of code(LOC)
+Sum over revisions of LOC added + deleted
+Number of revisions
+Number of bug fixes
+Number of authors
+Sum over revisions of LOC added + deleted
+Maximum over revisions of LOC added
+Average LOC added per revision
+Sum over revisions of added – deleted LOC
+Maximum churn over revisions
+Average churn over revisions
+Number of files committed together
+Maximum change set size over revisions
+Average change set size over revisions
+Age of Release
+Age of Release weighted by LOC touched
+
+(b) Classifiers. As classifiers we use the 14 used in a previous related paper [32]:
+• Decision Stump: A single level decision tree performing classification based on entropy [30].
+• Decision Table: Two major parts: schema, the set of features included in the table, and a body, labeledinstances defined by
+features in the schema. Given an unlabeled instance, try matching instance to record in
+the table. [41]
+• IBk: K-nearest neighbors classifier run with k = 1 [2].
+• J48: Generates a pruned C4.5 decision tree [59].
+
+The Impact of Dormant Defects on Defect Prediction: a Study of 19 Apache Projects
+
+9
+
+• JRip: A propositional rule learner, Repeated Incremental Pruning to Produce Error Reduction (RIPPER) [11].
+
+• KStar: Instance-based classifier using some similarity function. Uses an entropy-based distance function [9].
+• Naive Bayes: Classifies records using estimator classes and applying Bayes theorem [31]
+• Naive Bayes Updateable: An instance of the Naive Bayes classifier with different weight initial values andconstraints
+[31]
+• OneR: 1R classifier using the minimum-error attribute for prediction [29].
+• PART: Uses separate-and-conquer, building partial C4.5 decision trees and turning the best leaf into a rule[19].
+• Random Forest: Ensemble learning creating a collection of decision trees. Random trees correct for overfitting [7].
+
+• REPTree: Fast decision tree learner. Builds a decision tree using information gain and variance, and prunesusing
+reduced-error pruning [43].
+• SMO: John Platt’s sequential minimal optimization algorithm for training a support vector classifier [57]
+(c) Tuning. Instead of tuning each single classifier, we used AutoWEKA [42], an automated approach for classifier selection and
+hyperparameter optimization. We run AutoWEKA for two hours on each training set (with or without snoring) of each
+project. Thus we refer to AutoWEKA as the classifier and parameter selected by AutoWEKA for the specific training set.
+(d) Test. We train each of the 14 classifiers, plus the AutoWEKA classifier, on TrS and test on TeNS and we train on TrNS,
+and we test on TeNS.
+It is possible that snoring could depend on the distance between releases, measured in terms of days or commits. To verify
+whether RQ1 results are affected by that, we compute the Spearman’s rank correlation [67] between the number of days and
+commits per release and the model’s relative loss. A high and statistically significant, positive or negative correlation, could
+indicate that results may depend on the distance between releases, i.e., snoring is more likely to occur for rapid releases (and
+therefore one may need to drop more releases) than for a longer distance between releases.
+2.2.4
+
+Analysis Procedure. We compare the accuracy of models when trained on a training set with vs. without snoring (i.e.,
+
+TrS vs. TrNS) and tested on the test set without snoring (TeNS).
+Since our data strongly deviate from normality, the hypotheses of this research question are tested using the Wilcoxon
+signed-rank test [76], and Cliff’s delta (paired) effect size [23]. Also, since we repeat the statistical analysis multiple times
+
+(i.e., for each classifier), we adjust p-values using the Holm’s correction procedure [28]. Such a procedure ranks 𝑜𝑜𝑜𝑜 p-values in
+increasing order of value and multiplies the first one (i.e., the smaller) by 𝑜𝑜𝑜𝑜, the second by 𝑜𝑜𝑜𝑜 − 1, and so on.
+
+2.3
+
+RQ2: Does defect prediction performance improve if we remove from the training set the classesthat are
+labeled as non-defective in the last releases?
+
+We are in the shoes of a practitioner who reflects on whether training classifiers on less but non-noisy data improves the defect
+prediction performance over training classifiers on all data. At the time of the prediction the practitioner does not know which
+specific class snores; the only information they can leverage to remove snoring classes is that i) younger releases are more likely to
+contain snoring classes than older releases, and 2) classes labeled as not defective cannot be snoring. Thus, the only feasible and
+realistic approach that can be used to remove snoring, at the time of the
+
+10
+
+Falessi et al.
+
+prediction, is to remove all the classes labeled as defective in the last releases. However, this approach, since it is not perfectly accurate, is a
+double-edged sword; on the one side it removes all snoring data in the last releases, on the other side it removes data that are also not
+snoring (i.e., actually defective classes). To address this research question, we test the null hypothesis: H02: there is no difference between
+the prediction performance achieved by classifiers when trained on an entire dataset versus a portion of the same dataset where classes
+labeled as non-defective are removed from last releases.
+2.3.1 Independent Variables. The independent variable of RQ2 is the number of releases from which classes labeled as non-defective are
+removed from the training set.
+2.3.2
+
+Dependent Variables. The dependent variable is the relative loss of the performance measures used to address RQ2.
+
+2.3.3
+
+Measurement Procedure. Fig. 3 reports the technique used to replicate the scenario where the user wants to use a defect prediction
+
+model and they tries to improve the prediction accuracy by removing from the training set the classes labeled as not defective in last releases.
+Thus, as in RQ1, the technique used to label class defectiveness is executed at the point in time where the model is used for prediction, i.e., at
+the end of the training set. Differently from RQ1, we remove from the training set the classes labeled as not defective in the last 0,1,2,3, and 4
+releases; we call these training sets TrS, TrS-1, TrS-2, TrS-3, and TrS-4 respectively. As in RQ1, the training and test sets without snoring
+(TrNS and TeNS) are created by executing the labeling technique at the end of the project.
+For example, removing classes labeled as not defective from the last release of the training set of the Bookkeeper project, to form TrS-1, would
+eliminate classes that snore at that release such as ZkLedgerUnderreplicationManager.java 5.
+2.3.4
+
+Analysis Procedure. We compare the accuracy of models when trained on training sets obtained by removing all classes labeled as not
+
+defective from the last 0,1,2,3, and 4 releases and tested on a test set without snoring (TeNS).
+Then, we test whether there is a correlation between the removal of non-defective classes of the last release(s) of the training set and
+the gain in terms of Precision, Recall, Cohen’s kappa, MCC, and AUC. To this aim, we use a repeated-measure permutation test, using the
+Project as a random variable, and considering as an independent variable the number of removed releases and the choice of the classifier.
+We also analyze the correlation between the gain in performance, provided by removing non-defective classes in the last release of the
+training set, and the frequency of releases in projects.
+Finally, to promote replicability, we made available online all datasets, SZZ, and other developed scripts 6.
+3 EMPIRICAL STUDY RESULTS
+In the following, we report the results of our study to address the research questions formulated in Section 1.
+3.1
+
+RQ1: Does snoring reduce defect prediction performance?
+
+Table 6 reports, for each project, the number of classes that are labeled as Defective and Not Defective in TrNs, as Defective in TrS, and the
+loss as computed as the proportion of defective classes that are erroneously not labeled as defective in the TrS, i.e., (number of defective
+classes in TrNS - number of defective classes in TrS) / number of defective
+5 https://tinyurl.com/ybupvq3q
+
+6 http://doi.org/10.5281/zenodo.4394035
+
+The Impact of Dormant Defects on Defect Prediction: a Study of 19 Apache Projects
+
+11
+
+Fig. 3. The technique used to replicate the scenario where the user wants to use defect prediction model and tries to improve its accuracy by
+removing classes labeled as not defective from the last 0,1,2,3, and 4 releases of the training set with snoring.
+
+classes in TrNS). According to Table 6, for most of the projects, the majority of defective classes are affected by snoring (Loss >
+50%). In the remainder of this research question, we observe how this loss affects defect prediction models.
+Figure 4 reports, as boxplots, the distribution of Precision, Recall, F1-Score, AUC, MCC, and Cohen 𝑘𝑘𝑘𝑘 for different
+
+classifiers and projects, achieved when trained on data with (red boxes) versus without (blue boxes) snoring. This same data is
+reported for each classifier in Figure 5. According to Figure 5 the presence of snoring in the training set decreases the performance
+in each of the 15 classifiers and in each of the six performance metrics. Figure 6 reports, as boxplots, the distribution of relative loss
+in Precision, Recall, AUC, F1-Score, Cohen 𝑘𝑘𝑘𝑘 and MCC for different classifiers and projects. According to Figure 6, the highest
+median relative loss, among performance metrics, is in Recall, and it isabout 90%.
+
+As explained in Section 2, the observed differences have been statistically analyzed using Wilcoxon signed-rank and Cliff’s delta
+effect size (positive effect sizes indicate a difference in favor of results without snoring). As Table 7 shows, Recall is significantly
+higher without snoring, as confirmed in Figure 4, with an effect size that is always large. Instead, we found no significant differences
+in what concerns Precision.
+Table 7 and Table 8 report the statistical test results about the differences in performances of defect prediction classifiers when
+trained on a dataset with versus without snoring. As Table 7 and Table 8 show, significant differences in terms of all performance
+metrics other than Precision are observed for all classifiers other than decision_stump. Thus,
+
+12
+
+Falessi et al.
+Table 6. Snoring classes: proportion of defective classes not labeled as defective in the training set.
+
+TrNs
+TrS
+Defective Not Defective Defective
+AVRO
+54
+1249
+17
+BOOKKEEPER
+836
+2924
+167
+CHUKWA
+1031
+1681
+1010
+CONNECTORS
+784
+3963
+690
+CRUNCH
+298
+1460
+152
+FALCON
+199
+368
+193
+GIRAPH
+592
+2991
+154
+IVY
+603
+4517
+271
+OPENJPA
+1000
+12108
+640
+PROTON
+350
+10480
+140
+SSHD
+346
+991
+242
+STORM
+2208
+5220
+1700
+SYNCOPE
+11202
+9170
+2801
+TAJO
+1261
+4660
+227
+TEZ
+486
+914
+408
+TOMEE
+326
+5914
+293
+WHIRR
+45
+810
+17
+ZEPPELIN
+786
+2253
+424
+ZOOKEEPER
+434
+1693
+308
+Project
+
+Loss
+31%
+20%
+98%
+88%
+51%
+97%
+26%
+45%
+64%
+40%
+70%
+77%
+25%
+18%
+84%
+90%
+38%
+54%
+71%
+
+Table 7. Impact of snoring on classifiers’ performance (RQ1): Wilcoxon signed-rank test results and Cliff’s delta effect size on precision and recall for different
+machine learning classifiers.
+
+ClassifierClassifierClassifierpt< -Classifierpt>
+autoweka
+decision_stump
+decision_table
+ibk
+j48
+jrip
+kstar
+naive_bayes
+naive_bayes_update
+oner
+part
+random_forest
+random_tree
+reptree
+smo
+
+Precision
+𝑝𝑝𝑝𝑝-value
+𝑜𝑜𝑜𝑜 Magnitude
+1.00 0.11 negligible
+0.18 0.42 medium
+0.34 0.36 medium
+0.07 0.38 medium
+0.34 0.30 small
+1.00 0.22 small
+1.00 0.21 small
+1.00 -0.05 negligible
+1.00 -0.05 negligible
+0.29 0.42 medium
+1.00 0.17 small
+0.04 0.34 medium
+0.34 0.15 small
+0.02 0.48 large
+0.01 0.55 large
+
+𝑝𝑝𝑝𝑝-value
+0.00
+0.01
+0.01
+0.00
+0.01
+0.00
+0.01
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+
+Reca l
+𝑜𝑜𝑜𝑜 Magnitude
+0.76 large
+0.58 large
+0.64 large
+0.87 large
+0.60 large
+0.76 large
+0.58 large
+0.65 large
+0.65 large
+0.79 large
+0.64 large
+0.90 large
+0.87 large
+0.93 large
+0.76 large
+
+we can reject H10 and claim that snoring significantly worsens the accuracy of all classifiers and all metricsother than Precision.
+
+The Impact of Dormant Defects on Defect Prediction: a Study of 19 Apache Projects
+
+13
+
+Fig. 4. Distribution of performance, among classifiers and datasets, achieved with versus without snoring.
+Table 8. Impact of snoring on classifiers’ performance (RQ1): Wilcoxon signed-rank test results and Cliff’s delta effect size on Cohen
+𝑘𝑘𝑘𝑘, MCC and AUC for different machine learning classifiers.
+ClassifierClassifierClassifierpt< -Clas sifierpt>
+autoweka
+decision_stump
+decision_table
+ibk
+j48
+jrip
+kstar
+naive_bayes
+naive_bayes_update
+oner
+part
+random_forest
+random_tree
+reptree
+smo
+
+𝑝𝑝𝑝𝑝-value
+0.00
+0.02
+0.00
+0.00
+0.01
+0.02
+0.00
+0.00
+0.00
+0.00
+0.02
+0.00
+0.00
+0.00
+0.00
+
+Cohen 𝑘𝑘𝑘𝑘
+𝑜𝑜𝑜𝑜 Magnitude
+0.62 large
+0.45 medium
+0.53 large
+0.80 large
+0.52 large
+0.60 large
+0.58 large
+0.57 large
+0.57 large
+0.67 large
+0.48 large
+0.80 large
+0.71 large
+0.83 large
+0.75 large
+
+𝑝𝑝𝑝𝑝-value
+0.00
+0.03
+0.00
+0.00
+0.02
+0.03
+0.00
+0.00
+0.00
+0.00
+0.03
+0.00
+0.00
+0.00
+0.00
+
+MCC
+𝑜𝑜𝑜𝑜 Magnitude
+0.64 large
+0.45 medium
+0.54 large
+0.78 large
+0.51 large
+0.58 large
+0.54 large
+0.48 large
+0.48 large
+0.67 large
+0.48 large
+0.78 large
+0.71 large
+0.82 large
+0.75 large
+
+𝑝𝑝𝑝𝑝-value
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+0.00
+
+AUC
+𝑜𝑜𝑜𝑜 Magnitude
+0.84 large
+0.87 large
+0.84 large
+0.82 large
+0.82 large
+0.82 large
+0.82 large
+0.85 large
+0.84 large
+0.83 large
+0.84 large
+0.84 large
+0.84 large
+0.85 large
+0.84 large
+
+14
+
+Falessi et al.
+
+Fig. 5. Distribution of performance, among datasets, of different classifiers (x-axis), in the cases of with, or without, the snoring.
+
+RQ1 Summary: The effect of snoring on classification performance is of large size on all classifiers and all metrics
+other than Precision.
+
+The Impact of Dormant Defects on Defect Prediction: a Study of 19 Apache Projects
+
+15
+
+Fig. 6. Distribution of relative loss, among classifiers and datasets.
+
+3.2
+
+RQ2: Does defect prediction performance improve if we remove from the training set the classesthat are
+labeled as non-defective in the last releases?
+
+Figure 7 reports the distribution among datasets and classifiers, of different performance metrics (x-axis), when removing a specific
+number of last releases data (color). Table 9 summarizes Figure 7 by reporting the relative gain (%), on average among datasets and
+classifiers, by removing a specific number of releases of data, on average across classifiers and datasets. According to Table 9:
+(1) Removing one release is better than removing no release in all performance metrics.
+(2) Removing three or four releases is worse than removing one or two releases in all performance metrics.
+(3) Removing two releases is better than removing one release only in terms of Recall. In other words, removing onerelease is
+better than removing two releases in Precision and all the combined performance metrics.
+(4) The gain in removing releases is particularly small in terms of AUC.
+(5) Removing more than one release reduces Precision.
+Figure 8 reports the distribution of performance in each classifier, among projects, by removing, or not, non-defective classes in the
+last release of the training set. According to Figure 8, removing one release is better than removing no release of data for all
+classifiers and all performance metrics.
+
+16
+
+Falessi et al.
+
+Fig. 7. Distribution of performance, among datasets, in the cases of removal of a specific number of last releases of data.
+Table 9. Relative gain (%) in performance achieved by removing a specific number of releases of data, on average across classifiers and datasets.
+
+Removed Releases Precision Recall
+1 17%
+41%
+2 -1%
+67%
+3 -27%
+45%
+4 -39%
+29%
+
+F1
+Kappa
+33% 39%
+37% 44%
+7% -3%
+9% -18%
+
+Matthew
+32%
+31%
+-12%
+-25%
+
+AUC
+3%
+3%
+2%
+0%
+
+Table 10 reports the permutation test results on the difference in performance, in the cases of removing, or not, non-defective classes
+in the last release of the training set. According to Table 10, we can reject H20 and claim that removing non-defective classes in the last
+release of the training set improves the performance of classifiers in all performance metrics other than Recall. Moreover, according to
+Table 10, the performance of classifiers varies across classifiers on all performance metrics.
+Table 11 reports the Spearman correlation between the gain in performance, provided by removing non-defective classes in the last
+release of the training set, as measured by Precision and Recall, and the frequency of releases in projects, as computed in terms of the
+average number of days in a release and the average number of commits in a release. According to Table 11 there is a relevant and almost
+statistically significant inverse correlation between the
+
+The Impact of Dormant Defects on Defect Prediction: a Study of 19 Apache Projects
+
+17
+
+Table 10. RQ3: Permutation test results on the effect of dropping releases on classifier performance metrics.
+
+Between projects effects:
+Classifier
+Residuals
+Within project effects:
+Classifier
+DropCount
+Classifier:DropCount
+Residuals
+
+Between projects effects:
+Classifier
+Residuals
+Within project effects:
+Classifier
+DropCount
+Classifier:DropCount
+Residuals
+
+Between projects effects:
+Classifier
+Residuals
+Within project effects:
+DropCount
+Classifier
+DropCount:Classifier
+Residuals
+
+Df
+
+Precision
+R Sum Sq
+
+R Mean Sq
+
+Iter
+
+Pr(Prob)
+
+1
+10
+
+0.13
+12.41
+
+0.13
+1.24
+
+51.00
+
+0.80
+
+16
+1
+16
+945
+
+10.41
+2.20
+1.79
+55.88
+Recall
+
+0.65 5000.00
+2.20 5000.00
+0.11 5000.00
+0.06
+
+0.00
+0.00
+0.02
+
+Df
+
+R Sum Sq
+
+R Mean Sq
+
+Iter
+
+Pr(Prob)
+
+1
+10
+
+0.00
+7.40
+
+0.00
+0.74
+
+51.00
+
+0.92
+
+Df
+16
+1
+16
+945
+
+R Sum Sq
+3.91
+0.09
+1.02
+25.51
+Kappa
+
+R Mean Sq
+Iter
+0.24 5000.00
+0.09 5000.00
+0.06 5000.00
+0.03
+
+Pr(Prob)
+0.00
+0.01
+0.00
+
+Df
+
+R Sum Sq
+
+R Mean Sq
+
+Iter
+
+Pr(Prob)
+
+1
+10
+
+0.21
+4.11
+
+0.21
+0.41
+
+169.00
+
+0.37
+
+1
+16
+16
+945
+Df
+
+Between projects effects:
+Classifier
+Residuals
+Within project effects:
+DropCount
+Classifier
+DropCount:Classifier
+Residuals
+
+Between projects effects:
+Classifier
+Residuals
+Within project effects:
+DropCount
+Classifier
+DropCount:Classifier
+Residuals
+
+0.09
+0.09 5000.00
+0.00
+2.01
+0.13 5000.00
+0.00
+0.36
+0.02 5000.00
+0.20
+15.05
+0.02
+MCC
+R Sum Sq R Mean Sq
+Iter Pr(Prob)
+
+1
+10
+
+0.11
+4.70
+
+0.11
+0.47
+
+51.00
+
+0.76
+
+1
+16
+16
+945
+Df
+
+0.22
+2.69
+0.45
+18.26
+AUC
+R Sum Sq
+
+0.22 5000.00
+0.17 5000.00
+0.03 5000.00
+0.02
+
+0.00
+0.00
+0.03
+
+R Mean Sq
+
+Iter
+
+Pr(Prob)
+
+1
+10
+
+0.00
+2.59
+
+0.00
+0.26
+
+51.00
+
+0.98
+
+1
+16
+16
+945
+
+0.00
+0.67
+0.00
+3.05
+
+0.00
+0.04
+0.00
+0.00
+
+924.00
+5000.00
+483.00
+
+0.10
+0.00
+1.00
+
+18
+
+Falessi et al.
+
+Fig. 8. Distribution of performance in each classifiers, among projects, by removing, or not, non-defective classes in the last release of the training set.
+Table 11. Spearman correlation between the gain in performance, provided by removing non-defective classes in the last release of the training set, and the
+frequency of releases in projects.
+
+Frequency
+Days per release
+Commits per release
+Days per release
+Commits per release
+
+Metric
+Precision
+Precision
+Recall
+Recall
+
+Rho
+-0.0979
+-0.5734
+0.2098
+0.0839
+
+Pvalue
+0.7621
+0.0513
+0.5128
+0.7954
+
+gain in performance, provided by removing non-defective classes in the last release of the training set, and the number of commits per
+release. Thus, the smaller are the releases in terms of the number of commits, the higher is the gain in non-defective classes in the last release
+of the training set.
+
+The Impact of Dormant Defects on Defect Prediction: a Study of 19 Apache Projects
+
+19
+
+RQ2 Summary: Using a training set that excludes non-defective classes from the last one or two releases increases
+the classifiers’ performance in all six metrics. However, further exclusion worsens the models’ performance.
+
+4 DISCUSSION
+This section describes the implications of the existence of snoring, on the performances of machine learning models to predict class
+defectiveness.
+Based on RQ1 results, the presence of snoring significantly decreases the classifiers’ performance. For instance, the median
+Recall achieved by training a classifier on the entire dataset with snoring is 90% less than the Recall ideally achievable by training
+that same classifier on the same entire dataset without snoring.
+It is interesting to note that we found no significant differences in what concerns Precision. One possible reason for this high
+impact of snoring on Recall and low impact on Precision is the fact that snoring likely increases the proportion of negatives in the
+training set. Thus, training classifiers providing a high number of negatives, which result in a high proportion of false negatives and
+hence a lower Recall.
+Unfortunately, the snoring instances cannot be accurately identified yet, and therefore, an entire dataset without snoring is
+only ideal. What we know is that, by definition, the snoring classes are more frequent in last releases than in early releases.
+However, regardless of the number of releases we ignore, we know that we also ignore data that is valid, i.e., classes that are
+actually non-defective. The impossibility to remove only noise instances implies a trade-off between the amount of data and the
+quality of the data used to feed prediction models.
+Results from RQ2 suggest that performances improve when removing non-defective data from the last release, and further
+improve on all metrics other than Precision when removing the last two releases. At the same time, going way too ahead, removing
+more than two releases, means training the model with less and older data, and then worsen the models’ performances. Specifically,
+according to the RQ2 results, removing the last two releases of data is better than removing only the last release in terms of Recall,
+but worse in terms of Precision. Therefore, based on RQ2 results, a good trade-off is to not train classifiers with classes labeled as
+non-defective in the last release.
+Researchers should identify which specific class in the last releases is erroneously labeled as non-defective. This advancement
+would allow a reduction in the number of removed non-defective classes and hence an improvement in the amount of data that can
+be used to feed prediction models.
+5 THREATS TO VALIDITY
+In this section, we discuss the study threats to validity, and specifically construct, internal, conclusion, and external validity
+threats [78].
+Construct validity threats are related to the relationship between theory and observation. The first construct validitythreat is
+related to the dataset construction, i.e., how we created a dataset in which we know where snoring occurs. As explained in
+Section 2.2.3, we achieved this goal by removing the last 50% of the dataset. Although previous worksuggests that this may drop
+about 99% of the snoring [3], we cannot exclude the presence of some snoring that we did not capture. To identify buggy
+classes, we combined the availability of the JIRA "affected version" with the useof the SZZ algorithm. The former provides a more
+realistic assessment of buggy classes, however, it is not always available, and for this reason, we combined it with SZZ. However,
+we are aware that SZZ determines the affected
+
+20
+
+Falessi et al.
+
+Table 12. Proportion of defective classes in the same training set when removing classes labeled as defective in the last 0,1,2,3, and 4 releases of the training
+set.
+
+Project Name
+AVRO
+BOOKKEEPER
+CHUKWA
+CONNECTORS
+CRUNCH
+FALCON
+GIRAPH
+IVY
+OPENJPA
+PROTON
+SSHD
+STORM
+SYNCOPE
+TAJO
+TEZ
+THRIFT
+WHIRR
+ZEPPELIN
+ZOOKEEPER
+
+Defective - 0
+0.03
+0.19
+0
+0.02
+0.09
+0.01
+0.15
+0.08
+0.04
+0.02
+0.1
+0.09
+1.16
+0.23
+0.08
+0.14
+0.04
+0.17
+0.05
+
+Defective - 1
+0.04
+0.23
+0
+0.03
+0.12
+0.01
+0.22
+0.08
+0.05
+0.02
+0.13
+0.11
+1.16
+0.33
+0.18
+0.17
+0.06
+0.22
+0.07
+
+Defective - 2
+0.05
+0.3
+0
+0.03
+0.18
+0.02
+0.29
+0.1
+0.06
+0.02
+0.16
+0.12
+1.32
+0.5
+1
+0.21
+0.1
+0.3
+0.08
+
+Defective - 3
+0.08
+0.42
+0
+0.04
+0.31
+1
+0.42
+0.11
+0.1
+0.02
+0.21
+0.14
+1.54
+0.78
+1
+0.27
+0.25
+0.39
+0.11
+
+Defective - 4
+0.12
+0.62
+0
+0.07
+0.76
+1
+0.76
+0.13
+0.16
+0.02
+0.3
+0.17
+1.67
+1.17
+1
+0.37
+1
+0.57
+0.17
+
+versions differently than what happens with the manually-inserted label, i.e., considering all versions from the bug introduction until its
+fixing.
+Another threat to construct validity is the absence of the use of any balancing technique. The impact of balancing on classifiers’
+accuracy has been analyzed in a context similar to ours such as just-in-time classifiers (JIT) [68]. As stressed for JIT, and known in other
+domains [77], balancing techniques generally improve Recall at the cost of reducing Precision with no impact on overall accuracy performance
+metrics. Table 12 reports the proportion of defective classes in the same training set when removing classes labeled as defective in the last [04] releases of the training set. According to Table 12, removing non-defective data from the last release resulted in a slightly more balanced
+dataset. Since the observed improvement is in terms of Precision, Recall, and AUC, then we are confident that the observed increment is due
+to less noise in the data rather than a more balanced dataset. It was surprising to observe an increment in Precision despite a more balanced
+dataset; i.e., the snoring-free data counterbalanced the negative effect on Precision of a more balanced dataset.
+Internal validity threats concern variables internal to our study and not considered in our experiment that could influence our observations
+on the dependent variable. In our study, we split data into a 66% training set and a 33% test set. However, it is possible that different splits
+could produce varying results. As our results already show, the effect of dormant defects can vary based on the choice of a specific machine
+learning model used for defect prediction. We cannot exclude that other models not considered in our study could exhibit different
+performance variations when the dataset is affected by dormant defects and when not. Moreover, it is also possible that tuning the models’
+hyperparameters would produce different results as well. However, it is not our goal to find the best performing machine learning model for
+defect prediction, but to simply show that dormant defects have a significant effect on the models’ performances. The paper shows this is the
+case on all accuracy metrics other than recall.
+
+The Impact of Dormant Defects on Defect Prediction: a Study of 19 Apache Projects
+
+21
+
+Conclusion validity threats regard issues that affect the ability to draw accurate conclusions about relations between the
+treatments and the outcome of an experiment [78]. We see no major threat to conclusion validity.
+External validity threats concern the generalizability of our results, and are especially related to our choice and the
+representativeness of the artifacts (projects) considered in the study. This study used 19 datasets and hence could be deemed of low
+generalization compared to studies using hundreds of datasets. However, our datasets are large if we considered the number of
+releases (616) and defects (4101) and as stated by Nagappan et al. [51], “more is not necessarily better.”. Finally, we preferred to test
+our hypotheses only on datasets in which we were confident quality is high and that are close to industry.
+6 RELATED WORK & BACKGROUND
+In recent and past years, several studies investigated approaches for creating defect prediction datasets [12, 16, 39, 53, 62, 66] such
+as SZZ and others. Other studies investigated how to select these datasets [18, 22, 51, 63].
+Several authors have discussed factors hindering the accuracy and evaluation of defect prediction models [1, 5, 20, 46, 47, 70, 72,
+80]. With respect to the aforementioned work, we empirically show that snoring constitutes an additional factor hindering their
+accuracy.
+Chen et al. [8] firstly introduced the concept of dormant defects (though called dormant bugs). They showed that dormant defects
+are fixed faster and by more experienced developers. Similarly, Rodriguez-Perez et al. [61] and da Costa et al. [13] show that the time
+to fix a defect, i.e. the sleeping phenomenon, is on average about one year. Thus, we conclude that dataset creation will miss most
+defects on releases that are less than a year old. In a recent paper [3] we reported that many defects are dormant and many
+classes snore. Specifically, on average among projects, most of the defects in a project are dormant for more than 20% of the
+existing releases, and 2) in the majority of the projects the missing rate is more than 25% even if we remove the last 50% of
+releases. Concerning previous work on dormant defects, including our, in this paper, we quantify, for the first time, the effect of
+dormant defects on defect prediction accuracy, their evaluation, and we provide and evaluate a countermeasure.
+A problem of paramount importance when creating defect prediction models is represented by the presence of noise in the
+underlying datasets. In this context, different works study the sources of noise and foresee countermeasures for that. Kim et al. [36]
+measured the impact of noise on defect prediction models and provided guidelines for acceptable noise levels. They also propose a
+noise detection and elimination algorithm to address this problem. However, the noise studied and removed is supposed to be
+random. Tantithamthavorn et al. [69] found that: (1) issue report mislabelling is not random; (2) precision is rarely impacted by
+mislabeled issue reports, suggesting that practitioners can rely on the accuracy of modules labeled as defective by models that are
+trained using noisy data; (3) however, models trained on noisy data typically achieve about 60% of the recall of models trained on
+clean data. Herzig et al. [27] reported that 39% of files marked as defective never had a defect actually. They discuss the impact
+of this misclassification on earlier studies and recommend manual data validation for future studies. Rahman et al. [60] showed that
+size always matters as much as bias direction, and in fact, much more than bias direction when considering information-retrieval
+measures such as AUCROC and F-score. This result indicates that at least for prediction models, even when dealing with sampling
+bias, simply finding larger samples can sometimes be sufficient. Bird et al. [6] found that bias is a critical problem that threatens both
+the effectiveness of processes that rely on biased datasets to build prediction models and the generalizability of hypotheses tested on
+biased data. Similarly to previous work, we study a source of noise in defectprediction datasets, i.e., snoring.
+
+22
+
+Falessi et al.
+McIntosh and Kamei [45] recently found that in the context of Just In Time (JIT) prediction, training prediction models on the last three
+
+months of data provides more accurate results than training on more past data. Their result seem to be in contrast to ours; we observed more
+accurate results by ignoring recent data; they observed more accurate results by ignoring old data. There are several possible reasons for this
+inconsistency. First, the different contexts; we classify classes whereas they classify commit. Second the analyzed projects: they analyze two
+projects that are different from our 19 ones. Third, the two results might be consistent; it could be that the optimal data to train the models is
+the one in the middle, i.e., not too old (as showed in McIntosh and Kamei [45]), not too recent (as showed here). Thus, data for prediction
+models might act as vegetables, and you do not want them either unripe or rotten.
+
+7 CONCLUSION
+Dormant defects refer to defects discovered several releases after their introduction [8, 61]. While this concept iswell-known in the
+software engineering community, its impact on defect prediction models was not investigated before.In this paper, we empirically analyze the
+effect of dormant defects in causing classes to be tagged as non-defective in defect prediction dataset and therefore affect the performance of
+defect prediction models. We analyze data from more than 4,000 defects and 600 releases of 19 open source projects from the Apache
+ecosystem and 15 machine learning defect prediction classifiers. Our results show that (i) the presence of snoring decreases the recall of
+defect prediction classifiers, while not significantly affecting precision; and (ii) removing data from recent releases significantly improves the
+classifiers’ performance. At the same time, going too behind worsen performances. In summary, this paper provides
+insights on how to create a software defect dataset by mitigating the effect of snoring on classifiers performances.
+While, in principle, using recent data could be valuable when building a defect prediction dataset (i.e., the system characteristics are more
+similar to the current status), this paper showed how recent releases may contain defects that have not been discovered yet. For such a reason,
+classes with only such defects become “dormant” and represent false cases of defect-free classes in the dataset. Without doing better analysis
+and testing there is no simple way to discover defects in recent versions. At the same time, this paper empirically shows the extent to which
+relying on less recent releases reduces the snoring effect in defect prediction results.
+In terms of future work, we plan to extend this research by:
+(1) Combining noise removal techniques: There are several types of noise currently known in defects datasets, including snoring and
+misclassification [27, 69]. However, no approach can remove all noises from a dataset.
+(2) Considering distribution as inputs for the defect prediction models: We envision a model that accepts, as an input, a distribution of
+values, rather than a point-value [64]. In other words, since we cannot be sure about the defectiveness of a class in the training set,
+then, intuitively, the defectiveness of a class should be modelled by a confidence interval rather than a binary measure.
+(3) Analyzing the impact of snoring on existing research on factors affecting the performance of defect prediction: previous research has
+shown the impact of tuning [1, 20] or balancing [68] on defect prediction. Such an impact could be influenced by snoring, and it would
+be therefore interesting to investigate that effect.
+(4) Application in the context of Just in Time Defect Prediction (JIT): JIT prediction models have become sufficiently robust so that they are
+now incorporated into the development cycle of some companies [45]. We can replicate the present study on JIT models to understand
+the effect snoring has on the performance of these models.
+
+The Impact of Dormant Defects on Defect Prediction: a Study of 19 Apache Projects
+
+23
+
+REFERENCES
+[1] Amritanshu Agrawal and Tim Menzies. 2018. Is "better data" better than "better data miners"?: on the benefits of tuning SMOTE for defect prediction. In Proceedings of
+the 40th International Conference on Software Engineering, ICSE 2018, Gothenburg, Sweden, May 27 - June 03, 2018. 1050–1061.
+[2] David Aha and Dennis Kibler. 1991. Instance-based learning algorithms. Machine Learning 6 (1991), 37–66.
+[3] Aalok Ahluwalia, Davide Falessi, and Massimiliano Di Penta. 2019. Snoring: A Noise in Defect Prediction Datasets. In Proceedings of the 16th International
+Conference on Mining Software Repositories (MSR ’19). IEEE Press, Piscataway, NJ, USA, 63–67. https://doi.org/10.1109/MSR.2019.00019
+[4] Victor R. Basili, Lionel C. Briand, and Walcélio L. Melo. 1996. A Validation of Object-Oriented Design Metrics as Quality Indicators. IEEE Trans. Software Eng.
+22, 10 (1996), 751–761.
+[5] Sean Bayley and Davide Falessi. 2018. Optimizing Prediction Intervals by Tuning Random Forest via Meta-Validation. CoRR abs/1801.07194 (2018). arXiv:1801.07194
+http://arxiv.org/abs/1801.07194
+[6] Christian Bird, Adrian Bachmann, Eirik Aune, John Duffy, Abraham Bernstein, Vladimir Filkov, and Premkumar Devanbu. 2009. Fair and Balanced?: Bias in Bug-fix
+Datasets. In Proceedings of the the 7th Joint Meeting of the European Software Engineering Conference and the ACM SIGSOFT Symposium on The Foundations of Software
+Engineering (ESEC/FSE ’09). ACM, New York, NY, USA, 121–130. https://doi.org/10.1145/1595696.1595716
+[7] Leo Breiman. 2001. Random Forests. Machine Learning 45, 1 (2001), 5–32.
+[8] Tse-Hsun Chen, Meiyappan Nagappan, Emad Shihab, and Ahmed E. Hassan. 2014. An Empirical Study of Dormant Bugs. In Proceedings of the 11th Working
+Conference on Mining Software Repositories (MSR 2014). ACM, New York, NY, USA, 82–91. https://doi.org/10.1145/2597073.2597108
+[9] John G. Cleary and Leonard E. Trigg. 1995. K*: An Instance-based Learner Using an Entropic Distance Measure. In 12th International Conference on Machine
+Learning. 108–114.
+[10] Jacob Cohen. 1960. A coefficient of agreement for nominal scales. Educational and psychological measurement 20, 1 (1960), 37–46.
+[11] William W. Cohen. 1995. Fast Effective Rule Induction. In Twelfth International Conference on Machine Learning. Morgan Kaufmann, 115–123.
+[12] Daniel Alencar Da Costa, Shane McIntosh, Weiyi Shang, Uirá Kulesza, Roberta Coelho, and Ahmed E Hassan. 2016. A framework for evaluating the results of the szz
+approach for identifying bug-introducing changes. IEEE Transactions on Software Engineering 43, 7 (2016), 641–657.
+[13] Daniel Alencar da Costa, Shane McIntosh, Weiyi Shang, Uirá Kulesza, Roberta Coelho, and Ahmed E. Hassan. 2017. A Framework for Evaluating the Results of the
+SZZ Approach for Identifying Bug-Introducing Changes. IEEE Trans. Software Eng. 43, 7 (2017), 641–657.
+[14] Marco D’Ambros, Michele Lanza, and Romain Robbes. 2012. Evaluating Defect Prediction Approaches: A Benchmark and an Extensive Comparison.
+Empirical Softw. Engg. 17, 4-5 (Aug. 2012), 531–577. https://doi.org/10.1007/s10664-011-9173-9
+[15] Davide Falessi, Jacky Huang, Likhita Narayana, Jennifer Thai, and Burak Turhan. 2020. On the need of preserving order of data when validating within-project
+defect classifiers. Empirical Software Engineering (2020). https://doi.org/10.1007/s10664-020-09868-x
+[16] Davide Falessi and Max Jason Moede. 2018. Facilitating feasibility analysis: the pilot defects prediction dataset maker. In Proceedings of the 4th ACM SIGSOFT
+International Workshop on Software Analytics, SWAN@ESEC/SIGSOFT FSE 2018, Lake Buena Vista, FL, USA, November 5, 2018. 15–18.
+[17] Davide Falessi, Barbara Russo, and Kathleen Mullen. 2017. What if I Had No Smells?. In Proceedings of the 11th ACM/IEEE International Symposium on Empirical
+Software Engineering and Measurement (ESEM ’17). IEEE Press, Piscataway, NJ, USA, 78–84. https://doi.org/10.1109/ESEM.2017.14
+[18] Davide Falessi, Wyatt Smith, and Alexander Serebrenik. 2017. STRESS: A Semi-Automated, Fully Replicable Approach for Project Selection. In 2017 ACM/IEEE
+International Symposium on Empirical Software Engineering and Measurement, ESEM 2017, Toronto, ON, Canada, November 9-10, 2017. 151–156.
+https://doi.org/10.1109/ESEM.2017.22
+[19] Eibe Frank and Ian H. Witten. 1998. Generating Accurate Rule Sets Without Global Optimization. In Fifteenth International Conference on Machine Learning, J.
+Shavlik (Ed.). Morgan Kaufmann, 144–151.
+[20] Wei Fu, Tim Menzies, and Xipeng Shen. 2016. Tuning for software analytics: Is it really necessary? Information & Software Technology 76 (2016), 135–146.
+[21] Kehan Gao, Taghi M. Khoshgoftaar, Huanjing Wang, and Naeem Seliya. 2011. Choosing software metrics for defect prediction: an investigation on feature selection
+techniques. Softw., Pract. Exper. 41, 5 (2011), 579–606.
+[22] Georgios Gousios and Diomidis Spinellis. 2014. Conducting quantitative software engineering studies with Alitheia Core. Empirical Software Engineering 19, 4
+(2014), 885–925.
+[23] Robert J. Grissom and John J. Kim. 2005. Effect sizes for research: A broad practical approach (2nd edition ed.). Lawrence Earlbaum Associates.
+[24] Tibor Gyimóthy, Rudolf Ferenc, and István Siket. 2005. Empirical Validation of Object-Oriented Metrics on Open Source Software for Fault Prediction.
+IEEE Trans. Software Eng. 31, 10 (2005), 897–910.
+[25] Mark A. Hall. 1998. Correlation-based Feature Subset Selection for Machine Learning. Ph.D. Dissertation. University of Waikato, Hamilton, New Zealand.
+[26] Ahmed E. Hassan. 2009. Predicting faults using the complexity of code changes. In 31st International Conference on Software Engineering, ICSE 2009,
+May 16-24, 2009, Vancouver, Canada, Proceedings. IEEE, 78–88. https://doi.org/10.1109/ICSE.2009.5070510
+[27] Kim Herzig, Sascha Just, and Andreas Zeller. 2013. It’s not a bug, it’s a feature: how misclassification impacts bug prediction. In Proceedings of the 2013
+International Conference on Software Engineering (ICSE ’13). IEEE Press, Piscataway, NJ, USA, 392–401. http://dl.acm.org/citation.cfm?id= 2486788.2486840
+[28] Sture Holm. 1979. A Simple Sequentially Rejective Bonferroni Test Procedure. Scandinavian Journal on Statistics (1979).
+[29] Robert C. Holte. 1993. Very simple classification rules perform well on most commonly used datasets. Machine Learning 11 (1993), 63–91.
+
+24
+
+Falessi et al.
+
+[30] Wayne Iba and Pat Langley. 1992. Induction of One-Level Decision Trees. Machine Learning Proceedings 1992 (1992), 233–240. https://doi.org/10. 1016/b978-1-55860-247-2.50035-8
+[31] George H. John and Pat Langley. 1995. Estimating Continuous Distributions in Bayesian Classifiers. In Eleventh Conference on Uncertainty in Artificial Intelligence. Morgan Kaufmann, San
+Mateo, 338–345.
+[32] Leif Jonsson, Markus Borg, David Broman, Kristian Sandahl, Sigrid Eldh, and Per Runeson. 2016. Automated bug assignment: Ensemble-based machine learning in large scale industrial contexts.
+Empirical Software Engineering 21, 4 (2016), 1533–1578. https://doi.org/10.1007/s10664-015-9401-9
+[33] Yasutaka Kamei, Takafumi Fukushima, Shane McIntosh, Kazuhiro Yamashita, Naoyasu Ubayashi, and Ahmed E. Hassan. 2016. Studying just-in-time
+defect prediction using cross-project models. Empirical Software Engineering 21, 5 (2016), 2072–2106.
+[34] Taghi M. Khoshgoftaar, Edward B. Allen, Nishith Goel, Amit Nandi, and John McMullan. 1996. Detection of software modules with high debug code churn in a very large legacy system. In Seventh
+International Symposium on Software Reliability Engineering, ISSRE 1996, White Plains, NY, USA,
+October 30, 1996-Nov. 2, 1996. IEEE Computer Society, 364–371. https://doi.org/10.1109/ISSRE.1996.558896
+[35] Sunghun Kim, E. James Whitehead Jr., and Yi Zhang. 2008. Classifying Software Changes: Clean or Buggy? IEEE Trans. Software Eng. 34, 2 (2008), 181–196. https://doi.org/10.1109/TSE.2007.70773
+[36] Sunghun Kim, Hongyu Zhang, Rongxin Wu, and Liang Gong. 2011. Dealing with Noise in Defect Prediction. In Proceedings of the 33rd International Conference on Software Engineering (ICSE ’11).
+ACM, New York, NY, USA, 481–490.
+[37] Sunghun Kim, Thomas Zimmermann, E. James Whitehead Jr., and Andreas Zeller. 2007. Predicting Faults from Cached History. In 29th International Conference on Software Engineering (ICSE 2007),
+Minneapolis, MN, USA, May 20-26, 2007. 489–498.
+[38] Sunghun Kim, Thomas Zimmermann, Kai Pan, and E. James Whitehead Jr. 2006. Automatic Identification of Bug-Introducing Changes. In 21st IEEE/ACM International Conference on Automated
+Software Engineering (ASE 2006), 18-22 September 2006, Tokyo, Japan. 81–90.
+[39] Sunghun Kim, Thomas Zimmermann, Kai Pan, and E. James Jr. Whitehead. 2006. Automatic Identification of Bug-Introducing Changes. In Proceedings of the 21st IEEE/ACM International Conference on
+Automated Software Engineering (ASE ’06). IEEE Computer Society, Washington, DC, USA, 81–90. https://doi.org/10.1109/ASE.2006.23
+[40] Pavneet Singh Kochhar, Yuan Tian, and David Lo. 2014. Potential Biases in Bug Localization: Do They Matter?. In Proceedings of the 29th ACM/IEEE International Conference on Automated Software
+Engineering (ASE ’14). ACM, New York, NY, USA, 803–814.
+[41] Ron Kohavi. 1995. The Power of Decision Tables. In 8th European Conference on Machine Learning. Springer, 174–189.
+[42] Lars Kotthoff, Chris Thornton, Holger H. Hoos, Frank Hutter, and Kevin Leyton-Brown. 2017. Auto-WEKA 2.0: Automatic model selection and hyperparameter optimization in WEKA. Journal
+of Machine Learning Research 18, 25 (2017), 1–5. http://jmlr.org/papers/v18/16-261.html
+[43] Yishay Mansour. 1997. Pessimistic decision tree pruning based on tree size. In 14th International Conference on Machine Learning. 195–201.
+[44] B. W Matthews. 1975. Comparison of the predicted and observed secondary structure of T4 phage lysozyme. Biochimica et Biophysica Acta (BBA 2, 405 (1975), 442–451.
+[45] Shane McIntosh and Yasutaka Kamei. 2018. Are Fix-Inducing Changes a Moving Target? A Longitudinal Case Study of Just-In-Time Defect Prediction.
+IEEE Trans. Software Eng. 44, 5 (2018), 412–428.
+[46] Tim Menzies, Andrew Butcher, David R. Cok, Andrian Marcus, Lucas Layman, Forrest Shull, Burak Turhan, and Thomas Zimmermann. 2013. Local versus Global Lessons for Defect Prediction and
+Effort Estimation. IEEE Trans. Software Eng. 39, 6 (2013), 822–834.
+[47] Tim Menzies, Zach Milton, Burak Turhan, Bojan Cukic, Yue Jiang, and Ayse Basar Bener. 2010. Defect prediction from static code features: current
+results, limitations, new approaches. Autom. Softw. Eng. 17, 4 (2010), 375–407.
+[48] Raimund Moser, Witold Pedrycz, and Giancarlo Succi. 2008. A comparative analysis of the efficiency of change metrics and static code attributes for defect prediction. In 30th International Conference
+on Software Engineering (ICSE 2008), Leipzig, Germany, May 10-18, 2008. 181–190.
+[49] Nuthan Munaiah, Steven Kroh, Craig Cabrey, and Meiyappan Nagappan. 2017. Curating GitHub for Engineered Software Projects. Empirical Softw.
+Engg. 22, 6 (Dec. 2017), 3219–3253. https://doi.org/10.1007/s10664-017-9512-6
+[50] Meiyappan Nagappan, Thomas Zimmermann, and Christian Bird. 2013. Diversity in Software Engineering Research. In Proceedings of the 2013 9th Joint Meeting on Foundations of Software
+Engineering (ESEC/FSE 2013). ACM, New York, NY, USA, 466–476.
+[51] Meiyappan Nagappan, Thomas Zimmermann, and Christian Bird. 2013. Diversity in software engineering research. In Proceedings of the 2013 9th joint meeting on foundations of software
+engineering. ACM, 466–476.
+[52] Nachiappan Nagappan and Thomas Ball. 2005. Use of relative code churn measures to predict system defect density. In 27th International Conference on Software Engineering (ICSE 2005), 15-21 May
+2005, St. Louis, Missouri, USA, Gruia-Catalin Roman, William G. Griswold, and Bashar Nuseibeh (Eds.). ACM, 284–292. https://doi.org/10.1145/1062455.1062514
+[53] Edmilson Campos Neto, Daniel Alencar da Costa, and Uirá Kulesza. 2018. The impact of refactoring changes on the SZZ algorithm: An empirical study. In 25th International Conference on Software
+Analysis, Evolution and Reengineering, SANER 2018, Campobasso, Italy, March 20-23, 2018. 380–390. https://doi.org/10.1109/SANER.2018.8330225
+[54] Niclas Ohlsson and Hans Alberg. 1996. Predicting Fault-Prone Software Modules in Telephone Switches. IEEE Trans. Software Eng. 22, 12 (1996), 886–894. https://doi.org/10.1109/32.553637
+[55] Thomas J. Ostrand and Elaine J. Weyuker. 2004. A Tool for Mining Defect-Tracking Systems to Predict Fault-Prone Files. In Proceedings of the 1st International Workshop on Mining Software
+Repositories, MSR@ICSE 2004, Edinburgh, Scotland, UK, 25th May 2004, Ahmed E. Hassan, Richard C. Holt, and Audris Mockus (Eds.). 85–89.
+
+The Impact of Dormant Defects on Defect Prediction: a Study of 19 Apache Projects
+
+25
+
+[56] Thomas J. Ostrand, Elaine J. Weyuker, and Robert M. Bell. 2005. Predicting the Location and Number of Faults in Large Software Systems. IEEETrans. Software
+Eng. 31, 4 (2005), 340–355.
+[57] John Platt. 1998. Fast Training of Support Vector Machines using Sequential Minimal Optimization. In Advances in Kernel Methods - Support Vector Learning, B.
+Schoelkopf, C. Burges, and A. Smola (Eds.). MIT Press. http://research.microsoft.com/~jplatt/smo.html
+[58] David M W Powers. 2007. Evaluation: From Precision, Recall and F-Measure to ROC, Informedness, Markedness & Correlation. Journal of Machine Learning
+Technology 2, 1 (2007), 37–63.
+[59] Ross Quinlan. 1993. C4.5: Programs for Machine Learning. Morgan Kaufmann Publishers, San Mateo, CA.
+[60] Foyzur Rahman, Daryl Posnett, Israel Herraiz, and Premkumar Devanbu. 2013. Sample Size vs. Bias in Defect Prediction. In Proceedings of the 2013 9th Joint
+Meeting on Foundations of Software Engineering (ESEC/FSE 2013). ACM, New York, NY, USA, 147–157.
+[61] Gema Rodriguez-Perez, Gregorio Robles, and Jesus M. Gonzalez-Barahona. 2017. How Much Time Did It Take to Notify a Bug?: Two Case Studies: Elasticsearch and
+Nova. In Proceedings of the 8th Workshop on Emerging Trends in Software Metrics (WETSoM ’17). IEEE Press, Piscataway, NJ, USA, 29–35.
+https://doi.org/10.1109/WETSoM.2017..6
+[62] Gema Rodríguez-Pérez, Andy Zaidman, Alexander Serebrenik, Gregorio Robles, and Jesús M. González-Barahona. 2018. What if a Bug Has a Different Origin?: Making
+Sense of Bugs Without an Explicit Bug Introducing Change. In Proceedings of the 12th ACM/IEEE International Symposium on Empirical Software Engineering and
+Measurement (ESEM ’18). ACM, New York, NY, USA, Article 52, 4 pages. https://doi.org/10.1145/3239235.3267436
+[63] Daniel Rozenberg, Ivan Beschastnikh, Fabian Kosmale, Valerie Poser, Heiko Becker, Marc Palyart, and Gail C. Murphy. 2016. Comparing repositories visually with
+repograms. In Proceedings of the 13th International Conference on Mining Software Repositories, MSR 2016, Austin, TX, USA, May 14-22, 2016. 109–120.
+[64] Mehrdad Sabetzadeh, Davide Falessi, Lionel Briand, and Stefano Di Alesio. 2013. A goal-based approach for qualification of new technologies: Foundations, tool
+support, and industrial validation. Reliability Engineering & System Safety 119 (2013), 52–66.
+[65] Martin Shepperd, Qinbao Song, Zhongbin Sun, and Carolyn Mair. 2013. Data Quality: Some Comments on the NASA Software Defect Datasets.
+IEEE Trans. Softw. Eng. 39, 9 (Sept. 2013), 1208–1215. https://doi.org/10.1109/TSE.2013.11
+[66] Jacek Śliwerski, Thomas Zimmermann, and Andreas Zeller. 2005. When Do Changes Induce Fixes?. In Proceedings of the 2005 International Workshop on Mining
+Software Repositories (MSR ’05). ACM, New York, NY, USA, 1–5. https://doi.org/10.1145/1082983.1083147
+[67] Charles Spearman. 1904. The proof and measurement of association between two things. The American Journal of Psychology 15, 1 (1904), 72–101.
+[68] Chakkrit Tantithamthavorn, Ahmed E. Hassan, and Kenichi Matsumoto. 2018. The Impact of Class Rebalancing Techniques on the Performance and Interpretation of
+Defect Prediction Models. arXiv:cs.SE/1801.10269
+[69] Chakkrit Tantithamthavorn, Shane McIntosh, Ahmed E. Hassan, Akinori Ihara, and Kenichi Matsumoto. 2015. The Impact of Mislabelling on the Performance and
+Interpretation of Defect Prediction Models. In Proceedings of the 37th International Conference on Software Engineering - Volume 1 (ICSE ’15). IEEE Press, Piscataway,
+NJ, USA, 812–823. http://dl.acm.org/citation.cfm?id=2818754.2818852
+[70] Chakkrit Tantithamthavorn, Shane McIntosh, Ahmed E. Hassan, and Kenichi Matsumoto. 2016. Automated parameter optimization of classification techniques for
+defect prediction models. In Proceedings of the 38th International Conference on Software Engineering, 10 ICSE 2016, Austin, TX, USA, May 14-22, 2016. 321–332.
+[71] Chakkrit Tantithamthavorn, Shane McIntosh, Ahmed E. Hassan, and Kenichi Matsumoto. 2018. The Impact of Automated Parameter Optimization on Defect
+Prediction Models. CoRR abs/1801.10270 (2018). arXiv:1801.10270 http://arxiv.org/abs/1801.10270
+[72] Burak Turhan, Tim Menzies, Ayse Basar Bener, and Justin S. Di Stefano. 2009. On the relative value of cross-company and within-company data for
+defect prediction. Empirical Software Engineering 14, 5 (2009), 540–578.
+[73] Bailey Vandehei, Daniel Alencar da Costa, and Davide Falessi. 2020. Leveraging the Defects Life Cycle to Label Affected Versions and Defective Classes, accepted
+for publication at TOSEM. CoRR abs/2011.05531 (2020). arXiv:2011.05531 https://arxiv.org/abs/2011.05531
+[74] Song Wang, Taiyue Liu, and Lin Tan. 2016. Automatically learning semantic features for defect prediction. In Proceedings of the 38th International Conference on
+Software Engineering, ICSE 2016, Austin, TX, USA, May 14-22, 2016. 297–308.
+[75] Elaine J. Weyuker, Thomas J. Ostrand, and Robert M. Bell. 2010. Comparing the effectiveness of several modeling methods for fault prediction.
+Empirical Software Engineering 15, 3 (2010), 277–295. https://doi.org/10.1007/s10664-009-9111-2
+[76] Frank Wilcoxon. 1945. Individual Comparisons by Ranking Methods. Biometrics Bulletin 1, 6 (1945), 80–83. http://www.jstor.org/stable/3001968
+[77] Ian H. Witten, Eibe Frank, and Mark A. Hall. 2011. Data Mining: Practical Machine Learning Tools and Techniques (3rd ed.). Morgan KaufmannPublishers Inc.,
+San Francisco, CA, USA.
+[78] Claes Wohlin, Per Runeson, Martin Hst, Magnus C. Ohlsson, Bjrn Regnell, and Anders Wessln. 2012. Experimentation in Software Engineering. Springer
+Publishing Company, Incorporated.
+[79] Suraj Yatish, Jirayus Jiarpakdee, Patanamon Thongtanunam, and Chakkrit Tantithamthavorn. 2019. Mining Software Defects: Should We Consider Affected
+Releases? (2019), 654–665. https://doi.org/10.1109/ICSE.2019.00075
+[80] Thomas Zimmermann, Nachiappan Nagappan, Harald C. Gall, Emanuel Giger, and Brendan Murphy. 2009. Cross-project defect prediction: a large scale experiment
+on data vs. domain vs. process. In Proceedings of the 7th joint meeting of the European Software Engineering Conference and the ACM SIGSOFT International
+Symposium on Foundations of Software Engineering, 2009, Amsterdam, The Netherlands, August 24-28, 2009. 91–100.
+[81] Thomas Zimmermann, Rahul Premraj, and Andreas Zeller. 2007. Predicting Defects for Eclipse. In Proceedings of the Third International Workshop on Predictor Models
+in Software Engineering (PROMISE ’07). IEEE Computer Society, Washington, DC, USA, 9–.
+
+

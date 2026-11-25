@@ -1,0 +1,19 @@
+# plan_v4 — cycle 2, written 2026-11-24 after cycle 1 (H1 not supported on test, H3 supported). plan_v1-v3 unchanged.
+# Reason (Section 6.4 ladder, rungs 1-3): the latency penalty is label noise from OLD undiscovered bugs (H3);
+# age-only posteriors cannot find them (LAW-base) and online-model posteriors self-confirm (LAW-model).
+# Smallest change targeting that mechanism: score old provisional negatives with models trained only on
+# mature commits, cross-fitted so no commit is scored by a model trained on it ("lawm").
+version: 4
+cycle: 2
+supersedes: plan_v3
+experiments:
+  E0c_dev:
+    projects: dev
+    seeds: explore
+    variants: "lawm mode in {soft, count} x W in {30, 90}; mature_age=365, delay_est=lagakos (4 configs, dev only)"
+    diagnostics: "mean q of truly buggy vs clean old provisional negatives; AUC of the mature scorer for dormant bugs"
+    hypothesis_H4: "best lawm config beats orb_W90 (best tuned dev baseline, 0.724) on mean dev G-mean"
+    est_cpu_h: 2.0
+    priority: 12
+  if_H4_holds_on_dev: "plan_v5: freeze lawm config, add ODaSC reimplementation (equal tuning budget) and a second-dataset/shift condition, run E1-E3 analogues on test with SEEDS_CONFIRM"
+  if_H4_fails: "cycle-1 results are written up as an analysis/negative-result paper candidate (H3 + negative H1)"

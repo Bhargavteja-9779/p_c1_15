@@ -1,0 +1,30 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_cassandra",
+    "method": "lawm",
+    "variant": "lawm_soft_W30",
+    "seed": 102,
+    "split": "fresh",
+    "W": 30,
+    "delay_est": "lagakos",
+    "mode": "soft",
+    "gmean": 0.7516406934571377,
+    "r0": 0.8131591013296653,
+    "r1": 0.6947763741891431,
+    "rdiff": 0.11838272714052223,
+    "auc": 0.8140753291759476,
+    "mcc": 0.5103266471651504,
+    "acc": 0.7656014264161295,
+    "precision": 0.7140350877192982,
+    "f1": 0.7042740958643364,
+    "recall20e": 0.6722430863776033,
+    "popt": 0.8894600386625849,
+    "ifa": 2,
+    "n_eval": 7291,
+    "seconds": 37.44,
+    "job_id": "E8_aj_cassandra_lawm_soft_W30_s102",
+    "written": "2026-11-25T21:04:41+00:00",
+    "cycle": 3
+  }
+]

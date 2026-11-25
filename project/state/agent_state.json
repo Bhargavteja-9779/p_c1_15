@@ -1,13 +1,13 @@
 {
   "status": "RUNNING",
-  "cycle": 2,
+  "cycle": 3,
   "phase": "PHASE5_RUN",
-  "step": "cycle 2: finishing E2/E3 of frozen plan_v3; E1 done (G5 fails vs ODaSC, passes vs waiting-time baselines)",
+  "step": "cycle 3: E8 analysed (H6 fail, H3 replicated); plan_v8 dev round on dual denoiser",
   "pivots": 0,
   "topic_id": null,
   "journal": "JKSU-CIS (Springer Nature, ISSN 1319-1578, IF 6.4 2025; turnaround median 71\u201374 d, marginal)",
-  "last_action": "Dev tuning complete (528 runs, 44 variants); frozen plan_v3: LAW lagakos+model+gmax_lat vs 6 baselines; E1/E2/E3 enqueued",
-  "next_action": "1) Keep runners alive: bash scripts/watch_and_checkpoint.sh (relaunches workers, commits every 5 min). If cycle-1 budget (15 h) runs out, remaining jobs become skipped_budget: set cycle=2 in state/agent_state.json, reset skipped_budget->pending, relaunch. 2) When E1 is done: update scripts/final_report.py for plan_v3 (primary = law_lagakos_model_gmax_lat vs odasc_W30, Holm over 6 baselines, bootstrap CI, 0.02 margin) and run it. 3) Update gates G4-G8, novelty score, journal RESULT entry; then 6.4/Section 11 decision.",
+  "last_action": "E8 done and analysed; gates G5/G7 updated; journal RESULT",
+  "next_action": "1) Dev-only: diagnose dual on nova (results/diag_dev/dual_nova_seed0.txt), design plan_v8 (latency-corrected neighbour posterior r_S = rS/(1-r+rS); combination rule) BEFORE running; grid on Cabral dev only. 2) Find an untouched confirmation dataset (e.g. other JIT datasets with fix dates; ApacheJIT and Cabral test are USED). 3) Update novelty score + blind review. 4) E3 (144 skipped_budget) low priority.",
   "config": {
     "TARGET_TIER": "Q1 journal (JCR), reputable publisher",
     "MAX_DAYS_SUBMIT_TO_ACCEPT": 72,
@@ -29,7 +29,7 @@
     ]
   },
   "seeds_confirm_fixed_at": "2026-11-24 (project start; never change)",
-  "updated": "2026-11-25T21:45:40+00:00",
+  "updated": "2026-11-25T21:37:55+00:00",
   "topic": "Verification-latency-aware online JIT-SDP: latency-aware weighting (LAW) of provisionally-clean commits",
   "hypothesis": "LAW beats the best tuned waiting-time baseline by >=0.02 G-mean on 10 held-out projects (Holm p<0.05)"
 }

@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E0b",
+    "project": "fabric",
+    "method": "awt",
+    "variant": "awt_e0.5",
+    "seed": 2,
+    "split": "dev",
+    "delay_est": "lagakos",
+    "label_noise_log": true,
+    "eps": 0.5,
+    "gmean": 0.6190267626556729,
+    "r0": 0.5617303441742975,
+    "r1": 0.6821674080064699,
+    "rdiff": 0.12043706383217245,
+    "auc": 0.6543702616614346,
+    "mcc": 0.19751829871274587,
+    "n_eval": 11974,
+    "seconds": 17.14,
+    "W_T_mean": 94.67460317460318,
+    "job_id": "E0b_fabric_awt_e0.5_s2",
+    "written": "2026-11-24T12:47:32+00:00",
+    "cycle": 1
+  }
+]

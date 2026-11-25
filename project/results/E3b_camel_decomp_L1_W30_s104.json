@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E3b",
+    "project": "camel",
+    "method": "decomp",
+    "variant": "decomp_L1_W30",
+    "seed": 104,
+    "split": "test",
+    "W": 30,
+    "level": 1,
+    "gmean": 0.7214959013898479,
+    "r0": 0.7706314393552994,
+    "r1": 0.6754932502596054,
+    "rdiff": 0.09513818909569405,
+    "auc": 0.8091601194624445,
+    "mcc": 0.39753913929844475,
+    "n_eval": 25384,
+    "seconds": 71.88,
+    "job_id": "E3b_camel_decomp_L1_W30_s104",
+    "written": "2026-11-24T14:23:59+00:00",
+    "cycle": 1
+  }
+]

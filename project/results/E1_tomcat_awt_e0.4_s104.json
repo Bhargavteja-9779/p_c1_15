@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E1",
+    "project": "tomcat",
+    "method": "awt",
+    "variant": "awt_e0.4",
+    "seed": 104,
+    "split": "test",
+    "delay_est": "lagakos",
+    "label_noise_log": true,
+    "eps": 0.4,
+    "gmean": 0.4530442059706336,
+    "r0": 0.2347138431436491,
+    "r1": 0.8744650499286734,
+    "rdiff": 0.6397512067850243,
+    "auc": 0.5991209860655875,
+    "mcc": 0.12250767740562793,
+    "n_eval": 17173,
+    "seconds": 30.84,
+    "W_T_mean": 381.6304347826087,
+    "job_id": "E1_tomcat_awt_e0.4_s104",
+    "written": "2026-11-24T14:01:36+00:00",
+    "cycle": 1
+  }
+]

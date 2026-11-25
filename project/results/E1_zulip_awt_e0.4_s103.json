@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E1",
+    "project": "zulip",
+    "method": "awt",
+    "variant": "awt_e0.4",
+    "seed": 103,
+    "split": "test",
+    "delay_est": "lagakos",
+    "label_noise_log": true,
+    "eps": 0.4,
+    "gmean": 0.6199153782803001,
+    "r0": 0.6702663128031482,
+    "r1": 0.5733468457055992,
+    "rdiff": 0.09691946709754895,
+    "auc": 0.6599103839240488,
+    "mcc": 0.22008961930965354,
+    "n_eval": 14874,
+    "seconds": 24.94,
+    "W_T_mean": 157.26111111111112,
+    "job_id": "E1_zulip_awt_e0.4_s103",
+    "written": "2026-11-24T14:08:42+00:00",
+    "cycle": 1
+  }
+]

@@ -12,10 +12,6 @@ Label policies (`method`):
   nowait    : all commits, observed labels at face value
   wait      : positives as soon as found; clean only after W days (Cabral et al. 2019 framework)
   orb       : 'wait' + ORB-style class-weight boosting from the moving average of predictions
-  odasc     : ODaSC-style baseline (Song, Li, Minku & Yao, IJCNN 2022), batch adaptation: 'wait' labels;
-              when a commit is labelled clean (age >= W) its class-0 confidence alpha0 is computed once
-              from the labels of its k nearest recent labelled commits (stand-in for DenStream
-              micro-clusters); if alpha0 < delta it is counted as both class 0 and class 1.
   law       : latency-aware weighting (proposed): every provisionally-clean commit of age a is split
               into a positive copy with weight q and a negative copy with weight 1-q, where
               q = p S(a) / (1 - p + p S(a)), S(a)=P(not yet discovered at age a | defect-inducing),
@@ -78,7 +74,8 @@ def fit_lgb(X, y, w, seed, class_mult=(1.0, 1.0)):
 
 def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="lagakos",
              prior="model", orb_params=None, eval_end_gap_days=365, delay_scale=1.0, return_preds=False,
-             label_noise_log=False, odasc_delta=0.9, odasc_k=50, odasc_pool=5000, thr_policy="fixed", thr_window=2000):
+             label_noise_log=False, eps=0.3, level=1, mode="soft", mature_age=365,
+             prior_src="mature", crossfit=True, use_S=True, knn_k=20, theta=0.8):
     """df: one project's commits sorted by time (columns FEATS, t, y, t_found).
     delay_scale>1 stretches discovery delays (robustness: slower bug discovery)."""
     t0 = time.time()
@@ -92,7 +89,6 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
     prob = np.full(n, np.nan); pred = np.full(n, -1)
     model, oc = None, 1.0
     recent_preds = []; diag = []
-    alpha0 = np.full(n, np.nan)  # odasc: class-0 label confidence, fixed when a commit is labelled clean
     for start in range(warmup, n, update_every):
         T = t[start]; cmult = (1.0, 1.0)
         tr = np.where(t < T)[0]
@@ -107,32 +103,104 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
             Xi, yi, wi = X[tr][keep], found[keep].astype(int), np.ones(keep.sum())
             if method == "orb" and len(recent_preds) >= 10:
                 cmult = orb_factors(np.mean(recent_preds[-100:]), **(orb_params or {}))
-        elif method == "odasc":
-            keep = found | (age >= W)
-            Xi, yi = X[tr][keep], found[keep].astype(int)
-            cl = tr[keep & ~found]                       # labelled clean commits
-            new = cl[np.isnan(alpha0[cl])]               # just crossed W: confidence computed now, once
-            if len(new):
-                lab = tr[keep]; lab_lab = found[keep].astype(int)
-                # pool = most recent labelled commits whose label was known before this one was labelled
-                notnew = ~np.isin(lab, new); lab, lab_lab = lab[notnew], lab_lab[notnew]
-                pool = lab[-odasc_pool:]; pool_y = lab_lab[-odasc_pool:]
-                if pool_y.sum() >= 5 and len(pool) > odasc_k:
+        elif method == "awt":
+            # adaptive waiting time (plan_v2): W_T = smallest age a with S_T(a) <= eps, S_T from the
+            # truncation-corrected delay estimate on discoveries observed before T (no future info)
+            pos_idx = tr[found]
+            d_obs = (tf[pos_idx] - t[pos_idx]) / DAY; tau = (T - t[pos_idx]) / DAY
+            grid = np.arange(1, 731, 1.0)
+            Sg = survival_from_delays(d_obs, tau, grid, method=delay_est)
+            below = np.where(Sg <= eps)[0]
+            W_T = grid[below[0]] if (len(d_obs) >= 5 and len(below)) else 90.0
+            keep = found | (age >= W_T)
+            Xi, yi, wi = X[tr][keep], found[keep].astype(int), np.ones(keep.sum())
+            if label_noise_log: diag.append(dict(T=T, W_T=float(W_T)))
+        elif method == "lawm":
+            # plan_v4 (cycle 2): wait(W) set, but OLD provisional negatives (age >= W, not found) get a
+            # dormant-bug posterior q = p S(a) / (1 - p + p S(a)); p comes from scorers trained ONLY on
+            # mature commits (age >= mature_age, observed labels) with 2-fold cross-fitting, never from the
+            # online model -> no self-confirmation loop. mode soft: positive copy q / negative copy 1-q;
+            # mode count: drop the round(sum q) highest-p old provisional negatives.
+            pos_idx = tr[found]
+            d_obs = (tf[pos_idx] - t[pos_idx]) / DAY; tau = (T - t[pos_idx]) / DAY
+            old_unl = (~found) & (age >= W)
+            keep = found | old_unl
+            Xtr = X[tr]; mat = age >= mature_age
+            p = None
+            if prior_src == "online":     # ablation: online model's own score (self-confirmation possible)
+                if model is not None:
+                    pr_ = model.predict_proba(Xtr[old_unl])[:, 1]; od = pr_ / np.clip(1 - pr_, 1e-6, None) * oc; p = od / (1 + od)
+            elif not crossfit:            # ablation: one mature scorer, in-sample scores for mature commits
+                if mat.sum() > 200 and found[mat].sum() > 20:
+                    m_f, oc_f = fit_lgb(Xtr[mat], found[mat].astype(int), np.ones(mat.sum()), seed + 7)
+                    if m_f is not None:
+                        pr_ = m_f.predict_proba(Xtr[old_unl])[:, 1]; od = pr_ / np.clip(1 - pr_, 1e-6, None) * oc_f; p = od / (1 + od)
+            elif mat.sum() > 200 and found[mat].sum() > 20:
+                mi = np.where(mat)[0]; fold = np.arange(len(mi)) % 2
+                pm = np.zeros(len(tr)); cnt = np.zeros(len(tr))
+                for f in (0, 1):
+                    m_f, oc_f = fit_lgb(Xtr[mi[fold == f]], found[mi[fold == f]].astype(int), np.ones((fold == f).sum()), seed + 7 + f)
+                    if m_f is None: continue
+                    pr_ = m_f.predict_proba(Xtr)[:, 1]; od = pr_ / np.clip(1 - pr_, 1e-6, None) * oc_f; pr_ = od / (1 + od)
+                    use = np.ones(len(tr), bool); use[mi[fold == f]] = False      # never score a commit with a model trained on it
+                    pm[use] += pr_[use]; cnt[use] += 1
+                p = pm[old_unl] / np.maximum(cnt[old_unl], 1)
+            if p is None:
+                Xi, yi, wi = Xtr[keep], found[keep].astype(int), np.ones(keep.sum())
+            else:
+                S = survival_from_delays(d_obs, tau, age[old_unl], method=delay_est) if use_S else np.ones(old_unl.sum())
+                q = p * S / np.clip(1 - p + p * S, 1e-9, None)
+                Xp, Xu = Xtr[found], Xtr[old_unl]
+                if mode == "dual":
+                    # plan_v6: two independent kinds of evidence that an old provisional negative is a dormant bug:
+                    # (i) q from mature cross-fitted scorer x delay survival, (ii) kNN label composition (ODaSC-style).
+                    # noisy-OR: positive weight 1 - (1-q)(1-r), r = share of positive neighbours (excluding self).
                     from sklearn.neighbors import NearestNeighbors
-                    mu, sd = X[pool].mean(0), X[pool].std(0) + 1e-9
-                    nn = NearestNeighbors(n_neighbors=odasc_k).fit((X[pool] - mu) / sd)
-                    _, ind = nn.kneighbors((X[new] - mu) / sd)
-                    alpha0[new] = 1.0 - pool_y[ind].mean(1)
+                    Xk = np.vstack([Xp, Xu]); yk = np.concatenate([np.ones(len(Xp)), np.zeros(len(Xu))])
+                    nn = NearestNeighbors(n_neighbors=knn_k + 1).fit(Xk)
+                    _, ind = nn.kneighbors(Xu)
+                    r = yk[ind[:, 1:]].mean(axis=1)
+                    q = 1 - (1 - q) * (1 - r)
+                    mode_ = "soft"
                 else:
-                    alpha0[new] = 1.0
-            amb = keep & ~found
-            amb[amb] = alpha0[tr[amb]] < odasc_delta    # low clean-confidence -> counted as both classes
-            Xi = np.vstack([Xi, X[tr][amb]]); yi = np.concatenate([yi, np.ones(amb.sum(), int)])
-            wi = np.ones(len(yi))
-            if label_noise_log:
-                truth = y[tr][amb]
-                diag.append(dict(T=T, frac_amb=float(amb.sum() / max((keep & ~found).sum(), 1)),
-                                 frac_amb_true_bug=float(truth.mean()) if len(truth) else np.nan))
+                    mode_ = mode
+                if mode_ == "soft":
+                    Xi = np.vstack([Xp, Xu, Xu]); yi = np.concatenate([np.ones(len(Xp)), np.ones(len(Xu)), np.zeros(len(Xu))]).astype(int)
+                    wi = np.concatenate([np.ones(len(Xp)), q, 1 - q]); kw_ = wi > 1e-4; Xi, yi, wi = Xi[kw_], yi[kw_], wi[kw_]
+                else:
+                    k = int(round(q.sum())); drop = np.zeros(len(Xu), bool)
+                    if k > 0: drop[np.argsort(-p)[:k]] = True
+                    Xi = np.vstack([Xp, Xu[~drop]]); yi = np.concatenate([np.ones(len(Xp)), np.zeros((~drop).sum())]).astype(int); wi = np.ones(len(yi))
+                if label_noise_log:
+                    yt = y[tr][old_unl]
+                    diag.append(dict(T=T, mean_q_true_bug=float(q[yt == 1].mean()) if (yt == 1).any() else np.nan,
+                                     mean_q_clean=float(q[yt == 0].mean()) if (yt == 0).any() else np.nan,
+                                     auc_dormant=float(roc_auc_score(yt, p)) if 0 < yt.sum() < len(yt) else np.nan))
+        elif method == "odasc":
+            # ODaSC-style baseline (Song et al. IJCNN 2022), adapted: label confidence of each wait-labelled
+            # clean example = share of clean labels among its k nearest labelled neighbours in feature space
+            # (kNN class composition instead of DenStream micro-clusters); confidence < theta -> the example
+            # is counted as BOTH classes (ODaSC's rule). Learner = same LightGBM as all methods.
+            from sklearn.neighbors import NearestNeighbors
+            keep = found | (age >= W)
+            Xk, yk = X[tr][keep], found[keep].astype(int)
+            neg = np.where(yk == 0)[0]
+            if len(neg) > knn_k and yk.sum() > 0:
+                nn = NearestNeighbors(n_neighbors=knn_k + 1).fit(Xk)
+                _, ind = nn.kneighbors(Xk[neg])
+                conf = 1.0 - yk[ind[:, 1:]].mean(axis=1)          # exclude self
+                dbl = neg[conf < theta]
+                Xi = np.vstack([Xk, Xk[dbl]]); yi = np.concatenate([yk, np.ones(len(dbl), int)]); wi = np.ones(len(yi))
+            else:
+                Xi, yi, wi = Xk, yk, np.ones(len(yk))
+        elif method == "decomp":
+            # DIAGNOSTIC ONLY (uses true labels -> not a competitor). Decomposes the wait->oracle gap:
+            # level 1: same examples as wait(W) but true labels (pure denoising)
+            # level 2: level 1 + young not-yet-found true bugs (adds fresh positives)
+            # oracle  : level 2 + young clean commits
+            keep = found | (age >= W)
+            if level >= 2: keep = keep | (y[tr] == 1)
+            Xi, yi, wi = X[tr][keep], y[tr][keep], np.ones(keep.sum())
         elif method == "law":
             pos_idx = tr[found]
             d_obs = (tf[pos_idx] - t[pos_idx]) / DAY; tau = (T - t[pos_idx]) / DAY
@@ -163,62 +231,44 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
         if m_new is not None:
             model, oc = m_new, oc_new
         end = min(start + update_every, n)
-        thr = 0.5
-        if thr_policy != "fixed":
-            thr = choose_threshold(thr_policy, T, t, tf, prob, start, thr_window)
-            if label_noise_log: diag.append(dict(T=T, thr=thr))
         if model is not None:
             pr = model.predict_proba(X[start:end])[:, 1]
-            prob[start:end] = pr; pred[start:end] = (pr >= thr).astype(int)
+            prob[start:end] = pr; pred[start:end] = (pr >= 0.5).astype(int)
             recent_preds.extend(pred[start:end].tolist())
     # evaluation window
     ev = (pred >= 0) & (t <= t.max() - eval_end_gap_days * DAY)
-    res = evaluate(y[ev], pred[ev], prob[ev])
+    eff = df["la"].to_numpy(float) + df["ld"].to_numpy(float) + 1.0
+    res = evaluate(y[ev], pred[ev], prob[ev], eff[ev])
     res.update(n_eval=int(ev.sum()), seconds=round(time.time() - t0, 2))
     out = {"metrics": res}
     if return_preds: out.update(pred=pred, prob=prob, eval_mask=ev)
     if diag: out["diag"] = diag
     return out
 
-def choose_threshold(policy, T, t, tf, prob, start, window, min_n=200):
-    """Threshold for commits made in [T, next update) using ONLY information available at T:
-    prequential (out-of-sample, commit-time) scores of past commits and labels observable at T.
-      ratematch: among recent 'mature' commits (age >= 90th pct of the truncation-corrected discovery
-                 delay, fallback 365 d), flag the same share as were found defective.
-      gmax_lat : maximise G-mean on the last `window` scored commits, with not-yet-found commits given a
-                 soft positive weight q = b S(a) / (1 - b + b S(a)) (b = defect rate of mature commits)."""
-    past = np.where(np.isfinite(prob[:start]))[0]
-    if len(past) < min_n:
-        return 0.5
-    found_all = tf[:start] <= T
-    pos = np.where(found_all)[0]
-    age = (T - t) / DAY
-    grid = np.arange(0, 4000, 5.0)
-    S = survival_from_delays((tf[pos] - t[pos]) / DAY, (T - t[pos]) / DAY, grid, "lagakos")
-    a90 = float(grid[np.argmax(S <= 0.10)]) if (S <= 0.10).any() and len(pos) >= 5 else 365.0
-    mature = np.where(age[:start] >= a90)[0]
-    if policy == "ratematch":
-        m = np.intersect1d(mature, past)[-window:]
-        if len(m) < min_n:
-            return 0.5
-        r = found_all[m].mean()
-        return float(np.quantile(prob[m], 1 - r)) if 0 < r < 1 else 0.5
-    if policy == "gmax_lat":
-        w = past[-window:]
-        b = found_all[mature].mean() if len(mature) >= min_n else found_all[:start].mean()
-        Sa = np.interp(age[w], grid, S)
-        q = np.where(found_all[w], 1.0, b * Sa / np.clip(1 - b + b * Sa, 1e-9, None))
-        ps, sc = q, prob[w]
-        order = np.argsort(-sc); sc_o, p_o, n_o = sc[order], ps[order], (1 - ps)[order]
-        tp = np.cumsum(p_o); fp = np.cumsum(n_o)
-        r1 = tp / max(tp[-1], 1e-9); r0 = 1 - fp / max(fp[-1], 1e-9)
-        k = int(np.argmax(np.sqrt(np.clip(r1 * r0, 0, None))))
-        return float(sc_o[k])
-    raise ValueError(policy)
+def effort_aware(y, prob, effort):
+    """Effort-aware JIT-SDP metrics (Kamei et al. 2013; Yang et al. 2016): inspect commits in order of
+    predicted risk density prob/effort (effort = LA+LD+1). Recall@20%Effort, Popt (normalised area vs
+    optimal/worst), IFA (#clean commits inspected before the first defective one)."""
+    e = np.asarray(effort, float); n = len(y)
+    def curve(order):
+        ce = np.cumsum(e[order]) / e.sum(); cy = np.cumsum(y[order]) / max(y.sum(), 1)
+        return np.concatenate([[0], ce]), np.concatenate([[0], cy])
+    order = np.lexsort((e, -prob / e))
+    x, c = curve(order)
+    r20 = float(np.interp(0.2, x, c))
+    opt = curve(np.lexsort((e, -y / e))); worst = curve(np.lexsort((-e, y / e)))
+    area = lambda xc: float(np.trapezoid(xc[1], xc[0]))
+    popt = 1 - (area(opt) - area((x, c))) / max(area(opt) - area(worst), 1e-12)
+    ifa = int(np.argmax(y[order] == 1)) if y.sum() else n
+    return dict(recall20e=r20, popt=popt, ifa=ifa)
 
-def evaluate(y, pred, prob):
+def evaluate(y, pred, prob, effort=None):
+    from sklearn.metrics import precision_score, f1_score, accuracy_score
     r1 = float(np.mean(pred[y == 1] == 1)) if (y == 1).any() else np.nan
     r0 = float(np.mean(pred[y == 0] == 0)) if (y == 0).any() else np.nan
-    return dict(gmean=float(np.sqrt(r0 * r1)), r0=r0, r1=r1, rdiff=abs(r0 - r1),
-                auc=float(roc_auc_score(y, prob)) if len(np.unique(y)) > 1 else np.nan,
-                mcc=float(matthews_corrcoef(y, pred)))
+    res = dict(gmean=float(np.sqrt(r0 * r1)), r0=r0, r1=r1, rdiff=abs(r0 - r1),
+               auc=float(roc_auc_score(y, prob)) if len(np.unique(y)) > 1 else np.nan,
+               mcc=float(matthews_corrcoef(y, pred)), acc=float(accuracy_score(y, pred)),
+               precision=float(precision_score(y, pred, zero_division=0)), f1=float(f1_score(y, pred, zero_division=0)))
+    if effort is not None: res.update(effort_aware(y, prob, effort))
+    return res

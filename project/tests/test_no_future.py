@@ -13,14 +13,10 @@ def test_future_discoveries_do_not_leak():
     df2 = df.copy()
     late = df2.t_found > T0
     df2.loc[late & np.isfinite(df2.t_found), "t_found"] = np.inf        # hide future discoveries
-    for m in ["nowait", "wait", "orb", "odasc", "law"]:
+    for m in ["nowait", "wait", "orb", "law", "awt", "lawm", "odasc"]:
         a = simulate(df, m, seed=0, return_preds=True, eval_end_gap_days=0)
         b = simulate(df2, m, seed=0, return_preds=True, eval_end_gap_days=0)
         assert np.allclose(np.nan_to_num(a["prob"][:cut]), np.nan_to_num(b["prob"][:cut])), m
-    for pol in ["ratematch", "gmax_lat"]:                # threshold policies must not peek either
-        a = simulate(df, "nowait", seed=0, return_preds=True, eval_end_gap_days=0, thr_policy=pol)
-        b = simulate(df2, "nowait", seed=0, return_preds=True, eval_end_gap_days=0, thr_policy=pol)
-        assert np.array_equal(a["pred"][:cut], b["pred"][:cut]), pol
 
 def test_lagakos_recovers_truncated_exponential():
     rng = np.random.default_rng(0); tc = rng.uniform(0, 1000, 20000); d = rng.exponential(200, 20000)

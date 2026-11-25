@@ -1,20 +1,20 @@
-# plan_v2 — written 2026-11-24 (cycle 1) BEFORE any held-out (test-project) run.
-# Changes vs plan_v1 (reasons in state/decisions.md, 2026-11-24):
-#   1. NEW BASELINE odasc (ODaSC-style, Song et al. IJCNN 2022, batch adaptation), tuned on dev over the same
-#      W grid (5 configs, delta=0.9, k=50, pool=5000) -> experiment E0b (dev only).
-#   2. LAW config for E1-E3 = best of its 4 E0 variants by mean dev G-mean (was: pre-specified lagakos+model).
-#      Baselines likewise use their best dev config. Ties broken by plan_v1 order.
-#   3. Primary comparison: law vs the best non-oracle baseline on dev among {nowait, wait(W*), orb(W*), odasc(W*)};
-#      Holm family = law vs each of the four.
-#   Everything else (data, split, learner, metrics, seeds, statistics, leakage checks) unchanged from plan_v1.
+# plan_v2 — written 2026-11-24 (cycle 1) BEFORE any held-out (test-project) run. plan_v1 is kept unchanged.
+# Reason for v2: on DEV projects the pre-specified proposed method (law_lagakos_model) lost to tuned waiting-time
+# baselines (results/diag_law_neutron.json; journal FAILURE + DIAGNOSIS entries 2026-11-24). No test project
+# has been touched. Everything in plan_v1 remains, plus:
 version: 2
-inherits: plan_v1.yaml
-methods_added:
-  odasc: "wait labels; at labelling time each clean commit gets alpha0 = 1 - mean label of its 50 nearest recent labelled commits (standardised log features, pool = 5000 most recent labelled); alpha0 < 0.9 -> counted as both class 0 and class 1"
-experiments:
-  E0_dev_tuning:   {as plan_v1}
-  E0b_odasc_dev:   {projects: dev, seeds: explore, runs: "odasc x5 W", est_cpu_h: 0.3, priority: 11}
-  E1_main_confirm: {projects: test, seeds: confirm, methods: [nowait, "wait(W*)", "orb(W*)", "odasc(W*)", "law(best dev variant)", oracle], est_cpu_h: 1.0, priority: 20}
-  E2_ablation:     {projects: test, seeds: confirm, variants: "the other 3 LAW variants", est_cpu_h: 0.5, priority: 30}
-  E3_robustness:   {projects: test, seeds: confirm, conditions: ["delay_scale=2 for nowait/wait/orb/odasc/law", "label-noise diagnostics"], est_cpu_h: 1.0, priority: 40}
-selection_rule: "frozen_config.json written by scripts/freeze_config.py from dev (E0+E0b) results only"
+supersedes: plan_v1
+changes:
+  - id: E0b_dev_diagnostics
+    projects: dev
+    seeds: explore
+    runs:
+      awt: "adaptive waiting time: W_T = min{a : S_T(a) <= eps}, S_T = Lagakos estimate from discoveries seen before T; eps in {0.2, 0.3, 0.4, 0.5} (4 configs, dev only)"
+      decomp: "DIAGNOSTIC (uses true labels, never a competitor): level 1 = wait(W) examples with true labels (pure denoising); level 2 = level 1 + young not-yet-found true bugs; W in {30, 90}"
+    est_cpu_h: 1.5
+    priority: 11
+  - id: proposed_method_rule
+    rule: "The candidate for E1 is chosen on DEV ONLY by mean dev G-mean among {law_* (4), awt_* (4)}; it must beat the best tuned baseline on dev to be carried forward. If no candidate beats it on dev, E1 is still run on test as a NEGATIVE-RESULT confirmation (pre-registered here) and the paper is framed as Type C (analysis), not as a method paper."
+  - id: odasc_baseline
+    status: "deferred to plan_v3 — only needed if a method claim survives dev (decision logged)"
+statistics: "unchanged from plan_v1; Holm family now counts all candidates tried on dev (variants_tried.csv)"

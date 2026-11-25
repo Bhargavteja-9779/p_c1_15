@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E3b",
+    "project": "broadleaf",
+    "method": "wait",
+    "variant": "wait_W30",
+    "seed": 100,
+    "split": "test",
+    "W": 30,
+    "gmean": 0.6713828824515399,
+    "r0": 0.8625237286442202,
+    "r1": 0.5226000860955661,
+    "rdiff": 0.33992364254865415,
+    "auc": 0.7957912566593639,
+    "mcc": 0.3696973857997089,
+    "n_eval": 12332,
+    "seconds": 23.08,
+    "job_id": "E3b_broadleaf_wait_W30_s100",
+    "written": "2026-11-24T14:20:25+00:00",
+    "cycle": 1
+  }
+]

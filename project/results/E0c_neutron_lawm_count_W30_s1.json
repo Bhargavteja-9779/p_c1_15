@@ -1,0 +1,28 @@
+[
+  {
+    "experiment": "E0c",
+    "project": "neutron",
+    "method": "lawm",
+    "variant": "lawm_count_W30",
+    "seed": 1,
+    "split": "dev",
+    "W": 30,
+    "delay_est": "lagakos",
+    "label_noise_log": true,
+    "mode": "count",
+    "gmean": 0.5461678895569481,
+    "r0": 0.9686091303991476,
+    "r1": 0.3079667063020214,
+    "rdiff": 0.6606424240971263,
+    "auc": 0.8921605322500904,
+    "mcc": 0.398498859267772,
+    "n_eval": 16406,
+    "seconds": 85.18,
+    "mean_q_true_bug_mean": 0.1580362840080843,
+    "mean_q_clean_mean": 0.018914502435652337,
+    "auc_dormant_mean": 0.9294579870964476,
+    "job_id": "E0c_neutron_lawm_count_W30_s1",
+    "written": "2026-11-24T15:08:57+00:00",
+    "cycle": 2
+  }
+]

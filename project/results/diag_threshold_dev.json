@@ -1,0 +1,92 @@
+{
+ "fabric/wait_W90": {
+  "g05": 0.6361,
+  "g_best": 0.6676,
+  "th_best": 0.8,
+  "auc": 0.724
+ },
+ "fabric/lawm_soft_W30": {
+  "g05": 0.689,
+  "g_best": 0.7007,
+  "th_best": 0.36,
+  "auc": 0.7618
+ },
+ "fabric/odasc_W30_t0.8": {
+  "g05": 0.7134,
+  "g_best": 0.7234,
+  "th_best": 0.38,
+  "auc": 0.7852
+ },
+ "fabric/law_lagakos_model": {
+  "g05": 0.6705,
+  "g_best": 0.7082,
+  "th_best": 0.27,
+  "auc": 0.7689
+ },
+ "fabric/oracle": {
+  "g05": 0.7511,
+  "g_best": 0.768,
+  "th_best": 0.31,
+  "auc": 0.8529
+ },
+ "neutron/wait_W90": {
+  "g05": 0.7869,
+  "g_best": 0.8417,
+  "th_best": 0.18,
+  "auc": 0.896
+ },
+ "neutron/lawm_soft_W30": {
+  "g05": 0.8358,
+  "g_best": 0.8556,
+  "th_best": 0.32,
+  "auc": 0.9256
+ },
+ "neutron/odasc_W30_t0.8": {
+  "g05": 0.781,
+  "g_best": 0.8004,
+  "th_best": 0.48,
+  "auc": 0.8157
+ },
+ "neutron/law_lagakos_model": {
+  "g05": 0.5037,
+  "g_best": 0.8282,
+  "th_best": 0.09,
+  "auc": 0.8883
+ },
+ "neutron/oracle": {
+  "g05": 0.8662,
+  "g_best": 0.8735,
+  "th_best": 0.32,
+  "auc": 0.9449
+ },
+ "sentry/wait_W90": {
+  "g05": 0.6446,
+  "g_best": 0.6534,
+  "th_best": 0.64,
+  "auc": 0.7097
+ },
+ "sentry/lawm_soft_W30": {
+  "g05": 0.6925,
+  "g_best": 0.695,
+  "th_best": 0.53,
+  "auc": 0.76
+ },
+ "sentry/odasc_W30_t0.8": {
+  "g05": 0.7149,
+  "g_best": 0.7153,
+  "th_best": 0.53,
+  "auc": 0.7864
+ },
+ "sentry/law_lagakos_model": {
+  "g05": 0.6724,
+  "g_best": 0.7095,
+  "th_best": 0.32,
+  "auc": 0.7929
+ },
+ "sentry/oracle": {
+  "g05": 0.7219,
+  "g_best": 0.7308,
+  "th_best": 0.42,
+  "auc": 0.8149
+ }
+}

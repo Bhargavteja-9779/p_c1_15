@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E0d",
+    "project": "sentry",
+    "method": "odasc",
+    "variant": "odasc_W90_t0.9",
+    "seed": 1,
+    "split": "dev",
+    "W": 90,
+    "knn_k": 20,
+    "theta": 0.9,
+    "gmean": 0.6356158589315722,
+    "r0": 0.4477303498895461,
+    "r1": 0.9023456199138343,
+    "rdiff": 0.45461527002428825,
+    "auc": 0.7379193668401881,
+    "mcc": 0.3053163251901001,
+    "n_eval": 18211,
+    "seconds": 107.33,
+    "job_id": "E0d_sentry_odasc_W90_t0.9_s1",
+    "written": "2026-11-24T16:17:39+00:00",
+    "cycle": 2
+  }
+]

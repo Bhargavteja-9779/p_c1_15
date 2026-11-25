@@ -1,0 +1,43 @@
+# plan_v1 — written 2026-11-24 BEFORE any held-out (test-project) run. Never edit after training starts;
+# changes go to plan_v2 with a reason in state/decisions.md.
+version: 1
+cycle: 1
+data:
+  source: "Cabral et al. ICSE'19 artifact, Zenodo 10.5281/zenodo.2591761 (14 projects)"
+  dev_projects: [fabric, neutron, nova, sentry]          # seeded draw rng(0), before modelling
+  test_projects: [brackets, broadleaf, camel, jgroups, matplotlib, npm, spring-integration, tomcat, wagtail, zulip]
+  cleaning: "drop commits with missing values or timestamp < 2000-01-01 (1 per project at most)"
+protocol:
+  simulation: "prequential, retrain every 100 commits on commits made before T with labels observable at T; first model after 500 commits"
+  scoring: "predictions at commit time vs FINAL dataset label; evaluation window excludes last 365 days of each project"
+  learner: "LightGBM (150 trees, lr 0.05, 31 leaves, subsample 0.8, colsample 0.8), class-balanced weights, threshold 0.5; identical for every method"
+  features: "14 Kamei change metrics, log1p"
+metrics: {primary: gmean, secondary: [r0, r1, rdiff, auc, mcc]}
+seeds: {explore: [0, 1, 2], confirm: [100, 101, 102, 103, 104]}
+methods:
+  oracle: "true labels immediately (upper bound; not a competitor)"
+  nowait: "face-value observed labels"
+  wait:   "Cabral framework; W tuned on dev over {15,30,60,90,180}"
+  orb:    "wait + ORB boosting factors (th=0.4,m=1.5,l0=10,l1=12 from Cabral'19); W tuned on dev over {15,30,60,90,180}"
+  law:    "PROPOSED latency-aware weighting, pre-specified config: delay_est=lagakos, prior=model. No tuning."
+tuning_budget: "<=5 configurations per method, dev projects x explore seeds only (logged in variants_tried.csv)"
+experiments:
+  E0_dev_tuning:   {projects: dev, seeds: explore, runs: "nowait, oracle, wait x5 W, orb x5 W, law x4 variants", est_cpu_h: 0.6, priority: 10}
+  E1_main_confirm: {projects: test, seeds: confirm, methods: [nowait, wait(W*), orb(W*), law, oracle], est_cpu_h: 0.8, priority: 20}
+  E2_ablation:     {projects: test, seeds: confirm, variants: [law naive+model, law lagakos+base, law naive+base], est_cpu_h: 0.5, priority: 30}
+  E3_robustness:   {projects: test, seeds: confirm, conditions: ["delay_scale=2 (slower discovery) for nowait/wait/orb/law", "RQ1 label-noise diagnostics (frac. false-clean among training negatives) for nowait/wait(W in grid)"], est_cpu_h: 0.8, priority: 40}
+  E4_generalization: "10 held-out projects (5 Java, 2 JavaScript, 2 Python, 1 Python/JS) — per-project results reported; no extra runs"
+  E5_efficiency:   "wall-clock seconds per run from E1 results"
+  E6_confirmation: "= E1 (frozen configs, SEEDS_CONFIRM, held-out projects)"
+statistics:
+  unit: "project (mean over 5 confirm seeds), n=10"
+  primary_test: "law vs best non-oracle baseline on dev (by mean dev G-mean): two-sided Wilcoxon signed-rank over 10 projects"
+  family: "law vs each of {nowait, wait(W*), orb(W*)} on G-mean -> Holm correction (plus count of variants tried reported)"
+  effect: "mean paired difference with 95% bootstrap CI over projects (10000 resamples, seed 0); rank-biserial r"
+  nontrivial_effect: "mean G-mean gain >= 0.02 (fixed in advance)"
+leakage_checks:
+  - "training at T uses only commits with t < T and labels with t_found <= T (unit test tests/test_no_future.py)"
+  - "delay estimator uses only discoveries observed before T"
+  - "features are commit-time change metrics (Kamei et al.)"
+  - "duplicate feature rows reported (natural in commit streams; not removed)"
+  - "dev/test projects disjoint; no hyperparameter chosen on test projects"

@@ -1,0 +1,28 @@
+# plan_v3 — written 2026-11-25 after all dev tuning (E0/E0b/E0c, 528 runs, 44 variants) and BEFORE any test-project run.
+# Reasons: state/decisions.md 2026-11-25. Supersedes plan_v2 E1-E3; data/split/learner/metrics/seeds/statistics as plan_v1.
+version: 3
+inherits: plan_v2.yaml
+proposed: {variant: law_lagakos_model_gmax_lat, method: law, delay_est: lagakos, prior: model, thr_policy: gmax_lat}
+  # best mean dev G-mean (0.763). lagakos preferred over naive (0.761) also because the truncation correction is the
+  # pre-specified estimator; the difference is within noise and is tested in E2.
+baselines:   # each = best dev config of its family; thresholded families included so the threshold is not LAW's private advantage
+  - {variant: nowait}
+  - {variant: wait_W90, method: wait, W: 90}
+  - {variant: orb_W90, method: orb, W: 90}
+  - {variant: odasc_W30, method: odasc, W: 30, odasc_delta: 0.9}              # best dev baseline (0.750) -> PRIMARY comparator
+  - {variant: wait_W30_gmax_lat, method: wait, W: 30, thr_policy: gmax_lat}
+  - {variant: odasc_W15_gmax_lat, method: odasc, W: 15, odasc_delta: 0.9, thr_policy: gmax_lat}
+  - {variant: oracle}   # upper bound, not in the test family
+experiments:
+  E1_main_confirm: {projects: test (10), seeds: confirm [100..104], runs: "proposed + 7 above", priority: 20}
+  E2_ablation:     {projects: test, seeds: confirm, priority: 30, variants: {
+      no_threshold: law_lagakos_model, no_truncation_correction: law_naive_model_gmax_lat,
+      no_model_prior: law_lagakos_base_gmax_lat, no_reweighting: nowait_gmax_lat}}
+  E3_robustness:   {projects: test, seeds: confirm, priority: 40, delay_scale: 2.0, variants: [proposed, odasc_W30, wait_W90, odasc_W15_gmax_lat]}
+statistics:
+  unit: "project (mean over 5 confirm seeds), n=10"
+  primary: "proposed vs odasc_W30, two-sided Wilcoxon signed-rank on G-mean"
+  family_holm: "proposed vs each of the 6 non-oracle baselines"
+  effect: "mean paired difference, 95% bootstrap CI (10000, seed 0); rank-biserial r; non-trivial >= 0.02 (fixed in plan_v1)"
+  multiplicity_note: "44 variants were evaluated on dev; the test set was never used for selection; report the count"
+honest_expectation: "dev gain +0.013 < 0.02 margin; G5 may well fail. Result is reported either way."

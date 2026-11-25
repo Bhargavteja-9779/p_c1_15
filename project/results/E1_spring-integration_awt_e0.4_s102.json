@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E1",
+    "project": "spring-integration",
+    "method": "awt",
+    "variant": "awt_e0.4",
+    "seed": 102,
+    "split": "test",
+    "delay_est": "lagakos",
+    "label_noise_log": true,
+    "eps": 0.4,
+    "gmean": 0.6313162577112091,
+    "r0": 0.5409574468085107,
+    "r1": 0.736768149882904,
+    "rdiff": 0.1958107030743933,
+    "auc": 0.6335607570548275,
+    "mcc": 0.24852459885397923,
+    "n_eval": 7775,
+    "seconds": 8.12,
+    "W_T_mean": 319.2682926829268,
+    "job_id": "E1_spring-integration_awt_e0.4_s102",
+    "written": "2026-11-24T13:59:05+00:00",
+    "cycle": 1
+  }
+]

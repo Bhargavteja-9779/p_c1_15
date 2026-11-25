@@ -1,0 +1,6 @@
+# SURPRISE: H2a refuted: label noise, not missing young data, is most of the verification-latency penalty
+
+*Written 2026-11-24T13:19:54+00:00*
+
+I expected (HYPOTHESIS H2, written before E0b) that denoising the wait set would close less than a third of the wait->oracle gap. It closes almost all of it. Mean dev G-mean (4 dev projects x seeds 0-2, results/raw_results.jsonl, E0b): wait_W30 0.621 -> decomp_L1_W30 (same examples, true labels) 0.785 vs oracle 0.794, i.e. 95% of the 0.173 gap. At W=90: wait 0.709 -> decomp_L1 0.746 (43% of the 0.085 gap). Adding the young not-yet-found bugs without their clean neighbours (level 2) HURTS (0.769 at W30, 0.706 at W90): it inflates recall-1 and depresses recall-0.
+So my TURN entry was wrong. My earlier RQ1 observation (waiting barely lowers the false-clean share) was right, but I drew the wrong conclusion from it: precisely because waiting does not remove the noise, the noise stays and it hurts a lot. With noise removed, a SHORTER wait is better (0.785 at W30 vs 0.746 at W90): freshness does matter once labels are clean. This is consistent with ODaSC's framing; it is not consistent with my reading of ODaSC-opt≈ODaSC as 'noise does not matter'. Their result says their estimate was good enough, not that noise is harmless.

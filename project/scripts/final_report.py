@@ -9,7 +9,7 @@ import matplotlib; matplotlib.use("Agg"); import matplotlib.pyplot as plt
 
 R = ROOT / "results"; T = ROOT / "tables"; F = ROOT / "figures"
 df = pd.read_json(R / "raw_results.jsonl", lines=True)
-df = df.drop_duplicates(subset=["job_id"], keep="last") if "job_id" in df else df
+df = df.drop_duplicates(subset=["job_id"], keep="last")
 df.to_csv(R / "raw_results.csv", index=False)
 fz = read_json(STATE / "frozen_config.json", {})
 NONTRIVIAL = 0.02
@@ -63,25 +63,68 @@ def compare(exp, prop, others, label):
     statsout[label] = rows
     return rows
 
-if "E1" in set(df.experiment) and fz.get("plan") == "plan_v3":
-    P = fz["proposed"]["variant"]; B = [b["variant"] for b in fz["baselines"]]
-    # primary family (Holm over all 6 non-oracle baselines); primary comparator = fz["primary_comparator"]
-    compare("E1", P, B, "E1_main_proposed_vs_baselines")
-    statsout["E1_primary_comparator"] = fz["primary_comparator"]
-    e12 = pd.concat([df[df.experiment == "E1"], df[df.experiment == "E2"]]).assign(experiment="E12")
+if "E1" in set(df.experiment) and fz:
+    base = ["nowait", f"wait_W{fz['wait_W']}", f"orb_W{fz['orb_W']}"]
+    compare("E1", "law_lagakos_model", base, "E1_main_law_vs_baselines")
+    e12 = pd.concat([df[df.experiment == "E1"], df[df.experiment == "E2"]]); e12 = e12.assign(experiment="E12")
     df = pd.concat([df, e12])
-    compare("E12", P, ["law_lagakos_model", "law_naive_model_gmax_lat", "law_lagakos_base_gmax_lat", "nowait_gmax_lat"],
-            "E2_ablation_full_vs_component_removed")
-if "E3" in set(df.experiment) and fz.get("plan") == "plan_v3":
-    P = fz["proposed"]["variant"]
-    compare("E3", P + "_ds2", ["odasc_W30_ds2", "wait_W90_ds2", "odasc_W15_gmax_lat_ds2"], "E3_robust_delay_x2")
+    compare("E12", "law_lagakos_model", ["law_naive_model", "law_lagakos_base", "law_naive_base"], "E2_ablation_full_vs_variants")
+if "E1" in set(df.experiment) and fz and fz.get("candidate"):
+    # plan_v3: H1 family = {law_lagakos_model, candidate} x 3 baselines, one Holm correction over all 6 tests
+    base = ["nowait", f"wait_W{fz['wait_W']}", f"orb_W{fz['orb_W']}"]
+    ra = compare("E1", "law_lagakos_model", base, "_tmp_a") or []; rb_ = compare("E1", fz["candidate"], base, "_tmp_b") or []
+    fam = ra + rb_; adj = holm([r["wilcoxon_p"] if r["wilcoxon_p"] is not None else 1.0 for r in fam])
+    for r, a in zip(fam, adj): r["holm_p_family6"] = float(a); r["G5_pass"] = bool(a < 0.05 and r["ci95"][0] > 0 and r["mean_diff"] >= NONTRIVIAL)
+    statsout["E1_H1_family_law_and_candidate_vs_baselines"] = fam; statsout.pop("_tmp_a", None); statsout.pop("_tmp_b", None)
+if "E3b" in set(df.experiment) and "E1" in set(df.experiment):
+    # plan_v3 H3: share of oracle - wait_W30 gap recovered by denoising, and decomp_L1_W30 vs wait_W90 (frozen best fixed W)
+    e = pd.concat([df[df.experiment == "E3b"], df[(df.experiment == "E1") & (df.variant == "oracle")]])
+    pp = e.groupby(["variant", "project"]).gmean.mean().unstack()
+    h3 = {}
+    if {"oracle", "wait_W30", "decomp_L1_W30", "wait_W90"} <= set(pp.index):
+        gap = (pp.loc["oracle"] - pp.loc["wait_W30"]); rec = (pp.loc["decomp_L1_W30"] - pp.loc["wait_W30"])
+        h3["gap_recovered_share_of_means"] = round(float(rec.mean() / gap.mean()), 4)
+        h3["gap_recovered_share_per_project"] = {k: round(float(v), 3) for k, v in (rec / gap).items()}
+        h3["mean_gap_oracle_minus_wait30"] = round(float(gap.mean()), 4)
+        for W in (30, 90):
+            if {f"decomp_L1_W{W}", f"wait_W{W}"} <= set(pp.index):
+                h3[f"denoise_gain_W{W}_mean"] = round(float((pp.loc[f"decomp_L1_W{W}"] - pp.loc[f"wait_W{W}"]).mean()), 4)
+                h3[f"denoise_gap_share_W{W}"] = round(float((pp.loc[f"decomp_L1_W{W}"] - pp.loc[f"wait_W{W}"]).mean() / (pp.loc["oracle"] - pp.loc[f"wait_W{W}"]).mean()), 4)
+        df_h3 = e.assign(experiment="E3bx"); df = pd.concat([df, df_h3])
+        rows = compare("E3bx", "decomp_L1_W30", ["wait_W90", "wait_W30"], "E3b_H3_denoised_W30_vs_wait")
+        h3["H3_pass"] = bool(h3["gap_recovered_share_of_means"] >= 0.5 and rows and rows[0]["holm_p"] < 0.05 and rows[0]["mean_diff"] > 0)
+    statsout["E3b_H3_decomposition"] = h3
+if "E3" in set(df.experiment) and fz:
+    compare("E3", "law_lagakos_model_ds2", ["nowait_ds2", f"wait_W{fz['wait_W']}_ds2", f"orb_W{fz['orb_W']}_ds2"], "E3_robust_delay_x2")
+fz6 = read_json(STATE / "frozen_config_v6.json", {})
+if "E8" in set(df.experiment) and fz6:
+    # plan_v7 H6 (fresh ApacheJIT confirmation): primary dev candidate vs wait_W90, orb_W90, odasc (one Holm over 3)
+    prim = fz6["primary_candidate"]; od = [c["variant"] for c in fz6["candidates_specs"] if c["method"] == "odasc"][0]
+    # a self-comparison is degenerate (all differences 0): if the primary IS odasc, the family is the 2 waiting baselines
+    rows = compare("E8", prim, ["wait_W90", "orb_W90"] + ([od] if prim != od else []), "E8_planv7_H6_primary_vs_baselines") or []
+    statsout["E8_H6_family_note"] = (f"primary={prim}; " + ("Holm over 3 tests" if prim != od else
+        "primary is the odasc baseline itself -> self-comparison dropped, Holm over 2 tests (decision 2026-11-25, before E8 analysis)"))
+    for r in rows:   # plan_v7: margin >= 0.02 required vs waiting baselines; vs odasc reported as is (no margin)
+        need_margin = r["baseline"] != od
+        r["H6_pass"] = bool(r["holm_p"] < 0.05 and r["ci95"][0] > 0 and (r["mean_diff"] >= NONTRIVIAL if need_margin else r["mean_diff"] > 0))
+    statsout["E8_H6_all_pass"] = bool(rows and all(r["H6_pass"] for r in rows))
+    for c in fz6["candidates_specs"]:   # descriptive: every candidate vs the same baselines (not part of the H6 family)
+        if c["variant"] != prim:
+            compare("E8", c["variant"], ["wait_W90", "orb_W90"] + ([od] if c["variant"] != od else []), f"E8_descriptive_{c['variant']}")
+    pp = df[df.experiment == "E8"].groupby(["variant", "project"]).gmean.mean().unstack(); h = {}
+    if {"oracle", "wait_W30", "decomp_L1_W30", "wait_W90"} <= set(pp.index):
+        gap = pp.loc["oracle"] - pp.loc["wait_W30"]; rec = pp.loc["decomp_L1_W30"] - pp.loc["wait_W30"]
+        h["gap_recovered_share_of_means"] = round(float(rec.mean() / gap.mean()), 4)
+        h["gap_recovered_share_per_project"] = {k: round(float(v), 3) for k, v in (rec / gap).items()}
+        compare("E8", "decomp_L1_W30", ["wait_W90", "wait_W30"], "E8_secondary_H3_replication")
+    statsout["E8_secondary_H3_decomposition"] = h
 vt = pd.read_csv(STATE / "variants_tried.csv") if (STATE / "variants_tried.csv").exists() else pd.DataFrame()
 statsout["n_variants_logged"] = int(len(vt))
 json.dump(metrics, open(R / "metrics.json", "w"), indent=1)
 json.dump(statsout, open(R / "statistics.json", "w"), indent=1)
 
 # figures
-for exp in [x for x in ["E0", "E1"] if x in set(df.experiment)]:
+for exp in [x for x in ["E0", "E0b", "E1", "E3b", "E8"] if x in set(df.experiment)]:
     pp = df[df.experiment == exp].groupby(["variant", "project"]).gmean.mean().unstack()
     pp = pp.loc[pp.mean(axis=1).sort_values().index]
     fig, ax = plt.subplots(figsize=(7, 0.35 * len(pp) + 1.5))

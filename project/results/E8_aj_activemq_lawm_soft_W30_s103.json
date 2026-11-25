@@ -1,0 +1,30 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_activemq",
+    "method": "lawm",
+    "variant": "lawm_soft_W30",
+    "seed": 103,
+    "split": "fresh",
+    "W": 30,
+    "delay_est": "lagakos",
+    "mode": "soft",
+    "gmean": 0.6418708869808593,
+    "r0": 0.7851786501985002,
+    "r1": 0.5247191011235955,
+    "rdiff": 0.26045954907490465,
+    "auc": 0.6899704108285463,
+    "mcc": 0.3036391397799802,
+    "acc": 0.7117516629711752,
+    "precision": 0.48951781970649894,
+    "f1": 0.5065075921908894,
+    "recall20e": 0.4752808988764045,
+    "popt": 0.7405099453585775,
+    "ifa": 1,
+    "n_eval": 3157,
+    "seconds": 17.8,
+    "job_id": "E8_aj_activemq_lawm_soft_W30_s103",
+    "written": "2026-11-25T21:01:11+00:00",
+    "cycle": 3
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E1",
+    "project": "camel",
+    "method": "law",
+    "variant": "law_lagakos_model",
+    "seed": 100,
+    "split": "test",
+    "delay_est": "lagakos",
+    "prior": "model",
+    "gmean": 0.6511933606433056,
+    "r0": 0.8618280118331123,
+    "r1": 0.49203876773970234,
+    "rdiff": 0.36978924409340996,
+    "auc": 0.7924378339123587,
+    "mcc": 0.35893439440094116,
+    "n_eval": 25384,
+    "seconds": 139.45,
+    "job_id": "E1_camel_law_lagakos_model_s100",
+    "written": "2026-11-24T13:34:03+00:00",
+    "cycle": 1
+  }
+]

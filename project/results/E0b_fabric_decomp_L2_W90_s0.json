@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E0b",
+    "project": "fabric",
+    "method": "decomp",
+    "variant": "decomp_L2_W90",
+    "seed": 0,
+    "split": "dev",
+    "W": 90,
+    "level": 2,
+    "gmean": 0.5439658415080016,
+    "r0": 0.312168188575069,
+    "r1": 0.9478827361563518,
+    "rdiff": 0.6357145475812828,
+    "auc": 0.7422839684974991,
+    "mcc": 0.24062176524693588,
+    "n_eval": 11874,
+    "seconds": 17.06,
+    "job_id": "E0b_fabric_decomp_L2_W90_s0",
+    "written": "2026-11-24T12:48:47+00:00",
+    "cycle": 1
+  }
+]

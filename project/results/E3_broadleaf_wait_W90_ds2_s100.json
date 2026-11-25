@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E3",
+    "project": "broadleaf",
+    "method": "wait",
+    "variant": "wait_W90_ds2",
+    "seed": 100,
+    "split": "test",
+    "W": 90,
+    "delay_scale": 2.0,
+    "gmean": 0.6879545725714279,
+    "r0": 0.6490158857028674,
+    "r1": 0.7292294446835988,
+    "rdiff": 0.08021355898073146,
+    "auc": 0.7434818779327619,
+    "mcc": 0.2994382676041312,
+    "n_eval": 12332,
+    "seconds": 28.05,
+    "job_id": "E3_broadleaf_wait_W90_ds2_s100",
+    "written": "2026-11-24T19:14:54+00:00",
+    "cycle": 1
+  }
+]

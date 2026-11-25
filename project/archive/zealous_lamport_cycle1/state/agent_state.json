@@ -1,0 +1,35 @@
+{
+  "status": "RUNNING",
+  "cycle": 2,
+  "phase": "PHASE5_RUN",
+  "step": "cycle 2: finishing E2/E3 of frozen plan_v3; E1 done (G5 fails vs ODaSC, passes vs waiting-time baselines)",
+  "pivots": 0,
+  "topic_id": null,
+  "journal": "JKSU-CIS (Springer Nature, ISSN 1319-1578, IF 6.4 2025; turnaround median 71\u201374 d, marginal)",
+  "last_action": "Dev tuning complete (528 runs, 44 variants); frozen plan_v3: LAW lagakos+model+gmax_lat vs 6 baselines; E1/E2/E3 enqueued",
+  "next_action": "1) Keep runners alive: bash scripts/watch_and_checkpoint.sh (relaunches workers, commits every 5 min). If cycle-1 budget (15 h) runs out, remaining jobs become skipped_budget: set cycle=2 in state/agent_state.json, reset skipped_budget->pending, relaunch. 2) When E1 is done: update scripts/final_report.py for plan_v3 (primary = law_lagakos_model_gmax_lat vs odasc_W30, Holm over 6 baselines, bootstrap CI, 0.02 margin) and run it. 3) Update gates G4-G8, novelty score, journal RESULT entry; then 6.4/Section 11 decision.",
+  "config": {
+    "TARGET_TIER": "Q1 journal (JCR), reputable publisher",
+    "MAX_DAYS_SUBMIT_TO_ACCEPT": 72,
+    "COMPUTE_PER_CYCLE_H": 15,
+    "GLOBAL_COMPUTE_CEILING_H": 120,
+    "MAX_CYCLES": 12,
+    "MAX_PIVOTS": 3,
+    "SEEDS_EXPLORE": [
+      0,
+      1,
+      2
+    ],
+    "SEEDS_CONFIRM": [
+      100,
+      101,
+      102,
+      103,
+      104
+    ]
+  },
+  "seeds_confirm_fixed_at": "2026-11-24 (project start; never change)",
+  "updated": "2026-11-25T21:45:40+00:00",
+  "topic": "Verification-latency-aware online JIT-SDP: latency-aware weighting (LAW) of provisionally-clean commits",
+  "hypothesis": "LAW beats the best tuned waiting-time baseline by >=0.02 G-mean on 10 held-out projects (Holm p<0.05)"
+}

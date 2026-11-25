@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E0b",
+    "project": "neutron",
+    "method": "awt",
+    "variant": "awt_e0.3",
+    "seed": 2,
+    "split": "dev",
+    "delay_est": "lagakos",
+    "label_noise_log": true,
+    "eps": 0.3,
+    "gmean": 0.8116645346172785,
+    "r0": 0.7623145643799688,
+    "r1": 0.8642092746730083,
+    "rdiff": 0.10189471029303954,
+    "auc": 0.8681046104386485,
+    "mcc": 0.5587611154273946,
+    "n_eval": 16406,
+    "seconds": 29.33,
+    "W_T_mean": 145.2,
+    "job_id": "E0b_neutron_awt_e0.3_s2",
+    "written": "2026-11-24T12:49:45+00:00",
+    "cycle": 1
+  }
+]

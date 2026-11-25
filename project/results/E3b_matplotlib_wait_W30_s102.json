@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E3b",
+    "project": "matplotlib",
+    "method": "wait",
+    "variant": "wait_W30",
+    "seed": 102,
+    "split": "test",
+    "W": 30,
+    "gmean": 0.6448178350619155,
+    "r0": 0.8473058766075208,
+    "r1": 0.49072011878247956,
+    "rdiff": 0.3565857578250412,
+    "auc": 0.79634174483641,
+    "mcc": 0.3168147643748305,
+    "n_eval": 14980,
+    "seconds": 31.5,
+    "job_id": "E3b_matplotlib_wait_W30_s102",
+    "written": "2026-11-24T14:42:43+00:00",
+    "cycle": 1
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E3b",
+    "project": "brackets",
+    "method": "decomp",
+    "variant": "decomp_L2_W30",
+    "seed": 102,
+    "split": "test",
+    "W": 30,
+    "level": 2,
+    "gmean": 0.7704214999572054,
+    "r0": 0.6593855016802689,
+    "r1": 0.900155199172271,
+    "rdiff": 0.24076969749200217,
+    "auc": 0.8530839326428804,
+    "mcc": 0.4760654565161055,
+    "n_eval": 16364,
+    "seconds": 27.83,
+    "job_id": "E3b_brackets_decomp_L2_W30_s102",
+    "written": "2026-11-24T14:15:11+00:00",
+    "cycle": 1
+  }
+]

@@ -25,7 +25,7 @@ cyc = b.get("per_cycle_seconds", {}).get(str(s.get("cycle")), 0) / 3600
 age = heartbeat_age_s()
 L = []
 L += [f"# HANDOFF — read this first", f"*Auto-generated {now_iso()} by scripts/write_handoff.py*", ""]
-L += ["## Where we are",
+L += ["## READ ALSO: USER_DIRECTIVES.md (owner standing orders)\n\n## Where we are",
       f"- **Status:** {s.get('status')}   **Cycle:** {s.get('cycle')} / {s.get('config',{}).get('MAX_CYCLES')}   **Phase:** {s.get('phase')}   **Pivots:** {s.get('pivots')} / {s.get('config',{}).get('MAX_PIVOTS')}",
       f"- **Step:** {s.get('step')}",
       f"- **Last action:** {s.get('last_action')}",

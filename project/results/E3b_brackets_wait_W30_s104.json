@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E3b",
+    "project": "brackets",
+    "method": "wait",
+    "variant": "wait_W30",
+    "seed": 104,
+    "split": "test",
+    "W": 30,
+    "gmean": 0.7661507928791508,
+    "r0": 0.7549207873259721,
+    "r1": 0.7775478530781169,
+    "rdiff": 0.022627065752144793,
+    "auc": 0.8443810709661813,
+    "mcc": 0.46824535299069114,
+    "n_eval": 16364,
+    "seconds": 26.03,
+    "job_id": "E3b_brackets_wait_W30_s104",
+    "written": "2026-11-24T14:16:57+00:00",
+    "cycle": 1
+  }
+]

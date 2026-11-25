@@ -1,99 +1,36 @@
 {
-  "frozen": "2026-11-25T07:54:45+00:00",
-  "plan": "plan_v3",
-  "proposed": {
-    "variant": "law_lagakos_model_gmax_lat",
-    "method": "law",
-    "delay_est": "lagakos",
-    "prior": "model",
-    "thr_policy": "gmax_lat"
-  },
-  "baselines": [
-    {
-      "variant": "nowait",
-      "method": "nowait"
-    },
-    {
-      "variant": "wait_W90",
-      "method": "wait",
-      "W": 90
-    },
-    {
-      "variant": "orb_W90",
-      "method": "orb",
-      "W": 90
-    },
-    {
-      "variant": "odasc_W30",
-      "method": "odasc",
-      "W": 30,
-      "odasc_delta": 0.9
-    },
-    {
-      "variant": "wait_W30_gmax_lat",
-      "method": "wait",
-      "W": 30,
-      "thr_policy": "gmax_lat"
-    },
-    {
-      "variant": "odasc_W15_gmax_lat",
-      "method": "odasc",
-      "W": 15,
-      "odasc_delta": 0.9,
-      "thr_policy": "gmax_lat"
-    }
-  ],
-  "oracle": {
-    "variant": "oracle",
-    "method": "oracle"
-  },
-  "primary_comparator": "odasc_W30",
-  "n_dev_variants": 44,
-  "n_dev_runs": 528,
+  "frozen": "2026-11-24T13:19:55+00:00",
+  "plan": "plan_v2",
+  "candidate": "awt_e0.4",
+  "candidate_dev_mean": 0.6968,
+  "best_baseline_dev_mean": 0.7239,
+  "candidate_beats_baseline_on_dev": false,
+  "n_candidates_tried_on_dev": 8,
+  "wait_W": 90,
+  "orb_W": 90,
+  "best_baseline_on_dev": "orb_W90",
   "dev_means": {
     "oracle": 0.7938,
-    "law_lagakos_model_gmax_lat": 0.7632,
-    "law_naive_model_gmax_lat": 0.7611,
-    "odasc_W30": 0.7497,
-    "odasc_W15_gmax_lat": 0.7491,
-    "odasc_W30_gmax_lat": 0.7489,
-    "law_naive_base_gmax_lat": 0.7475,
-    "law_lagakos_base_gmax_lat": 0.7474,
-    "odasc_W15": 0.7466,
-    "wait_W30_gmax_lat": 0.7437,
-    "odasc_W60_gmax_lat": 0.7424,
-    "wait_W60_gmax_lat": 0.7392,
-    "wait_W15_gmax_lat": 0.7389,
-    "odasc_W60": 0.7367,
-    "wait_W90_gmax_lat": 0.7367,
-    "odasc_W90_gmax_lat": 0.7339,
-    "wait_W180_gmax_lat": 0.7317,
-    "orb_W180_gmax_lat": 0.7288,
     "orb_W90": 0.7239,
-    "odasc_W180_gmax_lat": 0.7229,
-    "orb_W90_gmax_lat": 0.7178,
-    "odasc_W90": 0.7167,
     "orb_W60": 0.7116,
-    "orb_W60_gmax_lat": 0.7097,
     "wait_W90": 0.7095,
+    "awt_e0.4": 0.6968,
+    "awt_e0.3": 0.6937,
     "orb_W180": 0.6901,
-    "nowait_gmax_lat": 0.6881,
     "wait_W60": 0.686,
-    "orb_W30_gmax_lat": 0.6832,
     "wait_W180": 0.6831,
-    "law_lagakos_base_ratematch": 0.6784,
-    "law_naive_base_ratematch": 0.6764,
+    "awt_e0.2": 0.6662,
     "law_lagakos_base": 0.6643,
+    "awt_e0.5": 0.6643,
     "law_naive_base": 0.6637,
     "orb_W30": 0.6636,
-    "odasc_W180": 0.6564,
-    "orb_W15_gmax_lat": 0.6463,
-    "nowait_ratematch": 0.6327,
     "wait_W30": 0.6206,
     "law_lagakos_model": 0.6128,
     "orb_W15": 0.6065,
     "law_naive_model": 0.58,
     "wait_W15": 0.5457,
     "nowait": 0.3855
-  }
+  },
+  "proposed_plan_v1": "law_lagakos_model (pre-specified in plan_v1; kept in E1 as pre-registered)",
+  "n_e0_runs": 240
 }

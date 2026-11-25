@@ -26,7 +26,37 @@ def read_arff(path):
         else: df[c] = pd.to_numeric(df[c])
     return df
 
+# ---- ApacheJIT (Keshavarz & Nagappan, MSR 2022; Zenodo 5907847, CC-BY-4.0): FRESH confirmation benchmark (plan_v7)
+AJ = ROOT / "data" / "apachejit_raw" / "apachejit"
+AJ_PROJECTS = ["ignite", "flink", "hbase", "cassandra", "groovy", "hive", "activemq", "hadoop-hdfs", "kafka"]  # >=2000 commits; camel excluded (overlaps Cabral test project); hadoop excluded (0 buggy commits in ApacheJIT)
+AJ_LINK = {"ignite": "IGNITE", "hadoop": None, "flink": "FLINK", "hbase": "HBASE", "cassandra": "CASSANDRA", "groovy": "GROOVY",
+           "hive": "HIVE", "activemq": "AMQ", "hadoop-hdfs": "HDFS", "kafka": "KAFKA"}
+
+def load_apachejit(name, cache=True):
+    """One ApacheJIT project in the same format as load_project. Discovery time t_found = earliest fix_date
+    among the SZZ links of a buggy commit (all links of all projects are searched by bug hash). Feature map:
+    entrophy<-ent, exp<-aexp, rexp<-arexp, sexp<-asexp; 'lt' is absent in ApacheJIT -> constant 0."""
+    import glob
+    cp = ROOT / "data" / f"aj_{name}.pkl"
+    if cache and cp.exists(): return pd.read_pickle(cp)
+    t = pd.read_csv(AJ / "dataset" / "apachejit_total.csv"); t = t[t.project == f"apache/{name}"].copy()
+    L = pd.concat([pd.read_csv(f) for f in glob.glob(str(AJ / "data" / "commit_links_*.csv"))])
+    first_fix = L.groupby("bug_hash").fix_date.min()
+    df = pd.DataFrame({"fix": t.fix.astype(int), "ns": t.ns, "nd": t.nd, "nf": t.nf, "entrophy": t.ent, "la": t.la, "ld": t.ld,
+                       "lt": 0.0, "ndev": t.ndev, "age": t.age, "nuc": t.nuc, "exp": t.aexp, "rexp": t.arexp, "sexp": t.asexp,
+                       "t": t.author_date.astype(float), "y": t.buggy.astype(int)})
+    df["t_found"] = np.where(df.y == 1, t.commit_id.map(first_fix).astype(float).values, np.inf)
+    # a fix cannot precede its bug; a buggy commit without a valid link keeps its label but is 'found' at its first fix or never
+    bad_order = (df.y == 1) & (df.t_found < df.t); df.loc[bad_order, "t_found"] = df.loc[bad_order, "t"]
+    df.loc[(df.y == 1) & ~np.isfinite(df.t_found), "t_found"] = np.inf
+    df = df.dropna(subset=[c for c in df.columns if c != "t_found"]).sort_values("t").reset_index(drop=True)
+    df["project"] = "aj_" + name
+    df.attrs.update(n_fix_before_bug=int(bad_order.sum()))
+    if cache: df.to_pickle(cp)
+    return df
+
 def load_project(name, cache=True):
+    if name.startswith("aj_"): return load_apachejit(name[3:], cache)
     cp = DATA / f"{name}.pkl"
     if cache and cp.exists():
         return pd.read_pickle(cp)

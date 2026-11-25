@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E3b",
+    "project": "npm",
+    "method": "decomp",
+    "variant": "decomp_L2_W30",
+    "seed": 102,
+    "split": "test",
+    "W": 30,
+    "level": 2,
+    "gmean": 0.6677976287260451,
+    "r0": 0.5255735238811583,
+    "r1": 0.8485086342229199,
+    "rdiff": 0.3229351103417616,
+    "auc": 0.7509087645820038,
+    "mcc": 0.2967175181435703,
+    "n_eval": 6592,
+    "seconds": 7.59,
+    "job_id": "E3b_npm_decomp_L2_W30_s102",
+    "written": "2026-11-24T14:44:09+00:00",
+    "cycle": 1
+  }
+]

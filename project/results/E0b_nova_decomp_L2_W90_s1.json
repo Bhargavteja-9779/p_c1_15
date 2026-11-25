@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E0b",
+    "project": "nova",
+    "method": "decomp",
+    "variant": "decomp_L2_W90",
+    "seed": 1,
+    "split": "dev",
+    "W": 90,
+    "level": 2,
+    "gmean": 0.8111172299297448,
+    "r0": 0.6817245897547888,
+    "r1": 0.965068842427333,
+    "rdiff": 0.28334425267254426,
+    "auc": 0.8818750752292146,
+    "mcc": 0.5733702239159196,
+    "n_eval": 43820,
+    "seconds": 158.9,
+    "job_id": "E0b_nova_decomp_L2_W90_s1",
+    "written": "2026-11-24T13:18:42+00:00",
+    "cycle": 1
+  }
+]

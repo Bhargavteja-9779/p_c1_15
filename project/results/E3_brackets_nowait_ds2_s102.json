@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E3",
+    "project": "brackets",
+    "method": "nowait",
+    "variant": "nowait_ds2",
+    "seed": 102,
+    "split": "test",
+    "delay_scale": 2.0,
+    "gmean": 0.45051535284759175,
+    "r0": 0.9687149943991038,
+    "r1": 0.20951888256595966,
+    "rdiff": 0.7591961118331442,
+    "auc": 0.777349963164308,
+    "mcc": 0.2903202758557699,
+    "n_eval": 16364,
+    "seconds": 29.36,
+    "job_id": "E3_brackets_nowait_ds2_s102",
+    "written": "2026-11-24T15:55:42+00:00",
+    "cycle": 1
+  }
+]
