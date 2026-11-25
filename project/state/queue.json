@@ -8464,12 +8464,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 13,
       "started": "2026-11-25T02:08:02+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T02:11:15+00:00",
+      "seconds": 192.5
     },
     {
       "id": "E0_nova_wait_W60_gmax_lat_s0",
@@ -8521,10 +8523,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T02:11:15+00:00",
+      "worker": 2
     },
     {
       "id": "E0_nova_wait_W90_gmax_lat_s0",
@@ -8887,12 +8891,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 13,
       "started": "2026-11-25T02:08:05+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T02:11:19+00:00",
+      "seconds": 193.6
     },
     {
       "id": "E0_nova_wait_W60_gmax_lat_s1",
@@ -8944,10 +8950,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T02:11:19+00:00",
+      "worker": 1
     },
     {
       "id": "E0_nova_wait_W90_gmax_lat_s1",
@@ -9310,12 +9318,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 13,
       "started": "2026-11-25T02:08:06+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T02:11:19+00:00",
+      "seconds": 193.0
     },
     {
       "id": "E0_nova_wait_W60_gmax_lat_s2",
@@ -9367,10 +9377,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 13
+      "priority": 13,
+      "started": "2026-11-25T02:11:19+00:00",
+      "worker": 0
     },
     {
       "id": "E0_nova_wait_W90_gmax_lat_s2",
