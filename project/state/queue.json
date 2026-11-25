@@ -4732,7 +4732,7 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
@@ -4741,7 +4741,9 @@
       "resets": 1,
       "log": [
         "2026-11-25T00:47:42+00:00 reset running->pending on restart (attempt refunded)"
-      ]
+      ],
+      "finished": "2026-11-25T00:52:11+00:00",
+      "seconds": 269.0
     },
     {
       "id": "E0_nova_odasc_W30_s0",
@@ -4810,10 +4812,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:52:10+00:00",
+      "worker": 2
     },
     {
       "id": "E0_nova_odasc_W15_s1",
@@ -4828,7 +4832,7 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
@@ -4837,7 +4841,9 @@
       "resets": 1,
       "log": [
         "2026-11-25T00:47:42+00:00 reset running->pending on restart (attempt refunded)"
-      ]
+      ],
+      "finished": "2026-11-25T00:52:11+00:00",
+      "seconds": 269.1
     },
     {
       "id": "E0_nova_odasc_W30_s1",
@@ -4906,10 +4912,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:52:11+00:00",
+      "worker": 0
     },
     {
       "id": "E0_nova_odasc_W15_s2",
@@ -4924,7 +4932,7 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
@@ -4933,7 +4941,9 @@
       "resets": 1,
       "log": [
         "2026-11-25T00:47:42+00:00 reset running->pending on restart (attempt refunded)"
-      ]
+      ],
+      "finished": "2026-11-25T00:52:10+00:00",
+      "seconds": 267.7
     },
     {
       "id": "E0_nova_odasc_W30_s2",
@@ -5002,10 +5012,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T00:52:11+00:00",
+      "worker": 1
     },
     {
       "id": "E0_sentry_odasc_W15_s0",
