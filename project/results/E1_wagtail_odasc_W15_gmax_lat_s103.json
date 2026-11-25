@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E1",
+    "project": "wagtail",
+    "method": "odasc",
+    "variant": "odasc_W15_gmax_lat",
+    "seed": 103,
+    "split": "test",
+    "W": 15,
+    "odasc_delta": 0.9,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.7141529438976745,
+    "r0": 0.6576501825423167,
+    "r1": 0.7755102040816326,
+    "rdiff": 0.11786002153931596,
+    "auc": 0.7727116734513254,
+    "mcc": 0.2953720528008382,
+    "n_eval": 6908,
+    "seconds": 11.24,
+    "job_id": "E1_wagtail_odasc_W15_gmax_lat_s103",
+    "written": "2026-11-25T09:14:18+00:00",
+    "cycle": 1
+  }
+]

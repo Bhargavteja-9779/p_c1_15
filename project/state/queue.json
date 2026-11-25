@@ -17670,10 +17670,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:12:00+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:12:38+00:00",
+      "seconds": 37.8
     },
     {
       "id": "E1_tomcat_orb_W90_s100",
@@ -17838,10 +17842,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:12:02+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:12:41+00:00",
+      "seconds": 38.5
     },
     {
       "id": "E1_tomcat_orb_W90_s101",
@@ -17899,12 +17907,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T09:11:07+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T09:11:51+00:00",
+      "seconds": 43.6
     },
     {
       "id": "E1_tomcat_odasc_W15_gmax_lat_s101",
@@ -18004,10 +18014,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:12:32+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:13:08+00:00",
+      "seconds": 36.5
     },
     {
       "id": "E1_tomcat_orb_W90_s102",
@@ -18065,12 +18079,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T09:11:18+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T09:12:00+00:00",
+      "seconds": 41.5
     },
     {
       "id": "E1_tomcat_odasc_W15_gmax_lat_s102",
@@ -18170,10 +18186,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:12:38+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:13:14+00:00",
+      "seconds": 36.5
     },
     {
       "id": "E1_tomcat_orb_W90_s103",
@@ -18231,12 +18251,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T09:11:22+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T09:12:02+00:00",
+      "seconds": 39.9
     },
     {
       "id": "E1_tomcat_odasc_W15_gmax_lat_s103",
@@ -18336,10 +18358,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:12:41+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:13:18+00:00",
+      "seconds": 36.7
     },
     {
       "id": "E1_tomcat_orb_W90_s104",
@@ -18397,10 +18423,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:11:51+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:12:32+00:00",
+      "seconds": 41.1
     },
     {
       "id": "E1_tomcat_odasc_W15_gmax_lat_s104",
@@ -18459,10 +18489,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:13:08+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:13:26+00:00",
+      "seconds": 17.2
     },
     {
       "id": "E1_wagtail_nowait_s100",
@@ -18475,10 +18509,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:13:35+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:13:45+00:00",
+      "seconds": 10.0
     },
     {
       "id": "E1_wagtail_wait_W90_s100",
@@ -18492,10 +18530,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:15:19+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:15:28+00:00",
+      "seconds": 9.1
     },
     {
       "id": "E1_wagtail_orb_W90_s100",
@@ -18509,10 +18551,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:14:50+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:14:59+00:00",
+      "seconds": 8.8
     },
     {
       "id": "E1_wagtail_odasc_W30_s100",
@@ -18527,10 +18573,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:14:13+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:14:24+00:00",
+      "seconds": 11.3
     },
     {
       "id": "E1_wagtail_wait_W30_gmax_lat_s100",
@@ -18545,10 +18595,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:15:03+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:15:12+00:00",
+      "seconds": 9.1
     },
     {
       "id": "E1_wagtail_odasc_W15_gmax_lat_s100",
@@ -18564,10 +18618,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:13:55+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:14:06+00:00",
+      "seconds": 11.5
     },
     {
       "id": "E1_wagtail_oracle_s100",
@@ -18580,10 +18638,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:14:31+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:14:41+00:00",
+      "seconds": 10.1
     },
     {
       "id": "E1_wagtail_law_lagakos_model_gmax_lat_s101",
@@ -18599,10 +18661,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:13:14+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:13:32+00:00",
+      "seconds": 17.4
     },
     {
       "id": "E1_wagtail_nowait_s101",
@@ -18615,10 +18681,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:13:42+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:13:51+00:00",
+      "seconds": 9.5
     },
     {
       "id": "E1_wagtail_wait_W90_s101",
@@ -18632,10 +18702,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:15:22+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:15:31+00:00",
+      "seconds": 9.1
     },
     {
       "id": "E1_wagtail_orb_W90_s101",
@@ -18649,10 +18723,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:14:51+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:15:00+00:00",
+      "seconds": 8.9
     },
     {
       "id": "E1_wagtail_odasc_W30_s101",
@@ -18667,10 +18745,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:14:18+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:14:29+00:00",
+      "seconds": 11.2
     },
     {
       "id": "E1_wagtail_wait_W30_gmax_lat_s101",
@@ -18685,10 +18767,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:15:08+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:15:17+00:00",
+      "seconds": 9.6
     },
     {
       "id": "E1_wagtail_odasc_W15_gmax_lat_s101",
@@ -18704,10 +18790,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:13:57+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:14:08+00:00",
+      "seconds": 11.1
     },
     {
       "id": "E1_wagtail_oracle_s101",
@@ -18720,10 +18810,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:14:35+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:14:45+00:00",
+      "seconds": 10.2
     },
     {
       "id": "E1_wagtail_law_lagakos_model_gmax_lat_s102",
@@ -18739,10 +18833,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:13:18+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:13:35+00:00",
+      "seconds": 16.9
     },
     {
       "id": "E1_wagtail_nowait_s102",
@@ -18755,10 +18853,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:13:45+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:13:55+00:00",
+      "seconds": 10.4
     },
     {
       "id": "E1_wagtail_wait_W90_s102",
@@ -18772,10 +18874,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:15:27+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:15:36+00:00",
+      "seconds": 9.8
     },
     {
       "id": "E1_wagtail_orb_W90_s102",
@@ -18789,10 +18895,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:14:55+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:15:03+00:00",
+      "seconds": 8.2
     },
     {
       "id": "E1_wagtail_odasc_W30_s102",
@@ -18807,10 +18917,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:14:20+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:14:31+00:00",
+      "seconds": 11.2
     },
     {
       "id": "E1_wagtail_wait_W30_gmax_lat_s102",
@@ -18825,10 +18939,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:15:09+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:15:19+00:00",
+      "seconds": 10.6
     },
     {
       "id": "E1_wagtail_odasc_W15_gmax_lat_s102",
@@ -18844,10 +18962,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:14:01+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:14:13+00:00",
+      "seconds": 12.4
     },
     {
       "id": "E1_wagtail_oracle_s102",
@@ -18860,10 +18982,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:14:40+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:14:50+00:00",
+      "seconds": 9.8
     },
     {
       "id": "E1_wagtail_law_lagakos_model_gmax_lat_s103",
@@ -18879,10 +19005,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:13:26+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:13:42+00:00",
+      "seconds": 16.0
     },
     {
       "id": "E1_wagtail_nowait_s103",
@@ -18895,10 +19025,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:13:47+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:13:57+00:00",
+      "seconds": 10.0
     },
     {
       "id": "E1_wagtail_wait_W90_s103",
@@ -18912,10 +19046,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:15:28+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:15:38+00:00",
+      "seconds": 9.5
     },
     {
       "id": "E1_wagtail_orb_W90_s103",
@@ -18929,10 +19067,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:14:59+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:15:08+00:00",
+      "seconds": 8.9
     },
     {
       "id": "E1_wagtail_odasc_W30_s103",
@@ -18947,10 +19089,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:14:24+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:14:35+00:00",
+      "seconds": 10.3
     },
     {
       "id": "E1_wagtail_wait_W30_gmax_lat_s103",
@@ -18965,10 +19111,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:15:12+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:15:22+00:00",
+      "seconds": 10.2
     },
     {
       "id": "E1_wagtail_odasc_W15_gmax_lat_s103",
@@ -18984,10 +19134,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:14:06+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:14:18+00:00",
+      "seconds": 11.3
     },
     {
       "id": "E1_wagtail_oracle_s103",
@@ -19000,10 +19154,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:14:41+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:14:51+00:00",
+      "seconds": 10.0
     },
     {
       "id": "E1_wagtail_law_lagakos_model_gmax_lat_s104",
@@ -19019,10 +19177,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:13:32+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:13:47+00:00",
+      "seconds": 15.5
     },
     {
       "id": "E1_wagtail_nowait_s104",
@@ -19035,10 +19197,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:13:51+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:14:01+00:00",
+      "seconds": 9.4
     },
     {
       "id": "E1_wagtail_wait_W90_s104",
@@ -19052,10 +19218,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:15:31+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:15:41+00:00",
+      "seconds": 9.3
     },
     {
       "id": "E1_wagtail_orb_W90_s104",
@@ -19069,10 +19239,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:15:00+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:15:09+00:00",
+      "seconds": 8.3
     },
     {
       "id": "E1_wagtail_odasc_W30_s104",
@@ -19087,10 +19261,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:14:29+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:14:40+00:00",
+      "seconds": 11.2
     },
     {
       "id": "E1_wagtail_wait_W30_gmax_lat_s104",
@@ -19105,10 +19283,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:15:17+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:15:27+00:00",
+      "seconds": 9.3
     },
     {
       "id": "E1_wagtail_odasc_W15_gmax_lat_s104",
@@ -19124,10 +19306,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:14:08+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:14:20+00:00",
+      "seconds": 11.9
     },
     {
       "id": "E1_wagtail_oracle_s104",
@@ -19140,10 +19326,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:14:45+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:14:55+00:00",
+      "seconds": 9.9
     },
     {
       "id": "E1_zulip_law_lagakos_model_gmax_lat_s100",
@@ -19159,10 +19349,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:15:36+00:00",
+      "worker": 1
     },
     {
       "id": "E1_zulip_nowait_s100",
@@ -19299,10 +19491,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:15:38+00:00",
+      "worker": 2
     },
     {
       "id": "E1_zulip_nowait_s101",
@@ -19439,10 +19633,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T09:15:41+00:00",
+      "worker": 0
     },
     {
       "id": "E1_zulip_nowait_s102",

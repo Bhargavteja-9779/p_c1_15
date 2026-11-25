@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E1",
+    "project": "tomcat",
+    "method": "wait",
+    "variant": "wait_W30_gmax_lat",
+    "seed": 101,
+    "split": "test",
+    "W": 30,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6706995202709046,
+    "r0": 0.6299527148214576,
+    "r1": 0.7140819237823517,
+    "rdiff": 0.08412920896089404,
+    "auc": 0.714378554766131,
+    "mcc": 0.3114707417379879,
+    "n_eval": 17173,
+    "seconds": 43.59,
+    "job_id": "E1_tomcat_wait_W30_gmax_lat_s101",
+    "written": "2026-11-25T09:11:51+00:00",
+    "cycle": 1
+  }
+]
