@@ -49,3 +49,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-24T21:33:05+00:00** — plan_v4: dev selection on {fabric, neutron, sentry}; pending nova dev jobs cancelled (skipped_plan); test runs move to cycle 2
   - Reason: Measured cost: nova runs 250-290 s; full dev grid would need ~25 CPU-h vs 15 h cycle budget
+
+- **2026-11-25T14:51:20+00:00** — Frozen (plan_v3): {'wait': 'wait_W90', 'orb': 'orb_W90', 'fsc': 'fsc_W180', 'fr': 'wait_W15_fr40', 'wait_cal': 'wait_W15_cal', 'orb_cal': 'orb_W90_cal', 'fsc_cal': 'fsc_W30_cal'}; proposed=law_lagakos_model_cal
+  - Reason: Highest mean dev G-mean per family on dev projects only
