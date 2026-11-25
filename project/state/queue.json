@@ -20642,7 +20642,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 2,
       "cycle": 1,
       "priority": 40,
@@ -20650,7 +20650,9 @@
       "worker": 2,
       "log": [
         "2026-11-25T13:06:43+00:00 reset running->pending on restart"
-      ]
+      ],
+      "finished": "2026-11-25T13:08:29+00:00",
+      "seconds": 106.2
     },
     {
       "id": "E3_camel_orb_W90_ds2_s100",
@@ -20917,7 +20919,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 2,
       "cycle": 1,
       "priority": 40,
@@ -20925,7 +20927,9 @@
       "worker": 0,
       "log": [
         "2026-11-25T13:06:43+00:00 reset running->pending on restart"
-      ]
+      ],
+      "finished": "2026-11-25T13:08:29+00:00",
+      "seconds": 106.0
     },
     {
       "id": "E3_camel_law_lagakos_model_ds2_s103",
@@ -21002,7 +21006,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 2,
       "cycle": 1,
       "priority": 40,
@@ -21010,7 +21014,9 @@
       "worker": 1,
       "log": [
         "2026-11-25T13:06:43+00:00 reset running->pending on restart"
-      ]
+      ],
+      "finished": "2026-11-25T13:08:23+00:00",
+      "seconds": 100.0
     },
     {
       "id": "E3_camel_law_lagakos_model_ds2_s104",
@@ -29027,10 +29033,14 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T13:08:23+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T13:10:27+00:00",
+      "seconds": 123.4
     },
     {
       "id": "E0e_fabric_dual_W30_k50_s0",
@@ -29047,10 +29057,12 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T13:10:27+00:00",
+      "worker": 1
     },
     {
       "id": "E0e_fabric_dual_W90_k20_s0",
@@ -29107,10 +29119,14 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T13:08:29+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T13:10:33+00:00",
+      "seconds": 124.0
     },
     {
       "id": "E0e_fabric_dual_W30_k50_s1",
@@ -29127,10 +29143,12 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T13:10:33+00:00",
+      "worker": 0
     },
     {
       "id": "E0e_fabric_dual_W90_k20_s1",
@@ -29187,10 +29205,14 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T13:08:29+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T13:10:34+00:00",
+      "seconds": 125.0
     },
     {
       "id": "E0e_fabric_dual_W30_k50_s2",
@@ -29207,10 +29229,12 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T13:10:34+00:00",
+      "worker": 2
     },
     {
       "id": "E0e_fabric_dual_W90_k20_s2",
