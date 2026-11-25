@@ -30196,6 +30196,7081 @@
       "worker": 1,
       "finished": "2026-11-25T14:09:37+00:00",
       "seconds": 297.2
+    },
+    {
+      "id": "E8_aj_ignite_nowait_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_ignite",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_oracle_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_ignite",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_wait_W90_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_ignite",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_orb_W90_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_ignite",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_wait_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_ignite",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_decomp_L1_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_ignite",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_dual_W30_k50_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_ignite",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_lawm_soft_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_ignite",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_odasc_W30_t0.8_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_ignite",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_nowait_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_ignite",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_oracle_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_ignite",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_wait_W90_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_ignite",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_orb_W90_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_ignite",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_wait_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_ignite",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_decomp_L1_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_ignite",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_dual_W30_k50_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_ignite",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_lawm_soft_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_ignite",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_odasc_W30_t0.8_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_ignite",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_nowait_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_ignite",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_oracle_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_ignite",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_wait_W90_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_ignite",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_orb_W90_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_ignite",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_wait_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_ignite",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_decomp_L1_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_ignite",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_dual_W30_k50_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_ignite",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_lawm_soft_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_ignite",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_odasc_W30_t0.8_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_ignite",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_nowait_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_ignite",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_oracle_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_ignite",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_wait_W90_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_ignite",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_orb_W90_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_ignite",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_wait_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_ignite",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_decomp_L1_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_ignite",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_dual_W30_k50_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_ignite",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_lawm_soft_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_ignite",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_odasc_W30_t0.8_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_ignite",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_nowait_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_ignite",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_oracle_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_ignite",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_wait_W90_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_ignite",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_orb_W90_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_ignite",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_wait_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_ignite",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_decomp_L1_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_ignite",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_dual_W30_k50_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_ignite",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_lawm_soft_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_ignite",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_ignite_odasc_W30_t0.8_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_ignite",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_nowait_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_flink",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_oracle_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_flink",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_wait_W90_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_flink",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_orb_W90_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_flink",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_wait_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_flink",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_decomp_L1_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_flink",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_dual_W30_k50_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_flink",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_lawm_soft_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_flink",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_odasc_W30_t0.8_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_flink",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_nowait_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_flink",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_oracle_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_flink",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_wait_W90_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_flink",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_orb_W90_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_flink",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_wait_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_flink",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_decomp_L1_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_flink",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_dual_W30_k50_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_flink",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_lawm_soft_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_flink",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_odasc_W30_t0.8_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_flink",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_nowait_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_flink",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_oracle_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_flink",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_wait_W90_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_flink",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_orb_W90_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_flink",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_wait_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_flink",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_decomp_L1_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_flink",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_dual_W30_k50_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_flink",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_lawm_soft_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_flink",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_odasc_W30_t0.8_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_flink",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_nowait_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_flink",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_oracle_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_flink",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_wait_W90_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_flink",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_orb_W90_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_flink",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_wait_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_flink",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_decomp_L1_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_flink",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_dual_W30_k50_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_flink",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_lawm_soft_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_flink",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_odasc_W30_t0.8_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_flink",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_nowait_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_flink",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_oracle_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_flink",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_wait_W90_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_flink",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_orb_W90_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_flink",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_wait_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_flink",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_decomp_L1_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_flink",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_dual_W30_k50_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_flink",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_lawm_soft_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_flink",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_flink_odasc_W30_t0.8_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_flink",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_nowait_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_hbase",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_oracle_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_hbase",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_wait_W90_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_hbase",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_orb_W90_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_hbase",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_wait_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_hbase",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_decomp_L1_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_hbase",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_dual_W30_k50_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_hbase",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_lawm_soft_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_hbase",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_odasc_W30_t0.8_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_hbase",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_nowait_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_hbase",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_oracle_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_hbase",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_wait_W90_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_hbase",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_orb_W90_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_hbase",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_wait_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_hbase",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_decomp_L1_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_hbase",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_dual_W30_k50_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_hbase",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_lawm_soft_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_hbase",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_odasc_W30_t0.8_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_hbase",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_nowait_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_hbase",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_oracle_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_hbase",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_wait_W90_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_hbase",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_orb_W90_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_hbase",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_wait_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_hbase",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_decomp_L1_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_hbase",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_dual_W30_k50_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_hbase",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_lawm_soft_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_hbase",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_odasc_W30_t0.8_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_hbase",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_nowait_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_hbase",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_oracle_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_hbase",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_wait_W90_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_hbase",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_orb_W90_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_hbase",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_wait_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_hbase",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_decomp_L1_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_hbase",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_dual_W30_k50_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_hbase",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_lawm_soft_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_hbase",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_odasc_W30_t0.8_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_hbase",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_nowait_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_hbase",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_oracle_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_hbase",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_wait_W90_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_hbase",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_orb_W90_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_hbase",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_wait_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_hbase",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_decomp_L1_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_hbase",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_dual_W30_k50_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_hbase",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_lawm_soft_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_hbase",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hbase_odasc_W30_t0.8_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_hbase",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_nowait_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_cassandra",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_oracle_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_cassandra",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_wait_W90_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_cassandra",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_orb_W90_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_cassandra",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_wait_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_cassandra",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_decomp_L1_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_cassandra",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_dual_W30_k50_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_cassandra",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_lawm_soft_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_cassandra",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_odasc_W30_t0.8_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_cassandra",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_nowait_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_cassandra",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_oracle_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_cassandra",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_wait_W90_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_cassandra",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_orb_W90_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_cassandra",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_wait_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_cassandra",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_decomp_L1_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_cassandra",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_dual_W30_k50_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_cassandra",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_lawm_soft_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_cassandra",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_odasc_W30_t0.8_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_cassandra",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_nowait_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_cassandra",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_oracle_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_cassandra",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_wait_W90_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_cassandra",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_orb_W90_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_cassandra",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_wait_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_cassandra",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_decomp_L1_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_cassandra",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_dual_W30_k50_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_cassandra",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_lawm_soft_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_cassandra",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_odasc_W30_t0.8_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_cassandra",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_nowait_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_cassandra",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_oracle_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_cassandra",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_wait_W90_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_cassandra",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_orb_W90_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_cassandra",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_wait_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_cassandra",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_decomp_L1_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_cassandra",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_dual_W30_k50_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_cassandra",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_lawm_soft_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_cassandra",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_odasc_W30_t0.8_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_cassandra",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_nowait_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_cassandra",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_oracle_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_cassandra",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_wait_W90_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_cassandra",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_orb_W90_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_cassandra",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_wait_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_cassandra",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_decomp_L1_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_cassandra",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_dual_W30_k50_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_cassandra",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_lawm_soft_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_cassandra",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_cassandra_odasc_W30_t0.8_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_cassandra",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_nowait_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_groovy",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_oracle_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_groovy",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_wait_W90_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_groovy",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_orb_W90_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_groovy",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_wait_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_groovy",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_decomp_L1_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_groovy",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_dual_W30_k50_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_groovy",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_lawm_soft_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_groovy",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_odasc_W30_t0.8_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_groovy",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_nowait_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_groovy",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_oracle_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_groovy",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_wait_W90_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_groovy",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_orb_W90_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_groovy",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_wait_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_groovy",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_decomp_L1_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_groovy",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_dual_W30_k50_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_groovy",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_lawm_soft_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_groovy",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_odasc_W30_t0.8_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_groovy",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_nowait_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_groovy",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_oracle_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_groovy",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_wait_W90_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_groovy",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_orb_W90_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_groovy",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_wait_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_groovy",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_decomp_L1_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_groovy",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_dual_W30_k50_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_groovy",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_lawm_soft_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_groovy",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_odasc_W30_t0.8_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_groovy",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_nowait_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_groovy",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_oracle_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_groovy",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_wait_W90_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_groovy",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_orb_W90_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_groovy",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_wait_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_groovy",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_decomp_L1_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_groovy",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_dual_W30_k50_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_groovy",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_lawm_soft_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_groovy",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_odasc_W30_t0.8_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_groovy",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_nowait_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_groovy",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_oracle_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_groovy",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_wait_W90_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_groovy",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_orb_W90_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_groovy",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_wait_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_groovy",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_decomp_L1_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_groovy",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_dual_W30_k50_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_groovy",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_lawm_soft_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_groovy",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_groovy_odasc_W30_t0.8_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_groovy",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_nowait_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_hive",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_oracle_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_hive",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_wait_W90_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_hive",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_orb_W90_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_hive",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_wait_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_hive",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_decomp_L1_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_hive",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_dual_W30_k50_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_hive",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_lawm_soft_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_hive",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_odasc_W30_t0.8_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_hive",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_nowait_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_hive",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_oracle_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_hive",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_wait_W90_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_hive",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_orb_W90_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_hive",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_wait_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_hive",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_decomp_L1_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_hive",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_dual_W30_k50_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_hive",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_lawm_soft_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_hive",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_odasc_W30_t0.8_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_hive",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_nowait_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_hive",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_oracle_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_hive",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_wait_W90_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_hive",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_orb_W90_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_hive",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_wait_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_hive",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_decomp_L1_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_hive",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_dual_W30_k50_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_hive",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_lawm_soft_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_hive",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_odasc_W30_t0.8_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_hive",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_nowait_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_hive",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_oracle_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_hive",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_wait_W90_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_hive",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_orb_W90_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_hive",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_wait_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_hive",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_decomp_L1_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_hive",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_dual_W30_k50_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_hive",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_lawm_soft_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_hive",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_odasc_W30_t0.8_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_hive",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_nowait_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_hive",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_oracle_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_hive",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_wait_W90_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_hive",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_orb_W90_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_hive",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_wait_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_hive",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_decomp_L1_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_hive",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_dual_W30_k50_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_hive",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_lawm_soft_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_hive",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hive_odasc_W30_t0.8_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_hive",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_nowait_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_activemq",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_oracle_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_activemq",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_wait_W90_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_activemq",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_orb_W90_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_activemq",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_wait_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_activemq",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_decomp_L1_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_activemq",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "done",
+      "attempts": 1,
+      "cycle": 3,
+      "priority": 14,
+      "started": "2026-11-25T20:59:55+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:00:02+00:00",
+      "seconds": 7.8
+    },
+    {
+      "id": "E8_aj_activemq_dual_W30_k50_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_activemq",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_lawm_soft_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_activemq",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_odasc_W30_t0.8_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_activemq",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_nowait_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_activemq",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_oracle_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_activemq",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_wait_W90_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_activemq",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_orb_W90_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_activemq",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_wait_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_activemq",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_decomp_L1_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_activemq",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "running",
+      "attempts": 1,
+      "cycle": 3,
+      "priority": 14,
+      "started": "2026-11-25T20:59:55+00:00",
+      "worker": 1
+    },
+    {
+      "id": "E8_aj_activemq_dual_W30_k50_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_activemq",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_lawm_soft_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_activemq",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_odasc_W30_t0.8_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_activemq",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_nowait_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_activemq",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_oracle_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_activemq",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_wait_W90_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_activemq",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_orb_W90_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_activemq",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_wait_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_activemq",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_decomp_L1_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_activemq",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "running",
+      "attempts": 1,
+      "cycle": 3,
+      "priority": 14,
+      "started": "2026-11-25T20:59:55+00:00",
+      "worker": 2
+    },
+    {
+      "id": "E8_aj_activemq_dual_W30_k50_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_activemq",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_lawm_soft_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_activemq",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_odasc_W30_t0.8_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_activemq",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_nowait_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_activemq",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_oracle_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_activemq",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_wait_W90_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_activemq",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_orb_W90_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_activemq",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_wait_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_activemq",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_decomp_L1_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_activemq",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "running",
+      "attempts": 1,
+      "cycle": 3,
+      "priority": 14,
+      "started": "2026-11-25T21:00:02+00:00",
+      "worker": 0
+    },
+    {
+      "id": "E8_aj_activemq_dual_W30_k50_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_activemq",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_lawm_soft_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_activemq",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_odasc_W30_t0.8_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_activemq",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_nowait_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_activemq",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_oracle_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_activemq",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_wait_W90_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_activemq",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_orb_W90_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_activemq",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_wait_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_activemq",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_decomp_L1_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_activemq",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_dual_W30_k50_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_activemq",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_lawm_soft_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_activemq",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_activemq_odasc_W30_t0.8_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_activemq",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_nowait_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_hadoop-hdfs",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_oracle_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_hadoop-hdfs",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_wait_W90_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_hadoop-hdfs",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_orb_W90_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_hadoop-hdfs",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_wait_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_hadoop-hdfs",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_decomp_L1_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_hadoop-hdfs",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_dual_W30_k50_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_hadoop-hdfs",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_lawm_soft_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_hadoop-hdfs",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_odasc_W30_t0.8_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_hadoop-hdfs",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_nowait_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_hadoop-hdfs",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_oracle_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_hadoop-hdfs",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_wait_W90_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_hadoop-hdfs",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_orb_W90_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_hadoop-hdfs",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_wait_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_hadoop-hdfs",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_decomp_L1_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_hadoop-hdfs",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_dual_W30_k50_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_hadoop-hdfs",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_lawm_soft_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_hadoop-hdfs",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_odasc_W30_t0.8_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_hadoop-hdfs",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_nowait_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_hadoop-hdfs",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_oracle_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_hadoop-hdfs",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_wait_W90_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_hadoop-hdfs",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_orb_W90_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_hadoop-hdfs",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_wait_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_hadoop-hdfs",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_decomp_L1_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_hadoop-hdfs",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_dual_W30_k50_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_hadoop-hdfs",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_lawm_soft_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_hadoop-hdfs",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_odasc_W30_t0.8_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_hadoop-hdfs",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_nowait_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_hadoop-hdfs",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_oracle_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_hadoop-hdfs",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_wait_W90_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_hadoop-hdfs",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_orb_W90_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_hadoop-hdfs",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_wait_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_hadoop-hdfs",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_decomp_L1_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_hadoop-hdfs",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_dual_W30_k50_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_hadoop-hdfs",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_lawm_soft_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_hadoop-hdfs",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_odasc_W30_t0.8_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_hadoop-hdfs",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_nowait_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_hadoop-hdfs",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_oracle_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_hadoop-hdfs",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_wait_W90_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_hadoop-hdfs",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_orb_W90_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_hadoop-hdfs",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_wait_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_hadoop-hdfs",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_decomp_L1_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_hadoop-hdfs",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_dual_W30_k50_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_hadoop-hdfs",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_lawm_soft_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_hadoop-hdfs",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_hadoop-hdfs_odasc_W30_t0.8_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_hadoop-hdfs",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_nowait_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_kafka",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_oracle_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_kafka",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_wait_W90_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_kafka",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_orb_W90_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_kafka",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_wait_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_kafka",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_decomp_L1_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_kafka",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_dual_W30_k50_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_kafka",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_lawm_soft_W30_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_kafka",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_odasc_W30_t0.8_s100",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_kafka",
+        "seed": 100,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_nowait_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_kafka",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_oracle_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_kafka",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_wait_W90_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_kafka",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_orb_W90_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_kafka",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_wait_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_kafka",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_decomp_L1_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_kafka",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_dual_W30_k50_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_kafka",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_lawm_soft_W30_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_kafka",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_odasc_W30_t0.8_s101",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_kafka",
+        "seed": 101,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_nowait_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_kafka",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_oracle_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_kafka",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_wait_W90_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_kafka",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_orb_W90_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_kafka",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_wait_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_kafka",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_decomp_L1_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_kafka",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_dual_W30_k50_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_kafka",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_lawm_soft_W30_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_kafka",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_odasc_W30_t0.8_s102",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_kafka",
+        "seed": 102,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_nowait_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_kafka",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_oracle_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_kafka",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_wait_W90_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_kafka",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_orb_W90_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_kafka",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_wait_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_kafka",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_decomp_L1_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_kafka",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_dual_W30_k50_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_kafka",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_lawm_soft_W30_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_kafka",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_odasc_W30_t0.8_s103",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_kafka",
+        "seed": 103,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_nowait_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "nowait",
+        "project": "aj_kafka",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_oracle_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "oracle",
+        "project": "aj_kafka",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_wait_W90_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 90,
+        "variant": "wait_W90",
+        "project": "aj_kafka",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_orb_W90_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "orb",
+        "W": 90,
+        "variant": "orb_W90",
+        "project": "aj_kafka",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_wait_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "wait",
+        "W": 30,
+        "variant": "wait_W30",
+        "project": "aj_kafka",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_decomp_L1_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "decomp",
+        "W": 30,
+        "level": 1,
+        "variant": "decomp_L1_W30",
+        "project": "aj_kafka",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_dual_W30_k50_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "dual",
+        "W": 30,
+        "knn_k": 50,
+        "delay_est": "lagakos",
+        "variant": "dual_W30_k50",
+        "project": "aj_kafka",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_lawm_soft_W30_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "lawm",
+        "mode": "soft",
+        "W": 30,
+        "delay_est": "lagakos",
+        "variant": "lawm_soft_W30",
+        "project": "aj_kafka",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
+    },
+    {
+      "id": "E8_aj_kafka_odasc_W30_t0.8_s104",
+      "kind": "jit_run",
+      "params": {
+        "method": "odasc",
+        "W": 30,
+        "theta": 0.8,
+        "knn_k": 20,
+        "variant": "odasc_W30_t0.8",
+        "project": "aj_kafka",
+        "seed": 104,
+        "experiment": "E8",
+        "split": "fresh"
+      },
+      "status": "pending",
+      "attempts": 0,
+      "cycle": 3,
+      "priority": 14
     }
   ]
 }

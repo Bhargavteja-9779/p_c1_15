@@ -94,3 +94,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-25T20:59:35+00:00** — plan_v6 freeze: dual=dual_W30_k50 (0.6812); lawm=lawm_soft_W30 (0.7551), odasc=odasc_W30_t0.8 (0.7598); primary (best dev) = odasc_W30_t0.8; H5 on dev: False
   - Reason: best mean dev G-mean, dev projects only (plan_v6/plan_v7)
+
+- **2026-11-25T21:00:02+00:00** — E8 enqueued exactly as pre-registered in plan_v7 (9 ApacheJIT projects x 5 confirm seeds x 9 methods = 405 jobs) despite H5 being false on dev
+  - Reason: plan_v7 pre-registration; no changes after seeing dev results

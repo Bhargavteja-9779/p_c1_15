@@ -1,31 +1,31 @@
 # HANDOFF — read this first
-*Auto-generated 2026-11-25T14:52:50+00:00 by scripts/write_handoff.py*
+*Auto-generated 2026-11-25T21:00:02+00:00 by scripts/write_handoff.py*
 
 ## READ ALSO: USER_DIRECTIVES.md (owner standing orders)
 
 ## Where we are
-- **Status:** RUNNING   **Cycle:** 2 / 12   **Phase:** PHASE5_RUN   **Pivots:** 0 / 3
-- **Step:** cycle 2: E0e (dual denoiser, dev) running; plan_v7 ApacheJIT confirmation ready to enqueue
-- **Last action:** Adopted zen-cray state; restarted runners+autocommit; ApacheJIT downloaded/verified; freeze_v6.py + E8 spec written; smoke test OK
-- **NEXT ACTION:** 1) When E0e is done (48/48): python scripts/freeze_v6.py. 2) python scripts/enqueue.py E8 && bash scripts/launch_runner.sh 3 (ApacheJIT fresh confirmation, 9 projects x 5 confirm seeds x 9 methods; set priority above remaining E3). 3) Optionally enqueue E7 (MSTDP protocol). 4) Analyse E8 per plan_v7 H6 (Holm over 3 Wilcoxon tests), update gates/novelty/journal. 5) Continue owner directive: jksu_benchmark.md, more prior art (G2 needs >=30 opened).
+- **Status:** RUNNING   **Cycle:** 3 / 12   **Phase:** PHASE5_RUN   **Pivots:** 0 / 3
+- **Step:** cycle 3: E8 (ApacheJIT fresh confirmation, 405 jobs) running
+- **Last action:** freeze_v6 done (H5 false on dev; primary=odasc_W30_t0.8); journal RESULT; E8 enqueued and runners launched
+- **NEXT ACTION:** 1) Keep runners alive (bash scripts/launch_runner.sh 3; it also restores data/). 2) When E8 is done: python scripts/final_report.py (plan_v7 H6: Holm over 3 Wilcoxon, 9 projects), update gates G5/G7, novelty, journal RESULT. 3) Dev-only method round (owner directive): diagnose dual collapse on nova (operating point / noisy-OR saturation) and threshold calibration (archive/keen_edison_cycle1 shows latency-corrected calibration brings all methods near best-threshold G-mean on dev). 4) E3 (144 skipped_budget) only if budget allows after E8.
 
 - **Selected journal:** JKSU-CIS (Springer Nature, ISSN 1319-1578, IF 6.4 2025; turnaround median 71–74 d, marginal)
 - **Topic:** Verification-latency-aware online JIT-SDP: latency-aware weighting (LAW) of provisionally-clean commits
 - **Hypothesis:** LAW beats the best tuned waiting-time baseline by >=0.02 G-mean on 10 held-out projects (Holm p<0.05)
 
 ## Running right now
-- Queue (full): {'done': 1109, 'pending': 153, 'skipped_plan': 117, 'running': 3}; running jobs: ['E0e_nova_dual_W30_k20_s0', 'E0e_nova_dual_W30_k20_s1', 'E0e_nova_dual_W30_k20_s2']
-- Processes: `383 tmux new-session -d -s research_w0 python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
-384 bash -c python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
-386 python3 run_all.py --mode full --resume --worker 0
-390 bash -c python3 run_all.py --mode full --resume --worker 1 >> logs/runner_w1.log 2>&1
-393 python3 run_all.py --mode full --resume --worker 1
-396 bash -c python3 run_all.py --mode full --resume --worker 2 >> logs/runner_w2.log 2>&1
-398 python3 run_all.py --mode full --resume --worker 2`
-- Heartbeat age: 8s
+- Queue (full): {'done': 1122, 'skipped_budget': 144, 'skipped_plan': 117, 'pending': 401, 'running': 3}; running jobs: ['E8_aj_activemq_decomp_L1_W30_s101', 'E8_aj_activemq_decomp_L1_W30_s102', 'E8_aj_activemq_decomp_L1_W30_s103']
+- Processes: `1084 tmux new-session -d -s research_w0 python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
+1085 bash -c python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
+1087 python3 run_all.py --mode full --resume --worker 0
+1091 bash -c python3 run_all.py --mode full --resume --worker 1 >> logs/runner_w1.log 2>&1
+1093 python3 run_all.py --mode full --resume --worker 1
+1097 bash -c python3 run_all.py --mode full --resume --worker 2 >> logs/runner_w2.log 2>&1
+1099 python3 run_all.py --mode full --resume --worker 2`
+- Heartbeat age: -0s
 
 ## Compute
-- Cycle 2: 11.59 h / 15 h   Global: 21.81 h / 120 h (CPU-hours; machine has no GPU)
+- Cycle 3: 1.54 h / 15 h   Global: 27.74 h / 120 h (CPU-hours; machine has no GPU)
 
 ## Gate status (Section 7)
 | Gate | Status | Evidence |
@@ -43,9 +43,6 @@
 | G11 | unknown |  |
 
 ## Last 10 decisions
-- 2026-11-24T15:52:36+00:00: H4 holds on dev -> plan_v5: freeze lawm_soft_W30; add ODaSC-style baseline (equal 4-config dev budget), lawm ablations, robustness; skip remaining cycle-1 E2 (LAW ablation)
-- 2026-11-24T19:00:23+00:00: Owner directive recorded in USER_DIRECTIVES.md, BOOTSTRAP_PROMPT.txt and MASTER_PROMPT addendum: iterate until top-notch, benchmark vs JKSU-CIS papers, no honest exit
-- 2026-11-24T19:00:23+00:00: Hold the E4 test confirmation (lawm/odasc) until the next method-development round on dev is finished
 - 2026-11-24T19:11:12+00:00: plan_v5 freeze: lawm=lawm_soft_W30 (0.7551), odasc=odasc_W30_t0.8 (0.7598); lawm beats odasc on dev: False
 - 2026-11-25T13:07:06+00:00: plan_v6: dual-evidence denoiser (noisy-OR of mature-scorer posterior and kNN label composition) on dev; MSTDP-protocol experiment E7 pre-registered
 - 2026-11-25T13:07:06+00:00: GitHub push currently fails (403, authentication must be reconnected by owner); commits accumulate locally and autocommit retries
@@ -53,6 +50,9 @@
 - 2026-11-25T13:34:47+00:00: Session magical-bardeen resumed 2026-11-25: adopted zen-cray-ajbt81 state (most advanced: cycle 2, plan_v6 E0e running, plan_v7 pre-registered) into branch claude/magical-bardeen-9yglkz via merge -s ours; zen-cray's heartbeat was 12 min stale (session presumed stopped)
 - 2026-11-25T13:34:47+00:00: Added scripts/freeze_v6.py and enqueue E8 (plan_v7 ApacheJIT confirmation, exactly the plan_v7 method list); ApacheJIT downloaded and sha256-verified; smoke test on the first 1200 kafka commits checked only that every method runs (no metrics inspected)
 - 2026-11-25T14:53:00+00:00: Owner asked to continue from the most recent branch: adopted claude/magical-bardeen-9yglkz (cycle 2, heartbeat 28 min stale → session presumed stopped) into claude/keen-edison-jo222n via merge -s ours (keen-edison history kept). Keen-edison's parallel cycle-1 dev selection (E0b/E0c calibration/fsc/fixed-rate grids, dev only, never run on test) is kept under archive/keen_edison_cycle1/ for reference; its compute is not counted in this lineage's budget.json. Runners + autocommit relaunched on keen-edison.
+- 2026-11-25T20:19:39+00:00: Cycle 3 started (cycle-2 budget 15 h exhausted). Re-queued 3 E0e nova jobs (skipped_budget); E3 (144 jobs, Cabral test robustness, test set already declared 'used' by plan_v7) stays skipped_budget until E8 is done
+- 2026-11-25T20:59:35+00:00: plan_v6 freeze: dual=dual_W30_k50 (0.6812); lawm=lawm_soft_W30 (0.7551), odasc=odasc_W30_t0.8 (0.7598); primary (best dev) = odasc_W30_t0.8; H5 on dev: False
+- 2026-11-25T21:00:02+00:00: E8 enqueued exactly as pre-registered in plan_v7 (9 ApacheJIT projects x 5 confirm seeds x 9 methods = 405 jobs) despite H5 being false on dev
 
 ## Last failures (journal entries)
 - journal/ENTRIES/20261124T040516_FAILURE_the_pre_specified_law_method_loses_to_a_tuned_wait.md
