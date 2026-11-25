@@ -9384,10 +9384,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:16:53+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T01:17:39+00:00",
+      "seconds": 46.0
     },
     {
       "id": "E0_sentry_law_lagakos_base_ratematch_s0",
@@ -9426,10 +9430,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:13:40+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T01:14:48+00:00",
+      "seconds": 68.1
     },
     {
       "id": "E0_sentry_nowait_gmax_lat_s0",
@@ -9443,10 +9451,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:16:07+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T01:16:53+00:00",
+      "seconds": 45.6
     },
     {
       "id": "E0_sentry_law_lagakos_base_gmax_lat_s0",
@@ -9485,12 +9497,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
       "started": "2026-11-25T01:12:31+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T01:13:40+00:00",
+      "seconds": 69.3
     },
     {
       "id": "E0_sentry_wait_W15_gmax_lat_s0",
@@ -9542,10 +9556,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:17:39+00:00",
+      "worker": 1
     },
     {
       "id": "E0_sentry_wait_W30_gmax_lat_s0",
@@ -9779,10 +9795,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:16:56+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T01:17:42+00:00",
+      "seconds": 46.4
     },
     {
       "id": "E0_sentry_law_lagakos_base_ratematch_s1",
@@ -9821,10 +9841,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:13:41+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T01:14:50+00:00",
+      "seconds": 68.6
     },
     {
       "id": "E0_sentry_nowait_gmax_lat_s1",
@@ -9838,10 +9862,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:16:10+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T01:16:56+00:00",
+      "seconds": 46.1
     },
     {
       "id": "E0_sentry_law_lagakos_base_gmax_lat_s1",
@@ -9880,12 +9908,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
       "started": "2026-11-25T01:12:33+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T01:13:41+00:00",
+      "seconds": 67.9
     },
     {
       "id": "E0_sentry_wait_W15_gmax_lat_s1",
@@ -9937,10 +9967,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:17:42+00:00",
+      "worker": 2
     },
     {
       "id": "E0_sentry_wait_W30_gmax_lat_s1",
@@ -10174,10 +10206,12 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:17:10+00:00",
+      "worker": 0
     },
     {
       "id": "E0_sentry_law_lagakos_base_ratematch_s2",
@@ -10216,10 +10250,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:13:51+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T01:15:02+00:00",
+      "seconds": 70.7
     },
     {
       "id": "E0_sentry_nowait_gmax_lat_s2",
@@ -10233,10 +10271,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:16:23+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T01:17:10+00:00",
+      "seconds": 47.0
     },
     {
       "id": "E0_sentry_law_lagakos_base_gmax_lat_s2",
@@ -10275,12 +10317,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 12,
       "started": "2026-11-25T01:12:41+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T01:13:51+00:00",
+      "seconds": 70.7
     },
     {
       "id": "E0_sentry_wait_W15_gmax_lat_s2",
@@ -10984,10 +11028,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:14:48+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T01:16:07+00:00",
+      "seconds": 79.5
     },
     {
       "id": "E0_sentry_law_lagakos_model_gmax_lat_s1",
@@ -11026,10 +11074,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:14:50+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T01:16:10+00:00",
+      "seconds": 80.1
     },
     {
       "id": "E0_sentry_law_lagakos_model_gmax_lat_s2",
@@ -11068,10 +11120,14 @@
         "experiment": "E0",
         "split": "dev"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 12
+      "priority": 12,
+      "started": "2026-11-25T01:15:02+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T01:16:23+00:00",
+      "seconds": 80.9
     }
   ]
 }

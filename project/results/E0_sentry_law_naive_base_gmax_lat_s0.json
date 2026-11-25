@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E0",
+    "project": "sentry",
+    "method": "law",
+    "variant": "law_naive_base_gmax_lat",
+    "seed": 0,
+    "split": "dev",
+    "delay_est": "naive",
+    "prior": "base",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.691974464805024,
+    "r0": 0.665075179933015,
+    "r1": 0.7199617041646721,
+    "rdiff": 0.054886524231657075,
+    "auc": 0.7767910690034912,
+    "mcc": 0.3276681875109033,
+    "n_eval": 18211,
+    "seconds": 69.32,
+    "job_id": "E0_sentry_law_naive_base_gmax_lat_s0",
+    "written": "2026-11-25T01:13:40+00:00",
+    "cycle": 1
+  }
+]
