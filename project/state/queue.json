@@ -29693,10 +29693,15 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "skipped_budget",
-      "attempts": 0,
-      "cycle": 2,
-      "priority": 13
+      "status": "running",
+      "attempts": 1,
+      "cycle": 3,
+      "priority": 13,
+      "log": [
+        "2026-11-25T20:19:39+00:00 re-queued for cycle 3"
+      ],
+      "started": "2026-11-25T20:19:39+00:00",
+      "worker": 0
     },
     {
       "id": "E0e_nova_dual_W30_k20_s1",
@@ -29788,10 +29793,13 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "skipped_budget",
+      "status": "pending",
       "attempts": 0,
-      "cycle": 2,
-      "priority": 13
+      "cycle": 3,
+      "priority": 13,
+      "log": [
+        "2026-11-25T20:19:39+00:00 re-queued for cycle 3"
+      ]
     },
     {
       "id": "E0e_nova_dual_W30_k20_s2",
@@ -29883,10 +29891,13 @@
         "experiment": "E0e",
         "split": "dev"
       },
-      "status": "skipped_budget",
+      "status": "pending",
       "attempts": 0,
-      "cycle": 2,
-      "priority": 13
+      "cycle": 3,
+      "priority": 13,
+      "log": [
+        "2026-11-25T20:19:39+00:00 re-queued for cycle 3"
+      ]
     },
     {
       "id": "E0e_sentry_dual_W30_k20_s0",

@@ -88,3 +88,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-25T14:53:00+00:00** — Owner asked to continue from the most recent branch: adopted claude/magical-bardeen-9yglkz (cycle 2, heartbeat 28 min stale → session presumed stopped) into claude/keen-edison-jo222n via merge -s ours (keen-edison history kept). Keen-edison's parallel cycle-1 dev selection (E0b/E0c calibration/fsc/fixed-rate grids, dev only, never run on test) is kept under archive/keen_edison_cycle1/ for reference; its compute is not counted in this lineage's budget.json. Runners + autocommit relaunched on keen-edison.
   - Reason: owner instruction ("check recent branch and continue from there")
+
+- **2026-11-25T20:19:39+00:00** — Cycle 3 started (cycle-2 budget 15 h exhausted). Re-queued 3 E0e nova jobs (skipped_budget); E3 (144 jobs, Cabral test robustness, test set already declared 'used' by plan_v7) stays skipped_budget until E8 is done
+  - Reason: E0e completion is required by freeze_v6; E8 fresh confirmation has priority over E3
