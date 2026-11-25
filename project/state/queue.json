@@ -32562,10 +32562,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:04:41+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:04:52+00:00",
+      "seconds": 10.9
     },
     {
       "id": "E8_aj_cassandra_oracle_s100",
@@ -32716,10 +32720,12 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:05:11+00:00",
+      "worker": 0
     },
     {
       "id": "E8_aj_cassandra_nowait_s101",
@@ -32731,10 +32737,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:04:49+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:05:00+00:00",
+      "seconds": 11.1
     },
     {
       "id": "E8_aj_cassandra_oracle_s101",
@@ -32862,12 +32872,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 3,
       "priority": 14,
       "started": "2026-11-25T21:04:02+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T21:04:38+00:00",
+      "seconds": 36.5
     },
     {
       "id": "E8_aj_cassandra_odasc_W30_t0.8_s101",
@@ -32898,10 +32910,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:04:52+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:05:03+00:00",
+      "seconds": 10.8
     },
     {
       "id": "E8_aj_cassandra_oracle_s102",
@@ -33029,12 +33045,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 3,
       "priority": 14,
       "started": "2026-11-25T21:04:03+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T21:04:41+00:00",
+      "seconds": 37.5
     },
     {
       "id": "E8_aj_cassandra_odasc_W30_t0.8_s102",
@@ -33065,10 +33083,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:05:00+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:05:11+00:00",
+      "seconds": 11.2
     },
     {
       "id": "E8_aj_cassandra_oracle_s103",
@@ -33196,12 +33218,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 3,
       "priority": 14,
       "started": "2026-11-25T21:04:15+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T21:04:49+00:00",
+      "seconds": 34.0
     },
     {
       "id": "E8_aj_cassandra_odasc_W30_t0.8_s103",
@@ -33232,10 +33256,12 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:05:03+00:00",
+      "worker": 1
     },
     {
       "id": "E8_aj_cassandra_oracle_s104",
@@ -33363,10 +33389,12 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:04:38+00:00",
+      "worker": 2
     },
     {
       "id": "E8_aj_cassandra_odasc_W30_t0.8_s104",
