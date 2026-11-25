@@ -70,3 +70,9 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-24T19:11:12+00:00** — plan_v5 freeze: lawm=lawm_soft_W30 (0.7551), odasc=odasc_W30_t0.8 (0.7598); lawm beats odasc on dev: False
   - Reason: best mean dev G-mean, dev projects only
+
+- **2026-11-25T13:07:06+00:00** — plan_v6: dual-evidence denoiser (noisy-OR of mature-scorer posterior and kNN label composition) on dev; MSTDP-protocol experiment E7 pre-registered
+  - Reason: Complementarity of lawm/odasc on dev; owner directive to compare with JKSU-CIS papers (MSTDP uses the same data)
+
+- **2026-11-25T13:07:06+00:00** — GitHub push currently fails (403, authentication must be reconnected by owner); commits accumulate locally and autocommit retries
+  - Reason: git push error 2026-11-25

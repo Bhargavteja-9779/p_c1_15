@@ -1,0 +1,18 @@
+# plan_v6 — cycle 2, written 2026-11-25 after freeze_v5 (dev: odasc 0.760 >= lawm 0.755) and the owner directive.
+# No test-project run of any denoiser has happened yet (E4 held, decisions.md).
+version: 6
+cycle: 2
+supersedes: plan_v5
+motivation: "results/diag_threshold_dev.json: threshold costs denoisers only 0.00-0.02 G-mean; lawm and odasc are complementary across dev projects (lawm wins neutron 0.836 vs 0.781; odasc wins fabric/sentry). Two independent evidence sources for dormant bugs -> noisy-OR combination (lawm mode=dual)."
+experiments:
+  E0e_dev_dual:
+    projects: dev
+    seeds: explore
+    variants: "lawm mode=dual: W in {30, 90} x knn_k in {20, 50} (4 configs, dev only)"
+    hypothesis_H5: "best dual config beats both frozen lawm_soft_W30 (0.755) and odasc_W30_t0.8 (0.760) on mean dev G-mean"
+    priority: 12
+  E7_mstdp_protocol:
+    what: "offline chronological 80/20 split on the 9 MSTDP projects (brackets, camel, fabric, jgroups, neutron, nova, npm, spring-integration, tomcat), single training at the split, test on last 20% vs final labels, SEEDS_CONFIRM; metrics acc/precision/recall/F1/AUC (MSTDP Table 2) + MCC, G-mean, effort-aware"
+    methods: "final labels (MSTDP assumption = oracle), observed-at-split (nowait), wait_W90, orb not applicable offline -> omitted, odasc frozen, lawm frozen, best dual (after E0e freeze)"
+    note: "fabric/neutron/nova are DEV projects -> reported separately; the 6 others are held-out. Compared with MSTDP numbers only as 'not directly comparable learner, same split type'."
+  final_confirmation: "after E0e: one frozen test run (E4-style) of {lawm, odasc, dual} + ablations + robustness; Holm over the final candidate vs {wait_W90, orb_W90, odasc}"

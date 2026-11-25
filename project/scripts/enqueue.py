@@ -71,6 +71,13 @@ def specs(exp):
             J[-k:] = [dict(j, project=p, seed=s) for j in J[-k:]]
         for j in J: j.update(experiment=exp, split="test")
         return J, {"E4": 14, "E5": 16, "E6": 15}[exp]
+    if exp == "E0e":   # plan_v6 dual-evidence denoiser, dev
+        for p, s in itertools.product(DEV, SE):
+            for W in [30, 90]:
+                for k in [20, 50]:
+                    J.append(dict(method="lawm", mode="dual", W=W, knn_k=k, delay_est="lagakos", variant=f"dual_W{W}_k{k}", project=p, seed=s))
+        for j in J: j.update(experiment="E0e", split="dev")
+        return J, 12
     if exp == "E3b":   # plan_v3 decomposition on test projects (pre-registered)
         for p, s in itertools.product(TEST, SC):
             for W in [30, 90]:
