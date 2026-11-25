@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E0",
+    "project": "fabric",
+    "method": "nowait",
+    "variant": "nowait_ratematch",
+    "seed": 2,
+    "split": "dev",
+    "thr_policy": "ratematch",
+    "gmean": 0.6565166522118637,
+    "r0": 0.7889695821492474,
+    "r1": 0.5463000404367165,
+    "rdiff": 0.24266954171253086,
+    "auc": 0.775101312041855,
+    "mcc": 0.30218764338419674,
+    "n_eval": 11974,
+    "seconds": 21.5,
+    "job_id": "E0_fabric_nowait_ratematch_s2",
+    "written": "2026-11-25T00:20:32+00:00",
+    "cycle": 1
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E0",
+    "project": "fabric",
+    "method": "nowait",
+    "variant": "nowait_gmax_lat",
+    "seed": 2,
+    "split": "dev",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6971564808431711,
+    "r0": 0.6417219240079992,
+    "r1": 0.7573797007682976,
+    "rdiff": 0.11565777676029843,
+    "auc": 0.775101312041855,
+    "mcc": 0.3254217052515331,
+    "n_eval": 11974,
+    "seconds": 20.12,
+    "job_id": "E0_fabric_nowait_gmax_lat_s2",
+    "written": "2026-11-25T00:20:11+00:00",
+    "cycle": 1
+  }
+]
