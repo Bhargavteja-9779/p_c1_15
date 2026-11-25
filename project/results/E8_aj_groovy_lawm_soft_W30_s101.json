@@ -1,0 +1,30 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_groovy",
+    "method": "lawm",
+    "variant": "lawm_soft_W30",
+    "seed": 101,
+    "split": "fresh",
+    "W": 30,
+    "delay_est": "lagakos",
+    "mode": "soft",
+    "gmean": 0.6238638528318731,
+    "r0": 0.848,
+    "r1": 0.45896946564885494,
+    "rdiff": 0.38903053435114504,
+    "auc": 0.7015220710255559,
+    "mcc": 0.32081241407176175,
+    "acc": 0.7440734132041805,
+    "precision": 0.5239651416122004,
+    "f1": 0.4893184130213632,
+    "recall20e": 0.5402576335877863,
+    "popt": 0.7765541679215935,
+    "ifa": 3,
+    "n_eval": 3923,
+    "seconds": 26.39,
+    "job_id": "E8_aj_groovy_lawm_soft_W30_s101",
+    "written": "2026-11-25T21:16:33+00:00",
+    "cycle": 3
+  }
+]

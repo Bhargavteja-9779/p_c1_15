@@ -1,0 +1,30 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_hadoop-hdfs",
+    "method": "lawm",
+    "variant": "lawm_soft_W30",
+    "seed": 102,
+    "split": "fresh",
+    "W": 30,
+    "delay_est": "lagakos",
+    "mode": "soft",
+    "gmean": 0.7493697091050765,
+    "r0": 0.7492354740061162,
+    "r1": 0.7495039682539683,
+    "rdiff": 0.0002684942478520247,
+    "auc": 0.7994894058540848,
+    "mcc": 0.3704711008922881,
+    "acc": 0.7494664959453692,
+    "precision": 0.9485247959824231,
+    "f1": 0.8373510667775007,
+    "recall20e": 0.6076615831517792,
+    "popt": 0.9481738781803479,
+    "ifa": 3,
+    "n_eval": 2343,
+    "seconds": 6.87,
+    "job_id": "E8_aj_hadoop-hdfs_lawm_soft_W30_s102",
+    "written": "2026-11-25T21:18:44+00:00",
+    "cycle": 3
+  }
+]

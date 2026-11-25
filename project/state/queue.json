@@ -30992,10 +30992,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:11:05+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:11:22+00:00",
+      "seconds": 17.0
     },
     {
       "id": "E8_aj_flink_oracle_s100",
@@ -31007,10 +31011,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:12:33+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:12:52+00:00",
+      "seconds": 19.0
     },
     {
       "id": "E8_aj_flink_wait_W90_s100",
@@ -31024,10 +31032,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:14:09+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:14:25+00:00",
+      "seconds": 16.2
     },
     {
       "id": "E8_aj_flink_orb_W90_s100",
@@ -31041,10 +31053,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:13:18+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:13:33+00:00",
+      "seconds": 15.2
     },
     {
       "id": "E8_aj_flink_wait_W30_s100",
@@ -31058,10 +31074,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:13:47+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:14:02+00:00",
+      "seconds": 15.8
     },
     {
       "id": "E8_aj_flink_decomp_L1_W30_s100",
@@ -31123,12 +31143,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 3,
       "priority": 14,
       "started": "2026-11-25T21:08:57+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T21:09:55+00:00",
+      "seconds": 57.8
     },
     {
       "id": "E8_aj_flink_odasc_W30_t0.8_s100",
@@ -31144,10 +31166,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:11:48+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:12:24+00:00",
+      "seconds": 35.6
     },
     {
       "id": "E8_aj_flink_nowait_s101",
@@ -31159,10 +31185,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:11:16+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:11:32+00:00",
+      "seconds": 16.0
     },
     {
       "id": "E8_aj_flink_oracle_s101",
@@ -31174,10 +31204,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:12:52+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:13:12+00:00",
+      "seconds": 19.7
     },
     {
       "id": "E8_aj_flink_wait_W90_s101",
@@ -31191,10 +31225,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:14:19+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:14:36+00:00",
+      "seconds": 16.8
     },
     {
       "id": "E8_aj_flink_orb_W90_s101",
@@ -31208,10 +31246,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:13:20+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:13:35+00:00",
+      "seconds": 15.5
     },
     {
       "id": "E8_aj_flink_wait_W30_s101",
@@ -31225,10 +31267,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:13:49+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:14:05+00:00",
+      "seconds": 15.9
     },
     {
       "id": "E8_aj_flink_decomp_L1_W30_s101",
@@ -31290,10 +31336,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:09:55+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:10:52+00:00",
+      "seconds": 57.2
     },
     {
       "id": "E8_aj_flink_odasc_W30_t0.8_s101",
@@ -31309,10 +31359,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:11:50+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:12:26+00:00",
+      "seconds": 35.3
     },
     {
       "id": "E8_aj_flink_nowait_s102",
@@ -31324,10 +31378,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:11:22+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:11:39+00:00",
+      "seconds": 17.4
     },
     {
       "id": "E8_aj_flink_oracle_s102",
@@ -31339,10 +31397,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:13:00+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:13:18+00:00",
+      "seconds": 18.6
     },
     {
       "id": "E8_aj_flink_wait_W90_s102",
@@ -31356,10 +31418,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:14:21+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:14:38+00:00",
+      "seconds": 16.2
     },
     {
       "id": "E8_aj_flink_orb_W90_s102",
@@ -31373,10 +31439,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:13:31+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:13:47+00:00",
+      "seconds": 15.8
     },
     {
       "id": "E8_aj_flink_wait_W30_s102",
@@ -31390,10 +31460,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:13:51+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:14:09+00:00",
+      "seconds": 18.0
     },
     {
       "id": "E8_aj_flink_decomp_L1_W30_s102",
@@ -31455,10 +31529,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:10:08+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:11:05+00:00",
+      "seconds": 56.4
     },
     {
       "id": "E8_aj_flink_odasc_W30_t0.8_s102",
@@ -31474,10 +31552,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:11:56+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:12:33+00:00",
+      "seconds": 36.7
     },
     {
       "id": "E8_aj_flink_nowait_s103",
@@ -31489,10 +31571,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:11:32+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:11:48+00:00",
+      "seconds": 16.1
     },
     {
       "id": "E8_aj_flink_oracle_s103",
@@ -31504,10 +31590,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:13:01+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:13:20+00:00",
+      "seconds": 18.8
     },
     {
       "id": "E8_aj_flink_wait_W90_s103",
@@ -31521,10 +31611,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:14:25+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:14:42+00:00",
+      "seconds": 16.3
     },
     {
       "id": "E8_aj_flink_orb_W90_s103",
@@ -31538,10 +31632,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:13:33+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:13:49+00:00",
+      "seconds": 15.7
     },
     {
       "id": "E8_aj_flink_wait_W30_s103",
@@ -31555,10 +31653,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:14:02+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:14:19+00:00",
+      "seconds": 16.4
     },
     {
       "id": "E8_aj_flink_decomp_L1_W30_s103",
@@ -31597,12 +31699,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 3,
       "priority": 14,
       "started": "2026-11-25T21:08:48+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T21:10:08+00:00",
+      "seconds": 80.8
     },
     {
       "id": "E8_aj_flink_lawm_soft_W30_s103",
@@ -31618,10 +31722,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:10:19+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:11:16+00:00",
+      "seconds": 57.6
     },
     {
       "id": "E8_aj_flink_odasc_W30_t0.8_s103",
@@ -31637,10 +31745,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:12:24+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:13:01+00:00",
+      "seconds": 36.6
     },
     {
       "id": "E8_aj_flink_nowait_s104",
@@ -31652,10 +31764,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:11:39+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:11:56+00:00",
+      "seconds": 17.0
     },
     {
       "id": "E8_aj_flink_oracle_s104",
@@ -31667,10 +31783,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:13:12+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:13:31+00:00",
+      "seconds": 18.9
     },
     {
       "id": "E8_aj_flink_wait_W90_s104",
@@ -31684,10 +31804,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:14:36+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:14:51+00:00",
+      "seconds": 15.7
     },
     {
       "id": "E8_aj_flink_orb_W90_s104",
@@ -31701,10 +31825,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:13:35+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:13:51+00:00",
+      "seconds": 16.1
     },
     {
       "id": "E8_aj_flink_wait_W30_s104",
@@ -31718,10 +31846,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:14:05+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:14:21+00:00",
+      "seconds": 16.3
     },
     {
       "id": "E8_aj_flink_decomp_L1_W30_s104",
@@ -31760,12 +31892,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 3,
       "priority": 14,
       "started": "2026-11-25T21:08:56+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T21:10:19+00:00",
+      "seconds": 82.7
     },
     {
       "id": "E8_aj_flink_lawm_soft_W30_s104",
@@ -31781,10 +31915,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:10:53+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:11:50+00:00",
+      "seconds": 57.8
     },
     {
       "id": "E8_aj_flink_odasc_W30_t0.8_s104",
@@ -31800,10 +31938,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:12:26+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:13:00+00:00",
+      "seconds": 33.9
     },
     {
       "id": "E8_aj_hbase_nowait_s100",
@@ -31899,10 +32041,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:19:12+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:19:25+00:00",
+      "seconds": 12.9
     },
     {
       "id": "E8_aj_hbase_dual_W30_k50_s100",
@@ -31919,10 +32065,12 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:19:26+00:00",
+      "worker": 1
     },
     {
       "id": "E8_aj_hbase_lawm_soft_W30_s100",
@@ -32056,10 +32204,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:19:12+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:19:25+00:00",
+      "seconds": 13.1
     },
     {
       "id": "E8_aj_hbase_dual_W30_k50_s101",
@@ -32076,10 +32228,12 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:19:38+00:00",
+      "worker": 2
     },
     {
       "id": "E8_aj_hbase_lawm_soft_W30_s101",
@@ -32213,10 +32367,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:19:14+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:19:26+00:00",
+      "seconds": 12.0
     },
     {
       "id": "E8_aj_hbase_dual_W30_k50_s102",
@@ -32233,10 +32391,12 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:19:39+00:00",
+      "worker": 0
     },
     {
       "id": "E8_aj_hbase_lawm_soft_W30_s102",
@@ -32370,10 +32530,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:19:25+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:19:38+00:00",
+      "seconds": 13.8
     },
     {
       "id": "E8_aj_hbase_dual_W30_k50_s103",
@@ -32527,10 +32691,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:19:25+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:19:38+00:00",
+      "seconds": 12.4
     },
     {
       "id": "E8_aj_hbase_dual_W30_k50_s104",
@@ -33565,10 +33733,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:16:39+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:16:46+00:00",
+      "seconds": 7.5
     },
     {
       "id": "E8_aj_groovy_oracle_s100",
@@ -33580,10 +33752,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:17:17+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:17:28+00:00",
+      "seconds": 10.9
     },
     {
       "id": "E8_aj_groovy_wait_W90_s100",
@@ -33597,10 +33773,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:02+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:18:10+00:00",
+      "seconds": 7.1
     },
     {
       "id": "E8_aj_groovy_orb_W90_s100",
@@ -33614,10 +33794,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:17:38+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:17:46+00:00",
+      "seconds": 7.4
     },
     {
       "id": "E8_aj_groovy_wait_W30_s100",
@@ -33631,10 +33815,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:17:53+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:18:00+00:00",
+      "seconds": 7.2
     },
     {
       "id": "E8_aj_groovy_decomp_L1_W30_s100",
@@ -33649,10 +33837,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:14:38+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:14:48+00:00",
+      "seconds": 10.5
     },
     {
       "id": "E8_aj_groovy_dual_W30_k50_s100",
@@ -33669,10 +33861,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:14:59+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:15:36+00:00",
+      "seconds": 36.4
     },
     {
       "id": "E8_aj_groovy_lawm_soft_W30_s100",
@@ -33688,10 +33884,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:15:39+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:16:07+00:00",
+      "seconds": 27.1
     },
     {
       "id": "E8_aj_groovy_odasc_W30_t0.8_s100",
@@ -33707,10 +33907,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:16:54+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:17:09+00:00",
+      "seconds": 15.4
     },
     {
       "id": "E8_aj_groovy_nowait_s101",
@@ -33722,10 +33926,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:16:40+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:16:47+00:00",
+      "seconds": 7.0
     },
     {
       "id": "E8_aj_groovy_oracle_s101",
@@ -33737,10 +33945,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:17:24+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:17:35+00:00",
+      "seconds": 10.5
     },
     {
       "id": "E8_aj_groovy_wait_W90_s101",
@@ -33754,10 +33966,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:08+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:18:16+00:00",
+      "seconds": 7.6
     },
     {
       "id": "E8_aj_groovy_orb_W90_s101",
@@ -33771,10 +33987,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:17:40+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:17:47+00:00",
+      "seconds": 7.3
     },
     {
       "id": "E8_aj_groovy_wait_W30_s101",
@@ -33788,10 +34008,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:17:53+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:18:01+00:00",
+      "seconds": 7.4
     },
     {
       "id": "E8_aj_groovy_decomp_L1_W30_s101",
@@ -33806,10 +34030,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:14:42+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:14:52+00:00",
+      "seconds": 10.4
     },
     {
       "id": "E8_aj_groovy_dual_W30_k50_s101",
@@ -33826,10 +34054,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:15:01+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:15:37+00:00",
+      "seconds": 35.6
     },
     {
       "id": "E8_aj_groovy_lawm_soft_W30_s101",
@@ -33845,10 +34077,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:16:07+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:16:33+00:00",
+      "seconds": 26.4
     },
     {
       "id": "E8_aj_groovy_odasc_W30_t0.8_s101",
@@ -33864,10 +34100,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:16:59+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:17:14+00:00",
+      "seconds": 14.7
     },
     {
       "id": "E8_aj_groovy_nowait_s102",
@@ -33879,10 +34119,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:16:46+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:16:53+00:00",
+      "seconds": 7.4
     },
     {
       "id": "E8_aj_groovy_oracle_s102",
@@ -33894,10 +34138,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:17:28+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:17:38+00:00",
+      "seconds": 10.8
     },
     {
       "id": "E8_aj_groovy_wait_W90_s102",
@@ -33911,10 +34159,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:08+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:18:16+00:00",
+      "seconds": 7.3
     },
     {
       "id": "E8_aj_groovy_orb_W90_s102",
@@ -33928,10 +34180,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:17:46+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:17:53+00:00",
+      "seconds": 7.2
     },
     {
       "id": "E8_aj_groovy_wait_W30_s102",
@@ -33945,10 +34201,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:17:55+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:18:02+00:00",
+      "seconds": 7.5
     },
     {
       "id": "E8_aj_groovy_decomp_L1_W30_s102",
@@ -33963,10 +34223,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:14:48+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:14:59+00:00",
+      "seconds": 11.2
     },
     {
       "id": "E8_aj_groovy_dual_W30_k50_s102",
@@ -33983,10 +34247,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:15:03+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:15:39+00:00",
+      "seconds": 36.8
     },
     {
       "id": "E8_aj_groovy_lawm_soft_W30_s102",
@@ -34002,10 +34270,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:16:12+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:16:39+00:00",
+      "seconds": 26.1
     },
     {
       "id": "E8_aj_groovy_odasc_W30_t0.8_s102",
@@ -34021,10 +34293,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:17:01+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:17:17+00:00",
+      "seconds": 15.6
     },
     {
       "id": "E8_aj_groovy_nowait_s103",
@@ -34036,10 +34312,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:16:47+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:16:54+00:00",
+      "seconds": 7.0
     },
     {
       "id": "E8_aj_groovy_oracle_s103",
@@ -34051,10 +34331,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:17:30+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:17:40+00:00",
+      "seconds": 10.3
     },
     {
       "id": "E8_aj_groovy_wait_W90_s103",
@@ -34068,10 +34352,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:10+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:18:17+00:00",
+      "seconds": 7.5
     },
     {
       "id": "E8_aj_groovy_orb_W90_s103",
@@ -34085,10 +34373,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:17:46+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:17:53+00:00",
+      "seconds": 7.2
     },
     {
       "id": "E8_aj_groovy_wait_W30_s103",
@@ -34102,10 +34394,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:00+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:18:08+00:00",
+      "seconds": 7.9
     },
     {
       "id": "E8_aj_groovy_decomp_L1_W30_s103",
@@ -34120,10 +34416,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:14:51+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:15:01+00:00",
+      "seconds": 10.0
     },
     {
       "id": "E8_aj_groovy_dual_W30_k50_s103",
@@ -34140,10 +34440,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:15:36+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:16:12+00:00",
+      "seconds": 36.6
     },
     {
       "id": "E8_aj_groovy_lawm_soft_W30_s103",
@@ -34159,10 +34463,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:16:13+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:16:40+00:00",
+      "seconds": 26.3
     },
     {
       "id": "E8_aj_groovy_odasc_W30_t0.8_s103",
@@ -34178,10 +34486,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:17:09+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:17:24+00:00",
+      "seconds": 15.0
     },
     {
       "id": "E8_aj_groovy_nowait_s104",
@@ -34193,10 +34505,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:16:54+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:17:01+00:00",
+      "seconds": 7.5
     },
     {
       "id": "E8_aj_groovy_oracle_s104",
@@ -34208,10 +34524,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:17:35+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:17:46+00:00",
+      "seconds": 11.0
     },
     {
       "id": "E8_aj_groovy_wait_W90_s104",
@@ -34225,10 +34545,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:16+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:18:23+00:00",
+      "seconds": 7.4
     },
     {
       "id": "E8_aj_groovy_orb_W90_s104",
@@ -34242,10 +34566,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:17:47+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:17:55+00:00",
+      "seconds": 7.4
     },
     {
       "id": "E8_aj_groovy_wait_W30_s104",
@@ -34259,10 +34587,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:01+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:18:08+00:00",
+      "seconds": 7.5
     },
     {
       "id": "E8_aj_groovy_decomp_L1_W30_s104",
@@ -34277,10 +34609,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:14:52+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:15:03+00:00",
+      "seconds": 10.3
     },
     {
       "id": "E8_aj_groovy_dual_W30_k50_s104",
@@ -34297,10 +34633,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:15:37+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:16:13+00:00",
+      "seconds": 36.3
     },
     {
       "id": "E8_aj_groovy_lawm_soft_W30_s104",
@@ -34316,10 +34656,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:16:33+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:16:59+00:00",
+      "seconds": 26.2
     },
     {
       "id": "E8_aj_groovy_odasc_W30_t0.8_s104",
@@ -34335,10 +34679,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:17:14+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:17:30+00:00",
+      "seconds": 15.7
     },
     {
       "id": "E8_aj_hive_nowait_s100",
@@ -36100,10 +36448,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:44+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:18:47+00:00",
+      "seconds": 2.6
     },
     {
       "id": "E8_aj_hadoop-hdfs_oracle_s100",
@@ -36115,10 +36467,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:55+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:18:57+00:00",
+      "seconds": 2.3
     },
     {
       "id": "E8_aj_hadoop-hdfs_wait_W90_s100",
@@ -36132,10 +36488,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:19:07+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:19:10+00:00",
+      "seconds": 2.6
     },
     {
       "id": "E8_aj_hadoop-hdfs_orb_W90_s100",
@@ -36149,10 +36509,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:59+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:19:02+00:00",
+      "seconds": 2.5
     },
     {
       "id": "E8_aj_hadoop-hdfs_wait_W30_s100",
@@ -36166,10 +36530,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:19:04+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:19:07+00:00",
+      "seconds": 2.7
     },
     {
       "id": "E8_aj_hadoop-hdfs_decomp_L1_W30_s100",
@@ -36184,10 +36552,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:16+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:18:18+00:00",
+      "seconds": 2.3
     },
     {
       "id": "E8_aj_hadoop-hdfs_dual_W30_k50_s100",
@@ -36204,10 +36576,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:22+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:18:29+00:00",
+      "seconds": 7.0
     },
     {
       "id": "E8_aj_hadoop-hdfs_lawm_soft_W30_s100",
@@ -36223,10 +36599,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:31+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:18:37+00:00",
+      "seconds": 6.3
     },
     {
       "id": "E8_aj_hadoop-hdfs_odasc_W30_t0.8_s100",
@@ -36242,10 +36622,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:50+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:18:53+00:00",
+      "seconds": 3.0
     },
     {
       "id": "E8_aj_hadoop-hdfs_nowait_s101",
@@ -36257,10 +36641,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:44+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:18:47+00:00",
+      "seconds": 2.9
     },
     {
       "id": "E8_aj_hadoop-hdfs_oracle_s101",
@@ -36272,10 +36660,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:57+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:18:59+00:00",
+      "seconds": 2.4
     },
     {
       "id": "E8_aj_hadoop-hdfs_wait_W90_s101",
@@ -36289,10 +36681,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:19:09+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:19:12+00:00",
+      "seconds": 2.6
     },
     {
       "id": "E8_aj_hadoop-hdfs_orb_W90_s101",
@@ -36306,10 +36702,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:19:00+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:19:02+00:00",
+      "seconds": 2.3
     },
     {
       "id": "E8_aj_hadoop-hdfs_wait_W30_s101",
@@ -36323,10 +36723,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:19:04+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:19:07+00:00",
+      "seconds": 2.7
     },
     {
       "id": "E8_aj_hadoop-hdfs_decomp_L1_W30_s101",
@@ -36341,10 +36745,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:17+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:18:19+00:00",
+      "seconds": 2.3
     },
     {
       "id": "E8_aj_hadoop-hdfs_dual_W30_k50_s101",
@@ -36361,10 +36769,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:23+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:18:30+00:00",
+      "seconds": 7.3
     },
     {
       "id": "E8_aj_hadoop-hdfs_lawm_soft_W30_s101",
@@ -36380,10 +36792,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:36+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:18:43+00:00",
+      "seconds": 6.8
     },
     {
       "id": "E8_aj_hadoop-hdfs_odasc_W30_t0.8_s101",
@@ -36399,10 +36815,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:50+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:18:53+00:00",
+      "seconds": 2.9
     },
     {
       "id": "E8_aj_hadoop-hdfs_nowait_s102",
@@ -36414,10 +36834,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:47+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:18:49+00:00",
+      "seconds": 2.4
     },
     {
       "id": "E8_aj_hadoop-hdfs_oracle_s102",
@@ -36429,10 +36853,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:57+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:18:59+00:00",
+      "seconds": 2.3
     },
     {
       "id": "E8_aj_hadoop-hdfs_wait_W90_s102",
@@ -36446,10 +36874,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:19:09+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:19:12+00:00",
+      "seconds": 2.3
     },
     {
       "id": "E8_aj_hadoop-hdfs_orb_W90_s102",
@@ -36463,10 +36895,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:19:01+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:19:04+00:00",
+      "seconds": 2.6
     },
     {
       "id": "E8_aj_hadoop-hdfs_wait_W30_s102",
@@ -36480,10 +36916,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:19:04+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:19:07+00:00",
+      "seconds": 2.5
     },
     {
       "id": "E8_aj_hadoop-hdfs_decomp_L1_W30_s102",
@@ -36498,10 +36938,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:18+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:18:20+00:00",
+      "seconds": 2.4
     },
     {
       "id": "E8_aj_hadoop-hdfs_dual_W30_k50_s102",
@@ -36518,10 +36962,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:23+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:18:31+00:00",
+      "seconds": 7.9
     },
     {
       "id": "E8_aj_hadoop-hdfs_lawm_soft_W30_s102",
@@ -36537,10 +36985,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:37+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:18:44+00:00",
+      "seconds": 6.9
     },
     {
       "id": "E8_aj_hadoop-hdfs_odasc_W30_t0.8_s102",
@@ -36556,10 +37008,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:52+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:18:55+00:00",
+      "seconds": 3.0
     },
     {
       "id": "E8_aj_hadoop-hdfs_nowait_s103",
@@ -36571,10 +37027,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:47+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:18:50+00:00",
+      "seconds": 2.8
     },
     {
       "id": "E8_aj_hadoop-hdfs_oracle_s103",
@@ -36586,10 +37046,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:57+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:18:59+00:00",
+      "seconds": 2.4
     },
     {
       "id": "E8_aj_hadoop-hdfs_wait_W90_s103",
@@ -36603,10 +37067,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:19:10+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:19:12+00:00",
+      "seconds": 2.5
     },
     {
       "id": "E8_aj_hadoop-hdfs_orb_W90_s103",
@@ -36620,10 +37088,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:19:02+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:19:04+00:00",
+      "seconds": 2.4
     },
     {
       "id": "E8_aj_hadoop-hdfs_wait_W30_s103",
@@ -36637,10 +37109,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:19:07+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:19:09+00:00",
+      "seconds": 2.4
     },
     {
       "id": "E8_aj_hadoop-hdfs_decomp_L1_W30_s103",
@@ -36655,10 +37131,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:19+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:18:22+00:00",
+      "seconds": 2.2
     },
     {
       "id": "E8_aj_hadoop-hdfs_dual_W30_k50_s103",
@@ -36675,10 +37155,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:29+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:18:36+00:00",
+      "seconds": 7.5
     },
     {
       "id": "E8_aj_hadoop-hdfs_lawm_soft_W30_s103",
@@ -36694,10 +37178,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:37+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:18:44+00:00",
+      "seconds": 6.7
     },
     {
       "id": "E8_aj_hadoop-hdfs_odasc_W30_t0.8_s103",
@@ -36713,10 +37201,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:53+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T21:18:57+00:00",
+      "seconds": 3.7
     },
     {
       "id": "E8_aj_hadoop-hdfs_nowait_s104",
@@ -36728,10 +37220,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:49+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:18:52+00:00",
+      "seconds": 2.5
     },
     {
       "id": "E8_aj_hadoop-hdfs_oracle_s104",
@@ -36743,10 +37239,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:59+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:19:01+00:00",
+      "seconds": 2.4
     },
     {
       "id": "E8_aj_hadoop-hdfs_wait_W90_s104",
@@ -36760,10 +37260,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:19:12+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:19:14+00:00",
+      "seconds": 2.7
     },
     {
       "id": "E8_aj_hadoop-hdfs_orb_W90_s104",
@@ -36777,10 +37281,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:19:02+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:19:04+00:00",
+      "seconds": 2.3
     },
     {
       "id": "E8_aj_hadoop-hdfs_wait_W30_s104",
@@ -36794,10 +37302,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:19:07+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:19:09+00:00",
+      "seconds": 2.3
     },
     {
       "id": "E8_aj_hadoop-hdfs_decomp_L1_W30_s104",
@@ -36812,10 +37324,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:20+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:18:23+00:00",
+      "seconds": 2.2
     },
     {
       "id": "E8_aj_hadoop-hdfs_dual_W30_k50_s104",
@@ -36832,10 +37348,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:30+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T21:18:37+00:00",
+      "seconds": 7.3
     },
     {
       "id": "E8_aj_hadoop-hdfs_lawm_soft_W30_s104",
@@ -36851,10 +37371,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:43+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:18:50+00:00",
+      "seconds": 7.2
     },
     {
       "id": "E8_aj_hadoop-hdfs_odasc_W30_t0.8_s104",
@@ -36870,10 +37394,14 @@
         "experiment": "E8",
         "split": "fresh"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 3,
-      "priority": 14
+      "priority": 14,
+      "started": "2026-11-25T21:18:53+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T21:18:57+00:00",
+      "seconds": 3.3
     },
     {
       "id": "E8_aj_kafka_nowait_s100",
