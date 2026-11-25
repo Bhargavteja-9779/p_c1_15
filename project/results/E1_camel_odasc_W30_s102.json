@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E1",
+    "project": "camel",
+    "method": "odasc",
+    "variant": "odasc_W30",
+    "seed": 102,
+    "split": "test",
+    "W": 30,
+    "odasc_delta": 0.9,
+    "gmean": 0.7164452109308782,
+    "r0": 0.6832092216668367,
+    "r1": 0.7512980269989615,
+    "rdiff": 0.0680888053321248,
+    "auc": 0.7906853231223465,
+    "mcc": 0.3696690097994965,
+    "n_eval": 25384,
+    "seconds": 120.48,
+    "job_id": "E1_camel_odasc_W30_s102",
+    "written": "2026-11-25T08:25:33+00:00",
+    "cycle": 1
+  }
+]
