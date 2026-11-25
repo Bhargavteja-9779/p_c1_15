@@ -61,3 +61,9 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-25T10:19:45+00:00** — Consolidated on lineage claude/zealous-lamport-bjc4um (latest, 73 commits: E0 done, plan_v3 frozen, E1 done). Fast-forwarded working branch claude/dreamy-fermat-7983nm to it. Branches zen-cray (cycle-2 JKSU benchmark, owner directive), keen-edison and magical-bardeen were parallel forks from the same handoff and are NOT merged; useful items will be ported explicitly
   - Reason: User asked to continue from the latest branch; parallel sessions diverged after the 2026-11-24 handoff
+
+- **2026-11-25T10:25:36+00:00** — Prior art: Recalibration-vs-Retraining JIT-SDP study (Zenodo 24527309, 2026-11-25) logged as HIGH threat to an operating-point claim
+  - Reason: Same question family (delayed labels, recalibration) and same ApacheJIT data; any threshold/recalibration finding must be framed relative to it
+
+- **2026-11-25T10:26:41+00:00** — plan_v4: E7 latency-cost decomposition (H5) on 18 non-dev projects and E8 frozen replication (H6) on 8 fresh ApacheJIT projects
+  - Reason: Dev D1 pointed to a mechanism; a fresh benchmark is the only honest confirmation after the Cabral test projects were used in E1

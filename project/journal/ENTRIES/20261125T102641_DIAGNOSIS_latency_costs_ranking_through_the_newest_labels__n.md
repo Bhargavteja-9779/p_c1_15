@@ -1,0 +1,5 @@
+# DIAGNOSIS: Latency costs ranking through the newest labels, not the long-hidden defects
+
+*Written 2026-11-25T10:26:41+00:00*
+
+Dev diagnostic D1 (fabric, neutron, sentry; seed 0; results/raw_results.jsonl experiment D1). I re-ran the simulation with partial oracles that reveal true labels only for commits younger (or older) than H days at each update. Mean ROC-AUC: nowait 0.787, oracle 0.871. Revealing the last 30 days gives 0.855 (about 81% of the gap), the last 180 days 0.868. Revealing only commits older than 180 days gives 0.791 (about 5%); older than 30 days 0.820. The labels that matter are the newest ones, which no waiting-time rule can provide. The defects found after W days, which ODaSC and the waiting-time literature focus on, carry little of the ranking cost. This also explains why wait-W90 ranks worst (AUC 0.777 on these projects): it discards exactly the recent commits. Three projects and one seed is weak evidence, so I wrote H5 in plan_v4 to test it on 18 other projects, 8 of them from a benchmark nobody in this project has touched.

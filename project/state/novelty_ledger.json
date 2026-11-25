@@ -882,6 +882,12 @@
       "n_hits": 9,
       "claim": "C1_latency_weighting",
       "source_batch": "batch2"
+    },
+    {
+      "claim": "C3 operating point",
+      "query": "Zenodo: just-in-time defect prediction verification latency",
+      "source": "zenodo API",
+      "time": "2026-11-25T10:25:36+00:00"
     }
   ],
   "papers_opened": [
@@ -1486,6 +1492,14 @@
         "verification latency label confidence data stream class imbalance"
       ],
       "source": "batch2 literature agent 2026-11-24"
+    },
+    {
+      "doi": "10.5281/zenodo.24527309",
+      "title": "Replication Package for 'Recalibration vs. Retraining for JIT Defect Prediction under Limited and Delayed Labels: A Multi-Source Empirical Study' (published 2026-11-25)",
+      "opened": "Zenodo record description only (no files, paper not found)",
+      "does": "Recalibration vs retraining under limited/delayed labels; ApacheJIT dev(3)/holdout(7) projects; ten-project first-fix-delay replay with 15/90-day waits; calibration, discrimination, cost, fixed-capacity inspection",
+      "does_not": "UNVERIFIED beyond the description; no label re-weighting method visible",
+      "threat": "HIGH for any claim that operating-point/recalibration under delayed labels is new; must cite and differentiate"
     }
   ],
   "claims": [

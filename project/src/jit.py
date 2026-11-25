@@ -78,7 +78,7 @@ def fit_lgb(X, y, w, seed, class_mult=(1.0, 1.0)):
 
 def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="lagakos",
              prior="model", orb_params=None, eval_end_gap_days=365, delay_scale=1.0, return_preds=False,
-             label_noise_log=False, odasc_delta=0.9, odasc_k=50, odasc_pool=5000, thr_policy="fixed", thr_window=2000):
+             label_noise_log=False, odasc_delta=0.9, odasc_k=50, odasc_pool=5000, thr_policy="fixed", thr_window=2000, oracle_H=180):
     """df: one project's commits sorted by time (columns FEATS, t, y, t_found).
     delay_scale>1 stretches discovery delays (robustness: slower bug discovery)."""
     t0 = time.time()
@@ -100,6 +100,12 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
         age = (T - t[tr]) / DAY
         if method == "oracle":
             Xi, yi, wi = X[tr], y[tr], np.ones(len(tr))
+        elif method in ("oracle_young", "oracle_old"):
+            # diagnostic partial oracles: true labels only for commits younger (older) than H days
+            H = oracle_H
+            young = age < H
+            reveal = young if method == "oracle_young" else ~young
+            Xi, yi, wi = X[tr], np.where(reveal, y[tr], found.astype(int)), np.ones(len(tr))
         elif method == "nowait":
             Xi, yi, wi = X[tr], found.astype(int), np.ones(len(tr))
         elif method in ("wait", "orb"):

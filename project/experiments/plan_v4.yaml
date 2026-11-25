@@ -1,0 +1,15 @@
+# plan_v4 — written 2026-11-25 (cycle 2) BEFORE any run on ApacheJIT and before D1 on non-dev projects.
+# Reason: E1 (plan_v3) tied ODaSC; dev diagnostic D1 (3 dev projects, seed 0) suggests the ranking cost of
+# verification latency comes almost entirely from the labels of the most recent commits.
+version: 4
+cycle: 2
+new_data:
+  apachejit: "Keshavarz & Nagappan, MSR 2022, Zenodo 5907847; projects activemq, cassandra, flink, groovy, hbase, ignite, hive, kafka (camel excluded: overlaps Cabral test set; hadoop has no buggy commits; others < 2000 commits). Discovery time = earliest linked fix_date. 'lt' unavailable (constant 0). Commits are ApacheJIT's curated sample, not full histories (limitation)."
+  status: "untouched by any session before this plan"
+hypotheses:
+  H5: "Latency-cost decomposition. Let gap = AUC(oracle) - AUC(nowait). Revealing true labels of commits younger than 30 days at each update (oracle_young_H30) recovers >= 50% of the gap; revealing labels of commits older than 180 days (oracle_old_H180) recovers <= 20%. Tested per project; supported if both hold for the median project on each benchmark (Cabral-test 10, ApacheJIT 8)."
+  H6: "Frozen plan_v3 replication on ApacheJIT: LAW (law_lagakos_model_gmax_lat) vs the same 6 baselines, same statistics (Wilcoxon over 8 projects, Holm, bootstrap CI, 0.02 margin). No re-tuning."
+experiments:
+  E7_decomposition: {projects: "Cabral 10 test (seed 100) + ApacheJIT 8 (seeds 100,101,102)", variants: [oracle, nowait, oracle_young_H30, oracle_young_H180, oracle_old_H30, oracle_old_H180], metric: auc (primary), gmean@gmax_lat not used}
+  E8_replication: {projects: ApacheJIT 8, seeds: [100,101,102,103,104], variants: "plan_v3 frozen proposed + 6 baselines + oracle"}
+multiplicity: "H5 and H6 reported with all variants counted (variants_tried.csv)."

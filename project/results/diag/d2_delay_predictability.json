@@ -1,0 +1,22 @@
+{
+ "fabric": {
+  "n_defects": 2125,
+  "spearman_features": 0.0611,
+  "spearman_committime_within_test": 0.1506
+ },
+ "neutron": {
+  "n_defects": 3349,
+  "spearman_features": 0.1304,
+  "spearman_committime_within_test": -0.0191
+ },
+ "nova": {
+  "n_defects": 11079,
+  "spearman_features": -0.0009,
+  "spearman_committime_within_test": 0.015
+ },
+ "sentry": {
+  "n_defects": 3685,
+  "spearman_features": 0.0465,
+  "spearman_committime_within_test": -0.0495
+ }
+}

@@ -59,3 +59,38 @@ def load_project(name, cache=True):
     if cache:
         commits.to_pickle(cp)
     return commits
+
+# ---------------------------------------------------------------- ApacheJIT (second, fresh benchmark)
+AJ_ROOT = ROOT / "data" / "apachejit_raw" / "apachejit"
+AJ_PROJECTS = {"activemq": ("apache/activemq", "AMQ"), "cassandra": ("apache/cassandra", "CASSANDRA"),
+               "flink": ("apache/flink", "FLINK"), "groovy": ("apache/groovy", "GROOVY"),
+               "hbase": ("apache/hbase", "HBASE"), "ignite": ("apache/ignite", "IGNITE"),
+               "hive": ("apache/hive", "HIVE"), "kafka": ("apache/kafka", "KAFKA")}
+
+def load_apachejit(name, cache=True):
+    """ApacheJIT (Keshavarz & Nagappan, MSR 2022; Zenodo 5907847). Discovery time of a bug-inducing commit =
+    earliest fix_date among commit_links_<KEY>.csv rows whose bug_hash is that commit (and fix_date >= commit date).
+    'lt' is not provided by ApacheJIT and is set to 0 (constant; ignored by the learner)."""
+    cp = DATA / f"aj_{name}.pkl"
+    if cache and cp.exists():
+        return pd.read_pickle(cp)
+    repo, key = AJ_PROJECTS[name]
+    tot = pd.read_csv(AJ_ROOT / "dataset" / "apachejit_total.csv")
+    d = tot[tot.project == repo].copy()
+    L = pd.read_csv(AJ_ROOT / "data" / f"commit_links_{key}.csv")
+    L = L[L.fix_date >= L.bug_date]
+    first_fix = L.groupby("bug_hash").fix_date.min()
+    d = d.rename(columns={"ent": "entrophy", "aexp": "exp", "arexp": "rexp", "asexp": "sexp", "author_date": "t", "buggy": "y"})
+    d["fix"] = d["fix"].astype(int); d["y"] = d["y"].astype(int); d["lt"] = 0.0
+    d["t_found"] = d.commit_id.map(first_fix).astype(float)
+    d.loc[d.y == 0, "t_found"] = np.inf
+    d["t_found"] = d["t_found"].fillna(np.inf)
+    d["_row"] = np.arange(len(d)); d["project"] = name
+    d = d.dropna(subset=FEATS + ["t"]).sort_values(["t", "_row"]).reset_index(drop=True)
+    d.attrs["buggy_without_fix_date"] = int(((d.y == 1) & ~np.isfinite(d.t_found)).sum())
+    if cache:
+        d.to_pickle(cp)
+    return d
+
+def load_any(name):
+    return load_apachejit(name[3:]) if name.startswith("aj_") else load_project(name)
