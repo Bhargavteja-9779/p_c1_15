@@ -21543,10 +21543,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:52:25+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T09:53:32+00:00",
+      "seconds": 66.2
     },
     {
       "id": "E2_jgroups_law_naive_model_gmax_lat_s100",
@@ -21562,7 +21566,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -21602,7 +21606,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -21620,10 +21624,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:52:37+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T09:53:43+00:00",
+      "seconds": 66.6
     },
     {
       "id": "E2_jgroups_law_naive_model_gmax_lat_s101",
@@ -21639,7 +21647,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -21658,12 +21666,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 30,
       "started": "2026-11-25T09:51:25+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T09:52:19+00:00",
+      "seconds": 54.4
     },
     {
       "id": "E2_jgroups_nowait_gmax_lat_s101",
@@ -21677,7 +21687,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -21695,10 +21705,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:53:13+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:54:18+00:00",
+      "seconds": 64.6
     },
     {
       "id": "E2_jgroups_law_naive_model_gmax_lat_s102",
@@ -21714,7 +21728,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -21733,12 +21747,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 30,
       "started": "2026-11-25T09:51:30+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T09:52:25+00:00",
+      "seconds": 55.1
     },
     {
       "id": "E2_jgroups_nowait_gmax_lat_s102",
@@ -21752,7 +21768,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -21770,7 +21786,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -21789,7 +21805,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -21808,12 +21824,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 30,
       "started": "2026-11-25T09:51:43+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T09:52:37+00:00",
+      "seconds": 53.5
     },
     {
       "id": "E2_jgroups_nowait_gmax_lat_s103",
@@ -21827,7 +21845,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -21845,7 +21863,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -21864,7 +21882,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -21883,10 +21901,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-25T09:52:19+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T09:53:13+00:00",
+      "seconds": 54.1
     },
     {
       "id": "E2_jgroups_nowait_gmax_lat_s104",
@@ -21900,7 +21922,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -21918,7 +21940,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -21937,7 +21959,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -21956,7 +21978,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -21973,7 +21995,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -21991,7 +22013,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22010,7 +22032,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22029,7 +22051,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22046,7 +22068,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22064,7 +22086,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22083,7 +22105,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22102,7 +22124,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22119,7 +22141,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22137,7 +22159,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22156,7 +22178,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22175,7 +22197,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22192,7 +22214,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22210,7 +22232,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22229,7 +22251,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22248,7 +22270,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22265,7 +22287,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22283,7 +22305,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22302,7 +22324,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22321,7 +22343,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22338,7 +22360,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22356,7 +22378,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22375,7 +22397,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22394,7 +22416,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22411,7 +22433,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22429,7 +22451,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22448,7 +22470,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22467,7 +22489,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22484,7 +22506,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22502,7 +22524,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22521,7 +22543,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22540,7 +22562,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22557,7 +22579,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22575,7 +22597,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22594,7 +22616,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22613,7 +22635,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22630,7 +22652,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22648,7 +22670,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22667,7 +22689,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22686,7 +22708,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22703,7 +22725,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22721,7 +22743,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22740,7 +22762,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22759,7 +22781,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22776,7 +22798,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22794,7 +22816,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22813,7 +22835,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22832,7 +22854,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22849,7 +22871,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22867,7 +22889,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22886,7 +22908,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22905,7 +22927,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22922,7 +22944,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22940,7 +22962,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22959,7 +22981,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22978,7 +23000,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -22995,7 +23017,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23013,7 +23035,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23032,7 +23054,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23051,7 +23073,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23068,7 +23090,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23086,7 +23108,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23105,7 +23127,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23124,7 +23146,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23141,7 +23163,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23159,7 +23181,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23178,7 +23200,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23197,7 +23219,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23214,7 +23236,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23232,7 +23254,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23251,7 +23273,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23270,7 +23292,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23287,7 +23309,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23305,7 +23327,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23324,7 +23346,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23343,7 +23365,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23360,7 +23382,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23378,7 +23400,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23397,7 +23419,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23416,7 +23438,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23433,7 +23455,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23451,7 +23473,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23470,7 +23492,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23489,7 +23511,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23506,7 +23528,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23524,7 +23546,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23543,7 +23565,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23562,7 +23584,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23579,7 +23601,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23597,7 +23619,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23616,7 +23638,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23635,7 +23657,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23652,7 +23674,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23670,7 +23692,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23689,7 +23711,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23708,7 +23730,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23725,7 +23747,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23743,7 +23765,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23762,7 +23784,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23781,7 +23803,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23798,7 +23820,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23816,7 +23838,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23835,7 +23857,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23854,7 +23876,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23871,7 +23893,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23889,7 +23911,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23908,7 +23930,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23927,7 +23949,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23944,7 +23966,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23962,7 +23984,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -23981,7 +24003,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -24000,7 +24022,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -24017,7 +24039,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -24035,7 +24057,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -24054,7 +24076,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -24073,7 +24095,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -24090,7 +24112,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 30
@@ -24110,7 +24132,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24128,7 +24150,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24147,7 +24169,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24167,7 +24189,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24187,7 +24209,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24205,7 +24227,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24224,7 +24246,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24244,7 +24266,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24264,7 +24286,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24282,7 +24304,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24301,7 +24323,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24321,7 +24343,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24341,7 +24363,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24359,7 +24381,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24378,7 +24400,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24398,7 +24420,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24418,7 +24440,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24436,7 +24458,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24455,7 +24477,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24475,7 +24497,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24495,7 +24517,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24513,7 +24535,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24532,7 +24554,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24552,7 +24574,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24572,7 +24594,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24590,7 +24612,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24609,7 +24631,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24629,7 +24651,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24649,7 +24671,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24667,7 +24689,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24686,7 +24708,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24706,7 +24728,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24726,7 +24748,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24744,7 +24766,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24763,7 +24785,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24783,7 +24805,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24803,7 +24825,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24821,7 +24843,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24840,7 +24862,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24860,7 +24882,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24880,7 +24902,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24898,7 +24920,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24917,7 +24939,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24937,7 +24959,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24957,7 +24979,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24975,7 +24997,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -24994,7 +25016,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25014,7 +25036,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25034,7 +25056,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25052,7 +25074,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25071,7 +25093,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25091,7 +25113,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25111,7 +25133,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25129,7 +25151,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25148,7 +25170,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25168,7 +25190,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25188,7 +25210,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25206,7 +25228,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25225,7 +25247,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25245,7 +25267,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25265,7 +25287,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25283,7 +25305,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25302,7 +25324,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25322,7 +25344,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25342,7 +25364,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25360,7 +25382,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25379,7 +25401,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25399,7 +25421,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25419,7 +25441,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25437,7 +25459,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25456,7 +25478,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25476,7 +25498,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25496,7 +25518,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25514,7 +25536,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25533,7 +25555,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25553,7 +25575,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25573,7 +25595,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25591,7 +25613,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25610,7 +25632,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25630,7 +25652,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25650,7 +25672,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25668,7 +25690,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25687,7 +25709,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25707,7 +25729,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25727,7 +25749,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25745,7 +25767,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25764,7 +25786,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25784,7 +25806,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25804,7 +25826,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25822,7 +25844,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25841,7 +25863,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25861,7 +25883,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25881,7 +25903,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25899,7 +25921,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25918,7 +25940,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25938,7 +25960,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25958,7 +25980,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25976,7 +25998,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -25995,7 +26017,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26015,7 +26037,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26035,7 +26057,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26053,7 +26075,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26072,7 +26094,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26092,7 +26114,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26112,7 +26134,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26130,7 +26152,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26149,7 +26171,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26169,7 +26191,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26189,7 +26211,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26207,7 +26229,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26226,7 +26248,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26246,7 +26268,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26266,7 +26288,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26284,7 +26306,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26303,7 +26325,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26323,7 +26345,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26343,7 +26365,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26361,7 +26383,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26380,7 +26402,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26400,7 +26422,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26420,7 +26442,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26438,7 +26460,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26457,7 +26479,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26477,7 +26499,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26497,7 +26519,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26515,7 +26537,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26534,7 +26556,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26554,7 +26576,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26574,7 +26596,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26592,7 +26614,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26611,7 +26633,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26631,7 +26653,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26651,7 +26673,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26669,7 +26691,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26688,7 +26710,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26708,7 +26730,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26728,7 +26750,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26746,7 +26768,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26765,7 +26787,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26785,7 +26807,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26805,7 +26827,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26823,7 +26845,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26842,7 +26864,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26862,7 +26884,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26882,7 +26904,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26900,7 +26922,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26919,7 +26941,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26939,7 +26961,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26959,7 +26981,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26977,7 +26999,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -26996,7 +27018,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27016,7 +27038,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27036,7 +27058,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27054,7 +27076,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27073,7 +27095,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27093,7 +27115,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27113,7 +27135,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27131,7 +27153,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27150,7 +27172,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27170,7 +27192,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27190,7 +27212,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27208,7 +27230,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27227,7 +27249,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27247,7 +27269,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27267,7 +27289,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27285,7 +27307,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27304,7 +27326,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27324,7 +27346,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27344,7 +27366,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27362,7 +27384,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27381,7 +27403,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27401,7 +27423,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27421,7 +27443,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27439,7 +27461,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27458,7 +27480,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27478,7 +27500,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27498,7 +27520,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27516,7 +27538,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27535,7 +27557,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27555,7 +27577,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27575,7 +27597,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27593,7 +27615,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27612,7 +27634,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27632,7 +27654,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27652,7 +27674,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27670,7 +27692,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27689,7 +27711,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27709,7 +27731,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27729,7 +27751,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27747,7 +27769,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27766,7 +27788,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27786,7 +27808,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27806,7 +27828,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27824,7 +27846,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27843,7 +27865,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27863,7 +27885,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27883,7 +27905,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27901,7 +27923,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27920,7 +27942,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40
@@ -27940,7 +27962,7 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
+      "status": "skipped_budget",
       "attempts": 0,
       "cycle": 1,
       "priority": 40

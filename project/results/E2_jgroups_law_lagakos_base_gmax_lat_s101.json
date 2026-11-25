@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E2",
+    "project": "jgroups",
+    "method": "law",
+    "variant": "law_lagakos_base_gmax_lat",
+    "seed": 101,
+    "split": "test",
+    "delay_est": "lagakos",
+    "prior": "base",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6174912272769443,
+    "r0": 0.5985633374775522,
+    "r1": 0.6370176586003924,
+    "rdiff": 0.038454321122840196,
+    "auc": 0.6637672155159118,
+    "mcc": 0.1799707072401751,
+    "n_eval": 17536,
+    "seconds": 54.38,
+    "job_id": "E2_jgroups_law_lagakos_base_gmax_lat_s101",
+    "written": "2026-11-25T09:52:19+00:00",
+    "cycle": 1
+  }
+]
