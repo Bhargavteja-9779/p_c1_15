@@ -13387,10 +13387,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:28:50+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T08:30:16+00:00",
+      "seconds": 86.3
     },
     {
       "id": "E1_camel_odasc_W30_s100",
@@ -13427,10 +13431,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:30:41+00:00",
+      "worker": 0
     },
     {
       "id": "E1_camel_odasc_W15_gmax_lat_s100",
@@ -13466,12 +13472,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T08:25:33+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-25T08:27:10+00:00",
+      "seconds": 96.2
     },
     {
       "id": "E1_camel_law_lagakos_model_gmax_lat_s101",
@@ -13545,10 +13553,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:29:00+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T08:30:26+00:00",
+      "seconds": 85.2
     },
     {
       "id": "E1_camel_odasc_W30_s101",
@@ -13624,12 +13636,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T08:25:50+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-25T08:27:22+00:00",
+      "seconds": 92.1
     },
     {
       "id": "E1_camel_law_lagakos_model_gmax_lat_s102",
@@ -13703,10 +13717,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:29:16+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T08:30:41+00:00",
+      "seconds": 85.2
     },
     {
       "id": "E1_camel_odasc_W30_s102",
@@ -13782,10 +13800,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:27:10+00:00",
+      "worker": 2,
+      "finished": "2026-11-25T08:28:50+00:00",
+      "seconds": 100.0
     },
     {
       "id": "E1_camel_law_lagakos_model_gmax_lat_s103",
@@ -13859,10 +13881,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:30:16+00:00",
+      "worker": 2
     },
     {
       "id": "E1_camel_odasc_W30_s103",
@@ -13938,10 +13962,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:27:22+00:00",
+      "worker": 1,
+      "finished": "2026-11-25T08:29:00+00:00",
+      "seconds": 98.6
     },
     {
       "id": "E1_camel_law_lagakos_model_gmax_lat_s104",
@@ -14015,10 +14043,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:30:26+00:00",
+      "worker": 1
     },
     {
       "id": "E1_camel_odasc_W30_s104",
@@ -14033,12 +14063,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 1,
       "priority": 20,
       "started": "2026-11-25T08:25:33+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-25T08:27:43+00:00",
+      "seconds": 130.1
     },
     {
       "id": "E1_camel_wait_W30_gmax_lat_s104",
@@ -14092,10 +14124,14 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T08:27:43+00:00",
+      "worker": 0,
+      "finished": "2026-11-25T08:29:16+00:00",
+      "seconds": 92.6
     },
     {
       "id": "E1_jgroups_law_lagakos_model_gmax_lat_s100",
