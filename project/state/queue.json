@@ -11609,10 +11609,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T07:56:01+00:00",
+      "worker": 0
     },
     {
       "id": "E1_brackets_nowait_s100",
@@ -11749,10 +11751,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T07:56:01+00:00",
+      "worker": 1
     },
     {
       "id": "E1_brackets_nowait_s101",
@@ -11889,10 +11893,12 @@
         "experiment": "E1",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 1,
-      "priority": 20
+      "priority": 20,
+      "started": "2026-11-25T07:56:01+00:00",
+      "worker": 2
     },
     {
       "id": "E1_brackets_nowait_s102",

@@ -9,7 +9,7 @@ import matplotlib; matplotlib.use("Agg"); import matplotlib.pyplot as plt
 
 R = ROOT / "results"; T = ROOT / "tables"; F = ROOT / "figures"
 df = pd.read_json(R / "raw_results.jsonl", lines=True)
-df = df.drop_duplicates(subset=["job_id"], keep="last")
+df = df.drop_duplicates(subset=["job_id"], keep="last") if "job_id" in df else df
 df.to_csv(R / "raw_results.csv", index=False)
 fz = read_json(STATE / "frozen_config.json", {})
 NONTRIVIAL = 0.02
@@ -63,14 +63,18 @@ def compare(exp, prop, others, label):
     statsout[label] = rows
     return rows
 
-if "E1" in set(df.experiment) and fz:
-    base = ["nowait", f"wait_W{fz['wait_W']}", f"orb_W{fz['orb_W']}"]
-    compare("E1", "law_lagakos_model", base, "E1_main_law_vs_baselines")
-    e12 = pd.concat([df[df.experiment == "E1"], df[df.experiment == "E2"]]); e12 = e12.assign(experiment="E12")
+if "E1" in set(df.experiment) and fz.get("plan") == "plan_v3":
+    P = fz["proposed"]["variant"]; B = [b["variant"] for b in fz["baselines"]]
+    # primary family (Holm over all 6 non-oracle baselines); primary comparator = fz["primary_comparator"]
+    compare("E1", P, B, "E1_main_proposed_vs_baselines")
+    statsout["E1_primary_comparator"] = fz["primary_comparator"]
+    e12 = pd.concat([df[df.experiment == "E1"], df[df.experiment == "E2"]]).assign(experiment="E12")
     df = pd.concat([df, e12])
-    compare("E12", "law_lagakos_model", ["law_naive_model", "law_lagakos_base", "law_naive_base"], "E2_ablation_full_vs_variants")
-if "E3" in set(df.experiment) and fz:
-    compare("E3", "law_lagakos_model_ds2", ["nowait_ds2", f"wait_W{fz['wait_W']}_ds2", f"orb_W{fz['orb_W']}_ds2"], "E3_robust_delay_x2")
+    compare("E12", P, ["law_lagakos_model", "law_naive_model_gmax_lat", "law_lagakos_base_gmax_lat", "nowait_gmax_lat"],
+            "E2_ablation_full_vs_component_removed")
+if "E3" in set(df.experiment) and fz.get("plan") == "plan_v3":
+    P = fz["proposed"]["variant"]
+    compare("E3", P + "_ds2", ["odasc_W30_ds2", "wait_W90_ds2", "odasc_W15_gmax_lat_ds2"], "E3_robust_delay_x2")
 vt = pd.read_csv(STATE / "variants_tried.csv") if (STATE / "variants_tried.csv").exists() else pd.DataFrame()
 statsout["n_variants_logged"] = int(len(vt))
 json.dump(metrics, open(R / "metrics.json", "w"), indent=1)
