@@ -1,0 +1,5 @@
+# OBSERVATION: MSTDP's dataset counts include the discovery-time copy rows
+
+*Written 2026-11-26T12:37:08+00:00*
+
+Reviewer 3 asked why our Table 1 differs from the raw ARFF files and from MSTDP's Table 1 (JKSU-CIS 2026). The Cabral ARFF files contain one row per commit plus a 'copy' row (commit_type 3) for every defect-inducing commit, placed at the time its defect was discovered. We use the copy only to recover the discovery time. For all 9 projects shared with MSTDP, MSTDP's commit counts equal the raw ARFF row counts, and its defective counts equal our defective commits plus the copy rows (exactly for 8 projects; spring-integration differs by 8). Brackets: 4,045 defective commits + 4,037 copies = 8,082 = MSTDP's count (results/review1/cabral_copy_rows_vs_mstdp.json). If MSTDP trained and tested on these rows as separate examples, each discovered defect appears twice with identical features, the second time at a later date, which matters for a chronological split. I cannot see their code path, so in the paper this is stated as a count observation and a reason the numbers are not comparable, not as a finding about their results.

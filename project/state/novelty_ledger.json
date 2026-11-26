@@ -1787,6 +1787,104 @@
       "does": "ApacheJIT: 106k Apache commits labelled with SZZ + bug-fix links (dataset used for fresh confirmation)",
       "does_not": "no verification latency modelling",
       "threat": "LOW"
+    },
+    {
+      "doi": "10.1109/TSE.2022.3158831",
+      "title": "A Procedure to Continuously Evaluate Predictive Performance of Just-In-Time Software Defect Prediction Models During Software Development",
+      "opened": "abstract (OpenAlex) 2026-11-26T12:37:21+00:00",
+      "source": "review round 1 (R2 suggestion)",
+      "abstract_excerpt": "Just-In-Time Software Defect Prediction (JIT-SDP) uses machine learning to predict whether software changes are defect-inducing or clean. When adopting JIT-SDP, changes in the underlying defect generating process may significantly affect the predictive performance of JIT-SDP models over time. Theref"
+    },
+    {
+      "doi": "10.1109/ICSE.2015.139",
+      "title": "Online Defect Prediction for Imbalanced Data",
+      "opened": "abstract (OpenAlex) 2026-11-26T12:37:23+00:00",
+      "source": "review round 1 (R2 suggestion)",
+      "abstract_excerpt": "Many defect prediction techniques are proposed to improve software reliability. Change classification predicts defects at the change level, where a change is the modifications to one file in a commit. In this paper, we conduct the first study of applying change classification in practice. We identif"
+    },
+    {
+      "doi": "10.1016/j.scico.2025.103296",
+      "title": "Human-in-the-loop online just-in-time software defect prediction: What have we achieved and what do we still miss?",
+      "opened": "metadata only 2026-11-26T12:37:24+00:00",
+      "source": "review round 1 (R2 suggestion)",
+      "abstract_excerpt": ""
+    },
+    {
+      "doi": "10.1145/1985793.1985859",
+      "title": "Dealing with noise in defect prediction",
+      "opened": "abstract (OpenAlex) 2026-11-26T12:37:26+00:00",
+      "source": "review round 1 (R2 suggestion)",
+      "abstract_excerpt": "Many software defect prediction models have been built using historical defect data obtained by mining software repositories (MSR). Recent studies have discovered that data so collected contain noises because current defect collection practices are based on optional bug fix keywords or bug report li"
+    },
+    {
+      "doi": "10.1109/ICSE.2015.93",
+      "title": "The Impact of Mislabelling on the Performance and Interpretation of Defect Prediction Models",
+      "opened": "abstract (OpenAlex) 2026-11-26T12:37:28+00:00",
+      "source": "review round 1 (R2 suggestion)",
+      "abstract_excerpt": "The reliability of a prediction model depends on the quality of the data from which it was trained. Therefore, defect prediction models may be unreliable if they are trained using noisy data. Recent research suggests that randomly-injected noise that changes the classification (label) of software mo"
+    },
+    {
+      "doi": "10.1109/TSE.2022.3156787",
+      "title": "Inconsistent Defect Labels: Essence, Causes, and Influence",
+      "opened": "abstract (OpenAlex) 2026-11-26T12:37:30+00:00",
+      "source": "review round 1 (R2 suggestion)",
+      "abstract_excerpt": "The label quality of defect data sets has a direct influence on the reliability of defect prediction models. In this paper, we conduct a systematic study of inconsistent defect labels in multi-version-project defect data sets, i.e., many instances having the same source code but different labels ove"
+    },
+    {
+      "doi": "10.1007/s10664-021-10092-4",
+      "title": "Problems with SZZ and features: An empirical study of the state of practice of defect prediction data collection",
+      "opened": "abstract (OpenAlex) 2026-11-26T12:37:32+00:00",
+      "source": "review round 1 (R2 suggestion)",
+      "abstract_excerpt": "Context The SZZ algorithm is the de facto standard for labeling bug fixing commits and finding inducing changes for defect prediction data. Recent research uncovered potential problems in different parts of the SZZ algorithm. Most defect prediction data sets provide only static code metrics as featu"
+    },
+    {
+      "doi": "10.1145/3433928",
+      "title": "Leveraging the Defects Life Cycle to Label Affected Versions and Defective Classes",
+      "opened": "abstract (OpenAlex) 2026-11-26T12:37:34+00:00",
+      "source": "review round 1 (R2 suggestion)",
+      "abstract_excerpt": "Two recent studies explicitly recommend labeling defective classes in releases using the affected versions (AV) available in issue trackers (e.g., Jira). This practice is coined as the realistic approach. However, no study has investigated whether it is feasible to rely on AVs. For example, how avai"
+    },
+    {
+      "doi": "10.1109/TSE.2017.2693980",
+      "title": "Are Fix-Inducing Changes a Moving Target? A Longitudinal Case Study of Just-In-Time Defect Prediction",
+      "opened": "abstract (OpenAlex) 2026-11-26T12:37:36+00:00",
+      "source": "review round 1 (R2 suggestion)",
+      "abstract_excerpt": "Just-In-Time (JIT) models identify fix-inducing code changes. JIT models are trained using techniques that assume that past fix-inducing changes are similar to future ones. However, this assumption may not hold, e.g., as system complexity tends to accrue, expertise may become more important as syste"
+    },
+    {
+      "doi": "10.1007/s10664-020-09868-x",
+      "title": "On the need of preserving order of data when validating within-project defect classifiers",
+      "opened": "abstract (OpenAlex) 2026-11-26T12:37:37+00:00",
+      "source": "review round 1 (R2 suggestion)",
+      "abstract_excerpt": "We are in the shoes of a practitioner who uses previous project releases\u2019 data to predict which classes of the current release are defect-prone. In this scenario, the practitioner would like to use the most accurate classifier among the many available ones. A validation technique, hereinafter \u201ctechn"
+    },
+    {
+      "doi": "10.1109/ICDMW.2010.49",
+      "title": "Change with Delayed Labeling: When is it Detectable?",
+      "opened": "abstract (OpenAlex) 2026-11-26T12:37:39+00:00",
+      "source": "review round 1 (R2 suggestion)",
+      "abstract_excerpt": "Handling changes over time in supervised learning (concept drift) lately has received a great deal of attention, a number of adaptive learning strategies have been developed. Most of them make an optimistic assumption that the new labels become available immediately. In real sequential classificatio"
+    },
+    {
+      "doi": "10.1109/ICMLA.2015.174",
+      "title": "Classification of Evolving Data Streams with Infinitely Delayed Labels",
+      "opened": "abstract (OpenAlex) 2026-11-26T12:37:41+00:00",
+      "source": "review round 1 (R2 suggestion)",
+      "abstract_excerpt": "The majority of evolving data streams classification algorithms assume that the actual labels of the predicted examples are readily available without any time delay just after a prediction is made. However, given the high label costs, dependence of an expert, limitations in data transmission or even"
+    },
+    {
+      "doi": "10.1109/BigData.2016.7840877",
+      "title": "Handling delayed labels in temporally evolving data streams",
+      "opened": "abstract (OpenAlex) 2026-11-26T12:37:43+00:00",
+      "source": "review round 1 (R2 suggestion)",
+      "abstract_excerpt": "Streaming classification is well studied in the machine learning community. In real-world applications labels for previously observed feature vectors may only arrive after appreciable lag - that is, the labels are delayed. These delayed labels are an important aspect of streaming analysis, one that "
+    },
+    {
+      "doi": "10.1145/3523055",
+      "title": "A Survey on Semi-supervised Learning for Delayed Partially Labelled Data Streams",
+      "opened": "abstract (OpenAlex) 2026-11-26T12:37:45+00:00",
+      "source": "review round 1 (R2 suggestion)",
+      "abstract_excerpt": "Unlabelled data appear in many domains and are particularly relevant to streaming applications, where even though data is abundant, labelled data is rare. To address the learning problems associated with such data, one can ignore the unlabelled data and focus only on the labelled data (supervised le"
     }
   ],
   "claims": [

@@ -32,15 +32,15 @@
     "evidence": "tests/test_no_future.py (future discoveries do not change past predictions for nowait/wait/orb/law/awt); dev/test project split fixed before modelling; decomp is a diagnostic using true labels, never a competitor"
   },
   "G9": {
-    "status": "unknown",
-    "evidence": ""
+    "status": "pass (sampled)",
+    "evidence": "2026-11-26: re-ran 12 stored cells from current code (8 Table-7 configs npm s100 via scripts/reproduce_table7.py; E8 kafka decomp/odasc/dual s100; E3b npm wait_W30 s100): all identical to 4 decimals; README 'Reproducing the paper' maps every table to commands"
   },
   "G10": {
     "status": "unknown",
     "evidence": ""
   },
   "G11": {
-    "status": "unknown",
-    "evidence": ""
+    "status": "pass",
+    "evidence": "scripts/audit_paper_strict.py: 0 unmatched against declared sources only"
   }
 }
