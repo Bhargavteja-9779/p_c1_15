@@ -1,0 +1,12 @@
+# plan_v9 — review round 2, written 2026-11-26 BEFORE the runs below. Descriptive analyses only (no new method, no selection).
+version: 9
+reason: "R2 round-2 concern 5: age-band localisation reported only at W=30; band shares may track where the false-clean commits are"
+B1_strata_W90:
+  what: "decomp level=strata at W=90: true labels only for provisionally clean training commits with age in [90,180), [180,365), [365,730), >=730 days"
+  projects: "10 Cabral test + 9 ApacheJIT"
+  seeds: [100, 101, 102, 103, 104]
+  report: "gain over wait_W90 per band, share of the L1_W90 gain, projects improved, Wilcoxon p (unadjusted, descriptive)"
+B2_flip_counts:
+  what: "model-free: at every retraining time of the prequential schedule, the number of provisionally clean training commits that are truly defective (flips), per age band, for W=30 and W=90; mean over update times"
+  report: "flips per band (share of all flips) and gain per 1% of flips (band gain share / band flip share)"
+statistics: "descriptive; no Holm family; no claim depends on a p-value from these analyses"
