@@ -96,12 +96,14 @@ axs[0].set_ylabel("absolute difference"); axs[1].legend(fontsize=6, loc="upper r
 fig.tight_layout(); fig.savefig(P / "figures" / "F2_gap_recovered.png", dpi=200); plt.close(fig)
 for k in SH: N["review1_" + k] = {kk: vv for kk, vv in SH[k].items()}
 rows3b = []
-for fam, lab in [("cabral_test", "Cabral test (10)"), ("apachejit", "ApacheJIT (9)")]:
-    for metric in ["gmean", "auc"]:
-        e = SH[f"{fam}_{metric}"]; f = lambda k: f"{e[k]['est']:.3f} [{e[k]['ci95'][0]:.3f}, {e[k]['ci95'][1]:.3f}]"
-        rows3b.append({"family": lab, "metric": "AUC" if metric == "auc" else "G-mean", "gap (oracle - Wait-30)": f("gap"),
-                       "noise effect (Shapley)": f("noise"), "freshness effect (Shapley)": f("fresh"), "interaction": f("interaction"),
-                       "noise-first path share": f("share_path_noise_first")})
+for W, sfx in [(30, ""), (90, "W90_")]:
+  for fam, lab in [("cabral_test", "Cabral test (10)"), ("apachejit", "ApacheJIT (9)")]:
+    for metric in ["auc", "gmean"]:
+        if f"{fam}_{sfx}{metric}" not in SH: continue
+        e = SH[f"{fam}_{sfx}{metric}"]; f = lambda k: f"{e[k]['est']:.3f} [{e[k]['ci95'][0]:.3f}, {e[k]['ci95'][1]:.3f}]"
+        rows3b.append({"W": W, "family": lab, "metric": "AUC" if metric == "auc" else "G-mean", "gap (oracle - Wait-W)": f("gap"),
+                       "label effect (Shapley)": f("noise"), "freshness effect (Shapley)": f("fresh"), "interaction": f("interaction"),
+                       "label share (Shapley)": f("shapley_noise_share"), "noise-first path share": f("share_path_noise_first")})
 pd.DataFrame(rows3b).to_markdown(P / "tables" / "T3b_shapley.md", index=False)
 w90 = [{"metric": "G-mean" if m == "gmean" else "AUC", **{k: (f"{v['est']:.3f} [{v['ci95'][0]:.3f}, {v['ci95'][1]:.3f}]" if k == "share" else v) for k, v in
         {"share": SH[f"cabral_test_W90_share_{m}"], "Wait-90": SH[f"cabral_test_W90_share_{m}"]["wait_W90"], "Wait-90 true labels": SH[f"cabral_test_W90_share_{m}"]["L1_W90"],
