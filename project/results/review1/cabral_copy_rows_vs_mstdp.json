@@ -1,0 +1,110 @@
+{
+ "brackets": {
+  "arff_rows": 21348,
+  "arff_buggy_rows": 8082,
+  "copy_rows": 4037,
+  "our_commits": 17310,
+  "our_buggy": 4045,
+  "our_buggy_plus_copies": 8082,
+  "mstdp_rows": 21347,
+  "mstdp_buggy": 8082,
+  "dropped": 1,
+  "unmatched_copies": 9
+ },
+ "camel": {
+  "arff_rows": 36753,
+  "arff_buggy_rows": 12488,
+  "copy_rows": 6236,
+  "our_commits": 30517,
+  "our_buggy": 6252,
+  "our_buggy_plus_copies": 12488,
+  "mstdp_rows": 36753,
+  "mstdp_buggy": 12488,
+  "dropped": 0,
+  "unmatched_copies": 2
+ },
+ "fabric": {
+  "arff_rows": 15592,
+  "arff_buggy_rows": 5177,
+  "copy_rows": 2588,
+  "our_commits": 13003,
+  "our_buggy": 2589,
+  "our_buggy_plus_copies": 5177,
+  "mstdp_rows": 15591,
+  "mstdp_buggy": 5177,
+  "dropped": 1,
+  "unmatched_copies": 4
+ },
+ "jgroups": {
+  "arff_rows": 21469,
+  "arff_buggy_rows": 6305,
+  "copy_rows": 3152,
+  "our_commits": 18316,
+  "our_buggy": 3153,
+  "our_buggy_plus_copies": 6305,
+  "mstdp_rows": 21468,
+  "mstdp_buggy": 6305,
+  "dropped": 1,
+  "unmatched_copies": 2
+ },
+ "neutron": {
+  "arff_rows": 24058,
+  "arff_buggy_rows": 9214,
+  "copy_rows": 4607,
+  "our_commits": 19450,
+  "our_buggy": 4607,
+  "our_buggy_plus_copies": 9214,
+  "mstdp_rows": 24057,
+  "mstdp_buggy": 9214,
+  "dropped": 1,
+  "unmatched_copies": 444
+ },
+ "nova": {
+  "arff_rows": 61365,
+  "arff_buggy_rows": 24857,
+  "copy_rows": 12427,
+  "our_commits": 48937,
+  "our_buggy": 12430,
+  "our_buggy_plus_copies": 24857,
+  "mstdp_rows": 61364,
+  "mstdp_buggy": 24857,
+  "dropped": 1,
+  "unmatched_copies": 366
+ },
+ "npm": {
+  "arff_rows": 9259,
+  "arff_buggy_rows": 2773,
+  "copy_rows": 1366,
+  "our_commits": 7892,
+  "our_buggy": 1407,
+  "our_buggy_plus_copies": 2773,
+  "mstdp_rows": 9258,
+  "mstdp_buggy": 2773,
+  "dropped": 1,
+  "unmatched_copies": 7
+ },
+ "spring-integration": {
+  "arff_rows": 11000,
+  "arff_buggy_rows": 4640,
+  "copy_rows": 2308,
+  "our_commits": 8691,
+  "our_buggy": 2332,
+  "our_buggy_plus_copies": 4640,
+  "mstdp_rows": 10999,
+  "mstdp_buggy": 4648,
+  "dropped": 1,
+  "unmatched_copies": 4
+ },
+ "tomcat": {
+  "arff_rows": 24043,
+  "arff_buggy_rows": 10372,
+  "copy_rows": 5166,
+  "our_commits": 18877,
+  "our_buggy": 5206,
+  "our_buggy_plus_copies": 10372,
+  "mstdp_rows": 24043,
+  "mstdp_buggy": 10372,
+  "dropped": 0,
+  "unmatched_copies": 0
+ }
+}
