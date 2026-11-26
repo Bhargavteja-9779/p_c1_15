@@ -82,14 +82,31 @@ N["rq2_gap_share_cabral_per_project_range"] = [min(S["E3b_H3_decomposition"]["ga
 N["rq2_gap_share_aj_W30"] = S["E8_secondary_H3_decomposition"]["gap_recovered_share_of_means"]
 N["rq2_gap_share_aj_per_project_range"] = [min(S["E8_secondary_H3_decomposition"]["gap_recovered_share_per_project"].values()), max(S["E8_secondary_H3_decomposition"]["gap_recovered_share_per_project"].values())]
 N["rq2_tests_cabral"] = S["E3b_H3_denoised_W30_vs_wait"]; N["rq2_tests_aj"] = S["E8_secondary_H3_replication"]
-share = pd.DataFrame({"Cabral test": pd.Series(S["E3b_H3_decomposition"]["gap_recovered_share_per_project"]),
-                      "ApacheJIT": pd.Series({k.replace("aj_", ""): v for k, v in S["E8_secondary_H3_decomposition"]["gap_recovered_share_per_project"].items()})})
-fig, ax = plt.subplots(figsize=(7, 3.4)); vals = share.stack().reset_index(); vals.columns = ["project", "family", "share"]
-cols = vals.family.map({"Cabral test": "#1f5fa8", "ApacheJIT": "#c0392b"})
-ax.bar(range(len(vals)), vals.share, color=cols); ax.axhline(1, c="k", lw=.8, ls="--")
-ax.set_xticks(range(len(vals))); ax.set_xticklabels(vals.project, rotation=60, ha="right", fontsize=7)
-ax.set_ylabel("share of (oracle - wait W=30) gap\nrecovered by true labels"); ax.set_title("Label noise accounts for the latency penalty (blue: Cabral test, red: ApacheJIT)", fontsize=9)
+SH = json.load(open(R / "review1" / "shapley.json"))
+fig, axs = plt.subplots(1, 2, figsize=(8, 3.4), sharey=True)
+for ax, (fam, P_, lab, col) in zip(axs, [("cabral_test", TEST, "Cabral test (10)", "#1f5fa8"), ("apachejit", AJ, "ApacheJIT (9)", "#c0392b")]):
+    for k, (metric, mk) in enumerate([("gmean", "o"), ("auc", "s")]):
+        g = SH[f"{fam}_{metric}"]["per_project_abs_gain_L1_minus_wait"]; gap = SH[f"{fam}_{metric}"]["per_project_gap_oracle_minus_wait"]
+        names = list(g); x = np.arange(len(names)) + (k - 0.5) * 0.35
+        ax.bar(x, [gap[n] for n in names], width=0.35, color="none", edgecolor=col, lw=1, label=f"oracle - Wait-30 ({metric.upper() if metric=='auc' else 'G-mean'})" if True else None)
+        ax.bar(x, [g[n] for n in names], width=0.35, color=col, alpha=0.9 if metric == "gmean" else 0.45, label=f"true labels - Wait-30 ({'AUC' if metric=='auc' else 'G-mean'})")
+    ax.set_xticks(np.arange(len(names))); ax.set_xticklabels(names, rotation=60, ha="right", fontsize=7); ax.axhline(0, c="k", lw=.6)
+    ax.set_xlabel(lab, fontsize=8)
+axs[0].set_ylabel("absolute difference"); axs[1].legend(fontsize=6, loc="upper right")
 fig.tight_layout(); fig.savefig(P / "figures" / "F2_gap_recovered.png", dpi=200); plt.close(fig)
+for k in SH: N["review1_" + k] = {kk: vv for kk, vv in SH[k].items()}
+rows3b = []
+for fam, lab in [("cabral_test", "Cabral test (10)"), ("apachejit", "ApacheJIT (9)")]:
+    for metric in ["gmean", "auc"]:
+        e = SH[f"{fam}_{metric}"]; f = lambda k: f"{e[k]['est']:.3f} [{e[k]['ci95'][0]:.3f}, {e[k]['ci95'][1]:.3f}]"
+        rows3b.append({"family": lab, "metric": "AUC" if metric == "auc" else "G-mean", "gap (oracle - Wait-30)": f("gap"),
+                       "noise effect (Shapley)": f("noise"), "freshness effect (Shapley)": f("fresh"), "interaction": f("interaction"),
+                       "noise-first path share": f("share_path_noise_first")})
+pd.DataFrame(rows3b).to_markdown(P / "tables" / "T3b_shapley.md", index=False)
+w90 = [{"metric": "G-mean" if m == "gmean" else "AUC", **{k: (f"{v['est']:.3f} [{v['ci95'][0]:.3f}, {v['ci95'][1]:.3f}]" if k == "share" else v) for k, v in
+        {"share": SH[f"cabral_test_W90_share_{m}"], "Wait-90": SH[f"cabral_test_W90_share_{m}"]["wait_W90"], "Wait-90 true labels": SH[f"cabral_test_W90_share_{m}"]["L1_W90"],
+         "oracle": SH[f"cabral_test_W90_share_{m}"]["oracle"]}.items()}} for m in ["gmean", "auc"]]
+pd.DataFrame(w90).to_markdown(P / "tables" / "T3c_W90_share_cabral.md", index=False)
 
 # ---------------------------------------------------------------- T4 RQ3 age-only label policies on Cabral test (main-lineage E1)
 v4 = ["oracle", "orb_W90", "wait_W90", "awt_e0.4", "law_lagakos_model", "nowait"]
@@ -129,6 +146,89 @@ N["rq5_cabral_means"] = {v: f3(T7.loc[v, "gmean"]) for v in va}
 N["rq5_tests"] = Sa["E1_main_proposed_vs_baselines"]
 de = da[da.experiment == "E0"].groupby("variant").gmean.mean()
 for v in ["wait_W30", "wait_W30_gmax_lat", "nowait", "nowait_gmax_lat"]: N[f"rq5_dev_{v}"] = f3(de[v])
+
+# ---------------------------------------------------------------- supplementary: delay estimator, data preparation
+import re as _re
+txt = open(R / "diag_survival_dev.txt").read(); rows = []
+for blk in _re.finditer(r"(\w+) T@([\d.]+).*?S_true\s+\[([^\]]+)\]\s+S_lagak\s+\[([^\]]+)\]\s+S_naive\s+\[([^\]]+)\]", txt, _re.S):
+    pr, at, st, sl, sn = blk.groups(); st, sl, sn = [list(map(float, x.split(","))) for x in (st, sl, sn)]
+    for a, t_, l_, n_ in zip([7, 30, 90, 180, 365], st, sl, sn):
+        rows.append(dict(project=pr, at_share_of_history=float(at), age_days=a, S_true=t_, S_truncation_corrected=l_, S_naive=n_))
+SD = pd.DataFrame(rows); SD.to_markdown(P / "tables" / "S1_delay_estimator.md", index=False, floatfmt=".3f")
+N["s1_max_abs_err_lagakos"] = f3((SD.S_truncation_corrected - SD.S_true).abs().max()); N["s1_max_abs_err_naive"] = f3((SD.S_naive - SD.S_true).abs().max())
+N["s1_mean_abs_err_lagakos"] = f3((SD.S_truncation_corrected - SD.S_true).abs().mean()); N["s1_mean_abs_err_naive"] = f3((SD.S_naive - SD.S_true).abs().mean())
+CP = pd.DataFrame(json.load(open(R / "review1" / "cabral_copy_rows_vs_mstdp.json"))).T
+CP.to_markdown(P / "tables" / "S2_cabral_rows_vs_mstdp.md"); N["s2"] = CP.to_dict(orient="index")
+N["aj_fix_before_bug_total"] = int(sum(v["fix_before_bug"] for v in json.load(open(R / "review1" / "apachejit_prep.json")).values()))
+ds = json.load(open(R / "data_summary.json")); N["cabral_unmatched_copies_total"] = int(sum(v["unmatched_copies"] for v in ds.values()))
+N["cabral_unmatched_copies_range"] = [int(min(v["unmatched_copies"] for v in ds.values())), int(max(v["unmatched_copies"] for v in ds.values()))]
+# ---------------------------------------------------------------- review round 1 runs (plan_v8 A2-A5), when present
+from scipy import stats as _st
+RV = R / "review1" / "raw.jsonl"
+if RV.exists():
+    rv = pd.read_json(RV, lines=True)
+    def _pp(an, variants, projects, metric="gmean"):
+        e = rv[(rv.analysis == an) & rv.variant.isin(variants) & rv.project.isin(projects)]
+        return e.groupby(["variant", "project"])[metric].mean().unstack()
+    def _cmp(a, b, label):
+        d = (a - b).dropna(); rng = np.random.default_rng(0)
+        bs = [d.values[rng.integers(0, len(d), len(d))].mean() for _ in range(10000)]
+        w = _st.wilcoxon(d.values) if len(d) >= 5 and (d != 0).any() else None
+        return dict(comparison=label, n=int(len(d)), mean_diff=f4(d.mean()), ci95=[f4(np.percentile(bs, 2.5)), f4(np.percentile(bs, 97.5))],
+                    wins=int((d > 0).sum()), losses=int((d < 0).sum()), wilcoxon_p=float(w.pvalue) if w else None)
+    # A2: ApacheJIT W=90 decomposition
+    if (rv.analysis == "A2").any():
+        base = df[(df.experiment == "E8") & df.project.isin(AJ)]
+        out = {}
+        for metric in ["gmean", "auc"]:
+            b = base.groupby(["variant", "project"])[metric].mean().unstack()
+            a2 = _pp("A2", ["decomp_L1_W90", "decomp_L2_W90"], AJ, metric)
+            w, l1, o = b.loc["wait_W90", AJ], a2.loc["decomp_L1_W90", AJ], b.loc["oracle", AJ]
+            rng = np.random.default_rng(0); bs = []
+            for _ in range(10000):
+                i = rng.integers(0, len(AJ), len(AJ)); bs.append((l1.values[i] - w.values[i]).mean() / (o.values[i] - w.values[i]).mean())
+            out[metric] = dict(wait_W90=f3(w.mean()), L1_W90=f3(l1.mean()), L2_W90=f3(a2.loc["decomp_L2_W90", AJ].mean()), oracle=f3(o.mean()),
+                               share=f3((l1 - w).mean() / (o - w).mean()), share_ci95=[f3(np.percentile(bs, 2.5)), f3(np.percentile(bs, 97.5))])
+        N["a2_apachejit_W90"] = out
+        pd.DataFrame(out).T.to_markdown(P / "tables" / "T8_A2_apachejit_W90.md")
+    # A3: age strata (W=30): gain over wait_W30 by band, as share of the L1_W30 gain
+    if (rv.analysis == "A3").any():
+        res = []
+        for fam, P_, exps in [("Cabral test", TEST, ["E3b"]), ("ApacheJIT", AJ, ["E8"])]:
+            for metric in ["gmean", "auc"]:
+                b = df[df.experiment.isin(exps) & df.project.isin(P_)].groupby(["variant", "project"])[metric].mean().unstack()
+                w, l1 = b.loc["wait_W30", P_], b.loc["decomp_L1_W30", P_]
+                a3 = _pp("A3", [x for x in rv.variant.unique() if str(x).startswith("strata_")], P_, metric)
+                for band in ["strata_30_180", "strata_180_365", "strata_365_730", "strata_730_inf"]:
+                    if band in a3.index and a3.loc[band].notna().sum() == len(P_):
+                        g = a3.loc[band, P_] - w
+                        res.append(dict(family=fam, metric="AUC" if metric == "auc" else "G-mean", age_band=band.replace("strata_", "").replace("_", "-") + " d",
+                                        gain_over_wait30=f3(g.mean()), share_of_full_relabel_gain=f3(g.mean() / (l1 - w).mean()), projects_improved=int((g > 0).sum())))
+        if res:
+            A3 = pd.DataFrame(res); A3.to_markdown(P / "tables" / "T9_A3_age_strata.md", index=False); N["a3"] = res
+    # A4: evaluation-window sensitivity (exclude last 730 days)
+    if (rv.analysis == "A4").any():
+        res = {}
+        for fam, P_ in [("Cabral test", TEST), ("ApacheJIT", AJ)]:
+            a4 = _pp("A4", [x for x in rv.variant.unique() if str(x).endswith("_gap730")], P_)
+            if a4.notna().all(axis=None) and a4.shape[1] == len(P_):
+                m_ = a4.mean(axis=1); w, l1, o = m_["wait_W30_gap730"], m_["decomp_L1_W30_gap730"], m_["oracle_gap730"]
+                res[fam] = dict({k.replace("_gap730", ""): f3(v) for k, v in m_.items()}, share_W30=f3((l1 - w) / (o - w)))
+        if res: N["a4_gap730"] = res; pd.DataFrame(res).T.to_markdown(P / "tables" / "T10_A4_eval_gap730.md")
+    # A5: threshold rule on ApacheJIT (confirmatory, plan_v8 H9; Holm over 7)
+    if (rv.analysis == "A5").any() and rv[rv.analysis == "A5"].shape[0] >= 450:
+        a5 = _pp("A5", rv[rv.analysis == "A5"].variant.unique(), AJ); a5auc = _pp("A5", rv[rv.analysis == "A5"].variant.unique(), AJ, "auc")
+        T11 = pd.DataFrame({"G-mean": a5.mean(axis=1), "AUC": a5auc.mean(axis=1)}).sort_values("G-mean", ascending=False)
+        T11.to_markdown(P / "tables" / "T11_A5_threshold_apachejit.md", floatfmt=".3f")
+        tests = [_cmp(a5.loc["law_lagakos_model_gmax_lat"], a5.loc["wait_W90"], "H9a: LAW+thr vs Wait-90"),
+                 _cmp(a5.loc["law_lagakos_model_gmax_lat"], a5.loc["odasc_W30_d09_k50"], "H9a: LAW+thr vs ODaSC-style (lineage 2)")]
+        for v in ["nowait", "wait_W30", "wait_W90", "law_lagakos_model", "odasc_W30_d09_k50"]:
+            tests.append(_cmp(a5.loc[v + "_gmax_lat"], a5.loc[v], f"H9b: {v} +thr vs fixed"))
+        ps = np.array([t["wilcoxon_p"] if t["wilcoxon_p"] is not None else 1.0 for t in tests]); o_ = np.argsort(ps); adj = np.empty_like(ps); run = 0
+        for r_, i in enumerate(o_): run = max(run, (len(ps) - r_) * ps[i]); adj[i] = min(1.0, run)
+        for t, a in zip(tests, adj): t["holm_p"] = float(a); t["pass_margin"] = bool(a < 0.05 and t["ci95"][0] > 0 and t["mean_diff"] >= 0.02)
+        N["a5_tests"] = tests; N["a5_means"] = {k: dict(gmean=f3(v["G-mean"]), auc=f3(v["AUC"])) for k, v in T11.iterrows()}
+        pd.DataFrame(tests).to_markdown(P / "tables" / "T11b_A5_tests.md", index=False)
 
 # ---------------------------------------------------------------- bookkeeping numbers
 vt = pd.read_csv(ROOT / "state" / "variants_tried.csv"); vta = pd.read_csv(ARCH / "state" / "variants_tried.csv")
