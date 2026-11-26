@@ -1105,10 +1105,203 @@
   0,
   444
  ],
+ "a5_tests": [
+  {
+   "comparison": "H9a: LAW+thr vs Wait-90",
+   "n": 9,
+   "mean_diff": 0.0117,
+   "ci95": [
+    -0.007,
+    0.0301
+   ],
+   "wins": 6,
+   "losses": 3,
+   "wilcoxon_p": 0.359375,
+   "holm_p": 1.0,
+   "pass_margin": false
+  },
+  {
+   "comparison": "H9a: LAW+thr vs ODaSC-style (lineage 2)",
+   "n": 9,
+   "mean_diff": 0.0102,
+   "ci95": [
+    -0.015,
+    0.0335
+   ],
+   "wins": 6,
+   "losses": 3,
+   "wilcoxon_p": 0.42578125,
+   "holm_p": 1.0,
+   "pass_margin": false
+  },
+  {
+   "comparison": "H9b: nowait +thr vs fixed",
+   "n": 9,
+   "mean_diff": 0.0695,
+   "ci95": [
+    0.0319,
+    0.1105
+   ],
+   "wins": 9,
+   "losses": 0,
+   "wilcoxon_p": 0.00390625,
+   "holm_p": 0.02734375,
+   "pass_margin": true
+  },
+  {
+   "comparison": "H9b: wait_W30 +thr vs fixed",
+   "n": 9,
+   "mean_diff": 0.0358,
+   "ci95": [
+    0.0124,
+    0.0618
+   ],
+   "wins": 7,
+   "losses": 2,
+   "wilcoxon_p": 0.0390625,
+   "holm_p": 0.234375,
+   "pass_margin": false
+  },
+  {
+   "comparison": "H9b: wait_W90 +thr vs fixed",
+   "n": 9,
+   "mean_diff": 0.0036,
+   "ci95": [
+    -0.01,
+    0.0211
+   ],
+   "wins": 4,
+   "losses": 5,
+   "wilcoxon_p": 0.8203125,
+   "holm_p": 1.0,
+   "pass_margin": false
+  },
+  {
+   "comparison": "H9b: law_lagakos_model +thr vs fixed",
+   "n": 9,
+   "mean_diff": -0.0034,
+   "ci95": [
+    -0.0202,
+    0.0119
+   ],
+   "wins": 5,
+   "losses": 4,
+   "wilcoxon_p": 0.734375,
+   "holm_p": 1.0,
+   "pass_margin": false
+  },
+  {
+   "comparison": "H9b: odasc_W30_d09_k50 +thr vs fixed",
+   "n": 9,
+   "mean_diff": 0.0017,
+   "ci95": [
+    -0.0131,
+    0.0176
+   ],
+   "wins": 4,
+   "losses": 5,
+   "wilcoxon_p": 1.0,
+   "holm_p": 1.0,
+   "pass_margin": false
+  }
+ ],
+ "a5_means": {
+  "law_lagakos_model": {
+   "gmean": 0.732,
+   "auc": 0.795
+  },
+  "law_lagakos_model_gmax_lat": {
+   "gmean": 0.728,
+   "auc": 0.795
+  },
+  "wait_W30_gmax_lat": {
+   "gmean": 0.723,
+   "auc": 0.783
+  },
+  "wait_W90_gmax_lat": {
+   "gmean": 0.72,
+   "auc": 0.787
+  },
+  "odasc_W30_d09_k50_gmax_lat": {
+   "gmean": 0.72,
+   "auc": 0.789
+  },
+  "odasc_W30_d09_k50": {
+   "gmean": 0.718,
+   "auc": 0.789
+  },
+  "nowait_gmax_lat": {
+   "gmean": 0.717,
+   "auc": 0.774
+  },
+  "wait_W90": {
+   "gmean": 0.716,
+   "auc": 0.787
+  },
+  "wait_W30": {
+   "gmean": 0.687,
+   "auc": 0.783
+  },
+  "nowait": {
+   "gmean": 0.648,
+   "auc": 0.774
+  }
+ },
  "variants_logged_main": 47,
  "variants_logged_independent_lineage": 51,
  "runs_main": 1526,
  "runs_independent_lineage": 996,
  "cpu_hours_main": 29.5,
- "cpu_hours_independent_lineage": 15.0
+ "cpu_hours_independent_lineage": 15.0,
+ "lineage2_odasc_tests": {
+  "odasc_W30_vs_wait_W90": {
+   "mean_diff": 0.0407,
+   "ci95": [
+    0.0256,
+    0.0564
+   ],
+   "wins": 10,
+   "losses": 0,
+   "wilcoxon_p": 0.001953125
+  },
+  "odasc_W30_vs_orb_W90": {
+   "mean_diff": 0.0368,
+   "ci95": [
+    0.0235,
+    0.0494
+   ],
+   "wins": 10,
+   "losses": 0,
+   "wilcoxon_p": 0.001953125
+  },
+  "odasc_W15_gmax_lat_vs_wait_W90": {
+   "mean_diff": 0.0409,
+   "ci95": [
+    0.0252,
+    0.0573
+   ],
+   "wins": 10,
+   "losses": 0,
+   "wilcoxon_p": 0.001953125
+  }
+ },
+ "seed_sd": {
+  "min": 0.0005,
+  "median": 0.0022,
+  "max": 0.0145
+ },
+ "rq3_holm_family6": {
+  "law_lagakos_model_vs_nowait": 0.01171875,
+  "law_lagakos_model_vs_wait_W90": 0.251953125,
+  "law_lagakos_model_vs_orb_W90": 0.251953125,
+  "awt_e0.4_vs_nowait": 0.01171875,
+  "awt_e0.4_vs_wait_W90": 0.251953125,
+  "awt_e0.4_vs_orb_W90": 0.1484375
+ },
+ "neutron_dev": {
+  "law_lagakos_model": 0.496,
+  "wait_W90": 0.784,
+  "orb_W90": 0.817,
+  "wait_W180": 0.838
+ }
 }

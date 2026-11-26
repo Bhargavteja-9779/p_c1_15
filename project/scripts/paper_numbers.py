@@ -177,7 +177,7 @@ if RV.exists():
         return dict(comparison=label, n=int(len(d)), mean_diff=f4(d.mean()), ci95=[f4(np.percentile(bs, 2.5)), f4(np.percentile(bs, 97.5))],
                     wins=int((d > 0).sum()), losses=int((d < 0).sum()), wilcoxon_p=float(w.pvalue) if w else None)
     # A2: ApacheJIT W=90 decomposition
-    if (rv.analysis == "A2").any():
+    if (rv.analysis == "A2").sum() >= 90:
         base = df[(df.experiment == "E8") & df.project.isin(AJ)]
         out = {}
         for metric in ["gmean", "auc"]:
@@ -192,7 +192,7 @@ if RV.exists():
         N["a2_apachejit_W90"] = out
         pd.DataFrame(out).T.to_markdown(P / "tables" / "T8_A2_apachejit_W90.md")
     # A3: age strata (W=30): gain over wait_W30 by band, as share of the L1_W30 gain
-    if (rv.analysis == "A3").any():
+    if (rv.analysis == "A3").sum() >= 380:
         res = []
         for fam, P_, exps in [("Cabral test", TEST, ["E3b"]), ("ApacheJIT", AJ, ["E8"])]:
             for metric in ["gmean", "auc"]:
@@ -207,7 +207,7 @@ if RV.exists():
         if res:
             A3 = pd.DataFrame(res); A3.to_markdown(P / "tables" / "T9_A3_age_strata.md", index=False); N["a3"] = res
     # A4: evaluation-window sensitivity (exclude last 730 days)
-    if (rv.analysis == "A4").any():
+    if (rv.analysis == "A4").sum() >= 190:
         res = {}
         for fam, P_ in [("Cabral test", TEST), ("ApacheJIT", AJ)]:
             a4 = _pp("A4", [x for x in rv.variant.unique() if str(x).endswith("_gap730")], P_)
