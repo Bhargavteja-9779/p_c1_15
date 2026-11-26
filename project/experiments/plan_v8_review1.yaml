@@ -1,0 +1,27 @@
+# plan_v8 — review round 1 (2026-11-26), written BEFORE any of the runs below. Answers R1/R2/R3 concerns that need evidence.
+# No method is tuned here; all configurations are frozen from earlier plans.
+version: 8
+analyses:
+  A1_shapley_2x2:        # R1#2, R2#2 — no new runs: labels {observed,true} x window {waited W30, all}
+    cells: {wait_W30: "observed, waited", decomp_L1_W30: "true, waited", nowait: "observed, all", oracle: "true, all"}
+    metrics: [gmean, auc]
+    report: "noise main effect, freshness main effect, interaction, Shapley noise share; project-bootstrap 95% CI (10000, seed 0)"
+    families: [Cabral test (E1+E3b), ApacheJIT (E8)]
+  A2_apachejit_W90:      # R1#1 — exploratory diagnostic (ApacheJIT already used; second use disclosed)
+    runs: "decomp L1_W90, L2_W90 on 9 ApacheJIT projects x seeds 100-104"
+  A3_age_strata:         # R2#4 — exploratory diagnostic
+    runs: "decomp level=strata at W=30: true labels only for waited-out provisional negatives with age in [lo,hi); bands [30,180),[180,365),[365,730),[730,inf); Cabral test + ApacheJIT x seeds 100-104"
+    report: "G-mean and AUC gain over wait_W30 per band, as share of (L1_W30 - wait_W30)"
+  A4_eval_gap_730:       # R2#12, R1#15 — sensitivity, seeds 100-101 only (seed SD 0.001-0.003, R1#10)
+    runs: "wait_W30, decomp_L1_W30, wait_W90, nowait, oracle with eval_end_gap_days=730; Cabral test + ApacheJIT"
+  A5_threshold_on_apachejit:   # R1#4/#6 — CONFIRMATORY replication of RQ5 on fresh data (second use of ApacheJIT, disclosed)
+    simulator: "archive/zealous_lamport_cycle1/src/jit.py (frozen RQ5 code), shared data loader"
+    policies: ["nowait", "wait_W30", "wait_W90", "law_lagakos_model", "odasc_W30_d0.9_k50 (lineage-2 implementation)"]
+    threshold: ["fixed 0.5", "gmax_lat"]
+    seeds: [100, 101, 102, 103, 104]
+    H9a: "law+gmax_lat beats wait_W90 (fixed) and odasc_W30 (fixed) — the frozen RQ5 primary family of lineage 2"
+    H9b: "for each of the 5 policies, gmax_lat beats the same policy at 0.5 (threshold effect, like-for-like)"
+    statistics: "Wilcoxon two-sided over 9 projects, Holm over all 7 tests (H9a 2 + H9b 5); CI = project bootstrap; margin 0.02"
+  A6_leakage: "tests extended: dual, threshold rules (lineage-2 code), binary decisions; plus flipping final y of commits undiscovered at T0"
+not_run_reason:
+  unified_odasc_retuning: "would be a new method-selection round on already-used test sets; instead both ODaSC adaptations are reported with their results and differences (R1#5 partially addressed, stated as limitation)"

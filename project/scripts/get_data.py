@@ -4,11 +4,16 @@ import os, sys, zipfile, urllib.request, hashlib, io
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 dst = os.path.join(ROOT, "data", "jit"); os.makedirs(dst, exist_ok=True)
 def get_cabral():
+  import json
+  ref = json.load(open(os.path.join(ROOT, "scripts", "cabral_sha256.json")))
   if len([f for f in os.listdir(dst) if f.endswith(".arff")]) >= 14:
-    print("cabral data present"); return
+    for n, hx in ref["arff_sha256"].items():   # verify the extracted files, not just their presence
+      assert hashlib.sha256(open(os.path.join(dst, n), "rb").read()).hexdigest() == hx, f"checksum mismatch: {n}"
+    print("cabral data present, 14 ARFF checksums verified"); return
   url = "https://zenodo.org/api/records/2591761/files/geocabral/spdisc-icse19-V1.02.zip/content"
   raw = urllib.request.urlopen(url, timeout=300).read()
-  print("sha256", hashlib.sha256(raw).hexdigest())
+  hx = hashlib.sha256(raw).hexdigest(); print("sha256", hx)
+  assert hx == ref["zip_sha256"], "Cabral archive checksum mismatch"
   with zipfile.ZipFile(io.BytesIO(raw)) as z:
       for n in z.namelist():
           if "/datasets/" in n and n.endswith(".arff"):

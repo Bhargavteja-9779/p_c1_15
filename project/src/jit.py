@@ -75,7 +75,7 @@ def fit_lgb(X, y, w, seed, class_mult=(1.0, 1.0)):
 def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="lagakos",
              prior="model", orb_params=None, eval_end_gap_days=365, delay_scale=1.0, return_preds=False,
              label_noise_log=False, eps=0.3, level=1, mode="soft", mature_age=365,
-             prior_src="mature", crossfit=True, use_S=True, knn_k=20, theta=0.8):
+             prior_src="mature", crossfit=True, use_S=True, knn_k=20, theta=0.8, strata_lo=0.0, strata_hi=np.inf):
     """df: one project's commits sorted by time (columns FEATS, t, y, t_found).
     delay_scale>1 stretches discovery delays (robustness: slower bug discovery)."""
     t0 = time.time()
@@ -199,8 +199,13 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
             # level 2: level 1 + young not-yet-found true bugs (adds fresh positives)
             # oracle  : level 2 + young clean commits
             keep = found | (age >= W)
-            if level >= 2: keep = keep | (y[tr] == 1)
-            Xi, yi, wi = X[tr][keep], y[tr][keep], np.ones(keep.sum())
+            if level == "strata":   # plan_v8 A3: true labels only for waited-out provisional negatives aged in [strata_lo, strata_hi)
+                yy = found.astype(int).copy(); band = keep & ~found & (age >= strata_lo) & (age < strata_hi)
+                yy[band] = y[tr][band]
+                Xi, yi, wi = X[tr][keep], yy[keep], np.ones(keep.sum())
+            else:
+                if level >= 2: keep = keep | (y[tr] == 1)
+                Xi, yi, wi = X[tr][keep], y[tr][keep], np.ones(keep.sum())
         elif method == "law":
             pos_idx = tr[found]
             d_obs = (tf[pos_idx] - t[pos_idx]) / DAY; tau = (T - t[pos_idx]) / DAY
