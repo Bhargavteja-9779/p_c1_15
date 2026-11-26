@@ -31,6 +31,15 @@ def jobs():
             for thr in ("fixed", "gmax_lat"):
                 J.append(dict(a="A5", sim="lineage2", project=p, seed=s, method=m, kw=dict(kw, thr_policy=thr),
                               variant=v + ("" if thr == "fixed" else "_gmax_lat")))
+    for p, s in itertools.product(TEST + AJ, SC):                            # B1 (plan_v9): strata at W=90
+        for lo, hi in [(90, 180), (180, 365), (365, 730), (730, INF)]:
+            J.append(dict(a="B1", sim="main", project=p, seed=s, method="decomp", kw=dict(W=90, level="strata", strata_lo=lo, strata_hi=hi),
+                          variant=f"strata90_{lo}_{'inf' if hi == INF else hi}"))
+    for W, bands in [(30, [(30, 180), (180, 365), (365, 730), (730, INF)]), (90, [(90, 180), (180, 365), (365, 730), (730, INF)])]:   # B3 (plan_v9)
+        for p, s in itertools.product(TEST + AJ, SC):
+            for lo, hi in bands:
+                J.append(dict(a="B3", sim="main", project=p, seed=s, method="decomp", kw=dict(W=W, level="strata_out", strata_lo=lo, strata_hi=hi),
+                              variant=f"out{W}_{lo}_{'inf' if hi == INF else hi}"))
     for j in J: j["id"] = f"{j['a']}_{j['project']}_{j['variant']}_s{j['seed']}"
     return J
 
@@ -57,7 +66,7 @@ if __name__ == "__main__":
             try: done.add(json.loads(l)["id"])
             except Exception: pass
     todo = [j for j in jobs() if j["id"] not in done]
-    todo.sort(key=lambda j: {"A5": 0, "A2": 1, "A3": 2, "A4": 3}[j["a"]])    # confirmatory first
+    todo.sort(key=lambda j: {"A5": 0, "A2": 1, "A3": 2, "A4": 3, "B1": 4, "B3": 5}[j["a"]])    # confirmatory first
     print(f"{len(done)} done, {len(todo)} to run", flush=True)
     with Pool(int(sys.argv[1]) if len(sys.argv) > 1 else 3) as pool, open(OUT, "a") as f:
         for i, row in enumerate(pool.imap_unordered(run, todo, chunksize=1)):

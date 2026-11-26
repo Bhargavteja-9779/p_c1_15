@@ -10,3 +10,9 @@ B2_flip_counts:
   what: "model-free: at every retraining time of the prequential schedule, the number of provisionally clean training commits that are truly defective (flips), per age band, for W=30 and W=90; mean over update times"
   report: "flips per band (share of all flips) and gain per 1% of flips (band gain share / band flip share)"
 statistics: "descriptive; no Holm family; no claim depends on a p-value from these analyses"
+B3_leave_one_band_out:
+  added: "2026-11-26, before running B3, after round-2 R1 concern 2 (single-band design cannot show that older bands add nothing when bands interact)"
+  what: "decomp level=strata_out: true labels for all waited-out training commits EXCEPT provisionally clean ones in band b (they keep their observed clean label)"
+  W_and_bands: "W=30: [30,180), [180,365), [365,730), >=730; W=90: [90,180), [180,365), [365,730), >=730"
+  projects: "10 Cabral test + 9 ApacheJIT"; seeds: [100, 101, 102, 103, 104]
+  report: "loss vs L1-W (gain lost when band b keeps its noise), as share of the L1 gain; descriptive"

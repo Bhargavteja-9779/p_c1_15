@@ -203,6 +203,10 @@ def simulate(df, method, seed=0, W=90, update_every=100, warmup=500, delay_est="
                 yy = found.astype(int).copy(); band = keep & ~found & (age >= strata_lo) & (age < strata_hi)
                 yy[band] = y[tr][band]
                 Xi, yi, wi = X[tr][keep], yy[keep], np.ones(keep.sum())
+            elif level == "strata_out":   # plan_v9 B3: true labels for all waited-out commits EXCEPT provisional negatives aged in [strata_lo, strata_hi)
+                yy = y[tr].copy(); band = keep & ~found & (age >= strata_lo) & (age < strata_hi)
+                yy[band] = 0
+                Xi, yi, wi = X[tr][keep], yy[keep], np.ones(keep.sum())
             else:
                 if level >= 2: keep = keep | (y[tr] == 1)
                 Xi, yi, wi = X[tr][keep], y[tr][keep], np.ones(keep.sum())
