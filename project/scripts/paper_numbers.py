@@ -203,7 +203,8 @@ if RV.exists():
                     if band in a3.index and a3.loc[band].notna().sum() == len(P_):
                         g = a3.loc[band, P_] - w
                         res.append(dict(family=fam, metric="AUC" if metric == "auc" else "G-mean", age_band=band.replace("strata_", "").replace("_", "-") + " d",
-                                        gain_over_wait30=f3(g.mean()), share_of_full_relabel_gain=f3(g.mean() / (l1 - w).mean()), projects_improved=int((g > 0).sum())))
+                                        gain_over_wait30=f3(g.mean()), share_of_full_relabel_gain=f3(g.mean() / (l1 - w).mean()), projects_improved=int((g > 0).sum()),
+                                        wilcoxon_p=float(_st.wilcoxon(g.values).pvalue)))
         if res:
             A3 = pd.DataFrame(res); A3.to_markdown(P / "tables" / "T9_A3_age_strata.md", index=False); N["a3"] = res
     # A4: evaluation-window sensitivity (exclude last 730 days)
@@ -213,7 +214,9 @@ if RV.exists():
             a4 = _pp("A4", [x for x in rv.variant.unique() if str(x).endswith("_gap730")], P_)
             if a4.notna().all(axis=None) and a4.shape[1] == len(P_):
                 m_ = a4.mean(axis=1); w, l1, o = m_["wait_W30_gap730"], m_["decomp_L1_W30_gap730"], m_["oracle_gap730"]
-                res[fam] = dict({k.replace("_gap730", ""): f3(v) for k, v in m_.items()}, share_W30=f3((l1 - w) / (o - w)))
+                c = _cmp(a4.loc["decomp_L1_W30_gap730"], a4.loc["wait_W30_gap730"], "L1-W30 vs Wait-30 (gap 730)")
+                res[fam] = dict({k.replace("_gap730", ""): f3(v) for k, v in m_.items()}, share_W30=f3((l1 - w) / (o - w)),
+                                L1_vs_wait30_diff=c["mean_diff"], wins=c["wins"], losses=c["losses"], wilcoxon_p=f4(c["wilcoxon_p"]))
         if res: N["a4_gap730"] = res; pd.DataFrame(res).T.to_markdown(P / "tables" / "T10_A4_eval_gap730.md")
     # A5: threshold rule on ApacheJIT (confirmatory, plan_v8 H9; Holm over 7)
     if (rv.analysis == "A5").any() and rv[rv.analysis == "A5"].shape[0] >= 450:
@@ -230,11 +233,32 @@ if RV.exists():
         N["a5_tests"] = tests; N["a5_means"] = {k: dict(gmean=f3(v["G-mean"]), auc=f3(v["AUC"])) for k, v in T11.iterrows()}
         pd.DataFrame(tests).to_markdown(P / "tables" / "T11b_A5_tests.md", index=False)
 
+# ---------------------------------------------------------------- extra numbers cited in the text
+from src.jit import LGB_PARAMS
+N["learner"] = {k: v for k, v in LGB_PARAMS.items() if isinstance(v, (int, float))}; N["bootstrap_samples"] = 10000
+_dev = df[df.project.isin(DEV)]
+N["rq2_dev_means"] = dict(wait_W30=f3(_dev[(_dev.experiment == "E0") & (_dev.variant == "wait_W30")].gmean.mean()),
+                          decomp_L1_W30=f3(_dev[(_dev.experiment == "E0b") & (_dev.variant == "decomp_L1_W30")].gmean.mean()),
+                          oracle=f3(_dev[(_dev.experiment == "E0") & (_dev.variant == "oracle")].gmean.mean()))
+_sd = df[df.experiment.isin(["E1", "E3b", "E8"])].groupby(["experiment", "variant", "project"]).gmean.std()
+N["seed_sd"] = dict(median=f4(_sd.median()), max=f4(_sd.max()), p90=f4(_sd.quantile(0.9)))
+_l2 = da[(da.experiment == "E1")].groupby(["variant", "project"]).gmean.mean().unstack()
+from scipy import stats as _st0
+def _cmp0(a, b, label):
+    d = (a - b).dropna(); rng = np.random.default_rng(0)
+    bs = [d.values[rng.integers(0, len(d), len(d))].mean() for _ in range(10000)]
+    return dict(comparison=label, n=int(len(d)), mean_diff=f4(d.mean()), ci95=[f4(np.percentile(bs, 2.5)), f4(np.percentile(bs, 97.5))],
+                wins=int((d > 0).sum()), losses=int((d < 0).sum()), wilcoxon_p=float(_st0.wilcoxon(d.values).pvalue))
+N["lineage2_odasc_tests"] = [_cmp0(_l2.loc["odasc_W30"], _l2.loc["wait_W90"], "lineage-2 ODaSC-W30 vs Wait-90 (Cabral test)"),
+                             _cmp0(_l2.loc["odasc_W30"], _l2.loc["orb_W90"], "lineage-2 ODaSC-W30 vs ORB-W90 (Cabral test)")]
+
 # ---------------------------------------------------------------- bookkeeping numbers
 vt = pd.read_csv(ROOT / "state" / "variants_tried.csv"); vta = pd.read_csv(ARCH / "state" / "variants_tried.csv")
 N["variants_logged_main"] = int(len(vt)); N["variants_logged_independent_lineage"] = int(len(vta))
 N["runs_main"] = int(len(df)); N["runs_independent_lineage"] = int(len(da))
 b = json.load(open(ROOT / "state" / "budget.json")); N["cpu_hours_main"] = round(b.get("global_seconds", 0) / 3600, 1)
 N["cpu_hours_independent_lineage"] = round(json.load(open(ARCH / "state" / "budget.json")).get("global_seconds", 0) / 3600, 1)
+N["cpu_hours_total"] = round(N["cpu_hours_main"] + N["cpu_hours_independent_lineage"], 1)
+if RV.exists(): N["cpu_hours_review1"] = round(float(rv.wall.sum()) / 3600, 1); N["cpu_hours_total_incl_review1"] = round(N["cpu_hours_main"] + N["cpu_hours_independent_lineage"] + N["cpu_hours_review1"], 1)
 json.dump(N, open(R / "paper_numbers.json", "w"), indent=1, default=float)
 print(json.dumps({k: v for k, v in N.items() if not k.endswith("tests") and "H6" not in k and "descriptive" not in k}, indent=0, default=float)[:6000])

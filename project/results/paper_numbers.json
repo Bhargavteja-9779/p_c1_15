@@ -1105,6 +1105,202 @@
   0,
   444
  ],
+ "a2_apachejit_W90": {
+  "gmean": {
+   "wait_W90": 0.716,
+   "L1_W90": 0.751,
+   "L2_W90": 0.726,
+   "oracle": 0.77,
+   "share": 0.652,
+   "share_ci95": [
+    0.534,
+    0.772
+   ]
+  },
+  "auc": {
+   "wait_W90": 0.787,
+   "L1_W90": 0.846,
+   "L2_W90": 0.821,
+   "oracle": 0.862,
+   "share": 0.779,
+   "share_ci95": [
+    0.718,
+    0.851
+   ]
+  }
+ },
+ "a3": [
+  {
+   "family": "Cabral test",
+   "metric": "G-mean",
+   "age_band": "30-180 d",
+   "gain_over_wait30": 0.093,
+   "share_of_full_relabel_gain": 0.913,
+   "projects_improved": 10,
+   "wilcoxon_p": 0.001953125
+  },
+  {
+   "family": "Cabral test",
+   "metric": "G-mean",
+   "age_band": "180-365 d",
+   "gain_over_wait30": 0.016,
+   "share_of_full_relabel_gain": 0.153,
+   "projects_improved": 10,
+   "wilcoxon_p": 0.001953125
+  },
+  {
+   "family": "Cabral test",
+   "metric": "G-mean",
+   "age_band": "365-730 d",
+   "gain_over_wait30": 0.003,
+   "share_of_full_relabel_gain": 0.027,
+   "projects_improved": 5,
+   "wilcoxon_p": 0.556640625
+  },
+  {
+   "family": "Cabral test",
+   "metric": "G-mean",
+   "age_band": "730-inf d",
+   "gain_over_wait30": -0.003,
+   "share_of_full_relabel_gain": -0.03,
+   "projects_improved": 2,
+   "wilcoxon_p": 0.064453125
+  },
+  {
+   "family": "Cabral test",
+   "metric": "AUC",
+   "age_band": "30-180 d",
+   "gain_over_wait30": 0.047,
+   "share_of_full_relabel_gain": 0.827,
+   "projects_improved": 10,
+   "wilcoxon_p": 0.001953125
+  },
+  {
+   "family": "Cabral test",
+   "metric": "AUC",
+   "age_band": "180-365 d",
+   "gain_over_wait30": 0.01,
+   "share_of_full_relabel_gain": 0.173,
+   "projects_improved": 10,
+   "wilcoxon_p": 0.001953125
+  },
+  {
+   "family": "Cabral test",
+   "metric": "AUC",
+   "age_band": "365-730 d",
+   "gain_over_wait30": 0.004,
+   "share_of_full_relabel_gain": 0.075,
+   "projects_improved": 9,
+   "wilcoxon_p": 0.005859375
+  },
+  {
+   "family": "Cabral test",
+   "metric": "AUC",
+   "age_band": "730-inf d",
+   "gain_over_wait30": 0.001,
+   "share_of_full_relabel_gain": 0.019,
+   "projects_improved": 5,
+   "wilcoxon_p": 0.431640625
+  },
+  {
+   "family": "ApacheJIT",
+   "metric": "G-mean",
+   "age_band": "30-180 d",
+   "gain_over_wait30": 0.051,
+   "share_of_full_relabel_gain": 0.685,
+   "projects_improved": 9,
+   "wilcoxon_p": 0.00390625
+  },
+  {
+   "family": "ApacheJIT",
+   "metric": "G-mean",
+   "age_band": "180-365 d",
+   "gain_over_wait30": -0.003,
+   "share_of_full_relabel_gain": -0.039,
+   "projects_improved": 6,
+   "wilcoxon_p": 0.8203125
+  },
+  {
+   "family": "ApacheJIT",
+   "metric": "G-mean",
+   "age_band": "365-730 d",
+   "gain_over_wait30": -0.01,
+   "share_of_full_relabel_gain": -0.132,
+   "projects_improved": 5,
+   "wilcoxon_p": 0.8203125
+  },
+  {
+   "family": "ApacheJIT",
+   "metric": "G-mean",
+   "age_band": "730-inf d",
+   "gain_over_wait30": -0.009,
+   "share_of_full_relabel_gain": -0.12,
+   "projects_improved": 1,
+   "wilcoxon_p": 0.02734375
+  },
+  {
+   "family": "ApacheJIT",
+   "metric": "AUC",
+   "age_band": "30-180 d",
+   "gain_over_wait30": 0.036,
+   "share_of_full_relabel_gain": 0.489,
+   "projects_improved": 8,
+   "wilcoxon_p": 0.0078125
+  },
+  {
+   "family": "ApacheJIT",
+   "metric": "AUC",
+   "age_band": "180-365 d",
+   "gain_over_wait30": -0.002,
+   "share_of_full_relabel_gain": -0.024,
+   "projects_improved": 4,
+   "wilcoxon_p": 0.8203125
+  },
+  {
+   "family": "ApacheJIT",
+   "metric": "AUC",
+   "age_band": "365-730 d",
+   "gain_over_wait30": -0.003,
+   "share_of_full_relabel_gain": -0.047,
+   "projects_improved": 6,
+   "wilcoxon_p": 0.91015625
+  },
+  {
+   "family": "ApacheJIT",
+   "metric": "AUC",
+   "age_band": "730-inf d",
+   "gain_over_wait30": -0.004,
+   "share_of_full_relabel_gain": -0.05,
+   "projects_improved": 4,
+   "wilcoxon_p": 0.42578125
+  }
+ ],
+ "a4_gap730": {
+  "Cabral test": {
+   "decomp_L1_W30": 0.72,
+   "nowait": 0.42,
+   "oracle": 0.715,
+   "wait_W30": 0.621,
+   "wait_W90": 0.648,
+   "share_W30": 1.057,
+   "L1_vs_wait30_diff": 0.0999,
+   "wins": 10,
+   "losses": 0,
+   "wilcoxon_p": 0.002
+  },
+  "ApacheJIT": {
+   "decomp_L1_W30": 0.758,
+   "nowait": 0.638,
+   "oracle": 0.767,
+   "wait_W30": 0.68,
+   "wait_W90": 0.71,
+   "share_W30": 0.904,
+   "L1_vs_wait30_diff": 0.0781,
+   "wins": 8,
+   "losses": 1,
+   "wilcoxon_p": 0.0078
+  }
+ },
  "a5_tests": [
   {
    "comparison": "H9a: LAW+thr vs Wait-90",
@@ -1247,14 +1443,32 @@
    "auc": 0.774
   }
  },
- "variants_logged_main": 47,
- "variants_logged_independent_lineage": 51,
- "runs_main": 1526,
- "runs_independent_lineage": 996,
- "cpu_hours_main": 29.5,
- "cpu_hours_independent_lineage": 15.0,
- "lineage2_odasc_tests": {
-  "odasc_W30_vs_wait_W90": {
+ "learner": {
+  "n_estimators": 150,
+  "learning_rate": 0.05,
+  "num_leaves": 31,
+  "min_child_samples": 20,
+  "subsample": 0.8,
+  "subsample_freq": 1,
+  "colsample_bytree": 0.8,
+  "verbose": -1,
+  "n_jobs": 1
+ },
+ "bootstrap_samples": 10000,
+ "rq2_dev_means": {
+  "wait_W30": 0.621,
+  "decomp_L1_W30": 0.785,
+  "oracle": 0.794
+ },
+ "seed_sd": {
+  "median": 0.0022,
+  "max": 0.0145,
+  "p90": 0.0044
+ },
+ "lineage2_odasc_tests": [
+  {
+   "comparison": "lineage-2 ODaSC-W30 vs Wait-90 (Cabral test)",
+   "n": 10,
    "mean_diff": 0.0407,
    "ci95": [
     0.0256,
@@ -1264,7 +1478,9 @@
    "losses": 0,
    "wilcoxon_p": 0.001953125
   },
-  "odasc_W30_vs_orb_W90": {
+  {
+   "comparison": "lineage-2 ODaSC-W30 vs ORB-W90 (Cabral test)",
+   "n": 10,
    "mean_diff": 0.0368,
    "ci95": [
     0.0235,
@@ -1273,35 +1489,15 @@
    "wins": 10,
    "losses": 0,
    "wilcoxon_p": 0.001953125
-  },
-  "odasc_W15_gmax_lat_vs_wait_W90": {
-   "mean_diff": 0.0409,
-   "ci95": [
-    0.0252,
-    0.0573
-   ],
-   "wins": 10,
-   "losses": 0,
-   "wilcoxon_p": 0.001953125
   }
- },
- "seed_sd": {
-  "min": 0.0005,
-  "median": 0.0022,
-  "max": 0.0145
- },
- "rq3_holm_family6": {
-  "law_lagakos_model_vs_nowait": 0.01171875,
-  "law_lagakos_model_vs_wait_W90": 0.251953125,
-  "law_lagakos_model_vs_orb_W90": 0.251953125,
-  "awt_e0.4_vs_nowait": 0.01171875,
-  "awt_e0.4_vs_wait_W90": 0.251953125,
-  "awt_e0.4_vs_orb_W90": 0.1484375
- },
- "neutron_dev": {
-  "law_lagakos_model": 0.496,
-  "wait_W90": 0.784,
-  "orb_W90": 0.817,
-  "wait_W180": 0.838
- }
+ ],
+ "variants_logged_main": 47,
+ "variants_logged_independent_lineage": 51,
+ "runs_main": 1526,
+ "runs_independent_lineage": 996,
+ "cpu_hours_main": 29.5,
+ "cpu_hours_independent_lineage": 15.0,
+ "cpu_hours_total": 44.5,
+ "cpu_hours_review1": 5.0,
+ "cpu_hours_total_incl_review1": 49.5
 }
