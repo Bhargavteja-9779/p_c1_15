@@ -1,0 +1,709 @@
+{
+ "n_commits_total": 331937,
+ "n_projects": 23,
+ "Cabral_median_delay_range": [
+  16,
+  416
+ ],
+ "Cabral_p90_delay_range": [
+  383,
+  1964
+ ],
+ "Cabral_found_after_90d_range": [
+  0.312,
+  0.722
+ ],
+ "Cabral_defect_rate_range": [
+  0.123,
+  0.276
+ ],
+ "Cabral_commits": 265003,
+ "ApacheJIT_median_delay_range": [
+  67,
+  568
+ ],
+ "ApacheJIT_p90_delay_range": [
+  416,
+  2811
+ ],
+ "ApacheJIT_found_after_90d_range": [
+  0.43,
+  0.826
+ ],
+ "ApacheJIT_defect_rate_range": [
+  0.2,
+  0.764
+ ],
+ "ApacheJIT_commits": 66934,
+ "rq1_relative_reduction_W90_range": [
+  0.046,
+  0.332
+ ],
+ "rq1_relative_reduction_W90_median": 0.153,
+ "rq1_W90_excluded_range": [
+  0.048,
+  0.138
+ ],
+ "rq1_young_lt7d_false_clean_range": [
+  0.122,
+  0.262
+ ],
+ "rq1_old_gt2y_false_clean_range": [
+  0.001,
+  0.097
+ ],
+ "rq2_cabral": {
+  "wait_W30": 0.62,
+  "decomp_L1_W30": 0.722,
+  "decomp_L2_W30": 0.702,
+  "wait_W90": 0.654,
+  "decomp_L1_W90": 0.684,
+  "decomp_L2_W90": 0.625,
+  "oracle": 0.715
+ },
+ "rq2_apachejit": {
+  "wait_W30": 0.687,
+  "decomp_L1_W30": 0.762,
+  "wait_W90": 0.716,
+  "oracle": 0.77
+ },
+ "rq2_gap_share_cabral_W30": 1.0773,
+ "rq2_gap_share_cabral_W90": 0.4977,
+ "rq2_gap_share_cabral_per_project_range": [
+  0.849,
+  1.36
+ ],
+ "rq2_gap_share_aj_W30": 0.903,
+ "rq2_gap_share_aj_per_project_range": [
+  0.75,
+  0.983
+ ],
+ "rq2_tests_cabral": [
+  {
+   "proposed": "decomp_L1_W30",
+   "baseline": "wait_W90",
+   "n_projects": 10,
+   "mean_diff": 0.0677,
+   "ci95": [
+    0.0487,
+    0.0918
+   ],
+   "wins": 10,
+   "losses": 0,
+   "wilcoxon_p": 0.001953125,
+   "paired_t_p": 0.000270606332888728,
+   "rank_biserial": 1.0,
+   "holm_p": 0.00390625,
+   "G5_pass": true
+  },
+  {
+   "proposed": "decomp_L1_W30",
+   "baseline": "wait_W30",
+   "n_projects": 10,
+   "mean_diff": 0.1017,
+   "ci95": [
+    0.0689,
+    0.1412
+   ],
+   "wins": 10,
+   "losses": 0,
+   "wilcoxon_p": 0.001953125,
+   "paired_t_p": 0.0005540504299986918,
+   "rank_biserial": 1.0,
+   "holm_p": 0.00390625,
+   "G5_pass": true
+  }
+ ],
+ "rq2_tests_aj": [
+  {
+   "proposed": "decomp_L1_W30",
+   "baseline": "wait_W90",
+   "n_projects": 9,
+   "mean_diff": 0.0453,
+   "ci95": [
+    0.0291,
+    0.0624
+   ],
+   "wins": 9,
+   "losses": 0,
+   "wilcoxon_p": 0.00390625,
+   "paired_t_p": 0.001074120743562676,
+   "rank_biserial": 1.0,
+   "holm_p": 0.0078125,
+   "G5_pass": true
+  },
+  {
+   "proposed": "decomp_L1_W30",
+   "baseline": "wait_W30",
+   "n_projects": 9,
+   "mean_diff": 0.0749,
+   "ci95": [
+    0.0461,
+    0.107
+   ],
+   "wins": 8,
+   "losses": 1,
+   "wilcoxon_p": 0.0078125,
+   "paired_t_p": 0.002036213625019109,
+   "rank_biserial": 0.956,
+   "holm_p": 0.0078125,
+   "G5_pass": true
+  }
+ ],
+ "rq3_means": {
+  "oracle": {
+   "gmean": 0.715,
+   "auc": 0.815,
+   "r1": 0.626,
+   "r0": 0.82
+  },
+  "orb_W90": {
+   "gmean": 0.658,
+   "auc": 0.724,
+   "r1": 0.714,
+   "r0": 0.615
+  },
+  "wait_W90": {
+   "gmean": 0.654,
+   "auc": 0.727,
+   "r1": 0.713,
+   "r0": 0.616
+  },
+  "awt_e0.4": {
+   "gmean": 0.619,
+   "auc": 0.699,
+   "r1": 0.675,
+   "r0": 0.609
+  },
+  "law_lagakos_model": {
+   "gmean": 0.616,
+   "auc": 0.751,
+   "r1": 0.453,
+   "r0": 0.86
+  },
+  "nowait": {
+   "gmean": 0.429,
+   "auc": 0.722,
+   "r1": 0.209,
+   "r0": 0.95
+  }
+ },
+ "rq3_tests": [
+  {
+   "proposed": "law_lagakos_model",
+   "baseline": "nowait",
+   "n_projects": 10,
+   "mean_diff": 0.1872,
+   "ci95": [
+    0.1472,
+    0.2288
+   ],
+   "wins": 10,
+   "losses": 0,
+   "wilcoxon_p": 0.001953125,
+   "paired_t_p": 1.4333414264286952e-05,
+   "rank_biserial": 1.0,
+   "holm_p": 0.005859375,
+   "G5_pass": true,
+   "holm_p_family6": 0.01171875
+  },
+  {
+   "proposed": "law_lagakos_model",
+   "baseline": "wait_W90",
+   "n_projects": 10,
+   "mean_diff": -0.0381,
+   "ci95": [
+    -0.0848,
+    0.0014
+   ],
+   "wins": 3,
+   "losses": 7,
+   "wilcoxon_p": 0.130859375,
+   "paired_t_p": 0.13612852823803398,
+   "rank_biserial": -0.564,
+   "holm_p": 0.16796875,
+   "G5_pass": false,
+   "holm_p_family6": 0.251953125
+  },
+  {
+   "proposed": "law_lagakos_model",
+   "baseline": "orb_W90",
+   "n_projects": 10,
+   "mean_diff": -0.0421,
+   "ci95": [
+    -0.0908,
+    -0.0034
+   ],
+   "wins": 2,
+   "losses": 8,
+   "wilcoxon_p": 0.083984375,
+   "paired_t_p": 0.10799677299662776,
+   "rank_biserial": -0.636,
+   "holm_p": 0.16796875,
+   "G5_pass": false,
+   "holm_p_family6": 0.251953125
+  },
+  {
+   "proposed": "awt_e0.4",
+   "baseline": "nowait",
+   "n_projects": 10,
+   "mean_diff": 0.1904,
+   "ci95": [
+    0.1396,
+    0.2522
+   ],
+   "wins": 10,
+   "losses": 0,
+   "wilcoxon_p": 0.001953125,
+   "paired_t_p": 0.00013953931642784144,
+   "rank_biserial": 1.0,
+   "holm_p": 0.005859375,
+   "G5_pass": true,
+   "holm_p_family6": 0.01171875
+  },
+  {
+   "proposed": "awt_e0.4",
+   "baseline": "wait_W90",
+   "n_projects": 10,
+   "mean_diff": -0.035,
+   "ci95": [
+    -0.0739,
+    -0.0027
+   ],
+   "wins": 2,
+   "losses": 8,
+   "wilcoxon_p": 0.083984375,
+   "paired_t_p": 0.10407513299644962,
+   "rank_biserial": -0.636,
+   "holm_p": 0.083984375,
+   "G5_pass": false,
+   "holm_p_family6": 0.251953125
+  },
+  {
+   "proposed": "awt_e0.4",
+   "baseline": "orb_W90",
+   "n_projects": 10,
+   "mean_diff": -0.039,
+   "ci95": [
+    -0.0772,
+    -0.009
+   ],
+   "wins": 2,
+   "losses": 8,
+   "wilcoxon_p": 0.037109375,
+   "paired_t_p": 0.06611970878501287,
+   "rank_biserial": -0.745,
+   "holm_p": 0.07421875,
+   "G5_pass": false,
+   "holm_p_family6": 0.1484375
+  }
+ ],
+ "rq3_diag_law_neutron_keys": [
+  "law_lagakos_model",
+  "law_lagakos_base",
+  "wait_W90",
+  "wait_W30",
+  "oracle"
+ ],
+ "rq4_means": {
+  "oracle": {
+   "gmean": 0.77,
+   "auc": 0.862,
+   "r1": 0.75,
+   "r0": 0.8,
+   "f1": 0.725,
+   "mcc": 0.537,
+   "recall20e": 0.637,
+   "popt": 0.893,
+   "ifa": 2.111
+  },
+  "dual_W30_k50": {
+   "gmean": 0.735,
+   "auc": 0.808,
+   "r1": 0.768,
+   "r0": 0.709,
+   "f1": 0.707,
+   "mcc": 0.458,
+   "recall20e": 0.618,
+   "popt": 0.877,
+   "ifa": 4.756
+  },
+  "lawm_soft_W30": {
+   "gmean": 0.728,
+   "auc": 0.796,
+   "r1": 0.681,
+   "r0": 0.789,
+   "f1": 0.69,
+   "mcc": 0.458,
+   "recall20e": 0.597,
+   "popt": 0.859,
+   "ifa": 2.733
+  },
+  "odasc_W30_t0.8": {
+   "gmean": 0.718,
+   "auc": 0.788,
+   "r1": 0.684,
+   "r0": 0.765,
+   "f1": 0.679,
+   "mcc": 0.433,
+   "recall20e": 0.594,
+   "popt": 0.858,
+   "ifa": 3.067
+  },
+  "wait_W90": {
+   "gmean": 0.716,
+   "auc": 0.787,
+   "r1": 0.645,
+   "r0": 0.807,
+   "f1": 0.671,
+   "mcc": 0.439,
+   "recall20e": 0.599,
+   "popt": 0.86,
+   "ifa": 13.756
+  },
+  "orb_W90": {
+   "gmean": 0.706,
+   "auc": 0.777,
+   "r1": 0.634,
+   "r0": 0.79,
+   "f1": 0.649,
+   "mcc": 0.405,
+   "recall20e": 0.587,
+   "popt": 0.853,
+   "ifa": 12.667
+  },
+  "wait_W30": {
+   "gmean": 0.687,
+   "auc": 0.783,
+   "r1": 0.554,
+   "r0": 0.863,
+   "f1": 0.631,
+   "mcc": 0.426,
+   "recall20e": 0.584,
+   "popt": 0.849,
+   "ifa": 2.4
+  },
+  "nowait": {
+   "gmean": 0.648,
+   "auc": 0.774,
+   "r1": 0.476,
+   "r0": 0.899,
+   "f1": 0.578,
+   "mcc": 0.399,
+   "recall20e": 0.566,
+   "popt": 0.833,
+   "ifa": 1.978
+  }
+ },
+ "rq4_confirmatory_H6": [
+  {
+   "proposed": "odasc_W30_t0.8",
+   "baseline": "wait_W90",
+   "n_projects": 9,
+   "mean_diff": 0.0012,
+   "ci95": [
+    -0.0117,
+    0.0117
+   ],
+   "wins": 6,
+   "losses": 3,
+   "wilcoxon_p": 0.5703125,
+   "paired_t_p": 0.8618882859627292,
+   "rank_biserial": 0.244,
+   "holm_p": 0.6015625,
+   "G5_pass": false,
+   "H6_pass": false
+  },
+  {
+   "proposed": "odasc_W30_t0.8",
+   "baseline": "orb_W90",
+   "n_projects": 9,
+   "mean_diff": 0.0114,
+   "ci95": [
+    -0.0071,
+    0.0297
+   ],
+   "wins": 6,
+   "losses": 3,
+   "wilcoxon_p": 0.30078125,
+   "paired_t_p": 0.2900614865143757,
+   "rank_biserial": 0.422,
+   "holm_p": 0.6015625,
+   "G5_pass": false,
+   "H6_pass": false
+  }
+ ],
+ "rq4_descriptive_dual": [
+  {
+   "proposed": "dual_W30_k50",
+   "baseline": "wait_W90",
+   "n_projects": 9,
+   "mean_diff": 0.0186,
+   "ci95": [
+    -0.0033,
+    0.0404
+   ],
+   "wins": 6,
+   "losses": 3,
+   "wilcoxon_p": 0.203125,
+   "paired_t_p": 0.15757963053946636,
+   "rank_biserial": 0.511,
+   "holm_p": 0.203125,
+   "G5_pass": false
+  },
+  {
+   "proposed": "dual_W30_k50",
+   "baseline": "orb_W90",
+   "n_projects": 9,
+   "mean_diff": 0.0288,
+   "ci95": [
+    0.0063,
+    0.0521
+   ],
+   "wins": 8,
+   "losses": 1,
+   "wilcoxon_p": 0.0546875,
+   "paired_t_p": 0.048525306715819075,
+   "rank_biserial": 0.733,
+   "holm_p": 0.1640625,
+   "G5_pass": false
+  },
+  {
+   "proposed": "dual_W30_k50",
+   "baseline": "odasc_W30_t0.8",
+   "n_projects": 9,
+   "mean_diff": 0.0175,
+   "ci95": [
+    0.003,
+    0.0323
+   ],
+   "wins": 8,
+   "losses": 1,
+   "wilcoxon_p": 0.0546875,
+   "paired_t_p": 0.05957730615487514,
+   "rank_biserial": 0.733,
+   "holm_p": 0.1640625,
+   "G5_pass": false
+  }
+ ],
+ "rq4_descriptive_lawm": [
+  {
+   "proposed": "lawm_soft_W30",
+   "baseline": "wait_W90",
+   "n_projects": 9,
+   "mean_diff": 0.0113,
+   "ci95": [
+    0.0028,
+    0.0209
+   ],
+   "wins": 7,
+   "losses": 2,
+   "wilcoxon_p": 0.0546875,
+   "paired_t_p": 0.05189217546020266,
+   "rank_biserial": 0.733,
+   "holm_p": 0.1640625,
+   "G5_pass": false
+  },
+  {
+   "proposed": "lawm_soft_W30",
+   "baseline": "orb_W90",
+   "n_projects": 9,
+   "mean_diff": 0.0215,
+   "ci95": [
+    0.0028,
+    0.0433
+   ],
+   "wins": 6,
+   "losses": 3,
+   "wilcoxon_p": 0.09765625,
+   "paired_t_p": 0.08509184734149532,
+   "rank_biserial": 0.644,
+   "holm_p": 0.1953125,
+   "G5_pass": false
+  },
+  {
+   "proposed": "lawm_soft_W30",
+   "baseline": "odasc_W30_t0.8",
+   "n_projects": 9,
+   "mean_diff": 0.0102,
+   "ci95": [
+    0.0011,
+    0.0202
+   ],
+   "wins": 6,
+   "losses": 3,
+   "wilcoxon_p": 0.203125,
+   "paired_t_p": 0.09085919816656027,
+   "rank_biserial": 0.511,
+   "holm_p": 0.203125,
+   "G5_pass": false
+  }
+ ],
+ "rq5_fabric_spread_at05": [
+  0.474,
+  0.676
+ ],
+ "rq5_fabric_spread_bestthr": [
+  0.668,
+  0.717
+ ],
+ "rq5_neutron_spread_at05": [
+  0.246,
+  0.819
+ ],
+ "rq5_neutron_spread_bestthr": [
+  0.765,
+  0.843
+ ],
+ "rq5_cabral_means": {
+  "law_lagakos_model_gmax_lat": 0.696,
+  "odasc_W15_gmax_lat": 0.695,
+  "odasc_W30": 0.695,
+  "wait_W30_gmax_lat": 0.676,
+  "orb_W90": 0.658,
+  "wait_W90": 0.654,
+  "nowait": 0.429,
+  "oracle": 0.715
+ },
+ "rq5_tests": [
+  {
+   "proposed": "law_lagakos_model_gmax_lat",
+   "baseline": "nowait",
+   "n_projects": 10,
+   "mean_diff": 0.267,
+   "ci95": [
+    0.2165,
+    0.3199
+   ],
+   "wins": 10,
+   "losses": 0,
+   "wilcoxon_p": 0.001953125,
+   "paired_t_p": 5.019410082692971e-06,
+   "rank_biserial": 1.0,
+   "holm_p": 0.01171875,
+   "G5_pass": true
+  },
+  {
+   "proposed": "law_lagakos_model_gmax_lat",
+   "baseline": "wait_W90",
+   "n_projects": 10,
+   "mean_diff": 0.0417,
+   "ci95": [
+    0.0258,
+    0.0575
+   ],
+   "wins": 9,
+   "losses": 1,
+   "wilcoxon_p": 0.00390625,
+   "paired_t_p": 0.000941668170484443,
+   "rank_biserial": 0.964,
+   "holm_p": 0.01953125,
+   "G5_pass": true
+  },
+  {
+   "proposed": "law_lagakos_model_gmax_lat",
+   "baseline": "orb_W90",
+   "n_projects": 10,
+   "mean_diff": 0.0377,
+   "ci95": [
+    0.0216,
+    0.0511
+   ],
+   "wins": 9,
+   "losses": 1,
+   "wilcoxon_p": 0.005859375,
+   "paired_t_p": 0.0011187150714508604,
+   "rank_biserial": 0.927,
+   "holm_p": 0.01953125,
+   "G5_pass": true
+  },
+  {
+   "proposed": "law_lagakos_model_gmax_lat",
+   "baseline": "odasc_W30",
+   "n_projects": 10,
+   "mean_diff": 0.0009,
+   "ci95": [
+    -0.0086,
+    0.0114
+   ],
+   "wins": 6,
+   "losses": 4,
+   "wilcoxon_p": 0.76953125,
+   "paired_t_p": 0.8634546291541089,
+   "rank_biserial": 0.127,
+   "holm_p": 1.0,
+   "G5_pass": false
+  },
+  {
+   "proposed": "law_lagakos_model_gmax_lat",
+   "baseline": "wait_W30_gmax_lat",
+   "n_projects": 10,
+   "mean_diff": 0.0202,
+   "ci95": [
+    0.0115,
+    0.0289
+   ],
+   "wins": 9,
+   "losses": 1,
+   "wilcoxon_p": 0.00390625,
+   "paired_t_p": 0.0019154862775619945,
+   "rank_biserial": 0.964,
+   "holm_p": 0.01953125,
+   "G5_pass": true
+  },
+  {
+   "proposed": "law_lagakos_model_gmax_lat",
+   "baseline": "odasc_W15_gmax_lat",
+   "n_projects": 10,
+   "mean_diff": 0.0008,
+   "ci95": [
+    -0.005,
+    0.0067
+   ],
+   "wins": 7,
+   "losses": 3,
+   "wilcoxon_p": 0.625,
+   "paired_t_p": 0.8058545015479147,
+   "rank_biserial": 0.2,
+   "holm_p": 1.0,
+   "G5_pass": false
+  }
+ ],
+ "rq5_dev_wait_W30": 0.621,
+ "rq5_dev_wait_W30_gmax_lat": 0.744,
+ "rq5_dev_nowait": 0.385,
+ "rq5_dev_nowait_gmax_lat": 0.688,
+ "variants_logged_main": 47,
+ "variants_logged_independent_lineage": 51,
+ "runs_main": 1526,
+ "runs_independent_lineage": 996,
+ "cpu_hours_main": 29.5,
+ "cpu_hours_independent_lineage": 15.0,
+ "cpu_hours_total": 44.5,
+ "learner": {
+  "n_estimators": 150,
+  "learning_rate": 0.05,
+  "num_leaves": 31,
+  "min_child_samples": 20,
+  "subsample": 0.8,
+  "subsample_freq": 1,
+  "colsample_bytree": 0.8,
+  "verbose": -1,
+  "n_jobs": 1,
+  "update_every": 100,
+  "warmup": 500,
+  "eval_end_gap_days": 365,
+  "thr_window": 2000,
+  "mature_age_days": 365,
+  "bootstrap_resamples": 10000,
+  "min_commits_apachejit": 2000
+ },
+ "rq2_dev_means": {
+  "decomp_L1_W30": 0.785,
+  "decomp_L2_W30": 0.769,
+  "decomp_L1_W90": 0.746,
+  "wait_W30": 0.621,
+  "wait_W90": 0.709,
+  "oracle": 0.794
+ }
+}

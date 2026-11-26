@@ -109,3 +109,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-25T21:47:57+00:00** — Wrote SUBMISSION_READINESS.md in answer to the owner's request for a final submission
   - Reason: No manuscript is handed out as a 'better method' paper because G5 fails on 3 confirmation sets; two honest routes documented (empirical decomposition paper vs plan_v8 iteration).
+
+- **2026-11-26T12:18:15+00:00** — Owner chose Route A (2026-11-26): write an empirical/diagnostic manuscript for JKSU-CIS from existing verified results
+  - Reason: Explicit owner instruction in reply to SUBMISSION_READINESS.md; it supersedes the 'keep iterating, do not hand out a paper' directive for this deliverable. Integrity rules unchanged: only claims backed by result files; G5 'method beats ODaSC' is NOT claimed.

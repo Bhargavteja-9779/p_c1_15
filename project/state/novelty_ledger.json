@@ -1769,6 +1769,24 @@
       "does_not": "UNVERIFIED",
       "threat": "UNVERIFIED - open full text before writing",
       "source_session": "magical-bardeen 2026-11-24"
+    },
+    {
+      "doi": "10.1109/TSE.2012.70",
+      "title": "A large-scale empirical study of just-in-time quality assurance",
+      "year": 2012,
+      "opened": "abstract only (OpenAlex) 2026-11-26T12:21:17+00:00",
+      "does": "14 change metrics for JIT-QA (feature set used here)",
+      "does_not": "no verification latency modelling",
+      "threat": "LOW"
+    },
+    {
+      "doi": "10.1145/3524842.3527996",
+      "title": "ApacheJIT: a large dataset for just-in-time defect prediction",
+      "year": 2022,
+      "opened": "abstract only (OpenAlex) 2026-11-26T12:21:17+00:00",
+      "does": "ApacheJIT: 106k Apache commits labelled with SZZ + bug-fix links (dataset used for fresh confirmation)",
+      "does_not": "no verification latency modelling",
+      "threat": "LOW"
     }
   ],
   "claims": [

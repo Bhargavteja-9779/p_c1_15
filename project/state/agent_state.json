@@ -1,8 +1,8 @@
 {
   "status": "RUNNING",
   "cycle": 3,
-  "phase": "PHASE5_RUN",
-  "step": "cycle 3: E8 analysed (H6 fail, H3 replicated); plan_v8 dev round on dual denoiser",
+  "phase": "PAPER_ROUTE_A",
+  "step": "Route A manuscript drafted + strict audit passed; review panel (G10) round 1 next",
   "pivots": 0,
   "topic_id": null,
   "journal": "JKSU-CIS (Springer Nature, ISSN 1319-1578, IF 6.4 2025; turnaround median 71\u201374 d, marginal)",
@@ -29,7 +29,7 @@
     ]
   },
   "seeds_confirm_fixed_at": "2026-11-24 (project start; never change)",
-  "updated": "2026-11-25T21:37:55+00:00",
+  "updated": "2026-11-26T12:26:53+00:00",
   "topic": "Verification-latency-aware online JIT-SDP: latency-aware weighting (LAW) of provisionally-clean commits",
   "hypothesis": "LAW beats the best tuned waiting-time baseline by >=0.02 G-mean on 10 held-out projects (Holm p<0.05)"
 }

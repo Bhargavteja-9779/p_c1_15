@@ -1,11 +1,11 @@
 # HANDOFF — read this first
-*Auto-generated 2026-11-25T21:47:57+00:00 by scripts/write_handoff.py*
+*Auto-generated 2026-11-26T12:26:53+00:00 by scripts/write_handoff.py*
 
 ## READ ALSO: USER_DIRECTIVES.md (owner standing orders)
 
 ## Where we are
-- **Status:** RUNNING   **Cycle:** 3 / 12   **Phase:** PHASE5_RUN   **Pivots:** 0 / 3
-- **Step:** cycle 3: E8 analysed (H6 fail, H3 replicated); plan_v8 dev round on dual denoiser
+- **Status:** RUNNING   **Cycle:** 3 / 12   **Phase:** PAPER_ROUTE_A   **Pivots:** 0 / 3
+- **Step:** Route A manuscript drafted + strict audit passed; review panel (G10) round 1 next
 - **Last action:** E8 done and analysed; gates G5/G7 updated; journal RESULT
 - **NEXT ACTION:** 1) Dev-only: diagnose dual on nova (results/diag_dev/dual_nova_seed0.txt), design plan_v8 (latency-corrected neighbour posterior r_S = rS/(1-r+rS); combination rule) BEFORE running; grid on Cabral dev only. 2) Find an untouched confirmation dataset (e.g. other JIT datasets with fix dates; ApacheJIT and Cabral test are USED). 3) Update novelty score + blind review. 4) E3 (144 skipped_budget) low priority.
 
@@ -16,7 +16,7 @@
 ## Running right now
 - Queue (full): {'done': 1526, 'skipped_budget': 144, 'skipped_plan': 117}; running jobs: none
 - Processes: `none`
-- Heartbeat age: 718s
+- Heartbeat age: 53454s
 
 ## Compute
 - Cycle 3: 3.31 h / 15 h   Global: 29.50 h / 120 h (CPU-hours; machine has no GPU)
@@ -37,7 +37,6 @@
 | G11 | unknown |  |
 
 ## Last 10 decisions
-- 2026-11-25T13:34:47+00:00: Session magical-bardeen resumed 2026-11-25: adopted zen-cray-ajbt81 state (most advanced: cycle 2, plan_v6 E0e running, plan_v7 pre-registered) into branch claude/magical-bardeen-9yglkz via merge -s ours; zen-cray's heartbeat was 12 min stale (session presumed stopped)
 - 2026-11-25T13:34:47+00:00: Added scripts/freeze_v6.py and enqueue E8 (plan_v7 ApacheJIT confirmation, exactly the plan_v7 method list); ApacheJIT downloaded and sha256-verified; smoke test on the first 1200 kafka commits checked only that every method runs (no metrics inspected)
 - 2026-11-25T14:53:00+00:00: Owner asked to continue from the most recent branch: adopted claude/magical-bardeen-9yglkz (cycle 2, heartbeat 28 min stale → session presumed stopped) into claude/keen-edison-jo222n via merge -s ours (keen-edison history kept). Keen-edison's parallel cycle-1 dev selection (E0b/E0c calibration/fsc/fixed-rate grids, dev only, never run on test) is kept under archive/keen_edison_cycle1/ for reference; its compute is not counted in this lineage's budget.json. Runners + autocommit relaunched on keen-edison.
 - 2026-11-25T20:19:39+00:00: Cycle 3 started (cycle-2 budget 15 h exhausted). Re-queued 3 E0e nova jobs (skipped_budget); E3 (144 jobs, Cabral test robustness, test set already declared 'used' by plan_v7) stays skipped_budget until E8 is done
@@ -47,6 +46,7 @@
 - 2026-11-25T21:37:55+00:00: Gates: G5 stays fail (H6 failed on fresh data); G7 -> pass (H3 replicated on ApacheJIT 9/9). ApacheJIT declared used for confirmation. Next round (plan_v8, dev only): fix dual's nova failure with a principled latency-corrected neighbour posterior, then find an untouched confirmation dataset
 - 2026-11-25T21:47:57+00:00: Adopted keen-edison (cycle 3) into zealous-lamport; zealous cycle-1 lineage archived; dreamy-fermat (cycle 2 copy of zealous) left on its branch
 - 2026-11-25T21:47:57+00:00: Wrote SUBMISSION_READINESS.md in answer to the owner's request for a final submission
+- 2026-11-26T12:18:15+00:00: Owner chose Route A (2026-11-26): write an empirical/diagnostic manuscript for JKSU-CIS from existing verified results
 
 ## Last failures (journal entries)
 - journal/ENTRIES/20261124T040516_FAILURE_the_pre_specified_law_method_loses_to_a_tuned_wait.md
