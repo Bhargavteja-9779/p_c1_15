@@ -1,0 +1,351 @@
+{
+ "n_commits_scanned": 170,
+ "n_configs_full": 27,
+ "n_configs_quick_only": 3,
+ "rows": [
+  {
+   "experiment": "E1",
+   "variant": "awt_e0.4",
+   "mode": "full",
+   "projects": 10,
+   "runs": 50,
+   "branches": "keen-edison, magical-bardeen, zealous-lamport, zen-cray"
+  },
+  {
+   "experiment": "E1",
+   "variant": "law_lagakos_model",
+   "mode": "full",
+   "projects": 10,
+   "runs": 50,
+   "branches": "keen-edison, magical-bardeen, zealous-lamport, zen-cray"
+  },
+  {
+   "experiment": "E1",
+   "variant": "law_lagakos_model_gmax_lat",
+   "mode": "full",
+   "projects": 10,
+   "runs": 50,
+   "branches": "dreamy-fermat"
+  },
+  {
+   "experiment": "E1",
+   "variant": "law_lagakos_model_gmax_lat",
+   "mode": "quick",
+   "projects": 1,
+   "runs": 1,
+   "branches": "dreamy-fermat"
+  },
+  {
+   "experiment": "E1",
+   "variant": "nowait",
+   "mode": "full",
+   "projects": 10,
+   "runs": 50,
+   "branches": "dreamy-fermat, keen-edison, magical-bardeen, zealous-lamport, zen-cray"
+  },
+  {
+   "experiment": "E1",
+   "variant": "nowait",
+   "mode": "quick",
+   "projects": 1,
+   "runs": 1,
+   "branches": "dreamy-fermat"
+  },
+  {
+   "experiment": "E1",
+   "variant": "odasc_W15_gmax_lat",
+   "mode": "full",
+   "projects": 10,
+   "runs": 50,
+   "branches": "dreamy-fermat"
+  },
+  {
+   "experiment": "E1",
+   "variant": "odasc_W15_gmax_lat",
+   "mode": "quick",
+   "projects": 1,
+   "runs": 1,
+   "branches": "dreamy-fermat"
+  },
+  {
+   "experiment": "E1",
+   "variant": "odasc_W30",
+   "mode": "full",
+   "projects": 10,
+   "runs": 50,
+   "branches": "dreamy-fermat"
+  },
+  {
+   "experiment": "E1",
+   "variant": "odasc_W30",
+   "mode": "quick",
+   "projects": 1,
+   "runs": 1,
+   "branches": "dreamy-fermat"
+  },
+  {
+   "experiment": "E1",
+   "variant": "oracle",
+   "mode": "full",
+   "projects": 10,
+   "runs": 50,
+   "branches": "dreamy-fermat, keen-edison, magical-bardeen, zealous-lamport, zen-cray"
+  },
+  {
+   "experiment": "E1",
+   "variant": "oracle",
+   "mode": "quick",
+   "projects": 1,
+   "runs": 1,
+   "branches": "dreamy-fermat"
+  },
+  {
+   "experiment": "E1",
+   "variant": "orb_W90",
+   "mode": "full",
+   "projects": 10,
+   "runs": 50,
+   "branches": "dreamy-fermat, keen-edison, magical-bardeen, zealous-lamport, zen-cray"
+  },
+  {
+   "experiment": "E1",
+   "variant": "orb_W90",
+   "mode": "quick",
+   "projects": 1,
+   "runs": 1,
+   "branches": "dreamy-fermat"
+  },
+  {
+   "experiment": "E1",
+   "variant": "wait_W30_gmax_lat",
+   "mode": "full",
+   "projects": 10,
+   "runs": 50,
+   "branches": "dreamy-fermat"
+  },
+  {
+   "experiment": "E1",
+   "variant": "wait_W30_gmax_lat",
+   "mode": "quick",
+   "projects": 1,
+   "runs": 1,
+   "branches": "dreamy-fermat"
+  },
+  {
+   "experiment": "E1",
+   "variant": "wait_W90",
+   "mode": "full",
+   "projects": 10,
+   "runs": 50,
+   "branches": "dreamy-fermat, keen-edison, magical-bardeen, zealous-lamport, zen-cray"
+  },
+  {
+   "experiment": "E1",
+   "variant": "wait_W90",
+   "mode": "quick",
+   "projects": 1,
+   "runs": 1,
+   "branches": "dreamy-fermat"
+  },
+  {
+   "experiment": "E2",
+   "variant": "law_lagakos_base",
+   "mode": "full",
+   "projects": 3,
+   "runs": 13,
+   "branches": "keen-edison, magical-bardeen, zealous-lamport, zen-cray"
+  },
+  {
+   "experiment": "E2",
+   "variant": "law_lagakos_base_gmax_lat",
+   "mode": "full",
+   "projects": 5,
+   "runs": 25,
+   "branches": "dreamy-fermat"
+  },
+  {
+   "experiment": "E2",
+   "variant": "law_lagakos_base_gmax_lat",
+   "mode": "quick",
+   "projects": 1,
+   "runs": 1,
+   "branches": "dreamy-fermat"
+  },
+  {
+   "experiment": "E2",
+   "variant": "law_lagakos_model",
+   "mode": "full",
+   "projects": 5,
+   "runs": 22,
+   "branches": "dreamy-fermat"
+  },
+  {
+   "experiment": "E2",
+   "variant": "law_lagakos_model",
+   "mode": "quick",
+   "projects": 1,
+   "runs": 1,
+   "branches": "dreamy-fermat"
+  },
+  {
+   "experiment": "E2",
+   "variant": "law_naive_base",
+   "mode": "full",
+   "projects": 2,
+   "runs": 10,
+   "branches": "keen-edison, magical-bardeen, zealous-lamport, zen-cray"
+  },
+  {
+   "experiment": "E2",
+   "variant": "law_naive_model",
+   "mode": "full",
+   "projects": 2,
+   "runs": 10,
+   "branches": "keen-edison, magical-bardeen, zealous-lamport, zen-cray"
+  },
+  {
+   "experiment": "E2",
+   "variant": "law_naive_model_gmax_lat",
+   "mode": "full",
+   "projects": 4,
+   "runs": 20,
+   "branches": "dreamy-fermat"
+  },
+  {
+   "experiment": "E2",
+   "variant": "law_naive_model_gmax_lat",
+   "mode": "quick",
+   "projects": 1,
+   "runs": 1,
+   "branches": "dreamy-fermat"
+  },
+  {
+   "experiment": "E2",
+   "variant": "nowait_gmax_lat",
+   "mode": "full",
+   "projects": 4,
+   "runs": 20,
+   "branches": "dreamy-fermat"
+  },
+  {
+   "experiment": "E2",
+   "variant": "nowait_gmax_lat",
+   "mode": "quick",
+   "projects": 1,
+   "runs": 1,
+   "branches": "dreamy-fermat"
+  },
+  {
+   "experiment": "E3",
+   "variant": "law_lagakos_model_ds2",
+   "mode": "full",
+   "projects": 3,
+   "runs": 15,
+   "branches": "keen-edison, magical-bardeen, zealous-lamport, zen-cray"
+  },
+  {
+   "experiment": "E3",
+   "variant": "law_lagakos_model_gmax_lat_ds2",
+   "mode": "quick",
+   "projects": 1,
+   "runs": 1,
+   "branches": "dreamy-fermat"
+  },
+  {
+   "experiment": "E3",
+   "variant": "nowait_ds2",
+   "mode": "full",
+   "projects": 3,
+   "runs": 15,
+   "branches": "keen-edison, magical-bardeen, zealous-lamport, zen-cray"
+  },
+  {
+   "experiment": "E3",
+   "variant": "odasc_W15_gmax_lat_ds2",
+   "mode": "quick",
+   "projects": 1,
+   "runs": 1,
+   "branches": "dreamy-fermat"
+  },
+  {
+   "experiment": "E3",
+   "variant": "odasc_W30_ds2",
+   "mode": "quick",
+   "projects": 1,
+   "runs": 1,
+   "branches": "dreamy-fermat"
+  },
+  {
+   "experiment": "E3",
+   "variant": "orb_W90_ds2",
+   "mode": "full",
+   "projects": 3,
+   "runs": 15,
+   "branches": "keen-edison, magical-bardeen, zealous-lamport, zen-cray"
+  },
+  {
+   "experiment": "E3",
+   "variant": "wait_W90_ds2",
+   "mode": "full",
+   "projects": 3,
+   "runs": 11,
+   "branches": "keen-edison, magical-bardeen, zealous-lamport, zen-cray"
+  },
+  {
+   "experiment": "E3",
+   "variant": "wait_W90_ds2",
+   "mode": "quick",
+   "projects": 1,
+   "runs": 1,
+   "branches": "dreamy-fermat"
+  },
+  {
+   "experiment": "E3b",
+   "variant": "decomp_L1_W30",
+   "mode": "full",
+   "projects": 10,
+   "runs": 50,
+   "branches": "keen-edison, magical-bardeen, zealous-lamport, zen-cray"
+  },
+  {
+   "experiment": "E3b",
+   "variant": "decomp_L1_W90",
+   "mode": "full",
+   "projects": 10,
+   "runs": 50,
+   "branches": "keen-edison, magical-bardeen, zealous-lamport, zen-cray"
+  },
+  {
+   "experiment": "E3b",
+   "variant": "decomp_L2_W30",
+   "mode": "full",
+   "projects": 10,
+   "runs": 50,
+   "branches": "keen-edison, magical-bardeen, zealous-lamport, zen-cray"
+  },
+  {
+   "experiment": "E3b",
+   "variant": "decomp_L2_W90",
+   "mode": "full",
+   "projects": 10,
+   "runs": 50,
+   "branches": "keen-edison, magical-bardeen, zealous-lamport, zen-cray"
+  },
+  {
+   "experiment": "E3b",
+   "variant": "wait_W30",
+   "mode": "full",
+   "projects": 10,
+   "runs": 50,
+   "branches": "keen-edison, magical-bardeen, zealous-lamport, zen-cray"
+  },
+  {
+   "experiment": "E3b",
+   "variant": "wait_W90",
+   "mode": "full",
+   "projects": 10,
+   "runs": 50,
+   "branches": "keen-edison, magical-bardeen, zealous-lamport, zen-cray"
+  }
+ ]
+}

@@ -8,7 +8,8 @@ SRC = ["results/paper_numbers.json", "results/statistics.json", "paper/tables/*.
        "results/diag_survival_dev.txt", "state/frozen_config_v6.json", "tables/E0b_dev_tuning.csv", "tables/E0_dev_tuning.csv",
        "tables/rq1_*.csv", "archive/zealous_lamport_cycle1/results/statistics.json",
        "archive/zealous_lamport_cycle1/results/diag/operating_point_dev.csv", "archive/zealous_lamport_cycle1/tables/E0_dev_tuning.csv",
-       "paper/references_checked.json"]
+       "paper/references_checked.json", "results/review1/shapley.json", "results/review1/test_set_usage.json",
+       "experiments/plan_v8_review1.yaml"]
 pool = set()
 for pat in SRC:
     for p in glob.glob(os.path.join(ROOT, pat)):
@@ -16,7 +17,7 @@ for pat in SRC:
             try: pool.add(float(m))
             except ValueError: pass
 body = open(os.path.join(ROOT, "paper", "manuscript.md")).read().split("## References")[0]
-body = re.sub(r"(?m)^#+ .*$", " ", body)
+body = re.sub(r"(?m)^#+ .*$", " ", body).replace("\u2212", "-").replace("SHA-256", "SHA")
 body = re.sub(r"https?://\S+|10\.\d{4,}/\S+|`[^`]*`|\(figures/[^)]*\)", " ", body)
 bad = []
 body = re.sub(r"(?<=\d),(?=\d{3}\b)", "", body)

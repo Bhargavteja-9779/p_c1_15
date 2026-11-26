@@ -28,8 +28,10 @@ Each job is one prequential simulation (`src/jit.py: simulate`); results are app
 **Fast path (no simulation, ~1 min):** all simulation outputs are committed (`results/raw_results.jsonl`, `results/review1/raw.jsonl`, `archive/zealous_lamport_cycle1/results/raw_results.jsonl`). Regenerate every table, figure and number of the manuscript and check them:
 ```bash
 python scripts/get_data.py            # Cabral (ARFF checksums asserted) + ApacheJIT (zip checksum asserted)
-python scripts/review1_shapley.py     # 2x2 / Shapley decomposition (Table 3b)
+python scripts/review1_shapley.py     # 2x2 / Shapley decomposition, W=30 and W=90 (Table 4)
 python scripts/paper_numbers.py       # paper/tables/*.md, paper/figures/*.png, results/paper_numbers.json
+python scripts/test_set_usage.py      # Supplementary Table S3: every configuration ever run on the Cabral test projects (scans all branches)
+python scripts/build_references.py    # reference list from Crossref metadata + citation cross-check
 python scripts/audit_paper_strict.py  # every number in the manuscript traced to a declared source (must print Unmatched: 0)
 python tests/test_no_future.py && python tests/test_no_future_threshold_rules.py   # leakage tests
 ```
@@ -39,12 +41,12 @@ python tests/test_no_future.py && python tests/test_no_future_threshold_rules.py
 | Manuscript item | Experiments | Commands | approx. CPU-h |
 |---|---|---|---|
 | Dev tuning (Sect. 4.3) | E0, E0b, E0c, E0d, E0e (dev projects) | `python scripts/enqueue.py E0` (same for E0b, E0c, E0d, E0e) `&& bash scripts/launch_runner.sh 3`, then `python scripts/freeze_config.py`, `python scripts/freeze_v5.py`, `python scripts/freeze_v6.py` | 12 |
-| Table 4 (RQ3) | E1 (Cabral test) | `python scripts/enqueue.py E1 && bash scripts/launch_runner.sh 3` | 4 |
-| Table 3, Cabral column (RQ2) | E3b (Cabral test) | `python scripts/enqueue.py E3b && bash scripts/launch_runner.sh 3` | 4 |
-| Table 3, ApacheJIT column; Table 5 (RQ4) | E8 (ApacheJIT) | `python scripts/enqueue.py E8 && bash scripts/launch_runner.sh 3` | 3 |
-| Tables 3b/8/9, A5 (review round 1) | A2-A5 (plan_v8) | `python scripts/review1_runs.py 3` | 8 |
-| Table 6 (RQ5 diagnostic) | lineage 2, dev | `python archive/zealous_lamport_cycle1/scripts/diag_operating_point.py fabric,neutron` (run from `archive/zealous_lamport_cycle1/` with `data/` linked) | 0.2 |
-| Table 7 (RQ5 confirmation, Cabral) | lineage 2, E1 | `python scripts/reproduce_table7.py` (compares with the archived values) | 3 |
+| Table 6 (RQ3) | E1 (Cabral test) | `python scripts/enqueue.py E1 && bash scripts/launch_runner.sh 3` | 4 |
+| Tables 3-4, Cabral (RQ2) | E3b (Cabral test) | `python scripts/enqueue.py E3b && bash scripts/launch_runner.sh 3` | 4 |
+| Tables 3-4, ApacheJIT W=30; Table 7 (RQ4) | E8 (ApacheJIT) | `python scripts/enqueue.py E8 && bash scripts/launch_runner.sh 3` | 3 |
+| Tables 3-4 ApacheJIT W=90 (A2), Table 5 / Fig. 3 (A3), Table S4 (A4), Tables 10-11 (A5) | plan_v8 | `python scripts/review1_runs.py 3` | 5 |
+| Table 8 (RQ5 diagnostic) | lineage 2, dev | `python archive/zealous_lamport_cycle1/scripts/diag_operating_point.py fabric,neutron` (run from `archive/zealous_lamport_cycle1/` with `data/` linked) | 0.2 |
+| Table 9 (RQ5 confirmation, Cabral) | lineage 2, E1 | `python scripts/reproduce_table7.py` (compares with the archived values) | 3 |
 
 Then run the fast path. `run_all.py --mode quick` is a smoke test of the queue infrastructure (a few minutes).
 Plans that fixed each configuration before its confirmatory run: `experiments/plan_v1.yaml` … `plan_v8_review1.yaml` (main lineage) and `archive/zealous_lamport_cycle1/experiments/plan_v1-v3.yaml` (lineage 2). Every configuration evaluated is listed in `state/variants_tried.csv` and `archive/zealous_lamport_cycle1/state/variants_tried.csv`.

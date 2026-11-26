@@ -209,6 +209,16 @@ if RV.exists():
                                         wilcoxon_p=float(_st.wilcoxon(g.values).pvalue)))
         if res:
             A3 = pd.DataFrame(res); A3.to_markdown(P / "tables" / "T9_A3_age_strata.md", index=False); N["a3"] = res
+            fig, axs = plt.subplots(1, 2, figsize=(8, 3.0), sharey=True)
+            bands = ["30-180 d", "180-365 d", "365-730 d", "730-inf d"]; labs = ["30-180", "180-365", "365-730", ">730"]
+            for ax, metric in zip(axs, ["G-mean", "AUC"]):
+                for k, (fam, col) in enumerate([("Cabral test", "#1f5fa8"), ("ApacheJIT", "#c0392b")]):
+                    vals = [A3[(A3.family == fam) & (A3.metric == metric) & (A3.age_band == b)].share_of_full_relabel_gain.iloc[0] for b in bands]
+                    ax.bar(np.arange(4) + (k - 0.5) * 0.38, vals, width=0.38, color=col, label=fam)
+                ax.axhline(0, c="k", lw=.6); ax.axhline(1, c="grey", lw=.6, ls="--")
+                ax.set_xticks(range(4)); ax.set_xticklabels(labs, fontsize=8); ax.set_xlabel(f"age of relabelled commits (days), {metric}", fontsize=8)
+            axs[0].set_ylabel("share of full true-label gain"); axs[1].legend(fontsize=7, frameon=False)
+            fig.tight_layout(); fig.savefig(P / "figures" / "F3_age_strata.png", dpi=200); plt.close(fig)
     # A4: evaluation-window sensitivity (exclude last 730 days)
     if (rv.analysis == "A4").sum() >= 190:
         res = {}
@@ -254,6 +264,10 @@ def _cmp0(a, b, label):
 N["lineage2_odasc_tests"] = [_cmp0(_l2.loc["odasc_W30"], _l2.loc["wait_W90"], "lineage-2 ODaSC-W30 vs Wait-90 (Cabral test)"),
                              _cmp0(_l2.loc["odasc_W30"], _l2.loc["orb_W90"], "lineage-2 ODaSC-W30 vs ORB-W90 (Cabral test)")]
 
+_e8 = df[(df.experiment == "E8") & df.project.isin(AJ)].groupby(["variant", "project"]).gmean.mean().unstack()[AJ]
+_d = (_e8.loc["odasc_W30_t0.8"] - _e8.loc["wait_W90"]); _n = len(_d)
+N["h6_paired_sd"] = f4(_d.std(ddof=1)); N["h6_mde_80pct_unadjusted"] = f3((_st0.t.ppf(0.975, _n - 1) + _st0.t.ppf(0.8, _n - 1)) * _d.std(ddof=1) / np.sqrt(_n))
+
 # ---------------------------------------------------------------- bookkeeping numbers
 vt = pd.read_csv(ROOT / "state" / "variants_tried.csv"); vta = pd.read_csv(ARCH / "state" / "variants_tried.csv")
 N["variants_logged_main"] = int(len(vt)); N["variants_logged_independent_lineage"] = int(len(vta))
@@ -261,6 +275,6 @@ N["runs_main"] = int(len(df)); N["runs_independent_lineage"] = int(len(da))
 b = json.load(open(ROOT / "state" / "budget.json")); N["cpu_hours_main"] = round(b.get("global_seconds", 0) / 3600, 1)
 N["cpu_hours_independent_lineage"] = round(json.load(open(ARCH / "state" / "budget.json")).get("global_seconds", 0) / 3600, 1)
 N["cpu_hours_total"] = round(N["cpu_hours_main"] + N["cpu_hours_independent_lineage"], 1)
-if RV.exists(): N["cpu_hours_review1"] = round(float(rv.wall.sum()) / 3600, 1); N["cpu_hours_total_incl_review1"] = round(N["cpu_hours_main"] + N["cpu_hours_independent_lineage"] + N["cpu_hours_review1"], 1)
+if RV.exists(): N["review1_runs"] = int(len(rv)); N["cpu_hours_review1"] = round(float(rv.wall.sum()) / 3600, 1); N["cpu_hours_total_incl_review1"] = round(N["cpu_hours_main"] + N["cpu_hours_independent_lineage"] + N["cpu_hours_review1"], 1)
 json.dump(N, open(R / "paper_numbers.json", "w"), indent=1, default=float)
 print(json.dumps({k: v for k, v in N.items() if not k.endswith("tests") and "H6" not in k and "descriptive" not in k}, indent=0, default=float)[:6000])
