@@ -22435,12 +22435,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 30,
       "started": "2026-11-28T18:06:18+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-28T18:07:08+00:00",
+      "seconds": 49.9
     },
     {
       "id": "E2_npm_law_lagakos_model_s100",
@@ -22455,12 +22457,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 30,
       "started": "2026-11-28T18:06:37+00:00",
-      "worker": 3
+      "worker": 3,
+      "finished": "2026-11-28T18:06:57+00:00",
+      "seconds": 20.0
     },
     {
       "id": "E2_npm_law_naive_model_gmax_lat_s100",
@@ -22476,10 +22480,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:07:09+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T18:07:29+00:00",
+      "seconds": 19.7
     },
     {
       "id": "E2_npm_law_lagakos_base_gmax_lat_s100",
@@ -22516,10 +22524,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:07:31+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T18:07:46+00:00",
+      "seconds": 15.4
     },
     {
       "id": "E2_npm_law_lagakos_model_s101",
@@ -22534,10 +22546,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:06:48+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T18:07:09+00:00",
+      "seconds": 21.1
     },
     {
       "id": "E2_npm_law_naive_model_gmax_lat_s101",
@@ -22553,10 +22569,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:07:12+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T18:07:31+00:00",
+      "seconds": 18.6
     },
     {
       "id": "E2_npm_law_lagakos_base_gmax_lat_s101",
@@ -22593,10 +22613,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:07:37+00:00",
+      "worker": 3
     },
     {
       "id": "E2_npm_law_lagakos_model_s102",
@@ -22611,10 +22633,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:06:51+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T18:07:12+00:00",
+      "seconds": 21.5
     },
     {
       "id": "E2_npm_law_naive_model_gmax_lat_s102",
@@ -22630,10 +22656,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:07:16+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T18:07:37+00:00",
+      "seconds": 20.6
     },
     {
       "id": "E2_npm_law_lagakos_base_gmax_lat_s102",
@@ -22670,10 +22700,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:07:46+00:00",
+      "worker": 0
     },
     {
       "id": "E2_npm_law_lagakos_model_s103",
@@ -22688,10 +22720,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:06:57+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T18:07:16+00:00",
+      "seconds": 19.3
     },
     {
       "id": "E2_npm_law_naive_model_gmax_lat_s103",
@@ -22707,10 +22743,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:07:26+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T18:07:47+00:00",
+      "seconds": 21.5
     },
     {
       "id": "E2_npm_law_lagakos_base_gmax_lat_s103",
@@ -22726,12 +22766,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 30,
       "started": "2026-11-28T18:06:32+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-28T18:06:48+00:00",
+      "seconds": 15.5
     },
     {
       "id": "E2_npm_nowait_gmax_lat_s103",
@@ -22745,10 +22787,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:07:47+00:00",
+      "worker": 2
     },
     {
       "id": "E2_npm_law_lagakos_model_s104",
@@ -22763,10 +22807,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:07:08+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T18:07:26+00:00",
+      "seconds": 18.1
     },
     {
       "id": "E2_npm_law_naive_model_gmax_lat_s104",
@@ -22782,10 +22830,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:07:29+00:00",
+      "worker": 1
     },
     {
       "id": "E2_npm_law_lagakos_base_gmax_lat_s104",
@@ -22801,12 +22851,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 30,
       "started": "2026-11-28T18:06:34+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-28T18:06:51+00:00",
+      "seconds": 16.5
     },
     {
       "id": "E2_npm_nowait_gmax_lat_s104",

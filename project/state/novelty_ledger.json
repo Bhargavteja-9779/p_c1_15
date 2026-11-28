@@ -1806,6 +1806,25 @@
    "claim": "C2 (Type A/C): waiting time barely denoises labels; its effect is mainly class-composition shift of recent data",
    "evidence": "tables/rq1_waiting_time_tradeoff.csv, journal SURPRISE entry",
    "status": "model-free evidence on 14 projects; needs a model-based confirmation (E3 diag)"
+  },
+  {
+   "claim": "C2: once the newest provisional negatives are handled (waiting, reweighting or latency-aware threshold), label policies differ by <= ~0.02 G-mean",
+   "closest_prior": [
+    "Cabral et al. 2019",
+    "ODaSC 2022",
+    "Recalibration vs Retraining replication package (Zenodo 24527309)"
+   ],
+   "exact_difference": "Seven policies compared under the same tuned threshold with pre-fixed seeds on two benchmarks; prior work compares one new policy against waiting",
+   "status": "supported on both benchmarks (E1 spread 0.0202; E8/E10 spread 0.0144)"
+  },
+  {
+   "claim": "C3: the ranking cost of latency lies in the newest labels",
+   "closest_prior": [
+    "Csaba et al. NeurIPS 2024",
+    "Gao & Yang 2022 multi-head delayed feedback"
+   ],
+   "exact_difference": "Per-label-age partial-oracle decomposition on JIT-SDP; neither prior work measures cost by label age",
+   "status": "pre-registered H5: supported on Cabral-test, refuted on ApacheJIT; density explanation exploratory"
   }
  ],
  "scores": [
@@ -1821,6 +1840,20 @@
    },
    "total": 12,
    "note": "After E1: tie with ODaSC; weight is Chapelle DFM; truncation estimator null; strongest finding is operating-point (threshold) effect. Blind reviewer score pending."
+  },
+  {
+   "time": "2026-11-28T18:07:37+00:00",
+   "cycle": 2,
+   "self": {
+    "differentiation": 2,
+    "mechanism": 2,
+    "evidence": 3,
+    "breadth": 3,
+    "significance": 2
+   },
+   "total": 12,
+   "note": "After E7/E8/E10: method claim dead on two benchmarks; decomposition (C3) holds on Cabral-test only; density explanation post hoc; convergence claim (C2) replicated on both benchmarks but overlaps the recalibration study. Recorded BEFORE the blind reviewer.",
+   "blind": null
   }
  ]
 }

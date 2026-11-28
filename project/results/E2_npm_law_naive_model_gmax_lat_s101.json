@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E2",
+    "project": "npm",
+    "method": "law",
+    "variant": "law_naive_model_gmax_lat",
+    "seed": 101,
+    "split": "test",
+    "delay_est": "naive",
+    "prior": "model",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.653468252998377,
+    "r0": 0.6231666039864611,
+    "r1": 0.685243328100471,
+    "rdiff": 0.062076724114009885,
+    "auc": 0.7025240246241697,
+    "mcc": 0.24554884530671836,
+    "n_eval": 6592,
+    "seconds": 18.45,
+    "n_inspected": 0,
+    "job_id": "E2_npm_law_naive_model_gmax_lat_s101",
+    "written": "2026-11-28T18:07:31+00:00",
+    "cycle": 2
+  }
+]
