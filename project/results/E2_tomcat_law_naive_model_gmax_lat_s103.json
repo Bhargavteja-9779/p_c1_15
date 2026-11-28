@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E2",
+    "project": "tomcat",
+    "method": "law",
+    "variant": "law_naive_model_gmax_lat",
+    "seed": 103,
+    "split": "test",
+    "delay_est": "naive",
+    "prior": "model",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6915880531345077,
+    "r0": 0.6314201858796674,
+    "r1": 0.7574893009985735,
+    "rdiff": 0.12606911511890606,
+    "auc": 0.7312313033510861,
+    "mcc": 0.35168178429690977,
+    "n_eval": 17173,
+    "seconds": 100.99,
+    "n_inspected": 0,
+    "job_id": "E2_tomcat_law_naive_model_gmax_lat_s103",
+    "written": "2026-11-28T18:16:28+00:00",
+    "cycle": 2
+  }
+]

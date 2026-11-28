@@ -23370,12 +23370,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 30,
       "started": "2026-11-28T18:13:06+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-28T18:14:47+00:00",
+      "seconds": 100.5
     },
     {
       "id": "E2_tomcat_law_lagakos_base_gmax_lat_s100",
@@ -23412,10 +23414,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:14:52+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T18:15:50+00:00",
+      "seconds": 57.9
     },
     {
       "id": "E2_tomcat_law_lagakos_model_s101",
@@ -23453,12 +23459,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 30,
       "started": "2026-11-28T18:13:11+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-28T18:14:52+00:00",
+      "seconds": 100.9
     },
     {
       "id": "E2_tomcat_law_lagakos_base_gmax_lat_s101",
@@ -23495,10 +23503,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:15:50+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T18:16:49+00:00",
+      "seconds": 58.9
     },
     {
       "id": "E2_tomcat_law_lagakos_model_s102",
@@ -23536,12 +23548,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 30,
       "started": "2026-11-28T18:14:13+00:00",
-      "worker": 3
+      "worker": 3,
+      "finished": "2026-11-28T18:15:53+00:00",
+      "seconds": 100.0
     },
     {
       "id": "E2_tomcat_law_lagakos_base_gmax_lat_s102",
@@ -23578,10 +23592,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:15:53+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T18:16:52+00:00",
+      "seconds": 58.5
     },
     {
       "id": "E2_tomcat_law_lagakos_model_s103",
@@ -23619,10 +23637,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:14:47+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T18:16:28+00:00",
+      "seconds": 101.0
     },
     {
       "id": "E2_tomcat_law_lagakos_base_gmax_lat_s103",
@@ -23659,10 +23681,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:16:28+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T18:17:25+00:00",
+      "seconds": 56.9
     },
     {
       "id": "E2_tomcat_law_lagakos_model_s104",
@@ -23677,12 +23703,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 30,
       "started": "2026-11-28T18:13:04+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-28T18:14:47+00:00",
+      "seconds": 103.3
     },
     {
       "id": "E2_tomcat_law_naive_model_gmax_lat_s104",
@@ -23698,10 +23726,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:14:47+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T18:16:31+00:00",
+      "seconds": 103.1
     },
     {
       "id": "E2_tomcat_law_lagakos_base_gmax_lat_s104",
@@ -23738,10 +23770,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:16:31+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T18:17:29+00:00",
+      "seconds": 58.1
     },
     {
       "id": "E2_wagtail_law_lagakos_model_s100",
@@ -23756,10 +23792,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:17:29+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T18:17:53+00:00",
+      "seconds": 23.7
     },
     {
       "id": "E2_wagtail_law_naive_model_gmax_lat_s100",
@@ -23775,10 +23815,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:17:53+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T18:18:16+00:00",
+      "seconds": 23.5
     },
     {
       "id": "E2_wagtail_law_lagakos_base_gmax_lat_s100",
@@ -23794,10 +23838,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:16:49+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T18:17:09+00:00",
+      "seconds": 20.1
     },
     {
       "id": "E2_wagtail_nowait_gmax_lat_s100",
@@ -23829,10 +23877,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:17:29+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T18:17:51+00:00",
+      "seconds": 21.7
     },
     {
       "id": "E2_wagtail_law_naive_model_gmax_lat_s101",
@@ -23848,10 +23900,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:17:56+00:00",
+      "worker": 3
     },
     {
       "id": "E2_wagtail_law_lagakos_base_gmax_lat_s101",
@@ -23867,10 +23921,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:16:52+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T18:17:13+00:00",
+      "seconds": 21.1
     },
     {
       "id": "E2_wagtail_nowait_gmax_lat_s101",
@@ -23902,10 +23960,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:17:33+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T18:17:56+00:00",
+      "seconds": 23.2
     },
     {
       "id": "E2_wagtail_law_naive_model_gmax_lat_s102",
@@ -23921,10 +23983,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:18:08+00:00",
+      "worker": 2
     },
     {
       "id": "E2_wagtail_law_lagakos_base_gmax_lat_s102",
@@ -23940,10 +24004,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:17:09+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T18:17:29+00:00",
+      "seconds": 20.4
     },
     {
       "id": "E2_wagtail_nowait_gmax_lat_s102",
@@ -23975,10 +24043,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:17:45+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T18:18:08+00:00",
+      "seconds": 23.1
     },
     {
       "id": "E2_wagtail_law_naive_model_gmax_lat_s103",
@@ -23994,10 +24066,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:18:14+00:00",
+      "worker": 0
     },
     {
       "id": "E2_wagtail_law_lagakos_base_gmax_lat_s103",
@@ -24013,10 +24087,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:17:13+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T18:17:33+00:00",
+      "seconds": 19.6
     },
     {
       "id": "E2_wagtail_nowait_gmax_lat_s103",
@@ -24048,10 +24126,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:17:51+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T18:18:14+00:00",
+      "seconds": 23.3
     },
     {
       "id": "E2_wagtail_law_naive_model_gmax_lat_s104",
@@ -24067,10 +24149,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:18:16+00:00",
+      "worker": 1
     },
     {
       "id": "E2_wagtail_law_lagakos_base_gmax_lat_s104",
@@ -24086,10 +24170,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:17:25+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T18:17:45+00:00",
+      "seconds": 20.2
     },
     {
       "id": "E2_wagtail_nowait_gmax_lat_s104",

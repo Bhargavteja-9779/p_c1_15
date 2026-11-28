@@ -79,3 +79,9 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-28T17:53:28+00:00** — H5 reported as heterogeneous (supported on Cabral-test, refuted on ApacheJIT); no post-hoc redefinition of the window is tested on these data as confirmation
   - Reason: Both benchmarks are now used; a commit-count window chosen after seeing E7 would be a forking path. Logged as conjecture for future fresh data.
+
+- **2026-11-28T18:18:12+00:00** — End of cycle 2: take the HONEST EXIT (Section 11.7) after finishing E2/E3, the manuscript, one review round, audit and reproducibility check, instead of starting cycle 3 / pivot 1
+  - Reason: G3 fails (12/25; blind 13/25) and G5 fails for the method on both benchmarks. Pivot conditions 6.5(a)-(c) hold, but the only pivot with a credible novelty path (testing the commit-density conjecture for C3) needs FRESH projects with defect-discovery times. Every public JIT dataset with discovery times found (Cabral 14, ApacheJIT) is now used; the realistic-jit-sdp and recalibration packages reuse ApacheJIT/Kamei and exclude raw data. Creating fresh data means mining new repositories with SZZ, whose label quality cannot be validated here; spending more test-set looks on used data would add forking paths (Rule 5/8). Per Rule 11 I stop and report rather than continue in a way that weakens the evidence. Global compute ceiling NOT reached (about 21 of 120 CPU-h); this exit is before the formal ceilings, and the state stays resumable (see FINAL_REPORT 'what a human needs to do').
+
+- **2026-11-28T18:18:17+00:00** — Correction to the previous entry: compute used at that time was 23.35 CPU-h global (cycle 2: 8.32 h), not about 21
+  - Reason: status.py read after writing the entry

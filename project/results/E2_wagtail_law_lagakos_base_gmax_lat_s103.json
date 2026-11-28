@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E2",
+    "project": "wagtail",
+    "method": "law",
+    "variant": "law_lagakos_base_gmax_lat",
+    "seed": 103,
+    "split": "test",
+    "delay_est": "lagakos",
+    "prior": "base",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6630057687036862,
+    "r0": 0.6505144374377697,
+    "r1": 0.6757369614512472,
+    "rdiff": 0.025222524013477465,
+    "auc": 0.7174695743990703,
+    "mcc": 0.22311251524118036,
+    "n_eval": 6908,
+    "seconds": 19.54,
+    "n_inspected": 0,
+    "job_id": "E2_wagtail_law_lagakos_base_gmax_lat_s103",
+    "written": "2026-11-28T18:17:33+00:00",
+    "cycle": 2
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E2",
+    "project": "tomcat",
+    "method": "nowait",
+    "variant": "nowait_gmax_lat",
+    "seed": 104,
+    "split": "test",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6701674890876448,
+    "r0": 0.6171531061470732,
+    "r1": 0.7277358875076422,
+    "rdiff": 0.11058278136056898,
+    "auc": 0.6966069130404025,
+    "mcc": 0.311834046265744,
+    "n_eval": 17173,
+    "seconds": 58.06,
+    "n_inspected": 0,
+    "job_id": "E2_tomcat_nowait_gmax_lat_s104",
+    "written": "2026-11-28T18:17:29+00:00",
+    "cycle": 2
+  }
+]

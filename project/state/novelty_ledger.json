@@ -1853,7 +1853,23 @@
    },
    "total": 12,
    "note": "After E7/E8/E10: method claim dead on two benchmarks; decomposition (C3) holds on Cabral-test only; density explanation post hoc; convergence claim (C2) replicated on both benchmarks but overlaps the recalibration study. Recorded BEFORE the blind reviewer.",
-   "blind": null
+   "blind": {
+    "differentiation": 3,
+    "mechanism": 2,
+    "evidence": 3,
+    "breadth": 3,
+    "significance": 2,
+    "total": 13,
+    "weaknesses": [
+     "method is a transplant (DFM weight + Lagakos), estimator null, tie",
+     "C3 refuted on 2nd benchmark; explanation post hoc; 'recent labels matter' broadly expected (Csaba 2024, Gao&Yang 2022)",
+     "threshold finding overlaps recalibration package Zenodo 24527309 and ORB rationale"
+    ],
+    "extra_prior": [
+     "https://arxiv.org/abs/2504.12051 (post-hoc calibration of JIT models)"
+    ]
+   },
+   "final_total": 12
   }
  ]
 }
