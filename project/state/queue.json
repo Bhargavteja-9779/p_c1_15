@@ -36261,12 +36261,14 @@
         "project": "matplotlib",
         "seed": 100
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 7,
       "started": "2026-11-28T17:05:56+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-28T17:06:37+00:00",
+      "seconds": 41.1
     },
     {
       "id": "E7_matplotlib_nowait_s100",
@@ -36338,12 +36340,14 @@
         "project": "matplotlib",
         "seed": 100
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 7,
       "started": "2026-11-28T17:05:53+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-28T17:06:33+00:00",
+      "seconds": 40.0
     },
     {
       "id": "E7_matplotlib_oracle_old_H180_s100",
@@ -36393,10 +36397,12 @@
         "project": "npm",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T17:06:33+00:00",
+      "worker": 0
     },
     {
       "id": "E7_npm_oracle_young_H30_s100",
@@ -36461,10 +36467,12 @@
         "project": "npm",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T17:06:37+00:00",
+      "worker": 2
     },
     {
       "id": "E7_spring-integration_oracle_s100",

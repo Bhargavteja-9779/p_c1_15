@@ -909,64 +909,94 @@
  },
  "E7": {
   "nowait": {
-   "gmean_mean_over_projects": 0.5873,
+   "gmean_mean_over_projects": 0.5917,
    "ci95_projects": [
-    NaN,
-    NaN
+    0.5286,
+    0.6499
    ],
-   "mean_seed_sd": 0.0056,
-   "n_projects": 1,
-   "r0_mean": 0.8731,
-   "r1_mean": 0.3951,
-   "rdiff_mean": 0.478,
-   "auc_mean": 0.6744,
-   "mcc_mean": 0.3003,
-   "seconds_mean": 4.8833
+   "mean_seed_sd": 0.0042,
+   "n_projects": 13,
+   "r0_mean": 0.9015,
+   "r1_mean": 0.4511,
+   "rdiff_mean": 0.4504,
+   "auc_mean": 0.7676,
+   "mcc_mean": 0.3953,
+   "seconds_mean": 17.2641
   },
   "oracle": {
-   "gmean_mean_over_projects": 0.7139,
+   "gmean_mean_over_projects": 0.7459,
    "ci95_projects": [
-    NaN,
-    NaN
+    0.7184,
+    0.7711
    ],
-   "mean_seed_sd": 0.0017,
-   "n_projects": 1,
-   "r0_mean": 0.8038,
-   "r1_mean": 0.6341,
-   "rdiff_mean": 0.1697,
-   "auc_mean": 0.7936,
-   "mcc_mean": 0.4088,
-   "seconds_mean": 7.5633
+   "mean_seed_sd": 0.0022,
+   "n_projects": 13,
+   "r0_mean": 0.8124,
+   "r1_mean": 0.7098,
+   "rdiff_mean": 0.1644,
+   "auc_mean": 0.8482,
+   "mcc_mean": 0.5089,
+   "seconds_mean": 18.52
   },
   "oracle_old_H180": {
-   "gmean_mean_over_projects": 0.6027,
+   "gmean_mean_over_projects": 0.6074,
    "ci95_projects": [
-    NaN,
-    NaN
+    0.544,
+    0.666
    ],
-   "mean_seed_sd": 0.0063,
-   "n_projects": 1,
-   "r0_mean": 0.889,
-   "r1_mean": 0.4086,
-   "rdiff_mean": 0.4804,
-   "auc_mean": 0.7155,
-   "mcc_mean": 0.3318,
-   "seconds_mean": 6.91
+   "mean_seed_sd": 0.003,
+   "n_projects": 13,
+   "r0_mean": 0.8986,
+   "r1_mean": 0.4778,
+   "rdiff_mean": 0.4208,
+   "auc_mean": 0.7828,
+   "mcc_mean": 0.417,
+   "seconds_mean": 18.2531
   },
   "oracle_old_H30": {
-   "gmean_mean_over_projects": 0.6816,
+   "gmean_mean_over_projects": 0.6669,
    "ci95_projects": [
-    NaN,
-    NaN
+    0.6092,
+    0.7171
    ],
-   "mean_seed_sd": 0.0009,
-   "n_projects": 1,
-   "r0_mean": 0.8505,
-   "r1_mean": 0.5462,
-   "rdiff_mean": 0.3043,
-   "auc_mean": 0.7711,
-   "mcc_mean": 0.3951,
-   "seconds_mean": 7.28
+   "mean_seed_sd": 0.0021,
+   "n_projects": 13,
+   "r0_mean": 0.8649,
+   "r1_mean": 0.582,
+   "rdiff_mean": 0.2956,
+   "auc_mean": 0.8149,
+   "mcc_mean": 0.4635,
+   "seconds_mean": 18.4276
+  },
+  "oracle_young_H180": {
+   "gmean_mean_over_projects": 0.7331,
+   "ci95_projects": [
+    0.6948,
+    0.7671
+   ],
+   "mean_seed_sd": 0.0019,
+   "n_projects": 12,
+   "r0_mean": 0.8323,
+   "r1_mean": 0.6656,
+   "rdiff_mean": 0.1868,
+   "auc_mean": 0.8234,
+   "mcc_mean": 0.4935,
+   "seconds_mean": 17.8554
+  },
+  "oracle_young_H30": {
+   "gmean_mean_over_projects": 0.6929,
+   "ci95_projects": [
+    0.6465,
+    0.7346
+   ],
+   "mean_seed_sd": 0.0028,
+   "n_projects": 12,
+   "r0_mean": 0.8698,
+   "r1_mean": 0.5713,
+   "rdiff_mean": 0.2985,
+   "auc_mean": 0.7947,
+   "mcc_mean": 0.4556,
+   "seconds_mean": 17.4421
   }
  },
  "E8": {

@@ -105,6 +105,32 @@ if "E7" in set(df.experiment):
                                                       "wins": int((d > 0).sum()), "n": int(len(d)), "wilcoxon_p": float(w.pvalue) if w else None}
         out[bench]["H5_supported"] = bool(out[bench]["H5_young30_ge_0.5"] and out[bench]["H5_old180_le_0.2"])
     statsout["E7_H5_decomposition"] = out
+if "E10" in set(df.experiment) and "E8" in set(df.experiment):
+    # H9 (plan_v5): threshold gain per label policy vs spread among thresholded label policies (ApacheJIT)
+    aj = df[df.experiment.isin(["E8", "E10"]) & df.project.str.startswith("aj_")]
+    pp = aj.groupby(["variant", "project"]).gmean.mean().unstack()
+    pairs = [("nowait", "nowait_gmax_lat"), ("wait_W90", "wait_W90_gmax_lat"), ("orb_W90", "orb_W90_gmax_lat"),
+             ("odasc_W30", "odasc_W30_gmax_lat"), ("law_lagakos_model", "law_lagakos_model_gmax_lat")]
+    rows, ps = [], []
+    for fixed, thr in pairs:
+        if fixed not in pp.index or thr not in pp.index: continue
+        d = (pp.loc[thr] - pp.loc[fixed]).dropna(); w = stats.wilcoxon(d.values); lo, hi = ci_boot(d.values)
+        rows.append({"policy": fixed, "thr_minus_fixed": round(float(d.mean()), 4), "ci95": [round(lo, 4), round(hi, 4)],
+                     "wins": int((d > 0).sum()), "n": int(len(d)), "wilcoxon_p": float(w.pvalue),
+                     "in_H9a_family": fixed != "law_lagakos_model"})
+    fam = [r for r in rows if r["in_H9a_family"]]
+    for r, a in zip(fam, holm([r["wilcoxon_p"] for r in fam])): r["holm_p"] = float(a)
+    thr_vars = ["nowait_gmax_lat", "wait_W30_gmax_lat", "wait_W90_gmax_lat", "orb_W90_gmax_lat", "odasc_W15_gmax_lat",
+                "odasc_W30_gmax_lat", "law_lagakos_model_gmax_lat"]
+    means = {v: round(float(pp.loc[v].mean()), 4) for v in thr_vars if v in pp.index}
+    spread = max(means.values()) - min(means.values()) if means else None
+    gain = float(np.mean([r["thr_minus_fixed"] for r in fam])) if fam else None
+    statsout["E10_H9_threshold_vs_label_policy"] = {
+        "threshold_gain": rows, "thresholded_means": means, "spread_thresholded": round(spread, 4) if spread is not None else None,
+        "mean_threshold_gain_H9a_family": round(gain, 4) if gain is not None else None,
+        "H9a_supported": bool(fam and all(r["holm_p"] < 0.05 and r["thr_minus_fixed"] > 0 for r in fam)),
+        "H9b_supported": bool(spread is not None and gain is not None and spread < gain)}
+    pp.round(4).to_csv(T / "E10_E8_gmean_by_project_apachejit.csv")
 vt = pd.read_csv(STATE / "variants_tried.csv") if (STATE / "variants_tried.csv").exists() else pd.DataFrame()
 statsout["n_variants_logged"] = int(len(vt))
 json.dump(metrics, open(R / "metrics.json", "w"), indent=1)

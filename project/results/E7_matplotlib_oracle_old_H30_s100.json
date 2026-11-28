@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E7",
+    "project": "matplotlib",
+    "method": "oracle_old",
+    "variant": "oracle_old_H30",
+    "seed": 100,
+    "split": "test",
+    "oracle_H": 30,
+    "gmean": 0.7014170777348302,
+    "r0": 0.8227250529057464,
+    "r1": 0.5979955456570156,
+    "rdiff": 0.22472950724873075,
+    "auc": 0.8253319849936329,
+    "mcc": 0.37170728803652076,
+    "n_eval": 14980,
+    "seconds": 39.96,
+    "n_inspected": 0,
+    "job_id": "E7_matplotlib_oracle_old_H30_s100",
+    "written": "2026-11-28T17:06:33+00:00",
+    "cycle": 2
+  }
+]
