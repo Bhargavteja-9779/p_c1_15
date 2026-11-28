@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E10",
+    "project": "aj_hive",
+    "method": "law",
+    "variant": "law_lagakos_model",
+    "seed": 102,
+    "split": "apachejit",
+    "delay_est": "lagakos",
+    "prior": "model",
+    "gmean": 0.7757747629138436,
+    "r0": 0.7649552520018841,
+    "r1": 0.7867473047594005,
+    "rdiff": 0.02179205275751639,
+    "auc": 0.8554309641506959,
+    "mcc": 0.5376736448983707,
+    "n_eval": 5926,
+    "seconds": 12.95,
+    "n_inspected": 0,
+    "job_id": "E10_aj_hive_law_lagakos_model_s102",
+    "written": "2026-11-28T17:59:34+00:00",
+    "cycle": 2
+  }
+]

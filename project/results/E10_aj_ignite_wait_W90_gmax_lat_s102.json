@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E10",
+    "project": "aj_ignite",
+    "method": "wait",
+    "variant": "wait_W90_gmax_lat",
+    "seed": 102,
+    "split": "apachejit",
+    "W": 90,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.709000579236248,
+    "r0": 0.6470033034450212,
+    "r1": 0.7769385699899295,
+    "rdiff": 0.12993526654490828,
+    "auc": 0.7796239557031357,
+    "mcc": 0.36264569994146434,
+    "n_eval": 8343,
+    "seconds": 18.27,
+    "n_inspected": 0,
+    "job_id": "E10_aj_ignite_wait_W90_gmax_lat_s102",
+    "written": "2026-11-28T18:02:50+00:00",
+    "cycle": 2
+  }
+]

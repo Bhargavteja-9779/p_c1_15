@@ -1,10 +1,10 @@
-# RESULTS SUMMARY (auto-generated 2026-11-28T17:52:48+00:00 by scripts/final_report.py)
+# RESULTS SUMMARY (auto-generated 2026-11-28T18:03:21+00:00 by scripts/final_report.py)
 
 Journal: JKSU-CIS (see journal_selection/selected_journal.md). Topic: topic/selected_topic.md. Plan: experiments/plan_v*.yaml.
 
 Frozen config: `{"frozen": "2026-11-25T07:54:45+00:00", "plan": "plan_v3", "proposed": {"variant": "law_lagakos_model_gmax_lat", "method": "law", "delay_est": "lagakos", "prior": "model", "thr_policy": "gmax_lat"}, "baselines": [{"variant": "nowait", "method": "nowait"}, {"variant": "wait_W90", "method": "wait", "W": 90}, {"variant": "orb_W90", "method": "orb", "W": 90}, {"variant": "odasc_W30", "method": "odasc", "W": 30, "odasc_delta": 0.9}, {"variant": "wait_W30_gmax_lat", "method": "wait", "W": 30, "thr_policy": "gmax_lat"}, {"variant": "odasc_W15_gmax_lat", "method": "odasc", "W": 15, "odasc_delta": 0.9, "thr_policy": "gmax_lat"}], "oracle": {"variant": "oracle", "method": "oracle"}, "primary_comparator": "odasc_W30", "n_dev_variants": 44, "n_dev_runs": 528, "dev_means": {"oracle": 0.7938, "law_lagakos_model_gmax_lat": 0.7632, "law_naive_model_gmax_lat": 0.7611, "odasc_W30": 0.7497, "odasc_W15_gmax_lat": 0.7491, "odasc_W30_gmax_lat": 0.7489, "law_naive_base_gmax_lat": 0.7475, "law_lagakos_base_gmax_lat": 0.7474, "odasc_W15": 0.7466, "wait_W30_gmax_lat": 0.7437, "odasc_W60_gmax_lat": 0.7424, "wait_W60_gmax_lat": 0.7392, "wait_W15_gmax_lat": 0.7389, "odasc_W60": 0.7367, "wait_W90_gmax_lat": 0.7367, "odasc_W90_gmax_lat": 0.7339, "wait_W180_gmax_lat": 0.7317, "orb_W180_gmax_lat": 0.7288, "orb_W90": 0.7239, "odasc_W180_gmax_lat": 0.7229, "orb_W90_gmax_lat": 0.7178, "odasc_W90": 0.7167, "orb_W60": 0.7116, "orb_W60_gmax_lat": 0.7097, "wait_W90": 0.7095, "orb_W180": 0.6901, "nowait_gmax_lat": 0.6881, "wait_W60": 0.686, "orb_W30_gmax_lat": 0.6832, "wait_W180": 0.6831, "law_lagakos_base_ratematch": 0.6784, "law_naive_base_ratematch": 0.6764, "law_lagakos_base": 0.6643, "law_naive_base": 0.6637, "orb_W30": 0.6636, "odasc_W180": 0.6564, "orb_W15_gmax_lat": 0.6463, "nowait_ratematch": 0.6327, "wait_W30": 0.6206, "law_lagakos_model": 0.6128, "orb_W15": 0.6065, "law_naive_model": 0.58, "wait_W15": 0.5457, "nowait": 0.3855}}`
 
-Jobs: {'done': 2065, 'pending': 493, 'running': 4}
+Jobs: {'done': 2249, 'running': 4, 'pending': 309}
 
 ## G-mean by project (mean over seeds)
 
@@ -81,11 +81,13 @@ Jobs: {'done': 2065, 'pending': 493, 'running': 4}
 
 ### E10
 
-| variant            |   aj_activemq |   MEAN |
-|:-------------------|--------------:|-------:|
-| odasc_W30_gmax_lat |         0.645 |  0.645 |
-| law_lagakos_model  |         0.635 |  0.635 |
-| nowait_gmax_lat    |         0.63  |  0.63  |
+| variant            |   aj_activemq |   aj_cassandra |   aj_flink |   aj_groovy |   aj_hbase |   aj_hive |   aj_ignite |   aj_kafka |   MEAN |
+|:-------------------|--------------:|---------------:|-----------:|------------:|-----------:|----------:|------------:|-----------:|-------:|
+| law_lagakos_model  |         0.635 |          0.744 |      0.739 |       0.645 |      0.756 |     0.775 |       0.738 |      0.781 |  0.727 |
+| odasc_W30_gmax_lat |         0.645 |          0.753 |      0.72  |       0.671 |      0.745 |     0.77  |       0.708 |      0.79  |  0.725 |
+| wait_W90_gmax_lat  |         0.645 |          0.713 |      0.736 |       0.68  |      0.733 |     0.772 |       0.708 |      0.79  |  0.722 |
+| orb_W90_gmax_lat   |         0.651 |          0.699 |      0.724 |       0.66  |      0.702 |     0.77  |       0.702 |      0.786 |  0.712 |
+| nowait_gmax_lat    |         0.63  |          0.717 |      0.732 |       0.669 |      0.741 |     0.752 |       0.689 |      0.762 |  0.711 |
 
 ### E2
 
@@ -147,7 +149,7 @@ Jobs: {'done': 2065, 'pending': 493, 'running': 4}
 
 ```json
 {
- "generated": "2026-11-28T17:52:46+00:00",
+ "generated": "2026-11-28T18:03:19+00:00",
  "E1_main_proposed_vs_baselines": [
   {
    "proposed": "law_lagakos_model_gmax_lat",
@@ -495,57 +497,85 @@ Jobs: {'done': 2065, 'pending': 493, 'running': 4}
   "threshold_gain": [
    {
     "policy": "nowait",
-    "thr_minus_fixed": 0.0427,
+    "thr_minus_fixed": 0.0564,
     "ci95": [
-     0.0427,
-     0.0427
+     0.0236,
+     0.0934
     ],
-    "wins": 1,
-    "n": 1,
+    "wins": 8,
+    "n": 8,
+    "wilcoxon_p": 0.0078125,
+    "in_H9a_family": true,
+    "holm_p": 0.03125
+   },
+   {
+    "policy": "wait_W90",
+    "thr_minus_fixed": 0.0049,
+    "ci95": [
+     -0.01,
+     0.0243
+    ],
+    "wins": 4,
+    "n": 8,
+    "wilcoxon_p": 1.0,
+    "in_H9a_family": true,
+    "holm_p": 1.0
+   },
+   {
+    "policy": "orb_W90",
+    "thr_minus_fixed": 0.0002,
+    "ci95": [
+     -0.0083,
+     0.0092
+    ],
+    "wins": 4,
+    "n": 8,
     "wilcoxon_p": 1.0,
     "in_H9a_family": true,
     "holm_p": 1.0
    },
    {
     "policy": "odasc_W30",
-    "thr_minus_fixed": -0.012,
+    "thr_minus_fixed": 0.0045,
     "ci95": [
-     -0.012,
-     -0.012
+     -0.0114,
+     0.0207
     ],
-    "wins": 0,
-    "n": 1,
-    "wilcoxon_p": 1.0,
+    "wins": 4,
+    "n": 8,
+    "wilcoxon_p": 0.7421875,
     "in_H9a_family": true,
     "holm_p": 1.0
    },
    {
     "policy": "law_lagakos_model",
-    "thr_minus_fixed": -0.0193,
+    "thr_minus_fixed": -0.0006,
     "ci95": [
-     -0.0193,
-     -0.0193
+     -0.0192,
+     0.0152
     ],
-    "wins": 0,
-    "n": 1,
+    "wins": 5,
+    "n": 8,
     "wilcoxon_p": 1.0,
     "in_H9a_family": false
    }
   ],
   "thresholded_means": {
-   "nowait_gmax_lat": 0.6297,
+   "nowait_gmax_lat": 0.7115,
    "wait_W30_gmax_lat": 0.7219,
+   "wait_W90_gmax_lat": 0.7221,
+   "orb_W90_gmax_lat": 0.7116,
    "odasc_W15_gmax_lat": 0.7256,
-   "odasc_W30_gmax_lat": 0.6446,
+   "odasc_W30_gmax_lat": 0.7252,
    "law_lagakos_model_gmax_lat": 0.7259
   },
-  "spread_thresholded": 0.0962,
-  "mean_threshold_gain_H9a_family": 0.0154,
+  "spread_thresholded": 0.0144,
+  "mean_threshold_gain_H9a_family": 0.0165,
   "H9a_supported": false,
-  "H9b_supported": false
+  "H9b_supported": true
  },
- "n_variants_logged": 76
+ "n_variants_logged": 77
 }
 ```
 
-Compute used: 21.71 CPU-h (summed worker seconds). Variants logged: 76.
+Compute used: 22.38 CPU-h (summed worker seconds). Variants logged: 77.

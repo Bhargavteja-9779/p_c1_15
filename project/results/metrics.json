@@ -847,49 +847,79 @@
  },
  "E10": {
   "law_lagakos_model": {
-   "gmean_mean_over_projects": 0.6353,
+   "gmean_mean_over_projects": 0.7265,
    "ci95_projects": [
-    NaN,
-    NaN
+    0.6881,
+    0.7593
    ],
-   "mean_seed_sd": 0.0011,
-   "n_projects": 1,
-   "r0_mean": 0.7054,
-   "r1_mean": 0.5721,
-   "rdiff_mean": 0.1333,
-   "auc_mean": 0.6708,
-   "mcc_mean": 0.2583,
-   "seconds_mean": 8.624
+   "mean_seed_sd": 0.002,
+   "n_projects": 8,
+   "r0_mean": 0.7635,
+   "r1_mean": 0.6975,
+   "rdiff_mean": 0.1329,
+   "auc_mean": 0.7893,
+   "mcc_mean": 0.4546,
+   "seconds_mean": 17.5948
   },
   "nowait_gmax_lat": {
-   "gmean_mean_over_projects": 0.6297,
+   "gmean_mean_over_projects": 0.7115,
    "ci95_projects": [
-    NaN,
-    NaN
-   ],
-   "mean_seed_sd": 0.0068,
-   "n_projects": 1,
-   "r0_mean": 0.5077,
-   "r1_mean": 0.7813,
-   "rdiff_mean": 0.2736,
-   "auc_mean": 0.6749,
-   "mcc_mean": 0.2631,
-   "seconds_mean": 5.526
-  },
-  "odasc_W30_gmax_lat": {
-   "gmean_mean_over_projects": 0.6446,
-   "ci95_projects": [
-    NaN,
-    NaN
+    0.6804,
+    0.7385
    ],
    "mean_seed_sd": 0.005,
-   "n_projects": 1,
-   "r0_mean": 0.5318,
-   "r1_mean": 0.7815,
-   "rdiff_mean": 0.2497,
-   "auc_mean": 0.7103,
-   "mcc_mean": 0.2837,
-   "seconds_mean": 6.5525
+   "n_projects": 8,
+   "r0_mean": 0.6531,
+   "r1_mean": 0.7801,
+   "rdiff_mean": 0.1375,
+   "auc_mean": 0.7709,
+   "mcc_mean": 0.4131,
+   "seconds_mean": 11.298
+  },
+  "odasc_W30_gmax_lat": {
+   "gmean_mean_over_projects": 0.7252,
+   "ci95_projects": [
+    0.692,
+    0.7557
+   ],
+   "mean_seed_sd": 0.0037,
+   "n_projects": 8,
+   "r0_mean": 0.6927,
+   "r1_mean": 0.7649,
+   "rdiff_mean": 0.1136,
+   "auc_mean": 0.7928,
+   "mcc_mean": 0.4363,
+   "seconds_mean": 12.9465
+  },
+  "orb_W90_gmax_lat": {
+   "gmean_mean_over_projects": 0.7116,
+   "ci95_projects": [
+    0.6815,
+    0.7426
+   ],
+   "mean_seed_sd": 0.0039,
+   "n_projects": 8,
+   "r0_mean": 0.6961,
+   "r1_mean": 0.7334,
+   "rdiff_mean": 0.1143,
+   "auc_mean": 0.7759,
+   "mcc_mean": 0.4107,
+   "seconds_mean": 11.156
+  },
+  "wait_W90_gmax_lat": {
+   "gmean_mean_over_projects": 0.7221,
+   "ci95_projects": [
+    0.6914,
+    0.7515
+   ],
+   "mean_seed_sd": 0.0039,
+   "n_projects": 8,
+   "r0_mean": 0.7085,
+   "r1_mean": 0.7424,
+   "rdiff_mean": 0.1167,
+   "auc_mean": 0.789,
+   "mcc_mean": 0.4323,
+   "seconds_mean": 11.2208
   }
  },
  "E2": {

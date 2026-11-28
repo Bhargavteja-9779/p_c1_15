@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E10",
+    "project": "aj_kafka",
+    "method": "law",
+    "variant": "law_lagakos_model",
+    "seed": 103,
+    "split": "apachejit",
+    "delay_est": "lagakos",
+    "prior": "model",
+    "gmean": 0.7782377254043429,
+    "r0": 0.6946902654867256,
+    "r1": 0.8718330849478391,
+    "rdiff": 0.17714281946111343,
+    "auc": 0.8543867516013172,
+    "mcc": 0.575312398485415,
+    "n_eval": 1349,
+    "seconds": 2.4,
+    "n_inspected": 0,
+    "job_id": "E10_aj_kafka_law_lagakos_model_s103",
+    "written": "2026-11-28T18:02:53+00:00",
+    "cycle": 2
+  }
+]

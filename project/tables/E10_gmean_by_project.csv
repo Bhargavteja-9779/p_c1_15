@@ -1,4 +1,6 @@
-variant,aj_activemq
-law_lagakos_model,0.6353
-nowait_gmax_lat,0.6297
-odasc_W30_gmax_lat,0.6446
+variant,aj_activemq,aj_cassandra,aj_flink,aj_groovy,aj_hbase,aj_hive,aj_ignite,aj_kafka
+law_lagakos_model,0.6353,0.7442,0.7386,0.6453,0.7559,0.7746,0.7378,0.7807
+nowait_gmax_lat,0.6297,0.7171,0.7316,0.6693,0.7413,0.7517,0.689,0.7621
+odasc_W30_gmax_lat,0.6451,0.753,0.7201,0.671,0.7447,0.7699,0.7076,0.7902
+orb_W90_gmax_lat,0.6506,0.6987,0.7243,0.6595,0.7022,0.7696,0.7021,0.7856
+wait_W90_gmax_lat,0.6452,0.7133,0.7363,0.6798,0.7325,0.7723,0.7075,0.7899

@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E10",
+    "project": "aj_kafka",
+    "method": "wait",
+    "variant": "wait_W90_gmax_lat",
+    "seed": 102,
+    "split": "apachejit",
+    "W": 90,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.791206912990372,
+    "r0": 0.8156342182890856,
+    "r1": 0.767511177347243,
+    "rdiff": 0.04812304094184261,
+    "auc": 0.8564947311501788,
+    "mcc": 0.5839018528070629,
+    "n_eval": 1349,
+    "seconds": 1.88,
+    "n_inspected": 0,
+    "job_id": "E10_aj_kafka_wait_W90_gmax_lat_s102",
+    "written": "2026-11-28T18:03:04+00:00",
+    "cycle": 2
+  }
+]

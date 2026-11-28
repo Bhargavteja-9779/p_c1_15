@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E10",
+    "project": "aj_kafka",
+    "method": "nowait",
+    "variant": "nowait_gmax_lat",
+    "seed": 101,
+    "split": "apachejit",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.7732407467783625,
+    "r0": 0.8289085545722714,
+    "r1": 0.7213114754098361,
+    "rdiff": 0.10759707916243533,
+    "auc": 0.8463351050033192,
+    "mcc": 0.5535998569081833,
+    "n_eval": 1349,
+    "seconds": 1.94,
+    "n_inspected": 0,
+    "job_id": "E10_aj_kafka_nowait_gmax_lat_s101",
+    "written": "2026-11-28T18:02:55+00:00",
+    "cycle": 2
+  }
+]

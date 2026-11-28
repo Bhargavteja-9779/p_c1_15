@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E10",
+    "project": "aj_hive",
+    "method": "nowait",
+    "variant": "nowait_gmax_lat",
+    "seed": 101,
+    "split": "apachejit",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.754263451222436,
+    "r0": 0.7371643900141309,
+    "r1": 0.7717591375230082,
+    "rdiff": 0.034594747508877255,
+    "auc": 0.810629087852278,
+    "mcc": 0.49604416033184723,
+    "n_eval": 5926,
+    "seconds": 11.79,
+    "n_inspected": 0,
+    "job_id": "E10_aj_hive_nowait_gmax_lat_s101",
+    "written": "2026-11-28T17:59:46+00:00",
+    "cycle": 2
+  }
+]

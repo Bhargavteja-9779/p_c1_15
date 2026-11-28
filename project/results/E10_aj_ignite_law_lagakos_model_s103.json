@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E10",
+    "project": "aj_ignite",
+    "method": "law",
+    "variant": "law_lagakos_model",
+    "seed": 103,
+    "split": "apachejit",
+    "delay_est": "lagakos",
+    "prior": "model",
+    "gmean": 0.738906010075442,
+    "r0": 0.8612553091080698,
+    "r1": 0.6339375629405841,
+    "rdiff": 0.22731774616748568,
+    "auc": 0.7984843091510005,
+    "mcc": 0.482854071608108,
+    "n_eval": 8343,
+    "seconds": 34.54,
+    "n_inspected": 0,
+    "job_id": "E10_aj_ignite_law_lagakos_model_s103",
+    "written": "2026-11-28T18:01:14+00:00",
+    "cycle": 2
+  }
+]
