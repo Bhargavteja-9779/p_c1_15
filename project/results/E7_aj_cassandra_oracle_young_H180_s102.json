@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E7",
+    "project": "aj_cassandra",
+    "method": "oracle_young",
+    "variant": "oracle_young_H180",
+    "seed": 102,
+    "split": "apachejit",
+    "oracle_H": 180,
+    "gmean": 0.7780262975572171,
+    "r0": 0.8140297202797203,
+    "r1": 0.7436152570480928,
+    "rdiff": 0.07041446323162748,
+    "auc": 0.8493753551589374,
+    "mcc": 0.5553218674818713,
+    "n_eval": 7591,
+    "seconds": 11.52,
+    "n_inspected": 0,
+    "job_id": "E7_aj_cassandra_oracle_young_H180_s102",
+    "written": "2026-11-28T16:54:44+00:00",
+    "cycle": 2
+  }
+]

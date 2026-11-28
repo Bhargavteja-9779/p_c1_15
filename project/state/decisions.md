@@ -73,3 +73,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-28T16:43:45+00:00** — E9 analysed on dev: H7 and H8 refuted; no inspection variant is promoted to confirmation
   - Reason: Top-risk (prior art, HumLa) >= uncertainty at both budgets; gains below label-policy spread. Promoting a variant that loses on dev would waste the fresh ApacheJIT set
+
+- **2026-11-28T16:54:49+00:00** — plan_v5: E7b completes H5 on all 5 confirmation seeds (336 jobs); E10/H9 tests threshold-vs-label-policy on ApacheJIT (200 jobs)
+  - Reason: Method claim failed on both benchmarks (E1, E8). The remaining candidate contribution is empirical; G5 requires SEEDS_CONFIRM. Written before looking at any E7 result.

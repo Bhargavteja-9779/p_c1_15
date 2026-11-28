@@ -1,0 +1,22 @@
+# plan_v5 — written 2026-11-28 (cycle 2) AFTER E8 (H6 failed: tie) and BEFORE any E7 result was looked at.
+# Reason: (1) the method claim (LAW) has failed on two benchmarks; the remaining candidate contributions are
+# empirical (Type C/D). Section 7 G5 requires SEEDS_CONFIRM for the main result, but E7 (H5) used seed 100 only
+# on Cabral-test and 100-102 on ApacheJIT. E7b completes all 5 confirmation seeds with the same 6 variants;
+# H5 is evaluated on the union (all 5 seeds), with the decision rule unchanged.
+# (2) H9 tests the operating-point claim seen on dev (E0c) and on Cabral-test (E1/E2) on ApacheJIT with variants
+# never run there. Written after seeing E8 means for LAW, ODaSC-W15+thr, Wait-W30+thr (stated openly).
+version: 5
+cycle: 2
+experiments:
+  E7b_decomposition_all_confirm_seeds:
+    projects: "Cabral test 10 (seeds 101-104) + ApacheJIT 8 (seeds 103,104)"
+    variants: [oracle, nowait, oracle_young_H30, oracle_young_H180, oracle_old_H30, oracle_old_H180]
+    analysis: "pooled with E7; H5 decision rule exactly as plan_v4 (median project per benchmark); plus per-benchmark paired Wilcoxon young_H30 vs old_H180 AUC over projects, Holm over the 2 benchmarks"
+  E10_threshold_vs_label_policy:
+    projects: ApacheJIT 8
+    seeds: [100, 101, 102, 103, 104]
+    variants: [nowait_gmax_lat, wait_W90_gmax_lat, odasc_W30_gmax_lat, orb_W90_gmax_lat, law_lagakos_model]
+hypotheses:
+  H9a: "For each of nowait, wait_W90, orb_W90, odasc_W30 the latency-corrected threshold raises mean G-mean over the fixed-0.5 version (paired over 8 ApacheJIT projects; Wilcoxon, Holm over the 4 policies, p<0.05)."
+  H9b: "Among the 7 thresholded label policies on ApacheJIT (nowait, wait_W30, wait_W90, orb_W90, odasc_W15, odasc_W30, LAW, all with gmax_lat), the spread of mean G-mean (max-min) is smaller than the mean gain from the threshold in H9a."
+multiplicity: "E7b adds no new variants (same 6). E10 adds 5 configurations, logged in variants_tried.csv."

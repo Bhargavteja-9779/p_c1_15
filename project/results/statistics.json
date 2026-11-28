@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T16:44:35+00:00",
+ "generated": "2026-11-28T16:53:48+00:00",
  "E1_main_proposed_vs_baselines": [
   {
    "proposed": "law_lagakos_model_gmax_lat",
@@ -179,105 +179,124 @@
   {
    "proposed": "law_lagakos_model_gmax_lat",
    "baseline": "nowait",
-   "n_projects": 4,
-   "mean_diff": 0.0882,
+   "n_projects": 8,
+   "mean_diff": 0.0708,
    "ci95": [
-    0.0182,
-    0.1581
+    0.0315,
+    0.1144
    ],
-   "wins": 4,
-   "losses": 0,
-   "wilcoxon_p": null,
-   "paired_t_p": 0.1303236292532533,
-   "rank_biserial": 1.0,
-   "holm_p": 1.0,
+   "wins": 7,
+   "losses": 1,
+   "wilcoxon_p": 0.015625,
+   "paired_t_p": 0.018017865084826865,
+   "rank_biserial": 0.944,
+   "holm_p": 0.09375,
    "G5_pass": false
   },
   {
    "proposed": "law_lagakos_model_gmax_lat",
    "baseline": "wait_W90",
-   "n_projects": 3,
-   "mean_diff": -0.0017,
+   "n_projects": 8,
+   "mean_diff": 0.0087,
    "ci95": [
-    -0.0236,
-    0.0263
+    -0.0109,
+    0.028
    ],
-   "wins": 1,
-   "losses": 2,
-   "wilcoxon_p": null,
-   "paired_t_p": 0.91827671823215,
-   "rank_biserial": 0.0,
+   "wins": 5,
+   "losses": 3,
+   "wilcoxon_p": 0.546875,
+   "paired_t_p": 0.44572810292815396,
+   "rank_biserial": 0.278,
    "holm_p": 1.0,
    "G5_pass": false
   },
   {
    "proposed": "law_lagakos_model_gmax_lat",
    "baseline": "orb_W90",
-   "n_projects": 4,
-   "mean_diff": 0.0099,
+   "n_projects": 8,
+   "mean_diff": 0.0145,
    "ci95": [
-    -0.02,
-    0.0399
+    -0.0097,
+    0.0374
    ],
-   "wins": 2,
-   "losses": 2,
-   "wilcoxon_p": null,
-   "paired_t_p": 0.6171333167607471,
-   "rank_biserial": 0.4,
+   "wins": 5,
+   "losses": 3,
+   "wilcoxon_p": 0.3125,
+   "paired_t_p": 0.29936505059591756,
+   "rank_biserial": 0.444,
    "holm_p": 1.0,
    "G5_pass": false
   },
   {
    "proposed": "law_lagakos_model_gmax_lat",
    "baseline": "odasc_W30",
-   "n_projects": 4,
-   "mean_diff": -0.0019,
+   "n_projects": 8,
+   "mean_diff": 0.0052,
    "ci95": [
-    -0.0281,
-    0.0185
+    -0.0208,
+    0.0295
    ],
-   "wins": 2,
-   "losses": 2,
-   "wilcoxon_p": null,
-   "paired_t_p": 0.9014301204772174,
-   "rank_biserial": 0.0,
+   "wins": 5,
+   "losses": 3,
+   "wilcoxon_p": 0.640625,
+   "paired_t_p": 0.717935008005708,
+   "rank_biserial": 0.222,
    "holm_p": 1.0,
    "G5_pass": false
   },
   {
    "proposed": "law_lagakos_model_gmax_lat",
    "baseline": "wait_W30_gmax_lat",
-   "n_projects": 4,
-   "mean_diff": -0.0027,
+   "n_projects": 8,
+   "mean_diff": 0.004,
    "ci95": [
-    -0.0135,
-    0.0118
+    -0.0071,
+    0.0149
    ],
-   "wins": 1,
-   "losses": 3,
-   "wilcoxon_p": null,
-   "paired_t_p": 0.7340834928835875,
-   "rank_biserial": -0.2,
+   "wins": 4,
+   "losses": 4,
+   "wilcoxon_p": 0.4609375,
+   "paired_t_p": 0.5302899439175804,
+   "rank_biserial": 0.333,
    "holm_p": 1.0,
    "G5_pass": false
   },
   {
    "proposed": "law_lagakos_model_gmax_lat",
    "baseline": "odasc_W15_gmax_lat",
-   "n_projects": 4,
-   "mean_diff": -0.0073,
+   "n_projects": 8,
+   "mean_diff": 0.0002,
    "ci95": [
-    -0.0194,
-    0.001
+    -0.0115,
+    0.0112
    ],
-   "wins": 1,
-   "losses": 3,
-   "wilcoxon_p": null,
-   "paired_t_p": 0.3313097665710162,
-   "rank_biserial": -0.6,
+   "wins": 4,
+   "losses": 4,
+   "wilcoxon_p": 1.0,
+   "paired_t_p": 0.9706461906551831,
+   "rank_biserial": 0.0,
    "holm_p": 1.0,
    "G5_pass": false
   }
  ],
+ "E7_H5_decomposition": {
+  "apachejit": {
+   "n_projects": 1,
+   "median_gap_auc": 0.1191,
+   "median_recovery": {
+    "oracle_old_H180": 0.3447,
+    "oracle_old_H30": 0.8118
+   },
+   "mean_recovery": {
+    "oracle_old_H180": 0.3447,
+    "oracle_old_H30": 0.8118
+   },
+   "H5_young30_ge_0.5": false,
+   "H5_old180_le_0.2": false,
+   "projects_young30_ge_0.5": 0,
+   "projects_old180_le_0.2": 0,
+   "H5_supported": false
+  }
+ },
  "n_variants_logged": 70
 }

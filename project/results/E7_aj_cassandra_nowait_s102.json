@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E7",
+    "project": "aj_cassandra",
+    "method": "nowait",
+    "variant": "nowait",
+    "seed": 102,
+    "split": "apachejit",
+    "gmean": 0.565980036521833,
+    "r0": 0.952544704264099,
+    "r1": 0.3362922499146466,
+    "rdiff": 0.6162524543494523,
+    "auc": 0.7568681084301572,
+    "mcc": 0.3829021709978276,
+    "n_eval": 7291,
+    "seconds": 11.59,
+    "n_inspected": 0,
+    "job_id": "E7_aj_cassandra_nowait_s102",
+    "written": "2026-11-28T16:54:10+00:00",
+    "cycle": 2
+  }
+]

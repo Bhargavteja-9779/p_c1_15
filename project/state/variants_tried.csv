@@ -69,3 +69,9 @@ timestamp,cycle,variant_id,description,data_split_used,metric,value,outcome,note
 2026-11-28T16:43:45+00:00,2,E9_odasc_W30__insp_top_5,inspection budget policy on dev (E9),dev fabric/neutron/sentry seeds 0-2,auc_mean_dev,0.8179,H7 refuted (top>=unc),
 2026-11-28T16:43:45+00:00,2,E9_odasc_W30__insp_unc_2,inspection budget policy on dev (E9),dev fabric/neutron/sentry seeds 0-2,auc_mean_dev,0.8074,H7 refuted (top>=unc),
 2026-11-28T16:43:45+00:00,2,E9_odasc_W30__insp_unc_5,inspection budget policy on dev (E9),dev fabric/neutron/sentry seeds 0-2,auc_mean_dev,0.8131,H7 refuted (top>=unc),
+2026-11-28T16:54:02+00:00,2,E8_H6_replication,frozen plan_v3 on ApacheJIT,apachejit 8 projects seeds 100-104,gmean diff LAW-ODaSC_W30,0.0052,H6 fails (tie),"CI [-0.0208,0.0295]"
+2026-11-28T16:54:49+00:00,2,E10_nowait_gmax_lat,H9 threshold-vs-label-policy on ApacheJIT,apachejit seeds 100-104,gmean,,pending,plan_v5
+2026-11-28T16:54:49+00:00,2,E10_wait_W90_gmax_lat,H9 threshold-vs-label-policy on ApacheJIT,apachejit seeds 100-104,gmean,,pending,plan_v5
+2026-11-28T16:54:49+00:00,2,E10_odasc_W30_gmax_lat,H9 threshold-vs-label-policy on ApacheJIT,apachejit seeds 100-104,gmean,,pending,plan_v5
+2026-11-28T16:54:49+00:00,2,E10_orb_W90_gmax_lat,H9 threshold-vs-label-policy on ApacheJIT,apachejit seeds 100-104,gmean,,pending,plan_v5
+2026-11-28T16:54:49+00:00,2,E10_law_lagakos_model,H9 threshold-vs-label-policy on ApacheJIT,apachejit seeds 100-104,gmean,,pending,plan_v5
