@@ -17,7 +17,7 @@ def effects(w, l1, nw, o):
     noise = 0.5 * ((l1 - w) + (o - nw)); fresh = 0.5 * ((nw - w) + (o - l1)); inter = (o - nw) - (l1 - w)
     gap = o - w
     return dict(gap=gap.mean(), noise=noise.mean(), fresh=fresh.mean(), interaction=inter.mean(),
-                share_path_noise_first=(l1 - w).mean() / gap.mean(), shapley_noise_share=noise.mean() / gap.mean())
+                share_path_noise_first=(l1 - w).mean() / gap.mean(), share_path_fresh_first=(o - nw).mean() / gap.mean(), shapley_noise_share=noise.mean() / gap.mean())
 out = {}
 for fam, exps, P in [("cabral_test", ["E1", "E3b"], TEST), ("apachejit", ["E8"], AJ)]:
     for metric in ["gmean", "auc"]:

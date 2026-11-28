@@ -112,7 +112,8 @@ for W, sfx in [(30, ""), (90, "W90_")]:
         e = SH[f"{fam}_{sfx}{metric}"]; f = lambda k: f"{e[k]['est']:.3f} [{e[k]['ci95'][0]:.3f}, {e[k]['ci95'][1]:.3f}]"
         rows3b.append({"W": W, "family": lab, "metric": "AUC" if metric == "auc" else "G-mean", "gap (oracle - Wait-W)": f("gap"),
                        "label effect (Shapley)": f("noise"), "freshness effect (Shapley)": f("fresh"), "interaction": f("interaction"),
-                       "label share (Shapley)": f("shapley_noise_share"), "noise-first path share": f("share_path_noise_first")})
+                       "label share (Shapley)": f("shapley_noise_share"), "noise-first path share": f("share_path_noise_first"),
+                       "freshness-first path share": f("share_path_fresh_first")})
 pd.DataFrame(rows3b).to_markdown(P / "tables" / "T3b_shapley.md", index=False)
 w90 = [{"metric": "G-mean" if m == "gmean" else "AUC", **{k: (f"{v['est']:.3f} [{v['ci95'][0]:.3f}, {v['ci95'][1]:.3f}]" if k == "share" else v) for k, v in
         {"share": SH[f"cabral_test_W90_share_{m}"], "Wait-90": SH[f"cabral_test_W90_share_{m}"]["wait_W90"], "Wait-90 true labels": SH[f"cabral_test_W90_share_{m}"]["L1_W90"],
@@ -251,6 +252,7 @@ if RV.exists():
         ps = np.array([t["wilcoxon_p"] if t["wilcoxon_p"] is not None else 1.0 for t in tests]); o_ = np.argsort(ps); adj = np.empty_like(ps); run = 0
         for r_, i in enumerate(o_): run = max(run, (len(ps) - r_) * ps[i]); adj[i] = min(1.0, run)
         for t, a in zip(tests, adj): t["holm_p"] = float(a); t["pass_margin"] = bool(a < 0.05 and t["ci95"][0] > 0 and t["mean_diff"] >= 0.02)
+        N["a5_descriptive_law_vs_wait90"] = _cmp(a5.loc["law_lagakos_model"], a5.loc["wait_W90"], "descriptive: LAW (0.5) vs Wait-90 (0.5), ApacheJIT")
         N["a5_tests"] = tests; N["a5_means"] = {k: dict(gmean=f3(v["G-mean"]), auc=f3(v["AUC"])) for k, v in T11.iterrows()}
         pd.DataFrame(tests).to_markdown(P / "tables" / "T11b_A5_tests.md", index=False)
 

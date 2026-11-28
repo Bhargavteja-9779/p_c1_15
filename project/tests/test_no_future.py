@@ -7,19 +7,24 @@ from src.data import load_project
 from src.jit import simulate, survival_from_delays
 
 def test_future_discoveries_do_not_leak():
-    df = load_project("fabric").iloc[:3000].copy()
-    cut = 1700
-    T0 = df.t.iloc[cut]
-    df2 = df.copy()
-    late = df2.t_found > T0
-    df2.loc[late & np.isfinite(df2.t_found), "t_found"] = np.inf        # hide future discoveries
-    cases = [(m, {}) for m in ["nowait", "wait", "orb", "law", "awt", "lawm", "odasc"]] + \
-            [("lawm", dict(mode="dual", W=30, knn_k=50))]          # Dual denoiser (added after review round 1)
-    for m, kw in cases:
-        a = simulate(df, m, seed=0, return_preds=True, eval_end_gap_days=0, **kw)
-        b = simulate(df2, m, seed=0, return_preds=True, eval_end_gap_days=0, **kw)
-        assert np.allclose(np.nan_to_num(a["prob"][:cut]), np.nan_to_num(b["prob"][:cut])), (m, kw)
-        assert np.array_equal(a["pred"][:cut], b["pred"][:cut]), (m, kw)   # decisions, not only scores
+    """Hide every discovery after T0; no score or decision before T0 may change. Run on a Cabral and an ApacheJIT project.
+    The decomposition levels are included: they use final labels by design, but their training SET must not depend on future discoveries."""
+    for proj in ["fabric", "aj_kafka"]:
+        df = load_project(proj).iloc[:3000].copy()
+        cut = 1700
+        T0 = df.t.iloc[cut]
+        df2 = df.copy()
+        late = df2.t_found > T0
+        df2.loc[late & np.isfinite(df2.t_found), "t_found"] = np.inf        # hide future discoveries
+        cases = [(m, {}) for m in ["nowait", "wait", "orb", "law", "awt", "lawm", "odasc"]] + \
+                [("lawm", dict(mode="dual", W=30, knn_k=50))] + \
+                [("decomp", dict(W=30, level=lv)) for lv in (1, 2)] + \
+                [("decomp", dict(W=30, level=lv, strata_lo=30, strata_hi=180)) for lv in ("strata", "strata_out")]
+        for m, kw in cases:
+            a = simulate(df, m, seed=0, return_preds=True, eval_end_gap_days=0, **kw)
+            b = simulate(df2, m, seed=0, return_preds=True, eval_end_gap_days=0, **kw)
+            assert np.allclose(np.nan_to_num(a["prob"][:cut]), np.nan_to_num(b["prob"][:cut])), (proj, m, kw)
+            assert np.array_equal(a["pred"][:cut], b["pred"][:cut]), (proj, m, kw)   # decisions, not only scores
 
 def test_final_labels_of_undiscovered_commits_do_not_leak():
     """R1 review: a policy that read the final y of commits still undiscovered at T0 would pass the t_found test.
