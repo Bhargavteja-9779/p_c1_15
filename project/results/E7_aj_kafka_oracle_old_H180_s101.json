@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E7",
+    "project": "aj_kafka",
+    "method": "oracle_old",
+    "variant": "oracle_old_H180",
+    "seed": 101,
+    "split": "apachejit",
+    "oracle_H": 180,
+    "gmean": 0.7541172832070409,
+    "r0": 0.7949852507374632,
+    "r1": 0.7153502235469449,
+    "rdiff": 0.07963502719051829,
+    "auc": 0.8426796618440315,
+    "mcc": 0.5120650210550771,
+    "n_eval": 1349,
+    "seconds": 1.77,
+    "n_inspected": 0,
+    "job_id": "E7_aj_kafka_oracle_old_H180_s101",
+    "written": "2026-11-28T17:00:15+00:00",
+    "cycle": 2
+  }
+]

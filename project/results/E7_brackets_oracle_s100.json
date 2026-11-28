@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E7",
+    "project": "brackets",
+    "method": "oracle",
+    "variant": "oracle",
+    "seed": 100,
+    "split": "test",
+    "gmean": 0.7885413165563097,
+    "r0": 0.8440550488078092,
+    "r1": 0.7366787377133989,
+    "rdiff": 0.10737631109441037,
+    "auc": 0.8797098689437491,
+    "mcc": 0.5419173450041649,
+    "n_eval": 16364,
+    "seconds": 37.05,
+    "n_inspected": 0,
+    "job_id": "E7_brackets_oracle_s100",
+    "written": "2026-11-28T17:01:03+00:00",
+    "cycle": 2
+  }
+]

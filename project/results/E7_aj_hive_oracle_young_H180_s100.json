@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E7",
+    "project": "aj_hive",
+    "method": "oracle_young",
+    "variant": "oracle_young_H180",
+    "seed": 100,
+    "split": "apachejit",
+    "oracle_H": 180,
+    "gmean": 0.798403879841438,
+    "r0": 0.7927461139896373,
+    "r1": 0.8041020247173284,
+    "rdiff": 0.011355910727691043,
+    "auc": 0.8731477207237414,
+    "mcc": 0.5819259977098282,
+    "n_eval": 5926,
+    "seconds": 10.36,
+    "n_inspected": 0,
+    "job_id": "E7_aj_hive_oracle_young_H180_s100",
+    "written": "2026-11-28T16:58:40+00:00",
+    "cycle": 2
+  }
+]

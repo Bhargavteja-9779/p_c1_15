@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E7",
+    "project": "aj_ignite",
+    "method": "nowait",
+    "variant": "nowait",
+    "seed": 100,
+    "split": "apachejit",
+    "gmean": 0.6861629318019724,
+    "r0": 0.9416391379581563,
+    "r1": 0.5,
+    "rdiff": 0.44163913795815635,
+    "auc": 0.7909186073792305,
+    "mcc": 0.5086036785801834,
+    "n_eval": 8343,
+    "seconds": 19.03,
+    "n_inspected": 0,
+    "job_id": "E7_aj_ignite_nowait_s100",
+    "written": "2026-11-28T16:59:01+00:00",
+    "cycle": 2
+  }
+]
