@@ -1,0 +1,155 @@
+{
+ "source": "Song et al. 2022, Table II (G-mean part), 14 projects",
+ "means": {
+  "odasc": 0.6157,
+  "odasc_opt": 0.6212,
+  "odasc_flt": 0.6164,
+  "odasc_rnd": 0.5562,
+  "oob": 0.5822,
+  "ob": 0.256
+ },
+ "opt_minus_oob": 0.039,
+ "flt_minus_oob": 0.0342,
+ "per_project": {
+  "Brackets": {
+   "ours_rmse": 0.436,
+   "random_rmse": 0.577,
+   "odasc": 0.6575,
+   "odasc_opt": 0.6525,
+   "odasc_flt": 0.6564,
+   "odasc_rnd": 0.6201,
+   "oob": 0.6367,
+   "ob": 0.5186
+  },
+  "Broadleaf": {
+   "ours_rmse": 0.431,
+   "random_rmse": 0.578,
+   "odasc": 0.6062,
+   "odasc_opt": 0.6403,
+   "odasc_flt": 0.6406,
+   "odasc_rnd": 0.4932,
+   "oob": 0.5732,
+   "ob": 0.1433
+  },
+  "Camel": {
+   "ours_rmse": 0.415,
+   "random_rmse": 0.577,
+   "odasc": 0.6498,
+   "odasc_opt": 0.6816,
+   "odasc_flt": 0.6753,
+   "odasc_rnd": 0.6247,
+   "oob": 0.6495,
+   "ob": 0.3416
+  },
+  "Corefx": {
+   "ours_rmse": 0.372,
+   "random_rmse": 0.578,
+   "odasc": 0.6058,
+   "odasc_opt": 0.5978,
+   "odasc_flt": 0.5947,
+   "odasc_rnd": 0.5958,
+   "oob": 0.5799,
+   "ob": 0.0914
+  },
+  "Django": {
+   "ours_rmse": 0.417,
+   "random_rmse": 0.578,
+   "odasc": 0.6838,
+   "odasc_opt": 0.693,
+   "odasc_flt": 0.6926,
+   "odasc_rnd": 0.6505,
+   "oob": 0.6534,
+   "ob": 0.4126
+  },
+  "Fabric": {
+   "ours_rmse": 0.398,
+   "random_rmse": 0.578,
+   "odasc": 0.6511,
+   "odasc_opt": 0.6596,
+   "odasc_flt": 0.6554,
+   "odasc_rnd": 0.6402,
+   "oob": 0.6303,
+   "ob": 0.1889
+  },
+  "jGroups": {
+   "ours_rmse": 0.465,
+   "random_rmse": 0.578,
+   "odasc": 0.5738,
+   "odasc_opt": 0.5684,
+   "odasc_flt": 0.58,
+   "odasc_rnd": 0.5514,
+   "oob": 0.5453,
+   "ob": 0.3054
+  },
+  "Nova": {
+   "ours_rmse": 0.413,
+   "random_rmse": 0.578,
+   "odasc": 0.6475,
+   "odasc_opt": 0.6497,
+   "odasc_flt": 0.6409,
+   "odasc_rnd": 0.5762,
+   "oob": 0.5883,
+   "ob": 0.4121
+  },
+  "Rails": {
+   "ours_rmse": 0.446,
+   "random_rmse": 0.578,
+   "odasc": 0.565,
+   "odasc_opt": 0.5878,
+   "odasc_flt": 0.6228,
+   "odasc_rnd": 0.4877,
+   "oob": 0.5004,
+   "ob": 0.2581
+  },
+  "Rust": {
+   "ours_rmse": 0.453,
+   "random_rmse": 0.578,
+   "odasc": 0.5689,
+   "odasc_opt": 0.52,
+   "odasc_flt": 0.5215,
+   "odasc_rnd": 0.5007,
+   "oob": 0.4948,
+   "ob": 0.1805
+  },
+  "Tensorflow": {
+   "ours_rmse": 0.419,
+   "random_rmse": 0.577,
+   "odasc": 0.6854,
+   "odasc_opt": 0.6923,
+   "odasc_flt": 0.7034,
+   "odasc_rnd": 0.5927,
+   "oob": 0.656,
+   "ob": 0.2912
+  },
+  "Tomcat": {
+   "ours_rmse": 0.464,
+   "random_rmse": 0.577,
+   "odasc": 0.6135,
+   "odasc_opt": 0.6234,
+   "odasc_flt": 0.6167,
+   "odasc_rnd": 0.4998,
+   "oob": 0.4944,
+   "ob": 0.1318
+  },
+  "VScode": {
+   "ours_rmse": 0.261,
+   "random_rmse": 0.578,
+   "odasc": 0.5811,
+   "odasc_opt": 0.5731,
+   "odasc_flt": 0.4603,
+   "odasc_rnd": 0.4225,
+   "oob": 0.5768,
+   "ob": 0.1568
+  },
+  "wp-Calypso": {
+   "ours_rmse": 0.428,
+   "random_rmse": 0.578,
+   "odasc": 0.531,
+   "odasc_opt": 0.5578,
+   "odasc_flt": 0.5696,
+   "odasc_rnd": 0.5319,
+   "oob": 0.5724,
+   "ob": 0.1523
+  }
+ }
+}
