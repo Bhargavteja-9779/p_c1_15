@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E2",
+    "project": "wagtail",
+    "method": "nowait",
+    "variant": "nowait_gmax_lat",
+    "seed": 100,
+    "split": "test",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6793812394274615,
+    "r0": 0.596913375373382,
+    "r1": 0.7732426303854876,
+    "rdiff": 0.1763292550121056,
+    "auc": 0.7349791116800742,
+    "mcc": 0.24829235762489832,
+    "n_eval": 6908,
+    "seconds": 15.61,
+    "n_inspected": 0,
+    "job_id": "E2_wagtail_nowait_gmax_lat_s100",
+    "written": "2026-11-28T18:18:36+00:00",
+    "cycle": 2
+  }
+]
