@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_ignite",
+    "method": "wait",
+    "variant": "wait_W90",
+    "seed": 102,
+    "split": "apachejit",
+    "W": 90,
+    "gmean": 0.7216402635509428,
+    "r0": 0.8360862041843637,
+    "r1": 0.622860020140987,
+    "rdiff": 0.2132261840433768,
+    "auc": 0.7796239557031357,
+    "mcc": 0.43865771319151836,
+    "n_eval": 8343,
+    "seconds": 17.78,
+    "n_inspected": 0,
+    "job_id": "E8_aj_ignite_wait_W90_s102",
+    "written": "2026-11-28T16:52:59+00:00",
+    "cycle": 2
+  }
+]

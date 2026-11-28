@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_ignite",
+    "method": "odasc",
+    "variant": "odasc_W30",
+    "seed": 101,
+    "split": "apachejit",
+    "W": 30,
+    "odasc_delta": 0.9,
+    "gmean": 0.7429955369941923,
+    "r0": 0.8330973729746736,
+    "r1": 0.6626384692849949,
+    "rdiff": 0.17045890368967864,
+    "auc": 0.8052076348185926,
+    "mcc": 0.46774573094271504,
+    "n_eval": 8343,
+    "seconds": 19.93,
+    "n_inspected": 0,
+    "job_id": "E8_aj_ignite_odasc_W30_s101",
+    "written": "2026-11-28T16:51:13+00:00",
+    "cycle": 2
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_kafka",
+    "method": "odasc",
+    "variant": "odasc_W30",
+    "seed": 104,
+    "split": "apachejit",
+    "W": 30,
+    "odasc_delta": 0.9,
+    "gmean": 0.7438455248209014,
+    "r0": 0.640117994100295,
+    "r1": 0.8643815201192251,
+    "rdiff": 0.22426352601893007,
+    "auc": 0.8545823826543397,
+    "mcc": 0.5173608981198637,
+    "n_eval": 1349,
+    "seconds": 1.87,
+    "n_inspected": 0,
+    "job_id": "E8_aj_kafka_odasc_W30_s104",
+    "written": "2026-11-28T16:53:15+00:00",
+    "cycle": 2
+  }
+]

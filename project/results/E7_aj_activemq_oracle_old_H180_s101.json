@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E7",
+    "project": "aj_activemq",
+    "method": "oracle_old",
+    "variant": "oracle_old_H180",
+    "seed": 101,
+    "split": "apachejit",
+    "oracle_H": 180,
+    "gmean": 0.6092275784273761,
+    "r0": 0.8907797815595632,
+    "r1": 0.4166666666666667,
+    "rdiff": 0.4741131148928965,
+    "auc": 0.717783787840303,
+    "mcc": 0.34233908869874247,
+    "n_eval": 5257,
+    "seconds": 6.7,
+    "n_inspected": 0,
+    "job_id": "E7_aj_activemq_oracle_old_H180_s101",
+    "written": "2026-11-28T16:53:35+00:00",
+    "cycle": 2
+  }
+]

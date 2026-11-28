@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_kafka",
+    "method": "oracle",
+    "variant": "oracle",
+    "seed": 103,
+    "split": "apachejit",
+    "gmean": 0.7858225704456988,
+    "r0": 0.7256637168141593,
+    "r1": 0.8509687034277198,
+    "rdiff": 0.1253049866135605,
+    "auc": 0.8825554251348535,
+    "mcc": 0.5809869402195358,
+    "n_eval": 1349,
+    "seconds": 1.72,
+    "n_inspected": 0,
+    "job_id": "E8_aj_kafka_oracle_s103",
+    "written": "2026-11-28T16:53:17+00:00",
+    "cycle": 2
+  }
+]

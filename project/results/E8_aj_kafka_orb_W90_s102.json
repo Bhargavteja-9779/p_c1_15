@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_kafka",
+    "method": "orb",
+    "variant": "orb_W90",
+    "seed": 102,
+    "split": "apachejit",
+    "W": 90,
+    "gmean": 0.782743816803724,
+    "r0": 0.7890855457227138,
+    "r1": 0.7764530551415797,
+    "rdiff": 0.012632490581134137,
+    "auc": 0.8557341879552819,
+    "mcc": 0.5655995231642813,
+    "n_eval": 1349,
+    "seconds": 1.55,
+    "n_inspected": 0,
+    "job_id": "E8_aj_kafka_orb_W90_s102",
+    "written": "2026-11-28T16:53:19+00:00",
+    "cycle": 2
+  }
+]

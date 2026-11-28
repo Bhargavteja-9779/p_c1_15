@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_kafka",
+    "method": "nowait",
+    "variant": "nowait",
+    "seed": 101,
+    "split": "apachejit",
+    "gmean": 0.7683357225612889,
+    "r0": 0.8392330383480826,
+    "r1": 0.7034277198211625,
+    "rdiff": 0.13580531852692013,
+    "auc": 0.8463351050033192,
+    "mcc": 0.5479435865498741,
+    "n_eval": 1349,
+    "seconds": 1.76,
+    "n_inspected": 0,
+    "job_id": "E8_aj_kafka_nowait_s101",
+    "written": "2026-11-28T16:53:07+00:00",
+    "cycle": 2
+  }
+]
