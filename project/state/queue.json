@@ -44902,10 +44902,14 @@
         "project": "camel",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:29:54+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:31:35+00:00",
+      "seconds": 101.7
     },
     {
       "id": "E7_camel_oracle_young_H180_s101",
@@ -44919,12 +44923,14 @@
         "project": "camel",
         "seed": 101
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 8,
       "started": "2026-11-28T17:28:21+00:00",
-      "worker": 3
+      "worker": 3,
+      "finished": "2026-11-28T17:29:54+00:00",
+      "seconds": 92.6
     },
     {
       "id": "E7_camel_oracle_old_H30_s101",
@@ -45020,10 +45026,14 @@
         "project": "camel",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:29:58+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:31:45+00:00",
+      "seconds": 106.7
     },
     {
       "id": "E7_camel_oracle_young_H180_s102",
@@ -45037,12 +45047,14 @@
         "project": "camel",
         "seed": 102
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 8,
       "started": "2026-11-28T17:28:23+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-28T17:29:58+00:00",
+      "seconds": 95.3
     },
     {
       "id": "E7_camel_oracle_old_H30_s102",
@@ -45138,10 +45150,14 @@
         "project": "camel",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:30:00+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:31:43+00:00",
+      "seconds": 103.0
     },
     {
       "id": "E7_camel_oracle_young_H180_s103",
@@ -45155,12 +45171,14 @@
         "project": "camel",
         "seed": 103
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 8,
       "started": "2026-11-28T17:28:25+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-28T17:30:00+00:00",
+      "seconds": 95.0
     },
     {
       "id": "E7_camel_oracle_old_H30_s103",
@@ -45256,10 +45274,14 @@
         "project": "camel",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:30:05+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:31:46+00:00",
+      "seconds": 101.3
     },
     {
       "id": "E7_camel_oracle_young_H180_s104",
@@ -45273,12 +45295,14 @@
         "project": "camel",
         "seed": 104
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 8,
       "started": "2026-11-28T17:28:30+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-28T17:30:05+00:00",
+      "seconds": 94.3
     },
     {
       "id": "E7_camel_oracle_old_H30_s104",
@@ -45333,10 +45357,12 @@
         "project": "jgroups",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:33:46+00:00",
+      "worker": 3
     },
     {
       "id": "E7_jgroups_nowait_s101",
@@ -45349,10 +45375,14 @@
         "project": "jgroups",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:31:35+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:32:21+00:00",
+      "seconds": 46.0
     },
     {
       "id": "E7_jgroups_oracle_young_H30_s101",
@@ -45400,10 +45430,14 @@
         "project": "jgroups",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:33:04+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:33:46+00:00",
+      "seconds": 41.7
     },
     {
       "id": "E7_jgroups_oracle_old_H180_s101",
@@ -45417,10 +45451,14 @@
         "project": "jgroups",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:32:21+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:33:04+00:00",
+      "seconds": 42.4
     },
     {
       "id": "E7_jgroups_oracle_s102",
@@ -45433,10 +45471,12 @@
         "project": "jgroups",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:33:53+00:00",
+      "worker": 2
     },
     {
       "id": "E7_jgroups_nowait_s102",
@@ -45449,10 +45489,14 @@
         "project": "jgroups",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:31:43+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:32:25+00:00",
+      "seconds": 41.8
     },
     {
       "id": "E7_jgroups_oracle_young_H30_s102",
@@ -45500,10 +45544,14 @@
         "project": "jgroups",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:33:07+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:33:53+00:00",
+      "seconds": 46.0
     },
     {
       "id": "E7_jgroups_oracle_old_H180_s102",
@@ -45517,10 +45565,14 @@
         "project": "jgroups",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:32:25+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:33:07+00:00",
+      "seconds": 42.1
     },
     {
       "id": "E7_jgroups_oracle_s103",
@@ -45533,10 +45585,12 @@
         "project": "jgroups",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:33:54+00:00",
+      "worker": 0
     },
     {
       "id": "E7_jgroups_nowait_s103",
@@ -45549,10 +45603,14 @@
         "project": "jgroups",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:31:45+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:32:30+00:00",
+      "seconds": 45.3
     },
     {
       "id": "E7_jgroups_oracle_young_H30_s103",
@@ -45600,10 +45658,14 @@
         "project": "jgroups",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:33:12+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:33:54+00:00",
+      "seconds": 42.0
     },
     {
       "id": "E7_jgroups_oracle_old_H180_s103",
@@ -45617,10 +45679,14 @@
         "project": "jgroups",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:32:30+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:33:12+00:00",
+      "seconds": 41.3
     },
     {
       "id": "E7_jgroups_oracle_s104",
@@ -45633,10 +45699,12 @@
         "project": "jgroups",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:33:55+00:00",
+      "worker": 1
     },
     {
       "id": "E7_jgroups_nowait_s104",
@@ -45649,10 +45717,14 @@
         "project": "jgroups",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:31:46+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:32:31+00:00",
+      "seconds": 44.8
     },
     {
       "id": "E7_jgroups_oracle_young_H30_s104",
@@ -45700,10 +45772,14 @@
         "project": "jgroups",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:33:13+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:33:55+00:00",
+      "seconds": 42.1
     },
     {
       "id": "E7_jgroups_oracle_old_H180_s104",
@@ -45717,10 +45793,14 @@
         "project": "jgroups",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:32:31+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:33:13+00:00",
+      "seconds": 41.7
     },
     {
       "id": "E7_matplotlib_oracle_s101",

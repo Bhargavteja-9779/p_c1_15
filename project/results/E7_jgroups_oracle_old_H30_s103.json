@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E7",
+    "project": "jgroups",
+    "method": "oracle_old",
+    "variant": "oracle_old_H30",
+    "seed": 103,
+    "split": "test",
+    "oracle_H": 30,
+    "gmean": 0.4256209905412895,
+    "r0": 0.9584196712253074,
+    "r1": 0.18901242642249835,
+    "rdiff": 0.769407244802809,
+    "auc": 0.6778097997810169,
+    "mcc": 0.22329835142834045,
+    "n_eval": 17536,
+    "seconds": 42.03,
+    "n_inspected": 0,
+    "job_id": "E7_jgroups_oracle_old_H30_s103",
+    "written": "2026-11-28T17:33:54+00:00",
+    "cycle": 2
+  }
+]
