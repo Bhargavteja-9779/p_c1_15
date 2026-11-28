@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_flink",
+    "method": "wait",
+    "variant": "wait_W90",
+    "seed": 104,
+    "split": "apachejit",
+    "W": 90,
+    "gmean": 0.7467100269361469,
+    "r0": 0.8402466367713004,
+    "r1": 0.6635859519408502,
+    "rdiff": 0.17666068483045017,
+    "auc": 0.82208309070978,
+    "mcc": 0.5120830682882329,
+    "n_eval": 5732,
+    "seconds": 16.15,
+    "n_inspected": 0,
+    "job_id": "E8_aj_flink_wait_W90_s104",
+    "written": "2026-11-28T16:42:55+00:00",
+    "cycle": 2
+  }
+]

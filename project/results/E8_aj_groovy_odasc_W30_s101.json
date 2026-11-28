@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_groovy",
+    "method": "odasc",
+    "variant": "odasc_W30",
+    "seed": 101,
+    "split": "apachejit",
+    "W": 30,
+    "odasc_delta": 0.9,
+    "gmean": 0.6511602145083137,
+    "r0": 0.7544347826086957,
+    "r1": 0.5620229007633588,
+    "rdiff": 0.19241188184533686,
+    "auc": 0.6909702953866578,
+    "mcc": 0.2977608843820118,
+    "n_eval": 3923,
+    "seconds": 9.14,
+    "n_inspected": 0,
+    "job_id": "E8_aj_groovy_odasc_W30_s101",
+    "written": "2026-11-28T16:43:49+00:00",
+    "cycle": 2
+  }
+]

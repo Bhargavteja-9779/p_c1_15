@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_groovy",
+    "method": "wait",
+    "variant": "wait_W90",
+    "seed": 103,
+    "split": "apachejit",
+    "W": 90,
+    "gmean": 0.6198350475944003,
+    "r0": 0.8810434782608696,
+    "r1": 0.4360687022900763,
+    "rdiff": 0.44497477597079327,
+    "auc": 0.714016594756057,
+    "mcc": 0.34840436508042344,
+    "n_eval": 3923,
+    "seconds": 8.5,
+    "n_inspected": 0,
+    "job_id": "E8_aj_groovy_wait_W90_s103",
+    "written": "2026-11-28T16:44:44+00:00",
+    "cycle": 2
+  }
+]

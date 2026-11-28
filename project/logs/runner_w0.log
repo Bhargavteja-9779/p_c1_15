@@ -954,3 +954,1452 @@ ValueError: oracle_young
 [runner] 2026-11-25T11:05:02+00:00 w0 start E8_aj_flink_wait_W30_gmax_lat_s101 (attempt 1)
 [runner] 2026-11-25T11:05:15+00:00 w0 done E8_aj_flink_wait_W30_gmax_lat_s101 in 13.0s
 [runner] 2026-11-25T11:05:15+00:00 w0 start E8_aj_flink_wait_W30_gmax_lat_s104 (attempt 1)
+[runner] 2026-11-28T16:37:34+00:00 w0 start E8_aj_flink_wait_W30_gmax_lat_s102 (attempt 1)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:34+00:00 w0 failed E8_aj_flink_wait_W30_gmax_lat_s102 in 0.3s
+[runner] 2026-11-28T16:37:34+00:00 w0 start E8_aj_flink_wait_W30_gmax_lat_s102 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:34+00:00 w0 failed E8_aj_flink_wait_W30_gmax_lat_s102 in 0.0s
+[runner] 2026-11-28T16:37:34+00:00 w0 start E8_aj_flink_wait_W30_gmax_lat_s102 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:34+00:00 w0 failed E8_aj_flink_wait_W30_gmax_lat_s102 in 0.1s
+[runner] 2026-11-28T16:37:34+00:00 w0 start E8_aj_flink_wait_W30_gmax_lat_s104 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:34+00:00 w0 failed E8_aj_flink_wait_W30_gmax_lat_s104 in 0.2s
+[runner] 2026-11-28T16:37:34+00:00 w0 start E8_aj_flink_wait_W90_s100 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:35+00:00 w0 failed E8_aj_flink_wait_W90_s100 in 0.1s
+[runner] 2026-11-28T16:37:35+00:00 w0 start E8_aj_flink_wait_W90_s102 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:35+00:00 w0 failed E8_aj_flink_wait_W90_s102 in 0.1s
+[runner] 2026-11-28T16:37:35+00:00 w0 start E8_aj_flink_wait_W90_s103 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:35+00:00 w0 failed E8_aj_flink_wait_W90_s103 in 0.1s
+[runner] 2026-11-28T16:37:35+00:00 w0 start E8_aj_flink_wait_W90_s104 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:35+00:00 w0 failed E8_aj_flink_wait_W90_s104 in 0.1s
+[runner] 2026-11-28T16:37:35+00:00 w0 start E8_aj_groovy_law_lagakos_model_gmax_lat_s100 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:35+00:00 w0 failed E8_aj_groovy_law_lagakos_model_gmax_lat_s100 in 0.1s
+[runner] 2026-11-28T16:37:35+00:00 w0 start E8_aj_groovy_law_lagakos_model_gmax_lat_s102 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:35+00:00 w0 failed E8_aj_groovy_law_lagakos_model_gmax_lat_s102 in 0.1s
+[runner] 2026-11-28T16:37:35+00:00 w0 start E8_aj_groovy_law_lagakos_model_gmax_lat_s103 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:36+00:00 w0 failed E8_aj_groovy_law_lagakos_model_gmax_lat_s103 in 0.1s
+[runner] 2026-11-28T16:37:36+00:00 w0 start E8_aj_groovy_law_lagakos_model_gmax_lat_s104 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:36+00:00 w0 failed E8_aj_groovy_law_lagakos_model_gmax_lat_s104 in 0.1s
+[runner] 2026-11-28T16:37:36+00:00 w0 start E8_aj_groovy_nowait_s101 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:36+00:00 w0 failed E8_aj_groovy_nowait_s101 in 0.1s
+[runner] 2026-11-28T16:37:36+00:00 w0 start E8_aj_groovy_nowait_s102 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:36+00:00 w0 failed E8_aj_groovy_nowait_s102 in 0.1s
+[runner] 2026-11-28T16:37:36+00:00 w0 start E8_aj_groovy_nowait_s103 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:36+00:00 w0 failed E8_aj_groovy_nowait_s103 in 0.1s
+[runner] 2026-11-28T16:37:36+00:00 w0 start E8_aj_groovy_odasc_W15_gmax_lat_s100 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:36+00:00 w0 failed E8_aj_groovy_odasc_W15_gmax_lat_s100 in 0.1s
+[runner] 2026-11-28T16:37:37+00:00 w0 start E8_aj_groovy_odasc_W15_gmax_lat_s101 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:37+00:00 w0 failed E8_aj_groovy_odasc_W15_gmax_lat_s101 in 0.1s
+[runner] 2026-11-28T16:37:37+00:00 w0 start E8_aj_groovy_odasc_W15_gmax_lat_s102 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:37+00:00 w0 failed E8_aj_groovy_odasc_W15_gmax_lat_s102 in 0.1s
+[runner] 2026-11-28T16:37:37+00:00 w0 start E8_aj_groovy_odasc_W15_gmax_lat_s104 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:37+00:00 w0 failed E8_aj_groovy_odasc_W15_gmax_lat_s104 in 0.1s
+[runner] 2026-11-28T16:37:37+00:00 w0 start E8_aj_groovy_odasc_W30_s100 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:37+00:00 w0 failed E8_aj_groovy_odasc_W30_s100 in 0.1s
+[runner] 2026-11-28T16:37:37+00:00 w0 start E8_aj_groovy_odasc_W30_s101 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:37+00:00 w0 failed E8_aj_groovy_odasc_W30_s101 in 0.1s
+[runner] 2026-11-28T16:37:37+00:00 w0 start E8_aj_groovy_odasc_W30_s103 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:38+00:00 w0 failed E8_aj_groovy_odasc_W30_s103 in 0.1s
+[runner] 2026-11-28T16:37:38+00:00 w0 start E8_aj_groovy_odasc_W30_s104 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:38+00:00 w0 failed E8_aj_groovy_odasc_W30_s104 in 0.1s
+[runner] 2026-11-28T16:37:38+00:00 w0 start E8_aj_groovy_oracle_s100 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:38+00:00 w0 failed E8_aj_groovy_oracle_s100 in 0.1s
+[runner] 2026-11-28T16:37:38+00:00 w0 start E8_aj_groovy_oracle_s102 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:38+00:00 w0 failed E8_aj_groovy_oracle_s102 in 0.1s
+[runner] 2026-11-28T16:37:38+00:00 w0 start E8_aj_groovy_oracle_s103 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:38+00:00 w0 failed E8_aj_groovy_oracle_s103 in 0.1s
+[runner] 2026-11-28T16:37:38+00:00 w0 start E8_aj_groovy_oracle_s104 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:38+00:00 w0 failed E8_aj_groovy_oracle_s104 in 0.1s
+[runner] 2026-11-28T16:37:39+00:00 w0 start E8_aj_groovy_orb_W90_s101 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:39+00:00 w0 failed E8_aj_groovy_orb_W90_s101 in 0.1s
+[runner] 2026-11-28T16:37:39+00:00 w0 start E8_aj_groovy_orb_W90_s102 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:39+00:00 w0 failed E8_aj_groovy_orb_W90_s102 in 0.1s
+[runner] 2026-11-28T16:37:39+00:00 w0 start E8_aj_groovy_orb_W90_s103 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:39+00:00 w0 failed E8_aj_groovy_orb_W90_s103 in 0.1s
+[runner] 2026-11-28T16:37:39+00:00 w0 start E8_aj_groovy_wait_W30_gmax_lat_s100 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:39+00:00 w0 failed E8_aj_groovy_wait_W30_gmax_lat_s100 in 0.1s
+[runner] 2026-11-28T16:37:39+00:00 w0 start E8_aj_groovy_wait_W30_gmax_lat_s101 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:39+00:00 w0 failed E8_aj_groovy_wait_W30_gmax_lat_s101 in 0.1s
+[runner] 2026-11-28T16:37:40+00:00 w0 start E8_aj_groovy_wait_W30_gmax_lat_s102 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:40+00:00 w0 failed E8_aj_groovy_wait_W30_gmax_lat_s102 in 0.1s
+[runner] 2026-11-28T16:37:40+00:00 w0 start E8_aj_groovy_wait_W30_gmax_lat_s104 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:40+00:00 w0 failed E8_aj_groovy_wait_W30_gmax_lat_s104 in 0.1s
+[runner] 2026-11-28T16:37:40+00:00 w0 start E8_aj_groovy_wait_W90_s100 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:40+00:00 w0 failed E8_aj_groovy_wait_W90_s100 in 0.1s
+[runner] 2026-11-28T16:37:40+00:00 w0 start E8_aj_groovy_wait_W90_s101 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:40+00:00 w0 failed E8_aj_groovy_wait_W90_s101 in 0.1s
+[runner] 2026-11-28T16:37:40+00:00 w0 start E8_aj_groovy_wait_W90_s103 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:40+00:00 w0 failed E8_aj_groovy_wait_W90_s103 in 0.1s
+[runner] 2026-11-28T16:37:40+00:00 w0 start E8_aj_groovy_wait_W90_s104 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:40+00:00 w0 failed E8_aj_groovy_wait_W90_s104 in 0.1s
+[runner] 2026-11-28T16:37:41+00:00 w0 start E8_aj_hbase_law_lagakos_model_gmax_lat_s100 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:41+00:00 w0 failed E8_aj_hbase_law_lagakos_model_gmax_lat_s100 in 0.1s
+[runner] 2026-11-28T16:37:41+00:00 w0 start E8_aj_hbase_law_lagakos_model_gmax_lat_s102 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:41+00:00 w0 failed E8_aj_hbase_law_lagakos_model_gmax_lat_s102 in 0.1s
+[runner] 2026-11-28T16:37:41+00:00 w0 start E8_aj_hbase_law_lagakos_model_gmax_lat_s103 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:41+00:00 w0 failed E8_aj_hbase_law_lagakos_model_gmax_lat_s103 in 0.1s
+[runner] 2026-11-28T16:37:41+00:00 w0 start E8_aj_hbase_law_lagakos_model_gmax_lat_s104 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:41+00:00 w0 failed E8_aj_hbase_law_lagakos_model_gmax_lat_s104 in 0.1s
+[runner] 2026-11-28T16:37:41+00:00 w0 start E8_aj_hbase_nowait_s101 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:41+00:00 w0 failed E8_aj_hbase_nowait_s101 in 0.1s
+[runner] 2026-11-28T16:37:41+00:00 w0 start E8_aj_hbase_nowait_s102 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:42+00:00 w0 failed E8_aj_hbase_nowait_s102 in 0.1s
+[runner] 2026-11-28T16:37:42+00:00 w0 start E8_aj_hbase_nowait_s103 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:42+00:00 w0 failed E8_aj_hbase_nowait_s103 in 0.1s
+[runner] 2026-11-28T16:37:42+00:00 w0 start E8_aj_hbase_odasc_W15_gmax_lat_s100 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:42+00:00 w0 failed E8_aj_hbase_odasc_W15_gmax_lat_s100 in 0.1s
+[runner] 2026-11-28T16:37:42+00:00 w0 start E8_aj_hbase_odasc_W15_gmax_lat_s101 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:42+00:00 w0 failed E8_aj_hbase_odasc_W15_gmax_lat_s101 in 0.1s
+[runner] 2026-11-28T16:37:42+00:00 w0 start E8_aj_hbase_odasc_W15_gmax_lat_s102 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:42+00:00 w0 failed E8_aj_hbase_odasc_W15_gmax_lat_s102 in 0.1s
+[runner] 2026-11-28T16:37:42+00:00 w0 start E8_aj_hbase_odasc_W15_gmax_lat_s104 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:43+00:00 w0 failed E8_aj_hbase_odasc_W15_gmax_lat_s104 in 0.1s
+[runner] 2026-11-28T16:37:43+00:00 w0 start E8_aj_hbase_odasc_W30_s100 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:43+00:00 w0 failed E8_aj_hbase_odasc_W30_s100 in 0.1s
+[runner] 2026-11-28T16:37:43+00:00 w0 start E8_aj_hbase_odasc_W30_s101 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:43+00:00 w0 failed E8_aj_hbase_odasc_W30_s101 in 0.1s
+[runner] 2026-11-28T16:37:43+00:00 w0 start E8_aj_hbase_odasc_W30_s103 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:43+00:00 w0 failed E8_aj_hbase_odasc_W30_s103 in 0.1s
+[runner] 2026-11-28T16:37:43+00:00 w0 start E8_aj_hbase_odasc_W30_s104 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:43+00:00 w0 failed E8_aj_hbase_odasc_W30_s104 in 0.1s
+[runner] 2026-11-28T16:37:43+00:00 w0 start E8_aj_hbase_oracle_s100 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:44+00:00 w0 failed E8_aj_hbase_oracle_s100 in 0.1s
+[runner] 2026-11-28T16:37:44+00:00 w0 start E8_aj_hbase_oracle_s102 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:44+00:00 w0 failed E8_aj_hbase_oracle_s102 in 0.1s
+[runner] 2026-11-28T16:37:44+00:00 w0 start E8_aj_hbase_oracle_s103 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:44+00:00 w0 failed E8_aj_hbase_oracle_s103 in 0.1s
+[runner] 2026-11-28T16:37:44+00:00 w0 start E8_aj_hbase_oracle_s104 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:44+00:00 w0 failed E8_aj_hbase_oracle_s104 in 0.1s
+[runner] 2026-11-28T16:37:44+00:00 w0 start E8_aj_hbase_orb_W90_s101 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:44+00:00 w0 failed E8_aj_hbase_orb_W90_s101 in 0.2s
+[runner] 2026-11-28T16:37:45+00:00 w0 start E8_aj_hbase_orb_W90_s102 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:45+00:00 w0 failed E8_aj_hbase_orb_W90_s102 in 0.1s
+[runner] 2026-11-28T16:37:45+00:00 w0 start E8_aj_hbase_orb_W90_s103 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:45+00:00 w0 failed E8_aj_hbase_orb_W90_s103 in 0.1s
+[runner] 2026-11-28T16:37:45+00:00 w0 start E8_aj_hbase_wait_W30_gmax_lat_s100 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:45+00:00 w0 failed E8_aj_hbase_wait_W30_gmax_lat_s100 in 0.1s
+[runner] 2026-11-28T16:37:45+00:00 w0 start E8_aj_hbase_wait_W30_gmax_lat_s101 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:45+00:00 w0 failed E8_aj_hbase_wait_W30_gmax_lat_s101 in 0.1s
+[runner] 2026-11-28T16:37:45+00:00 w0 start E8_aj_hbase_wait_W30_gmax_lat_s102 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:45+00:00 w0 failed E8_aj_hbase_wait_W30_gmax_lat_s102 in 0.1s
+[runner] 2026-11-28T16:37:46+00:00 w0 start E8_aj_hbase_wait_W30_gmax_lat_s104 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:46+00:00 w0 failed E8_aj_hbase_wait_W30_gmax_lat_s104 in 0.1s
+[runner] 2026-11-28T16:37:46+00:00 w0 start E8_aj_hbase_wait_W90_s100 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:46+00:00 w0 failed E8_aj_hbase_wait_W90_s100 in 0.1s
+[runner] 2026-11-28T16:37:46+00:00 w0 start E8_aj_hbase_wait_W90_s101 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:46+00:00 w0 failed E8_aj_hbase_wait_W90_s101 in 0.1s
+[runner] 2026-11-28T16:37:46+00:00 w0 start E8_aj_hbase_wait_W90_s103 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:46+00:00 w0 failed E8_aj_hbase_wait_W90_s103 in 0.1s
+[runner] 2026-11-28T16:37:46+00:00 w0 start E8_aj_hbase_wait_W90_s104 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:46+00:00 w0 failed E8_aj_hbase_wait_W90_s104 in 0.1s
+[runner] 2026-11-28T16:37:47+00:00 w0 start E8_aj_hive_law_lagakos_model_gmax_lat_s100 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:47+00:00 w0 failed E8_aj_hive_law_lagakos_model_gmax_lat_s100 in 0.1s
+[runner] 2026-11-28T16:37:47+00:00 w0 start E8_aj_hive_law_lagakos_model_gmax_lat_s102 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:47+00:00 w0 failed E8_aj_hive_law_lagakos_model_gmax_lat_s102 in 0.1s
+[runner] 2026-11-28T16:37:47+00:00 w0 start E8_aj_hive_law_lagakos_model_gmax_lat_s103 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:47+00:00 w0 failed E8_aj_hive_law_lagakos_model_gmax_lat_s103 in 0.1s
+[runner] 2026-11-28T16:37:47+00:00 w0 start E8_aj_hive_law_lagakos_model_gmax_lat_s104 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:47+00:00 w0 failed E8_aj_hive_law_lagakos_model_gmax_lat_s104 in 0.1s
+[runner] 2026-11-28T16:37:47+00:00 w0 start E8_aj_hive_nowait_s101 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:47+00:00 w0 failed E8_aj_hive_nowait_s101 in 0.1s
+[runner] 2026-11-28T16:37:48+00:00 w0 start E8_aj_hive_nowait_s102 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:48+00:00 w0 failed E8_aj_hive_nowait_s102 in 0.1s
+[runner] 2026-11-28T16:37:48+00:00 w0 start E8_aj_hive_nowait_s103 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:48+00:00 w0 failed E8_aj_hive_nowait_s103 in 0.1s
+[runner] 2026-11-28T16:37:48+00:00 w0 start E8_aj_hive_odasc_W15_gmax_lat_s100 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:48+00:00 w0 failed E8_aj_hive_odasc_W15_gmax_lat_s100 in 0.1s
+[runner] 2026-11-28T16:37:48+00:00 w0 start E8_aj_hive_odasc_W15_gmax_lat_s101 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:48+00:00 w0 failed E8_aj_hive_odasc_W15_gmax_lat_s101 in 0.1s
+[runner] 2026-11-28T16:37:48+00:00 w0 start E8_aj_hive_odasc_W15_gmax_lat_s102 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:48+00:00 w0 failed E8_aj_hive_odasc_W15_gmax_lat_s102 in 0.1s
+[runner] 2026-11-28T16:37:49+00:00 w0 start E8_aj_hive_odasc_W15_gmax_lat_s104 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:49+00:00 w0 failed E8_aj_hive_odasc_W15_gmax_lat_s104 in 0.1s
+[runner] 2026-11-28T16:37:49+00:00 w0 start E8_aj_hive_odasc_W30_s100 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:49+00:00 w0 failed E8_aj_hive_odasc_W30_s100 in 0.1s
+[runner] 2026-11-28T16:37:49+00:00 w0 start E8_aj_hive_odasc_W30_s101 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:49+00:00 w0 failed E8_aj_hive_odasc_W30_s101 in 0.1s
+[runner] 2026-11-28T16:37:49+00:00 w0 start E8_aj_hive_odasc_W30_s103 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:49+00:00 w0 failed E8_aj_hive_odasc_W30_s103 in 0.1s
+[runner] 2026-11-28T16:37:49+00:00 w0 start E8_aj_hive_odasc_W30_s104 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:50+00:00 w0 failed E8_aj_hive_odasc_W30_s104 in 0.1s
+[runner] 2026-11-28T16:37:50+00:00 w0 start E8_aj_hive_oracle_s100 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:50+00:00 w0 failed E8_aj_hive_oracle_s100 in 0.1s
+[runner] 2026-11-28T16:37:50+00:00 w0 start E8_aj_hive_oracle_s102 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:50+00:00 w0 failed E8_aj_hive_oracle_s102 in 0.1s
+[runner] 2026-11-28T16:37:50+00:00 w0 start E8_aj_hive_oracle_s103 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:50+00:00 w0 failed E8_aj_hive_oracle_s103 in 0.1s
+[runner] 2026-11-28T16:37:50+00:00 w0 start E8_aj_hive_oracle_s104 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:50+00:00 w0 failed E8_aj_hive_oracle_s104 in 0.1s
+[runner] 2026-11-28T16:37:50+00:00 w0 start E8_aj_hive_orb_W90_s101 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:51+00:00 w0 failed E8_aj_hive_orb_W90_s101 in 0.1s
+[runner] 2026-11-28T16:37:51+00:00 w0 start E8_aj_hive_orb_W90_s102 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:51+00:00 w0 failed E8_aj_hive_orb_W90_s102 in 0.1s
+[runner] 2026-11-28T16:37:51+00:00 w0 start E8_aj_hive_orb_W90_s103 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:51+00:00 w0 failed E8_aj_hive_orb_W90_s103 in 0.1s
+[runner] 2026-11-28T16:37:51+00:00 w0 start E8_aj_hive_wait_W30_gmax_lat_s100 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:51+00:00 w0 failed E8_aj_hive_wait_W30_gmax_lat_s100 in 0.1s
+[runner] 2026-11-28T16:37:51+00:00 w0 start E8_aj_hive_wait_W30_gmax_lat_s101 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:51+00:00 w0 failed E8_aj_hive_wait_W30_gmax_lat_s101 in 0.1s
+[runner] 2026-11-28T16:37:51+00:00 w0 start E8_aj_hive_wait_W30_gmax_lat_s102 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:52+00:00 w0 failed E8_aj_hive_wait_W30_gmax_lat_s102 in 0.1s
+[runner] 2026-11-28T16:37:52+00:00 w0 start E8_aj_hive_wait_W30_gmax_lat_s104 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:52+00:00 w0 failed E8_aj_hive_wait_W30_gmax_lat_s104 in 0.1s
+[runner] 2026-11-28T16:37:52+00:00 w0 start E8_aj_hive_wait_W90_s100 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:52+00:00 w0 failed E8_aj_hive_wait_W90_s100 in 0.1s
+[runner] 2026-11-28T16:37:52+00:00 w0 start E8_aj_hive_wait_W90_s101 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:52+00:00 w0 failed E8_aj_hive_wait_W90_s101 in 0.1s
+[runner] 2026-11-28T16:37:52+00:00 w0 start E8_aj_hive_wait_W90_s103 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:52+00:00 w0 failed E8_aj_hive_wait_W90_s103 in 0.1s
+[runner] 2026-11-28T16:37:53+00:00 w0 start E8_aj_hive_wait_W90_s104 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:53+00:00 w0 failed E8_aj_hive_wait_W90_s104 in 0.1s
+[runner] 2026-11-28T16:37:53+00:00 w0 start E8_aj_ignite_law_lagakos_model_gmax_lat_s100 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:53+00:00 w0 failed E8_aj_ignite_law_lagakos_model_gmax_lat_s100 in 0.1s
+[runner] 2026-11-28T16:37:53+00:00 w0 start E8_aj_ignite_law_lagakos_model_gmax_lat_s102 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:53+00:00 w0 failed E8_aj_ignite_law_lagakos_model_gmax_lat_s102 in 0.1s
+[runner] 2026-11-28T16:37:53+00:00 w0 start E8_aj_ignite_law_lagakos_model_gmax_lat_s103 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:53+00:00 w0 failed E8_aj_ignite_law_lagakos_model_gmax_lat_s103 in 0.1s
+[runner] 2026-11-28T16:37:53+00:00 w0 start E8_aj_ignite_law_lagakos_model_gmax_lat_s104 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:53+00:00 w0 failed E8_aj_ignite_law_lagakos_model_gmax_lat_s104 in 0.1s
+[runner] 2026-11-28T16:37:54+00:00 w0 start E8_aj_ignite_nowait_s101 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:54+00:00 w0 failed E8_aj_ignite_nowait_s101 in 0.1s
+[runner] 2026-11-28T16:37:54+00:00 w0 start E8_aj_ignite_nowait_s102 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:54+00:00 w0 failed E8_aj_ignite_nowait_s102 in 0.1s
+[runner] 2026-11-28T16:37:54+00:00 w0 start E8_aj_ignite_nowait_s103 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:54+00:00 w0 failed E8_aj_ignite_nowait_s103 in 0.1s
+[runner] 2026-11-28T16:37:54+00:00 w0 start E8_aj_ignite_odasc_W15_gmax_lat_s100 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:54+00:00 w0 failed E8_aj_ignite_odasc_W15_gmax_lat_s100 in 0.1s
+[runner] 2026-11-28T16:37:54+00:00 w0 start E8_aj_ignite_odasc_W15_gmax_lat_s101 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:54+00:00 w0 failed E8_aj_ignite_odasc_W15_gmax_lat_s101 in 0.1s
+[runner] 2026-11-28T16:37:55+00:00 w0 start E8_aj_ignite_odasc_W15_gmax_lat_s102 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:55+00:00 w0 failed E8_aj_ignite_odasc_W15_gmax_lat_s102 in 0.1s
+[runner] 2026-11-28T16:37:55+00:00 w0 start E8_aj_ignite_odasc_W15_gmax_lat_s104 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:55+00:00 w0 failed E8_aj_ignite_odasc_W15_gmax_lat_s104 in 0.1s
+[runner] 2026-11-28T16:37:55+00:00 w0 start E8_aj_ignite_odasc_W30_s100 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:55+00:00 w0 failed E8_aj_ignite_odasc_W30_s100 in 0.1s
+[runner] 2026-11-28T16:37:55+00:00 w0 start E8_aj_ignite_odasc_W30_s101 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:55+00:00 w0 failed E8_aj_ignite_odasc_W30_s101 in 0.1s
+[runner] 2026-11-28T16:37:55+00:00 w0 start E8_aj_ignite_odasc_W30_s103 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:56+00:00 w0 failed E8_aj_ignite_odasc_W30_s103 in 0.1s
+[runner] 2026-11-28T16:37:56+00:00 w0 start E8_aj_ignite_odasc_W30_s104 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:56+00:00 w0 failed E8_aj_ignite_odasc_W30_s104 in 0.1s
+[runner] 2026-11-28T16:37:56+00:00 w0 start E8_aj_ignite_oracle_s100 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:56+00:00 w0 failed E8_aj_ignite_oracle_s100 in 0.1s
+[runner] 2026-11-28T16:37:56+00:00 w0 start E8_aj_ignite_oracle_s102 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:56+00:00 w0 failed E8_aj_ignite_oracle_s102 in 0.1s
+[runner] 2026-11-28T16:37:56+00:00 w0 start E8_aj_ignite_oracle_s103 (attempt 2)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:56+00:00 w0 failed E8_aj_ignite_oracle_s103 in 0.1s
+[runner] 2026-11-28T16:37:56+00:00 w0 start E8_aj_ignite_oracle_s104 (attempt 3)
+Traceback (most recent call last):
+  File "/home/user/p_c1_15/project/src/runner.py", line 169, in run
+    fn(dict(job["params"], quick=(mode == "quick")), ctx)
+    ~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/p_c1_15/project/src/jobs.py", line 16, in jit_run
+    from .jit import simulate
+  File "/home/user/p_c1_15/project/src/jit.py", line 26, in <module>
+    import lightgbm as lgb
+ModuleNotFoundError: No module named 'lightgbm'
+
+[runner] 2026-11-28T16:37:57+00:00 w0 failed E8_aj_ignite_oracle_s104 in 0.1s
+[runner] 2026-11-28T16:42:01+00:00 w0 start E8_aj_flink_wait_W30_gmax_lat_s102 (attempt 1)
+[runner] 2026-11-28T16:42:21+00:00 w0 done E8_aj_flink_wait_W30_gmax_lat_s102 in 20.1s
+[runner] 2026-11-28T16:42:21+00:00 w0 start E8_aj_flink_wait_W90_s101 (attempt 1)
+[runner] 2026-11-28T16:42:38+00:00 w0 done E8_aj_flink_wait_W90_s101 in 17.4s
+[runner] 2026-11-28T16:42:38+00:00 w0 start E8_aj_flink_wait_W90_s104 (attempt 1)
+[runner] 2026-11-28T16:42:55+00:00 w0 done E8_aj_flink_wait_W90_s104 in 16.2s
+[runner] 2026-11-28T16:42:55+00:00 w0 start E8_aj_groovy_law_lagakos_model_gmax_lat_s103 (attempt 1)
+[runner] 2026-11-28T16:43:10+00:00 w0 done E8_aj_groovy_law_lagakos_model_gmax_lat_s103 in 15.4s
+[runner] 2026-11-28T16:43:10+00:00 w0 start E8_aj_groovy_nowait_s101 (attempt 1)
+[runner] 2026-11-28T16:43:18+00:00 w0 done E8_aj_groovy_nowait_s101 in 8.2s
+[runner] 2026-11-28T16:43:18+00:00 w0 start E8_aj_groovy_nowait_s103 (attempt 1)
+[runner] 2026-11-28T16:43:26+00:00 w0 done E8_aj_groovy_nowait_s103 in 7.8s
+[runner] 2026-11-28T16:43:26+00:00 w0 start E8_aj_groovy_odasc_W15_gmax_lat_s101 (attempt 1)
+[runner] 2026-11-28T16:43:35+00:00 w0 done E8_aj_groovy_odasc_W15_gmax_lat_s101 in 9.4s
+[runner] 2026-11-28T16:43:35+00:00 w0 start E8_aj_groovy_odasc_W15_gmax_lat_s104 (attempt 1)
+[runner] 2026-11-28T16:43:45+00:00 w0 done E8_aj_groovy_odasc_W15_gmax_lat_s104 in 9.2s
+[runner] 2026-11-28T16:43:45+00:00 w0 start E8_aj_groovy_odasc_W30_s102 (attempt 1)
+[runner] 2026-11-28T16:43:53+00:00 w0 done E8_aj_groovy_odasc_W30_s102 in 8.3s
+[runner] 2026-11-28T16:43:53+00:00 w0 start E8_aj_groovy_oracle_s100 (attempt 1)
+[runner] 2026-11-28T16:44:04+00:00 w0 done E8_aj_groovy_oracle_s100 in 11.0s
+[runner] 2026-11-28T16:44:04+00:00 w0 start E8_aj_groovy_oracle_s103 (attempt 1)
+[runner] 2026-11-28T16:44:16+00:00 w0 done E8_aj_groovy_oracle_s103 in 11.6s
+[runner] 2026-11-28T16:44:16+00:00 w0 start E8_aj_groovy_orb_W90_s102 (attempt 1)
+[runner] 2026-11-28T16:44:23+00:00 w0 done E8_aj_groovy_orb_W90_s102 in 7.8s
+[runner] 2026-11-28T16:44:23+00:00 w0 start E8_aj_groovy_wait_W30_gmax_lat_s101 (attempt 1)
+[runner] 2026-11-28T16:44:32+00:00 w0 done E8_aj_groovy_wait_W30_gmax_lat_s101 in 8.7s
+[runner] 2026-11-28T16:44:32+00:00 w0 start E8_aj_groovy_wait_W90_s100 (attempt 1)
+[runner] 2026-11-28T16:44:41+00:00 w0 done E8_aj_groovy_wait_W90_s100 in 8.5s
+[runner] 2026-11-28T16:44:41+00:00 w0 start E8_aj_groovy_wait_W90_s104 (attempt 1)
+[runner] 2026-11-28T16:44:49+00:00 w0 done E8_aj_groovy_wait_W90_s104 in 7.8s
+[runner] 2026-11-28T16:44:49+00:00 w0 start E8_aj_hbase_law_lagakos_model_gmax_lat_s103 (attempt 1)
+[runner] 2026-11-28T16:45:13+00:00 w0 done E8_aj_hbase_law_lagakos_model_gmax_lat_s103 in 24.6s
+[runner] 2026-11-28T16:45:13+00:00 w0 start E8_aj_hbase_nowait_s102 (attempt 1)
+[runner] 2026-11-28T16:45:26+00:00 w0 done E8_aj_hbase_nowait_s102 in 12.6s
+[runner] 2026-11-28T16:45:26+00:00 w0 start E8_aj_hbase_odasc_W15_gmax_lat_s100 (attempt 1)
+[runner] 2026-11-28T16:45:43+00:00 w0 done E8_aj_hbase_odasc_W15_gmax_lat_s100 in 17.6s
+[runner] 2026-11-28T16:45:43+00:00 w0 start E8_aj_hbase_odasc_W15_gmax_lat_s104 (attempt 1)
+[runner] 2026-11-28T16:46:04+00:00 w0 done E8_aj_hbase_odasc_W15_gmax_lat_s104 in 20.6s
+[runner] 2026-11-28T16:46:04+00:00 w0 start E8_aj_hbase_odasc_W30_s104 (attempt 1)
+[runner] 2026-11-28T16:46:19+00:00 w0 done E8_aj_hbase_odasc_W30_s104 in 14.7s
+[runner] 2026-11-28T16:46:19+00:00 w0 start E8_aj_hbase_oracle_s103 (attempt 1)
+[runner] 2026-11-28T16:46:33+00:00 w0 done E8_aj_hbase_oracle_s103 in 13.7s
+[runner] 2026-11-28T16:46:33+00:00 w0 start E8_aj_hbase_orb_W90_s102 (attempt 1)
+[runner] 2026-11-28T16:46:45+00:00 w0 done E8_aj_hbase_orb_W90_s102 in 12.2s
+[runner] 2026-11-28T16:46:45+00:00 w0 start E8_aj_hbase_wait_W30_gmax_lat_s101 (attempt 1)

@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_hbase",
+    "method": "nowait",
+    "variant": "nowait",
+    "seed": 100,
+    "split": "apachejit",
+    "gmean": 0.66750495708281,
+    "r0": 0.8739687055476529,
+    "r1": 0.5098155859607376,
+    "rdiff": 0.3641531195869153,
+    "auc": 0.7865430131593756,
+    "mcc": 0.413478224028922,
+    "n_eval": 6877,
+    "seconds": 14.94,
+    "n_inspected": 0,
+    "job_id": "E8_aj_hbase_nowait_s100",
+    "written": "2026-11-28T16:45:20+00:00",
+    "cycle": 2
+  }
+]

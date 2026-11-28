@@ -30172,10 +30172,17 @@
         "project": "aj_flink",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:42:19+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:42:35+00:00",
+      "seconds": 16.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_flink_orb_W90_s100",
@@ -30340,10 +30347,17 @@
         "project": "aj_flink",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:42:21+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:42:38+00:00",
+      "seconds": 17.4,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_flink_orb_W90_s101",
@@ -30508,10 +30522,17 @@
         "project": "aj_flink",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:42:21+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:42:39+00:00",
+      "seconds": 17.5,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_flink_orb_W90_s102",
@@ -30569,12 +30590,21 @@
         "project": "aj_flink",
         "seed": 102
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 6,
-      "started": "2026-11-25T11:05:05+00:00",
-      "worker": 1
+      "started": "2026-11-28T16:42:01+00:00",
+      "worker": 0,
+      "resets": 1,
+      "log": [
+        "2026-11-28T16:37:34+00:00 reset running->pending on restart (attempt refunded)"
+      ],
+      "finished": "2026-11-28T16:42:21+00:00",
+      "seconds": 20.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_flink_odasc_W15_gmax_lat_s102",
@@ -30674,10 +30704,17 @@
         "project": "aj_flink",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:42:35+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:42:51+00:00",
+      "seconds": 15.4,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_flink_orb_W90_s103",
@@ -30735,12 +30772,21 @@
         "project": "aj_flink",
         "seed": 103
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 6,
-      "started": "2026-11-25T11:05:09+00:00",
-      "worker": 2
+      "started": "2026-11-28T16:42:01+00:00",
+      "worker": 2,
+      "resets": 1,
+      "log": [
+        "2026-11-28T16:37:34+00:00 reset running->pending on restart (attempt refunded)"
+      ],
+      "finished": "2026-11-28T16:42:21+00:00",
+      "seconds": 20.4,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_flink_odasc_W15_gmax_lat_s103",
@@ -30840,10 +30886,17 @@
         "project": "aj_flink",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:42:38+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:42:55+00:00",
+      "seconds": 16.2,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_flink_orb_W90_s104",
@@ -30901,12 +30954,21 @@
         "project": "aj_flink",
         "seed": 104
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 6,
-      "started": "2026-11-25T11:05:15+00:00",
-      "worker": 0
+      "started": "2026-11-28T16:42:01+00:00",
+      "worker": 1,
+      "resets": 1,
+      "log": [
+        "2026-11-28T16:37:34+00:00 reset running->pending on restart (attempt refunded)"
+      ],
+      "finished": "2026-11-28T16:42:19+00:00",
+      "seconds": 18.4,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_flink_odasc_W15_gmax_lat_s104",
@@ -30965,10 +31027,17 @@
         "project": "aj_groovy",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:42:39+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:42:52+00:00",
+      "seconds": 12.8,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_nowait_s100",
@@ -30981,10 +31050,17 @@
         "project": "aj_groovy",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:43:06+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:43:13+00:00",
+      "seconds": 6.8,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_wait_W90_s100",
@@ -30998,10 +31074,17 @@
         "project": "aj_groovy",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:44:32+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:44:41+00:00",
+      "seconds": 8.5,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_orb_W90_s100",
@@ -31015,10 +31098,17 @@
         "project": "aj_groovy",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:44:08+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T16:44:18+00:00",
+      "seconds": 9.2,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_odasc_W30_s100",
@@ -31033,10 +31123,17 @@
         "project": "aj_groovy",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:43:37+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:43:46+00:00",
+      "seconds": 8.6,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_wait_W30_gmax_lat_s100",
@@ -31051,10 +31148,17 @@
         "project": "aj_groovy",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:44:18+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T16:44:26+00:00",
+      "seconds": 8.4,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_odasc_W15_gmax_lat_s100",
@@ -31070,10 +31174,17 @@
         "project": "aj_groovy",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:43:21+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:43:31+00:00",
+      "seconds": 9.9,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_oracle_s100",
@@ -31086,10 +31197,17 @@
         "project": "aj_groovy",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:43:53+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:44:04+00:00",
+      "seconds": 11.0,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_law_lagakos_model_gmax_lat_s101",
@@ -31105,10 +31223,17 @@
         "project": "aj_groovy",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:42:51+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:43:05+00:00",
+      "seconds": 14.0,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_nowait_s101",
@@ -31121,10 +31246,17 @@
         "project": "aj_groovy",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:43:10+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:43:18+00:00",
+      "seconds": 8.2,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_wait_W90_s101",
@@ -31138,10 +31270,17 @@
         "project": "aj_groovy",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:44:33+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:44:41+00:00",
+      "seconds": 8.3,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_orb_W90_s101",
@@ -31155,10 +31294,17 @@
         "project": "aj_groovy",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:44:09+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:44:17+00:00",
+      "seconds": 7.7,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_odasc_W30_s101",
@@ -31173,10 +31319,17 @@
         "project": "aj_groovy",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:43:40+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:43:49+00:00",
+      "seconds": 9.2,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_wait_W30_gmax_lat_s101",
@@ -31191,10 +31344,17 @@
         "project": "aj_groovy",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:44:23+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:44:32+00:00",
+      "seconds": 8.7,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_odasc_W15_gmax_lat_s101",
@@ -31210,10 +31370,17 @@
         "project": "aj_groovy",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:43:26+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:43:35+00:00",
+      "seconds": 9.4,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_oracle_s101",
@@ -31226,10 +31393,17 @@
         "project": "aj_groovy",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:43:54+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:44:05+00:00",
+      "seconds": 11.0,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_law_lagakos_model_gmax_lat_s102",
@@ -31245,10 +31419,17 @@
         "project": "aj_groovy",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:42:52+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:43:06+00:00",
+      "seconds": 14.7,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_nowait_s102",
@@ -31261,10 +31442,17 @@
         "project": "aj_groovy",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:43:13+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:43:21+00:00",
+      "seconds": 7.8,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_wait_W90_s102",
@@ -31278,10 +31466,17 @@
         "project": "aj_groovy",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:44:34+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:44:42+00:00",
+      "seconds": 8.5,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_orb_W90_s102",
@@ -31295,10 +31490,17 @@
         "project": "aj_groovy",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:44:16+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:44:23+00:00",
+      "seconds": 7.8,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_odasc_W30_s102",
@@ -31313,10 +31515,17 @@
         "project": "aj_groovy",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:43:45+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:43:53+00:00",
+      "seconds": 8.3,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_wait_W30_gmax_lat_s102",
@@ -31331,10 +31540,17 @@
         "project": "aj_groovy",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:44:24+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:44:33+00:00",
+      "seconds": 8.5,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_odasc_W15_gmax_lat_s102",
@@ -31350,10 +31566,17 @@
         "project": "aj_groovy",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:43:27+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:43:37+00:00",
+      "seconds": 10.0,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_oracle_s102",
@@ -31366,10 +31589,17 @@
         "project": "aj_groovy",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:43:58+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:44:09+00:00",
+      "seconds": 11.0,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_law_lagakos_model_gmax_lat_s103",
@@ -31385,10 +31615,17 @@
         "project": "aj_groovy",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:42:55+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:43:10+00:00",
+      "seconds": 15.3,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_nowait_s103",
@@ -31401,10 +31638,17 @@
         "project": "aj_groovy",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:43:18+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:43:26+00:00",
+      "seconds": 7.8,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_wait_W90_s103",
@@ -31418,10 +31662,17 @@
         "project": "aj_groovy",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:44:36+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T16:44:44+00:00",
+      "seconds": 8.5,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_orb_W90_s103",
@@ -31435,10 +31686,17 @@
         "project": "aj_groovy",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:44:16+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:44:24+00:00",
+      "seconds": 8.0,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_odasc_W30_s103",
@@ -31453,10 +31711,17 @@
         "project": "aj_groovy",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:43:46+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:43:54+00:00",
+      "seconds": 8.6,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_wait_W30_gmax_lat_s103",
@@ -31471,10 +31736,17 @@
         "project": "aj_groovy",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:44:25+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:44:34+00:00",
+      "seconds": 9.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_odasc_W15_gmax_lat_s103",
@@ -31490,10 +31762,17 @@
         "project": "aj_groovy",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:43:31+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:43:40+00:00",
+      "seconds": 8.9,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_oracle_s103",
@@ -31506,10 +31785,17 @@
         "project": "aj_groovy",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:44:04+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:44:16+00:00",
+      "seconds": 11.6,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_law_lagakos_model_gmax_lat_s104",
@@ -31525,10 +31811,17 @@
         "project": "aj_groovy",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:43:05+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:43:19+00:00",
+      "seconds": 14.3,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_nowait_s104",
@@ -31541,10 +31834,17 @@
         "project": "aj_groovy",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:43:19+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:43:27+00:00",
+      "seconds": 7.7,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_wait_W90_s104",
@@ -31558,10 +31858,17 @@
         "project": "aj_groovy",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:44:41+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:44:49+00:00",
+      "seconds": 7.8,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_orb_W90_s104",
@@ -31575,10 +31882,17 @@
         "project": "aj_groovy",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:44:17+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:44:25+00:00",
+      "seconds": 8.0,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_odasc_W30_s104",
@@ -31593,10 +31907,17 @@
         "project": "aj_groovy",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:43:49+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:43:58+00:00",
+      "seconds": 8.7,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_wait_W30_gmax_lat_s104",
@@ -31611,10 +31932,17 @@
         "project": "aj_groovy",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:44:26+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T16:44:35+00:00",
+      "seconds": 9.4,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_odasc_W15_gmax_lat_s104",
@@ -31630,10 +31958,17 @@
         "project": "aj_groovy",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:43:35+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:43:45+00:00",
+      "seconds": 9.2,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_groovy_oracle_s104",
@@ -31646,10 +31981,17 @@
         "project": "aj_groovy",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:44:05+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:44:16+00:00",
+      "seconds": 10.9,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_law_lagakos_model_gmax_lat_s100",
@@ -31665,10 +32007,17 @@
         "project": "aj_hbase",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:44:41+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:45:04+00:00",
+      "seconds": 22.3,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_nowait_s100",
@@ -31681,10 +32030,17 @@
         "project": "aj_hbase",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:45:05+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:45:20+00:00",
+      "seconds": 15.0,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_wait_W90_s100",
@@ -31701,7 +32057,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:46+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:46+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_orb_W90_s100",
@@ -31715,10 +32078,17 @@
         "project": "aj_hbase",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:46:23+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:46:35+00:00",
+      "seconds": 11.9,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_odasc_W30_s100",
@@ -31733,10 +32103,17 @@
         "project": "aj_hbase",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:45:44+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:46:00+00:00",
+      "seconds": 15.7,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_wait_W30_gmax_lat_s100",
@@ -31751,10 +32128,17 @@
         "project": "aj_hbase",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:46:42+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:45+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_odasc_W15_gmax_lat_s100",
@@ -31770,10 +32154,17 @@
         "project": "aj_hbase",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:45:26+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:45:43+00:00",
+      "seconds": 17.6,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_oracle_s100",
@@ -31786,10 +32177,17 @@
         "project": "aj_hbase",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:46:06+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T16:46:20+00:00",
+      "seconds": 13.6,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_law_lagakos_model_gmax_lat_s101",
@@ -31805,10 +32203,17 @@
         "project": "aj_hbase",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:44:42+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:45:05+00:00",
+      "seconds": 23.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_nowait_s101",
@@ -31821,10 +32226,17 @@
         "project": "aj_hbase",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:45:07+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T16:45:21+00:00",
+      "seconds": 14.4,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_wait_W90_s101",
@@ -31841,7 +32253,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:46+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:37:46+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_orb_W90_s101",
@@ -31855,10 +32274,17 @@
         "project": "aj_hbase",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:46:29+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:46:42+00:00",
+      "seconds": 12.7,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_odasc_W30_s101",
@@ -31873,10 +32299,17 @@
         "project": "aj_hbase",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:45:52+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T16:46:06+00:00",
+      "seconds": 14.6,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_wait_W30_gmax_lat_s101",
@@ -31891,10 +32324,17 @@
         "project": "aj_hbase",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:46:45+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:37:45+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_odasc_W15_gmax_lat_s101",
@@ -31910,10 +32350,17 @@
         "project": "aj_hbase",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:45:27+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:45:44+00:00",
+      "seconds": 16.5,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_oracle_s101",
@@ -31926,10 +32373,17 @@
         "project": "aj_hbase",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:46:09+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:46:23+00:00",
+      "seconds": 14.2,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_law_lagakos_model_gmax_lat_s102",
@@ -31945,10 +32399,17 @@
         "project": "aj_hbase",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:44:44+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T16:45:07+00:00",
+      "seconds": 22.7,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_nowait_s102",
@@ -31961,10 +32422,17 @@
         "project": "aj_hbase",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:45:13+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:45:26+00:00",
+      "seconds": 12.6,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_wait_W90_s102",
@@ -31981,7 +32449,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:46+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:46+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_orb_W90_s102",
@@ -31995,10 +32470,17 @@
         "project": "aj_hbase",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:46:33+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:46:45+00:00",
+      "seconds": 12.2,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_odasc_W30_s102",
@@ -32013,10 +32495,17 @@
         "project": "aj_hbase",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:45:52+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:46:09+00:00",
+      "seconds": 16.5,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_wait_W30_gmax_lat_s102",
@@ -32034,7 +32523,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:45+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:37:45+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_odasc_W15_gmax_lat_s102",
@@ -32050,10 +32546,17 @@
         "project": "aj_hbase",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:45:34+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:45:52+00:00",
+      "seconds": 18.6,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_oracle_s102",
@@ -32066,10 +32569,17 @@
         "project": "aj_hbase",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:46:15+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:46:29+00:00",
+      "seconds": 14.0,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_law_lagakos_model_gmax_lat_s103",
@@ -32085,10 +32595,17 @@
         "project": "aj_hbase",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:44:49+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:45:13+00:00",
+      "seconds": 24.6,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_nowait_s103",
@@ -32101,10 +32618,17 @@
         "project": "aj_hbase",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:45:20+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:45:34+00:00",
+      "seconds": 13.2,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_wait_W90_s103",
@@ -32121,7 +32645,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:46+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:46+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_orb_W90_s103",
@@ -32135,10 +32666,17 @@
         "project": "aj_hbase",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:46:34+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T16:37:45+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_odasc_W30_s103",
@@ -32153,10 +32691,17 @@
         "project": "aj_hbase",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:46:00+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:46:15+00:00",
+      "seconds": 15.3,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_wait_W30_gmax_lat_s103",
@@ -32174,7 +32719,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:46+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:46+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_odasc_W15_gmax_lat_s103",
@@ -32190,10 +32742,17 @@
         "project": "aj_hbase",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:45:35+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T16:45:52+00:00",
+      "seconds": 16.8,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_oracle_s103",
@@ -32206,10 +32765,17 @@
         "project": "aj_hbase",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:46:19+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:46:32+00:00",
+      "seconds": 13.7,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_law_lagakos_model_gmax_lat_s104",
@@ -32225,10 +32791,17 @@
         "project": "aj_hbase",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:45:04+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:45:27+00:00",
+      "seconds": 23.8,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_nowait_s104",
@@ -32241,10 +32814,17 @@
         "project": "aj_hbase",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:45:21+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T16:45:35+00:00",
+      "seconds": 13.3,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_wait_W90_s104",
@@ -32261,7 +32841,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:47+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:47+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_orb_W90_s104",
@@ -32275,10 +32862,17 @@
         "project": "aj_hbase",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:46:35+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:37:45+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_odasc_W30_s104",
@@ -32293,10 +32887,17 @@
         "project": "aj_hbase",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:46:04+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:46:19+00:00",
+      "seconds": 14.6,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_wait_W30_gmax_lat_s104",
@@ -32314,7 +32915,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:46+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:46+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_odasc_W15_gmax_lat_s104",
@@ -32330,10 +32938,17 @@
         "project": "aj_hbase",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:45:43+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:46:04+00:00",
+      "seconds": 20.6,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hbase_oracle_s104",
@@ -32346,10 +32961,17 @@
         "project": "aj_hbase",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:46:20+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T16:46:34+00:00",
+      "seconds": 13.7,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_law_lagakos_model_gmax_lat_s100",
@@ -32368,7 +32990,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:53+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:37:53+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_nowait_s100",
@@ -32384,7 +33013,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:53+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:54+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_wait_W90_s100",
@@ -32418,7 +33054,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:57+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:57+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_odasc_W30_s100",
@@ -32436,7 +33079,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:55+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:55+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_wait_W30_gmax_lat_s100",
@@ -32473,7 +33123,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:54+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:54+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_oracle_s100",
@@ -32489,7 +33146,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:56+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:37:56+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_law_lagakos_model_gmax_lat_s101",
@@ -32508,7 +33172,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:53+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:53+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_nowait_s101",
@@ -32524,7 +33195,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:54+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:54+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_wait_W90_s101",
@@ -32558,7 +33236,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:57+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:37:57+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_odasc_W30_s101",
@@ -32576,7 +33261,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:55+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:37:55+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_wait_W30_gmax_lat_s101",
@@ -32613,7 +33305,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:54+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:55+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_oracle_s101",
@@ -32629,7 +33328,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:56+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:56+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_law_lagakos_model_gmax_lat_s102",
@@ -32648,7 +33354,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:53+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:53+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_nowait_s102",
@@ -32664,7 +33377,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:54+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:54+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_wait_W90_s102",
@@ -32716,7 +33436,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:55+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:55+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_wait_W30_gmax_lat_s102",
@@ -32753,7 +33480,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:55+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:37:55+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_oracle_s102",
@@ -32769,7 +33503,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:56+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:56+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_law_lagakos_model_gmax_lat_s103",
@@ -32788,7 +33529,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:53+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:53+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_nowait_s103",
@@ -32804,7 +33552,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:54+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:37:54+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_wait_W90_s103",
@@ -32856,7 +33611,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:56+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:56+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_wait_W30_gmax_lat_s103",
@@ -32893,7 +33655,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:55+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:55+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_oracle_s103",
@@ -32909,7 +33678,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:56+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:56+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_law_lagakos_model_gmax_lat_s104",
@@ -32928,7 +33704,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:53+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:37:53+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_nowait_s104",
@@ -32944,7 +33727,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:54+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:54+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_wait_W90_s104",
@@ -32996,7 +33786,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:56+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:56+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_wait_W30_gmax_lat_s104",
@@ -33033,7 +33830,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:55+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:55+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_ignite_oracle_s104",
@@ -33049,7 +33853,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:56+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:37:57+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_law_lagakos_model_gmax_lat_s100",
@@ -33068,7 +33879,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:47+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:37:47+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_nowait_s100",
@@ -33084,7 +33902,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:47+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:47+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_wait_W90_s100",
@@ -33101,7 +33926,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:52+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:52+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_orb_W90_s100",
@@ -33118,7 +33950,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:50+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:50+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_odasc_W30_s100",
@@ -33136,7 +33975,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:49+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:49+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_wait_W30_gmax_lat_s100",
@@ -33154,7 +34000,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:51+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:51+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_odasc_W15_gmax_lat_s100",
@@ -33173,7 +34026,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:48+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:48+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_oracle_s100",
@@ -33189,7 +34049,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:50+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:37:50+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_law_lagakos_model_gmax_lat_s101",
@@ -33208,7 +34075,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:47+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:47+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_nowait_s101",
@@ -33224,7 +34098,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:47+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:48+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_wait_W90_s101",
@@ -33241,7 +34122,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:52+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:37:52+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_orb_W90_s101",
@@ -33258,7 +34146,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:51+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:51+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_odasc_W30_s101",
@@ -33276,7 +34171,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:49+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:37:49+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_wait_W30_gmax_lat_s101",
@@ -33294,7 +34196,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:51+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:52+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_odasc_W15_gmax_lat_s101",
@@ -33313,7 +34222,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:48+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:48+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_oracle_s101",
@@ -33329,7 +34245,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:50+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:50+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_law_lagakos_model_gmax_lat_s102",
@@ -33348,7 +34271,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:47+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:47+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_nowait_s102",
@@ -33364,7 +34294,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:48+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:48+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_wait_W90_s102",
@@ -33381,7 +34318,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:52+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:52+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_orb_W90_s102",
@@ -33398,7 +34342,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:51+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:51+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_odasc_W30_s102",
@@ -33416,7 +34367,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:49+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:49+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_wait_W30_gmax_lat_s102",
@@ -33434,7 +34392,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:51+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:37:52+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_odasc_W15_gmax_lat_s102",
@@ -33453,7 +34418,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:48+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:37:48+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_oracle_s102",
@@ -33469,7 +34441,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:50+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:50+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_law_lagakos_model_gmax_lat_s103",
@@ -33488,7 +34467,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:47+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:47+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_nowait_s103",
@@ -33504,7 +34490,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:48+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:37:48+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_wait_W90_s103",
@@ -33521,7 +34514,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:52+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:53+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_orb_W90_s103",
@@ -33538,7 +34538,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:51+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:37:51+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_odasc_W30_s103",
@@ -33556,7 +34563,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:49+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:49+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_wait_W30_gmax_lat_s103",
@@ -33574,7 +34588,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:52+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:52+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_odasc_W15_gmax_lat_s103",
@@ -33593,7 +34614,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:48+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:49+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_oracle_s103",
@@ -33609,7 +34637,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:50+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:50+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_law_lagakos_model_gmax_lat_s104",
@@ -33628,7 +34663,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:47+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:37:47+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_nowait_s104",
@@ -33644,7 +34686,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:48+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:48+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_wait_W90_s104",
@@ -33661,7 +34710,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:53+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:53+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_orb_W90_s104",
@@ -33678,7 +34734,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:51+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:51+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_odasc_W30_s104",
@@ -33696,7 +34759,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:50+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:50+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_wait_W30_gmax_lat_s104",
@@ -33714,7 +34784,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:52+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:52+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_odasc_W15_gmax_lat_s104",
@@ -33733,7 +34810,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:49+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:37:49+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_hive_oracle_s104",
@@ -33749,7 +34833,14 @@
       "status": "pending",
       "attempts": 0,
       "cycle": 2,
-      "priority": 6
+      "priority": 6,
+      "started": "2026-11-28T16:37:50+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:37:50+00:00",
+      "seconds": 0.1,
+      "env_resets": [
+        "2026-11-28 lightgbm missing after container reset"
+      ]
     },
     {
       "id": "E8_aj_kafka_law_lagakos_model_gmax_lat_s100",

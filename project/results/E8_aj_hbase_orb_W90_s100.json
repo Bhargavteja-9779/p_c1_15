@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_hbase",
+    "method": "orb",
+    "variant": "orb_W90",
+    "seed": 100,
+    "split": "apachejit",
+    "W": 90,
+    "gmean": 0.7065767354655459,
+    "r0": 0.7476529160739687,
+    "r1": 0.6677572873289709,
+    "rdiff": 0.07989562874499778,
+    "auc": 0.7739479734595422,
+    "mcc": 0.4169671978831652,
+    "n_eval": 6877,
+    "seconds": 11.84,
+    "n_inspected": 0,
+    "job_id": "E8_aj_hbase_orb_W90_s100",
+    "written": "2026-11-28T16:46:35+00:00",
+    "cycle": 2
+  }
+]

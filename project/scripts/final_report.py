@@ -75,13 +75,43 @@ if "E1" in set(df.experiment) and fz.get("plan") == "plan_v3":
 if "E3" in set(df.experiment) and fz.get("plan") == "plan_v3":
     P = fz["proposed"]["variant"]
     compare("E3", P + "_ds2", ["odasc_W30_ds2", "wait_W90_ds2", "odasc_W15_gmax_lat_ds2"], "E3_robust_delay_x2")
+if "E8" in set(df.experiment) and fz.get("plan") == "plan_v3":
+    # H6 (plan_v4): frozen plan_v3 comparison replicated on ApacheJIT, no re-tuning, same statistics
+    P = fz["proposed"]["variant"]; B = [b["variant"] for b in fz["baselines"]]
+    compare("E8", P, B, "E8_H6_replication_apachejit")
+if "E7" in set(df.experiment):
+    # H5 (plan_v4): share of the nowait->oracle AUC gap recovered by revealing young / old labels, per project
+    e7 = df[df.experiment == "E7"]; out = {}
+    for bench, sub in [("cabral_test", e7[~e7.project.str.startswith("aj_")]), ("apachejit", e7[e7.project.str.startswith("aj_")])]:
+        a = sub.groupby(["project", "variant"]).auc.mean().unstack()
+        if not {"oracle", "nowait"} <= set(a.columns): continue
+        gap = a.oracle - a.nowait
+        rec = {v: ((a[v] - a.nowait) / gap) for v in a.columns if v.startswith("oracle_")}
+        rec_df = pd.DataFrame(rec).assign(gap_auc=gap, auc_nowait=a.nowait, auc_oracle=a.oracle).round(4)
+        rec_df.to_csv(T / f"E7_H5_recovery_{bench}.csv")
+        med = {v: round(float(r.median()), 4) for v, r in rec.items()}
+        out[bench] = {"n_projects": int(len(a)), "median_gap_auc": round(float(gap.median()), 4), "median_recovery": med,
+                      "mean_recovery": {v: round(float(r.mean()), 4) for v, r in rec.items()},
+                      "H5_young30_ge_0.5": bool(med.get("oracle_young_H30", -1) >= 0.5),
+                      "H5_old180_le_0.2": bool(med.get("oracle_old_H180", 9) <= 0.2),
+                      "projects_young30_ge_0.5": int((rec.get("oracle_young_H30", pd.Series(dtype=float)) >= 0.5).sum()),
+                      "projects_old180_le_0.2": int((rec.get("oracle_old_H180", pd.Series(dtype=float)) <= 0.2).sum())}
+        # paired test over projects: young_H30 vs old_H180 AUC (does recent-label access beat old-label access?)
+        if {"oracle_young_H30", "oracle_old_H180"} <= set(a.columns):
+            d = (a.oracle_young_H30 - a.oracle_old_H180).dropna()
+            w = stats.wilcoxon(d.values) if len(d) >= 5 else None
+            lo, hi = ci_boot(d.values)
+            out[bench]["young30_minus_old180_auc"] = {"mean": round(float(d.mean()), 4), "ci95": [round(lo, 4), round(hi, 4)],
+                                                      "wins": int((d > 0).sum()), "n": int(len(d)), "wilcoxon_p": float(w.pvalue) if w else None}
+        out[bench]["H5_supported"] = bool(out[bench]["H5_young30_ge_0.5"] and out[bench]["H5_old180_le_0.2"])
+    statsout["E7_H5_decomposition"] = out
 vt = pd.read_csv(STATE / "variants_tried.csv") if (STATE / "variants_tried.csv").exists() else pd.DataFrame()
 statsout["n_variants_logged"] = int(len(vt))
 json.dump(metrics, open(R / "metrics.json", "w"), indent=1)
 json.dump(statsout, open(R / "statistics.json", "w"), indent=1)
 
 # figures
-for exp in [x for x in ["E0", "E1"] if x in set(df.experiment)]:
+for exp in [x for x in ["E0", "E1", "E8"] if x in set(df.experiment)]:
     pp = df[df.experiment == exp].groupby(["variant", "project"]).gmean.mean().unstack()
     pp = pp.loc[pp.mean(axis=1).sort_values().index]
     fig, ax = plt.subplots(figsize=(7, 0.35 * len(pp) + 1.5))

@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_hbase",
+    "method": "law",
+    "variant": "law_lagakos_model_gmax_lat",
+    "seed": 102,
+    "split": "apachejit",
+    "delay_est": "lagakos",
+    "prior": "model",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.7642916522058641,
+    "r0": 0.755049786628734,
+    "r1": 0.7736466389054134,
+    "rdiff": 0.0185968522766794,
+    "auc": 0.8317462426263579,
+    "mcc": 0.52857790784989,
+    "n_eval": 6877,
+    "seconds": 22.66,
+    "n_inspected": 0,
+    "job_id": "E8_aj_hbase_law_lagakos_model_gmax_lat_s102",
+    "written": "2026-11-28T16:45:07+00:00",
+    "cycle": 2
+  }
+]

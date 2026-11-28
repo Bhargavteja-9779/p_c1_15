@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_hbase",
+    "method": "odasc",
+    "variant": "odasc_W30",
+    "seed": 104,
+    "split": "apachejit",
+    "W": 30,
+    "odasc_delta": 0.9,
+    "gmean": 0.7257637731932454,
+    "r0": 0.6233285917496444,
+    "r1": 0.8450327186198692,
+    "rdiff": 0.22170412687022478,
+    "auc": 0.8198355733860916,
+    "mcc": 0.479060304446859,
+    "n_eval": 6877,
+    "seconds": 14.62,
+    "n_inspected": 0,
+    "job_id": "E8_aj_hbase_odasc_W30_s104",
+    "written": "2026-11-28T16:46:19+00:00",
+    "cycle": 2
+  }
+]

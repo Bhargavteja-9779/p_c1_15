@@ -70,3 +70,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-25T10:28:10+00:00** — E9 dev grid: inspection policies {rand, top, unc} x budgets {2%,5%} x base methods {nowait_gmax_lat, LAW, ODaSC_W30}; 162 dev runs; all counted as variants
   - Reason: Targets the D1 mechanism; dev only; confirmation later on ApacheJIT
+
+- **2026-11-28T16:43:45+00:00** — E9 analysed on dev: H7 and H8 refuted; no inspection variant is promoted to confirmation
+  - Reason: Top-risk (prior art, HumLa) >= uncertainty at both budgets; gains below label-policy spread. Promoting a variant that loses on dev would waste the fresh ApacheJIT set
