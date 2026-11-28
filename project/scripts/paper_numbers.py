@@ -61,7 +61,8 @@ rq1 = pd.read_csv(ROOT / "tables" / "rq1_waiting_time_tradeoff.csv").set_index("
 age = pd.read_csv(ROOT / "tables" / "rq1_false_clean_by_age.csv").set_index("project")
 T2 = rq1[["W0_false_clean", "W30_false_clean", "W90_false_clean", "W90_excluded"]].join(age[["<7d", ">2y"]])
 md(T2, "T2_rq1_label_noise.md", ".3f")
-red = 1 - rq1.W90_false_clean / rq1.W0_false_clean
+_rq1j = json.load(open(R / "rq1_label_noise.json"))
+red = pd.Series({k: 1 - v["by_W"]["90"]["false_clean_share_of_negatives"] / v["by_W"]["0"]["false_clean_share_of_negatives"] for k, v in _rq1j.items()})  # unrounded source
 N["rq1_relative_reduction_W90_range"] = [f3(red.min()), f3(red.max())]; N["rq1_relative_reduction_W90_median"] = f3(red.median())
 N["rq1_W90_excluded_range"] = [f3(rq1.W90_excluded.min()), f3(rq1.W90_excluded.max())]
 N["rq1_young_lt7d_false_clean_range"] = [f3(age["<7d"].min()), f3(age["<7d"].max())]
@@ -328,9 +329,35 @@ if RV.exists() and (rv.analysis == "B1").sum() >= 380 and (rv.analysis == "B3").
             ax.axhline(0, c="k", lw=.6); ax.set_xticks(x); ax.set_xticklabels([b.replace("-inf", "+").replace("-", "–") for b in t_.band], fontsize=7)
             ax.text(0.98, 0.95, f"({'abcd'[2 * r_ + c_]}) {fam}, W = {W}", transform=ax.transAxes, ha="right", va="top", fontsize=8)
             if r_ == 1: ax.set_xlabel("age of provisionally clean training commits (days)", fontsize=8)
-    axs[0, 0].set_ylabel("share (AUC)"); axs[1, 0].set_ylabel("share (AUC)")
+    axs[0, 0].set_ylabel("share"); axs[1, 0].set_ylabel("share")
     axs[0, 0].legend(fontsize=6, frameon=False, loc="center right")
     fig.tight_layout(); fig.savefig(P / "figures" / "F3_age_strata.png", dpi=200); plt.close(fig)
+
+# ---------------------------------------------------------------- round-3 requests
+_rq1 = json.load(open(R / "rq1_label_noise.json"))
+N["rq1_false_clean_7_30d_range"] = [f3(min(v["false_clean_rate_by_age"]["7-30d"] for v in _rq1.values())), f3(max(v["false_clean_rate_by_age"]["7-30d"] for v in _rq1.values()))]
+N["r3_oracle_minus_L1_W90_auc"] = {"cabral_test": f3(SH["cabral_test_W90_share_auc"]["oracle"] - SH["cabral_test_W90_share_auc"]["L1_W90"]),
+                                   "apachejit": f3(N["a2_apachejit_W90"]["auc"]["oracle"] - N["a2_apachejit_W90"]["auc"]["L1_W90"])}
+if RV.exists():
+    _a4 = {}
+    for fam, P_ in [("Cabral test", TEST), ("ApacheJIT", AJ)]:
+        m_ = _pp("A4", [x for x in rv.variant.unique() if str(x).endswith("_gap730")], P_, "auc").mean(axis=1)
+        _a4[fam] = f3((m_["decomp_L1_W30_gap730"] - m_["wait_W30_gap730"]) / (m_["oracle_gap730"] - m_["wait_W30_gap730"]))
+    N["a4_auc_path_share"] = _a4
+
+# predicted-positive rate vs true rate on ApacheJIT (A5 policies, fixed threshold): ppr = pi*r1 + (1-pi)*(1-r0),
+# pi = defect rate among scored commits (index >= warm-up 500, author time <= last commit - 365 d)
+if RV.exists() and (rv.analysis == "A5").sum() >= 450:
+    _pi = {}
+    for _p in AJ:
+        _dd = load_project(_p); _t = _dd.t.to_numpy(float); _sc = (np.arange(len(_dd)) >= 500) & (_t <= _t.max() - 365 * DAY)
+        _pi[_p] = float(_dd.y.to_numpy()[_sc].mean())
+    _a5 = rv[rv.analysis == "A5"].groupby(["variant", "project"])[["r1", "r0"]].mean()
+    _ppr = {}
+    for v in ["nowait", "wait_W30", "wait_W90", "law_lagakos_model", "odasc_W30_d09_k50"]:
+        vals = [_pi[p] * _a5.loc[(v, p), "r1"] + (1 - _pi[p]) * (1 - _a5.loc[(v, p), "r0"]) for p in AJ]
+        _ppr[v] = f3(np.mean(vals))
+    N["a5_predicted_positive_rate"] = _ppr; N["aj_scored_defect_rate_mean"] = f3(np.mean(list(_pi.values())))
 
 # ---------------------------------------------------------------- bookkeeping numbers
 vt = pd.read_csv(ROOT / "state" / "variants_tried.csv"); vta = pd.read_csv(ARCH / "state" / "variants_tried.csv")

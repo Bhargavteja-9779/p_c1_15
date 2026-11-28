@@ -1,5 +1,5 @@
 {
- "n_commits_scanned": 194,
+ "n_commits_scanned": 196,
  "n_configs_complete_pre_review": 16,
  "n_configs_partial_pre_review": 11,
  "n_configs_smoke_only": 3,
@@ -290,7 +290,7 @@
    "mode": "complete",
    "projects": 10,
    "runs": 50,
-   "uses_true_labels": false,
+   "uses_true_labels": true,
    "branches": "dreamy-fermat, keen-edison, magical-bardeen, zealous-lamport, zen-cray"
   },
   {
@@ -299,7 +299,7 @@
    "mode": "smoke",
    "projects": 1,
    "runs": 1,
-   "uses_true_labels": false,
+   "uses_true_labels": true,
    "branches": "dreamy-fermat"
   },
   {

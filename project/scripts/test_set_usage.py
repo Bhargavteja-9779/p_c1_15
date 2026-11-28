@@ -29,7 +29,7 @@ for jf in ["results/review1/raw.jsonl"]:
             if r.get("project") in TEST:
                 k = (r["analysis"], r["variant"], "full"); cfg[k].add((r["project"], str(r["seed"]))); where.setdefault(k, set()).add("zealous-lamport")
 rows = [dict(experiment=e, variant=v, mode=("smoke" if mo == "quick" else "complete" if len({p for p, _ in s}) == len(TEST) else "partial"),
-             projects=len({p for p, _ in s}), runs=len(s), uses_true_labels=e in ("E3b", "A3", "A4", "B1", "B3") and ("decomp" in v or "strata" in v or "out" in v or "oracle" in v),
+             projects=len({p for p, _ in s}), runs=len(s), uses_true_labels=any(k in v for k in ("decomp", "strata", "oracle")) or v.startswith("out"),
              branches=", ".join(sorted(where.get((e, v, mo), [])))) for (e, v, mo), s in sorted(cfg.items())]
 pre = [r for r in rows if r["experiment"][0] == "E"]; rev = [r for r in rows if r["experiment"][0] != "E"]
 out = dict(n_commits_scanned=len(commits),

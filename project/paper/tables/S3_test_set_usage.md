@@ -31,8 +31,8 @@
 | E1           | odasc_W15_gmax_lat             | smoke    |          1 |      1 | False              | dreamy-fermat                                                          |
 | E1           | odasc_W30                      | complete |         10 |     50 | False              | dreamy-fermat                                                          |
 | E1           | odasc_W30                      | smoke    |          1 |      1 | False              | dreamy-fermat                                                          |
-| E1           | oracle                         | complete |         10 |     50 | False              | dreamy-fermat, keen-edison, magical-bardeen, zealous-lamport, zen-cray |
-| E1           | oracle                         | smoke    |          1 |      1 | False              | dreamy-fermat                                                          |
+| E1           | oracle                         | complete |         10 |     50 | True               | dreamy-fermat, keen-edison, magical-bardeen, zealous-lamport, zen-cray |
+| E1           | oracle                         | smoke    |          1 |      1 | True               | dreamy-fermat                                                          |
 | E1           | orb_W90                        | complete |         10 |     50 | False              | dreamy-fermat, keen-edison, magical-bardeen, zealous-lamport, zen-cray |
 | E1           | orb_W90                        | smoke    |          1 |      1 | False              | dreamy-fermat                                                          |
 | E1           | wait_W30_gmax_lat              | complete |         10 |     50 | False              | dreamy-fermat                                                          |

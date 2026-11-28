@@ -1,7 +1,7 @@
 # Highlights
 
-- Waiting 90 days lowers the false-clean share of training negatives by a median 15.3%.
-- Wrong labels and lost freshness are entangled: recent commits help once relabelled.
+- A 90-day wait cuts the false-clean share of negatives by a median relative 15.4%.
+- Wrong labels and lost freshness interact: recent commits help only when relabelled.
 - At a 30-day wait, true labels close 0.81 and 0.92 of the AUC gap to an oracle.
-- Per false-clean label, the most recent waited-out commits do the most harm.
-- No tested correction significantly beat a tuned 90-day wait on fresh data.
+- Per wrong label, the commits just past the wait do the most harm.
+- On fresh data, no tested denoiser or threshold rule beat a 90-day wait significantly.

@@ -37,9 +37,9 @@
  "ApacheJIT_commits": 66934,
  "rq1_relative_reduction_W90_range": [
   0.046,
-  0.332
+  0.333
  ],
- "rq1_relative_reduction_W90_median": 0.153,
+ "rq1_relative_reduction_W90_median": 0.154,
  "rq1_W90_excluded_range": [
   0.048,
   0.138
@@ -2166,6 +2166,26 @@
    "leave_out_p": 0.0039
   }
  ],
+ "rq1_false_clean_7_30d_range": [
+  0.105,
+  0.232
+ ],
+ "r3_oracle_minus_L1_W90_auc": {
+  "cabral_test": 0.05,
+  "apachejit": 0.016
+ },
+ "a4_auc_path_share": {
+  "Cabral test": 0.78,
+  "ApacheJIT": 0.923
+ },
+ "a5_predicted_positive_rate": {
+  "nowait": 0.264,
+  "wait_W30": 0.315,
+  "wait_W90": 0.391,
+  "law_lagakos_model": 0.445,
+  "odasc_W30_d09_k50": 0.483
+ },
+ "aj_scored_defect_rate_mean": 0.424,
  "variants_logged_main": 47,
  "variants_logged_independent_lineage": 51,
  "runs_main": 1526,
