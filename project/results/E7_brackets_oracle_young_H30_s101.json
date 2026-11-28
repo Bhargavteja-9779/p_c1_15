@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E7",
+    "project": "brackets",
+    "method": "oracle_young",
+    "variant": "oracle_young_H30",
+    "seed": 101,
+    "split": "test",
+    "oracle_H": 30,
+    "gmean": 0.7670888756125464,
+    "r0": 0.8600576092174748,
+    "r1": 0.6841696844283497,
+    "rdiff": 0.17588792478912507,
+    "auc": 0.8708662294399593,
+    "mcc": 0.5216202006883383,
+    "n_eval": 16364,
+    "seconds": 38.57,
+    "n_inspected": 0,
+    "job_id": "E7_brackets_oracle_young_H30_s101",
+    "written": "2026-11-28T17:18:13+00:00",
+    "cycle": 2
+  }
+]
