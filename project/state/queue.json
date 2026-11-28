@@ -44861,10 +44861,14 @@
         "project": "camel",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:26:40+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:28:21+00:00",
+      "seconds": 100.6
     },
     {
       "id": "E7_camel_nowait_s101",
@@ -44915,10 +44919,12 @@
         "project": "camel",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:28:21+00:00",
+      "worker": 3
     },
     {
       "id": "E7_camel_oracle_old_H30_s101",
@@ -44932,10 +44938,14 @@
         "project": "camel",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:24:52+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:26:40+00:00",
+      "seconds": 108.5
     },
     {
       "id": "E7_camel_oracle_old_H180_s101",
@@ -44949,12 +44959,14 @@
         "project": "camel",
         "seed": 101
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 8,
       "started": "2026-11-28T17:23:10+00:00",
-      "worker": 3
+      "worker": 3,
+      "finished": "2026-11-28T17:24:52+00:00",
+      "seconds": 102.0
     },
     {
       "id": "E7_camel_oracle_s102",
@@ -44967,10 +44979,14 @@
         "project": "camel",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:26:43+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:28:23+00:00",
+      "seconds": 99.3
     },
     {
       "id": "E7_camel_nowait_s102",
@@ -45021,10 +45037,12 @@
         "project": "camel",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:28:23+00:00",
+      "worker": 0
     },
     {
       "id": "E7_camel_oracle_old_H30_s102",
@@ -45038,10 +45056,14 @@
         "project": "camel",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:24:55+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:26:43+00:00",
+      "seconds": 108.1
     },
     {
       "id": "E7_camel_oracle_old_H180_s102",
@@ -45055,12 +45077,14 @@
         "project": "camel",
         "seed": 102
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 8,
       "started": "2026-11-28T17:23:10+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-28T17:24:57+00:00",
+      "seconds": 107.4
     },
     {
       "id": "E7_camel_oracle_s103",
@@ -45073,10 +45097,14 @@
         "project": "camel",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:26:44+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:28:25+00:00",
+      "seconds": 101.3
     },
     {
       "id": "E7_camel_nowait_s103",
@@ -45127,10 +45155,12 @@
         "project": "camel",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:28:25+00:00",
+      "worker": 2
     },
     {
       "id": "E7_camel_oracle_old_H30_s103",
@@ -45144,10 +45174,14 @@
         "project": "camel",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:24:58+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:26:43+00:00",
+      "seconds": 105.9
     },
     {
       "id": "E7_camel_oracle_old_H180_s103",
@@ -45161,12 +45195,14 @@
         "project": "camel",
         "seed": 103
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 8,
       "started": "2026-11-28T17:23:10+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-28T17:24:55+00:00",
+      "seconds": 105.0
     },
     {
       "id": "E7_camel_oracle_s104",
@@ -45179,10 +45215,14 @@
         "project": "camel",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:26:50+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:28:30+00:00",
+      "seconds": 100.7
     },
     {
       "id": "E7_camel_nowait_s104",
@@ -45233,10 +45273,12 @@
         "project": "camel",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:28:30+00:00",
+      "worker": 1
     },
     {
       "id": "E7_camel_oracle_old_H30_s104",
@@ -45250,10 +45292,14 @@
         "project": "camel",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:25:01+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:26:50+00:00",
+      "seconds": 109.0
     },
     {
       "id": "E7_camel_oracle_old_H180_s104",
@@ -45267,12 +45313,14 @@
         "project": "camel",
         "seed": 104
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 8,
       "started": "2026-11-28T17:23:15+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-28T17:25:01+00:00",
+      "seconds": 105.4
     },
     {
       "id": "E7_jgroups_oracle_s101",

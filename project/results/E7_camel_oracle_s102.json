@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E7",
+    "project": "camel",
+    "method": "oracle",
+    "variant": "oracle",
+    "seed": 102,
+    "split": "test",
+    "gmean": 0.7069659243872536,
+    "r0": 0.8448944200754871,
+    "r1": 0.5915541709934233,
+    "rdiff": 0.25334024908206376,
+    "auc": 0.8199180263443206,
+    "mcc": 0.42016103807171873,
+    "n_eval": 25384,
+    "seconds": 99.31,
+    "n_inspected": 0,
+    "job_id": "E7_camel_oracle_s102",
+    "written": "2026-11-28T17:28:23+00:00",
+    "cycle": 2
+  }
+]
