@@ -22023,12 +22023,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 30,
       "started": "2026-11-28T18:03:05+00:00",
-      "worker": 3
+      "worker": 3,
+      "finished": "2026-11-28T18:04:18+00:00",
+      "seconds": 73.0
     },
     {
       "id": "E2_matplotlib_law_lagakos_base_gmax_lat_s100",
@@ -22106,10 +22108,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:04:18+00:00",
+      "worker": 3
     },
     {
       "id": "E2_matplotlib_law_lagakos_base_gmax_lat_s101",
@@ -22164,7 +22168,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 30,
@@ -22173,7 +22177,9 @@
       "resets": 1,
       "log": [
         "2026-11-25T10:26:43+00:00 reset running->pending on restart (attempt refunded)"
-      ]
+      ],
+      "finished": "2026-11-28T18:04:18+00:00",
+      "seconds": 74.4
     },
     {
       "id": "E2_matplotlib_law_naive_model_gmax_lat_s102",
@@ -22189,10 +22195,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:04:18+00:00",
+      "worker": 2
     },
     {
       "id": "E2_matplotlib_law_lagakos_base_gmax_lat_s102",
@@ -22247,7 +22255,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 30,
@@ -22256,7 +22264,9 @@
       "resets": 1,
       "log": [
         "2026-11-25T10:26:43+00:00 reset running->pending on restart (attempt refunded)"
-      ]
+      ],
+      "finished": "2026-11-28T18:04:19+00:00",
+      "seconds": 74.4
     },
     {
       "id": "E2_matplotlib_law_naive_model_gmax_lat_s103",
@@ -22272,10 +22282,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:04:18+00:00",
+      "worker": 1
     },
     {
       "id": "E2_matplotlib_law_lagakos_base_gmax_lat_s103",
@@ -22330,7 +22342,7 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 30,
@@ -22339,7 +22351,9 @@
       "resets": 1,
       "log": [
         "2026-11-25T10:26:43+00:00 reset running->pending on restart (attempt refunded)"
-      ]
+      ],
+      "finished": "2026-11-28T18:04:18+00:00",
+      "seconds": 73.7
     },
     {
       "id": "E2_matplotlib_law_naive_model_gmax_lat_s104",
@@ -22355,10 +22369,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:04:19+00:00",
+      "worker": 0
     },
     {
       "id": "E2_matplotlib_law_lagakos_base_gmax_lat_s104",
