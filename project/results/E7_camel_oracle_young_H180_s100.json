@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E7",
+    "project": "camel",
+    "method": "oracle_young",
+    "variant": "oracle_young_H180",
+    "seed": 100,
+    "split": "test",
+    "oracle_H": 180,
+    "gmean": 0.7075181042063047,
+    "r0": 0.8383658063858003,
+    "r1": 0.5970924195223261,
+    "rdiff": 0.24127338686347422,
+    "auc": 0.8166557100811922,
+    "mcc": 0.415871627389368,
+    "n_eval": 25384,
+    "seconds": 103.29,
+    "n_inspected": 0,
+    "job_id": "E7_camel_oracle_young_H180_s100",
+    "written": "2026-11-28T17:05:26+00:00",
+    "cycle": 2
+  }
+]

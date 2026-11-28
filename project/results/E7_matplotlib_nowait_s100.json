@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E7",
+    "project": "matplotlib",
+    "method": "nowait",
+    "variant": "nowait",
+    "seed": 100,
+    "split": "test",
+    "gmean": 0.5998504971862347,
+    "r0": 0.8804330131857399,
+    "r1": 0.4086859688195991,
+    "rdiff": 0.47174704436614073,
+    "auc": 0.788245180655404,
+    "mcc": 0.2945290962815388,
+    "n_eval": 14980,
+    "seconds": 41.58,
+    "n_inspected": 0,
+    "job_id": "E7_matplotlib_nowait_s100",
+    "written": "2026-11-28T17:06:08+00:00",
+    "cycle": 2
+  }
+]

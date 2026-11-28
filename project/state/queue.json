@@ -36013,12 +36013,14 @@
         "project": "camel",
         "seed": 100
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 7,
       "started": "2026-11-28T17:02:11+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-28T17:03:50+00:00",
+      "seconds": 99.1
     },
     {
       "id": "E7_camel_nowait_s100",
@@ -36052,10 +36054,14 @@
         "project": "camel",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T17:03:47+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:05:27+00:00",
+      "seconds": 100.0
     },
     {
       "id": "E7_camel_oracle_young_H180_s100",
@@ -36069,12 +36075,14 @@
         "project": "camel",
         "seed": 100
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 7,
       "started": "2026-11-28T17:03:43+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-28T17:05:26+00:00",
+      "seconds": 103.3
     },
     {
       "id": "E7_camel_oracle_old_H30_s100",
@@ -36088,12 +36096,14 @@
         "project": "camel",
         "seed": 100
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 7,
       "started": "2026-11-28T17:02:09+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-28T17:03:47+00:00",
+      "seconds": 98.6
     },
     {
       "id": "E7_camel_oracle_old_H180_s100",
@@ -36107,12 +36117,14 @@
         "project": "camel",
         "seed": 100
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 7,
       "started": "2026-11-28T17:02:07+00:00",
-      "worker": 3
+      "worker": 3,
+      "finished": "2026-11-28T17:03:47+00:00",
+      "seconds": 100.1
     },
     {
       "id": "E7_jgroups_oracle_s100",
@@ -36125,10 +36137,14 @@
         "project": "jgroups",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T17:04:33+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:05:14+00:00",
+      "seconds": 41.6
     },
     {
       "id": "E7_jgroups_nowait_s100",
@@ -36141,10 +36157,14 @@
         "project": "jgroups",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T17:03:47+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:04:30+00:00",
+      "seconds": 42.8
     },
     {
       "id": "E7_jgroups_oracle_young_H30_s100",
@@ -36158,10 +36178,14 @@
         "project": "jgroups",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T17:05:14+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:05:56+00:00",
+      "seconds": 41.3
     },
     {
       "id": "E7_jgroups_oracle_young_H180_s100",
@@ -36175,10 +36199,14 @@
         "project": "jgroups",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T17:05:12+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:05:53+00:00",
+      "seconds": 40.6
     },
     {
       "id": "E7_jgroups_oracle_old_H30_s100",
@@ -36192,10 +36220,14 @@
         "project": "jgroups",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T17:04:30+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:05:12+00:00",
+      "seconds": 41.9
     },
     {
       "id": "E7_jgroups_oracle_old_H180_s100",
@@ -36209,10 +36241,14 @@
         "project": "jgroups",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T17:03:50+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:04:33+00:00",
+      "seconds": 42.4
     },
     {
       "id": "E7_matplotlib_oracle_s100",
@@ -36225,10 +36261,12 @@
         "project": "matplotlib",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T17:05:56+00:00",
+      "worker": 2
     },
     {
       "id": "E7_matplotlib_nowait_s100",
@@ -36241,10 +36279,14 @@
         "project": "matplotlib",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T17:05:26+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:06:08+00:00",
+      "seconds": 42.3
     },
     {
       "id": "E7_matplotlib_oracle_young_H30_s100",
@@ -36258,10 +36300,12 @@
         "project": "matplotlib",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T17:06:08+00:00",
+      "worker": 1
     },
     {
       "id": "E7_matplotlib_oracle_young_H180_s100",
@@ -36275,10 +36319,12 @@
         "project": "matplotlib",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T17:06:06+00:00",
+      "worker": 3
     },
     {
       "id": "E7_matplotlib_oracle_old_H30_s100",
@@ -36292,10 +36338,12 @@
         "project": "matplotlib",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T17:05:53+00:00",
+      "worker": 0
     },
     {
       "id": "E7_matplotlib_oracle_old_H180_s100",
@@ -36309,10 +36357,14 @@
         "project": "matplotlib",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T17:05:27+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:06:06+00:00",
+      "seconds": 39.3
     },
     {
       "id": "E7_npm_oracle_s100",
