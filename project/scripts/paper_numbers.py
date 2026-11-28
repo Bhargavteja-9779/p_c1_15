@@ -32,7 +32,7 @@ for p in DEV + TEST + AJ:
                      commits=len(d), years=round((d.t.max() - d.t.min()) / DAY / 365.25, 1), defect_rate=d.y.mean(),
                      median_delay_d=np.median(dl[fin]), p90_delay_d=np.percentile(dl[fin], 90),
                      found_after_90d=float((dl[fin] > 90).mean())))
-    g = np.arange(0, 1500, 5); curves[p] = (g, [(dl[fin] <= a).mean() for a in g])
+    g = np.arange(0, 3001, 5); curves[p] = (g, [(dl[fin] <= a).mean() for a in g])
 T1 = pd.DataFrame(rows).set_index("project")
 md(T1.round({"defect_rate": 3, "median_delay_d": 0, "p90_delay_d": 0, "found_after_90d": 3}), "T1_datasets.md")
 N["n_commits_total"] = int(T1.commits.sum()); N["n_projects"] = len(T1)
@@ -45,10 +45,15 @@ for fam in ["Cabral", "ApacheJIT"]:
     N[f"{fam}_commits"] = int(t.commits.sum())
 fig, ax = plt.subplots(figsize=(6.5, 3.6))
 for p, (g, c) in curves.items():
-    ax.plot(g, c, color="#c0392b" if p.startswith("aj_") else "#1f5fa8", alpha=.6, lw=1)
-ax.axvline(30, ls=":", c="k", lw=.8); ax.axvline(90, ls="--", c="k", lw=.8)
-ax.set_xlabel("days from commit to discovery of its defect"); ax.set_ylabel("share of defects discovered")
-ax.set_title("Discovery delay of defect-inducing commits (blue: Cabral, red: ApacheJIT)", fontsize=9)
+    aj = p.startswith("aj_")
+    ax.plot(g, c, color="#c0392b" if aj else "#1f5fa8", ls="--" if aj else "-", alpha=.7, lw=1)
+ax.axvline(30, ls=":", c="k", lw=.8); ax.axvline(90, ls=":", c="grey", lw=.8)
+ax.text(30, 0.02, " 30 d", fontsize=7); ax.text(90, 0.02, " 90 d", fontsize=7)
+from matplotlib.lines import Line2D
+ax.legend([Line2D([], [], color="#1f5fa8", ls="-"), Line2D([], [], color="#c0392b", ls="--")], ["Cabral (14)", "ApacheJIT (9)"], fontsize=7, frameon=False, loc="lower right")
+ax.set_xscale("symlog", linthresh=30); ax.set_xlim(0, 3000)
+ax.set_xticks([0, 7, 30, 90, 180, 365, 730, 1500, 3000]); ax.set_xticklabels(["0", "7", "30", "90", "180", "365", "730", "1500", "3000"], fontsize=7)
+ax.set_xlabel("days from commit to discovery of its defect (symmetric log scale)"); ax.set_ylabel("share of defects discovered")
 fig.tight_layout(); fig.savefig(P / "figures" / "F1_discovery_delay.png", dpi=200); plt.close(fig)
 
 # ---------------------------------------------------------------- T2 RQ1 label noise under waiting (model-free)
@@ -83,16 +88,20 @@ N["rq2_gap_share_aj_W30"] = S["E8_secondary_H3_decomposition"]["gap_recovered_sh
 N["rq2_gap_share_aj_per_project_range"] = [min(S["E8_secondary_H3_decomposition"]["gap_recovered_share_per_project"].values()), max(S["E8_secondary_H3_decomposition"]["gap_recovered_share_per_project"].values())]
 N["rq2_tests_cabral"] = S["E3b_H3_denoised_W30_vs_wait"]; N["rq2_tests_aj"] = S["E8_secondary_H3_replication"]
 SH = json.load(open(R / "review1" / "shapley.json"))
-fig, axs = plt.subplots(1, 2, figsize=(8, 3.4), sharey=True)
-for ax, (fam, P_, lab, col) in zip(axs, [("cabral_test", TEST, "Cabral test (10)", "#1f5fa8"), ("apachejit", AJ, "ApacheJIT (9)", "#c0392b")]):
-    for k, (metric, mk) in enumerate([("gmean", "o"), ("auc", "s")]):
+fig, axs = plt.subplots(1, 2, figsize=(8, 3.6), sharey=True)
+for ax, (fam, P_, lab, col), letter in zip(axs, [("cabral_test", TEST, "Cabral test (10)", "#1f5fa8"), ("apachejit", AJ, "ApacheJIT (9)", "#c0392b")], "ab"):
+    for k, metric in enumerate(["gmean", "auc"]):
         g = SH[f"{fam}_{metric}"]["per_project_abs_gain_L1_minus_wait"]; gap = SH[f"{fam}_{metric}"]["per_project_gap_oracle_minus_wait"]
-        names = list(g); x = np.arange(len(names)) + (k - 0.5) * 0.35
-        ax.bar(x, [gap[n] for n in names], width=0.35, color="none", edgecolor=col, lw=1, label=f"oracle - Wait-30 ({metric.upper() if metric=='auc' else 'G-mean'})" if True else None)
-        ax.bar(x, [g[n] for n in names], width=0.35, color=col, alpha=0.9 if metric == "gmean" else 0.45, label=f"true labels - Wait-30 ({'AUC' if metric=='auc' else 'G-mean'})")
+        names = list(g); x = np.arange(len(names)) + (k - 0.5) * 0.38
+        ax.bar(x, [g[n] for n in names], width=0.38, color=col, alpha=0.9 if metric == "gmean" else 0.4, hatch=None if metric == "gmean" else "///", edgecolor="white", lw=0)
+        ax.scatter(x, [gap[n] for n in names], marker="_", s=90, c="k", zorder=3, lw=1.6)
     ax.set_xticks(np.arange(len(names))); ax.set_xticklabels(names, rotation=60, ha="right", fontsize=7); ax.axhline(0, c="k", lw=.6)
-    ax.set_xlabel(lab, fontsize=8)
-axs[0].set_ylabel("absolute difference"); axs[1].legend(fontsize=6, loc="upper right")
+    ax.set_xlabel(lab, fontsize=8); ax.text(0.01, 0.97, f"({letter})", transform=ax.transAxes, va="top", fontsize=9, weight="bold")
+from matplotlib.patches import Patch
+from matplotlib.lines import Line2D as _L
+axs[0].set_ylabel("absolute difference")
+axs[1].legend([Patch(color="grey", alpha=0.9), Patch(facecolor="grey", alpha=0.4, hatch="///"), _L([], [], marker="_", ls="", c="k", ms=10, mew=1.6)],
+              ["true-label gain over Wait-30, G-mean (left bar)", "same, AUC (right bar)", "gap oracle - Wait-30 (same metric)"], fontsize=6, loc="upper right", frameon=False)
 fig.tight_layout(); fig.savefig(P / "figures" / "F2_gap_recovered.png", dpi=200); plt.close(fig)
 for k in SH: N["review1_" + k] = {kk: vv for kk, vv in SH[k].items()}
 rows3b = []
@@ -267,6 +276,26 @@ N["lineage2_odasc_tests"] = [_cmp0(_l2.loc["odasc_W30"], _l2.loc["wait_W90"], "l
 _e8 = df[(df.experiment == "E8") & df.project.isin(AJ)].groupby(["variant", "project"]).gmean.mean().unstack()[AJ]
 _d = (_e8.loc["odasc_W30_t0.8"] - _e8.loc["wait_W90"]); _n = len(_d)
 N["h6_paired_sd"] = f4(_d.std(ddof=1)); N["h6_mde_80pct_unadjusted"] = f3((_st0.t.ppf(0.975, _n - 1) + _st0.t.ppf(0.8, _n - 1)) * _d.std(ddof=1) / np.sqrt(_n))
+
+# ---------------------------------------------------------------- review round 2 numbers (plan_v9 and reviewer requests)
+_e1 = df[(df.experiment == "E1") & df.project.isin(TEST)].groupby(["variant", "project"]).auc.mean().unstack()[TEST]
+_e3b = df[(df.experiment == "E3b") & df.project.isin(TEST)].groupby(["variant", "project"]).auc.mean().unstack()[TEST]
+N["r2_auc_law_vs_wait90_cabral"] = _cmp0(_e1.loc["law_lagakos_model"], _e1.loc["wait_W90"], "AUC: LAW vs Wait-90 (Cabral test)")
+N["r2_auc_wait30_vs_wait90_cabral"] = _cmp0(_e3b.loc["wait_W30"], _e3b.loc["wait_W90"], "AUC: Wait-30 vs Wait-90 (Cabral test)")
+N["r2_auc_wait30_cabral"] = f3(_e3b.loc["wait_W30"].mean())
+N["r2_simple_effects_window"] = {fam: {m: dict(observed_labels=f3(SH[f"{fam}_{m}"]["cells_mean"]["nowait"] - SH[f"{fam}_{m}"]["cells_mean"]["wait_W30"]),
+                                               true_labels=f3(SH[f"{fam}_{m}"]["cells_mean"]["oracle"] - SH[f"{fam}_{m}"]["cells_mean"]["L1_W30"])) for m in ["auc", "gmean"]}
+                                 for fam in ["cabral_test", "apachejit"]}
+_nd = {}
+for _p in DEV + TEST:
+    _dd = load_project(_p); _nd[_p] = int(((_dd.y == 1) & ~np.isfinite(_dd.t_found)).sum())
+N["cabral_defective_never_discovered_total"] = int(sum(_nd.values()))
+N["h6_mde_80pct_holm2"] = f3((_st0.t.ppf(1 - 0.025 / 2, _n - 1) + _st0.t.ppf(0.8, _n - 1)) * _d.std(ddof=1) / np.sqrt(_n))
+FC = json.load(open(R / "review1" / "flip_counts.json"))
+N["b2_flip_share"] = {}
+for fam, P_ in [("cabral_test", TEST), ("apachejit", AJ)]:
+    for W in ["30", "90"]:
+        f_ = np.array([FC[p][W]["flips"] for p in P_]); N["b2_flip_share"][f"{fam}_W{W}"] = [f3(x) for x in (f_ / f_.sum(1, keepdims=True)).mean(0)]
 
 # ---------------------------------------------------------------- bookkeeping numbers
 vt = pd.read_csv(ROOT / "state" / "variants_tried.csv"); vta = pd.read_csv(ARCH / "state" / "variants_tried.csv")

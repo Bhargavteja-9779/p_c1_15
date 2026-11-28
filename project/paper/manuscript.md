@@ -6,26 +6,7 @@
 
 ## Abstract
 
-**Context.** Online just-in-time software defect prediction (JIT-SDP) flags risky commits as they arrive and retrains as labels come in. A commit's defect label is known only after a later fix is traced back to it, which takes a median of 16–568 days per project in our data. The usual remedy is to wait W days before trusting a "clean" label, which is read as a trade-off between label noise and stale data.
-
-**Objective.** We measure how much of the accuracy lost to this verification latency comes from wrong labels and how much from missing recent data, which commits carry the harmful labels, and whether practical corrections recover the loss.
-
-**Method.** We use a prequential simulation with one shared LightGBM learner on 23 projects (331,937 commits):
-- 4 Cabral et al. projects for development;
-- 10 held-out Cabral projects;
-- 9 ApacheJIT projects as a fresh confirmation set.
-
-A 2×2 factorial design (labels observed/true × training window waited/complete) with a Shapley split and project-bootstrap intervals separates the two causes. Confirmatory runs used configurations committed to the repository before the run.
-
-**Results.**
-- **W = 30.** True labels on the same waited-out training commits close 0.81 [0.74, 0.86] (Cabral test) and 0.92 [0.89, 0.95] (ApacheJIT) of the AUC gap to an oracle. Adding the recent commits contributes nothing on average (Shapley freshness effect −0.004 and −0.001 AUC).
-- **W = 90, the tuned wait.** Labels remain the larger factor (Shapley share 0.74 and 0.97 of the AUC gap). On Cabral, recent data also matters (+0.023 AUC), but only once its labels are correct.
-- **Where the harmful labels sit.** Relabelling only training commits aged 30–180 days yields 0.83 (Cabral) and 0.49 (ApacheJIT) of the full AUC gain. Relabelling commits older than one year adds at most 0.004.
-- **Age-only corrections** do not beat a 90-day wait.
-- **Feature-based denoisers** beat it on the reused Cabral test set but tie it on fresh data.
-- **A latency-aware decision threshold** repairs policies with a distorted class prior (No-wait +0.0695 G-mean on ApacheJIT, 9/0, Holm p = 0.027) but adds nothing to well-calibrated ones.
-
-**Conclusion.** The latency penalty is mainly caused by defects that are one to six months old and still undiscovered. Methods should target these commits, and studies should report ranking and operating-point metrics separately.
+Online just-in-time software defect prediction (JIT-SDP) retrains while the labels of recent commits are still unknown: a defect is found only when a later fix points back to it, a median of 16–568 days later in our data. The usual remedy, waiting W days before trusting a "clean" label, is read as a trade-off between label noise and stale data. We ask how much of the resulting accuracy loss is caused by wrong labels and how much by missing recent data, which commits carry the harmful labels, and whether practical corrections recover the loss. We run a prequential simulation with one shared learner on 23 projects (331,937 commits): 14 projects of Cabral et al. (4 for development) and 9 ApacheJIT projects as a fresh confirmation set, analysed with a 2×2 factorial design (labels observed or true × training window waited or complete). The two causes interact: recent commits help only once their labels are correct. For a 30-day wait, true labels on the same training commits close 0.81 (Cabral test) and 0.92 (ApacheJIT) of the AUC gap to an oracle. For the tuned 90-day wait they close 0.44 and 0.78, and a Shapley split still attributes most of the gap to labels (0.74 and 0.97). Training commits aged 30–180 days hold about a third of the false-clean labels but yield 0.83 and 0.49 of the AUC gain; commits older than a year yield almost none. Age-only corrections, feature-based denoisers and a latency-aware threshold did not reliably beat a 90-day wait on the fresh data. Methods should target recent defects that are still undiscovered.
 
 **Keywords:** just-in-time defect prediction; verification latency; label noise; online learning; data streams; empirical software engineering
 
@@ -37,31 +18,28 @@ Just-in-time software defect prediction (JIT-SDP) helps teams decide which incom
 
 In the projects studied here, discovery takes a median of 16 to 568 days per project, and the 90th percentile ranges from 383 to 2811 days (Table 1, Fig. 1). At any moment the most recent "clean" commits are therefore only *provisionally* clean. Fix-inducing changes are a moving target over time (McIntosh & Kamei 2018), and ignoring time order inflates offline estimates (Falessi et al. 2020).
 
-The established remedy is the *waiting-time* rule of Cabral et al. (2019): a commit is used as a clean training example only after W days without a discovered defect. Later work treats the choice of W as a trade-off between label noise and staleness and studies how to evaluate under it (Cabral & Minku 2023; Song et al. 2023a; Song & Minku 2023). Other work estimates the confidence of waited-out clean labels (ODaSC; Song et al. 2022) or brings in human labels (Song et al. 2023b). Recent journal papers on JIT-SDP, including MSTDP in this journal (Liu et al. 2026), evaluate offline with final labels and do not model verification latency.
+The established remedy is to wait: Tan et al. (2015) introduced a labelling gap for online defect prediction, and the *waiting-time* rule of Cabral et al. (2019) uses a commit as a clean training example only after W days without a discovered defect, while defective commits enter as soon as their defect is found. Later work treats the choice of W as a trade-off between label noise and staleness and studies how to evaluate under it (Cabral & Minku 2023; Song et al. 2023a; Song & Minku 2023). Other work estimates the confidence of waited-out clean labels (ODaSC; Song et al. 2022) or brings in human labels (Song et al. 2023b). Recent journal papers on JIT-SDP, including MSTDP in this journal (Liu et al. 2026), evaluate offline with final labels and do not model verification latency.
 
 Our own starting point was a method. Borrowing the delayed-feedback model of conversion-rate prediction (Chapelle 2014), we weighted each provisionally clean commit by the posterior probability that it hides an undiscovered defect, given its age. **It did not work.** On the ten held-out projects it lost to a tuned 90-day wait by 0.038 G-mean (Section 5.3).
 
-Diagnosing that failure changed the question. We first expected label noise to be a *small* part of the penalty, because waiting barely changes the share of false-clean labels (Section 5.1). We wrote down the hypothesis that true labels would recover less than a third of the gap between waiting and an oracle. **The hypothesis was refuted** (Section 5.2). This paper reports the resulting decomposition, revised and extended in response to reviewers, as an empirical study.
+Diagnosing that failure changed the question. We first expected label noise to be a *small* part of the penalty, because waiting barely changes the share of false-clean labels (Section 5.1). We wrote down the hypothesis that true labels would recover less than a third of the gap between waiting and an oracle. **The hypothesis was refuted** (Section 5.2). This paper reports the resulting decomposition as an empirical study.
 
 **Contributions.**
-1. **A factorial, commit-level decomposition of the online verification-latency penalty**, replicated on two dataset families (Section 5.2, Tables 3–4).
-   - For a 30-day wait the penalty is almost entirely label noise in AUC on both families.
-   - For the tuned 90-day wait labels remain the larger factor, but on Cabral recent data contributes as well, and the two factors interact: fresh data helps only once its labels are right.
-   - The design follows the noisy-versus-clean comparisons of Falessi et al. (2022) and Fan et al. (2021). Our contribution is to apply it to the online waiting setting and to separate noise from freshness.
-2. **Localisation of the harmful labels** (Section 5.2, Table 5, Fig. 3). The recoverable gain comes almost entirely from training commits aged 30–180 days. Relabelling commits older than one year adds nothing. The harmful labels are therefore neither the youngest commits, which waiting already removes, nor long-dormant defects, but defects one to six months old that have not yet been found.
+1. **A factorial decomposition of the online verification-latency penalty into label noise and lost freshness**, replicated on two dataset families (Section 5.2, Tables 3–4). Its main finding is that the two causes are entangled: the commits a wait excludes are the ones whose labels are wrong, and they become valuable only once their labels are right. For a 30-day wait the penalty is almost entirely label noise in AUC on both families; for the tuned 90-day wait the attribution depends on how the interaction is split. True-label comparisons have been made before, in the online setting by Song et al. (2022) and offline by Falessi et al. (2022) and Fan et al. (2021); the separation of noise from freshness is new.
+2. **Localisation of the harmful labels** (Section 5.2, Table 5, Fig. 3). On both families, training commits aged 30–180 days hold about a third of the false-clean labels but yield most of the recoverable gain, while the much larger number of false-clean labels on commits older than a year yields almost none.
 3. **Evidence that age-only corrections cannot recover the penalty**, with a diagnosis (Section 5.3).
-4. **A fresh-data test of feature-based denoisers** (Section 5.4). Two independent ODaSC-style adaptations differ: one beats the 90-day wait on all ten reused Cabral test projects. On fresh data both tie it, and so do our own two variants under the confirmatory criterion.
-5. **An operating-point analysis with a fresh replication** (Section 5.5). A latency-aware threshold repairs policies whose training class prior is distorted. It does not improve well-calibrated policies, and an earlier positive result for it on Cabral did not replicate.
-6. **A reproducible protocol**, with leakage tests, a disclosed history of every configuration ever run on the reused test set (Supplementary Table S3) and a list of deviations from plan (Table 12).
+4. **A fresh-data test of feature-based denoisers and of a latency-aware decision threshold** (Sections 5.4–5.5). On fresh data none reliably beats a tuned 90-day wait. One ODaSC-style adaptation beats it on the reused Cabral test set, and a threshold result obtained on that set did not replicate.
 
-**Terminology.**
+The protocol, the complete history of configurations run on the reused test set (Supplementary Table S3) and the deviations from plan (Table 12) are released with the paper, so that method papers can measure themselves against the true-label bound.
+
+@@TERMTABLE@@
 
 | Term | Meaning here |
 |:--|:--|
 | Verification latency | Time between a commit and the moment its defect label becomes known (first linked fix). |
 | Provisionally clean | A commit with no discovered defect *yet*. |
 | False-clean | Provisionally clean but defect-inducing according to the final labels. |
-| Wait-W | Clean labels are trusted only after W days (Cabral et al. 2019). |
+| Wait-W | Clean labels are trusted only after W days (Tan et al. 2015; Cabral et al. 2019). |
 | Prequential | Each commit is predicted on arrival, then used for training once its label is available. |
 | SZZ | Algorithm that links bug-fixing commits back to the commits that introduced the bug. |
 | L1 / L2 | Decomposition levels: L1 = the Wait-W training set with true labels; L2 = L1 plus young, not-yet-discovered defective commits. |
@@ -75,17 +53,19 @@ Diagnosing that failure changed the question. We first expected label noise to b
 
 JIT-SDP predicts whether a commit induces a defect from change metrics such as size, diffusion, history and developer experience (Kamei et al. 2013). Labels are usually produced by SZZ. SZZ itself introduces errors (Fan et al. 2021; Rosa et al. 2021; Herbold et al. 2022; Guo et al. 2024; Bludau & Pretschner 2026), and label noise in general harms defect models (Kim et al. 2011; Tantithamthavorn et al. 2015; Liu et al. 2023).
 
-Online JIT-SDP evaluates prequentially (Tan et al. 2015; Cabral et al. 2019; Tabassum et al. 2023; Cabral et al. 2023; Sahar et al. 2024). Cabral et al. (2019) introduced the waiting-time rule together with ORB, an online bagging scheme for class-imbalance evolution. Cabral & Minku (2023) showed that concept drift combined with verification latency impairs the stability of online JIT-SDP, and proposed an approach for more stable predictive performance. Song et al. (2023a) showed that retrospective evaluation can misjudge methods if waiting time is not modelled. Song & Minku (2023) proposed a procedure that evaluates JIT-SDP models continuously during development under verification latency. Song et al. (2023b) proposed human labelling to shorten the wait.
+Online JIT-SDP evaluates prequentially (Tan et al. 2015; Cabral et al. 2019; Tabassum et al. 2023; Cabral et al. 2023; Sahar et al. 2024). Cabral et al. (2019) introduced the waiting-time rule together with ORB, an online bagging scheme for class-imbalance evolution. Cabral & Minku (2023) showed that concept drift combined with verification latency impairs the stability of online JIT-SDP, and proposed an approach for more stable predictive performance. Song & Minku (2023) proposed a procedure that evaluates JIT-SDP models continuously during development, and showed that waiting-time label noise affects the validity of such continuous evaluation. Song et al. (2023a) then asked whether the same noise threatens the retrospective evaluation used in research studies. On 13 GitHub projects they found that the choice of waiting time had no significant impact on validity and that even short waits gave high validity. Song et al. (2023b) proposed human labelling to shorten the wait, and Liu et al. (2025) revisited that approach under practical conditions, finding that human feedback improves online JIT-SDP by providing training commits with better label quality.
+
+The finding of Song et al. (2023a) concerns *evaluation*: whether scores computed against waited-out labels rank models correctly. Our study concerns *training*: how much the model itself loses by learning from waited-out labels. The two are compatible. Evaluation labels in our design are final labels, so the evaluation is not affected by waiting at all, and a noise level that leaves the ranking of evaluated models unchanged can still change what a model learns.
 
 For data streams in general, delayed labels have been studied as a drift-detection problem (Zliobaite 2010), with infinitely delayed labels (Souza et al. 2015), for temporally evolving streams (Plasse & Adams 2016), as an evaluation problem (Grzenda et al. 2020) and in a recent survey (Gomes et al. 2023).
 
 ### 2.2 One-sided label noise and dormant defects
 
-A defect discovered after the wait leaves a wrongly clean example behind, so the noise is one-sided. ODaSC (Song et al. 2022) is the closest prior work. It estimates the confidence of each waited-out clean label from the class composition of feature-space micro-clusters and counts low-confidence examples as both classes.
+A defect discovered after the wait leaves a wrongly clean example behind, so the noise is one-sided. ODaSC (Song et al. 2022) is the closest prior work. It estimates the confidence of each waited-out clean label from the class composition of feature-space micro-clusters and uses that confidence to modulate the oversampling rate of an online bagging ensemble of Hoeffding trees. Song et al. (2022) also ran two true-label benchmarks in the same online waiting setting: ODaSC-opt, which uses the optimal label confidence (one if the observed label is correct, zero otherwise), and ODaSC-flt, which removes the false-clean examples. On the first 10,000 commits of 14 projects with a 15-day wait, both benchmarks were statistically indistinguishable from ODaSC with estimated confidences (p = 0.7278 and 0.6932), and ODaSC beat online bagging trained on observed labels. This is the closest precedent for our L1 condition. It differs in three ways: it reweights or filters the noisy examples rather than relabelling them as defective, it uses one short wait, and it does not separate noise from freshness. We return to the difference in effect size in Section 6.2.
 
-On release-level data, Ahluwalia et al. (2019) and Falessi et al. (2022) showed that classes whose defects are still dormant ("snoring") lower prediction accuracy. Falessi et al. (2022) compared models trained on dormant-noisy and on clean labels, and showed that discarding the most recent releases helps. Vandehei et al. (2021) used the defect life cycle to label affected versions, and Chen et al. (2014) studied dormant bugs directly. Fan et al. (2021) used the same noisy-versus-clean design to measure the cost of SZZ mislabelling in JIT-SDP. Tian et al. (2026) combine waiting time with test feedback.
+On release-level data, Ahluwalia et al. (2019) and Falessi et al. (2022) showed that classes whose defects are still dormant ("snoring") lower prediction accuracy. Falessi et al. (2022) compared models trained on dormant-noisy and on clean labels. As a countermeasure they removed the classes labelled non-defective in the last releases while keeping the defective ones, which is the release-level counterpart of Wait-W. Removing one release helped, but the gain was particularly small in AUC, and removing more than one release reduced precision. Vandehei et al. (2021) used the defect life cycle to label affected versions, and Chen et al. (2014) studied dormant bugs directly. Fan et al. (2021) used the same noisy-versus-clean design to measure the cost of SZZ mislabelling in JIT-SDP. Tian et al. (2026) combine waiting time with test feedback.
 
-We adopt the noisy-versus-clean design of these studies. What is new here is applying it to the online, commit-level waiting setting, separating noise from freshness with a factorial design, and locating the harmful labels by age.
+We adopt the noisy-versus-clean design of these studies. What is new here is separating noise from freshness with a factorial design, at more than one waiting time, and locating the harmful labels by age.
 
 ### 2.3 Delayed feedback and positive-unlabeled learning
 
@@ -95,17 +75,24 @@ Viewed as positive-unlabeled learning, the label frequency here depends on age (
 
 ### 2.4 Claim, closest prior work and difference
 
+@@CLAIMTABLE@@
+
 | Claim | Closest prior work | Exact difference |
 |:--|:--|:--|
-| C1: the online latency penalty is mainly label noise, and how much depends on W | Falessi et al. 2022; Fan et al. 2021 (noisy-vs-clean designs) | Online prequential waiting setting; factorial split of noise vs freshness with CIs; both W = 30 and the tuned W = 90; two dataset families |
-| C2: the harmful labels are on commits aged 30–180 days | Falessi et al. 2022 (dormant defects in recent releases) | Commit level, measured by age band at each retraining |
+| C1: noise and lost freshness are entangled; for short waits the penalty is label noise | Song et al. 2022 (ODaSC-opt/flt, online, W = 15); Falessi et al. 2022; Fan et al. 2021 | Factorial split of noise vs freshness with interaction and CIs; W = 30 and the tuned W = 90; relabelling rather than reweighting; two dataset families |
+| C2: the harmful labels are on commits aged 30–180 days, although most false-clean labels are older | Falessi et al. 2022 (dormant defects in recent releases) | Commit level, by age band at each retraining, normalised by the number of false-clean labels per band |
 | C3: age-only corrections do not recover it | Cabral et al. 2019 (waiting); Chapelle 2014 (delay posterior) | Truncation-corrected delay posterior tested in JIT-SDP, with diagnosis |
-| C4: the gain from feature-based denoising (kNN adaptation of ODaSC) depends on dataset and implementation | Song et al. 2022 (ODaSC) | Two independent adaptations, shared learner, fresh dataset |
+| C4: the gain from kNN adaptations of ODaSC depends on dataset and implementation | Song et al. 2022 (ODaSC) | Two independent adaptations (a different mechanism from the original), shared learner, fresh dataset |
 | C5: a latency-aware threshold helps only policies with a distorted prior | Cabral et al. 2019 (ORB, class-imbalance evolution); Cabral & Minku 2023 (drift and latency harm stability) | Decision-threshold effect isolated per policy, like for like, with fresh replication |
 
 ### 2.5 Positioning with respect to this journal
 
 The only JIT-SDP paper we found in this journal since 2023 is MSTDP (Liu et al. 2026). It evaluates offline, on one chronological 80/20 split of nine of the same Cabral projects, and trains on final labels. Under our protocol that corresponds to the *oracle* condition, which no deployed model can reach. The results are therefore not directly comparable, and we make no claim of outperforming it. The MSTDP row counts match the raw ARFF files, which include discovery-time copy rows (Section 4.1). We could not tell from the paper whether these rows were removed before training.
+
+A diagnostic study can be useful to readers of a journal that mostly publishes new methods for three reasons:
+- It shows where a new method has room to win. The true-label condition (0.762 G-mean on ApacheJIT at W = 30) is an upper target. The best deployable method we tested reached 0.735, and a tuned 90-day wait 0.716.
+- It shows which inputs a method must use. Age alone cannot help (RQ3), and the evidence must separate defective from clean commits within the 30–180-day band (RQ2).
+- It shows how to evaluate. Offline evaluation with final labels, as in most JIT-SDP papers, measures the oracle condition, and fixed-threshold G-mean can reward a threshold shift rather than better learning (RQ5). The released simulator lets method papers report deployable numbers against the same bounds.
 
 ## 3 Study design
 
@@ -127,13 +114,17 @@ All label policies share one learner: LightGBM with 150 trees, learning rate 0.0
 - **ORB-style weighting (ORB-W).** Wait-W, with the class weights multiplied by ORB's boosting factors computed from a moving average of predictions (Cabral et al. 2019), using the parameters published there. This is not the original online-bagging ORB with Hoeffding trees. Because it is applied on top of class-balanced weights, it corrects class imbalance twice. We use it only as a second waiting baseline.
 - **Adaptive waiting (AWT).** A per-project, per-update W_T: the smallest age at which the estimated probability that a defect is still undiscovered drops to ε.
 - **Latency-aware weighting (LAW).** Each provisionally clean commit of age a becomes a positive copy with weight q and a negative copy with weight 1 − q, where q = p·S(a)/(1 − p + p·S(a)). S(a), the probability that a defect is still undiscovered at age a, is estimated from discoveries observed before T with the truncation-corrected estimator. The prior p is either the base rate or the previous model's probability.
-- **ODaSC-style.** An adaptation of Song et al. (2022) to the shared learner. Each waited-out clean commit gets a clean-label confidence equal to the share of clean labels among its k nearest labelled neighbours. Below a threshold it is counted as both classes. A kNN neighbourhood replaces DenStream micro-clusters. The two analysis lineages (Section 4.6) implemented this independently and differently (Section 5.4).
+- **ODaSC-style.** An adaptation of Song et al. (2022) to the shared learner. Each waited-out clean commit gets a clean-label confidence equal to the share of clean labels among its k nearest labelled neighbours. Below a threshold it enters training as both classes. This mechanism differs from the original, where the confidence modulates the oversampling rate of online bagging and the "both classes" counting applies only to the micro-cluster statistics. A kNN neighbourhood also replaces the micro-clusters, and our waits (30 or 90 days) differ from the 15 days used by Song et al. (2022). The two analysis lineages (Section 4.6) implemented the rule independently and differently (Section 5.4). Our results are therefore about these adaptations, not about ODaSC itself.
 - **Mature-scorer denoiser (LAW-M).** Our own variant, designed after the diagnosis in Section 5.3. Old provisionally clean commits (age ≥ W) receive the posterior q, with p from scorers trained only on mature commits (age ≥ 365 days) with two-fold cross-fitting.
 - **Dual.** LAW-M combined with the ODaSC-style neighbour share r by a noisy-OR, 1 − (1 − q)(1 − r).
 - **Decomposition (diagnostic only; uses true labels).**
   - **L1:** the training commits of Wait-W, with their true labels.
   - **L2:** L1 plus the young, not-yet-discovered defective commits.
   - **Age strata:** Wait-W, with true labels given only to provisionally clean commits whose age at T lies in one band ([30, 180), [180, 365), [365, 730), ≥ 730 days).
+
+- **Latency-aware threshold (+thr; second lineage).** At each update, the decision threshold for the next commits is the score that maximises G-mean on the last 2,000 scored commits, using only labels observable at T. Not-yet-discovered commits count as soft positives with weight b·S(a)/(1 − b + b·S(a)), where b is the defect rate of mature commits (older than the 90th percentile of the estimated delay) and S the truncation-corrected survival function. A pre-registered alternative ("rate-matching") instead flags the share of commits that were found defective among mature commits.
+
+The second lineage's simulator implements the same protocol (data loader, schedule, learner and parameters, evaluation window) in independently written code. Its fixed-threshold baselines reproduce the main lineage's values exactly (Table 11).
 
 ### 3.3 Factorial decomposition
 
@@ -143,7 +134,7 @@ The four cells
 - No-wait (observed labels, complete window),
 - Oracle (true labels, complete window)
 
-form a 2×2 design. The *label effect* is the Shapley average of the two label contrasts, ½[(L1 − Wait) + (Oracle − No-wait)]. The *freshness effect* is ½[(No-wait − Wait) + (Oracle − L1)]. The two sum to the gap Oracle − Wait. The *interaction* is (Oracle − No-wait) − (L1 − Wait). We also report the noise-first path share, (L1 − Wait)/(Oracle − Wait), which was the decomposition used in the first version of this study. Confidence intervals come from 10,000 project-bootstrap resamples. AUC is the primary metric for the decomposition, because G-mean at a fixed threshold mixes ranking with operating-point shifts (Section 5.5).
+form a 2×2 design. The *label effect* is the Shapley average of the two label contrasts, ½[(L1 − Wait) + (Oracle − No-wait)]. The *freshness effect* is ½[(No-wait − Wait) + (Oracle − L1)]. The two sum to the gap Oracle − Wait. The *interaction* is (Oracle − No-wait) − (L1 − Wait). We also report the noise-first path share, (L1 − Wait)/(Oracle − Wait), the decomposition fixed in our pre-registered plans; it measures what true labels achieve on the waited-out window alone. Confidence intervals come from 10,000 project-bootstrap resamples. AUC is the primary metric for the decomposition, because G-mean at a fixed threshold mixes ranking with operating-point shifts (Section 5.5).
 
 ### 3.4 Research questions
 
@@ -152,6 +143,13 @@ form a 2×2 design. The *label effect* is the Shapley average of the two label c
 - **RQ3** Can corrections that use only commit age recover the penalty?
 - **RQ4** Do feature-based denoisers recover it on fresh data?
 - **RQ5** How much of the measured difference between label policies is an operating-point effect?
+
+**Hypotheses** (each written into a plan before its confirmatory run; Holm families in parentheses):
+- **H1** (RQ3): LAW and adaptive waiting each beat No-wait, Wait-90 and ORB-style-90 on Cabral test (one family of six tests).
+- **H2a** (RQ2, development only): true labels recover less than a third of the Wait–oracle gap. Refuted, and replaced by **H3**: true labels on the Wait-30 set beat Wait-30 and Wait-90 (Cabral test; replicated on ApacheJIT).
+- **H6** (RQ4): the best development denoiser beats Wait-90 and ORB-style-90 on ApacheJIT (two tests).
+- **RQ5, second lineage**: LAW+thr beats Wait-90, ORB-style-90 and its ODaSC-style rule on Cabral test (three tests).
+- **H9a/H9b** (RQ5, fresh replication): LAW+thr beats Wait-90 and the ODaSC-style rule (H9a); for each of five policies, +thr beats the same policy at 0.5 (H9b); one family of seven tests.
 
 ## 4 Experimental setup
 
