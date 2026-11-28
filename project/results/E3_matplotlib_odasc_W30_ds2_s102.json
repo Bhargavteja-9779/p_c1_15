@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E3",
+    "project": "matplotlib",
+    "method": "odasc",
+    "variant": "odasc_W30_ds2",
+    "seed": 102,
+    "split": "test",
+    "W": 30,
+    "delay_scale": 2.0,
+    "odasc_delta": 0.9,
+    "gmean": 0.725666134489755,
+    "r0": 0.7182972489011883,
+    "r1": 0.7331106161841129,
+    "rdiff": 0.014813367282924594,
+    "auc": 0.8112496632776293,
+    "mcc": 0.3605522694716868,
+    "n_eval": 14980,
+    "seconds": 51.08,
+    "n_inspected": 0,
+    "job_id": "E3_matplotlib_odasc_W30_ds2_s102",
+    "written": "2026-11-28T18:59:33+00:00",
+    "cycle": 2
+  }
+]

@@ -1,29 +1,31 @@
 # HANDOFF — read this first
-*Auto-generated 2026-11-25T10:29:58+00:00 by scripts/write_handoff.py*
+*Auto-generated 2026-11-28T19:07:12+00:00 by scripts/write_handoff.py*
 
 ## Where we are
 - **Status:** RUNNING   **Cycle:** 2 / 12   **Phase:** PHASE5_RUN   **Pivots:** 0 / 3
-- **Step:** cycle 2: finishing frozen E2/E3; diagnosing latency cost (operating point vs ranking); searching fresh confirmation data
-- **Last action:** E1 analysed (G5 fail vs ODaSC); 332 skipped jobs re-queued for cycle 2
-- **NEXT ACTION:** Let E2/E3 finish (bash scripts/launch_runner.sh 3); find fresh projects with discovery times for a new untouched confirmation set; dev-only diagnostics of ranking headroom (delay depends on x?)
+- **Step:** cycle 2 closing: E2/E3 finishing; honest exit decided (see decisions.md)
+- **Last action:** E7/E8/E10 analysed; G9 fresh-clone 97/97; blind novelty 13/25 (self 12); manuscript draft paper/manuscript.md
+- **NEXT ACTION:** Relaunch runner (bash scripts/launch_runner.sh 4) until E2/E3 done; python scripts/final_report.py && python scripts/paper_numbers.py; fill {{E2_TABLE}}/{{E3_TEXT}} in paper/manuscript.md; run 3-reviewer panel; scripts/audit_numbers.py; write FINAL_REPORT.md (honest exit); set status FINISHED
 
 - **Selected journal:** JKSU-CIS (Springer Nature, ISSN 1319-1578, IF 6.4 2025; turnaround median 71–74 d, marginal)
 - **Topic:** Verification-latency-aware online JIT-SDP: latency-aware weighting (LAW) of provisionally-clean commits
 - **Hypothesis:** LAW beats the best tuned waiting-time baseline by >=0.02 G-mean on 10 held-out projects (Holm p<0.05)
 
 ## Running right now
-- Queue (full): {'done': 1083, 'pending': 940, 'running': 3}; running jobs: ['E9_fabric_law_lagakos_model_gmax_lat__insp_top_5_s0', 'E9_fabric_law_lagakos_model_gmax_lat__insp_top_5_s1', 'E9_fabric_law_lagakos_model_gmax_lat__insp_top_5_s2']
-- Processes: `965 tmux new-session -d -s research_w0 python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
-966 bash -c python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
-968 python3 run_all.py --mode full --resume --worker 0
-972 bash -c python3 run_all.py --mode full --resume --worker 1 >> logs/runner_w1.log 2>&1
-974 python3 run_all.py --mode full --resume --worker 1
-978 bash -c python3 run_all.py --mode full --resume --worker 2 >> logs/runner_w2.log 2>&1
-980 python3 run_all.py --mode full --resume --worker 2`
-- Heartbeat age: 15s
+- Queue (full): {'done': 2518, 'running': 4, 'pending': 40}; running jobs: ['E3_tomcat_wait_W90_ds2_s101', 'E3_tomcat_wait_W90_ds2_s102', 'E3_tomcat_wait_W90_ds2_s103', 'E3_tomcat_wait_W90_ds2_s104']
+- Processes: `893 tmux new-session -d -s research_w0 python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
+894 bash -c python3 run_all.py --mode full --resume --worker 0 >> logs/runner_w0.log 2>&1
+896 python3 run_all.py --mode full --resume --worker 0
+900 bash -c python3 run_all.py --mode full --resume --worker 1 >> logs/runner_w1.log 2>&1
+903 python3 run_all.py --mode full --resume --worker 1
+906 bash -c python3 run_all.py --mode full --resume --worker 2 >> logs/runner_w2.log 2>&1
+908 python3 run_all.py --mode full --resume --worker 2
+1021 bash -c python3 run_all.py --mode full --resume --worker 3 >> logs/runner_w3.log 2>&1
+1023 python3 run_all.py --mode full --resume --worker 3`
+- Heartbeat age: 0s
 
 ## Compute
-- Cycle 2: 0.47 h / 15 h   Global: 15.51 h / 120 h (CPU-hours; machine has no GPU)
+- Cycle 2: 11.48 h / 15 h   Global: 26.51 h / 120 h (CPU-hours; machine has no GPU)
 
 ## Gate status (Section 7)
 | Gate | Status | Evidence |
@@ -41,20 +43,22 @@
 | G11 | unknown |  |
 
 ## Last 10 decisions
-- 2026-11-24T23:04:02+00:00: Test projects are not touched until the selected LAW variant beats the best baseline (incl. ODaSC) on dev
-- 2026-11-24T23:13:20+00:00: 6.4 ladder rung 3-4: enqueue E0c (dev only, 252 runs): thr_policy in {ratematch (H3 as pre-written), gmax_lat (latency-corrected G-mean threshold)} for nowait and LAW-base; gmax_lat for all 15 wait/orb/odasc configs
-- 2026-11-25T00:25:33+00:00: E0c extended with law_{lagakos,naive}_model_gmax_lat (24 runs, dev only)
-- 2026-11-25T00:25:33+00:00: Runner: dead-worker resets refund the attempt; enqueue.py takes the queue lock
-- 2026-11-25T07:54:45+00:00: FROZEN (plan_v3): proposed = LAW lagakos+model with latency-corrected G-mean threshold; comparators nowait, wait_W90, orb_W90, odasc_W30 (primary), wait_W30_gmax_lat, odasc_W15_gmax_lat
 - 2026-11-25T10:19:45+00:00: Cycle 2 starts (cycle-1 budget of 15 CPU-h exhausted at 15.04 h). Finish frozen plan_v3 E2/E3 (332 skipped_budget jobs) first
 - 2026-11-25T10:19:45+00:00: Consolidated on lineage claude/zealous-lamport-bjc4um (latest, 73 commits: E0 done, plan_v3 frozen, E1 done). Fast-forwarded working branch claude/dreamy-fermat-7983nm to it. Branches zen-cray (cycle-2 JKSU benchmark, owner directive), keen-edison and magical-bardeen were parallel forks from the same handoff and are NOT merged; useful items will be ported explicitly
 - 2026-11-25T10:25:36+00:00: Prior art: Recalibration-vs-Retraining JIT-SDP study (Zenodo 24527309, 2026-11-25) logged as HIGH threat to an operating-point claim
 - 2026-11-25T10:26:41+00:00: plan_v4: E7 latency-cost decomposition (H5) on 18 non-dev projects and E8 frozen replication (H6) on 8 fresh ApacheJIT projects
 - 2026-11-25T10:28:10+00:00: E9 dev grid: inspection policies {rand, top, unc} x budgets {2%,5%} x base methods {nowait_gmax_lat, LAW, ODaSC_W30}; 162 dev runs; all counted as variants
+- 2026-11-28T16:43:45+00:00: E9 analysed on dev: H7 and H8 refuted; no inspection variant is promoted to confirmation
+- 2026-11-28T16:54:49+00:00: plan_v5: E7b completes H5 on all 5 confirmation seeds (336 jobs); E10/H9 tests threshold-vs-label-policy on ApacheJIT (200 jobs)
+- 2026-11-28T17:53:28+00:00: H5 reported as heterogeneous (supported on Cabral-test, refuted on ApacheJIT); no post-hoc redefinition of the window is tested on these data as confirmation
+- 2026-11-28T18:18:12+00:00: End of cycle 2: take the HONEST EXIT (Section 11.7) after finishing E2/E3, the manuscript, one review round, audit and reproducibility check, instead of starting cycle 3 / pivot 1
+- 2026-11-28T18:18:17+00:00: Correction to the previous entry: compute used at that time was 23.35 CPU-h global (cycle 2: 8.32 h), not about 21
 
 ## Last failures (journal entries)
 - journal/ENTRIES/20261125T101945_FAILURE_the_primary_hypothesis_fails_on_held_out_data__and.md
+- journal/ENTRIES/20261128T165402_FAILURE_h6_fails__no_replication_of_the_e1_wins.md
 - journal/ENTRIES/20261125T102820_DEAD END_a_feature_dependent_discovery_delay_model.md
+- journal/ENTRIES/20261128T164345_DEAD END_choosing_which_commits_to_inspect.md
 
 ## Commands (run from `project/`)
 | What | Command |

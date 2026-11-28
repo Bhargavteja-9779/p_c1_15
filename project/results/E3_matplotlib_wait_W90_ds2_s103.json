@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E3",
+    "project": "matplotlib",
+    "method": "wait",
+    "variant": "wait_W90_ds2",
+    "seed": 103,
+    "split": "test",
+    "W": 90,
+    "delay_scale": 2.0,
+    "gmean": 0.652938843524158,
+    "r0": 0.8438873514569428,
+    "r1": 0.5051967334818114,
+    "rdiff": 0.33869061797513145,
+    "auc": 0.7953235259959339,
+    "mcc": 0.3242290341406068,
+    "n_eval": 14980,
+    "seconds": 38.56,
+    "n_inspected": 0,
+    "job_id": "E3_matplotlib_wait_W90_ds2_s103",
+    "written": "2026-11-28T19:00:13+00:00",
+    "cycle": 2
+  }
+]

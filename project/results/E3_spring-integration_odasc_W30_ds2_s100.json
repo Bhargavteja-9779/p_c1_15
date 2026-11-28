@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E3",
+    "project": "spring-integration",
+    "method": "odasc",
+    "variant": "odasc_W30_ds2",
+    "seed": 100,
+    "split": "test",
+    "W": 30,
+    "delay_scale": 2.0,
+    "odasc_delta": 0.9,
+    "gmean": 0.6692000753467441,
+    "r0": 0.7987588652482269,
+    "r1": 0.5606557377049181,
+    "rdiff": 0.23810312754330887,
+    "auc": 0.7125976215390237,
+    "mcc": 0.35006667527528307,
+    "n_eval": 7775,
+    "seconds": 15.14,
+    "n_inspected": 0,
+    "job_id": "E3_spring-integration_odasc_W30_ds2_s100",
+    "written": "2026-11-28T19:02:14+00:00",
+    "cycle": 2
+  }
+]

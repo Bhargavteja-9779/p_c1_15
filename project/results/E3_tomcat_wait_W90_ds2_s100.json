@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E3",
+    "project": "tomcat",
+    "method": "wait",
+    "variant": "wait_W90_ds2",
+    "seed": 100,
+    "split": "test",
+    "W": 90,
+    "delay_scale": 2.0,
+    "gmean": 0.6250733580331647,
+    "r0": 0.5252731126691668,
+    "r1": 0.7438353372732831,
+    "rdiff": 0.21856222460411634,
+    "auc": 0.6793895811515349,
+    "mcc": 0.24445431781881244,
+    "n_eval": 17173,
+    "seconds": 38.87,
+    "n_inspected": 0,
+    "job_id": "E3_tomcat_wait_W90_ds2_s100",
+    "written": "2026-11-28T19:06:58+00:00",
+    "cycle": 2
+  }
+]

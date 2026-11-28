@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E3",
+    "project": "spring-integration",
+    "method": "wait",
+    "variant": "wait_W90_ds2",
+    "seed": 101,
+    "split": "test",
+    "W": 90,
+    "delay_scale": 2.0,
+    "gmean": 0.5512703948911298,
+    "r0": 0.7606382978723404,
+    "r1": 0.39953161592505854,
+    "rdiff": 0.36110668194728185,
+    "auc": 0.6286075954623217,
+    "mcc": 0.15863778270429324,
+    "n_eval": 7775,
+    "seconds": 11.95,
+    "n_inspected": 0,
+    "job_id": "E3_spring-integration_wait_W90_ds2_s101",
+    "written": "2026-11-28T19:02:39+00:00",
+    "cycle": 2
+  }
+]

@@ -2,12 +2,12 @@
   "status": "RUNNING",
   "cycle": 2,
   "phase": "PHASE5_RUN",
-  "step": "cycle 2: finishing frozen E2/E3; diagnosing latency cost (operating point vs ranking); searching fresh confirmation data",
+  "step": "cycle 2 closing: E2/E3 finishing; honest exit decided (see decisions.md)",
   "pivots": 0,
   "topic_id": null,
   "journal": "JKSU-CIS (Springer Nature, ISSN 1319-1578, IF 6.4 2025; turnaround median 71\u201374 d, marginal)",
-  "last_action": "E1 analysed (G5 fail vs ODaSC); 332 skipped jobs re-queued for cycle 2",
-  "next_action": "Let E2/E3 finish (bash scripts/launch_runner.sh 3); find fresh projects with discovery times for a new untouched confirmation set; dev-only diagnostics of ranking headroom (delay depends on x?)",
+  "last_action": "E7/E8/E10 analysed; G9 fresh-clone 97/97; blind novelty 13/25 (self 12); manuscript draft paper/manuscript.md",
+  "next_action": "Relaunch runner (bash scripts/launch_runner.sh 4) until E2/E3 done; python scripts/final_report.py && python scripts/paper_numbers.py; fill {{E2_TABLE}}/{{E3_TEXT}} in paper/manuscript.md; run 3-reviewer panel; scripts/audit_numbers.py; write FINAL_REPORT.md (honest exit); set status FINISHED",
   "config": {
     "TARGET_TIER": "Q1 journal (JCR), reputable publisher",
     "MAX_DAYS_SUBMIT_TO_ACCEPT": 72,
@@ -29,7 +29,7 @@
     ]
   },
   "seeds_confirm_fixed_at": "2026-11-24 (project start; never change)",
-  "updated": "2026-11-25T10:19:45+00:00",
+  "updated": "2026-11-28T19:07:12+00:00",
   "topic": "Verification-latency-aware online JIT-SDP: latency-aware weighting (LAW) of provisionally-clean commits",
   "hypothesis": "LAW beats the best tuned waiting-time baseline by >=0.02 G-mean on 10 held-out projects (Holm p<0.05)"
 }

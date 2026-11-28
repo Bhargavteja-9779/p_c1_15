@@ -1,0 +1,26 @@
+[
+  {
+    "experiment": "E3",
+    "project": "npm",
+    "method": "law",
+    "variant": "law_lagakos_model_gmax_lat_ds2",
+    "seed": 100,
+    "split": "test",
+    "delay_est": "lagakos",
+    "prior": "model",
+    "delay_scale": 2.0,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.649053627527447,
+    "r0": 0.6521248589695374,
+    "r1": 0.6459968602825745,
+    "rdiff": 0.006127998686962899,
+    "auc": 0.6903038937101151,
+    "mcc": 0.2397537377344391,
+    "n_eval": 6592,
+    "seconds": 17.62,
+    "n_inspected": 0,
+    "job_id": "E3_npm_law_lagakos_model_gmax_lat_ds2_s100",
+    "written": "2026-11-28T19:00:30+00:00",
+    "cycle": 2
+  }
+]

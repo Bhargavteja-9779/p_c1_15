@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E3",
+    "project": "npm",
+    "method": "wait",
+    "variant": "wait_W90_ds2",
+    "seed": 103,
+    "split": "test",
+    "W": 90,
+    "delay_scale": 2.0,
+    "gmean": 0.6253565039222005,
+    "r0": 0.6135765325310267,
+    "r1": 0.6373626373626373,
+    "rdiff": 0.02378610483161059,
+    "auc": 0.679171195483719,
+    "mcc": 0.1998712610140568,
+    "n_eval": 6592,
+    "seconds": 10.78,
+    "n_inspected": 0,
+    "job_id": "E3_npm_wait_W90_ds2_s103",
+    "written": "2026-11-28T19:01:25+00:00",
+    "cycle": 2
+  }
+]
