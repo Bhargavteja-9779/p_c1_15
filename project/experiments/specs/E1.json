@@ -1,0 +1,3802 @@
+[
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "brackets",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "brackets",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "brackets",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "brackets",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "brackets",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "brackets",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "brackets",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "brackets",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "brackets",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "brackets",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "brackets",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "brackets",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "brackets",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "brackets",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "brackets",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "brackets",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "brackets",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "brackets",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "brackets",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "brackets",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "brackets",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "brackets",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "brackets",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "brackets",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "brackets",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "brackets",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "brackets",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "brackets",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "brackets",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "brackets",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "brackets",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "brackets",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "brackets",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "brackets",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "brackets",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "brackets",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "brackets",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "brackets",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "brackets",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "brackets",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "broadleaf",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "broadleaf",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "broadleaf",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "broadleaf",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "broadleaf",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "broadleaf",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "broadleaf",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "broadleaf",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "broadleaf",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "broadleaf",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "broadleaf",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "broadleaf",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "broadleaf",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "broadleaf",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "broadleaf",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "broadleaf",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "broadleaf",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "broadleaf",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "broadleaf",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "broadleaf",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "broadleaf",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "broadleaf",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "broadleaf",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "broadleaf",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "broadleaf",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "broadleaf",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "broadleaf",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "broadleaf",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "broadleaf",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "broadleaf",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "broadleaf",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "broadleaf",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "broadleaf",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "broadleaf",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "broadleaf",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "broadleaf",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "broadleaf",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "broadleaf",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "broadleaf",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "broadleaf",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "camel",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "camel",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "camel",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "camel",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "camel",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "camel",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "camel",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "camel",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "camel",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "camel",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "camel",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "camel",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "camel",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "camel",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "camel",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "camel",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "camel",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "camel",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "camel",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "camel",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "camel",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "camel",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "camel",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "camel",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "camel",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "camel",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "camel",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "camel",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "camel",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "camel",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "camel",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "camel",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "camel",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "camel",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "camel",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "camel",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "camel",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "camel",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "camel",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "camel",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "jgroups",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "jgroups",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "jgroups",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "jgroups",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "jgroups",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "jgroups",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "jgroups",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "jgroups",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "jgroups",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "jgroups",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "jgroups",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "jgroups",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "jgroups",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "jgroups",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "jgroups",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "jgroups",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "jgroups",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "jgroups",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "jgroups",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "jgroups",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "jgroups",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "jgroups",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "jgroups",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "jgroups",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "jgroups",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "jgroups",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "jgroups",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "jgroups",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "jgroups",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "jgroups",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "jgroups",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "jgroups",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "jgroups",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "jgroups",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "jgroups",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "jgroups",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "jgroups",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "jgroups",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "jgroups",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "jgroups",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "matplotlib",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "matplotlib",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "matplotlib",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "matplotlib",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "matplotlib",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "matplotlib",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "matplotlib",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "matplotlib",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "matplotlib",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "matplotlib",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "matplotlib",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "matplotlib",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "matplotlib",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "matplotlib",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "matplotlib",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "matplotlib",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "matplotlib",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "matplotlib",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "matplotlib",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "matplotlib",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "matplotlib",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "matplotlib",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "matplotlib",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "matplotlib",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "matplotlib",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "matplotlib",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "matplotlib",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "matplotlib",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "matplotlib",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "matplotlib",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "matplotlib",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "matplotlib",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "matplotlib",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "matplotlib",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "matplotlib",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "matplotlib",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "matplotlib",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "matplotlib",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "matplotlib",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "matplotlib",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "npm",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "npm",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "npm",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "npm",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "npm",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "npm",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "npm",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "npm",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "npm",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "npm",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "npm",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "npm",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "npm",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "npm",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "npm",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "npm",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "npm",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "npm",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "npm",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "npm",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "npm",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "npm",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "npm",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "npm",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "npm",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "npm",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "npm",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "npm",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "npm",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "npm",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "npm",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "npm",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "npm",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "npm",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "npm",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "npm",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "npm",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "npm",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "npm",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "npm",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "spring-integration",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "spring-integration",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "spring-integration",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "spring-integration",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "spring-integration",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "spring-integration",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "spring-integration",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "spring-integration",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "spring-integration",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "spring-integration",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "spring-integration",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "spring-integration",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "spring-integration",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "spring-integration",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "spring-integration",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "spring-integration",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "spring-integration",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "spring-integration",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "spring-integration",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "spring-integration",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "spring-integration",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "spring-integration",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "spring-integration",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "spring-integration",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "spring-integration",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "spring-integration",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "spring-integration",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "spring-integration",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "spring-integration",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "spring-integration",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "spring-integration",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "spring-integration",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "spring-integration",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "spring-integration",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "spring-integration",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "spring-integration",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "spring-integration",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "spring-integration",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "spring-integration",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "spring-integration",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "tomcat",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "tomcat",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "tomcat",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "tomcat",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "tomcat",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "tomcat",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "tomcat",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "tomcat",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "tomcat",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "tomcat",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "tomcat",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "tomcat",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "tomcat",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "tomcat",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "tomcat",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "tomcat",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "tomcat",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "tomcat",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "tomcat",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "tomcat",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "tomcat",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "tomcat",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "tomcat",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "tomcat",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "tomcat",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "tomcat",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "tomcat",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "tomcat",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "tomcat",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "tomcat",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "tomcat",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "tomcat",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "tomcat",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "tomcat",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "tomcat",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "tomcat",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "tomcat",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "tomcat",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "tomcat",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "tomcat",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "wagtail",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "wagtail",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "wagtail",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "wagtail",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "wagtail",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "wagtail",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "wagtail",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "wagtail",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "wagtail",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "wagtail",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "wagtail",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "wagtail",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "wagtail",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "wagtail",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "wagtail",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "wagtail",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "wagtail",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "wagtail",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "wagtail",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "wagtail",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "wagtail",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "wagtail",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "wagtail",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "wagtail",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "wagtail",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "wagtail",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "wagtail",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "wagtail",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "wagtail",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "wagtail",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "wagtail",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "wagtail",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "wagtail",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "wagtail",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "wagtail",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "wagtail",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "wagtail",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "wagtail",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "wagtail",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "wagtail",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "zulip",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "zulip",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "zulip",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "zulip",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "zulip",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "zulip",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "zulip",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "zulip",
+"seed": 100,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "zulip",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "zulip",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "zulip",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "zulip",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "zulip",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "zulip",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "zulip",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "zulip",
+"seed": 101,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "zulip",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "zulip",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "zulip",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "zulip",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "zulip",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "zulip",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "zulip",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "zulip",
+"seed": 102,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "zulip",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "zulip",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "zulip",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "zulip",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "zulip",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "zulip",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "zulip",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "zulip",
+"seed": 103,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "law_lagakos_model_gmax_lat",
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"project": "zulip",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "nowait",
+"method": "nowait",
+"project": "zulip",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W90",
+"method": "wait",
+"W": 90,
+"project": "zulip",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "orb_W90",
+"method": "orb",
+"W": 90,
+"project": "zulip",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W30",
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"project": "zulip",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "wait_W30_gmax_lat",
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"project": "zulip",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "odasc_W15_gmax_lat",
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"project": "zulip",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+},
+{
+"variant": "oracle",
+"method": "oracle",
+"project": "zulip",
+"seed": 104,
+"experiment": "E1",
+"split": "test"
+}
+]

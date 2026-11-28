@@ -1,0 +1,47 @@
+{
+ "generated": "2026-11-28T18:05:59+00:00",
+ "dev_lead_law_over_odasc_W30": 0.0135,
+ "dev_auc_law_lagakos_model": 0.8268,
+ "dev_auc_best_baseline": 0.8206,
+ "D1_dev_mean_recovery": {
+  "oracle_old_H180": 0.0405,
+  "oracle_old_H30": 0.3443,
+  "oracle_young_H180": 0.9624,
+  "oracle_young_H30": 0.8021
+ },
+ "D1_dev_recovery_of_mean_auc": {
+  "oracle_old_H180": 0.0493,
+  "oracle_old_H30": 0.3941,
+  "oracle_young_H180": 0.9714,
+  "oracle_young_H30": 0.8089
+ },
+ "E9_best5_gain_auc": {
+  "nowait_gmax_lat": 0.0234,
+  "odasc_W30": 0.0146,
+  "law_lagakos_model_gmax_lat": 0.0112
+ },
+ "E9_label_policy_spread_auc": 0.0328,
+ "E1_spread_handled_policies": 0.0202,
+ "E1_oracle_minus_law_gmean": 0.0187,
+ "E8_oracle_minus_law_gmean": 0.0368,
+ "E1_oracle_minus_best_auc": 0.0514,
+ "E8_oracle_minus_best_auc": 0.0602,
+ "E7_spearman_young30_recovery": {
+  "commits_per_30d": {
+   "rho": 0.69,
+   "p": 0.002
+  },
+  "share_found_within_30d": {
+   "rho": 0.7,
+   "p": 0.001
+  },
+  "median_delay_d": {
+   "rho": -0.62,
+   "p": 0.006
+  },
+  "bug_rate": {
+   "rho": -0.22,
+   "p": 0.376
+  }
+ }
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E2",
+    "project": "matplotlib",
+    "method": "nowait",
+    "variant": "nowait_gmax_lat",
+    "seed": 103,
+    "split": "test",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.7153307758390403,
+    "r0": 0.6132182972489012,
+    "r1": 0.8344469190794358,
+    "rdiff": 0.2212286218305346,
+    "auc": 0.7896342019773475,
+    "mcc": 0.34459338515276566,
+    "n_eval": 14980,
+    "seconds": 44.97,
+    "n_inspected": 0,
+    "job_id": "E2_matplotlib_nowait_gmax_lat_s103",
+    "written": "2026-11-28T18:06:22+00:00",
+    "cycle": 2
+  }
+]

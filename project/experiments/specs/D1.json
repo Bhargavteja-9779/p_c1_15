@@ -1,0 +1,110 @@
+[
+{
+"experiment": "D1",
+"split": "dev",
+"project": "fabric",
+"method": "oracle_young",
+"oracle_H": 30,
+"variant": "oracle_young_H30",
+"seed": 0
+},
+{
+"experiment": "D1",
+"split": "dev",
+"project": "fabric",
+"method": "oracle_young",
+"oracle_H": 180,
+"variant": "oracle_young_H180",
+"seed": 0
+},
+{
+"experiment": "D1",
+"split": "dev",
+"project": "fabric",
+"method": "oracle_old",
+"oracle_H": 30,
+"variant": "oracle_old_H30",
+"seed": 0
+},
+{
+"experiment": "D1",
+"split": "dev",
+"project": "fabric",
+"method": "oracle_old",
+"oracle_H": 180,
+"variant": "oracle_old_H180",
+"seed": 0
+},
+{
+"experiment": "D1",
+"split": "dev",
+"project": "neutron",
+"method": "oracle_young",
+"oracle_H": 30,
+"variant": "oracle_young_H30",
+"seed": 0
+},
+{
+"experiment": "D1",
+"split": "dev",
+"project": "neutron",
+"method": "oracle_young",
+"oracle_H": 180,
+"variant": "oracle_young_H180",
+"seed": 0
+},
+{
+"experiment": "D1",
+"split": "dev",
+"project": "neutron",
+"method": "oracle_old",
+"oracle_H": 30,
+"variant": "oracle_old_H30",
+"seed": 0
+},
+{
+"experiment": "D1",
+"split": "dev",
+"project": "neutron",
+"method": "oracle_old",
+"oracle_H": 180,
+"variant": "oracle_old_H180",
+"seed": 0
+},
+{
+"experiment": "D1",
+"split": "dev",
+"project": "sentry",
+"method": "oracle_young",
+"oracle_H": 30,
+"variant": "oracle_young_H30",
+"seed": 0
+},
+{
+"experiment": "D1",
+"split": "dev",
+"project": "sentry",
+"method": "oracle_young",
+"oracle_H": 180,
+"variant": "oracle_young_H180",
+"seed": 0
+},
+{
+"experiment": "D1",
+"split": "dev",
+"project": "sentry",
+"method": "oracle_old",
+"oracle_H": 30,
+"variant": "oracle_old_H30",
+"seed": 0
+},
+{
+"experiment": "D1",
+"split": "dev",
+"project": "sentry",
+"method": "oracle_old",
+"oracle_H": 180,
+"variant": "oracle_old_H180",
+"seed": 0
+}
+]

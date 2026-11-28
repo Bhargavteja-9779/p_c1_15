@@ -1,0 +1,2002 @@
+[
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 100
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 100
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 100
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 100
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 100
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 101
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 101
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 101
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 101
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 101
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 102
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 102
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 102
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 102
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 102
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 103
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 103
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 103
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 103
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 103
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 104
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 104
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 104
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 104
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_activemq",
+"seed": 104
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 100
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 100
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 100
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 100
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 100
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 101
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 101
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 101
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 101
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 101
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 102
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 102
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 102
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 102
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 102
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 103
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 103
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 103
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 103
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 103
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 104
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 104
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 104
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 104
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_cassandra",
+"seed": 104
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 100
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 100
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 100
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 100
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 100
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 101
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 101
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 101
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 101
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 101
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 102
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 102
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 102
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 102
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 102
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 103
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 103
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 103
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 103
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 103
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 104
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 104
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 104
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 104
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_flink",
+"seed": 104
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 100
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 100
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 100
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 100
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 100
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 101
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 101
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 101
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 101
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 101
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 102
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 102
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 102
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 102
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 102
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 103
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 103
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 103
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 103
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 103
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 104
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 104
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 104
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 104
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_groovy",
+"seed": 104
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 100
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 100
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 100
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 100
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 100
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 101
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 101
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 101
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 101
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 101
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 102
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 102
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 102
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 102
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 102
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 103
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 103
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 103
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 103
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 103
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 104
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 104
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 104
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 104
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hbase",
+"seed": 104
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 100
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 100
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 100
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 100
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 100
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 101
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 101
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 101
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 101
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 101
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 102
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 102
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 102
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 102
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 102
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 103
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 103
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 103
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 103
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 103
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 104
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 104
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 104
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 104
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_hive",
+"seed": 104
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 100
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 100
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 100
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 100
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 100
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 101
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 101
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 101
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 101
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 101
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 102
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 102
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 102
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 102
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 102
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 103
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 103
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 103
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 103
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 103
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 104
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 104
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 104
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 104
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_ignite",
+"seed": 104
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 100
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 100
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 100
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 100
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 100
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 101
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 101
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 101
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 101
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 101
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 102
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 102
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 102
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 102
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 102
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 103
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 103
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 103
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 103
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 103
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 104
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 104
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 104
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 104
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"experiment": "E10",
+"split": "apachejit",
+"project": "aj_kafka",
+"seed": 104
+}
+]

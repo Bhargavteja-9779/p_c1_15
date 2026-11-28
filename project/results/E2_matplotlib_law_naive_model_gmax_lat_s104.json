@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E2",
+    "project": "matplotlib",
+    "method": "law",
+    "variant": "law_naive_model_gmax_lat",
+    "seed": 104,
+    "split": "test",
+    "delay_est": "naive",
+    "prior": "model",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.7192134042066872,
+    "r0": 0.617694937327039,
+    "r1": 0.8374164810690423,
+    "rdiff": 0.21972154374200337,
+    "auc": 0.7961927047776569,
+    "mcc": 0.35047660782415,
+    "n_eval": 14980,
+    "seconds": 73.43,
+    "n_inspected": 0,
+    "job_id": "E2_matplotlib_law_naive_model_gmax_lat_s104",
+    "written": "2026-11-28T18:05:32+00:00",
+    "cycle": 2
+  }
+]

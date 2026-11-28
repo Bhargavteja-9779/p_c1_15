@@ -1,0 +1,5198 @@
+[
+{
+"method": "nowait",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "oracle",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 15,
+"variant": "wait_W15",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 15,
+"variant": "orb_W15",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 30,
+"variant": "wait_W30",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 30,
+"variant": "orb_W30",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 60,
+"variant": "wait_W60",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 60,
+"variant": "orb_W60",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 90,
+"variant": "wait_W90",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 90,
+"variant": "orb_W90",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 180,
+"variant": "wait_W180",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 180,
+"variant": "orb_W180",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "model",
+"variant": "law_naive_model",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"variant": "law_lagakos_base",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"variant": "law_naive_base",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "oracle",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 15,
+"variant": "wait_W15",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 15,
+"variant": "orb_W15",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 30,
+"variant": "wait_W30",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 30,
+"variant": "orb_W30",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 60,
+"variant": "wait_W60",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 60,
+"variant": "orb_W60",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 90,
+"variant": "wait_W90",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 90,
+"variant": "orb_W90",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 180,
+"variant": "wait_W180",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 180,
+"variant": "orb_W180",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "model",
+"variant": "law_naive_model",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"variant": "law_lagakos_base",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"variant": "law_naive_base",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "oracle",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 15,
+"variant": "wait_W15",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 15,
+"variant": "orb_W15",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 30,
+"variant": "wait_W30",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 30,
+"variant": "orb_W30",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 60,
+"variant": "wait_W60",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 60,
+"variant": "orb_W60",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 90,
+"variant": "wait_W90",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 90,
+"variant": "orb_W90",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 180,
+"variant": "wait_W180",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 180,
+"variant": "orb_W180",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "model",
+"variant": "law_naive_model",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"variant": "law_lagakos_base",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"variant": "law_naive_base",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "oracle",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 15,
+"variant": "wait_W15",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 15,
+"variant": "orb_W15",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 30,
+"variant": "wait_W30",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 30,
+"variant": "orb_W30",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 60,
+"variant": "wait_W60",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 60,
+"variant": "orb_W60",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 90,
+"variant": "wait_W90",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 90,
+"variant": "orb_W90",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 180,
+"variant": "wait_W180",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 180,
+"variant": "orb_W180",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "model",
+"variant": "law_naive_model",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"variant": "law_lagakos_base",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"variant": "law_naive_base",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "oracle",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 15,
+"variant": "wait_W15",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 15,
+"variant": "orb_W15",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 30,
+"variant": "wait_W30",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 30,
+"variant": "orb_W30",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 60,
+"variant": "wait_W60",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 60,
+"variant": "orb_W60",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 90,
+"variant": "wait_W90",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 90,
+"variant": "orb_W90",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 180,
+"variant": "wait_W180",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 180,
+"variant": "orb_W180",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "model",
+"variant": "law_naive_model",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"variant": "law_lagakos_base",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"variant": "law_naive_base",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "oracle",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 15,
+"variant": "wait_W15",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 15,
+"variant": "orb_W15",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 30,
+"variant": "wait_W30",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 30,
+"variant": "orb_W30",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 60,
+"variant": "wait_W60",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 60,
+"variant": "orb_W60",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 90,
+"variant": "wait_W90",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 90,
+"variant": "orb_W90",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 180,
+"variant": "wait_W180",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 180,
+"variant": "orb_W180",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "model",
+"variant": "law_naive_model",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"variant": "law_lagakos_base",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"variant": "law_naive_base",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "oracle",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 15,
+"variant": "wait_W15",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 15,
+"variant": "orb_W15",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 30,
+"variant": "wait_W30",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 30,
+"variant": "orb_W30",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 60,
+"variant": "wait_W60",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 60,
+"variant": "orb_W60",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 90,
+"variant": "wait_W90",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 90,
+"variant": "orb_W90",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 180,
+"variant": "wait_W180",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 180,
+"variant": "orb_W180",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "model",
+"variant": "law_naive_model",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"variant": "law_lagakos_base",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"variant": "law_naive_base",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "oracle",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 15,
+"variant": "wait_W15",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 15,
+"variant": "orb_W15",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 30,
+"variant": "wait_W30",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 30,
+"variant": "orb_W30",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 60,
+"variant": "wait_W60",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 60,
+"variant": "orb_W60",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 90,
+"variant": "wait_W90",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 90,
+"variant": "orb_W90",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 180,
+"variant": "wait_W180",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 180,
+"variant": "orb_W180",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "model",
+"variant": "law_naive_model",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"variant": "law_lagakos_base",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"variant": "law_naive_base",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "oracle",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 15,
+"variant": "wait_W15",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 15,
+"variant": "orb_W15",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 30,
+"variant": "wait_W30",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 30,
+"variant": "orb_W30",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 60,
+"variant": "wait_W60",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 60,
+"variant": "orb_W60",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 90,
+"variant": "wait_W90",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 90,
+"variant": "orb_W90",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 180,
+"variant": "wait_W180",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 180,
+"variant": "orb_W180",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "model",
+"variant": "law_naive_model",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"variant": "law_lagakos_base",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"variant": "law_naive_base",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "oracle",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 15,
+"variant": "wait_W15",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 15,
+"variant": "orb_W15",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 30,
+"variant": "wait_W30",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 30,
+"variant": "orb_W30",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 60,
+"variant": "wait_W60",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 60,
+"variant": "orb_W60",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 90,
+"variant": "wait_W90",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 90,
+"variant": "orb_W90",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 180,
+"variant": "wait_W180",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 180,
+"variant": "orb_W180",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "model",
+"variant": "law_naive_model",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"variant": "law_lagakos_base",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"variant": "law_naive_base",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "oracle",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 15,
+"variant": "wait_W15",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 15,
+"variant": "orb_W15",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 30,
+"variant": "wait_W30",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 30,
+"variant": "orb_W30",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 60,
+"variant": "wait_W60",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 60,
+"variant": "orb_W60",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 90,
+"variant": "wait_W90",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 90,
+"variant": "orb_W90",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 180,
+"variant": "wait_W180",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 180,
+"variant": "orb_W180",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "model",
+"variant": "law_naive_model",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"variant": "law_lagakos_base",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"variant": "law_naive_base",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "oracle",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 15,
+"variant": "wait_W15",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 15,
+"variant": "orb_W15",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 30,
+"variant": "wait_W30",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 30,
+"variant": "orb_W30",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 60,
+"variant": "wait_W60",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 60,
+"variant": "orb_W60",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 90,
+"variant": "wait_W90",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 90,
+"variant": "orb_W90",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 180,
+"variant": "wait_W180",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 180,
+"variant": "orb_W180",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"variant": "law_lagakos_model",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "model",
+"variant": "law_naive_model",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"variant": "law_lagakos_base",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"variant": "law_naive_base",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"variant": "odasc_W15",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"variant": "odasc_W30",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 60,
+"odasc_delta": 0.9,
+"variant": "odasc_W60",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 90,
+"odasc_delta": 0.9,
+"variant": "odasc_W90",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 180,
+"odasc_delta": 0.9,
+"variant": "odasc_W180",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"variant": "odasc_W15",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"variant": "odasc_W30",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 60,
+"odasc_delta": 0.9,
+"variant": "odasc_W60",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 90,
+"odasc_delta": 0.9,
+"variant": "odasc_W90",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 180,
+"odasc_delta": 0.9,
+"variant": "odasc_W180",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"variant": "odasc_W15",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"variant": "odasc_W30",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 60,
+"odasc_delta": 0.9,
+"variant": "odasc_W60",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 90,
+"odasc_delta": 0.9,
+"variant": "odasc_W90",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 180,
+"odasc_delta": 0.9,
+"variant": "odasc_W180",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"variant": "odasc_W15",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"variant": "odasc_W30",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 60,
+"odasc_delta": 0.9,
+"variant": "odasc_W60",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 90,
+"odasc_delta": 0.9,
+"variant": "odasc_W90",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 180,
+"odasc_delta": 0.9,
+"variant": "odasc_W180",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"variant": "odasc_W15",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"variant": "odasc_W30",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 60,
+"odasc_delta": 0.9,
+"variant": "odasc_W60",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 90,
+"odasc_delta": 0.9,
+"variant": "odasc_W90",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 180,
+"odasc_delta": 0.9,
+"variant": "odasc_W180",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"variant": "odasc_W15",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"variant": "odasc_W30",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 60,
+"odasc_delta": 0.9,
+"variant": "odasc_W60",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 90,
+"odasc_delta": 0.9,
+"variant": "odasc_W90",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 180,
+"odasc_delta": 0.9,
+"variant": "odasc_W180",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"variant": "odasc_W15",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"variant": "odasc_W30",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 60,
+"odasc_delta": 0.9,
+"variant": "odasc_W60",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 90,
+"odasc_delta": 0.9,
+"variant": "odasc_W90",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 180,
+"odasc_delta": 0.9,
+"variant": "odasc_W180",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"variant": "odasc_W15",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"variant": "odasc_W30",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 60,
+"odasc_delta": 0.9,
+"variant": "odasc_W60",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 90,
+"odasc_delta": 0.9,
+"variant": "odasc_W90",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 180,
+"odasc_delta": 0.9,
+"variant": "odasc_W180",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"variant": "odasc_W15",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"variant": "odasc_W30",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 60,
+"odasc_delta": 0.9,
+"variant": "odasc_W60",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 90,
+"odasc_delta": 0.9,
+"variant": "odasc_W90",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 180,
+"odasc_delta": 0.9,
+"variant": "odasc_W180",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"variant": "odasc_W15",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"variant": "odasc_W30",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 60,
+"odasc_delta": 0.9,
+"variant": "odasc_W60",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 90,
+"odasc_delta": 0.9,
+"variant": "odasc_W90",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 180,
+"odasc_delta": 0.9,
+"variant": "odasc_W180",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"variant": "odasc_W15",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"variant": "odasc_W30",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 60,
+"odasc_delta": 0.9,
+"variant": "odasc_W60",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 90,
+"odasc_delta": 0.9,
+"variant": "odasc_W90",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 180,
+"odasc_delta": 0.9,
+"variant": "odasc_W180",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 15,
+"odasc_delta": 0.9,
+"variant": "odasc_W15",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 30,
+"odasc_delta": 0.9,
+"variant": "odasc_W30",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 60,
+"odasc_delta": 0.9,
+"variant": "odasc_W60",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 90,
+"odasc_delta": 0.9,
+"variant": "odasc_W90",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 180,
+"odasc_delta": 0.9,
+"variant": "odasc_W180",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"thr_policy": "ratematch",
+"variant": "nowait_ratematch",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"thr_policy": "ratematch",
+"variant": "law_lagakos_base_ratematch",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"thr_policy": "ratematch",
+"variant": "law_naive_base_ratematch",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"thr_policy": "gmax_lat",
+"variant": "law_lagakos_base_gmax_lat",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"thr_policy": "gmax_lat",
+"variant": "law_naive_base_gmax_lat",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "wait_W15_gmax_lat",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "orb_W15_gmax_lat",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W15_gmax_lat",
+"project": "fabric",
+"seed": 0,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "wait_W30_gmax_lat",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "orb_W30_gmax_lat",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"project": "fabric",
+"seed": 0,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "wait_W60_gmax_lat",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "orb_W60_gmax_lat",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W60_gmax_lat",
+"project": "fabric",
+"seed": 0,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W90_gmax_lat",
+"project": "fabric",
+"seed": 0,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "wait_W180_gmax_lat",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "orb_W180_gmax_lat",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W180_gmax_lat",
+"project": "fabric",
+"seed": 0,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"thr_policy": "ratematch",
+"variant": "nowait_ratematch",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"thr_policy": "ratematch",
+"variant": "law_lagakos_base_ratematch",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"thr_policy": "ratematch",
+"variant": "law_naive_base_ratematch",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"thr_policy": "gmax_lat",
+"variant": "law_lagakos_base_gmax_lat",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"thr_policy": "gmax_lat",
+"variant": "law_naive_base_gmax_lat",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "wait_W15_gmax_lat",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "orb_W15_gmax_lat",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W15_gmax_lat",
+"project": "fabric",
+"seed": 1,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "wait_W30_gmax_lat",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "orb_W30_gmax_lat",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"project": "fabric",
+"seed": 1,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "wait_W60_gmax_lat",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "orb_W60_gmax_lat",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W60_gmax_lat",
+"project": "fabric",
+"seed": 1,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W90_gmax_lat",
+"project": "fabric",
+"seed": 1,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "wait_W180_gmax_lat",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "orb_W180_gmax_lat",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W180_gmax_lat",
+"project": "fabric",
+"seed": 1,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"thr_policy": "ratematch",
+"variant": "nowait_ratematch",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"thr_policy": "ratematch",
+"variant": "law_lagakos_base_ratematch",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"thr_policy": "ratematch",
+"variant": "law_naive_base_ratematch",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"thr_policy": "gmax_lat",
+"variant": "law_lagakos_base_gmax_lat",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"thr_policy": "gmax_lat",
+"variant": "law_naive_base_gmax_lat",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "wait_W15_gmax_lat",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "orb_W15_gmax_lat",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W15_gmax_lat",
+"project": "fabric",
+"seed": 2,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "wait_W30_gmax_lat",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "orb_W30_gmax_lat",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"project": "fabric",
+"seed": 2,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "wait_W60_gmax_lat",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "orb_W60_gmax_lat",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W60_gmax_lat",
+"project": "fabric",
+"seed": 2,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W90_gmax_lat",
+"project": "fabric",
+"seed": 2,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "wait_W180_gmax_lat",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "orb_W180_gmax_lat",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W180_gmax_lat",
+"project": "fabric",
+"seed": 2,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"thr_policy": "ratematch",
+"variant": "nowait_ratematch",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"thr_policy": "ratematch",
+"variant": "law_lagakos_base_ratematch",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"thr_policy": "ratematch",
+"variant": "law_naive_base_ratematch",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"thr_policy": "gmax_lat",
+"variant": "law_lagakos_base_gmax_lat",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"thr_policy": "gmax_lat",
+"variant": "law_naive_base_gmax_lat",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "wait_W15_gmax_lat",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "orb_W15_gmax_lat",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W15_gmax_lat",
+"project": "neutron",
+"seed": 0,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "wait_W30_gmax_lat",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "orb_W30_gmax_lat",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"project": "neutron",
+"seed": 0,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "wait_W60_gmax_lat",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "orb_W60_gmax_lat",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W60_gmax_lat",
+"project": "neutron",
+"seed": 0,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W90_gmax_lat",
+"project": "neutron",
+"seed": 0,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "wait_W180_gmax_lat",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "orb_W180_gmax_lat",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W180_gmax_lat",
+"project": "neutron",
+"seed": 0,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"thr_policy": "ratematch",
+"variant": "nowait_ratematch",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"thr_policy": "ratematch",
+"variant": "law_lagakos_base_ratematch",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"thr_policy": "ratematch",
+"variant": "law_naive_base_ratematch",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"thr_policy": "gmax_lat",
+"variant": "law_lagakos_base_gmax_lat",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"thr_policy": "gmax_lat",
+"variant": "law_naive_base_gmax_lat",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "wait_W15_gmax_lat",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "orb_W15_gmax_lat",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W15_gmax_lat",
+"project": "neutron",
+"seed": 1,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "wait_W30_gmax_lat",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "orb_W30_gmax_lat",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"project": "neutron",
+"seed": 1,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "wait_W60_gmax_lat",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "orb_W60_gmax_lat",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W60_gmax_lat",
+"project": "neutron",
+"seed": 1,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W90_gmax_lat",
+"project": "neutron",
+"seed": 1,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "wait_W180_gmax_lat",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "orb_W180_gmax_lat",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W180_gmax_lat",
+"project": "neutron",
+"seed": 1,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"thr_policy": "ratematch",
+"variant": "nowait_ratematch",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"thr_policy": "ratematch",
+"variant": "law_lagakos_base_ratematch",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"thr_policy": "ratematch",
+"variant": "law_naive_base_ratematch",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"thr_policy": "gmax_lat",
+"variant": "law_lagakos_base_gmax_lat",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"thr_policy": "gmax_lat",
+"variant": "law_naive_base_gmax_lat",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "wait_W15_gmax_lat",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "orb_W15_gmax_lat",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W15_gmax_lat",
+"project": "neutron",
+"seed": 2,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "wait_W30_gmax_lat",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "orb_W30_gmax_lat",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"project": "neutron",
+"seed": 2,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "wait_W60_gmax_lat",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "orb_W60_gmax_lat",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W60_gmax_lat",
+"project": "neutron",
+"seed": 2,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W90_gmax_lat",
+"project": "neutron",
+"seed": 2,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "wait_W180_gmax_lat",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "orb_W180_gmax_lat",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W180_gmax_lat",
+"project": "neutron",
+"seed": 2,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"thr_policy": "ratematch",
+"variant": "nowait_ratematch",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"thr_policy": "ratematch",
+"variant": "law_lagakos_base_ratematch",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"thr_policy": "ratematch",
+"variant": "law_naive_base_ratematch",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"thr_policy": "gmax_lat",
+"variant": "law_lagakos_base_gmax_lat",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"thr_policy": "gmax_lat",
+"variant": "law_naive_base_gmax_lat",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "wait_W15_gmax_lat",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "orb_W15_gmax_lat",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W15_gmax_lat",
+"project": "nova",
+"seed": 0,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "wait_W30_gmax_lat",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "orb_W30_gmax_lat",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"project": "nova",
+"seed": 0,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "wait_W60_gmax_lat",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "orb_W60_gmax_lat",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W60_gmax_lat",
+"project": "nova",
+"seed": 0,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W90_gmax_lat",
+"project": "nova",
+"seed": 0,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "wait_W180_gmax_lat",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "orb_W180_gmax_lat",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W180_gmax_lat",
+"project": "nova",
+"seed": 0,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"thr_policy": "ratematch",
+"variant": "nowait_ratematch",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"thr_policy": "ratematch",
+"variant": "law_lagakos_base_ratematch",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"thr_policy": "ratematch",
+"variant": "law_naive_base_ratematch",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"thr_policy": "gmax_lat",
+"variant": "law_lagakos_base_gmax_lat",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"thr_policy": "gmax_lat",
+"variant": "law_naive_base_gmax_lat",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "wait_W15_gmax_lat",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "orb_W15_gmax_lat",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W15_gmax_lat",
+"project": "nova",
+"seed": 1,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "wait_W30_gmax_lat",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "orb_W30_gmax_lat",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"project": "nova",
+"seed": 1,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "wait_W60_gmax_lat",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "orb_W60_gmax_lat",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W60_gmax_lat",
+"project": "nova",
+"seed": 1,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W90_gmax_lat",
+"project": "nova",
+"seed": 1,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "wait_W180_gmax_lat",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "orb_W180_gmax_lat",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W180_gmax_lat",
+"project": "nova",
+"seed": 1,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"thr_policy": "ratematch",
+"variant": "nowait_ratematch",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"thr_policy": "ratematch",
+"variant": "law_lagakos_base_ratematch",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"thr_policy": "ratematch",
+"variant": "law_naive_base_ratematch",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"thr_policy": "gmax_lat",
+"variant": "law_lagakos_base_gmax_lat",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"thr_policy": "gmax_lat",
+"variant": "law_naive_base_gmax_lat",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "wait_W15_gmax_lat",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "orb_W15_gmax_lat",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W15_gmax_lat",
+"project": "nova",
+"seed": 2,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "wait_W30_gmax_lat",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "orb_W30_gmax_lat",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"project": "nova",
+"seed": 2,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "wait_W60_gmax_lat",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "orb_W60_gmax_lat",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W60_gmax_lat",
+"project": "nova",
+"seed": 2,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W90_gmax_lat",
+"project": "nova",
+"seed": 2,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "wait_W180_gmax_lat",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "orb_W180_gmax_lat",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W180_gmax_lat",
+"project": "nova",
+"seed": 2,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"thr_policy": "ratematch",
+"variant": "nowait_ratematch",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"thr_policy": "ratematch",
+"variant": "law_lagakos_base_ratematch",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"thr_policy": "ratematch",
+"variant": "law_naive_base_ratematch",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"thr_policy": "gmax_lat",
+"variant": "law_lagakos_base_gmax_lat",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"thr_policy": "gmax_lat",
+"variant": "law_naive_base_gmax_lat",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "wait_W15_gmax_lat",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "orb_W15_gmax_lat",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W15_gmax_lat",
+"project": "sentry",
+"seed": 0,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "wait_W30_gmax_lat",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "orb_W30_gmax_lat",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"project": "sentry",
+"seed": 0,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "wait_W60_gmax_lat",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "orb_W60_gmax_lat",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W60_gmax_lat",
+"project": "sentry",
+"seed": 0,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W90_gmax_lat",
+"project": "sentry",
+"seed": 0,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "wait_W180_gmax_lat",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "orb_W180_gmax_lat",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W180_gmax_lat",
+"project": "sentry",
+"seed": 0,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"thr_policy": "ratematch",
+"variant": "nowait_ratematch",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"thr_policy": "ratematch",
+"variant": "law_lagakos_base_ratematch",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"thr_policy": "ratematch",
+"variant": "law_naive_base_ratematch",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"thr_policy": "gmax_lat",
+"variant": "law_lagakos_base_gmax_lat",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"thr_policy": "gmax_lat",
+"variant": "law_naive_base_gmax_lat",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "wait_W15_gmax_lat",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "orb_W15_gmax_lat",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W15_gmax_lat",
+"project": "sentry",
+"seed": 1,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "wait_W30_gmax_lat",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "orb_W30_gmax_lat",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"project": "sentry",
+"seed": 1,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "wait_W60_gmax_lat",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "orb_W60_gmax_lat",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W60_gmax_lat",
+"project": "sentry",
+"seed": 1,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W90_gmax_lat",
+"project": "sentry",
+"seed": 1,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "wait_W180_gmax_lat",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "orb_W180_gmax_lat",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W180_gmax_lat",
+"project": "sentry",
+"seed": 1,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"thr_policy": "ratematch",
+"variant": "nowait_ratematch",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"thr_policy": "ratematch",
+"variant": "law_lagakos_base_ratematch",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"thr_policy": "ratematch",
+"variant": "law_naive_base_ratematch",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "nowait",
+"thr_policy": "gmax_lat",
+"variant": "nowait_gmax_lat",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "base",
+"thr_policy": "gmax_lat",
+"variant": "law_lagakos_base_gmax_lat",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "base",
+"thr_policy": "gmax_lat",
+"variant": "law_naive_base_gmax_lat",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "wait_W15_gmax_lat",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "orb_W15_gmax_lat",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 15,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W15_gmax_lat",
+"project": "sentry",
+"seed": 2,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "wait_W30_gmax_lat",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "orb_W30_gmax_lat",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 30,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W30_gmax_lat",
+"project": "sentry",
+"seed": 2,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "wait_W60_gmax_lat",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "orb_W60_gmax_lat",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 60,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W60_gmax_lat",
+"project": "sentry",
+"seed": 2,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "wait_W90_gmax_lat",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "orb_W90_gmax_lat",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 90,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W90_gmax_lat",
+"project": "sentry",
+"seed": 2,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "wait",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "wait_W180_gmax_lat",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "orb",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "orb_W180_gmax_lat",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "odasc",
+"W": 180,
+"thr_policy": "gmax_lat",
+"variant": "odasc_W180_gmax_lat",
+"project": "sentry",
+"seed": 2,
+"odasc_delta": 0.9,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"variant": "law_lagakos_model_gmax_lat",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"variant": "law_naive_model_gmax_lat",
+"project": "fabric",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"variant": "law_lagakos_model_gmax_lat",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"variant": "law_naive_model_gmax_lat",
+"project": "fabric",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"variant": "law_lagakos_model_gmax_lat",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"variant": "law_naive_model_gmax_lat",
+"project": "fabric",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"variant": "law_lagakos_model_gmax_lat",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"variant": "law_naive_model_gmax_lat",
+"project": "neutron",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"variant": "law_lagakos_model_gmax_lat",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"variant": "law_naive_model_gmax_lat",
+"project": "neutron",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"variant": "law_lagakos_model_gmax_lat",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"variant": "law_naive_model_gmax_lat",
+"project": "neutron",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"variant": "law_lagakos_model_gmax_lat",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"variant": "law_naive_model_gmax_lat",
+"project": "nova",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"variant": "law_lagakos_model_gmax_lat",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"variant": "law_naive_model_gmax_lat",
+"project": "nova",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"variant": "law_lagakos_model_gmax_lat",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"variant": "law_naive_model_gmax_lat",
+"project": "nova",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"variant": "law_lagakos_model_gmax_lat",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"variant": "law_naive_model_gmax_lat",
+"project": "sentry",
+"seed": 0,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"variant": "law_lagakos_model_gmax_lat",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"variant": "law_naive_model_gmax_lat",
+"project": "sentry",
+"seed": 1,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "lagakos",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"variant": "law_lagakos_model_gmax_lat",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+},
+{
+"method": "law",
+"delay_est": "naive",
+"prior": "model",
+"thr_policy": "gmax_lat",
+"variant": "law_naive_model_gmax_lat",
+"project": "sentry",
+"seed": 2,
+"experiment": "E0",
+"split": "dev"
+}
+]
