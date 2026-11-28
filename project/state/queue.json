@@ -45357,12 +45357,14 @@
         "project": "jgroups",
         "seed": 101
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 8,
       "started": "2026-11-28T17:33:46+00:00",
-      "worker": 3
+      "worker": 3,
+      "finished": "2026-11-28T17:34:26+00:00",
+      "seconds": 40.1
     },
     {
       "id": "E7_jgroups_nowait_s101",
@@ -45396,10 +45398,14 @@
         "project": "jgroups",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:35:10+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:35:53+00:00",
+      "seconds": 43.1
     },
     {
       "id": "E7_jgroups_oracle_young_H180_s101",
@@ -45413,10 +45419,14 @@
         "project": "jgroups",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:34:26+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:35:10+00:00",
+      "seconds": 44.3
     },
     {
       "id": "E7_jgroups_oracle_old_H30_s101",
@@ -45471,12 +45481,14 @@
         "project": "jgroups",
         "seed": 102
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 8,
       "started": "2026-11-28T17:33:53+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-28T17:34:35+00:00",
+      "seconds": 41.7
     },
     {
       "id": "E7_jgroups_nowait_s102",
@@ -45510,10 +45522,14 @@
         "project": "jgroups",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:35:18+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:36:01+00:00",
+      "seconds": 43.1
     },
     {
       "id": "E7_jgroups_oracle_young_H180_s102",
@@ -45527,10 +45543,14 @@
         "project": "jgroups",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:34:33+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:35:18+00:00",
+      "seconds": 44.7
     },
     {
       "id": "E7_jgroups_oracle_old_H30_s102",
@@ -45585,12 +45605,14 @@
         "project": "jgroups",
         "seed": 103
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 8,
       "started": "2026-11-28T17:33:54+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-28T17:34:33+00:00",
+      "seconds": 39.5
     },
     {
       "id": "E7_jgroups_nowait_s103",
@@ -45624,10 +45646,14 @@
         "project": "jgroups",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:35:18+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:35:59+00:00",
+      "seconds": 40.6
     },
     {
       "id": "E7_jgroups_oracle_young_H180_s103",
@@ -45641,10 +45667,14 @@
         "project": "jgroups",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:34:35+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:35:18+00:00",
+      "seconds": 43.4
     },
     {
       "id": "E7_jgroups_oracle_old_H30_s103",
@@ -45699,12 +45729,14 @@
         "project": "jgroups",
         "seed": 104
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 8,
       "started": "2026-11-28T17:33:55+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-28T17:34:37+00:00",
+      "seconds": 42.0
     },
     {
       "id": "E7_jgroups_nowait_s104",
@@ -45738,10 +45770,14 @@
         "project": "jgroups",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:35:19+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:36:00+00:00",
+      "seconds": 40.6
     },
     {
       "id": "E7_jgroups_oracle_young_H180_s104",
@@ -45755,10 +45791,14 @@
         "project": "jgroups",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:34:37+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:35:19+00:00",
+      "seconds": 42.2
     },
     {
       "id": "E7_jgroups_oracle_old_H30_s104",
@@ -45813,10 +45853,14 @@
         "project": "matplotlib",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:38:01+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:38:44+00:00",
+      "seconds": 42.5
     },
     {
       "id": "E7_matplotlib_nowait_s101",
@@ -45829,10 +45873,14 @@
         "project": "matplotlib",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:35:53+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:36:34+00:00",
+      "seconds": 41.1
     },
     {
       "id": "E7_matplotlib_oracle_young_H30_s101",
@@ -45863,10 +45911,12 @@
         "project": "matplotlib",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:38:44+00:00",
+      "worker": 3
     },
     {
       "id": "E7_matplotlib_oracle_old_H30_s101",
@@ -45880,10 +45930,14 @@
         "project": "matplotlib",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:37:19+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:38:01+00:00",
+      "seconds": 41.7
     },
     {
       "id": "E7_matplotlib_oracle_old_H180_s101",
@@ -45897,10 +45951,14 @@
         "project": "matplotlib",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:36:34+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:37:19+00:00",
+      "seconds": 44.9
     },
     {
       "id": "E7_matplotlib_oracle_s102",
@@ -45913,10 +45971,14 @@
         "project": "matplotlib",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:38:05+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:38:44+00:00",
+      "seconds": 39.4
     },
     {
       "id": "E7_matplotlib_nowait_s102",
@@ -45929,10 +45991,14 @@
         "project": "matplotlib",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:35:59+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:36:40+00:00",
+      "seconds": 41.4
     },
     {
       "id": "E7_matplotlib_oracle_young_H30_s102",
@@ -45963,10 +46029,12 @@
         "project": "matplotlib",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:38:44+00:00",
+      "worker": 1
     },
     {
       "id": "E7_matplotlib_oracle_old_H30_s102",
@@ -45980,10 +46048,14 @@
         "project": "matplotlib",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:37:23+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:38:05+00:00",
+      "seconds": 42.0
     },
     {
       "id": "E7_matplotlib_oracle_old_H180_s102",
@@ -45997,10 +46069,14 @@
         "project": "matplotlib",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:36:40+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:37:23+00:00",
+      "seconds": 42.3
     },
     {
       "id": "E7_matplotlib_oracle_s103",
@@ -46013,10 +46089,14 @@
         "project": "matplotlib",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:38:05+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:38:44+00:00",
+      "seconds": 38.7
     },
     {
       "id": "E7_matplotlib_nowait_s103",
@@ -46029,10 +46109,14 @@
         "project": "matplotlib",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:36:00+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:36:42+00:00",
+      "seconds": 42.2
     },
     {
       "id": "E7_matplotlib_oracle_young_H30_s103",
@@ -46063,10 +46147,12 @@
         "project": "matplotlib",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:38:44+00:00",
+      "worker": 2
     },
     {
       "id": "E7_matplotlib_oracle_old_H30_s103",
@@ -46080,10 +46166,14 @@
         "project": "matplotlib",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:37:24+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:38:05+00:00",
+      "seconds": 41.5
     },
     {
       "id": "E7_matplotlib_oracle_old_H180_s103",
@@ -46097,10 +46187,14 @@
         "project": "matplotlib",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:36:42+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:37:24+00:00",
+      "seconds": 41.8
     },
     {
       "id": "E7_matplotlib_oracle_s104",
@@ -46113,10 +46207,14 @@
         "project": "matplotlib",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:38:08+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:38:51+00:00",
+      "seconds": 42.6
     },
     {
       "id": "E7_matplotlib_nowait_s104",
@@ -46129,10 +46227,14 @@
         "project": "matplotlib",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:36:01+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:36:44+00:00",
+      "seconds": 43.4
     },
     {
       "id": "E7_matplotlib_oracle_young_H30_s104",
@@ -46163,10 +46265,12 @@
         "project": "matplotlib",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:38:51+00:00",
+      "worker": 0
     },
     {
       "id": "E7_matplotlib_oracle_old_H30_s104",
@@ -46180,10 +46284,14 @@
         "project": "matplotlib",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:37:24+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:38:08+00:00",
+      "seconds": 44.5
     },
     {
       "id": "E7_matplotlib_oracle_old_H180_s104",
@@ -46197,10 +46305,14 @@
         "project": "matplotlib",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:36:45+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:37:24+00:00",
+      "seconds": 39.4
     },
     {
       "id": "E7_npm_oracle_s101",
