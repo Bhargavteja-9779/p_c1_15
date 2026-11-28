@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E10",
+    "project": "aj_cassandra",
+    "method": "nowait",
+    "variant": "nowait_gmax_lat",
+    "seed": 101,
+    "split": "apachejit",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.7160698586576818,
+    "r0": 0.6698762035763411,
+    "r1": 0.7654489586889723,
+    "rdiff": 0.09557275511263119,
+    "auc": 0.7573551430938759,
+    "mcc": 0.42685557103969046,
+    "n_eval": 7291,
+    "seconds": 13.16,
+    "n_inspected": 0,
+    "job_id": "E10_aj_cassandra_nowait_gmax_lat_s101",
+    "written": "2026-11-28T17:53:31+00:00",
+    "cycle": 2
+  }
+]

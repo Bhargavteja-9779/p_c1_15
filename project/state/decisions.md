@@ -76,3 +76,6 @@ Every decision with reason and UTC timestamp. Append-only.
 
 - **2026-11-28T16:54:49+00:00** — plan_v5: E7b completes H5 on all 5 confirmation seeds (336 jobs); E10/H9 tests threshold-vs-label-policy on ApacheJIT (200 jobs)
   - Reason: Method claim failed on both benchmarks (E1, E8). The remaining candidate contribution is empirical; G5 requires SEEDS_CONFIRM. Written before looking at any E7 result.
+
+- **2026-11-28T17:53:28+00:00** — H5 reported as heterogeneous (supported on Cabral-test, refuted on ApacheJIT); no post-hoc redefinition of the window is tested on these data as confirmation
+  - Reason: Both benchmarks are now used; a commit-count window chosen after seeing E7 would be a forking path. Logged as conjecture for future fresh data.

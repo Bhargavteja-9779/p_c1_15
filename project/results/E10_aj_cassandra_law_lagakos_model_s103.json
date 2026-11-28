@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E10",
+    "project": "aj_cassandra",
+    "method": "law",
+    "variant": "law_lagakos_model",
+    "seed": 103,
+    "split": "apachejit",
+    "delay_est": "lagakos",
+    "prior": "model",
+    "gmean": 0.7458017672372638,
+    "r0": 0.844566712517194,
+    "r1": 0.6585865483100034,
+    "rdiff": 0.18598016420719055,
+    "auc": 0.805983939948802,
+    "mcc": 0.5146640690146964,
+    "n_eval": 7291,
+    "seconds": 18.03,
+    "n_inspected": 0,
+    "job_id": "E10_aj_cassandra_law_lagakos_model_s103",
+    "written": "2026-11-28T17:53:20+00:00",
+    "cycle": 2
+  }
+]

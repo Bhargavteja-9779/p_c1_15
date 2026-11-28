@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E10",
+    "project": "aj_activemq",
+    "method": "law",
+    "variant": "law_lagakos_model",
+    "seed": 102,
+    "split": "apachejit",
+    "delay_est": "lagakos",
+    "prior": "model",
+    "gmean": 0.6348540816600468,
+    "r0": 0.6965152183502427,
+    "r1": 0.5786516853932584,
+    "rdiff": 0.11786353295698426,
+    "auc": 0.6707369537526702,
+    "mcc": 0.25493054068810517,
+    "n_eval": 3157,
+    "seconds": 8.52,
+    "n_inspected": 0,
+    "job_id": "E10_aj_activemq_law_lagakos_model_s102",
+    "written": "2026-11-28T17:52:30+00:00",
+    "cycle": 2
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E10",
+    "project": "aj_activemq",
+    "method": "orb",
+    "variant": "orb_W90_gmax_lat",
+    "seed": 101,
+    "split": "apachejit",
+    "W": 90,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6434742180570131,
+    "r0": 0.5443317159241288,
+    "r1": 0.7606741573033707,
+    "rdiff": 0.21634244137924197,
+    "auc": 0.6976016415299139,
+    "mcc": 0.2754207425772218,
+    "n_eval": 3157,
+    "seconds": 6.55,
+    "n_inspected": 0,
+    "job_id": "E10_aj_activemq_orb_W90_gmax_lat_s101",
+    "written": "2026-11-28T17:52:50+00:00",
+    "cycle": 2
+  }
+]

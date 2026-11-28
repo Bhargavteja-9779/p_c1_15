@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E10",
+    "project": "aj_activemq",
+    "method": "odasc",
+    "variant": "odasc_W30_gmax_lat",
+    "seed": 104,
+    "split": "apachejit",
+    "W": 30,
+    "odasc_delta": 0.9,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6471531614734025,
+    "r0": 0.5465372739303044,
+    "r1": 0.7662921348314606,
+    "rdiff": 0.21975486090115626,
+    "auc": 0.7079043233893232,
+    "mcc": 0.2824854064265618,
+    "n_eval": 3157,
+    "seconds": 6.4,
+    "n_inspected": 0,
+    "job_id": "E10_aj_activemq_odasc_W30_gmax_lat_s104",
+    "written": "2026-11-28T17:52:48+00:00",
+    "cycle": 2
+  }
+]

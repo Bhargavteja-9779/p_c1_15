@@ -1,10 +1,10 @@
-# RESULTS SUMMARY (auto-generated 2026-11-28T17:06:41+00:00 by scripts/final_report.py)
+# RESULTS SUMMARY (auto-generated 2026-11-28T17:52:48+00:00 by scripts/final_report.py)
 
 Journal: JKSU-CIS (see journal_selection/selected_journal.md). Topic: topic/selected_topic.md. Plan: experiments/plan_v*.yaml.
 
 Frozen config: `{"frozen": "2026-11-25T07:54:45+00:00", "plan": "plan_v3", "proposed": {"variant": "law_lagakos_model_gmax_lat", "method": "law", "delay_est": "lagakos", "prior": "model", "thr_policy": "gmax_lat"}, "baselines": [{"variant": "nowait", "method": "nowait"}, {"variant": "wait_W90", "method": "wait", "W": 90}, {"variant": "orb_W90", "method": "orb", "W": 90}, {"variant": "odasc_W30", "method": "odasc", "W": 30, "odasc_delta": 0.9}, {"variant": "wait_W30_gmax_lat", "method": "wait", "W": 30, "thr_policy": "gmax_lat"}, {"variant": "odasc_W15_gmax_lat", "method": "odasc", "W": 15, "odasc_delta": 0.9, "thr_policy": "gmax_lat"}], "oracle": {"variant": "oracle", "method": "oracle"}, "primary_comparator": "odasc_W30", "n_dev_variants": 44, "n_dev_runs": 528, "dev_means": {"oracle": 0.7938, "law_lagakos_model_gmax_lat": 0.7632, "law_naive_model_gmax_lat": 0.7611, "odasc_W30": 0.7497, "odasc_W15_gmax_lat": 0.7491, "odasc_W30_gmax_lat": 0.7489, "law_naive_base_gmax_lat": 0.7475, "law_lagakos_base_gmax_lat": 0.7474, "odasc_W15": 0.7466, "wait_W30_gmax_lat": 0.7437, "odasc_W60_gmax_lat": 0.7424, "wait_W60_gmax_lat": 0.7392, "wait_W15_gmax_lat": 0.7389, "odasc_W60": 0.7367, "wait_W90_gmax_lat": 0.7367, "odasc_W90_gmax_lat": 0.7339, "wait_W180_gmax_lat": 0.7317, "orb_W180_gmax_lat": 0.7288, "orb_W90": 0.7239, "odasc_W180_gmax_lat": 0.7229, "orb_W90_gmax_lat": 0.7178, "odasc_W90": 0.7167, "orb_W60": 0.7116, "orb_W60_gmax_lat": 0.7097, "wait_W90": 0.7095, "orb_W180": 0.6901, "nowait_gmax_lat": 0.6881, "wait_W60": 0.686, "orb_W30_gmax_lat": 0.6832, "wait_W180": 0.6831, "law_lagakos_base_ratematch": 0.6784, "law_naive_base_ratematch": 0.6764, "law_lagakos_base": 0.6643, "law_naive_base": 0.6637, "orb_W30": 0.6636, "odasc_W180": 0.6564, "orb_W15_gmax_lat": 0.6463, "nowait_ratematch": 0.6327, "wait_W30": 0.6206, "law_lagakos_model": 0.6128, "orb_W15": 0.6065, "law_naive_model": 0.58, "wait_W15": 0.5457, "nowait": 0.3855}}`
 
-Jobs: {'done': 1681, 'pending': 877, 'running': 4}
+Jobs: {'done': 2065, 'pending': 493, 'running': 4}
 
 ## G-mean by project (mean over seeds)
 
@@ -79,6 +79,14 @@ Jobs: {'done': 1681, 'pending': 877, 'running': 4}
 | wait_W90                   |      0.731 |       0.691 |   0.665 |     0.576 |        0.682 | 0.63  |                0.595 |    0.628 |     0.694 |   0.653 |  0.654 |
 | nowait                     |      0.536 |       0.511 |   0.469 |     0.34  |        0.603 | 0.23  |                0.343 |    0.368 |     0.4   |   0.49  |  0.429 |
 
+### E10
+
+| variant            |   aj_activemq |   MEAN |
+|:-------------------|--------------:|-------:|
+| odasc_W30_gmax_lat |         0.645 |  0.645 |
+| law_lagakos_model  |         0.635 |  0.635 |
+| nowait_gmax_lat    |         0.63  |  0.63  |
+
 ### E2
 
 | variant                   |   brackets |   broadleaf |   camel |   jgroups |   matplotlib |   MEAN |
@@ -90,14 +98,14 @@ Jobs: {'done': 1681, 'pending': 877, 'running': 4}
 
 ### E7
 
-| variant           |   aj_activemq |   aj_cassandra |   aj_flink |   aj_groovy |   aj_hbase |   aj_hive |   aj_ignite |   aj_kafka |   brackets |   broadleaf |   camel |   jgroups |   matplotlib |   MEAN |
-|:------------------|--------------:|---------------:|-----------:|------------:|-----------:|----------:|------------:|-----------:|-----------:|------------:|--------:|----------:|-------------:|-------:|
-| oracle            |         0.714 |          0.784 |      0.782 |       0.676 |      0.779 |     0.809 |       0.773 |      0.781 |      0.789 |       0.724 |   0.707 |     0.639 |        0.741 |  0.746 |
-| oracle_young_H180 |         0.653 |          0.78  |      0.768 |       0.6   |      0.774 |     0.798 |       0.763 |      0.796 |      0.787 |       0.724 |   0.708 |     0.647 |      nan     |  0.733 |
-| oracle_young_H30  |         0.572 |          0.735 |      0.742 |       0.543 |      0.736 |     0.769 |       0.725 |      0.782 |      0.769 |       0.679 |   0.663 |     0.6   |      nan     |  0.693 |
-| oracle_old_H30    |         0.682 |          0.687 |      0.765 |       0.636 |      0.745 |     0.782 |       0.729 |      0.783 |      0.579 |       0.615 |   0.538 |     0.429 |        0.701 |  0.667 |
-| oracle_old_H180   |         0.603 |          0.592 |      0.729 |       0.564 |      0.687 |     0.748 |       0.697 |      0.755 |      0.527 |       0.511 |   0.47  |     0.36  |        0.655 |  0.607 |
-| nowait            |         0.587 |          0.563 |      0.716 |       0.546 |      0.669 |     0.711 |       0.684 |      0.761 |      0.535 |       0.517 |   0.469 |     0.335 |        0.6   |  0.592 |
+| variant           |   aj_activemq |   aj_cassandra |   aj_flink |   aj_groovy |   aj_hbase |   aj_hive |   aj_ignite |   aj_kafka |   brackets |   broadleaf |   camel |   jgroups |   matplotlib |   npm |   spring-integration |   tomcat |   wagtail |   zulip |   MEAN |
+|:------------------|--------------:|---------------:|-----------:|------------:|-----------:|----------:|------------:|-----------:|-----------:|------------:|--------:|----------:|-------------:|------:|---------------------:|---------:|----------:|--------:|-------:|
+| oracle            |         0.714 |          0.784 |      0.781 |       0.678 |      0.778 |     0.809 |       0.774 |      0.783 |      0.786 |       0.727 |   0.705 |     0.64  |        0.742 | 0.689 |                0.766 |    0.71  |     0.697 |   0.686 |  0.736 |
+| oracle_young_H180 |         0.652 |          0.78  |      0.768 |       0.599 |      0.773 |     0.798 |       0.764 |      0.796 |      0.788 |       0.724 |   0.705 |     0.644 |        0.719 | 0.688 |                0.755 |    0.709 |     0.68  |   0.685 |  0.724 |
+| oracle_young_H30  |         0.572 |          0.735 |      0.743 |       0.542 |      0.737 |     0.768 |       0.725 |      0.784 |      0.769 |       0.677 |   0.665 |     0.601 |        0.667 | 0.619 |                0.666 |    0.678 |     0.611 |   0.652 |  0.678 |
+| oracle_old_H30    |         0.682 |          0.687 |      0.765 |       0.636 |      0.745 |     0.783 |       0.73  |      0.781 |      0.581 |       0.615 |   0.539 |     0.427 |        0.704 | 0.393 |                0.626 |    0.466 |     0.531 |   0.576 |  0.626 |
+| oracle_old_H180   |         0.601 |          0.592 |      0.73  |       0.563 |      0.689 |     0.748 |       0.696 |      0.758 |      0.527 |       0.509 |   0.472 |     0.357 |        0.653 | 0.247 |                0.381 |    0.353 |     0.431 |   0.499 |  0.545 |
+| nowait            |         0.587 |          0.565 |      0.716 |       0.547 |      0.671 |     0.712 |       0.685 |      0.758 |      0.536 |       0.511 |   0.469 |     0.34  |        0.603 | 0.23  |                0.343 |    0.368 |     0.4   |   0.49  |  0.53  |
 
 ### E8
 
@@ -139,7 +147,7 @@ Jobs: {'done': 1681, 'pending': 877, 'running': 4}
 
 ```json
 {
- "generated": "2026-11-28T17:06:39+00:00",
+ "generated": "2026-11-28T17:52:46+00:00",
  "E1_main_proposed_vs_baselines": [
   {
    "proposed": "law_lagakos_model_gmax_lat",
@@ -421,59 +429,59 @@ Jobs: {'done': 1681, 'pending': 877, 'running': 4}
  ],
  "E7_H5_decomposition": {
   "cabral_test": {
-   "n_projects": 5,
-   "median_gap_auc": 0.063,
+   "n_projects": 10,
+   "median_gap_auc": 0.0906,
    "median_recovery": {
-    "oracle_old_H180": 0.0661,
-    "oracle_old_H30": 0.3121,
-    "oracle_young_H180": 0.9412,
-    "oracle_young_H30": 0.7753
+    "oracle_old_H180": 0.0554,
+    "oracle_old_H30": 0.2876,
+    "oracle_young_H180": 0.9383,
+    "oracle_young_H30": 0.7559
    },
    "mean_recovery": {
-    "oracle_old_H180": 0.0769,
-    "oracle_old_H30": 0.3117,
-    "oracle_young_H180": 0.9519,
-    "oracle_young_H30": 0.801
+    "oracle_old_H180": 0.0797,
+    "oracle_old_H30": 0.3305,
+    "oracle_young_H180": 0.9287,
+    "oracle_young_H30": 0.7141
    },
    "H5_young30_ge_0.5": true,
    "H5_old180_le_0.2": true,
-   "projects_young30_ge_0.5": 4,
-   "projects_old180_le_0.2": 4,
+   "projects_young30_ge_0.5": 9,
+   "projects_old180_le_0.2": 8,
    "young30_minus_old180_auc": {
-    "mean": 0.0596,
+    "mean": 0.058,
     "ci95": [
-     0.0441,
-     0.0772
+     0.0425,
+     0.0724
     ],
-    "wins": 4,
-    "n": 4,
-    "wilcoxon_p": null
+    "wins": 10,
+    "n": 10,
+    "wilcoxon_p": 0.001953125
    },
    "H5_supported": true
   },
   "apachejit": {
    "n_projects": 8,
-   "median_gap_auc": 0.0835,
+   "median_gap_auc": 0.0829,
    "median_recovery": {
-    "oracle_old_H180": 0.1015,
-    "oracle_old_H30": 0.5973,
-    "oracle_young_H180": 0.7752,
-    "oracle_young_H30": 0.3338
+    "oracle_old_H180": 0.0909,
+    "oracle_old_H30": 0.6024,
+    "oracle_young_H180": 0.776,
+    "oracle_young_H30": 0.3431
    },
    "mean_recovery": {
-    "oracle_old_H180": 0.183,
-    "oracle_old_H30": 0.6382,
-    "oracle_young_H180": 0.6866,
-    "oracle_young_H30": 0.2897
+    "oracle_old_H180": 0.1875,
+    "oracle_old_H30": 0.6366,
+    "oracle_young_H180": 0.6832,
+    "oracle_young_H30": 0.2907
    },
    "H5_young30_ge_0.5": false,
    "H5_old180_le_0.2": true,
    "projects_young30_ge_0.5": 1,
    "projects_old180_le_0.2": 5,
    "young30_minus_old180_auc": {
-    "mean": 0.0046,
+    "mean": 0.0045,
     "ci95": [
-     -0.0234,
+     -0.0236,
      0.0294
     ],
     "wins": 5,
@@ -483,8 +491,61 @@ Jobs: {'done': 1681, 'pending': 877, 'running': 4}
    "H5_supported": false
   }
  },
+ "E10_H9_threshold_vs_label_policy": {
+  "threshold_gain": [
+   {
+    "policy": "nowait",
+    "thr_minus_fixed": 0.0427,
+    "ci95": [
+     0.0427,
+     0.0427
+    ],
+    "wins": 1,
+    "n": 1,
+    "wilcoxon_p": 1.0,
+    "in_H9a_family": true,
+    "holm_p": 1.0
+   },
+   {
+    "policy": "odasc_W30",
+    "thr_minus_fixed": -0.012,
+    "ci95": [
+     -0.012,
+     -0.012
+    ],
+    "wins": 0,
+    "n": 1,
+    "wilcoxon_p": 1.0,
+    "in_H9a_family": true,
+    "holm_p": 1.0
+   },
+   {
+    "policy": "law_lagakos_model",
+    "thr_minus_fixed": -0.0193,
+    "ci95": [
+     -0.0193,
+     -0.0193
+    ],
+    "wins": 0,
+    "n": 1,
+    "wilcoxon_p": 1.0,
+    "in_H9a_family": false
+   }
+  ],
+  "thresholded_means": {
+   "nowait_gmax_lat": 0.6297,
+   "wait_W30_gmax_lat": 0.7219,
+   "odasc_W15_gmax_lat": 0.7256,
+   "odasc_W30_gmax_lat": 0.6446,
+   "law_lagakos_model_gmax_lat": 0.7259
+  },
+  "spread_thresholded": 0.0962,
+  "mean_threshold_gain_H9a_family": 0.0154,
+  "H9a_supported": false,
+  "H9b_supported": false
+ },
  "n_variants_logged": 76
 }
 ```
 
-Compute used: 18.77 CPU-h (summed worker seconds). Variants logged: 76.
+Compute used: 21.71 CPU-h (summed worker seconds). Variants logged: 76.

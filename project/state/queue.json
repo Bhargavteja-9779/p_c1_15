@@ -48333,10 +48333,14 @@
         "project": "zulip",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:50:10+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:50:54+00:00",
+      "seconds": 43.1
     },
     {
       "id": "E7_zulip_nowait_s101",
@@ -48370,10 +48374,14 @@
         "project": "zulip",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:51:32+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:52:14+00:00",
+      "seconds": 42.1
     },
     {
       "id": "E7_zulip_oracle_young_H180_s101",
@@ -48387,10 +48395,14 @@
         "project": "zulip",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:50:54+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:51:32+00:00",
+      "seconds": 38.6
     },
     {
       "id": "E7_zulip_oracle_old_H30_s101",
@@ -48404,10 +48416,14 @@
         "project": "zulip",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:49:27+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:50:10+00:00",
+      "seconds": 43.6
     },
     {
       "id": "E7_zulip_oracle_old_H180_s101",
@@ -48421,12 +48437,14 @@
         "project": "zulip",
         "seed": 101
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 8,
       "started": "2026-11-28T17:48:45+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-28T17:49:27+00:00",
+      "seconds": 41.6
     },
     {
       "id": "E7_zulip_oracle_s102",
@@ -48439,10 +48457,14 @@
         "project": "zulip",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:50:14+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:50:54+00:00",
+      "seconds": 40.1
     },
     {
       "id": "E7_zulip_nowait_s102",
@@ -48476,10 +48498,14 @@
         "project": "zulip",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:51:34+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:52:15+00:00",
+      "seconds": 40.6
     },
     {
       "id": "E7_zulip_oracle_young_H180_s102",
@@ -48493,10 +48519,14 @@
         "project": "zulip",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:50:54+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:51:34+00:00",
+      "seconds": 40.4
     },
     {
       "id": "E7_zulip_oracle_old_H30_s102",
@@ -48510,10 +48540,14 @@
         "project": "zulip",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:49:29+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:50:14+00:00",
+      "seconds": 44.9
     },
     {
       "id": "E7_zulip_oracle_old_H180_s102",
@@ -48527,12 +48561,14 @@
         "project": "zulip",
         "seed": 102
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 8,
       "started": "2026-11-28T17:48:48+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-28T17:49:29+00:00",
+      "seconds": 40.5
     },
     {
       "id": "E7_zulip_oracle_s103",
@@ -48545,10 +48581,14 @@
         "project": "zulip",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:50:20+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:51:00+00:00",
+      "seconds": 39.5
     },
     {
       "id": "E7_zulip_nowait_s103",
@@ -48582,10 +48622,14 @@
         "project": "zulip",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:51:40+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:52:21+00:00",
+      "seconds": 41.0
     },
     {
       "id": "E7_zulip_oracle_young_H180_s103",
@@ -48599,10 +48643,14 @@
         "project": "zulip",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:51:00+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:51:43+00:00",
+      "seconds": 42.9
     },
     {
       "id": "E7_zulip_oracle_old_H30_s103",
@@ -48616,10 +48664,14 @@
         "project": "zulip",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:49:37+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:50:20+00:00",
+      "seconds": 43.2
     },
     {
       "id": "E7_zulip_oracle_old_H180_s103",
@@ -48633,12 +48685,14 @@
         "project": "zulip",
         "seed": 103
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 8,
       "started": "2026-11-28T17:48:55+00:00",
-      "worker": 3
+      "worker": 3,
+      "finished": "2026-11-28T17:49:37+00:00",
+      "seconds": 42.5
     },
     {
       "id": "E7_zulip_oracle_s104",
@@ -48651,10 +48705,14 @@
         "project": "zulip",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:50:20+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:51:02+00:00",
+      "seconds": 41.2
     },
     {
       "id": "E7_zulip_nowait_s104",
@@ -48688,10 +48746,14 @@
         "project": "zulip",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:51:43+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:52:23+00:00",
+      "seconds": 40.0
     },
     {
       "id": "E7_zulip_oracle_young_H180_s104",
@@ -48705,10 +48767,14 @@
         "project": "zulip",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:51:02+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:51:40+00:00",
+      "seconds": 38.8
     },
     {
       "id": "E7_zulip_oracle_old_H30_s104",
@@ -48722,10 +48788,14 @@
         "project": "zulip",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:49:37+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:50:20+00:00",
+      "seconds": 42.9
     },
     {
       "id": "E7_zulip_oracle_old_H180_s104",
@@ -48739,12 +48809,14 @@
         "project": "zulip",
         "seed": 104
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 8,
       "started": "2026-11-28T17:48:55+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-28T17:49:37+00:00",
+      "seconds": 41.9
     },
     {
       "id": "E7_aj_activemq_oracle_s103",
@@ -50742,10 +50814,14 @@
         "project": "aj_activemq",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:23+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:52:29+00:00",
+      "seconds": 5.2
     },
     {
       "id": "E10_aj_activemq_wait_W90_gmax_lat_s100",
@@ -50760,10 +50836,14 @@
         "project": "aj_activemq",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:50+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:52:56+00:00",
+      "seconds": 5.7
     },
     {
       "id": "E10_aj_activemq_odasc_W30_gmax_lat_s100",
@@ -50779,10 +50859,14 @@
         "project": "aj_activemq",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:35+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:52:41+00:00",
+      "seconds": 6.4
     },
     {
       "id": "E10_aj_activemq_orb_W90_gmax_lat_s100",
@@ -50797,10 +50881,14 @@
         "project": "aj_activemq",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:41+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:52:47+00:00",
+      "seconds": 5.8
     },
     {
       "id": "E10_aj_activemq_law_lagakos_model_s100",
@@ -50815,10 +50903,14 @@
         "project": "aj_activemq",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:14+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:52:23+00:00",
+      "seconds": 8.8
     },
     {
       "id": "E10_aj_activemq_nowait_gmax_lat_s101",
@@ -50832,10 +50924,14 @@
         "project": "aj_activemq",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:29+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:52:35+00:00",
+      "seconds": 6.3
     },
     {
       "id": "E10_aj_activemq_wait_W90_gmax_lat_s101",
@@ -50850,10 +50946,14 @@
         "project": "aj_activemq",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:52+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:52:59+00:00",
+      "seconds": 6.7
     },
     {
       "id": "E10_aj_activemq_odasc_W30_gmax_lat_s101",
@@ -50869,10 +50969,14 @@
         "project": "aj_activemq",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:35+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:52:41+00:00",
+      "seconds": 5.7
     },
     {
       "id": "E10_aj_activemq_orb_W90_gmax_lat_s101",
@@ -50887,10 +50991,14 @@
         "project": "aj_activemq",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:43+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:52:50+00:00",
+      "seconds": 6.6
     },
     {
       "id": "E10_aj_activemq_law_lagakos_model_s101",
@@ -50905,10 +51013,14 @@
         "project": "aj_activemq",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:15+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:52:23+00:00",
+      "seconds": 7.9
     },
     {
       "id": "E10_aj_activemq_nowait_gmax_lat_s102",
@@ -50922,10 +51034,14 @@
         "project": "aj_activemq",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:30+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:52:35+00:00",
+      "seconds": 5.4
     },
     {
       "id": "E10_aj_activemq_wait_W90_gmax_lat_s102",
@@ -50940,10 +51056,14 @@
         "project": "aj_activemq",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:53+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:52:59+00:00",
+      "seconds": 6.1
     },
     {
       "id": "E10_aj_activemq_odasc_W30_gmax_lat_s102",
@@ -50959,10 +51079,14 @@
         "project": "aj_activemq",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:37+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:52:43+00:00",
+      "seconds": 6.5
     },
     {
       "id": "E10_aj_activemq_orb_W90_gmax_lat_s102",
@@ -50977,10 +51101,14 @@
         "project": "aj_activemq",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:45+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:52:52+00:00",
+      "seconds": 6.4
     },
     {
       "id": "E10_aj_activemq_law_lagakos_model_s102",
@@ -50995,10 +51123,14 @@
         "project": "aj_activemq",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:22+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:52:30+00:00",
+      "seconds": 8.5
     },
     {
       "id": "E10_aj_activemq_nowait_gmax_lat_s103",
@@ -51012,10 +51144,14 @@
         "project": "aj_activemq",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:31+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:52:37+00:00",
+      "seconds": 5.3
     },
     {
       "id": "E10_aj_activemq_wait_W90_gmax_lat_s103",
@@ -51030,10 +51166,14 @@
         "project": "aj_activemq",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:53+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:52:59+00:00",
+      "seconds": 5.4
     },
     {
       "id": "E10_aj_activemq_odasc_W30_gmax_lat_s103",
@@ -51049,10 +51189,14 @@
         "project": "aj_activemq",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:38+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:52:45+00:00",
+      "seconds": 7.6
     },
     {
       "id": "E10_aj_activemq_orb_W90_gmax_lat_s103",
@@ -51067,10 +51211,14 @@
         "project": "aj_activemq",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:47+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:52:53+00:00",
+      "seconds": 5.8
     },
     {
       "id": "E10_aj_activemq_law_lagakos_model_s103",
@@ -51085,10 +51233,14 @@
         "project": "aj_activemq",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:23+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:52:31+00:00",
+      "seconds": 8.7
     },
     {
       "id": "E10_aj_activemq_nowait_gmax_lat_s104",
@@ -51102,10 +51254,14 @@
         "project": "aj_activemq",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:32+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:52:38+00:00",
+      "seconds": 5.6
     },
     {
       "id": "E10_aj_activemq_wait_W90_gmax_lat_s104",
@@ -51120,10 +51276,14 @@
         "project": "aj_activemq",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:56+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:53:02+00:00",
+      "seconds": 6.5
     },
     {
       "id": "E10_aj_activemq_odasc_W30_gmax_lat_s104",
@@ -51139,10 +51299,14 @@
         "project": "aj_activemq",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:41+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:52:48+00:00",
+      "seconds": 6.4
     },
     {
       "id": "E10_aj_activemq_orb_W90_gmax_lat_s104",
@@ -51157,10 +51321,14 @@
         "project": "aj_activemq",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:48+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:52:53+00:00",
+      "seconds": 5.3
     },
     {
       "id": "E10_aj_activemq_law_lagakos_model_s104",
@@ -51175,10 +51343,14 @@
         "project": "aj_activemq",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:23+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:52:32+00:00",
+      "seconds": 9.2
     },
     {
       "id": "E10_aj_cassandra_nowait_gmax_lat_s100",
@@ -51192,10 +51364,14 @@
         "project": "aj_cassandra",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:53:17+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:53:29+00:00",
+      "seconds": 11.7
     },
     {
       "id": "E10_aj_cassandra_wait_W90_gmax_lat_s100",
@@ -51265,10 +51441,14 @@
         "project": "aj_cassandra",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:59+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:53:17+00:00",
+      "seconds": 18.3
     },
     {
       "id": "E10_aj_cassandra_nowait_gmax_lat_s101",
@@ -51282,10 +51462,14 @@
         "project": "aj_cassandra",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:53:18+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:53:31+00:00",
+      "seconds": 13.2
     },
     {
       "id": "E10_aj_cassandra_wait_W90_gmax_lat_s101",
@@ -51355,10 +51539,14 @@
         "project": "aj_cassandra",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:59+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:53:18+00:00",
+      "seconds": 18.9
     },
     {
       "id": "E10_aj_cassandra_nowait_gmax_lat_s102",
@@ -51372,10 +51560,12 @@
         "project": "aj_cassandra",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:53:20+00:00",
+      "worker": 3
     },
     {
       "id": "E10_aj_cassandra_wait_W90_gmax_lat_s102",
@@ -51445,10 +51635,14 @@
         "project": "aj_cassandra",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:52:59+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:53:17+00:00",
+      "seconds": 18.2
     },
     {
       "id": "E10_aj_cassandra_nowait_gmax_lat_s103",
@@ -51462,10 +51656,12 @@
         "project": "aj_cassandra",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:53:29+00:00",
+      "worker": 2
     },
     {
       "id": "E10_aj_cassandra_wait_W90_gmax_lat_s103",
@@ -51535,10 +51731,14 @@
         "project": "aj_cassandra",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:53:02+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:53:20+00:00",
+      "seconds": 18.1
     },
     {
       "id": "E10_aj_cassandra_nowait_gmax_lat_s104",
@@ -51552,10 +51752,12 @@
         "project": "aj_cassandra",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:53:31+00:00",
+      "worker": 1
     },
     {
       "id": "E10_aj_cassandra_wait_W90_gmax_lat_s104",
@@ -51625,10 +51827,12 @@
         "project": "aj_cassandra",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:53:17+00:00",
+      "worker": 0
     },
     {
       "id": "E10_aj_flink_nowait_gmax_lat_s100",

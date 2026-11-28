@@ -75,3 +75,4 @@ timestamp,cycle,variant_id,description,data_split_used,metric,value,outcome,note
 2026-11-28T16:54:49+00:00,2,E10_odasc_W30_gmax_lat,H9 threshold-vs-label-policy on ApacheJIT,apachejit seeds 100-104,gmean,,pending,plan_v5
 2026-11-28T16:54:49+00:00,2,E10_orb_W90_gmax_lat,H9 threshold-vs-label-policy on ApacheJIT,apachejit seeds 100-104,gmean,,pending,plan_v5
 2026-11-28T16:54:49+00:00,2,E10_law_lagakos_model,H9 threshold-vs-label-policy on ApacheJIT,apachejit seeds 100-104,gmean,,pending,plan_v5
+2026-11-28T17:53:28+00:00,2,E7_H5,latency-cost decomposition,"cabral-test 10 + apachejit 8, seeds 100-104",median recovery young30 / old180,cabral 0.756/0.055; aj 0.343/0.091,"supported cabral, refuted apachejit",

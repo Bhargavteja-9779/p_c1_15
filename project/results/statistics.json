@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-28T17:06:39+00:00",
+ "generated": "2026-11-28T17:52:46+00:00",
  "E1_main_proposed_vs_baselines": [
   {
    "proposed": "law_lagakos_model_gmax_lat",
@@ -281,59 +281,59 @@
  ],
  "E7_H5_decomposition": {
   "cabral_test": {
-   "n_projects": 5,
-   "median_gap_auc": 0.063,
+   "n_projects": 10,
+   "median_gap_auc": 0.0906,
    "median_recovery": {
-    "oracle_old_H180": 0.0661,
-    "oracle_old_H30": 0.3121,
-    "oracle_young_H180": 0.9412,
-    "oracle_young_H30": 0.7753
+    "oracle_old_H180": 0.0554,
+    "oracle_old_H30": 0.2876,
+    "oracle_young_H180": 0.9383,
+    "oracle_young_H30": 0.7559
    },
    "mean_recovery": {
-    "oracle_old_H180": 0.0769,
-    "oracle_old_H30": 0.3117,
-    "oracle_young_H180": 0.9519,
-    "oracle_young_H30": 0.801
+    "oracle_old_H180": 0.0797,
+    "oracle_old_H30": 0.3305,
+    "oracle_young_H180": 0.9287,
+    "oracle_young_H30": 0.7141
    },
    "H5_young30_ge_0.5": true,
    "H5_old180_le_0.2": true,
-   "projects_young30_ge_0.5": 4,
-   "projects_old180_le_0.2": 4,
+   "projects_young30_ge_0.5": 9,
+   "projects_old180_le_0.2": 8,
    "young30_minus_old180_auc": {
-    "mean": 0.0596,
+    "mean": 0.058,
     "ci95": [
-     0.0441,
-     0.0772
+     0.0425,
+     0.0724
     ],
-    "wins": 4,
-    "n": 4,
-    "wilcoxon_p": null
+    "wins": 10,
+    "n": 10,
+    "wilcoxon_p": 0.001953125
    },
    "H5_supported": true
   },
   "apachejit": {
    "n_projects": 8,
-   "median_gap_auc": 0.0835,
+   "median_gap_auc": 0.0829,
    "median_recovery": {
-    "oracle_old_H180": 0.1015,
-    "oracle_old_H30": 0.5973,
-    "oracle_young_H180": 0.7752,
-    "oracle_young_H30": 0.3338
+    "oracle_old_H180": 0.0909,
+    "oracle_old_H30": 0.6024,
+    "oracle_young_H180": 0.776,
+    "oracle_young_H30": 0.3431
    },
    "mean_recovery": {
-    "oracle_old_H180": 0.183,
-    "oracle_old_H30": 0.6382,
-    "oracle_young_H180": 0.6866,
-    "oracle_young_H30": 0.2897
+    "oracle_old_H180": 0.1875,
+    "oracle_old_H30": 0.6366,
+    "oracle_young_H180": 0.6832,
+    "oracle_young_H30": 0.2907
    },
    "H5_young30_ge_0.5": false,
    "H5_old180_le_0.2": true,
    "projects_young30_ge_0.5": 1,
    "projects_old180_le_0.2": 5,
    "young30_minus_old180_auc": {
-    "mean": 0.0046,
+    "mean": 0.0045,
     "ci95": [
-     -0.0234,
+     -0.0236,
      0.0294
     ],
     "wins": 5,
@@ -342,6 +342,59 @@
    },
    "H5_supported": false
   }
+ },
+ "E10_H9_threshold_vs_label_policy": {
+  "threshold_gain": [
+   {
+    "policy": "nowait",
+    "thr_minus_fixed": 0.0427,
+    "ci95": [
+     0.0427,
+     0.0427
+    ],
+    "wins": 1,
+    "n": 1,
+    "wilcoxon_p": 1.0,
+    "in_H9a_family": true,
+    "holm_p": 1.0
+   },
+   {
+    "policy": "odasc_W30",
+    "thr_minus_fixed": -0.012,
+    "ci95": [
+     -0.012,
+     -0.012
+    ],
+    "wins": 0,
+    "n": 1,
+    "wilcoxon_p": 1.0,
+    "in_H9a_family": true,
+    "holm_p": 1.0
+   },
+   {
+    "policy": "law_lagakos_model",
+    "thr_minus_fixed": -0.0193,
+    "ci95": [
+     -0.0193,
+     -0.0193
+    ],
+    "wins": 0,
+    "n": 1,
+    "wilcoxon_p": 1.0,
+    "in_H9a_family": false
+   }
+  ],
+  "thresholded_means": {
+   "nowait_gmax_lat": 0.6297,
+   "wait_W30_gmax_lat": 0.7219,
+   "odasc_W15_gmax_lat": 0.7256,
+   "odasc_W30_gmax_lat": 0.6446,
+   "law_lagakos_model_gmax_lat": 0.7259
+  },
+  "spread_thresholded": 0.0962,
+  "mean_threshold_gain_H9a_family": 0.0154,
+  "H9a_supported": false,
+  "H9b_supported": false
  },
  "n_variants_logged": 76
 }
