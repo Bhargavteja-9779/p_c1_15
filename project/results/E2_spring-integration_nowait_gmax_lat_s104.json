@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E2",
+    "project": "spring-integration",
+    "method": "nowait",
+    "variant": "nowait_gmax_lat",
+    "seed": 104,
+    "split": "test",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6544454032655935,
+    "r0": 0.5980496453900709,
+    "r1": 0.7161592505854801,
+    "rdiff": 0.11810960519540925,
+    "auc": 0.6896147457936785,
+    "mcc": 0.28054781910291193,
+    "n_eval": 7775,
+    "seconds": 16.81,
+    "n_inspected": 0,
+    "job_id": "E2_spring-integration_nowait_gmax_lat_s104",
+    "written": "2026-11-28T18:09:59+00:00",
+    "cycle": 2
+  }
+]

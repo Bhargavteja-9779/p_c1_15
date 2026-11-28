@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E2",
+    "project": "tomcat",
+    "method": "law",
+    "variant": "law_lagakos_base_gmax_lat",
+    "seed": 100,
+    "split": "test",
+    "delay_est": "lagakos",
+    "prior": "base",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6759308704348693,
+    "r0": 0.6374531224523072,
+    "r1": 0.7167312003260649,
+    "rdiff": 0.07927807787375762,
+    "auc": 0.719908095899232,
+    "mcc": 0.3208610358021876,
+    "n_eval": 17173,
+    "seconds": 83.12,
+    "n_inspected": 0,
+    "job_id": "E2_tomcat_law_lagakos_base_gmax_lat_s100",
+    "written": "2026-11-28T18:11:09+00:00",
+    "cycle": 2
+  }
+]
