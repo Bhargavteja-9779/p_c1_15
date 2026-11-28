@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E7",
+    "project": "aj_groovy",
+    "method": "oracle_young",
+    "variant": "oracle_young_H30",
+    "seed": 101,
+    "split": "apachejit",
+    "oracle_H": 30,
+    "gmean": 0.533221339852475,
+    "r0": 0.9264256161180069,
+    "r1": 0.3069053708439898,
+    "rdiff": 0.6195202452740172,
+    "auc": 0.6769801763827142,
+    "mcc": 0.2922502221697527,
+    "n_eval": 7123,
+    "seconds": 10.25,
+    "n_inspected": 0,
+    "job_id": "E7_aj_groovy_oracle_young_H30_s101",
+    "written": "2026-11-28T16:57:09+00:00",
+    "cycle": 2
+  }
+]

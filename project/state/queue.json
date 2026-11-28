@@ -37674,12 +37674,14 @@
         "project": "aj_flink",
         "seed": 101
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 7,
       "started": "2026-11-28T16:56:07+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-28T16:56:27+00:00",
+      "seconds": 20.1
     },
     {
       "id": "E7_aj_flink_oracle_young_H180_s101",
@@ -37796,12 +37798,14 @@
         "project": "aj_flink",
         "seed": 102
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 7,
       "started": "2026-11-28T16:56:07+00:00",
-      "worker": 3
+      "worker": 3,
+      "finished": "2026-11-28T16:56:28+00:00",
+      "seconds": 20.4
     },
     {
       "id": "E7_aj_flink_oracle_young_H180_s102",
@@ -37877,10 +37881,14 @@
         "project": "aj_groovy",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:56:39+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T16:56:49+00:00",
+      "seconds": 9.9
     },
     {
       "id": "E7_aj_groovy_nowait_s100",
@@ -37914,10 +37922,14 @@
         "project": "aj_groovy",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:56:56+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:57:07+00:00",
+      "seconds": 10.6
     },
     {
       "id": "E7_aj_groovy_oracle_young_H180_s100",
@@ -37931,10 +37943,14 @@
         "project": "aj_groovy",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:56:49+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T16:56:59+00:00",
+      "seconds": 10.2
     },
     {
       "id": "E7_aj_groovy_oracle_old_H30_s100",
@@ -37948,10 +37964,14 @@
         "project": "aj_groovy",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:56:28+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:56:39+00:00",
+      "seconds": 10.9
     },
     {
       "id": "E7_aj_groovy_oracle_old_H180_s100",
@@ -37965,10 +37985,14 @@
         "project": "aj_groovy",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:56:23+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:56:34+00:00",
+      "seconds": 11.5
     },
     {
       "id": "E7_aj_groovy_oracle_s101",
@@ -37981,10 +38005,14 @@
         "project": "aj_groovy",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:56:39+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:56:51+00:00",
+      "seconds": 11.6
     },
     {
       "id": "E7_aj_groovy_nowait_s101",
@@ -37997,12 +38025,14 @@
         "project": "aj_groovy",
         "seed": 101
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 7,
       "started": "2026-11-28T16:56:14+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-28T16:56:23+00:00",
+      "seconds": 8.5
     },
     {
       "id": "E7_aj_groovy_oracle_young_H30_s101",
@@ -38016,10 +38046,14 @@
         "project": "aj_groovy",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:56:59+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T16:57:09+00:00",
+      "seconds": 10.3
     },
     {
       "id": "E7_aj_groovy_oracle_young_H180_s101",
@@ -38033,10 +38067,14 @@
         "project": "aj_groovy",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:56:49+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:57:00+00:00",
+      "seconds": 10.6
     },
     {
       "id": "E7_aj_groovy_oracle_old_H30_s101",
@@ -38050,10 +38088,14 @@
         "project": "aj_groovy",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:56:34+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:56:46+00:00",
+      "seconds": 11.4
     },
     {
       "id": "E7_aj_groovy_oracle_old_H180_s101",
@@ -38067,10 +38109,14 @@
         "project": "aj_groovy",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:56:27+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:56:37+00:00",
+      "seconds": 10.4
     },
     {
       "id": "E7_aj_groovy_oracle_s102",
@@ -38083,10 +38129,14 @@
         "project": "aj_groovy",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:56:46+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:56:56+00:00",
+      "seconds": 10.8
     },
     {
       "id": "E7_aj_groovy_nowait_s102",
@@ -38099,12 +38149,14 @@
         "project": "aj_groovy",
         "seed": 102
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 7,
       "started": "2026-11-28T16:56:21+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-28T16:56:28+00:00",
+      "seconds": 7.8
     },
     {
       "id": "E7_aj_groovy_oracle_young_H30_s102",
@@ -38118,10 +38170,14 @@
         "project": "aj_groovy",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:57:00+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:57:10+00:00",
+      "seconds": 10.3
     },
     {
       "id": "E7_aj_groovy_oracle_young_H180_s102",
@@ -38135,10 +38191,14 @@
         "project": "aj_groovy",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:56:51+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:57:02+00:00",
+      "seconds": 11.0
     },
     {
       "id": "E7_aj_groovy_oracle_old_H30_s102",
@@ -38152,10 +38212,14 @@
         "project": "aj_groovy",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:56:37+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:56:49+00:00",
+      "seconds": 12.1
     },
     {
       "id": "E7_aj_groovy_oracle_old_H180_s102",
@@ -38169,10 +38233,14 @@
         "project": "aj_groovy",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:56:28+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T16:56:39+00:00",
+      "seconds": 11.1
     },
     {
       "id": "E7_aj_hbase_oracle_s100",
@@ -38185,10 +38253,14 @@
         "project": "aj_hbase",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:57:34+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:57:48+00:00",
+      "seconds": 14.0
     },
     {
       "id": "E7_aj_hbase_nowait_s100",
@@ -38201,10 +38273,14 @@
         "project": "aj_hbase",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:57:02+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:57:14+00:00",
+      "seconds": 11.8
     },
     {
       "id": "E7_aj_hbase_oracle_young_H30_s100",
@@ -38218,10 +38294,14 @@
         "project": "aj_hbase",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:57:51+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T16:58:04+00:00",
+      "seconds": 12.3
     },
     {
       "id": "E7_aj_hbase_oracle_young_H180_s100",
@@ -38235,10 +38315,14 @@
         "project": "aj_hbase",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:57:39+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:57:52+00:00",
+      "seconds": 12.3
     },
     {
       "id": "E7_aj_hbase_oracle_old_H30_s100",
@@ -38252,10 +38336,14 @@
         "project": "aj_hbase",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:57:22+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T16:57:36+00:00",
+      "seconds": 13.5
     },
     {
       "id": "E7_aj_hbase_oracle_old_H180_s100",
@@ -38269,10 +38357,14 @@
         "project": "aj_hbase",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:57:11+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:57:23+00:00",
+      "seconds": 12.9
     },
     {
       "id": "E7_aj_hbase_oracle_s101",
@@ -38285,10 +38377,14 @@
         "project": "aj_hbase",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:57:36+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:57:48+00:00",
+      "seconds": 12.5
     },
     {
       "id": "E7_aj_hbase_nowait_s101",
@@ -38301,10 +38397,14 @@
         "project": "aj_hbase",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:57:07+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:57:20+00:00",
+      "seconds": 12.6
     },
     {
       "id": "E7_aj_hbase_oracle_young_H30_s101",
@@ -38318,10 +38418,14 @@
         "project": "aj_hbase",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:57:52+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:58:05+00:00",
+      "seconds": 13.3
     },
     {
       "id": "E7_aj_hbase_oracle_young_H180_s101",
@@ -38335,10 +38439,14 @@
         "project": "aj_hbase",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:57:48+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:58:01+00:00",
+      "seconds": 12.9
     },
     {
       "id": "E7_aj_hbase_oracle_old_H30_s101",
@@ -38352,10 +38460,14 @@
         "project": "aj_hbase",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:57:23+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:57:36+00:00",
+      "seconds": 12.1
     },
     {
       "id": "E7_aj_hbase_oracle_old_H180_s101",
@@ -38369,10 +38481,14 @@
         "project": "aj_hbase",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:57:14+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:57:27+00:00",
+      "seconds": 12.6
     },
     {
       "id": "E7_aj_hbase_oracle_s102",
@@ -38385,10 +38501,14 @@
         "project": "aj_hbase",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:57:36+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T16:57:51+00:00",
+      "seconds": 15.6
     },
     {
       "id": "E7_aj_hbase_nowait_s102",
@@ -38401,10 +38521,14 @@
         "project": "aj_hbase",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:57:09+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T16:57:22+00:00",
+      "seconds": 12.6
     },
     {
       "id": "E7_aj_hbase_oracle_young_H30_s102",
@@ -38418,10 +38542,14 @@
         "project": "aj_hbase",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:58:01+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:58:13+00:00",
+      "seconds": 12.4
     },
     {
       "id": "E7_aj_hbase_oracle_young_H180_s102",
@@ -38435,10 +38563,14 @@
         "project": "aj_hbase",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:57:48+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:58:02+00:00",
+      "seconds": 13.4
     },
     {
       "id": "E7_aj_hbase_oracle_old_H30_s102",
@@ -38452,10 +38584,14 @@
         "project": "aj_hbase",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:57:27+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:57:39+00:00",
+      "seconds": 12.6
     },
     {
       "id": "E7_aj_hbase_oracle_old_H180_s102",
@@ -38469,10 +38605,14 @@
         "project": "aj_hbase",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:57:20+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:57:34+00:00",
+      "seconds": 13.8
     },
     {
       "id": "E7_aj_ignite_oracle_s100",
@@ -38785,10 +38925,14 @@
         "project": "aj_hive",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:58:22+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T16:58:31+00:00",
+      "seconds": 9.4
     },
     {
       "id": "E7_aj_hive_nowait_s100",
@@ -38801,10 +38945,14 @@
         "project": "aj_hive",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:58:02+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:58:10+00:00",
+      "seconds": 8.4
     },
     {
       "id": "E7_aj_hive_oracle_young_H30_s100",
@@ -38818,10 +38966,12 @@
         "project": "aj_hive",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:58:38+00:00",
+      "worker": 2
     },
     {
       "id": "E7_aj_hive_oracle_young_H180_s100",
@@ -38835,10 +38985,12 @@
         "project": "aj_hive",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:58:30+00:00",
+      "worker": 0
     },
     {
       "id": "E7_aj_hive_oracle_old_H30_s100",
@@ -38852,10 +39004,14 @@
         "project": "aj_hive",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:58:14+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:58:22+00:00",
+      "seconds": 8.3
     },
     {
       "id": "E7_aj_hive_oracle_old_H180_s100",
@@ -38869,10 +39025,14 @@
         "project": "aj_hive",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:58:10+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:58:18+00:00",
+      "seconds": 8.3
     },
     {
       "id": "E7_aj_hive_oracle_s101",
@@ -38885,10 +39045,14 @@
         "project": "aj_hive",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:58:22+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:58:30+00:00",
+      "seconds": 8.3
     },
     {
       "id": "E7_aj_hive_nowait_s101",
@@ -38901,10 +39065,14 @@
         "project": "aj_hive",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:58:04+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T16:58:13+00:00",
+      "seconds": 9.3
     },
     {
       "id": "E7_aj_hive_oracle_young_H30_s101",
@@ -38935,10 +39103,12 @@
         "project": "aj_hive",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:58:30+00:00",
+      "worker": 1
     },
     {
       "id": "E7_aj_hive_oracle_old_H30_s101",
@@ -38952,10 +39122,14 @@
         "project": "aj_hive",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:58:18+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:58:27+00:00",
+      "seconds": 8.7
     },
     {
       "id": "E7_aj_hive_oracle_old_H180_s101",
@@ -38969,10 +39143,14 @@
         "project": "aj_hive",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:58:13+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:58:21+00:00",
+      "seconds": 8.2
     },
     {
       "id": "E7_aj_hive_oracle_s102",
@@ -38985,10 +39163,14 @@
         "project": "aj_hive",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:58:27+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T16:58:38+00:00",
+      "seconds": 10.3
     },
     {
       "id": "E7_aj_hive_nowait_s102",
@@ -39001,10 +39183,14 @@
         "project": "aj_hive",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:58:05+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T16:58:14+00:00",
+      "seconds": 8.8
     },
     {
       "id": "E7_aj_hive_oracle_young_H30_s102",
@@ -39035,10 +39221,12 @@
         "project": "aj_hive",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:58:31+00:00",
+      "worker": 3
     },
     {
       "id": "E7_aj_hive_oracle_old_H30_s102",
@@ -39052,10 +39240,14 @@
         "project": "aj_hive",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:58:21+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T16:58:30+00:00",
+      "seconds": 8.7
     },
     {
       "id": "E7_aj_hive_oracle_old_H180_s102",
@@ -39069,10 +39261,14 @@
         "project": "aj_hive",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 7
+      "priority": 7,
+      "started": "2026-11-28T16:58:13+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T16:58:22+00:00",
+      "seconds": 8.6
     },
     {
       "id": "E7_aj_kafka_oracle_s100",

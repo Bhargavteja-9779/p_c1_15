@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E7",
+    "project": "aj_hbase",
+    "method": "oracle_young",
+    "variant": "oracle_young_H30",
+    "seed": 100,
+    "split": "apachejit",
+    "oracle_H": 30,
+    "gmean": 0.7381198253070869,
+    "r0": 0.8225726959093149,
+    "r1": 0.6623376623376623,
+    "rdiff": 0.16023503357165259,
+    "auc": 0.8100931083429537,
+    "mcc": 0.4929024214380238,
+    "n_eval": 7677,
+    "seconds": 12.28,
+    "n_inspected": 0,
+    "job_id": "E7_aj_hbase_oracle_young_H30_s100",
+    "written": "2026-11-28T16:58:04+00:00",
+    "cycle": 2
+  }
+]
