@@ -459,9 +459,10 @@ This comparison was not pre-registered, and the Cabral test set is reused (Secti
 **Cabral test (Table 11).** In that lineage's frozen confirmation, LAW with the threshold reached 0.696 G-mean:
 - against Wait-90 (no threshold): +0.042 (CI [0.026, 0.058], 9/1, Holm p = 0.0195);
 - against ORB-style-90: +0.038 (CI [0.022, 0.051], 9/1, Holm p = 0.0195);
+- against Wait-30 with the same threshold (like for like): +0.0202 (CI [0.0115, 0.0289], 9/1, Holm p = 0.0195);
 - against the ODaSC-style rule (the pre-registered primary comparison): +0.0009 (CI [−0.009, 0.011], 6/4, Holm p = 1.0). **The primary hypothesis was not supported.**
 
-These comparisons mix the threshold with the label policy. Wait-90 with the threshold was not in that family.
+All six comparisons form one Holm family. Except for the Wait-30+thr comparison, they mix the threshold with the label policy; Wait-90 with the threshold was not in that family.
 
 **Table 11.** Threshold-rule confirmation on the ten Cabral test projects (second lineage; `paper/tables/T7_rq5_threshold_cabral_test_independent_lineage.md`). "+thr" = latency-corrected G-mean threshold. The rows for ORB-style-90, Wait-90, No-wait and Oracle are the same deterministic computations as in Table 8, not independent replications.
 
