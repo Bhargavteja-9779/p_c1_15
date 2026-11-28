@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_hive",
+    "method": "oracle",
+    "variant": "oracle",
+    "seed": 100,
+    "split": "apachejit",
+    "gmean": 0.8058908103299942,
+    "r0": 0.7564766839378239,
+    "r1": 0.8585327373126479,
+    "rdiff": 0.10205605337482404,
+    "auc": 0.900259965327222,
+    "mcc": 0.6136867911774412,
+    "n_eval": 5926,
+    "seconds": 9.57,
+    "n_inspected": 0,
+    "job_id": "E8_aj_hive_oracle_s100",
+    "written": "2026-11-28T16:48:25+00:00",
+    "cycle": 2
+  }
+]

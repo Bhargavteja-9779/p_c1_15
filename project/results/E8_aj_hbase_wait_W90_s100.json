@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_hbase",
+    "method": "wait",
+    "variant": "wait_W90",
+    "seed": 100,
+    "split": "apachejit",
+    "W": 90,
+    "gmean": 0.7468434126886564,
+    "r0": 0.7672830725462304,
+    "r1": 0.726948245092207,
+    "rdiff": 0.04033482745402339,
+    "auc": 0.8142544952667372,
+    "mcc": 0.4947612198980071,
+    "n_eval": 6877,
+    "seconds": 12.53,
+    "n_inspected": 0,
+    "job_id": "E8_aj_hbase_wait_W90_s100",
+    "written": "2026-11-28T16:47:12+00:00",
+    "cycle": 2
+  }
+]

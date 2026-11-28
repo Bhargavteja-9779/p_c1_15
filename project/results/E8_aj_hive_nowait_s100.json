@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_hive",
+    "method": "nowait",
+    "variant": "nowait",
+    "seed": 100,
+    "split": "apachejit",
+    "gmean": 0.7086812629042591,
+    "r0": 0.8850682995760716,
+    "r1": 0.5674467525637654,
+    "rdiff": 0.31762154701230616,
+    "auc": 0.8109384229348152,
+    "mcc": 0.44194348722749005,
+    "n_eval": 5926,
+    "seconds": 9.3,
+    "n_inspected": 0,
+    "job_id": "E8_aj_hive_nowait_s100",
+    "written": "2026-11-28T16:47:40+00:00",
+    "cycle": 2
+  }
+]

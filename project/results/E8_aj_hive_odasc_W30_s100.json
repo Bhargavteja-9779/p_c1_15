@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E8",
+    "project": "aj_hive",
+    "method": "odasc",
+    "variant": "odasc_W30",
+    "seed": 100,
+    "split": "apachejit",
+    "W": 30,
+    "odasc_delta": 0.9,
+    "gmean": 0.7810194892948046,
+    "r0": 0.790390956194065,
+    "r1": 0.7717591375230082,
+    "rdiff": 0.018631818671056788,
+    "auc": 0.8520674173363146,
+    "mcc": 0.5445062855009692,
+    "n_eval": 5926,
+    "seconds": 12.75,
+    "n_inspected": 0,
+    "job_id": "E8_aj_hive_odasc_W30_s100",
+    "written": "2026-11-28T16:48:14+00:00",
+    "cycle": 2
+  }
+]
