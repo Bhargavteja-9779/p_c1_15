@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E3",
+    "project": "camel",
+    "method": "odasc",
+    "variant": "odasc_W30_ds2",
+    "seed": 103,
+    "split": "test",
+    "W": 30,
+    "delay_scale": 2.0,
+    "odasc_delta": 0.9,
+    "gmean": 0.7184840748004615,
+    "r0": 0.7026420483525452,
+    "r1": 0.7346832814122534,
+    "rdiff": 0.032041233059708185,
+    "auc": 0.7908520111690084,
+    "mcc": 0.37479342310926517,
+    "n_eval": 25384,
+    "seconds": 167.35,
+    "n_inspected": 0,
+    "job_id": "E3_camel_odasc_W30_ds2_s103",
+    "written": "2026-11-28T18:47:59+00:00",
+    "cycle": 2
+  }
+]

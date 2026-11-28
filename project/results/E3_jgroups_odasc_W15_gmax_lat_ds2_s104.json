@@ -1,0 +1,26 @@
+[
+  {
+    "experiment": "E3",
+    "project": "jgroups",
+    "method": "odasc",
+    "variant": "odasc_W15_gmax_lat_ds2",
+    "seed": 104,
+    "split": "test",
+    "W": 15,
+    "delay_scale": 2.0,
+    "odasc_delta": 0.9,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.643573477591269,
+    "r0": 0.6355159552424368,
+    "r1": 0.6517331589274036,
+    "rdiff": 0.01621720368496682,
+    "auc": 0.6977071434063238,
+    "mcc": 0.2212401220392921,
+    "n_eval": 17536,
+    "seconds": 68.51,
+    "n_inspected": 0,
+    "job_id": "E3_jgroups_odasc_W15_gmax_lat_ds2_s104",
+    "written": "2026-11-28T18:53:58+00:00",
+    "cycle": 2
+  }
+]

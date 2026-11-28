@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E3",
+    "project": "camel",
+    "method": "wait",
+    "variant": "wait_W90_ds2",
+    "seed": 104,
+    "split": "test",
+    "W": 90,
+    "delay_scale": 2.0,
+    "gmean": 0.6687391497391163,
+    "r0": 0.5677853718249516,
+    "r1": 0.7876427829698858,
+    "rdiff": 0.21985741114493418,
+    "auc": 0.7477380194610569,
+    "mcc": 0.29816355833701047,
+    "n_eval": 25384,
+    "seconds": 127.12,
+    "n_inspected": 0,
+    "job_id": "E3_camel_wait_W90_ds2_s104",
+    "written": "2026-11-28T18:50:17+00:00",
+    "cycle": 2
+  }
+]

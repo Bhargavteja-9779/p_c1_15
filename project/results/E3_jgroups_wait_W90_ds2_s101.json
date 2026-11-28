@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E3",
+    "project": "jgroups",
+    "method": "wait",
+    "variant": "wait_W90_ds2",
+    "seed": 101,
+    "split": "test",
+    "W": 90,
+    "delay_scale": 2.0,
+    "gmean": 0.5866206968245405,
+    "r0": 0.48584058571625915,
+    "r1": 0.7083060824068018,
+    "rdiff": 0.22246549669054266,
+    "auc": 0.6331062528193924,
+    "mcc": 0.14801790075387117,
+    "n_eval": 17536,
+    "seconds": 48.68,
+    "n_inspected": 0,
+    "job_id": "E3_jgroups_wait_W90_ds2_s101",
+    "written": "2026-11-28T18:55:45+00:00",
+    "cycle": 2
+  }
+]
