@@ -46,6 +46,8 @@ Lagakos SW, Barraj LM, De Gruttola V (1988) Nonparametric analysis of truncated 
 
 Liu S, Guo Z, Li Y, Wang C, Chen L, Sun Z, et al. (2023) Inconsistent Defect Labels: Essence, Causes, and Influence. IEEE Transactions on Software Engineering 49(2):586-610. https://doi.org/10.1109/TSE.2022.3156787
 
+Liu X, Zhou Y, Tang Y, Qian J, Zhou Y (2025) Human-in-the-loop online just-in-time software defect prediction: What have we achieved and what do we still miss? Science of Computer Programming 244:103296. https://doi.org/10.1016/j.scico.2025.103296
+
 Liu Z, Yuan C, Liu H, Li X, Liu S, Zhou X, et al. (2026) MSTDP: a multi-scale temporal deep learning framework for just-in-time software defect prediction with cross-attention fusion. Journal of King Saud University Computer and Information Sciences 38(2):68. https://doi.org/10.1007/s44443-025-00401-y
 
 McIntosh S, Kamei Y (2018) Are Fix-Inducing Changes a Moving Target? A Longitudinal Case Study of Just-In-Time Defect Prediction. IEEE Transactions on Software Engineering 44(5):412-428. https://doi.org/10.1109/TSE.2017.2693980

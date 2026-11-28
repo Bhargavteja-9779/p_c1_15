@@ -6,22 +6,15 @@ Code, data pointers, frozen plans and results for the manuscript in `paper/manus
 ```bash
 pip install -r requirements.txt
 ```
-Data: the Cabral et al. (ICSE 2019) artifact, Zenodo record 2591761 (`spdisc-icse19-V1.02.zip`). The data folder is git-ignored; fetch the 14 ARFF files with:
+Data (git-ignored; downloaded and SHA-256-verified by the script):
+- Cabral et al. (ICSE 2019) artifact, Zenodo record 2591761 (`spdisc-icse19-V1.02.zip`, 14 ARFF files);
+- ApacheJIT (MSR 2022), Zenodo record 5907847 (CC-BY-4.0).
 ```bash
 python scripts/get_data.py
 ```
+The development/test split of the Cabral projects (dev = fabric, neutron, nova, sentry) was drawn once with `numpy.random.default_rng(0)` before any modelling, as recorded in `experiments/plan_v1.yaml`; it is hard-coded in the scripts.
 
-## Reproduce
-```bash
-python tests/test_no_future.py                 # leakage + estimator tests
-python run_all.py --mode quick                 # smoke test (<1 min)
-python scripts/enqueue.py E0 && bash scripts/launch_runner.sh 3   # dev tuning (detached)
-python scripts/freeze_config.py                # choose W* on dev projects only
-python scripts/enqueue.py E1 && python scripts/enqueue.py E2 && python scripts/enqueue.py E3 && bash scripts/launch_runner.sh 3
-python scripts/final_report.py                 # tables/, figures/, results/statistics.json, RESULTS_SUMMARY.md
-python scripts/audit_numbers.py                # every number in paper/manuscript.md traced to a result file
-```
-Each job is one prequential simulation (`src/jit.py: simulate`); results are appended to `results/raw_results.jsonl`.
+`torch` is used only by the job runner to write checkpoints (`src/runner.py`); no model in the paper uses it.
 
 ## Reproducing the paper
 
@@ -48,5 +41,26 @@ python tests/test_no_future.py && python tests/test_no_future_threshold_rules.py
 | Table 8 (RQ5 diagnostic) | lineage 2, dev | `python archive/zealous_lamport_cycle1/scripts/diag_operating_point.py fabric,neutron` (run from `archive/zealous_lamport_cycle1/` with `data/` linked) | 0.2 |
 | Table 9 (RQ5 confirmation, Cabral) | lineage 2, E1 | `python scripts/reproduce_table7.py` (compares with the archived values) | 3 |
 
+| Table 8 inputs: RQ3 diagnostics (`results/diag_law_neutron.json`, `results/diag_survival_dev.txt`) | dev | `python scripts/diag_law.py` | 0.5 |
+| Table 5 / Fig. 3 additions (plan_v9: W=90 strata B1, leave-one-band-out B3) | plan_v9 | `python scripts/review1_runs.py 3` (same script; jobs are idempotent) | 4 |
+| Flip counts per age band (plan_v9 B2) | model-free | `python scripts/review2_flip_counts.py` | 0.1 |
+
 Then run the fast path. `run_all.py --mode quick` is a smoke test of the queue infrastructure (a few minutes).
-Plans that fixed each configuration before its confirmatory run: `experiments/plan_v1.yaml` … `plan_v8_review1.yaml` (main lineage) and `archive/zealous_lamport_cycle1/experiments/plan_v1-v3.yaml` (lineage 2). Every configuration evaluated is listed in `state/variants_tried.csv` and `archive/zealous_lamport_cycle1/state/variants_tried.csv`.
+
+**Manuscript table/figure → generated file.**
+
+| Manuscript | File |
+|---|---|
+| Table 3 (datasets) | `paper/tables/T1_datasets.md` |
+| Table 4 (RQ1) | `paper/tables/T2_rq1_label_noise.md` |
+| Table 5 (decomposition cells) | `T3_rq2_decomposition_means.md`, `T8_A2_apachejit_W90.md` |
+| Table 6 (factorial split) | `T3b_shapley.md` |
+| Table 7 (age bands) | `T9_A3_age_strata.md`, `T12_age_bands_W90_and_leave_one_out.md` |
+| Table 8 (RQ3) | `T4_rq3_age_only_cabral_test.md`, per project `T4b` |
+| Table 9 (RQ4, ApacheJIT) | `T5_rq4_apachejit_all_metrics.md`, per project `T5b` |
+| Table 10 (operating point, dev) | `T6_rq5_operating_point_dev.md` |
+| Table 11 (threshold, Cabral) | `T7_rq5_threshold_cabral_test_independent_lineage.md` (script `reproduce_table7.py`) |
+| Tables 12–13 (threshold, ApacheJIT) | `T11_A5_threshold_apachejit.md`, `T11b_A5_tests.md` |
+| Supplementary S1–S4 | `S1_delay_estimator.md`, `S2_cabral_rows_vs_mstdp.md`, `S3_test_set_usage.md`, `T10_A4_eval_gap730.md` |
+| Figs. 1–3 | `paper/figures/F1_discovery_delay.png`, `F2_gap_recovered.png`, `F3_age_strata.png` |
+Plans that fixed each configuration before its confirmatory run: `experiments/plan_v1.yaml` … `plan_v9_review2.yaml` (main lineage) and `archive/zealous_lamport_cycle1/experiments/plan_v1-v3.yaml` (lineage 2). Every configuration evaluated is listed in `state/variants_tried.csv` and `archive/zealous_lamport_cycle1/state/variants_tried.csv`.

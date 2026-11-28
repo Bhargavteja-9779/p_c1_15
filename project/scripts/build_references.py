@@ -19,6 +19,8 @@ DOIS = [
     "10.1109/TSE.2022.3156787", "10.1007/s10664-021-10092-4", "10.1145/3433928", "10.1109/TSE.2017.2693980",
     "10.1007/s10664-020-09868-x", "10.1109/ICDMW.2010.49", "10.1109/ICMLA.2015.174", "10.1109/BigData.2016.7840877",
     "10.1145/3523055",
+    # added in revision 2 (reviewer R2; abstract read from the publisher PDF)
+    "10.1016/j.scico.2025.103296",
 ]
 # Crossref name-field errors corrected by hand (checked against the publisher pages)
 NAME_FIX = {("10.1145/3467895", 2): ("Di Penta", "M"), ("10.1093/biomet/75.3.515", 2): ("De Gruttola", "V"),

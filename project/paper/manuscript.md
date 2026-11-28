@@ -111,7 +111,7 @@ All label policies share one learner: LightGBM with 150 trees, learning rate 0.0
 - **Oracle.** True final labels immediately. An upper bound, not deployable.
 - **No-wait.** Observed labels at face value.
 - **Wait-W.** Positives as soon as they are discovered; clean commits only after W days (Cabral et al. 2019). W was tuned on development projects over {15, 30, 60, 90, 180}; W = 90 was best.
-- **ORB-style weighting (ORB-W).** Wait-W, with the class weights multiplied by ORB's boosting factors computed from a moving average of predictions (Cabral et al. 2019), using the parameters published there. This is not the original online-bagging ORB with Hoeffding trees. Because it is applied on top of class-balanced weights, it corrects class imbalance twice. We use it only as a second waiting baseline.
+- **ORB-style weighting (ORB-style-W).** Wait-W, with the class weights multiplied by ORB's boosting factors computed from a moving average of predictions (Cabral et al. 2019), using the parameters published there. This is not the original online-bagging ORB with Hoeffding trees. Because it is applied on top of class-balanced weights, it corrects class imbalance twice. We use it only as a second waiting baseline.
 - **Adaptive waiting (AWT).** A per-project, per-update W_T: the smallest age at which the estimated probability that a defect is still undiscovered drops to ε.
 - **Latency-aware weighting (LAW).** Each provisionally clean commit of age a becomes a positive copy with weight q and a negative copy with weight 1 − q, where q = p·S(a)/(1 − p + p·S(a)). S(a), the probability that a defect is still undiscovered at age a, is estimated from discoveries observed before T with the truncation-corrected estimator. The prior p is either the base rate or the previous model's probability.
 - **ODaSC-style.** An adaptation of Song et al. (2022) to the shared learner. Each waited-out clean commit gets a clean-label confidence equal to the share of clean labels among its k nearest labelled neighbours. Below a threshold it enters training as both classes. This mechanism differs from the original, where the confidence modulates the oversampling rate of online bagging and the "both classes" counting applies only to the micro-cluster statistics. A kNN neighbourhood also replaces the micro-clusters, and our waits (30 or 90 days) differ from the 15 days used by Song et al. (2022). The two analysis lineages (Section 4.6) implemented the rule independently and differently (Section 5.4). Our results are therefore about these adaptations, not about ODaSC itself.
@@ -362,8 +362,8 @@ This refines, rather than contradicts, the view of W as a noise-versus-freshness
 ### 5.3 RQ3: Age-only corrections do not reliably recover it
 
 Table 6 reports the frozen age-only methods on the ten (reused) Cabral test projects at the 0.5 threshold, with the Holm adjustment over the six tests pre-registered in the plan.
-- **LAW** (truncation-corrected delay, model prior): 0.616 G-mean, −0.038 against Wait-90 (CI [−0.085, 0.001], 3 wins/7 losses, Holm p = 0.252) and −0.042 against ORB-90 (CI [−0.091, −0.003], 2/8, Holm p = 0.252).
-- **Adaptive waiting** (ε = 0.4): 0.619 G-mean, −0.039 against ORB-90 (CI [−0.077, −0.009], 2/8, Holm p = 0.148).
+- **LAW** (truncation-corrected delay, model prior): 0.616 G-mean, −0.038 against Wait-90 (CI [−0.085, 0.001], 3 wins/7 losses, Holm p = 0.252) and −0.042 against ORB-style-90 (CI [−0.091, −0.003], 2/8, Holm p = 0.252).
+- **Adaptive waiting** (ε = 0.4): 0.619 G-mean, −0.039 against ORB-style-90 (CI [−0.077, −0.009], 2/8, Holm p = 0.148).
 
 Both beat No-wait (+0.187 and +0.190, 10/0, Holm p = 0.0117).
 
@@ -375,7 +375,7 @@ Both beat No-wait (+0.187 and +0.190, 10/0, Holm p = 0.0117).
 | ORB-style-90 | 0.658 | 0.724 | 0.714 | 0.615 |
 | Wait-90 | 0.654 | 0.727 | 0.713 | 0.616 |
 | Adaptive waiting (ε = 0.4) | 0.619 | 0.699 | 0.675 | 0.609 |
-| LAW (lagakos, model prior) | 0.616 | 0.751 | 0.453 | 0.860 |
+| LAW (model prior) | 0.616 | 0.751 | 0.453 | 0.860 |
 | No-wait | 0.429 | 0.722 | 0.209 | 0.950 |
 
 Diagnostics on development projects (`results/diag_law_neutron.json`, `results/diag_survival_dev.txt`, Supplementary Table S1) point to three reasons.
@@ -409,14 +409,14 @@ The CIs that exclude zero are unadjusted. Neither method was the pre-registered 
 
 This comparison was not pre-registered, and the Cabral test set is reused (Section 4.6). Run frozen on ApacheJIT (Section 5.5), it reached 0.718 G-mean against 0.716 for Wait-90, the same mean as the main lineage's version. On the one dataset where both ran, the two implementations agree. We did not retune a unified ODaSC on the already-used test sets, because that would be another selection round on them.
 
-**Table 7.** Fresh ApacheJIT confirmation (9 projects × 5 seeds, configurations frozen on Cabral development projects; `paper/tables/T5_rq4_apachejit_all_metrics.md`, per project in `T5b`). Higher is better except IFA.
+**Table 7.** Fresh ApacheJIT confirmation (9 projects × 5 seeds, configurations frozen on Cabral development projects; `paper/tables/T5_rq4_apachejit_all_metrics.md`, per project in `T5b`). Higher is better except IFA; IFA means are dominated by a few projects.
 
 | method | G-mean | AUC | recall-1 | recall-0 | F1 | MCC | Recall@20% | Popt | IFA |
 |:--|--:|--:|--:|--:|--:|--:|--:|--:|--:|
 | Oracle (bound) | 0.770 | 0.862 | 0.750 | 0.800 | 0.725 | 0.537 | 0.637 | 0.893 | 2.111 |
 | Dual (W30, k50) | 0.735 | 0.808 | 0.768 | 0.709 | 0.707 | 0.458 | 0.618 | 0.877 | 4.756 |
 | LAW-M (W30) | 0.728 | 0.796 | 0.681 | 0.789 | 0.690 | 0.458 | 0.597 | 0.859 | 2.733 |
-| ODaSC-style (W30, θ0.8) | 0.718 | 0.788 | 0.684 | 0.765 | 0.679 | 0.433 | 0.594 | 0.858 | 3.067 |
+| ODaSC-style (main lineage; W30, k20, θ0.8) | 0.718 | 0.788 | 0.684 | 0.765 | 0.679 | 0.433 | 0.594 | 0.858 | 3.067 |
 | Wait-90 | 0.716 | 0.787 | 0.645 | 0.807 | 0.671 | 0.439 | 0.599 | 0.860 | 13.756 |
 | ORB-style-90 | 0.706 | 0.777 | 0.634 | 0.790 | 0.649 | 0.405 | 0.587 | 0.853 | 12.667 |
 | Wait-30 | 0.687 | 0.783 | 0.554 | 0.863 | 0.631 | 0.426 | 0.584 | 0.849 | 2.400 |
@@ -457,8 +457,8 @@ These comparisons mix the threshold with the label policy. Wait-90 with the thre
 | method | G-mean | AUC | recall-1 | recall-0 |
 |:--|--:|--:|--:|--:|
 | LAW (model prior) +thr | 0.696 | 0.751 | 0.745 | 0.651 |
-| ODaSC-style W15 +thr | 0.695 | 0.764 | 0.724 | 0.670 |
-| ODaSC-style W30 | 0.695 | 0.762 | 0.766 | 0.635 |
+| ODaSC-style W15 +thr (second lineage) | 0.695 | 0.764 | 0.724 | 0.670 |
+| ODaSC-style W30 (second lineage) | 0.695 | 0.762 | 0.766 | 0.635 |
 | Wait-30 +thr | 0.676 | 0.745 | 0.699 | 0.657 |
 | ORB-style-90 | 0.658 | 0.724 | 0.714 | 0.615 |
 | Wait-90 | 0.654 | 0.727 | 0.713 | 0.616 |
@@ -474,7 +474,7 @@ These comparisons mix the threshold with the label policy. Wait-90 with the thre
 | policy | G-mean @0.5 | G-mean +thr | AUC |
 |:--|--:|--:|--:|
 | LAW (model prior) | 0.732 | 0.728 | 0.795 |
-| ODaSC-style W30 (k50, δ0.9) | 0.718 | 0.720 | 0.789 |
+| ODaSC-style W30 (second lineage; k50, δ0.9) | 0.718 | 0.720 | 0.789 |
 | Wait-90 | 0.716 | 0.720 | 0.787 |
 | Wait-30 | 0.687 | 0.723 | 0.783 |
 | No-wait | 0.648 | 0.717 | 0.774 |
@@ -668,6 +668,8 @@ Kim S, Zhang H, Wu R, Gong L (2011) Dealing with noise in defect prediction. Pro
 Lagakos SW, Barraj LM, De Gruttola V (1988) Nonparametric analysis of truncated survival data, with application to AIDS. Biometrika 75(3):515-523. https://doi.org/10.1093/biomet/75.3.515
 
 Liu S, Guo Z, Li Y, Wang C, Chen L, Sun Z, et al. (2023) Inconsistent Defect Labels: Essence, Causes, and Influence. IEEE Transactions on Software Engineering 49(2):586-610. https://doi.org/10.1109/TSE.2022.3156787
+
+Liu X, Zhou Y, Tang Y, Qian J, Zhou Y (2025) Human-in-the-loop online just-in-time software defect prediction: What have we achieved and what do we still miss? Science of Computer Programming 244:103296. https://doi.org/10.1016/j.scico.2025.103296
 
 Liu Z, Yuan C, Liu H, Li X, Liu S, Zhou X, et al. (2026) MSTDP: a multi-scale temporal deep learning framework for just-in-time software defect prediction with cross-attention fusion. Journal of King Saud University Computer and Information Sciences 38(2):68. https://doi.org/10.1007/s44443-025-00401-y
 
