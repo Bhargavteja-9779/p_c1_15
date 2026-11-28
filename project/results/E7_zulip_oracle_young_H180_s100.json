@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E7",
+    "project": "zulip",
+    "method": "oracle_young",
+    "variant": "oracle_young_H180",
+    "seed": 100,
+    "split": "test",
+    "oracle_H": 180,
+    "gmean": 0.6824372031798565,
+    "r0": 0.7595863457490619,
+    "r1": 0.6131238915632126,
+    "rdiff": 0.14646245418584936,
+    "auc": 0.7628485574244945,
+    "mcc": 0.3475587496106733,
+    "n_eval": 14874,
+    "seconds": 40.38,
+    "n_inspected": 0,
+    "job_id": "E7_zulip_oracle_young_H180_s100",
+    "written": "2026-11-28T17:10:06+00:00",
+    "cycle": 2
+  }
+]

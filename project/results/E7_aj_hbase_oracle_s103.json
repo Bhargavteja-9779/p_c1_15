@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E7",
+    "project": "aj_hbase",
+    "method": "oracle",
+    "variant": "oracle",
+    "seed": 103,
+    "split": "apachejit",
+    "gmean": 0.7782994222697147,
+    "r0": 0.7469196648595368,
+    "r1": 0.8109975131251727,
+    "rdiff": 0.0640778482656359,
+    "auc": 0.8623161178659642,
+    "mcc": 0.5572927607246911,
+    "n_eval": 7677,
+    "seconds": 13.39,
+    "n_inspected": 0,
+    "job_id": "E7_aj_hbase_oracle_s103",
+    "written": "2026-11-28T17:12:41+00:00",
+    "cycle": 2
+  }
+]
