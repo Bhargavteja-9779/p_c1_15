@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E2",
+    "project": "spring-integration",
+    "method": "law",
+    "variant": "law_naive_model_gmax_lat",
+    "seed": 102,
+    "split": "test",
+    "delay_est": "naive",
+    "prior": "model",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6801463322954806,
+    "r0": 0.625886524822695,
+    "r1": 0.7391100702576112,
+    "rdiff": 0.1132235454349162,
+    "auc": 0.6952672446725464,
+    "mcc": 0.32623423184160344,
+    "n_eval": 7775,
+    "seconds": 25.41,
+    "n_inspected": 0,
+    "job_id": "E2_spring-integration_law_naive_model_gmax_lat_s102",
+    "written": "2026-11-28T18:09:29+00:00",
+    "cycle": 2
+  }
+]

@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E2",
+    "project": "spring-integration",
+    "method": "law",
+    "variant": "law_lagakos_base_gmax_lat",
+    "seed": 104,
+    "split": "test",
+    "delay_est": "lagakos",
+    "prior": "base",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.629389530227277,
+    "r0": 0.6124113475177305,
+    "r1": 0.6468384074941452,
+    "rdiff": 0.03442705997641471,
+    "auc": 0.6894408457488332,
+    "mcc": 0.23220278596314559,
+    "n_eval": 7775,
+    "seconds": 23.03,
+    "n_inspected": 0,
+    "job_id": "E2_spring-integration_law_lagakos_base_gmax_lat_s104",
+    "written": "2026-11-28T18:08:39+00:00",
+    "cycle": 2
+  }
+]

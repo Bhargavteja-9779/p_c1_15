@@ -22613,12 +22613,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 30,
       "started": "2026-11-28T18:07:37+00:00",
-      "worker": 3
+      "worker": 3,
+      "finished": "2026-11-28T18:07:53+00:00",
+      "seconds": 15.2
     },
     {
       "id": "E2_npm_law_lagakos_model_s102",
@@ -22700,12 +22702,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 30,
       "started": "2026-11-28T18:07:46+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-28T18:08:02+00:00",
+      "seconds": 15.7
     },
     {
       "id": "E2_npm_law_lagakos_model_s103",
@@ -22787,12 +22791,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 30,
       "started": "2026-11-28T18:07:47+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-28T18:08:03+00:00",
+      "seconds": 15.3
     },
     {
       "id": "E2_npm_law_lagakos_model_s104",
@@ -22830,12 +22836,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 30,
       "started": "2026-11-28T18:07:29+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-28T18:07:52+00:00",
+      "seconds": 23.2
     },
     {
       "id": "E2_npm_law_lagakos_base_gmax_lat_s104",
@@ -22872,10 +22880,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:07:52+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T18:08:08+00:00",
+      "seconds": 15.9
     },
     {
       "id": "E2_spring-integration_law_lagakos_model_s100",
@@ -22890,10 +22902,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:08:25+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T18:08:51+00:00",
+      "seconds": 26.4
     },
     {
       "id": "E2_spring-integration_law_naive_model_gmax_lat_s100",
@@ -22909,10 +22925,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:08:51+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T18:09:17+00:00",
+      "seconds": 25.4
     },
     {
       "id": "E2_spring-integration_law_lagakos_base_gmax_lat_s100",
@@ -22928,10 +22948,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:07:53+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T18:08:16+00:00",
+      "seconds": 23.4
     },
     {
       "id": "E2_spring-integration_nowait_gmax_lat_s100",
@@ -22945,10 +22969,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:09:22+00:00",
+      "worker": 1
     },
     {
       "id": "E2_spring-integration_law_lagakos_model_s101",
@@ -22963,10 +22989,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:08:25+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T18:08:50+00:00",
+      "seconds": 24.7
     },
     {
       "id": "E2_spring-integration_law_naive_model_gmax_lat_s101",
@@ -22982,10 +23012,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:08:58+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T18:09:22+00:00",
+      "seconds": 24.4
     },
     {
       "id": "E2_spring-integration_law_lagakos_base_gmax_lat_s101",
@@ -23001,10 +23035,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:08:02+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T18:08:25+00:00",
+      "seconds": 22.7
     },
     {
       "id": "E2_spring-integration_nowait_gmax_lat_s101",
@@ -23018,10 +23056,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:09:29+00:00",
+      "worker": 3
     },
     {
       "id": "E2_spring-integration_law_lagakos_model_s102",
@@ -23036,10 +23076,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:08:32+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T18:08:58+00:00",
+      "seconds": 26.0
     },
     {
       "id": "E2_spring-integration_law_naive_model_gmax_lat_s102",
@@ -23055,10 +23099,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:09:04+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T18:09:29+00:00",
+      "seconds": 25.5
     },
     {
       "id": "E2_spring-integration_law_lagakos_base_gmax_lat_s102",
@@ -23074,10 +23122,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:08:03+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T18:08:25+00:00",
+      "seconds": 22.1
     },
     {
       "id": "E2_spring-integration_nowait_gmax_lat_s102",
@@ -23109,10 +23161,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:08:39+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T18:09:04+00:00",
+      "seconds": 24.6
     },
     {
       "id": "E2_spring-integration_law_naive_model_gmax_lat_s103",
@@ -23128,10 +23184,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:09:16+00:00",
+      "worker": 2
     },
     {
       "id": "E2_spring-integration_law_lagakos_base_gmax_lat_s103",
@@ -23147,10 +23205,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:08:08+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T18:08:31+00:00",
+      "seconds": 23.2
     },
     {
       "id": "E2_spring-integration_nowait_gmax_lat_s103",
@@ -23182,10 +23244,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:08:50+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T18:09:16+00:00",
+      "seconds": 26.1
     },
     {
       "id": "E2_spring-integration_law_naive_model_gmax_lat_s104",
@@ -23201,10 +23267,12 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:09:17+00:00",
+      "worker": 0
     },
     {
       "id": "E2_spring-integration_law_lagakos_base_gmax_lat_s104",
@@ -23220,10 +23288,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:08:16+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T18:08:39+00:00",
+      "seconds": 23.1
     },
     {
       "id": "E2_spring-integration_nowait_gmax_lat_s104",

@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E2",
+    "project": "npm",
+    "method": "nowait",
+    "variant": "nowait_gmax_lat",
+    "seed": 101,
+    "split": "test",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6427982483178518,
+    "r0": 0.622226400902595,
+    "r1": 0.6640502354788069,
+    "rdiff": 0.04182383457621197,
+    "auc": 0.6719675719971213,
+    "mcc": 0.22812883418454785,
+    "n_eval": 6592,
+    "seconds": 15.19,
+    "n_inspected": 0,
+    "job_id": "E2_npm_nowait_gmax_lat_s101",
+    "written": "2026-11-28T18:07:52+00:00",
+    "cycle": 2
+  }
+]
