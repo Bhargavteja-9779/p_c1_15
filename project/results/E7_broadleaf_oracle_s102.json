@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E7",
+    "project": "broadleaf",
+    "method": "oracle",
+    "variant": "oracle",
+    "seed": 102,
+    "split": "test",
+    "gmean": 0.7281294973292988,
+    "r0": 0.8511339794185233,
+    "r1": 0.6229014205768403,
+    "rdiff": 0.22823255884168303,
+    "auc": 0.8301183046321592,
+    "mcc": 0.4351413543851429,
+    "n_eval": 12332,
+    "seconds": 31.65,
+    "n_inspected": 0,
+    "job_id": "E7_broadleaf_oracle_s102",
+    "written": "2026-11-28T17:20:22+00:00",
+    "cycle": 2
+  }
+]

@@ -44365,10 +44365,14 @@
         "project": "broadleaf",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:19:50+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:20:21+00:00",
+      "seconds": 31.6
     },
     {
       "id": "E7_broadleaf_nowait_s101",
@@ -44402,10 +44406,14 @@
         "project": "broadleaf",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:20:54+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:21:27+00:00",
+      "seconds": 32.6
     },
     {
       "id": "E7_broadleaf_oracle_young_H180_s101",
@@ -44419,10 +44427,14 @@
         "project": "broadleaf",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:20:21+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:20:54+00:00",
+      "seconds": 32.6
     },
     {
       "id": "E7_broadleaf_oracle_old_H30_s101",
@@ -44436,10 +44448,14 @@
         "project": "broadleaf",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:19:18+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:19:50+00:00",
+      "seconds": 31.5
     },
     {
       "id": "E7_broadleaf_oracle_old_H180_s101",
@@ -44453,12 +44469,14 @@
         "project": "broadleaf",
         "seed": 101
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 8,
       "started": "2026-11-28T17:18:46+00:00",
-      "worker": 3
+      "worker": 3,
+      "finished": "2026-11-28T17:19:18+00:00",
+      "seconds": 32.2
     },
     {
       "id": "E7_broadleaf_oracle_s102",
@@ -44471,10 +44489,14 @@
         "project": "broadleaf",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:19:50+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:20:22+00:00",
+      "seconds": 31.7
     },
     {
       "id": "E7_broadleaf_nowait_s102",
@@ -44508,10 +44530,14 @@
         "project": "broadleaf",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:20:54+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:21:25+00:00",
+      "seconds": 31.2
     },
     {
       "id": "E7_broadleaf_oracle_young_H180_s102",
@@ -44525,10 +44551,14 @@
         "project": "broadleaf",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:20:22+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:20:54+00:00",
+      "seconds": 32.3
     },
     {
       "id": "E7_broadleaf_oracle_old_H30_s102",
@@ -44542,10 +44572,14 @@
         "project": "broadleaf",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:19:18+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:19:50+00:00",
+      "seconds": 31.6
     },
     {
       "id": "E7_broadleaf_oracle_old_H180_s102",
@@ -44559,12 +44593,14 @@
         "project": "broadleaf",
         "seed": 102
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 8,
       "started": "2026-11-28T17:18:46+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-28T17:19:18+00:00",
+      "seconds": 31.8
     },
     {
       "id": "E7_broadleaf_oracle_s103",
@@ -44577,10 +44613,14 @@
         "project": "broadleaf",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:19:51+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:20:23+00:00",
+      "seconds": 32.0
     },
     {
       "id": "E7_broadleaf_nowait_s103",
@@ -44614,10 +44654,14 @@
         "project": "broadleaf",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:20:57+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:21:29+00:00",
+      "seconds": 32.4
     },
     {
       "id": "E7_broadleaf_oracle_young_H180_s103",
@@ -44631,10 +44675,14 @@
         "project": "broadleaf",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:20:23+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:20:57+00:00",
+      "seconds": 33.5
     },
     {
       "id": "E7_broadleaf_oracle_old_H30_s103",
@@ -44648,10 +44696,14 @@
         "project": "broadleaf",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:19:20+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:19:51+00:00",
+      "seconds": 31.2
     },
     {
       "id": "E7_broadleaf_oracle_old_H180_s103",
@@ -44665,12 +44717,14 @@
         "project": "broadleaf",
         "seed": 103
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 8,
       "started": "2026-11-28T17:18:47+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-28T17:19:20+00:00",
+      "seconds": 32.4
     },
     {
       "id": "E7_broadleaf_oracle_s104",
@@ -44683,10 +44737,14 @@
         "project": "broadleaf",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:19:56+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:20:28+00:00",
+      "seconds": 32.7
     },
     {
       "id": "E7_broadleaf_nowait_s104",
@@ -44720,10 +44778,14 @@
         "project": "broadleaf",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:21:01+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:21:34+00:00",
+      "seconds": 33.6
     },
     {
       "id": "E7_broadleaf_oracle_young_H180_s104",
@@ -44737,10 +44799,14 @@
         "project": "broadleaf",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:20:28+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:21:01+00:00",
+      "seconds": 32.2
     },
     {
       "id": "E7_broadleaf_oracle_old_H30_s104",
@@ -44754,10 +44820,14 @@
         "project": "broadleaf",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:19:24+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:19:56+00:00",
+      "seconds": 31.6
     },
     {
       "id": "E7_broadleaf_oracle_old_H180_s104",
@@ -44771,12 +44841,14 @@
         "project": "broadleaf",
         "seed": 104
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 8,
       "started": "2026-11-28T17:18:51+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-28T17:19:24+00:00",
+      "seconds": 33.3
     },
     {
       "id": "E7_camel_oracle_s101",
@@ -44805,10 +44877,14 @@
         "project": "camel",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:21:25+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:23:10+00:00",
+      "seconds": 104.7
     },
     {
       "id": "E7_camel_oracle_young_H30_s101",
@@ -44873,10 +44949,12 @@
         "project": "camel",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:23:10+00:00",
+      "worker": 3
     },
     {
       "id": "E7_camel_oracle_s102",
@@ -44905,10 +44983,14 @@
         "project": "camel",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:21:27+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:23:10+00:00",
+      "seconds": 103.0
     },
     {
       "id": "E7_camel_oracle_young_H30_s102",
@@ -44973,10 +45055,12 @@
         "project": "camel",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:23:10+00:00",
+      "worker": 0
     },
     {
       "id": "E7_camel_oracle_s103",
@@ -45005,10 +45089,14 @@
         "project": "camel",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:21:29+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:23:10+00:00",
+      "seconds": 101.2
     },
     {
       "id": "E7_camel_oracle_young_H30_s103",
@@ -45073,10 +45161,12 @@
         "project": "camel",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:23:10+00:00",
+      "worker": 2
     },
     {
       "id": "E7_camel_oracle_s104",
@@ -45105,10 +45195,14 @@
         "project": "camel",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:21:34+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:23:15+00:00",
+      "seconds": 100.8
     },
     {
       "id": "E7_camel_oracle_young_H30_s104",
@@ -45173,10 +45267,12 @@
         "project": "camel",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:23:15+00:00",
+      "worker": 1
     },
     {
       "id": "E7_jgroups_oracle_s101",

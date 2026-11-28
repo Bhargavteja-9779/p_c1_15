@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E7",
+    "project": "broadleaf",
+    "method": "oracle_young",
+    "variant": "oracle_young_H30",
+    "seed": 101,
+    "split": "test",
+    "oracle_H": 30,
+    "gmean": 0.6806512314714361,
+    "r0": 0.8865021480667399,
+    "r1": 0.5226000860955661,
+    "rdiff": 0.3639020619711738,
+    "auc": 0.8194434522489811,
+    "mcc": 0.40729500768981086,
+    "n_eval": 12332,
+    "seconds": 32.59,
+    "n_inspected": 0,
+    "job_id": "E7_broadleaf_oracle_young_H30_s101",
+    "written": "2026-11-28T17:21:27+00:00",
+    "cycle": 2
+  }
+]
