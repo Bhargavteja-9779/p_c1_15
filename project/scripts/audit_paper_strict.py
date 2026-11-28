@@ -9,7 +9,7 @@ SRC = ["results/paper_numbers.json", "results/statistics.json", "paper/tables/*.
        "tables/rq1_*.csv", "archive/zealous_lamport_cycle1/results/statistics.json",
        "archive/zealous_lamport_cycle1/results/diag/operating_point_dev.csv", "archive/zealous_lamport_cycle1/tables/E0_dev_tuning.csv",
        "paper/references_checked.json", "results/review1/shapley.json", "results/review1/test_set_usage.json",
-       "experiments/plan_v8_review1.yaml"]
+       "experiments/plan_v8_review1.yaml", "literature/pdfs/Song_IJCNN2022.txt"]
 pool = set()
 for pat in SRC:
     for p in glob.glob(os.path.join(ROOT, pat)):

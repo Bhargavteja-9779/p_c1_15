@@ -228,7 +228,7 @@ if RV.exists():
                 ax.axhline(0, c="k", lw=.6); ax.axhline(1, c="grey", lw=.6, ls="--")
                 ax.set_xticks(range(4)); ax.set_xticklabels(labs, fontsize=8); ax.set_xlabel(f"age of relabelled commits (days), {metric}", fontsize=8)
             axs[0].set_ylabel("share of full true-label gain"); axs[1].legend(fontsize=7, frameon=False)
-            fig.tight_layout(); fig.savefig(P / "figures" / "F3_age_strata.png", dpi=200); plt.close(fig)
+            fig.tight_layout(); plt.close(fig)
     # A4: evaluation-window sensitivity (exclude last 730 days)
     if (rv.analysis == "A4").sum() >= 190:
         res = {}
@@ -298,6 +298,39 @@ N["b2_flip_share"] = {}
 for fam, P_ in [("cabral_test", TEST), ("apachejit", AJ)]:
     for W in ["30", "90"]:
         f_ = np.array([FC[p][W]["flips"] for p in P_]); N["b2_flip_share"][f"{fam}_W{W}"] = [f3(x) for x in (f_ / f_.sum(1, keepdims=True)).mean(0)]
+
+# ---------------------------------------------------------------- plan_v9: age bands at W=30/90, band-in vs leave-one-band-out, flip shares
+if RV.exists() and (rv.analysis == "B1").sum() >= 380 and (rv.analysis == "B3").sum() >= 760:
+    a2_ = rv[rv.analysis == "A2"]; rows = []
+    for fam, famlab, P_, ex in [("cabral_test", "Cabral test", TEST, ["E1", "E3b"]), ("apachejit", "ApacheJIT", AJ, ["E8"])]:
+        base = pd.concat([df[df.experiment.isin(ex) & df.project.isin(P_)], a2_[a2_.project.isin(P_)]])
+        for metric in ["auc", "gmean"]:
+            b = base.groupby(["variant", "project"])[metric].mean().unstack()[P_]
+            e = rv[rv.analysis.isin(["A3", "B1", "B3"]) & rv.project.isin(P_)].groupby(["variant", "project"])[metric].mean().unstack()[P_]
+            for W, bands in [(30, [(30, 180), (180, 365), (365, 730), (730, "inf")]), (90, [(90, 180), (180, 365), (365, 730), (730, "inf")])]:
+                w = b.loc[f"wait_W{W}"]; l1 = b.loc[f"decomp_L1_W{W}"]; full = (l1 - w).mean()
+                for i, (lo, hi) in enumerate(bands):
+                    vin = f"strata_{lo}_{hi}" if W == 30 else f"strata90_{lo}_{hi}"; vout = f"out{W}_{lo}_{hi}"
+                    gin = e.loc[vin] - w; gout = l1 - e.loc[vout]
+                    rows.append(dict(family=famlab, metric="AUC" if metric == "auc" else "G-mean", W=W, band=f"{lo}-{hi}",
+                                     flip_share=N["b2_flip_share"][f"{fam}_W{W}"][i], band_in_share=f3(gin.mean() / full),
+                                     leave_out_loss_share=f3(gout.mean() / full), leave_out_projects_hurt=int((gout > 0).sum()),
+                                     leave_out_p=f4(_st.wilcoxon(gout.values).pvalue)))
+    T12 = pd.DataFrame(rows); T12.to_markdown(P / "tables" / "T12_age_bands_W90_and_leave_one_out.md", index=False); N["b13_age_bands"] = rows
+    fig, axs = plt.subplots(2, 2, figsize=(8, 5.2), sharey=True)
+    for r_, fam in enumerate(["Cabral test", "ApacheJIT"]):
+        for c_, W in enumerate([30, 90]):
+            ax = axs[r_, c_]; t_ = T12[(T12.family == fam) & (T12.metric == "AUC") & (T12.W == W)]
+            x = np.arange(4)
+            ax.bar(x - 0.27, t_.flip_share, 0.27, color="#9e9e9e", label="share of false-clean labels")
+            ax.bar(x, t_.band_in_share, 0.27, color="#1f5fa8" if r_ == 0 else "#c0392b", alpha=0.45, label="gain from relabelling only this band")
+            ax.bar(x + 0.27, t_.leave_out_loss_share, 0.27, color="#1f5fa8" if r_ == 0 else "#c0392b", label="gain lost if only this band stays noisy")
+            ax.axhline(0, c="k", lw=.6); ax.set_xticks(x); ax.set_xticklabels([b.replace("-inf", "+").replace("-", "–") for b in t_.band], fontsize=7)
+            ax.text(0.98, 0.95, f"({'abcd'[2 * r_ + c_]}) {fam}, W = {W}", transform=ax.transAxes, ha="right", va="top", fontsize=8)
+            if r_ == 1: ax.set_xlabel("age of provisionally clean training commits (days)", fontsize=8)
+    axs[0, 0].set_ylabel("share (AUC)"); axs[1, 0].set_ylabel("share (AUC)")
+    axs[0, 0].legend(fontsize=6, frameon=False, loc="center right")
+    fig.tight_layout(); fig.savefig(P / "figures" / "F3_age_strata.png", dpi=200); plt.close(fig)
 
 # ---------------------------------------------------------------- bookkeeping numbers
 vt = pd.read_csv(ROOT / "state" / "variants_tried.csv"); vta = pd.read_csv(ARCH / "state" / "variants_tried.csv")

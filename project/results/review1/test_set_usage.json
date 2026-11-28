@@ -1,9 +1,9 @@
 {
- "n_commits_scanned": 173,
+ "n_commits_scanned": 194,
  "n_configs_complete_pre_review": 16,
  "n_configs_partial_pre_review": 11,
  "n_configs_smoke_only": 3,
- "n_configs_review_analyses": 13,
+ "n_configs_review_analyses": 21,
  "rows": [
   {
    "experiment": "A3",
@@ -89,36 +89,108 @@
   {
    "experiment": "B1",
    "variant": "strata90_180_365",
-   "mode": "partial",
-   "projects": 2,
-   "runs": 10,
+   "mode": "complete",
+   "projects": 10,
+   "runs": 50,
    "uses_true_labels": true,
    "branches": "zealous-lamport"
   },
   {
    "experiment": "B1",
    "variant": "strata90_365_730",
-   "mode": "partial",
-   "projects": 2,
-   "runs": 10,
+   "mode": "complete",
+   "projects": 10,
+   "runs": 50,
    "uses_true_labels": true,
    "branches": "zealous-lamport"
   },
   {
    "experiment": "B1",
    "variant": "strata90_730_inf",
-   "mode": "partial",
-   "projects": 2,
-   "runs": 10,
+   "mode": "complete",
+   "projects": 10,
+   "runs": 50,
    "uses_true_labels": true,
    "branches": "zealous-lamport"
   },
   {
    "experiment": "B1",
    "variant": "strata90_90_180",
-   "mode": "partial",
-   "projects": 3,
-   "runs": 11,
+   "mode": "complete",
+   "projects": 10,
+   "runs": 50,
+   "uses_true_labels": true,
+   "branches": "zealous-lamport"
+  },
+  {
+   "experiment": "B3",
+   "variant": "out30_180_365",
+   "mode": "complete",
+   "projects": 10,
+   "runs": 50,
+   "uses_true_labels": true,
+   "branches": "zealous-lamport"
+  },
+  {
+   "experiment": "B3",
+   "variant": "out30_30_180",
+   "mode": "complete",
+   "projects": 10,
+   "runs": 50,
+   "uses_true_labels": true,
+   "branches": "zealous-lamport"
+  },
+  {
+   "experiment": "B3",
+   "variant": "out30_365_730",
+   "mode": "complete",
+   "projects": 10,
+   "runs": 50,
+   "uses_true_labels": true,
+   "branches": "zealous-lamport"
+  },
+  {
+   "experiment": "B3",
+   "variant": "out30_730_inf",
+   "mode": "complete",
+   "projects": 10,
+   "runs": 50,
+   "uses_true_labels": true,
+   "branches": "zealous-lamport"
+  },
+  {
+   "experiment": "B3",
+   "variant": "out90_180_365",
+   "mode": "complete",
+   "projects": 10,
+   "runs": 50,
+   "uses_true_labels": true,
+   "branches": "zealous-lamport"
+  },
+  {
+   "experiment": "B3",
+   "variant": "out90_365_730",
+   "mode": "complete",
+   "projects": 10,
+   "runs": 50,
+   "uses_true_labels": true,
+   "branches": "zealous-lamport"
+  },
+  {
+   "experiment": "B3",
+   "variant": "out90_730_inf",
+   "mode": "complete",
+   "projects": 10,
+   "runs": 50,
+   "uses_true_labels": true,
+   "branches": "zealous-lamport"
+  },
+  {
+   "experiment": "B3",
+   "variant": "out90_90_180",
+   "mode": "complete",
+   "projects": 10,
+   "runs": 50,
    "uses_true_labels": true,
    "branches": "zealous-lamport"
   },

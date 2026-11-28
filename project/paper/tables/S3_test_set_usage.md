@@ -9,10 +9,18 @@
 | A4           | oracle_gap730                  | complete |         10 |     20 | True               | zealous-lamport                                                        |
 | A4           | wait_W30_gap730                | complete |         10 |     20 | False              | zealous-lamport                                                        |
 | A4           | wait_W90_gap730                | complete |         10 |     20 | False              | zealous-lamport                                                        |
-| B1           | strata90_180_365               | partial  |          2 |     10 | True               | zealous-lamport                                                        |
-| B1           | strata90_365_730               | partial  |          2 |     10 | True               | zealous-lamport                                                        |
-| B1           | strata90_730_inf               | partial  |          2 |     10 | True               | zealous-lamport                                                        |
-| B1           | strata90_90_180                | partial  |          3 |     11 | True               | zealous-lamport                                                        |
+| B1           | strata90_180_365               | complete |         10 |     50 | True               | zealous-lamport                                                        |
+| B1           | strata90_365_730               | complete |         10 |     50 | True               | zealous-lamport                                                        |
+| B1           | strata90_730_inf               | complete |         10 |     50 | True               | zealous-lamport                                                        |
+| B1           | strata90_90_180                | complete |         10 |     50 | True               | zealous-lamport                                                        |
+| B3           | out30_180_365                  | complete |         10 |     50 | True               | zealous-lamport                                                        |
+| B3           | out30_30_180                   | complete |         10 |     50 | True               | zealous-lamport                                                        |
+| B3           | out30_365_730                  | complete |         10 |     50 | True               | zealous-lamport                                                        |
+| B3           | out30_730_inf                  | complete |         10 |     50 | True               | zealous-lamport                                                        |
+| B3           | out90_180_365                  | complete |         10 |     50 | True               | zealous-lamport                                                        |
+| B3           | out90_365_730                  | complete |         10 |     50 | True               | zealous-lamport                                                        |
+| B3           | out90_730_inf                  | complete |         10 |     50 | True               | zealous-lamport                                                        |
+| B3           | out90_90_180                   | complete |         10 |     50 | True               | zealous-lamport                                                        |
 | E1           | awt_e0.4                       | complete |         10 |     50 | False              | keen-edison, magical-bardeen, zealous-lamport, zen-cray                |
 | E1           | law_lagakos_model              | complete |         10 |     50 | False              | keen-edison, magical-bardeen, zealous-lamport, zen-cray                |
 | E1           | law_lagakos_model_gmax_lat     | complete |         10 |     50 | False              | dreamy-fermat                                                          |
