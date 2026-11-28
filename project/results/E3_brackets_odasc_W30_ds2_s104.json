@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E3",
+    "project": "brackets",
+    "method": "odasc",
+    "variant": "odasc_W30_ds2",
+    "seed": 104,
+    "split": "test",
+    "W": 30,
+    "delay_scale": 2.0,
+    "odasc_delta": 0.9,
+    "gmean": 0.7490316704817437,
+    "r0": 0.6023363738198112,
+    "r1": 0.9314536989136057,
+    "rdiff": 0.32911732509379454,
+    "auc": 0.8446338480892587,
+    "mcc": 0.4539976365554332,
+    "n_eval": 16364,
+    "seconds": 63.4,
+    "n_inspected": 0,
+    "job_id": "E3_brackets_odasc_W30_ds2_s104",
+    "written": "2026-11-28T18:30:17+00:00",
+    "cycle": 2
+  }
+]
