@@ -337,7 +337,8 @@ if RV.exists() and (rv.analysis == "B1").sum() >= 380 and (rv.analysis == "B3").
 _rq1 = json.load(open(R / "rq1_label_noise.json"))
 N["rq1_false_clean_7_30d_range"] = [f3(min(v["false_clean_rate_by_age"]["7-30d"] for v in _rq1.values())), f3(max(v["false_clean_rate_by_age"]["7-30d"] for v in _rq1.values()))]
 N["r3_oracle_minus_L1_W90_auc"] = {"cabral_test": f3(SH["cabral_test_W90_share_auc"]["oracle"] - SH["cabral_test_W90_share_auc"]["L1_W90"]),
-                                   "apachejit": f3(N["a2_apachejit_W90"]["auc"]["oracle"] - N["a2_apachejit_W90"]["auc"]["L1_W90"])}
+                                   "apachejit": f3(df[(df.experiment == "E8") & (df.variant == "oracle") & df.project.isin(AJ)].groupby("project").auc.mean().mean()
+                                                   - rv[(rv.analysis == "A2") & (rv.variant == "decomp_L1_W90")].groupby("project").auc.mean().mean())}
 if RV.exists():
     _a4 = {}
     for fam, P_ in [("Cabral test", TEST), ("ApacheJIT", AJ)]:

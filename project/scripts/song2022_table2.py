@@ -13,4 +13,7 @@ assert len(rows) == 14, rows.keys()
 means = {c: round(sum(r[c] for r in rows.values()) / 14, 4) for c in cols[2:]}
 out = dict(source="Song et al. 2022, Table II (G-mean part), 14 projects", means=means,
            opt_minus_oob=round(means["odasc_opt"] - means["oob"], 4), flt_minus_oob=round(means["odasc_flt"] - means["oob"], 4), per_project=rows)
+sh = ["Brackets", "Broadleaf", "Camel", "jGroups", "Tomcat"]   # projects shared with our Cabral test set
+out["shared_cabral_test_projects"] = sh
+out["shared_opt_minus_oob"] = round(sum(rows[p]["odasc_opt"] - rows[p]["oob"] for p in sh) / len(sh), 4)
 json.dump(out, open(os.path.join(ROOT, "results/review1/song2022_table2_means.json"), "w"), indent=1); print(means, out["opt_minus_oob"], out["flt_minus_oob"])
