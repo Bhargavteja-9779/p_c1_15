@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E7",
+    "project": "aj_flink",
+    "method": "oracle_old",
+    "variant": "oracle_old_H30",
+    "seed": 100,
+    "split": "apachejit",
+    "oracle_H": 30,
+    "gmean": 0.7687310763787193,
+    "r0": 0.8935819171753836,
+    "r1": 0.6613243357233235,
+    "rdiff": 0.2322575814520601,
+    "auc": 0.8696166159996732,
+    "mcc": 0.5670306729701948,
+    "n_eval": 8432,
+    "seconds": 21.79,
+    "n_inspected": 0,
+    "job_id": "E7_aj_flink_oracle_old_H30_s100",
+    "written": "2026-11-28T16:55:29+00:00",
+    "cycle": 2
+  }
+]
