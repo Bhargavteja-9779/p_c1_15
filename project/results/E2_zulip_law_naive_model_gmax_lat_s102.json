@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E2",
+    "project": "zulip",
+    "method": "law",
+    "variant": "law_naive_model_gmax_lat",
+    "seed": 102,
+    "split": "test",
+    "delay_est": "naive",
+    "prior": "model",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6622274449451595,
+    "r0": 0.6356731033220463,
+    "r1": 0.6898910564986065,
+    "rdiff": 0.054217953176560196,
+    "auc": 0.6983620298505857,
+    "mcc": 0.28889670769861403,
+    "n_eval": 14874,
+    "seconds": 94.65,
+    "n_inspected": 0,
+    "job_id": "E2_zulip_law_naive_model_gmax_lat_s102",
+    "written": "2026-11-28T18:24:41+00:00",
+    "cycle": 2
+  }
+]

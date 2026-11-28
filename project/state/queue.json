@@ -24393,12 +24393,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 30,
       "started": "2026-11-28T18:24:24+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-28T18:25:13+00:00",
+      "seconds": 48.7
     },
     {
       "id": "E2_zulip_law_lagakos_model_s102",
@@ -24436,12 +24438,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 30,
       "started": "2026-11-28T18:23:06+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-28T18:24:41+00:00",
+      "seconds": 94.7
     },
     {
       "id": "E2_zulip_law_lagakos_base_gmax_lat_s102",
@@ -24478,10 +24482,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:24:41+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T18:25:32+00:00",
+      "seconds": 50.7
     },
     {
       "id": "E2_zulip_law_lagakos_model_s103",
@@ -24519,12 +24527,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 30,
       "started": "2026-11-28T18:23:27+00:00",
-      "worker": 3
+      "worker": 3,
+      "finished": "2026-11-28T18:25:03+00:00",
+      "seconds": 95.6
     },
     {
       "id": "E2_zulip_law_lagakos_base_gmax_lat_s103",
@@ -24561,10 +24571,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:25:02+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T18:25:54+00:00",
+      "seconds": 52.4
     },
     {
       "id": "E2_zulip_law_lagakos_model_s104",
@@ -24602,12 +24616,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 30,
       "started": "2026-11-28T18:23:28+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-28T18:25:02+00:00",
+      "seconds": 93.4
     },
     {
       "id": "E2_zulip_law_lagakos_base_gmax_lat_s104",
@@ -24644,10 +24660,14 @@
         "experiment": "E2",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 30
+      "priority": 30,
+      "started": "2026-11-28T18:25:03+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T18:25:52+00:00",
+      "seconds": 49.7
     },
     {
       "id": "E3_brackets_law_lagakos_model_gmax_lat_ds2_s100",
@@ -24664,10 +24684,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-28T18:25:13+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T18:26:33+00:00",
+      "seconds": 79.5
     },
     {
       "id": "E3_brackets_wait_W90_ds2_s100",
@@ -24682,10 +24706,12 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-28T18:29:17+00:00",
+      "worker": 0
     },
     {
       "id": "E3_brackets_odasc_W30_ds2_s100",
@@ -24701,10 +24727,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-28T18:28:13+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T18:29:14+00:00",
+      "seconds": 60.8
     },
     {
       "id": "E3_brackets_odasc_W15_gmax_lat_ds2_s100",
@@ -24721,10 +24751,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-28T18:26:53+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T18:27:54+00:00",
+      "seconds": 61.8
     },
     {
       "id": "E3_brackets_law_lagakos_model_gmax_lat_ds2_s101",
@@ -24741,10 +24775,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-28T18:25:32+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T18:26:52+00:00",
+      "seconds": 80.6
     },
     {
       "id": "E3_brackets_wait_W90_ds2_s101",
@@ -24778,10 +24816,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-28T18:28:17+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T18:29:17+00:00",
+      "seconds": 60.0
     },
     {
       "id": "E3_brackets_odasc_W15_gmax_lat_ds2_s101",
@@ -24798,10 +24840,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-28T18:27:13+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T18:28:13+00:00",
+      "seconds": 59.3
     },
     {
       "id": "E3_brackets_law_lagakos_model_gmax_lat_ds2_s102",
@@ -24818,10 +24864,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-28T18:25:52+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T18:27:13+00:00",
+      "seconds": 81.0
     },
     {
       "id": "E3_brackets_wait_W90_ds2_s102",
@@ -24855,10 +24905,12 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-28T18:28:56+00:00",
+      "worker": 1
     },
     {
       "id": "E3_brackets_odasc_W15_gmax_lat_ds2_s102",
@@ -24875,10 +24927,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-28T18:27:16+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T18:28:17+00:00",
+      "seconds": 61.7
     },
     {
       "id": "E3_brackets_law_lagakos_model_gmax_lat_ds2_s103",
@@ -24895,10 +24951,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-28T18:25:54+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T18:27:16+00:00",
+      "seconds": 81.3
     },
     {
       "id": "E3_brackets_wait_W90_ds2_s103",
@@ -24932,10 +24992,12 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-28T18:28:59+00:00",
+      "worker": 2
     },
     {
       "id": "E3_brackets_odasc_W15_gmax_lat_ds2_s103",
@@ -24952,10 +25014,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-28T18:27:54+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T18:28:59+00:00",
+      "seconds": 64.7
     },
     {
       "id": "E3_brackets_law_lagakos_model_gmax_lat_ds2_s104",
@@ -24972,10 +25038,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-28T18:26:33+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T18:27:54+00:00",
+      "seconds": 81.6
     },
     {
       "id": "E3_brackets_wait_W90_ds2_s104",
@@ -25009,10 +25079,12 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-28T18:29:14+00:00",
+      "worker": 3
     },
     {
       "id": "E3_brackets_odasc_W15_gmax_lat_ds2_s104",
@@ -25029,10 +25101,14 @@
         "experiment": "E3",
         "split": "test"
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 40
+      "priority": 40,
+      "started": "2026-11-28T18:27:54+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T18:28:56+00:00",
+      "seconds": 61.2
     },
     {
       "id": "E3_broadleaf_law_lagakos_model_gmax_lat_ds2_s100",

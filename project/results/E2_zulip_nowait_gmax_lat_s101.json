@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E2",
+    "project": "zulip",
+    "method": "nowait",
+    "variant": "nowait_gmax_lat",
+    "seed": 101,
+    "split": "test",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6434145921919103,
+    "r0": 0.6067539123272627,
+    "r1": 0.6822903470990626,
+    "rdiff": 0.07553643477179983,
+    "auc": 0.6654326595023857,
+    "mcc": 0.25570339105451084,
+    "n_eval": 14874,
+    "seconds": 48.6,
+    "n_inspected": 0,
+    "job_id": "E2_zulip_nowait_gmax_lat_s101",
+    "written": "2026-11-28T18:25:13+00:00",
+    "cycle": 2
+  }
+]
