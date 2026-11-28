@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E10",
+    "project": "aj_cassandra",
+    "method": "odasc",
+    "variant": "odasc_W30_gmax_lat",
+    "seed": 103,
+    "split": "apachejit",
+    "W": 30,
+    "odasc_delta": 0.9,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.7554453713860536,
+    "r0": 0.7696011004126547,
+    "r1": 0.7415500170706726,
+    "rdiff": 0.02805108334198214,
+    "auc": 0.8068612676379339,
+    "mcc": 0.5053718879139828,
+    "n_eval": 7291,
+    "seconds": 14.53,
+    "n_inspected": 0,
+    "job_id": "E10_aj_cassandra_odasc_W30_gmax_lat_s103",
+    "written": "2026-11-28T17:53:57+00:00",
+    "cycle": 2
+  }
+]

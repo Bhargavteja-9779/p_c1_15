@@ -51386,10 +51386,12 @@
         "project": "aj_cassandra",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:54:08+00:00",
+      "worker": 2
     },
     {
       "id": "E10_aj_cassandra_odasc_W30_gmax_lat_s100",
@@ -51405,10 +51407,14 @@
         "project": "aj_cassandra",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:53:33+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:53:48+00:00",
+      "seconds": 14.5
     },
     {
       "id": "E10_aj_cassandra_orb_W90_gmax_lat_s100",
@@ -51423,10 +51429,14 @@
         "project": "aj_cassandra",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:53:51+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:54:04+00:00",
+      "seconds": 12.4
     },
     {
       "id": "E10_aj_cassandra_law_lagakos_model_s100",
@@ -51484,10 +51494,12 @@
         "project": "aj_cassandra",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:54:09+00:00",
+      "worker": 1
     },
     {
       "id": "E10_aj_cassandra_odasc_W30_gmax_lat_s101",
@@ -51503,10 +51515,14 @@
         "project": "aj_cassandra",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:53:37+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:53:51+00:00",
+      "seconds": 14.5
     },
     {
       "id": "E10_aj_cassandra_orb_W90_gmax_lat_s101",
@@ -51521,10 +51537,14 @@
         "project": "aj_cassandra",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:53:56+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:54:08+00:00",
+      "seconds": 12.0
     },
     {
       "id": "E10_aj_cassandra_law_lagakos_model_s101",
@@ -51560,12 +51580,14 @@
         "project": "aj_cassandra",
         "seed": 102
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 9,
       "started": "2026-11-28T17:53:20+00:00",
-      "worker": 3
+      "worker": 3,
+      "finished": "2026-11-28T17:53:33+00:00",
+      "seconds": 12.6
     },
     {
       "id": "E10_aj_cassandra_wait_W90_gmax_lat_s102",
@@ -51580,10 +51602,12 @@
         "project": "aj_cassandra",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:54:15+00:00",
+      "worker": 3
     },
     {
       "id": "E10_aj_cassandra_odasc_W30_gmax_lat_s102",
@@ -51599,10 +51623,14 @@
         "project": "aj_cassandra",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:53:41+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:53:56+00:00",
+      "seconds": 15.0
     },
     {
       "id": "E10_aj_cassandra_orb_W90_gmax_lat_s102",
@@ -51617,10 +51645,14 @@
         "project": "aj_cassandra",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:53:57+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:54:09+00:00",
+      "seconds": 11.5
     },
     {
       "id": "E10_aj_cassandra_law_lagakos_model_s102",
@@ -51656,12 +51688,14 @@
         "project": "aj_cassandra",
         "seed": 103
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 9,
       "started": "2026-11-28T17:53:29+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-28T17:53:41+00:00",
+      "seconds": 11.4
     },
     {
       "id": "E10_aj_cassandra_wait_W90_gmax_lat_s103",
@@ -51676,10 +51710,12 @@
         "project": "aj_cassandra",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:54:16+00:00",
+      "worker": 0
     },
     {
       "id": "E10_aj_cassandra_odasc_W30_gmax_lat_s103",
@@ -51695,10 +51731,14 @@
         "project": "aj_cassandra",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:53:43+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:53:57+00:00",
+      "seconds": 14.6
     },
     {
       "id": "E10_aj_cassandra_orb_W90_gmax_lat_s103",
@@ -51713,10 +51753,14 @@
         "project": "aj_cassandra",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:54:02+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:54:15+00:00",
+      "seconds": 12.6
     },
     {
       "id": "E10_aj_cassandra_law_lagakos_model_s103",
@@ -51752,12 +51796,14 @@
         "project": "aj_cassandra",
         "seed": 104
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 9,
       "started": "2026-11-28T17:53:31+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-28T17:53:43+00:00",
+      "seconds": 11.8
     },
     {
       "id": "E10_aj_cassandra_wait_W90_gmax_lat_s104",
@@ -51791,10 +51837,14 @@
         "project": "aj_cassandra",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:53:48+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:54:02+00:00",
+      "seconds": 14.4
     },
     {
       "id": "E10_aj_cassandra_orb_W90_gmax_lat_s104",
@@ -51809,10 +51859,14 @@
         "project": "aj_cassandra",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:54:04+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:54:16+00:00",
+      "seconds": 12.4
     },
     {
       "id": "E10_aj_cassandra_law_lagakos_model_s104",
@@ -51827,12 +51881,14 @@
         "project": "aj_cassandra",
         "seed": 104
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 9,
       "started": "2026-11-28T17:53:17+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-28T17:53:37+00:00",
+      "seconds": 19.9
     },
     {
       "id": "E10_aj_flink_nowait_gmax_lat_s100",
