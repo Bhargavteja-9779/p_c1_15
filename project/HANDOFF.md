@@ -1,13 +1,13 @@
 # HANDOFF — read this first
-*Auto-generated 2026-11-26T12:26:53+00:00 by scripts/write_handoff.py*
+*Auto-generated 2026-11-28T08:46:37+00:00 by scripts/write_handoff.py*
 
 ## READ ALSO: USER_DIRECTIVES.md (owner standing orders)
 
 ## Where we are
 - **Status:** RUNNING   **Cycle:** 3 / 12   **Phase:** PAPER_ROUTE_A   **Pivots:** 0 / 3
-- **Step:** Route A manuscript drafted + strict audit passed; review panel (G10) round 1 next
-- **Last action:** E8 done and analysed; gates G5/G7 updated; journal RESULT
-- **NEXT ACTION:** 1) Dev-only: diagnose dual on nova (results/diag_dev/dual_nova_seed0.txt), design plan_v8 (latency-corrected neighbour posterior r_S = rS/(1-r+rS); combination rule) BEFORE running; grid on Cabral dev only. 2) Find an untouched confirmation dataset (e.g. other JIT datasets with fix dates; ApacheJIT and Cabral test are USED). 3) Update novelty score + blind review. 4) E3 (144 skipped_budget) low priority.
+- **Step:** Route A manuscript v5 complete: four internal review rounds, rounds 3-4 clean (all minor); strict audit 0 unmatched; G10/G11 pass
+- **Last action:** Round-4 fixes applied (v5); SUBMISSION_READINESS updated; triage review/round_4.md
+- **NEXT ACTION:** Human authors: fill Declarations/author placeholders, AI-use statement, deposit code+DOI, graphical-abstract image, convert to journal template, verify manuscript (see SUBMISSION_READINESS.md section 4). Agent: optional length reduction (move Tables 10/13 to supplement), then stop.
 
 - **Selected journal:** JKSU-CIS (Springer Nature, ISSN 1319-1578, IF 6.4 2025; turnaround median 71–74 d, marginal)
 - **Topic:** Verification-latency-aware online JIT-SDP: latency-aware weighting (LAW) of provisionally-clean commits
@@ -16,7 +16,7 @@
 ## Running right now
 - Queue (full): {'done': 1526, 'skipped_budget': 144, 'skipped_plan': 117}; running jobs: none
 - Processes: `none`
-- Heartbeat age: 53454s
+- Heartbeat age: 213038s
 
 ## Compute
 - Cycle 3: 3.31 h / 15 h   Global: 29.50 h / 120 h (CPU-hours; machine has no GPU)
@@ -32,9 +32,9 @@
 | G6 | fail | no surviving method to ablate |
 | G7 | pass | H3 (denoising the wait set recovers most of the wait->oracle gap) holds on Cabral test (10/10) AND on fresh ApacheJIT (9/9 projects vs wait_W90, Holm p=0.0078; gap recovered 0.90 of means; per project 0.75-0.98): results/statistics.json E8_secondary_* |
 | G8 | pass | tests/test_no_future.py (future discoveries do not change past predictions for nowait/wait/orb/law/awt); dev/test project split fixed before modelling; decomp is a diagnostic using true labels, never a competitor |
-| G9 | unknown |  |
-| G10 | unknown |  |
-| G11 | unknown |  |
+| G9 | pass (sampled) | 2026-11-26: re-ran 12 stored cells from current code (8 Table-7 configs npm s100 via scripts/reproduce_table7.py; E8 kafka decomp/odasc/dual s100; E3b npm wait_W30 s100): all identical to 4 decimals; README 'Reproducing the paper' maps every table to commands |
+| G10 | pass (internal, simulated) | Four internal review rounds by fresh AI-agent reviewers (review/round_1..4_R*.md). Rounds 3 and 4: all three reviewers minor revision (7/7/8 and 7.5/8/8.5), no blocking concern. Not peer review. |
+| G11 | pass | scripts/audit_paper_strict.py: 0 unmatched on manuscript v5; build_references.py: 45 refs, all cited |
 
 ## Last 10 decisions
 - 2026-11-25T13:34:47+00:00: Added scripts/freeze_v6.py and enqueue E8 (plan_v7 ApacheJIT confirmation, exactly the plan_v7 method list); ApacheJIT downloaded and sha256-verified; smoke test on the first 1200 kafka commits checked only that every method runs (no metrics inspected)
@@ -51,6 +51,7 @@
 ## Last failures (journal entries)
 - journal/ENTRIES/20261124T040516_FAILURE_the_pre_specified_law_method_loses_to_a_tuned_wait.md
 - journal/ENTRIES/20261124T124615_FAILURE_infrastructure__new_experiment_ran_on_stale_code.md
+- journal/ENTRIES/20261126T130115_FAILURE_the_threshold_result_does_not_replicate_on_fresh_d.md
 - journal/ENTRIES/20261124T131954_DEAD END_adaptive_waiting_time__awt__gives_no_gain_on_dev.md
 
 ## Commands (run from `project/`)

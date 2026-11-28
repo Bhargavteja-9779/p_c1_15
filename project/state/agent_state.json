@@ -1,35 +1,35 @@
 {
-  "status": "RUNNING",
-  "cycle": 3,
-  "phase": "PAPER_ROUTE_A",
-  "step": "Route A manuscript drafted + strict audit passed; review panel (G10) round 1 next",
-  "pivots": 0,
-  "topic_id": null,
-  "journal": "JKSU-CIS (Springer Nature, ISSN 1319-1578, IF 6.4 2025; turnaround median 71\u201374 d, marginal)",
-  "last_action": "E8 done and analysed; gates G5/G7 updated; journal RESULT",
-  "next_action": "1) Dev-only: diagnose dual on nova (results/diag_dev/dual_nova_seed0.txt), design plan_v8 (latency-corrected neighbour posterior r_S = rS/(1-r+rS); combination rule) BEFORE running; grid on Cabral dev only. 2) Find an untouched confirmation dataset (e.g. other JIT datasets with fix dates; ApacheJIT and Cabral test are USED). 3) Update novelty score + blind review. 4) E3 (144 skipped_budget) low priority.",
-  "config": {
-    "TARGET_TIER": "Q1 journal (JCR), reputable publisher",
-    "MAX_DAYS_SUBMIT_TO_ACCEPT": 72,
-    "COMPUTE_PER_CYCLE_H": 15,
-    "GLOBAL_COMPUTE_CEILING_H": 120,
-    "MAX_CYCLES": 12,
-    "MAX_PIVOTS": 3,
-    "SEEDS_EXPLORE": [
-      0,
-      1,
-      2
-    ],
-    "SEEDS_CONFIRM": [
-      100,
-      101,
-      102,
-      103,
-      104
-    ]
-  },
-  "seeds_confirm_fixed_at": "2026-11-24 (project start; never change)",
-  "updated": "2026-11-26T12:26:53+00:00",
-  "topic": "Verification-latency-aware online JIT-SDP: latency-aware weighting (LAW) of provisionally-clean commits",
-  "hypothesis": "LAW beats the best tuned waiting-time baseline by >=0.02 G-mean on 10 held-out projects (Holm p<0.05)"
+ "status": "RUNNING",
+ "cycle": 3,
+ "phase": "PAPER_ROUTE_A",
+ "step": "Route A manuscript v5 complete: four internal review rounds, rounds 3-4 clean (all minor); strict audit 0 unmatched; G10/G11 pass",
+ "pivots": 0,
+ "topic_id": null,
+ "journal": "JKSU-CIS (Springer Nature, ISSN 1319-1578, IF 6.4 2025; turnaround median 71\u201374 d, marginal)",
+ "last_action": "Round-4 fixes applied (v5); SUBMISSION_READINESS updated; triage review/round_4.md",
+ "next_action": "Human authors: fill Declarations/author placeholders, AI-use statement, deposit code+DOI, graphical-abstract image, convert to journal template, verify manuscript (see SUBMISSION_READINESS.md section 4). Agent: optional length reduction (move Tables 10/13 to supplement), then stop.",
+ "config": {
+  "TARGET_TIER": "Q1 journal (JCR), reputable publisher",
+  "MAX_DAYS_SUBMIT_TO_ACCEPT": 72,
+  "COMPUTE_PER_CYCLE_H": 15,
+  "GLOBAL_COMPUTE_CEILING_H": 120,
+  "MAX_CYCLES": 12,
+  "MAX_PIVOTS": 3,
+  "SEEDS_EXPLORE": [
+   0,
+   1,
+   2
+  ],
+  "SEEDS_CONFIRM": [
+   100,
+   101,
+   102,
+   103,
+   104
+  ]
+ },
+ "seeds_confirm_fixed_at": "2026-11-24 (project start; never change)",
+ "updated": "2026-11-26T12:26:53+00:00",
+ "topic": "Verification-latency-aware online JIT-SDP: latency-aware weighting (LAW) of provisionally-clean commits",
+ "hypothesis": "LAW beats the best tuned waiting-time baseline by >=0.02 G-mean on 10 held-out projects (Holm p<0.05)"
 }
