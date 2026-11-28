@@ -1,20 +1,21 @@
 # Submission readiness: JKSU-CIS, Route A (empirical paper)
 
-Updated 2026-11-28, branch `claude/zealous-lamport-bjc4um`. Every number in the manuscript traces to a result file: `python scripts/audit_paper_strict.py` reports 0 unmatched.
+Updated 2026-11-28 (manuscript v5), branch `claude/zealous-lamport-bjc4um`. Every number in the manuscript traces to a result file: `python scripts/audit_paper_strict.py` reports 0 unmatched.
 
 ## 1. Status
 
-- **Manuscript.** `paper/manuscript.md` (v4) is an empirical study: *Where does verification latency hurt online just-in-time defect prediction? A label-noise decomposition on 23 projects*. It does not claim a new method that beats the baselines, because that claim failed on held-out and fresh data.
+- **Manuscript.** `paper/manuscript.md` (v5) is an empirical study: *Where does verification latency hurt online just-in-time defect prediction? A label-noise decomposition on 23 projects*. It does not claim a new method that beats the baselines, because that claim failed on held-out and fresh data.
 - **Supporting files.** Highlights, cover letter, a graphical-abstract brief, 45 DOI-checked references, figures 1–3, tables 1–14 and supplementary items S1–S6.
-- **Internal review.** Three rounds of simulated review, run by AI agents with a fresh context. These are not peer review.
+- **Internal review.** Four rounds of simulated review, run by AI agents with a fresh context. These are not peer review.
 
   | Round | Methods | Novelty | Clarity |
   |:--|:--|:--|:--|
   | 1 | 5 | 5 | 6 |
   | 2 | 6 | 5 | 7 |
   | 3 | 7 (minor) | 7 (minor) | 8 (minor) |
+  | 4 | 7.5 (minor) | 8 (minor) | 8.5 (minor) |
 
-  Round 4 is in progress. Triage and responses are in `review/round_*.md`.
+  Rounds 3 and 4 raised no blocking concern. Triage and responses are in `review/round_*.md`.
 - **Acceptance is not guaranteed.** JKSU-CIS mostly publishes method papers. Section 2.5 argues the fit (a benchmark protocol and bounds for method papers), but an empirical-SE venue would fit more naturally.
 
 ## 2. What the paper shows (held-out and fresh data)

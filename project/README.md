@@ -23,7 +23,7 @@ The development/test split of the Cabral projects (dev = fabric, neutron, nova, 
 python scripts/get_data.py            # Cabral (ARFF checksums asserted) + ApacheJIT (zip checksum asserted)
 python scripts/review1_shapley.py     # 2x2 / Shapley decomposition, W=30 and W=90 (Table 6)
 python scripts/paper_numbers.py       # paper/tables/*.md, paper/figures/*.png, results/paper_numbers.json
-python scripts/test_set_usage.py      # Supplementary Table S3: every configuration ever run on the Cabral test projects (scans all branches)
+python scripts/test_set_usage.py      # Supplementary Table S1: every configuration ever run on the Cabral test projects (scans all branches; expects this folder as project/ inside the git repository, or set REPO_ROOT)
 python scripts/build_references.py    # reference list from Crossref metadata + citation cross-check
 python scripts/audit_paper_strict.py  # every number in the manuscript traced to a declared source (must print Unmatched: 0)
 python tests/test_no_future.py && python tests/test_no_future_threshold_rules.py   # leakage tests
@@ -60,6 +60,6 @@ Then run the fast path. `run_all.py --mode quick` is a smoke test of the queue i
 | Table 10 (operating point, dev) | `T6_rq5_operating_point_dev.md` |
 | Table 11 (threshold, Cabral) | `T7_rq5_threshold_cabral_test_independent_lineage.md` (script `reproduce_table7.py`) |
 | Tables 12–13 (threshold, ApacheJIT) | `T11_A5_threshold_apachejit.md`, `T11b_A5_tests.md` |
-| Supplementary S1–S6 | S1 `S3_test_set_usage.md`; S2 `S2_cabral_rows_vs_mstdp.md`; S3 `results/review1/flip_counts.json`; S4 `T9`, `T12` (G-mean rows), `T4b`, `T5b`, `T3c`; S5 `T10_A4_eval_gap730.md`; S6 `S1_delay_estimator.md` (file names predate the final numbering) |
+| Supplementary S1–S6 | S1 `S1_test_set_usage.md`; S2 `S2_cabral_rows_vs_mstdp.md`; S3 `results/review1/flip_counts.json`; S4 `T9`, `T12` (G-mean rows), `T4b`, `T5b`, `T3c`; S5 `S5_eval_gap730.md`; S6 `S6_delay_estimator.md` |
 | Figs. 1–3 | `paper/figures/F1_discovery_delay.png`, `F2_gap_recovered.png`, `F3_age_strata.png` |
 Plans that fixed each configuration before its confirmatory run: `experiments/plan_v1.yaml` … `plan_v9_review2.yaml` (main lineage) and `archive/zealous_lamport_cycle1/experiments/plan_v1-v3.yaml` (lineage 2). Every configuration evaluated is listed in `state/variants_tried.csv` and `archive/zealous_lamport_cycle1/state/variants_tried.csv`.

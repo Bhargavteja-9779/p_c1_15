@@ -1,46 +1,46 @@
 {
-  "G1": {
-    "status": "pass (marginal; caveat stated)",
-    "evidence": "journal_selection/selected_journal.md \u2014 median 71 d (12 m) / 74 d (24 m); 2025 quartile UNVERIFIED"
-  },
-  "G2": {
-    "status": "fail (in progress)",
-    "evidence": "state/novelty_ledger.json: 12 papers logged as opened (abstract or full text) + 13 JKSU papers in literature/journal_papers_matrix.csv; claim table present; need >=30 opened and full-text check of dormant-defects (TOSEM 2021)"
-  },
-  "G3": {
-    "status": "fail",
-    "evidence": "self-score 14/25 cycle 1 (state/novelty_ledger.json scores); no blind review yet"
-  },
-  "G4": {
-    "status": "partial",
-    "evidence": "wait/ORB reproduced under same protocol with equal tuning budget (tables/E0_dev_tuning.csv); ODaSC not reimplemented; published ORB numbers use a different learner (Hoeffding trees) -> not directly comparable"
-  },
-  "G5": {
-    "status": "fail",
-    "evidence": "results/statistics.json E8_planv7_H6_primary_vs_baselines (ApacheJIT, 9 fresh projects): primary odasc_W30_t0.8 vs wait_W90 +0.0012 (Holm p=0.60), vs orb_W90 +0.0114 (Holm p=0.60). Our candidates descriptive only: dual_W30_k50 +0.0186/+0.0288/+0.0175 vs wait_W90/orb_W90/odasc (8/9 wins vs orb and odasc, Holm p=0.16-0.20); lawm_soft_W30 +0.011/+0.022/+0.010"
-  },
-  "G6": {
-    "status": "fail",
-    "evidence": "no surviving method to ablate"
-  },
-  "G7": {
-    "status": "pass",
-    "evidence": "H3 (denoising the wait set recovers most of the wait->oracle gap) holds on Cabral test (10/10) AND on fresh ApacheJIT (9/9 projects vs wait_W90, Holm p=0.0078; gap recovered 0.90 of means; per project 0.75-0.98): results/statistics.json E8_secondary_*"
-  },
-  "G8": {
-    "status": "pass",
-    "evidence": "tests/test_no_future.py (future discoveries do not change past predictions for nowait/wait/orb/law/awt); dev/test project split fixed before modelling; decomp is a diagnostic using true labels, never a competitor"
-  },
-  "G9": {
-    "status": "pass (sampled)",
-    "evidence": "2026-11-26: re-ran 12 stored cells from current code (8 Table-7 configs npm s100 via scripts/reproduce_table7.py; E8 kafka decomp/odasc/dual s100; E3b npm wait_W30 s100): all identical to 4 decimals; README 'Reproducing the paper' maps every table to commands"
-  },
-  "G10": {
-    "status": "unknown",
-    "evidence": ""
-  },
-  "G11": {
-    "status": "pass",
-    "evidence": "scripts/audit_paper_strict.py: 0 unmatched against declared sources only"
-  }
+ "G1": {
+  "status": "pass (marginal; caveat stated)",
+  "evidence": "journal_selection/selected_journal.md \u2014 median 71 d (12 m) / 74 d (24 m); 2025 quartile UNVERIFIED"
+ },
+ "G2": {
+  "status": "fail (in progress)",
+  "evidence": "state/novelty_ledger.json: 12 papers logged as opened (abstract or full text) + 13 JKSU papers in literature/journal_papers_matrix.csv; claim table present; need >=30 opened and full-text check of dormant-defects (TOSEM 2021)"
+ },
+ "G3": {
+  "status": "fail",
+  "evidence": "self-score 14/25 cycle 1 (state/novelty_ledger.json scores); no blind review yet"
+ },
+ "G4": {
+  "status": "partial",
+  "evidence": "wait/ORB reproduced under same protocol with equal tuning budget (tables/E0_dev_tuning.csv); ODaSC not reimplemented; published ORB numbers use a different learner (Hoeffding trees) -> not directly comparable"
+ },
+ "G5": {
+  "status": "fail",
+  "evidence": "results/statistics.json E8_planv7_H6_primary_vs_baselines (ApacheJIT, 9 fresh projects): primary odasc_W30_t0.8 vs wait_W90 +0.0012 (Holm p=0.60), vs orb_W90 +0.0114 (Holm p=0.60). Our candidates descriptive only: dual_W30_k50 +0.0186/+0.0288/+0.0175 vs wait_W90/orb_W90/odasc (8/9 wins vs orb and odasc, Holm p=0.16-0.20); lawm_soft_W30 +0.011/+0.022/+0.010"
+ },
+ "G6": {
+  "status": "fail",
+  "evidence": "no surviving method to ablate"
+ },
+ "G7": {
+  "status": "pass",
+  "evidence": "H3 (denoising the wait set recovers most of the wait->oracle gap) holds on Cabral test (10/10) AND on fresh ApacheJIT (9/9 projects vs wait_W90, Holm p=0.0078; gap recovered 0.90 of means; per project 0.75-0.98): results/statistics.json E8_secondary_*"
+ },
+ "G8": {
+  "status": "pass",
+  "evidence": "tests/test_no_future.py (future discoveries do not change past predictions for nowait/wait/orb/law/awt); dev/test project split fixed before modelling; decomp is a diagnostic using true labels, never a competitor"
+ },
+ "G9": {
+  "status": "pass (sampled)",
+  "evidence": "2026-11-26: re-ran 12 stored cells from current code (8 Table-7 configs npm s100 via scripts/reproduce_table7.py; E8 kafka decomp/odasc/dual s100; E3b npm wait_W30 s100): all identical to 4 decimals; README 'Reproducing the paper' maps every table to commands"
+ },
+ "G10": {
+  "status": "pass (internal, simulated)",
+  "evidence": "Four internal review rounds by fresh AI-agent reviewers (review/round_1..4_R*.md). Rounds 3 and 4: all three reviewers minor revision (7/7/8 and 7.5/8/8.5), no blocking concern. Not peer review."
+ },
+ "G11": {
+  "status": "pass",
+  "evidence": "scripts/audit_paper_strict.py: 0 unmatched on manuscript v5; build_references.py: 45 refs, all cited"
+ }
 }

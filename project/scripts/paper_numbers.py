@@ -167,7 +167,7 @@ for blk in _re.finditer(r"(\w+) T@([\d.]+).*?S_true\s+\[([^\]]+)\]\s+S_lagak\s+\
     pr, at, st, sl, sn = blk.groups(); st, sl, sn = [list(map(float, x.split(","))) for x in (st, sl, sn)]
     for a, t_, l_, n_ in zip([7, 30, 90, 180, 365], st, sl, sn):
         rows.append(dict(project=pr, at_share_of_history=float(at), age_days=a, S_true=t_, S_truncation_corrected=l_, S_naive=n_))
-SD = pd.DataFrame(rows); SD.to_markdown(P / "tables" / "S1_delay_estimator.md", index=False, floatfmt=".3f")
+SD = pd.DataFrame(rows); SD.to_markdown(P / "tables" / "S6_delay_estimator.md", index=False, floatfmt=".3f")
 N["s1_max_abs_err_lagakos"] = f3((SD.S_truncation_corrected - SD.S_true).abs().max()); N["s1_max_abs_err_naive"] = f3((SD.S_naive - SD.S_true).abs().max())
 N["s1_mean_abs_err_lagakos"] = f3((SD.S_truncation_corrected - SD.S_true).abs().mean()); N["s1_mean_abs_err_naive"] = f3((SD.S_naive - SD.S_true).abs().mean())
 CP = pd.DataFrame(json.load(open(R / "review1" / "cabral_copy_rows_vs_mstdp.json"))).T
@@ -240,7 +240,7 @@ if RV.exists():
                 c = _cmp(a4.loc["decomp_L1_W30_gap730"], a4.loc["wait_W30_gap730"], "L1-W30 vs Wait-30 (gap 730)")
                 res[fam] = dict({k.replace("_gap730", ""): f3(v) for k, v in m_.items()}, share_W30=f3((l1 - w) / (o - w)),
                                 L1_vs_wait30_diff=c["mean_diff"], wins=c["wins"], losses=c["losses"], wilcoxon_p=f4(c["wilcoxon_p"]))
-        if res: N["a4_gap730"] = res; pd.DataFrame(res).T.to_markdown(P / "tables" / "T10_A4_eval_gap730.md")
+        if res: N["a4_gap730"] = res; pd.DataFrame(res).T.to_markdown(P / "tables" / "S5_eval_gap730.md")
     # A5: threshold rule on ApacheJIT (confirmatory, plan_v8 H9; Holm over 7)
     if (rv.analysis == "A5").any() and rv[rv.analysis == "A5"].shape[0] >= 450:
         a5 = _pp("A5", rv[rv.analysis == "A5"].variant.unique(), AJ); a5auc = _pp("A5", rv[rv.analysis == "A5"].variant.unique(), AJ, "auc")

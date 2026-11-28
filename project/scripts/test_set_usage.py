@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Count every configuration ever run on the 10 Cabral test projects, across ALL commits of ALL branches in git history.
-Writes results/review1/test_set_usage.json and paper/tables/S3_test_set_usage.md. Covers committed results only."""
+Writes results/review1/test_set_usage.json and paper/tables/S1_test_set_usage.md. Covers committed results only."""
 import subprocess, re, json, os, collections
 ROOT = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-REPO = os.path.dirname(ROOT)
+REPO = os.environ.get("REPO_ROOT", os.path.dirname(ROOT))   # git repository that contains this project folder as project/
 TEST = ["brackets","broadleaf","camel","jgroups","matplotlib","npm","spring-integration","tomcat","wagtail","zulip"]
 g = lambda *a: subprocess.run(["git", "-C", REPO, *a], capture_output=True, text=True).stdout
 commits = sorted(set(g("log", "--all", "--format=%h", "--", "project/results", "project/archive").split()))
@@ -38,5 +38,5 @@ out = dict(n_commits_scanned=len(commits),
            n_configs_review_analyses=len(rev), rows=rows)
 json.dump(out, open(os.path.join(ROOT, "results", "review1", "test_set_usage.json"), "w"), indent=1)
 import pandas as pd
-pd.DataFrame(rows).to_markdown(os.path.join(ROOT, "paper", "tables", "S3_test_set_usage.md"), index=False)
+pd.DataFrame(rows).to_markdown(os.path.join(ROOT, "paper", "tables", "S1_test_set_usage.md"), index=False)
 print({k: v for k, v in out.items() if k != "rows"})
