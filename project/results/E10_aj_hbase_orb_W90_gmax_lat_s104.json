@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E10",
+    "project": "aj_hbase",
+    "method": "orb",
+    "variant": "orb_W90_gmax_lat",
+    "seed": 104,
+    "split": "apachejit",
+    "W": 90,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.7088323182732528,
+    "r0": 0.7271692745376956,
+    "r1": 0.690957763236169,
+    "rdiff": 0.036211511301526667,
+    "auc": 0.7835183284352012,
+    "mcc": 0.418457190788383,
+    "n_eval": 6877,
+    "seconds": 12.66,
+    "n_inspected": 0,
+    "job_id": "E10_aj_hbase_orb_W90_gmax_lat_s104",
+    "written": "2026-11-28T17:59:07+00:00",
+    "cycle": 2
+  }
+]

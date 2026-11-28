@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E10",
+    "project": "aj_flink",
+    "method": "orb",
+    "variant": "orb_W90_gmax_lat",
+    "seed": 103,
+    "split": "apachejit",
+    "W": 90,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.7249222407721179,
+    "r0": 0.6432174887892377,
+    "r1": 0.8170055452865065,
+    "rdiff": 0.1737880564972688,
+    "auc": 0.7904689611083942,
+    "mcc": 0.44703789901838037,
+    "n_eval": 5732,
+    "seconds": 18.0,
+    "n_inspected": 0,
+    "job_id": "E10_aj_flink_orb_W90_gmax_lat_s103",
+    "written": "2026-11-28T17:56:20+00:00",
+    "cycle": 2
+  }
+]

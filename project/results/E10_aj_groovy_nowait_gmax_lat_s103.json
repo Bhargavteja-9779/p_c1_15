@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E10",
+    "project": "aj_groovy",
+    "method": "nowait",
+    "variant": "nowait_gmax_lat",
+    "seed": 103,
+    "split": "apachejit",
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6754796945797693,
+    "r0": 0.5652173913043478,
+    "r1": 0.8072519083969466,
+    "rdiff": 0.24203451709259882,
+    "auc": 0.6910713574510455,
+    "mcc": 0.3303886621926959,
+    "n_eval": 3923,
+    "seconds": 7.41,
+    "n_inspected": 0,
+    "job_id": "E10_aj_groovy_nowait_gmax_lat_s103",
+    "written": "2026-11-28T17:57:14+00:00",
+    "cycle": 2
+  }
+]

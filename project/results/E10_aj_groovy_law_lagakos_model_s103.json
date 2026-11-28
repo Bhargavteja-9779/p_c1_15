@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E10",
+    "project": "aj_groovy",
+    "method": "law",
+    "variant": "law_lagakos_model",
+    "seed": 103,
+    "split": "apachejit",
+    "delay_est": "lagakos",
+    "prior": "model",
+    "gmean": 0.6480996755994514,
+    "r0": 0.7589565217391304,
+    "r1": 0.5534351145038168,
+    "rdiff": 0.20552140723531365,
+    "auc": 0.6870587454364421,
+    "mcc": 0.29523090981928596,
+    "n_eval": 3923,
+    "seconds": 13.76,
+    "n_inspected": 0,
+    "job_id": "E10_aj_groovy_law_lagakos_model_s103",
+    "written": "2026-11-28T17:57:07+00:00",
+    "cycle": 2
+  }
+]

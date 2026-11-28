@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E10",
+    "project": "aj_flink",
+    "method": "odasc",
+    "variant": "odasc_W30_gmax_lat",
+    "seed": 103,
+    "split": "apachejit",
+    "W": 30,
+    "odasc_delta": 0.9,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.7281134032592513,
+    "r0": 0.7003923766816144,
+    "r1": 0.7569316081330869,
+    "rdiff": 0.05653923145147255,
+    "auc": 0.8075342254627289,
+    "mcc": 0.44407693073087295,
+    "n_eval": 5732,
+    "seconds": 21.93,
+    "n_inspected": 0,
+    "job_id": "E10_aj_flink_odasc_W30_gmax_lat_s103",
+    "written": "2026-11-28T17:56:00+00:00",
+    "cycle": 2
+  }
+]

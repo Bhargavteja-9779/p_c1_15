@@ -51386,12 +51386,14 @@
         "project": "aj_cassandra",
         "seed": 100
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 9,
       "started": "2026-11-28T17:54:08+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-28T17:54:19+00:00",
+      "seconds": 11.5
     },
     {
       "id": "E10_aj_cassandra_odasc_W30_gmax_lat_s100",
@@ -51494,12 +51496,14 @@
         "project": "aj_cassandra",
         "seed": 101
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 9,
       "started": "2026-11-28T17:54:09+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-28T17:54:21+00:00",
+      "seconds": 12.0
     },
     {
       "id": "E10_aj_cassandra_odasc_W30_gmax_lat_s101",
@@ -51602,12 +51606,14 @@
         "project": "aj_cassandra",
         "seed": 102
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 9,
       "started": "2026-11-28T17:54:15+00:00",
-      "worker": 3
+      "worker": 3,
+      "finished": "2026-11-28T17:54:26+00:00",
+      "seconds": 11.6
     },
     {
       "id": "E10_aj_cassandra_odasc_W30_gmax_lat_s102",
@@ -51710,12 +51716,14 @@
         "project": "aj_cassandra",
         "seed": 103
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 9,
       "started": "2026-11-28T17:54:16+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-28T17:54:28+00:00",
+      "seconds": 11.3
     },
     {
       "id": "E10_aj_cassandra_odasc_W30_gmax_lat_s103",
@@ -51818,10 +51826,14 @@
         "project": "aj_cassandra",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:54:19+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:54:30+00:00",
+      "seconds": 10.8
     },
     {
       "id": "E10_aj_cassandra_odasc_W30_gmax_lat_s104",
@@ -51902,10 +51914,14 @@
         "project": "aj_flink",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:54:58+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:55:18+00:00",
+      "seconds": 20.4
     },
     {
       "id": "E10_aj_flink_wait_W90_gmax_lat_s100",
@@ -51920,10 +51936,14 @@
         "project": "aj_flink",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:56:18+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:56:38+00:00",
+      "seconds": 20.3
     },
     {
       "id": "E10_aj_flink_odasc_W30_gmax_lat_s100",
@@ -51939,10 +51959,14 @@
         "project": "aj_flink",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:55:21+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:55:42+00:00",
+      "seconds": 20.5
     },
     {
       "id": "E10_aj_flink_orb_W90_gmax_lat_s100",
@@ -51957,10 +51981,14 @@
         "project": "aj_flink",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:55:48+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:56:07+00:00",
+      "seconds": 19.2
     },
     {
       "id": "E10_aj_flink_law_lagakos_model_s100",
@@ -51975,10 +52003,14 @@
         "project": "aj_flink",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:54:21+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:54:52+00:00",
+      "seconds": 31.4
     },
     {
       "id": "E10_aj_flink_nowait_gmax_lat_s101",
@@ -51992,10 +52024,14 @@
         "project": "aj_flink",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:54:59+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:55:19+00:00",
+      "seconds": 19.4
     },
     {
       "id": "E10_aj_flink_wait_W90_gmax_lat_s101",
@@ -52010,10 +52046,14 @@
         "project": "aj_flink",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:56:18+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:56:39+00:00",
+      "seconds": 20.9
     },
     {
       "id": "E10_aj_flink_odasc_W30_gmax_lat_s101",
@@ -52029,10 +52069,14 @@
         "project": "aj_flink",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:55:25+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:55:48+00:00",
+      "seconds": 22.4
     },
     {
       "id": "E10_aj_flink_orb_W90_gmax_lat_s101",
@@ -52047,10 +52091,14 @@
         "project": "aj_flink",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:55:58+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:56:18+00:00",
+      "seconds": 19.2
     },
     {
       "id": "E10_aj_flink_law_lagakos_model_s101",
@@ -52065,10 +52113,14 @@
         "project": "aj_flink",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:54:26+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:54:58+00:00",
+      "seconds": 31.3
     },
     {
       "id": "E10_aj_flink_nowait_gmax_lat_s102",
@@ -52082,10 +52134,14 @@
         "project": "aj_flink",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:55:02+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:55:21+00:00",
+      "seconds": 19.1
     },
     {
       "id": "E10_aj_flink_wait_W90_gmax_lat_s102",
@@ -52100,10 +52156,14 @@
         "project": "aj_flink",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:56:20+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:56:41+00:00",
+      "seconds": 20.6
     },
     {
       "id": "E10_aj_flink_odasc_W30_gmax_lat_s102",
@@ -52119,10 +52179,14 @@
         "project": "aj_flink",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:55:37+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:55:58+00:00",
+      "seconds": 21.4
     },
     {
       "id": "E10_aj_flink_orb_W90_gmax_lat_s102",
@@ -52137,10 +52201,14 @@
         "project": "aj_flink",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:56:00+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:56:18+00:00",
+      "seconds": 18.2
     },
     {
       "id": "E10_aj_flink_law_lagakos_model_s102",
@@ -52155,10 +52223,14 @@
         "project": "aj_flink",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:54:28+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:54:59+00:00",
+      "seconds": 31.8
     },
     {
       "id": "E10_aj_flink_nowait_gmax_lat_s103",
@@ -52172,10 +52244,14 @@
         "project": "aj_flink",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:55:18+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:55:37+00:00",
+      "seconds": 18.7
     },
     {
       "id": "E10_aj_flink_wait_W90_gmax_lat_s103",
@@ -52190,10 +52266,14 @@
         "project": "aj_flink",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:56:27+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:56:46+00:00",
+      "seconds": 18.6
     },
     {
       "id": "E10_aj_flink_odasc_W30_gmax_lat_s103",
@@ -52209,10 +52289,14 @@
         "project": "aj_flink",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:55:38+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:56:00+00:00",
+      "seconds": 22.0
     },
     {
       "id": "E10_aj_flink_orb_W90_gmax_lat_s103",
@@ -52227,10 +52311,14 @@
         "project": "aj_flink",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:56:02+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:56:20+00:00",
+      "seconds": 18.0
     },
     {
       "id": "E10_aj_flink_law_lagakos_model_s103",
@@ -52245,10 +52333,14 @@
         "project": "aj_flink",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:54:30+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:55:02+00:00",
+      "seconds": 31.7
     },
     {
       "id": "E10_aj_flink_nowait_gmax_lat_s104",
@@ -52262,10 +52354,14 @@
         "project": "aj_flink",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:55:19+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:55:38+00:00",
+      "seconds": 19.1
     },
     {
       "id": "E10_aj_flink_wait_W90_gmax_lat_s104",
@@ -52280,10 +52376,14 @@
         "project": "aj_flink",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:56:38+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:56:56+00:00",
+      "seconds": 17.9
     },
     {
       "id": "E10_aj_flink_odasc_W30_gmax_lat_s104",
@@ -52299,10 +52399,14 @@
         "project": "aj_flink",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:55:42+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:56:02+00:00",
+      "seconds": 20.5
     },
     {
       "id": "E10_aj_flink_orb_W90_gmax_lat_s104",
@@ -52317,10 +52421,14 @@
         "project": "aj_flink",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:56:07+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:56:27+00:00",
+      "seconds": 20.4
     },
     {
       "id": "E10_aj_flink_law_lagakos_model_s104",
@@ -52335,10 +52443,14 @@
         "project": "aj_flink",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:54:52+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:55:25+00:00",
+      "seconds": 33.0
     },
     {
       "id": "E10_aj_groovy_nowait_gmax_lat_s100",
@@ -52352,10 +52464,14 @@
         "project": "aj_groovy",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:56:56+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:57:04+00:00",
+      "seconds": 8.1
     },
     {
       "id": "E10_aj_groovy_wait_W90_gmax_lat_s100",
@@ -52370,10 +52486,14 @@
         "project": "aj_groovy",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:57:31+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:57:39+00:00",
+      "seconds": 8.3
     },
     {
       "id": "E10_aj_groovy_odasc_W30_gmax_lat_s100",
@@ -52389,10 +52509,14 @@
         "project": "aj_groovy",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:57:07+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:57:16+00:00",
+      "seconds": 9.1
     },
     {
       "id": "E10_aj_groovy_orb_W90_gmax_lat_s100",
@@ -52407,10 +52531,14 @@
         "project": "aj_groovy",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:57:20+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:57:29+00:00",
+      "seconds": 8.2
     },
     {
       "id": "E10_aj_groovy_law_lagakos_model_s100",
@@ -52425,10 +52553,14 @@
         "project": "aj_groovy",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:56:39+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:56:53+00:00",
+      "seconds": 13.6
     },
     {
       "id": "E10_aj_groovy_nowait_gmax_lat_s101",
@@ -52442,10 +52574,14 @@
         "project": "aj_groovy",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:56:59+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:57:07+00:00",
+      "seconds": 7.9
     },
     {
       "id": "E10_aj_groovy_wait_W90_gmax_lat_s101",
@@ -52460,10 +52596,14 @@
         "project": "aj_groovy",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:57:33+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:57:41+00:00",
+      "seconds": 8.0
     },
     {
       "id": "E10_aj_groovy_odasc_W30_gmax_lat_s101",
@@ -52479,10 +52619,14 @@
         "project": "aj_groovy",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:57:12+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:57:20+00:00",
+      "seconds": 8.5
     },
     {
       "id": "E10_aj_groovy_orb_W90_gmax_lat_s101",
@@ -52497,10 +52641,14 @@
         "project": "aj_groovy",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:57:23+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:57:31+00:00",
+      "seconds": 8.0
     },
     {
       "id": "E10_aj_groovy_law_lagakos_model_s101",
@@ -52515,10 +52663,14 @@
         "project": "aj_groovy",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:56:41+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:56:53+00:00",
+      "seconds": 12.5
     },
     {
       "id": "E10_aj_groovy_nowait_gmax_lat_s102",
@@ -52532,10 +52684,14 @@
         "project": "aj_groovy",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:57:04+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:57:12+00:00",
+      "seconds": 7.8
     },
     {
       "id": "E10_aj_groovy_wait_W90_gmax_lat_s102",
@@ -52550,10 +52706,14 @@
         "project": "aj_groovy",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:57:34+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:57:42+00:00",
+      "seconds": 7.8
     },
     {
       "id": "E10_aj_groovy_odasc_W30_gmax_lat_s102",
@@ -52569,10 +52729,14 @@
         "project": "aj_groovy",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:57:14+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:57:22+00:00",
+      "seconds": 8.7
     },
     {
       "id": "E10_aj_groovy_orb_W90_gmax_lat_s102",
@@ -52587,10 +52751,14 @@
         "project": "aj_groovy",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:57:24+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:57:33+00:00",
+      "seconds": 8.4
     },
     {
       "id": "E10_aj_groovy_law_lagakos_model_s102",
@@ -52605,10 +52773,14 @@
         "project": "aj_groovy",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:56:46+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:56:59+00:00",
+      "seconds": 12.9
     },
     {
       "id": "E10_aj_groovy_nowait_gmax_lat_s103",
@@ -52622,10 +52794,14 @@
         "project": "aj_groovy",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:57:06+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:57:14+00:00",
+      "seconds": 7.4
     },
     {
       "id": "E10_aj_groovy_wait_W90_gmax_lat_s103",
@@ -52640,10 +52816,14 @@
         "project": "aj_groovy",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:57:37+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:57:46+00:00",
+      "seconds": 8.8
     },
     {
       "id": "E10_aj_groovy_odasc_W30_gmax_lat_s103",
@@ -52659,10 +52839,14 @@
         "project": "aj_groovy",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:57:15+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:57:24+00:00",
+      "seconds": 9.6
     },
     {
       "id": "E10_aj_groovy_orb_W90_gmax_lat_s103",
@@ -52677,10 +52861,14 @@
         "project": "aj_groovy",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:57:25+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:57:34+00:00",
+      "seconds": 8.3
     },
     {
       "id": "E10_aj_groovy_law_lagakos_model_s103",
@@ -52695,10 +52883,14 @@
         "project": "aj_groovy",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:56:53+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:57:07+00:00",
+      "seconds": 13.8
     },
     {
       "id": "E10_aj_groovy_nowait_gmax_lat_s104",
@@ -52712,10 +52904,14 @@
         "project": "aj_groovy",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:57:07+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:57:15+00:00",
+      "seconds": 8.0
     },
     {
       "id": "E10_aj_groovy_wait_W90_gmax_lat_s104",
@@ -52730,10 +52926,14 @@
         "project": "aj_groovy",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:57:39+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:57:47+00:00",
+      "seconds": 8.3
     },
     {
       "id": "E10_aj_groovy_odasc_W30_gmax_lat_s104",
@@ -52749,10 +52949,14 @@
         "project": "aj_groovy",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:57:16+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:57:25+00:00",
+      "seconds": 9.0
     },
     {
       "id": "E10_aj_groovy_orb_W90_gmax_lat_s104",
@@ -52767,10 +52971,14 @@
         "project": "aj_groovy",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:57:29+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:57:37+00:00",
+      "seconds": 8.0
     },
     {
       "id": "E10_aj_groovy_law_lagakos_model_s104",
@@ -52785,10 +52993,14 @@
         "project": "aj_groovy",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:56:53+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:57:06+00:00",
+      "seconds": 12.8
     },
     {
       "id": "E10_aj_hbase_nowait_gmax_lat_s100",
@@ -52802,10 +53014,14 @@
         "project": "aj_hbase",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:58:01+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:58:16+00:00",
+      "seconds": 14.8
     },
     {
       "id": "E10_aj_hbase_wait_W90_gmax_lat_s100",
@@ -52820,10 +53036,14 @@
         "project": "aj_hbase",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:59:02+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:59:16+00:00",
+      "seconds": 13.6
     },
     {
       "id": "E10_aj_hbase_odasc_W30_gmax_lat_s100",
@@ -52839,10 +53059,14 @@
         "project": "aj_hbase",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:58:21+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:58:39+00:00",
+      "seconds": 17.3
     },
     {
       "id": "E10_aj_hbase_orb_W90_gmax_lat_s100",
@@ -52857,10 +53081,14 @@
         "project": "aj_hbase",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:58:39+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:58:53+00:00",
+      "seconds": 14.4
     },
     {
       "id": "E10_aj_hbase_law_lagakos_model_s100",
@@ -52875,10 +53103,14 @@
         "project": "aj_hbase",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:57:41+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:58:00+00:00",
+      "seconds": 19.4
     },
     {
       "id": "E10_aj_hbase_nowait_gmax_lat_s101",
@@ -52892,10 +53124,14 @@
         "project": "aj_hbase",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:58:05+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:58:19+00:00",
+      "seconds": 14.5
     },
     {
       "id": "E10_aj_hbase_wait_W90_gmax_lat_s101",
@@ -52910,10 +53146,14 @@
         "project": "aj_hbase",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:59:03+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:59:17+00:00",
+      "seconds": 13.8
     },
     {
       "id": "E10_aj_hbase_odasc_W30_gmax_lat_s101",
@@ -52929,10 +53169,14 @@
         "project": "aj_hbase",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:58:22+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:58:37+00:00",
+      "seconds": 15.4
     },
     {
       "id": "E10_aj_hbase_orb_W90_gmax_lat_s101",
@@ -52947,10 +53191,14 @@
         "project": "aj_hbase",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:58:48+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:59:02+00:00",
+      "seconds": 14.3
     },
     {
       "id": "E10_aj_hbase_law_lagakos_model_s101",
@@ -52965,10 +53213,14 @@
         "project": "aj_hbase",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:57:42+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:58:01+00:00",
+      "seconds": 19.4
     },
     {
       "id": "E10_aj_hbase_nowait_gmax_lat_s102",
@@ -52982,10 +53234,14 @@
         "project": "aj_hbase",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:58:07+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:58:22+00:00",
+      "seconds": 14.4
     },
     {
       "id": "E10_aj_hbase_wait_W90_gmax_lat_s102",
@@ -53000,10 +53256,14 @@
         "project": "aj_hbase",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:59:07+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:59:20+00:00",
+      "seconds": 13.7
     },
     {
       "id": "E10_aj_hbase_odasc_W30_gmax_lat_s102",
@@ -53019,10 +53279,14 @@
         "project": "aj_hbase",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:58:31+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:58:48+00:00",
+      "seconds": 17.2
     },
     {
       "id": "E10_aj_hbase_orb_W90_gmax_lat_s102",
@@ -53037,10 +53301,14 @@
         "project": "aj_hbase",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:58:49+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:59:03+00:00",
+      "seconds": 13.8
     },
     {
       "id": "E10_aj_hbase_law_lagakos_model_s102",
@@ -53055,10 +53323,14 @@
         "project": "aj_hbase",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:57:46+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:58:05+00:00",
+      "seconds": 19.2
     },
     {
       "id": "E10_aj_hbase_nowait_gmax_lat_s103",
@@ -53072,10 +53344,14 @@
         "project": "aj_hbase",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:58:16+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:58:30+00:00",
+      "seconds": 14.5
     },
     {
       "id": "E10_aj_hbase_wait_W90_gmax_lat_s103",
@@ -53090,10 +53366,14 @@
         "project": "aj_hbase",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:59:07+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:59:21+00:00",
+      "seconds": 14.3
     },
     {
       "id": "E10_aj_hbase_odasc_W30_gmax_lat_s103",
@@ -53109,10 +53389,14 @@
         "project": "aj_hbase",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:58:33+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:58:49+00:00",
+      "seconds": 16.7
     },
     {
       "id": "E10_aj_hbase_orb_W90_gmax_lat_s103",
@@ -53127,10 +53411,14 @@
         "project": "aj_hbase",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:58:53+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:59:07+00:00",
+      "seconds": 14.1
     },
     {
       "id": "E10_aj_hbase_law_lagakos_model_s103",
@@ -53145,10 +53433,14 @@
         "project": "aj_hbase",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:57:47+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:58:07+00:00",
+      "seconds": 20.0
     },
     {
       "id": "E10_aj_hbase_nowait_gmax_lat_s104",
@@ -53162,10 +53454,14 @@
         "project": "aj_hbase",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:58:19+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:58:33+00:00",
+      "seconds": 13.4
     },
     {
       "id": "E10_aj_hbase_wait_W90_gmax_lat_s104",
@@ -53180,10 +53476,12 @@
         "project": "aj_hbase",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:59:16+00:00",
+      "worker": 1
     },
     {
       "id": "E10_aj_hbase_odasc_W30_gmax_lat_s104",
@@ -53199,10 +53497,14 @@
         "project": "aj_hbase",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:58:37+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:58:54+00:00",
+      "seconds": 16.7
     },
     {
       "id": "E10_aj_hbase_orb_W90_gmax_lat_s104",
@@ -53217,10 +53519,14 @@
         "project": "aj_hbase",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:58:54+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:59:07+00:00",
+      "seconds": 12.7
     },
     {
       "id": "E10_aj_hbase_law_lagakos_model_s104",
@@ -53235,10 +53541,14 @@
         "project": "aj_hbase",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:58:00+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:58:21+00:00",
+      "seconds": 20.7
     },
     {
       "id": "E10_aj_hive_nowait_gmax_lat_s100",
@@ -53325,10 +53635,12 @@
         "project": "aj_hive",
         "seed": 100
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:59:17+00:00",
+      "worker": 3
     },
     {
       "id": "E10_aj_hive_nowait_gmax_lat_s101",
@@ -53415,10 +53727,12 @@
         "project": "aj_hive",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:59:20+00:00",
+      "worker": 2
     },
     {
       "id": "E10_aj_hive_nowait_gmax_lat_s102",
@@ -53505,10 +53819,12 @@
         "project": "aj_hive",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 9
+      "priority": 9,
+      "started": "2026-11-28T17:59:22+00:00",
+      "worker": 0
     },
     {
       "id": "E10_aj_hive_nowait_gmax_lat_s103",

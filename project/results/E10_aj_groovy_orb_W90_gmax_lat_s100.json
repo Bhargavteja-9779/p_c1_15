@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E10",
+    "project": "aj_groovy",
+    "method": "orb",
+    "variant": "orb_W90_gmax_lat",
+    "seed": 100,
+    "split": "apachejit",
+    "W": 90,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6657532186613762,
+    "r0": 0.6302608695652174,
+    "r1": 0.7032442748091603,
+    "rdiff": 0.07298340524394287,
+    "auc": 0.6881013939595089,
+    "mcc": 0.29613575972874917,
+    "n_eval": 3923,
+    "seconds": 8.2,
+    "n_inspected": 0,
+    "job_id": "E10_aj_groovy_orb_W90_gmax_lat_s100",
+    "written": "2026-11-28T17:57:29+00:00",
+    "cycle": 2
+  }
+]

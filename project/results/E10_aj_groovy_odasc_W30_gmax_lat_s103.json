@@ -1,0 +1,25 @@
+[
+  {
+    "experiment": "E10",
+    "project": "aj_groovy",
+    "method": "odasc",
+    "variant": "odasc_W30_gmax_lat",
+    "seed": 103,
+    "split": "apachejit",
+    "W": 30,
+    "odasc_delta": 0.9,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6698883600040394,
+    "r0": 0.5770434782608695,
+    "r1": 0.7776717557251909,
+    "rdiff": 0.20062827746432133,
+    "auc": 0.6928899767673415,
+    "mcc": 0.314097065284585,
+    "n_eval": 3923,
+    "seconds": 9.59,
+    "n_inspected": 0,
+    "job_id": "E10_aj_groovy_odasc_W30_gmax_lat_s103",
+    "written": "2026-11-28T17:57:24+00:00",
+    "cycle": 2
+  }
+]

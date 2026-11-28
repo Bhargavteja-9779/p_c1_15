@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E10",
+    "project": "aj_groovy",
+    "method": "wait",
+    "variant": "wait_W90_gmax_lat",
+    "seed": 103,
+    "split": "apachejit",
+    "W": 90,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.6776817632098334,
+    "r0": 0.6107826086956522,
+    "r1": 0.7519083969465649,
+    "rdiff": 0.1411257882509127,
+    "auc": 0.714016594756057,
+    "mcc": 0.32108183852178523,
+    "n_eval": 3923,
+    "seconds": 8.73,
+    "n_inspected": 0,
+    "job_id": "E10_aj_groovy_wait_W90_gmax_lat_s103",
+    "written": "2026-11-28T17:57:45+00:00",
+    "cycle": 2
+  }
+]

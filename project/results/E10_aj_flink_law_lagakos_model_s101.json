@@ -1,0 +1,24 @@
+[
+  {
+    "experiment": "E10",
+    "project": "aj_flink",
+    "method": "law",
+    "variant": "law_lagakos_model",
+    "seed": 101,
+    "split": "apachejit",
+    "delay_est": "lagakos",
+    "prior": "model",
+    "gmean": 0.7402570732596294,
+    "r0": 0.7586883408071748,
+    "r1": 0.7222735674676525,
+    "rdiff": 0.036414773339522366,
+    "auc": 0.8094745447311489,
+    "mcc": 0.47195726411671396,
+    "n_eval": 5732,
+    "seconds": 31.22,
+    "n_inspected": 0,
+    "job_id": "E10_aj_flink_law_lagakos_model_s101",
+    "written": "2026-11-28T17:54:58+00:00",
+    "cycle": 2
+  }
+]
