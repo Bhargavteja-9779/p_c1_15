@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E7",
+    "project": "tomcat",
+    "method": "oracle_old",
+    "variant": "oracle_old_H30",
+    "seed": 102,
+    "split": "test",
+    "oracle_H": 30,
+    "gmean": 0.46787678052158127,
+    "r0": 0.9430947334094244,
+    "r1": 0.23211738332993684,
+    "rdiff": 0.7109773500794876,
+    "auc": 0.7173676095247687,
+    "mcc": 0.2561020279472139,
+    "n_eval": 17173,
+    "seconds": 40.94,
+    "n_inspected": 0,
+    "job_id": "E7_tomcat_oracle_old_H30_s102",
+    "written": "2026-11-28T17:44:44+00:00",
+    "cycle": 2
+  }
+]

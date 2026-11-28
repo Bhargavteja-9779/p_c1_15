@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E7",
+    "project": "tomcat",
+    "method": "oracle_young",
+    "variant": "oracle_young_H180",
+    "seed": 103,
+    "split": "test",
+    "oracle_H": 180,
+    "gmean": 0.7080069199087681,
+    "r0": 0.7545247024294799,
+    "r1": 0.6643570409618912,
+    "rdiff": 0.0901676614675887,
+    "auc": 0.7873274804399496,
+    "mcc": 0.3930333946006447,
+    "n_eval": 17173,
+    "seconds": 41.56,
+    "n_inspected": 0,
+    "job_id": "E7_tomcat_oracle_young_H180_s103",
+    "written": "2026-11-28T17:46:12+00:00",
+    "cycle": 2
+  }
+]

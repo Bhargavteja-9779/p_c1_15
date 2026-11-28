@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E7",
+    "project": "wagtail",
+    "method": "nowait",
+    "variant": "nowait",
+    "seed": 103,
+    "split": "test",
+    "gmean": 0.4102798178771226,
+    "r0": 0.9517092598738799,
+    "r1": 0.17687074829931973,
+    "rdiff": 0.7748385115745602,
+    "auc": 0.7308648539623838,
+    "mcc": 0.17442899284604813,
+    "n_eval": 6908,
+    "seconds": 14.47,
+    "n_inspected": 0,
+    "job_id": "E7_wagtail_nowait_s103",
+    "written": "2026-11-28T17:47:13+00:00",
+    "cycle": 2
+  }
+]

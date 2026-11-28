@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E7",
+    "project": "zulip",
+    "method": "nowait",
+    "variant": "nowait",
+    "seed": 101,
+    "split": "test",
+    "gmean": 0.49117792948270284,
+    "r0": 0.9034501693053903,
+    "r1": 0.2670382569039777,
+    "rdiff": 0.6364119124014127,
+    "auc": 0.6654326595023857,
+    "mcc": 0.21578946439732144,
+    "n_eval": 14874,
+    "seconds": 40.62,
+    "n_inspected": 0,
+    "job_id": "E7_zulip_nowait_s101",
+    "written": "2026-11-28T17:48:45+00:00",
+    "cycle": 2
+  }
+]

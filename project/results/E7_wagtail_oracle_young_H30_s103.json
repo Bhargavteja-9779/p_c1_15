@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E7",
+    "project": "wagtail",
+    "method": "oracle_young",
+    "variant": "oracle_young_H30",
+    "seed": 103,
+    "split": "test",
+    "oracle_H": 30,
+    "gmean": 0.6149632630542906,
+    "r0": 0.8894789246598075,
+    "r1": 0.42517006802721086,
+    "rdiff": 0.46430885663259663,
+    "auc": 0.793923421786017,
+    "mcc": 0.2935227672088949,
+    "n_eval": 6908,
+    "seconds": 12.1,
+    "n_inspected": 0,
+    "job_id": "E7_wagtail_oracle_young_H30_s103",
+    "written": "2026-11-28T17:48:15+00:00",
+    "cycle": 2
+  }
+]

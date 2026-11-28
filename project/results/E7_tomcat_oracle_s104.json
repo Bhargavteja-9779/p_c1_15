@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E7",
+    "project": "tomcat",
+    "method": "oracle",
+    "variant": "oracle",
+    "seed": 104,
+    "split": "test",
+    "gmean": 0.7095202594417215,
+    "r0": 0.8036034567096038,
+    "r1": 0.6264520073364581,
+    "rdiff": 0.17715144937314564,
+    "auc": 0.8012688459280328,
+    "mcc": 0.4167423156572591,
+    "n_eval": 17173,
+    "seconds": 41.68,
+    "n_inspected": 0,
+    "job_id": "E7_tomcat_oracle_s104",
+    "written": "2026-11-28T17:45:32+00:00",
+    "cycle": 2
+  }
+]
