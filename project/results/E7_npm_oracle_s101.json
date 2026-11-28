@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E7",
+    "project": "npm",
+    "method": "oracle",
+    "variant": "oracle",
+    "seed": 101,
+    "split": "test",
+    "gmean": 0.6874519633636935,
+    "r0": 0.8125235050770967,
+    "r1": 0.5816326530612245,
+    "rdiff": 0.23089085201587223,
+    "auc": 0.7910738860881235,
+    "mcc": 0.35322580587956004,
+    "n_eval": 6592,
+    "seconds": 11.29,
+    "n_inspected": 0,
+    "job_id": "E7_npm_oracle_s101",
+    "written": "2026-11-28T17:40:56+00:00",
+    "cycle": 2
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "experiment": "E7",
+    "project": "npm",
+    "method": "nowait",
+    "variant": "nowait",
+    "seed": 103,
+    "split": "test",
+    "gmean": 0.2325449960229899,
+    "r0": 0.9842045881910493,
+    "r1": 0.054945054945054944,
+    "rdiff": 0.9292595332459943,
+    "auc": 0.6726878531665509,
+    "mcc": 0.10234127931450834,
+    "n_eval": 6592,
+    "seconds": 14.89,
+    "n_inspected": 0,
+    "job_id": "E7_npm_nowait_s103",
+    "written": "2026-11-28T17:40:25+00:00",
+    "cycle": 2
+  }
+]

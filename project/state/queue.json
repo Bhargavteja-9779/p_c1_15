@@ -45894,10 +45894,14 @@
         "project": "matplotlib",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:39:25+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:40:07+00:00",
+      "seconds": 41.9
     },
     {
       "id": "E7_matplotlib_oracle_young_H180_s101",
@@ -45911,12 +45915,14 @@
         "project": "matplotlib",
         "seed": 101
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 8,
       "started": "2026-11-28T17:38:44+00:00",
-      "worker": 3
+      "worker": 3,
+      "finished": "2026-11-28T17:39:26+00:00",
+      "seconds": 42.1
     },
     {
       "id": "E7_matplotlib_oracle_old_H30_s101",
@@ -46012,10 +46018,14 @@
         "project": "matplotlib",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:39:26+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:40:08+00:00",
+      "seconds": 42.3
     },
     {
       "id": "E7_matplotlib_oracle_young_H180_s102",
@@ -46029,12 +46039,14 @@
         "project": "matplotlib",
         "seed": 102
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 8,
       "started": "2026-11-28T17:38:44+00:00",
-      "worker": 1
+      "worker": 1,
+      "finished": "2026-11-28T17:39:26+00:00",
+      "seconds": 41.9
     },
     {
       "id": "E7_matplotlib_oracle_old_H30_s102",
@@ -46130,10 +46142,14 @@
         "project": "matplotlib",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:39:26+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:40:10+00:00",
+      "seconds": 44.3
     },
     {
       "id": "E7_matplotlib_oracle_young_H180_s103",
@@ -46147,12 +46163,14 @@
         "project": "matplotlib",
         "seed": 103
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 8,
       "started": "2026-11-28T17:38:44+00:00",
-      "worker": 2
+      "worker": 2,
+      "finished": "2026-11-28T17:39:25+00:00",
+      "seconds": 40.3
     },
     {
       "id": "E7_matplotlib_oracle_old_H30_s103",
@@ -46248,10 +46266,14 @@
         "project": "matplotlib",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:39:34+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:40:18+00:00",
+      "seconds": 43.7
     },
     {
       "id": "E7_matplotlib_oracle_young_H180_s104",
@@ -46265,12 +46287,14 @@
         "project": "matplotlib",
         "seed": 104
       },
-      "status": "running",
+      "status": "done",
       "attempts": 1,
       "cycle": 2,
       "priority": 8,
       "started": "2026-11-28T17:38:51+00:00",
-      "worker": 0
+      "worker": 0,
+      "finished": "2026-11-28T17:39:34+00:00",
+      "seconds": 43.2
     },
     {
       "id": "E7_matplotlib_oracle_old_H30_s104",
@@ -46325,10 +46349,14 @@
         "project": "npm",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:40:44+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:40:56+00:00",
+      "seconds": 11.3
     },
     {
       "id": "E7_npm_nowait_s101",
@@ -46341,10 +46369,14 @@
         "project": "npm",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:40:07+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:40:18+00:00",
+      "seconds": 11.5
     },
     {
       "id": "E7_npm_oracle_young_H30_s101",
@@ -46358,10 +46390,14 @@
         "project": "npm",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:41:08+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:41:20+00:00",
+      "seconds": 11.9
     },
     {
       "id": "E7_npm_oracle_young_H180_s101",
@@ -46375,10 +46411,14 @@
         "project": "npm",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:40:56+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:41:08+00:00",
+      "seconds": 12.2
     },
     {
       "id": "E7_npm_oracle_old_H30_s101",
@@ -46392,10 +46432,14 @@
         "project": "npm",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:40:33+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:40:44+00:00",
+      "seconds": 11.1
     },
     {
       "id": "E7_npm_oracle_old_H180_s101",
@@ -46409,10 +46453,14 @@
         "project": "npm",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:40:18+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:40:31+00:00",
+      "seconds": 13.0
     },
     {
       "id": "E7_npm_oracle_s102",
@@ -46425,10 +46473,14 @@
         "project": "npm",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:40:48+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:41:00+00:00",
+      "seconds": 12.2
     },
     {
       "id": "E7_npm_nowait_s102",
@@ -46441,10 +46493,14 @@
         "project": "npm",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:40:08+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:40:22+00:00",
+      "seconds": 13.8
     },
     {
       "id": "E7_npm_oracle_young_H30_s102",
@@ -46458,10 +46514,14 @@
         "project": "npm",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:41:11+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:41:22+00:00",
+      "seconds": 10.9
     },
     {
       "id": "E7_npm_oracle_young_H180_s102",
@@ -46475,10 +46535,14 @@
         "project": "npm",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:41:00+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:41:11+00:00",
+      "seconds": 10.8
     },
     {
       "id": "E7_npm_oracle_old_H30_s102",
@@ -46492,10 +46556,14 @@
         "project": "npm",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:40:35+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:40:48+00:00",
+      "seconds": 12.9
     },
     {
       "id": "E7_npm_oracle_old_H180_s102",
@@ -46509,10 +46577,14 @@
         "project": "npm",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:40:22+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:40:35+00:00",
+      "seconds": 12.6
     },
     {
       "id": "E7_npm_oracle_s103",
@@ -46525,10 +46597,14 @@
         "project": "npm",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:40:53+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:41:05+00:00",
+      "seconds": 11.7
     },
     {
       "id": "E7_npm_nowait_s103",
@@ -46541,10 +46617,14 @@
         "project": "npm",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:40:10+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:40:25+00:00",
+      "seconds": 14.9
     },
     {
       "id": "E7_npm_oracle_young_H30_s103",
@@ -46558,10 +46638,14 @@
         "project": "npm",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:41:16+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:41:26+00:00",
+      "seconds": 10.4
     },
     {
       "id": "E7_npm_oracle_young_H180_s103",
@@ -46575,10 +46659,14 @@
         "project": "npm",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:41:05+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:41:16+00:00",
+      "seconds": 11.4
     },
     {
       "id": "E7_npm_oracle_old_H30_s103",
@@ -46592,10 +46680,14 @@
         "project": "npm",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:40:39+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:40:53+00:00",
+      "seconds": 13.7
     },
     {
       "id": "E7_npm_oracle_old_H180_s103",
@@ -46609,10 +46701,14 @@
         "project": "npm",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:40:25+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:40:39+00:00",
+      "seconds": 13.5
     },
     {
       "id": "E7_npm_oracle_s104",
@@ -46625,10 +46721,14 @@
         "project": "npm",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:40:56+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:41:07+00:00",
+      "seconds": 11.8
     },
     {
       "id": "E7_npm_nowait_s104",
@@ -46641,10 +46741,14 @@
         "project": "npm",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:40:18+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:40:33+00:00",
+      "seconds": 14.5
     },
     {
       "id": "E7_npm_oracle_young_H30_s104",
@@ -46658,10 +46762,14 @@
         "project": "npm",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:41:18+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:41:31+00:00",
+      "seconds": 12.4
     },
     {
       "id": "E7_npm_oracle_young_H180_s104",
@@ -46675,10 +46783,14 @@
         "project": "npm",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:41:07+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:41:18+00:00",
+      "seconds": 11.0
     },
     {
       "id": "E7_npm_oracle_old_H30_s104",
@@ -46692,10 +46804,14 @@
         "project": "npm",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:40:44+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:40:56+00:00",
+      "seconds": 12.0
     },
     {
       "id": "E7_npm_oracle_old_H180_s104",
@@ -46709,10 +46825,14 @@
         "project": "npm",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:40:31+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:40:44+00:00",
+      "seconds": 12.8
     },
     {
       "id": "E7_spring-integration_oracle_s101",
@@ -46725,10 +46845,14 @@
         "project": "spring-integration",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:41:58+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:42:11+00:00",
+      "seconds": 12.9
     },
     {
       "id": "E7_spring-integration_nowait_s101",
@@ -46741,10 +46865,14 @@
         "project": "spring-integration",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:41:20+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:41:33+00:00",
+      "seconds": 13.1
     },
     {
       "id": "E7_spring-integration_oracle_young_H30_s101",
@@ -46758,10 +46886,14 @@
         "project": "spring-integration",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:42:23+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:42:36+00:00",
+      "seconds": 12.7
     },
     {
       "id": "E7_spring-integration_oracle_young_H180_s101",
@@ -46775,10 +46907,14 @@
         "project": "spring-integration",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:42:11+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:42:23+00:00",
+      "seconds": 12.7
     },
     {
       "id": "E7_spring-integration_oracle_old_H30_s101",
@@ -46792,10 +46928,14 @@
         "project": "spring-integration",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:41:45+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:41:58+00:00",
+      "seconds": 12.3
     },
     {
       "id": "E7_spring-integration_oracle_old_H180_s101",
@@ -46809,10 +46949,14 @@
         "project": "spring-integration",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:41:33+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:41:45+00:00",
+      "seconds": 12.0
     },
     {
       "id": "E7_spring-integration_oracle_s102",
@@ -46825,10 +46969,14 @@
         "project": "spring-integration",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:42:00+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:42:13+00:00",
+      "seconds": 13.0
     },
     {
       "id": "E7_spring-integration_nowait_s102",
@@ -46841,10 +46989,14 @@
         "project": "spring-integration",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:41:22+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:41:36+00:00",
+      "seconds": 14.3
     },
     {
       "id": "E7_spring-integration_oracle_young_H30_s102",
@@ -46858,10 +47010,14 @@
         "project": "spring-integration",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:42:26+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:42:39+00:00",
+      "seconds": 12.6
     },
     {
       "id": "E7_spring-integration_oracle_young_H180_s102",
@@ -46875,10 +47031,14 @@
         "project": "spring-integration",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:42:14+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:42:26+00:00",
+      "seconds": 12.3
     },
     {
       "id": "E7_spring-integration_oracle_old_H30_s102",
@@ -46892,10 +47052,14 @@
         "project": "spring-integration",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:41:48+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:42:00+00:00",
+      "seconds": 12.6
     },
     {
       "id": "E7_spring-integration_oracle_old_H180_s102",
@@ -46909,10 +47073,14 @@
         "project": "spring-integration",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:41:36+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:41:48+00:00",
+      "seconds": 11.8
     },
     {
       "id": "E7_spring-integration_oracle_s103",
@@ -46925,10 +47093,14 @@
         "project": "spring-integration",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:42:06+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:42:19+00:00",
+      "seconds": 12.9
     },
     {
       "id": "E7_spring-integration_nowait_s103",
@@ -46941,10 +47113,14 @@
         "project": "spring-integration",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:41:26+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:41:40+00:00",
+      "seconds": 13.8
     },
     {
       "id": "E7_spring-integration_oracle_young_H30_s103",
@@ -46958,10 +47134,14 @@
         "project": "spring-integration",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:42:31+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:42:44+00:00",
+      "seconds": 12.6
     },
     {
       "id": "E7_spring-integration_oracle_young_H180_s103",
@@ -46975,10 +47155,14 @@
         "project": "spring-integration",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:42:19+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:42:31+00:00",
+      "seconds": 12.6
     },
     {
       "id": "E7_spring-integration_oracle_old_H30_s103",
@@ -46992,10 +47176,14 @@
         "project": "spring-integration",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:41:53+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:42:06+00:00",
+      "seconds": 12.7
     },
     {
       "id": "E7_spring-integration_oracle_old_H180_s103",
@@ -47009,10 +47197,14 @@
         "project": "spring-integration",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:41:40+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:41:53+00:00",
+      "seconds": 12.6
     },
     {
       "id": "E7_spring-integration_oracle_s104",
@@ -47025,10 +47217,14 @@
         "project": "spring-integration",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:42:07+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:42:20+00:00",
+      "seconds": 12.8
     },
     {
       "id": "E7_spring-integration_nowait_s104",
@@ -47041,10 +47237,14 @@
         "project": "spring-integration",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:41:31+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:41:43+00:00",
+      "seconds": 12.1
     },
     {
       "id": "E7_spring-integration_oracle_young_H30_s104",
@@ -47058,10 +47258,14 @@
         "project": "spring-integration",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:42:32+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:42:44+00:00",
+      "seconds": 12.0
     },
     {
       "id": "E7_spring-integration_oracle_young_H180_s104",
@@ -47075,10 +47279,14 @@
         "project": "spring-integration",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:42:20+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:42:32+00:00",
+      "seconds": 12.1
     },
     {
       "id": "E7_spring-integration_oracle_old_H30_s104",
@@ -47092,10 +47300,14 @@
         "project": "spring-integration",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:41:55+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:42:07+00:00",
+      "seconds": 12.2
     },
     {
       "id": "E7_spring-integration_oracle_old_H180_s104",
@@ -47109,10 +47321,14 @@
         "project": "spring-integration",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:41:43+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:41:55+00:00",
+      "seconds": 12.0
     },
     {
       "id": "E7_tomcat_oracle_s101",
@@ -47141,10 +47357,14 @@
         "project": "tomcat",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:42:36+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:43:17+00:00",
+      "seconds": 41.2
     },
     {
       "id": "E7_tomcat_oracle_young_H30_s101",
@@ -47192,10 +47412,12 @@
         "project": "tomcat",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:44:00+00:00",
+      "worker": 0
     },
     {
       "id": "E7_tomcat_oracle_old_H180_s101",
@@ -47209,10 +47431,14 @@
         "project": "tomcat",
         "seed": 101
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:43:17+00:00",
+      "worker": 0,
+      "finished": "2026-11-28T17:44:00+00:00",
+      "seconds": 42.5
     },
     {
       "id": "E7_tomcat_oracle_s102",
@@ -47241,10 +47467,14 @@
         "project": "tomcat",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:42:39+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:43:22+00:00",
+      "seconds": 43.6
     },
     {
       "id": "E7_tomcat_oracle_young_H30_s102",
@@ -47292,10 +47522,12 @@
         "project": "tomcat",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:44:03+00:00",
+      "worker": 3
     },
     {
       "id": "E7_tomcat_oracle_old_H180_s102",
@@ -47309,10 +47541,14 @@
         "project": "tomcat",
         "seed": 102
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:43:22+00:00",
+      "worker": 3,
+      "finished": "2026-11-28T17:44:03+00:00",
+      "seconds": 41.1
     },
     {
       "id": "E7_tomcat_oracle_s103",
@@ -47341,10 +47577,14 @@
         "project": "tomcat",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:42:44+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:43:26+00:00",
+      "seconds": 41.9
     },
     {
       "id": "E7_tomcat_oracle_young_H30_s103",
@@ -47392,10 +47632,12 @@
         "project": "tomcat",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:44:07+00:00",
+      "worker": 1
     },
     {
       "id": "E7_tomcat_oracle_old_H180_s103",
@@ -47409,10 +47651,14 @@
         "project": "tomcat",
         "seed": 103
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:43:26+00:00",
+      "worker": 1,
+      "finished": "2026-11-28T17:44:07+00:00",
+      "seconds": 41.3
     },
     {
       "id": "E7_tomcat_oracle_s104",
@@ -47441,10 +47687,14 @@
         "project": "tomcat",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:42:44+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:43:27+00:00",
+      "seconds": 43.0
     },
     {
       "id": "E7_tomcat_oracle_young_H30_s104",
@@ -47492,10 +47742,12 @@
         "project": "tomcat",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "running",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:44:09+00:00",
+      "worker": 2
     },
     {
       "id": "E7_tomcat_oracle_old_H180_s104",
@@ -47509,10 +47761,14 @@
         "project": "tomcat",
         "seed": 104
       },
-      "status": "pending",
-      "attempts": 0,
+      "status": "done",
+      "attempts": 1,
       "cycle": 2,
-      "priority": 8
+      "priority": 8,
+      "started": "2026-11-28T17:43:27+00:00",
+      "worker": 2,
+      "finished": "2026-11-28T17:44:09+00:00",
+      "seconds": 41.9
     },
     {
       "id": "E7_wagtail_oracle_s101",

@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E7",
+    "project": "spring-integration",
+    "method": "oracle_old",
+    "variant": "oracle_old_H180",
+    "seed": 101,
+    "split": "test",
+    "oracle_H": 180,
+    "gmean": 0.38179023248385674,
+    "r0": 0.9725177304964538,
+    "r1": 0.14988290398126464,
+    "rdiff": 0.8226348265151893,
+    "auc": 0.7440811699636255,
+    "mcc": 0.2280940338733931,
+    "n_eval": 7775,
+    "seconds": 11.94,
+    "n_inspected": 0,
+    "job_id": "E7_spring-integration_oracle_old_H180_s101",
+    "written": "2026-11-28T17:41:45+00:00",
+    "cycle": 2
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "experiment": "E7",
+    "project": "npm",
+    "method": "oracle_young",
+    "variant": "oracle_young_H30",
+    "seed": 104,
+    "split": "test",
+    "oracle_H": 30,
+    "gmean": 0.6206619666691259,
+    "r0": 0.8535163595336592,
+    "r1": 0.4513343799058085,
+    "rdiff": 0.40218197962785074,
+    "auc": 0.7702608598622138,
+    "mcc": 0.2979573163832064,
+    "n_eval": 6592,
+    "seconds": 12.34,
+    "n_inspected": 0,
+    "job_id": "E7_npm_oracle_young_H30_s104",
+    "written": "2026-11-28T17:41:31+00:00",
+    "cycle": 2
+  }
+]
