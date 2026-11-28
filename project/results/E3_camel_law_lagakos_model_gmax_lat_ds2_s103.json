@@ -1,0 +1,26 @@
+[
+  {
+    "experiment": "E3",
+    "project": "camel",
+    "method": "law",
+    "variant": "law_lagakos_model_gmax_lat_ds2",
+    "seed": 103,
+    "split": "test",
+    "delay_est": "lagakos",
+    "prior": "model",
+    "delay_scale": 2.0,
+    "thr_policy": "gmax_lat",
+    "gmean": 0.698669438456972,
+    "r0": 0.6576048148525961,
+    "r1": 0.7422983731394946,
+    "rdiff": 0.08469355828689851,
+    "auc": 0.7809768367966984,
+    "mcc": 0.33837063913053667,
+    "n_eval": 25384,
+    "seconds": 243.47,
+    "n_inspected": 0,
+    "job_id": "E3_camel_law_lagakos_model_gmax_lat_ds2_s103",
+    "written": "2026-11-28T18:39:29+00:00",
+    "cycle": 2
+  }
+]
